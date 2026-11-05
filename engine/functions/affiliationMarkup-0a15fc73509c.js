@@ -1,1 +1,1 @@
-function affiliationMarkup(s){return s?.affiliation?`<div class="affiliation">${s.affiliation==='{{brand|jsstr}}'?link('{{brand|jsstr}}'):esc(s.affiliation)}${s.acquisition?'<br>'+esc(s.acquisition):''}</div>`:''}
+function affiliationMarkup(s){return s?.affiliation?`<div class="affiliation">${s.affiliation==='{{affiliationLink|jsstr}}'?link('{{affiliationLink|jsstr}}'):esc(s.affiliation)}${s.acquisition?'<br>'+esc(s.acquisition):''}</div>`:''}

@@ -365,13 +365,6 @@
     ],
     "bytes": 641
   },
-  "affiliationMarkup-2be05974aae3": {
-    "name": "affiliationMarkup",
-    "profiles": [
-      "kadaym"
-    ],
-    "bytes": 219
-  },
   "searchRecords-2c82af157790": {
     "name": "searchRecords",
     "profiles": [
@@ -1762,9 +1755,10 @@
       "calidor",
       "elysian",
       "iulr",
+      "kadaym",
       "uacs"
     ],
-    "bytes": 259
+    "bytes": 234
   },
   "classificationTerms-c6b25d2adb0c": {
     "name": "classificationTerms",
