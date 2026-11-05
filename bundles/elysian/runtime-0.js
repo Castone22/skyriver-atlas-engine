@@ -151,7 +151,7 @@ const triadParts=[
 /* @atlas-function triadScreen */
 
 /* @atlas-function stationScreen-9033d810843c */
-/* @atlas-function highlightPart-ec06a7b48e22 */
+/* @atlas-function highlightPart */
 /* @atlas-function openStation */
 /* @atlas-function closeStation */
 /* @atlas-function bindToraName */

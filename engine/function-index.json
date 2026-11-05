@@ -394,9 +394,12 @@
   "currentStationParts": {
     "name": "currentStationParts",
     "profiles": [
-      "elysian"
+      "calidor",
+      "elysian",
+      "iulr",
+      "uacs"
     ],
-    "bytes": 131
+    "bytes": 170
   },
   "deadStarGlyph": {
     "name": "deadStarGlyph",
@@ -796,21 +799,15 @@
     ],
     "bytes": 109
   },
-  "highlightPart-3b673ff30d38": {
+  "highlightPart": {
     "name": "highlightPart",
     "profiles": [
       "calidor",
+      "elysian",
       "iulr",
       "uacs"
     ],
-    "bytes": 599
-  },
-  "highlightPart-ec06a7b48e22": {
-    "name": "highlightPart",
-    "profiles": [
-      "elysian"
-    ],
-    "bytes": 503
+    "bytes": 570
   },
   "highlightRegion": {
     "name": "highlightRegion",

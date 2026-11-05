@@ -137,7 +137,8 @@ const toraParts=[
 /* @atlas-function toraHubDetail */
 /* @atlas-function toraElevation */
 /* @atlas-function stationScreen-7218cedf4124 */
-/* @atlas-function highlightPart-3b673ff30d38 */
+/* @atlas-function highlightPart */
+/* @atlas-function currentStationParts */
 /* @atlas-function openStation */
 /* @atlas-function hasStationSchematic */
 /* @atlas-function closeStation */
