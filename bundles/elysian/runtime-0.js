@@ -58,7 +58,7 @@ restorePlanetArticles();
 /* @atlas-function resolvePlanetRoute */
 let lastRestoredURL='';
 /* @atlas-function routeSnapshot */
-/* @atlas-function routeURL-66be76949ffb */
+/* @atlas-function routeURL */
 /* @atlas-function persistRoute */
 /* @atlas-function beginNavigation */
 /* @atlas-function endNavigation */

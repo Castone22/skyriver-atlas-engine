@@ -1746,28 +1746,16 @@
     ],
     "bytes": 466
   },
-  "routeURL-66be76949ffb": {
+  "routeURL": {
     "name": "routeURL",
     "profiles": [
       "calidor",
       "elysian",
+      "iulr",
+      "kadaym",
       "uacs"
     ],
-    "bytes": 1036
-  },
-  "routeURL-7c04f49ba3ff": {
-    "name": "routeURL",
-    "profiles": [
-      "iulr"
-    ],
-    "bytes": 1011
-  },
-  "routeURL-b7602e0d594a": {
-    "name": "routeURL",
-    "profiles": [
-      "kadaym"
-    ],
-    "bytes": 969
+    "bytes": 1462
   },
   "safeImageURL": {
     "name": "safeImageURL",

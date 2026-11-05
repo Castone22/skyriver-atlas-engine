@@ -27,6 +27,7 @@
   },
   "flags": {
     "planetPageLinks": true,
-    "stationRoute": "station"
+    "stationRoute": "station",
+    "widgetKeepsAddress": true
   }
 }

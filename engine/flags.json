@@ -1,9 +1,11 @@
 {
   "keepStationPart": { "description": "A station screen that is drawn again keeps the highlighted part instead of resetting to the first part.", "default": false },
   "normalizeTitleApostrophes": { "description": "Article links turn curly apostrophes in a title into straight ones before building the URL.", "default": false },
+  "overviewChart": { "description": "Value of the chart address parameter that selects the overview chart (overview, or federation for Kadaym).", "default": "overview" },
   "overviewStateKey": { "description": "Name of the saved-state field that records the overview flag (route history and the camera memory).", "default": "overviewMode" },
   "planetArticleTitles": { "description": "Planet links use the article title kept in sync with the Codex (planetArticleName) when the planet has one.", "default": false },
   "planetPageLinks": { "description": "Planet links go to the Codex page by page id (curid) once the id is known from title synchronisation.", "default": false },
   "regionHighlight": { "description": "The whole-atlas chart highlights one region (highlightedRegion) instead of switching between overview and regional charts.", "default": false },
-  "stationRoute": { "description": "How the station overview appears in the address: station (station=1), focus (focus=station) or empty for no station overview route.", "default": "" }
+  "stationRoute": { "description": "How the station overview appears in the address: station (station=1), focus (focus=station) or empty for no station overview route.", "default": "" },
+  "widgetKeepsAddress": { "description": "In widget mode with no system open the address bar is left untouched instead of being rewritten with the current view.", "default": false }
 }

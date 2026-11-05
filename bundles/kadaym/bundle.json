@@ -31,6 +31,8 @@
   },
   "flags": {
     "normalizeTitleApostrophes": true,
-    "overviewStateKey": "federationOverview"
+    "overviewChart": "federation",
+    "overviewStateKey": "federationOverview",
+    "widgetKeepsAddress": true
   }
 }

@@ -30,6 +30,7 @@
   },
   "flags": {
     "keepStationPart": true,
-    "stationRoute": "station"
+    "stationRoute": "station",
+    "widgetKeepsAddress": true
   }
 }
