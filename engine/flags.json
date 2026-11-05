@@ -1,1 +1,6 @@
-{}
+{
+  "searchSystemFields": {
+    "description": "Extra system fields (by property name) whose text is searchable, in addition to the classification terms.",
+    "default": []
+  }
+}

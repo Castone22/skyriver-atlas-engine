@@ -1545,7 +1545,10 @@
         "overviewWorlds": [
           "Prathia"
         ],
-        "sparseOrbits": true
+        "sparseOrbits": true,
+        "searchAliases": [
+          "Palorek"
+        ]
       },
       {
         "id": "drayson",

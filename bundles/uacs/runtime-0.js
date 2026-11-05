@@ -91,7 +91,7 @@ addEventListener('hashchange',()=>{if(location.href!==lastRestoredURL)restoreRou
 /* @atlas-function affiliationMarkup */
 /* @atlas-function searchRecords */
 /* @atlas-function classificationTerms-c6b25d2adb0c */
-/* @atlas-function searchTerms-2f561ee034d3 */
+/* @atlas-function searchTerms */
 /* @atlas-function searchObject */
 /* @atlas-function renderIndex-c7aa6fecdbb1 */
 const reducedMotion=matchMedia('(prefers-reduced-motion: reduce)');

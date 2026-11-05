@@ -118,7 +118,7 @@ const LABEL_ZOOM={overview:{active:[120,150],neighbor:[150,220]},regional:{activ
 /* @atlas-function affiliationMarkup */
 /* @atlas-function searchRecords */
 /* @atlas-function classificationTerms-549b06cadb0d */
-/* @atlas-function searchTerms-e3ac9dcacf41 */
+/* @atlas-function searchTerms */
 /* @atlas-function searchObject */
 /* @atlas-function renderIndex-0db203929943 */
 const reducedMotion=matchMedia('(prefers-reduced-motion: reduce)');

@@ -26,5 +26,12 @@
     "downloadName": "IULR-Stellar-Atlas.html",
     "overviewAlias": "union",
     "affiliationLink": "{{brand}}"
+  },
+  "flags": {
+    "searchSystemFields": [
+      "architecture",
+      "cloakStatusText",
+      "description"
+    ]
   }
 }

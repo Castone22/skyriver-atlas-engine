@@ -74,7 +74,7 @@ addEventListener('hashchange',()=>{if(location.href!==lastRestoredURL)restoreRou
 /* @atlas-function affiliationMarkup */
 /* @atlas-function searchRecords */
 /* @atlas-function classificationTerms-fa60044fc097 */
-/* @atlas-function searchTerms-2f561ee034d3 */
+/* @atlas-function searchTerms */
 /* @atlas-function searchObject */
 /* @atlas-function renderIndex-bb514b6b2378 */
 const reducedMotion=matchMedia('(prefers-reduced-motion: reduce)');
