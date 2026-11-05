@@ -28,6 +28,8 @@ changing anything, prefer the change that keeps existing behavior working.
 
 - `npm run build` regenerates `dist/`. For refactors, `dist/` output should be
   **byte-identical** before and after (build to a temp directory and compare with `cmp`).
+- Also build `examples/new-stellar.atlas.mjs` (`node tools/build.mjs examples/new-stellar.atlas.mjs <dir>`)
+  and compare it. It is the only custom-brand case; the default atlases do not exercise that path.
 - `npm run test:all` runs the core and DOM suites. `npm run format:check` verifies formatting.
 - Run `npm install` first; the DOM tests need dev dependencies.
 

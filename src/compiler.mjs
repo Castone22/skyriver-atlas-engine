@@ -142,10 +142,9 @@ export async function compile(definition, { strict = false, dependencies = {} } 
   html = html.replace(/<title>[\s\S]*?<\/title>/, `<title>${escape(d.meta.title)}</title>`);
   // Only explicitly customized definitions replace branding and optional presentation content.
   const customBrand = d.meta.article !== profile.brand;
-  if (customBrand) {
-    html = replace(html, profile.brand, escape(d.meta.article));
-    html = html.replace(/<div class="stat">[\s\S]*?<\/div>/g, '');
-  }
+  // Shells carry {{brand}} slots: the profile's own brand by default, an escaped custom one otherwise.
+  html = replace(html, '{{brand}}', customBrand ? escape(d.meta.article) : profile.brand);
+  if (customBrand) html = html.replace(/<div class="stat">[\s\S]*?<\/div>/g, '');
   if (d.presentation?.version)
     html = html.replace(
       /(<small id="atlasVersion">)[\s\S]*?(<\/small>)/,
@@ -167,6 +166,12 @@ export async function compile(definition, { strict = false, dependencies = {} } 
         marker + '\nconst __ATLAS_SOURCE_DATA__=JSON.parse(JSON.stringify(DATA));'
       );
     }
+    // Runtimes carry a quoted '@@BRAND@@' slot where they link to the atlas's own article.
+    code = customBrand
+      ? replace(code, "'@@BRAND@@'", safeJSON(d.meta.article))
+      : replace(code, '@@BRAND@@', profile.brand);
+    // Shared function sources still carry the brand as a literal. Until they are templated too,
+    // a custom brand replaces those literals in the linked code.
     if (customBrand) {
       code = replace(code, JSON.stringify(profile.brand), safeJSON(d.meta.article));
       code = replace(code, "'" + profile.brand + "'", safeJSON(d.meta.article));
