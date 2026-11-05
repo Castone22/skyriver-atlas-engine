@@ -2,25 +2,25 @@
   {
     "id": "calidor",
     "file": "calidor-atlas.html",
-    "bytes": 366130,
+    "bytes": 366058,
     "warnings": []
   },
   {
     "id": "elysian",
     "file": "elysian-atlas.html",
-    "bytes": 2614632,
+    "bytes": 2614558,
     "warnings": []
   },
   {
     "id": "iulr",
     "file": "iulr-atlas.html",
-    "bytes": 938216,
+    "bytes": 938116,
     "warnings": []
   },
   {
     "id": "kadaym",
     "file": "kadaym-atlas.html",
-    "bytes": 1471492,
+    "bytes": 1471418,
     "warnings": [
       "vije: missing planet record Chorus",
       "querial: missing planet record Corianna",
@@ -37,13 +37,13 @@
   {
     "id": "uacs",
     "file": "uacs-atlas.html",
-    "bytes": 2158817,
+    "bytes": 2158751,
     "warnings": []
   },
   {
     "id": "grand",
     "file": "grand-atlas.html",
-    "bytes": 8164857,
+    "bytes": 8164609,
     "warnings": []
   }
 ]
