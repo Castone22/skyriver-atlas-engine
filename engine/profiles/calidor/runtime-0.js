@@ -69,10 +69,10 @@ addEventListener('hashchange',()=>{if(location.href!==lastRestoredURL)restoreRou
 /* @atlas-function tierMarkup-7d5f85e75120 */
 /* @atlas-function renderMapLegend-c8f994aa0bf6 */
 
-/* @atlas-function affiliationMarkup-806ac359374f */
+/* @atlas-function affiliationMarkup-0a15fc73509c */
 /* @atlas-function searchRecords-2c82af157790 */
 /* @atlas-function classificationTerms-766b72615379 */
-/* @atlas-function searchTerms-85fef362b38d */
+/* @atlas-function searchTerms-2f561ee034d3 */
 /* @atlas-function searchObject-79fc0f1f6bd8 */
 /* @atlas-function renderIndex-3a14299e1307 */
 const reducedMotion=matchMedia('(prefers-reduced-motion: reduce)');

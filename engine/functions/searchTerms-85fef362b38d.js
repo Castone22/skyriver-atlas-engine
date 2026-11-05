@@ -1,1 +1,0 @@
-function searchTerms(s){return [...classificationTerms(s),DATA.regions[s.region]?.name,s.name==='Kevak'?'Palorek':'',s.kind==='federation'?'Dominion of Calidor':'',...searchRecords(s).flatMap(classificationTerms)]}

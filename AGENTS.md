@@ -66,8 +66,10 @@ Rules:
 - An unknown slot or filter is a build error, not an empty string. Do not add fallbacks.
 - Only write a slot where the text means "this atlas's own value". A literal that names another
   atlas (for example an affiliation) is content and must stay a literal.
-- Shared function sources in `engine/functions/` do not use slots yet; they still carry brand
-  literals, which the compiler rewrites for custom-branded atlases. Converting them is
-  planned, one function at a time.
+- Shared function sources in `engine/functions/` are rendered with the same slots when linked.
+  A function that names its own atlas uses `'{{brand|jsstr}}'`. A function that names _another_
+  atlas keeps the literal, because that is content. If one function needs both meanings for
+  different profiles, give each profile its own variant instead of sharing a file.
+- Functions that differ only by a slot value are one function. Do not keep duplicate variants.
 - The template module must stay free of Node imports; it has to run in a browser.
 - Add a test in `tests/template.test.mjs` when adding a filter.

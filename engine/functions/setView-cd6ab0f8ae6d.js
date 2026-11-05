@@ -6,7 +6,7 @@ function setView(key,keepSelection=false,keepCamera=false,federal=keepCamera?fed
   option.textContent='Federation overview · '+DATA.regions[key].name;
   picker.append(option);picker.value=option.value;
  }else picker.value=key;
- const r=DATA.regions[key];$('mapTitle').textContent=r?r.name:'United Federation of Kadaym';$('mapTitle').href=url(r?r.name:'United Federation of Kadaym');
+ const r=DATA.regions[key];$('mapTitle').textContent=r?r.name:'{{brand|jsstr}}';$('mapTitle').href=url(r?r.name:'{{brand|jsstr}}');
  $('mapKicker').textContent=({all:'FEDERAL TERRITORIAL OVERVIEW',makor:'01 / IMPERIAL HEARTLAND',lendor:'02 / FIRST EXPANSION',narthezk:'03 / ACQUIRED TERRITORIES',frontier:'04 / ELYSIAN COLLECTIVE',valteo:'05 / ACQUIRED IMPERIAL MARCHES','tserazk-makai':'06 / KURZENZKA SECTOR'})[key]||(r?.silentPresence?'KURZENZKA SECTOR / SILENT OCCUPATION':'FEDERATION / REGIONAL CHART');
  $('mapSubtitle').textContent=r?(key==='narthezk'?'Turahk homeworld · Haktur system':key==='frontier'?'Elysian Collective · Prathia is the Kadaymian foothold':r.subtitle+' · '+DATA.systems.filter(s=>s.region===key).length+' charted systems'):'Regional positions are schematic · remote holdings shown separately';
  renderMapLegend(key);

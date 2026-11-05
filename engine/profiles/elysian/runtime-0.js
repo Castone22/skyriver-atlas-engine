@@ -85,10 +85,10 @@ addEventListener('hashchange',()=>{if(location.href!==lastRestoredURL)restoreRou
 /* @atlas-function tierMarkup-7d5f85e75120 */
 /* @atlas-function renderMapLegend-5eb74e180b2d */
 
-/* @atlas-function affiliationMarkup-2be05974aae3 */
+/* @atlas-function affiliationMarkup-0a15fc73509c */
 /* @atlas-function searchRecords-2c82af157790 */
 /* @atlas-function classificationTerms-936c39321d8a */
-/* @atlas-function searchTerms-d729ac0d2d99 */
+/* @atlas-function searchTerms-2f561ee034d3 */
 /* @atlas-function searchObject-79fc0f1f6bd8 */
 /* @atlas-function renderIndex-958d0331c817 */
 const reducedMotion=matchMedia('(prefers-reduced-motion: reduce)');

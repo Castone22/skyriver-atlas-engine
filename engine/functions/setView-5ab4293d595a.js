@@ -5,7 +5,7 @@ function setView(key,keepSelection=false,keepCamera=false,overview=keepCamera?ov
  regionalCamera=null;view=key;overviewMode=overview;
  const picker=$('regionPicker');$('overviewSelection')?.remove();
  if(overview&&DATA.regions[key]){const option=document.createElement('option');option.id='overviewSelection';option.value='overview-selection';option.disabled=true;option.textContent='Overview · '+DATA.regions[key].name;picker.append(option);picker.value=option.value}else picker.value=key;
- const r=DATA.regions[key];$('mapTitle').textContent=r?r.name:'United Alliance of Commonwealth States';$('mapTitle').href=url(r?r.name:'United Alliance of Commonwealth States');
+ const r=DATA.regions[key];$('mapTitle').textContent=r?r.name:'{{brand|jsstr}}';$('mapTitle').href=url(r?r.name:'{{brand|jsstr}}');
  $('mapKicker').textContent=overview?'ALLIANCE OVERVIEW'+(r?' / REGION HIGHLIGHTED':''):'REGIONAL CHART / '+r.subtitle.toUpperCase();
  $('mapSubtitle').textContent=r?r.subtitle+' · '+DATA.systems.filter(s=>s.region===key).length+' charted systems':'42 charted systems · five adjoining regional charts';
  renderMapLegend(key);

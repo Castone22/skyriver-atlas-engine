@@ -9,9 +9,14 @@ const ROOT = fileURLToPath(new URL('../', import.meta.url));
 const read = (p) => readFile(path.join(ROOT, p), 'utf8');
 const json = (p) => read(p).then(JSON.parse);
 const replace = (s, a, b) => s.split(a).join(b);
-async function linkRuntime(source) {
+async function linkRuntime(source, slots = {}) {
   const chunks = [...source.matchAll(/\/\* @atlas-function ([\w-]+) \*\//g)];
-  const contents = await Promise.all(chunks.map((m) => read('engine/functions/' + m[1] + '.js')));
+  const contents = await Promise.all(
+    chunks.map(async (m) => {
+      const file = 'engine/functions/' + m[1] + '.js';
+      return render(await read(file), slots, file);
+    })
+  );
   for (let i = chunks.length - 1; i >= 0; i--)
     source =
       source.slice(0, chunks[i].index) +
@@ -148,7 +153,7 @@ export async function compile(definition, { strict = false, dependencies = {} } 
     );
   for (let i = 0; i < profile.scripts.length; i++) {
     const scriptPath = profile.scripts[i].path;
-    let code = await linkRuntime(render(await read(scriptPath), slots, scriptPath));
+    let code = await linkRuntime(render(await read(scriptPath), slots, scriptPath), slots);
     code = replace(code, '__ATLAS__.data', safeJSON(d.data));
     if (d.kind === 'stellar' && i === 0) {
       const marker = 'const DATA = ' + safeJSON(d.data) + ';';
@@ -157,12 +162,6 @@ export async function compile(definition, { strict = false, dependencies = {} } 
         marker,
         marker + '\nconst __ATLAS_SOURCE_DATA__=JSON.parse(JSON.stringify(DATA));'
       );
-    }
-    // Shared function sources still carry the brand as a literal. Until they are templated too,
-    // a custom brand replaces those literals in the linked code.
-    if (customBrand) {
-      code = replace(code, JSON.stringify(profile.brand), safeJSON(d.meta.article));
-      code = replace(code, "'" + profile.brand + "'", safeJSON(d.meta.article));
     }
     if (d.kind === 'stellar' && (customBrand || d.presentation?.notesHTML !== undefined)) {
       const notes =

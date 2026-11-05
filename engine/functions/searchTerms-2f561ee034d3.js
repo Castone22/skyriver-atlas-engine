@@ -1,1 +1,1 @@
-function searchTerms(s){return [...classificationTerms(s),DATA.regions[s.region]?.name,s.name==='Kevak'?'Palorek':'',s.kind==='federation'?'United Federation of Kadaym':'',...searchRecords(s).flatMap(classificationTerms)]}
+function searchTerms(s){return [...classificationTerms(s),DATA.regions[s.region]?.name,s.name==='Kevak'?'Palorek':'',s.kind==='federation'?'{{brand|jsstr}}':'',...searchRecords(s).flatMap(classificationTerms)]}
