@@ -165,10 +165,7 @@ function passed(name) {
   try {
     await tick();
     await reload.w.eval('planetTitleSyncInFlight');
-    assert.equal(
-      reload.w.eval(`planetName(${JSON.stringify(planet)})`),
-      'Avendon Manual Refresh'
-    );
+    assert.equal(reload.w.eval(`planetName(${JSON.stringify(planet)})`), 'Avendon Manual Refresh');
     assert.deepEqual(reload.errors, []);
     passed('offline reload retains cached canonical title without runtime errors');
   } finally {
