@@ -1,4 +1,5 @@
 function bindSystemControls(){
+ for(const el of document.querySelectorAll('[data-foundry-open]'))el.onclick=()=>openStation('Foundry');
  if(stationOverview){
   $('leaveStation').onclick=closeStation;
   for(const el of document.querySelectorAll('[data-unit]'))el.onclick=()=>{if(el.dataset.unit!==selectedWorld)openStation(el.dataset.unit)};
@@ -7,7 +8,8 @@ function bindSystemControls(){
    el.onclick=()=>highlightPart(Number(el.dataset.part));
    if(el.tagName.toLowerCase()==='g')el.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();el.onclick()}};
   }
-  highlightPart(0);
+  highlightPart(__ATLAS__.flags.keepStationPart?stationPart:0);
+  if(widgetMode)return;
  }
  if(!widgetMode)for(const el of document.querySelectorAll('.tora-register-link'))bindToraName(el,el.textContent);
  for(const el of document.querySelectorAll('[data-tora-open]'))el.onclick=()=>openStation(el.dataset.toraOpen);

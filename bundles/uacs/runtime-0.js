@@ -185,7 +185,7 @@ let planetClickTimer;
 
 /* @atlas-function syncSystemFocus */
 /* @atlas-function applySystemZoom */
-/* @atlas-function bindSystemControls-da72bdbb7f06 */
+/* @atlas-function bindSystemControls */
 /* @atlas-function chooseSystemWorld */
 /* @atlas-function toggleAtlasMotion */
 reducedMotion.addEventListener('change',e=>{if(e.matches){orbitPaused=true;renderDetail()}});

@@ -118,34 +118,16 @@
     ],
     "bytes": 699
   },
-  "bindSystemControls-a6497c8f29aa": {
+  "bindSystemControls": {
     "name": "bindSystemControls",
     "profiles": [
-      "elysian"
-    ],
-    "bytes": 2829
-  },
-  "bindSystemControls-cf2f9cf9b847": {
-    "name": "bindSystemControls",
-    "profiles": [
-      "calidor"
-    ],
-    "bytes": 2920
-  },
-  "bindSystemControls-da72bdbb7f06": {
-    "name": "bindSystemControls",
-    "profiles": [
+      "calidor",
+      "elysian",
       "iulr",
+      "kadaym",
       "uacs"
     ],
-    "bytes": 2805
-  },
-  "bindSystemControls-f39c2600afc8": {
-    "name": "bindSystemControls",
-    "profiles": [
-      "kadaym"
-    ],
-    "bytes": 1606
+    "bytes": 2978
   },
   "bindToraControl": {
     "name": "bindToraControl",
