@@ -24924,6 +24924,13 @@
           125
         ]
       }
+    },
+    "zoom": {
+      "minWidth": 260,
+      "minDivisor": 8,
+      "minDivisorOverviewOnly": false,
+      "maxWidth": 9000,
+      "maxBaseMultiple": 4
     }
   }
 }

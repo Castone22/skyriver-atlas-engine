@@ -2560,35 +2560,23 @@
     ],
     "bytes": 732
   },
+  "zoom": {
+    "name": "zoom",
+    "profiles": [
+      "calidor",
+      "elysian",
+      "iulr",
+      "kadaym",
+      "uacs"
+    ],
+    "bytes": 528
+  },
   "zoom-06a8e0e21ab3": {
     "name": "zoom",
     "profiles": [
       "mahanzk"
     ],
     "bytes": 143
-  },
-  "zoom-63c95ce3e23e": {
-    "name": "zoom",
-    "profiles": [
-      "iulr"
-    ],
-    "bytes": 288
-  },
-  "zoom-9565bf2c9b73": {
-    "name": "zoom",
-    "profiles": [
-      "kadaym"
-    ],
-    "bytes": 327
-  },
-  "zoom-c44842c8dbe1": {
-    "name": "zoom",
-    "profiles": [
-      "calidor",
-      "elysian",
-      "uacs"
-    ],
-    "bytes": 332
   },
   "zoomBy": {
     "name": "zoomBy",
