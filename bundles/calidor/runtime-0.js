@@ -32,10 +32,10 @@ const MARKER_DOSSIER_DELAY=600;
 
 const normalizedName=value=>String(value||'').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]/g,'');
 /* @atlas-function resolveRegion */
-/* @atlas-function matchesRecord-7deaec6d8fb2 */
+/* @atlas-function matchesRecord */
 /* @atlas-function resolveSystem */
 /* @atlas-function resolveObjectName */
-/* @atlas-function matchesSearch-6e5b90f05584 */
+/* @atlas-function matchesSearch */
 // Fragment links accept the friend's human-readable names, IDs and aliases.
 /* @atlas-function resolveNamedRoute */
 /* @atlas-function resolveHashRoute */
@@ -96,7 +96,7 @@ const siteType=name=>/station|triad|jumpgate/i.test(name)?'Station / structure':
 /* @atlas-function stationRecords-6dbf0bad7f69 */
 /* @atlas-function entityRecords */
 /* @atlas-function starRecords-26accc5af9e1 */
-/* @atlas-function focusableWorld-27a8652c176e */
+/* @atlas-function focusableWorld */
 /* @atlas-function localChartParent */
 /* @atlas-function localBodies */
 /* @atlas-function moonRecords */

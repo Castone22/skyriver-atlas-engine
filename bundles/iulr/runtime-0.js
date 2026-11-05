@@ -71,10 +71,10 @@ let planetTitleSyncInFlight=null,planetTitleLastChecked=0;
 /* @atlas-function triggerPlanetTitleCheck */
 
 /* @atlas-function resolveRegion */
-/* @atlas-function matchesRecord-769ca58b58d3 */
+/* @atlas-function matchesRecord */
 /* @atlas-function resolveSystem */
 /* @atlas-function resolveObjectName */
-/* @atlas-function matchesSearch-6e5b90f05584 */
+/* @atlas-function matchesSearch */
 // Fragment links accept the friend's human-readable names, IDs and aliases.
 /* @atlas-function resolveNamedRoute */
 /* @atlas-function resolveHashRoute */
@@ -141,7 +141,7 @@ const siteType=name=>/station|triad|jumpgate/i.test(name)?'Station / structure':
 /* @atlas-function stationRecords-f53b5a9f2345 */
 /* @atlas-function entityRecords */
 /* @atlas-function starRecords-edf881d7ebd2 */
-/* @atlas-function focusableWorld-de83f9794db3 */
+/* @atlas-function focusableWorld */
 /* @atlas-function localChartParent */
 /* @atlas-function localBodies */
 /* @atlas-function moonRecords */
