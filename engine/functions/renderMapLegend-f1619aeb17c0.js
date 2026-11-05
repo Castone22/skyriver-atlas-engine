@@ -1,1 +1,0 @@
-function renderMapLegend(){ $('mapLegend').innerHTML='<span style="--c:#fff0c0">Stellar system</span><span style="--c:#c9e7ff">Natural stellar colors</span><span style="--c:#d4bfd9">Accretion ring · black hole</span>'}

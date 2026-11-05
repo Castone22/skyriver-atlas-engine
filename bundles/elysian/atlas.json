@@ -24931,6 +24931,26 @@
       "minDivisorOverviewOnly": false,
       "maxWidth": 9000,
       "maxBaseMultiple": 4
+    },
+    "legend": {
+      "entries": [
+        [
+          "#8ac9ee",
+          "Collective"
+        ],
+        [
+          "#dfbd78",
+          "Kadaym holding"
+        ],
+        [
+          "#a9afc5",
+          "Independent"
+        ],
+        [
+          "#e58088",
+          "Hazard / quarantine"
+        ]
+      ]
     }
   }
 }

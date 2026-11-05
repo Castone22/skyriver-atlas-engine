@@ -24250,6 +24250,47 @@
       "minDivisorOverviewOnly": true,
       "maxWidth": 9000,
       "maxBaseMultiple": null
+    },
+    "legend": {
+      "entries": [
+        [
+          "#dfbd78",
+          "Federation"
+        ],
+        [
+          "#7bbba0",
+          "Collective"
+        ],
+        [
+          "#93abc9",
+          "Neighbor / neutral"
+        ],
+        [
+          "#e57d82",
+          "Hazard / unresolved"
+        ]
+      ],
+      "regions": {
+        "frontier": [
+          [
+            "#7bbba0",
+            "Elysian Collective"
+          ],
+          [
+            "#dfbd78",
+            "Prathia / Kadaym"
+          ],
+          [
+            "#93abc9",
+            "Independent"
+          ],
+          [
+            "#e57d82",
+            "Silent hazard"
+          ]
+        ]
+      },
+      "tiers": true
     }
   }
 }

@@ -1,1 +1,0 @@
-function renderMapLegend(key){$('mapLegend').innerHTML='<span style="--c:#8ac9ee">Collective</span><span style="--c:#dfbd78">Kadaym holding</span><span style="--c:#a9afc5">Independent</span><span style="--c:#e58088">Hazard / quarantine</span>'}

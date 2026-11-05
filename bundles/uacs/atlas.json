@@ -30908,6 +30908,22 @@
       "minDivisorOverviewOnly": false,
       "maxWidth": 9000,
       "maxBaseMultiple": 4
+    },
+    "legend": {
+      "entries": [
+        [
+          "#fff0c0",
+          "Stellar system"
+        ],
+        [
+          "#c9e7ff",
+          "Natural stellar colors"
+        ],
+        [
+          "#d4bfd9",
+          "Accretion ring · black hole"
+        ]
+      ]
     }
   }
 }

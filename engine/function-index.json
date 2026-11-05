@@ -1583,40 +1583,16 @@
     ],
     "bytes": 1805
   },
-  "renderMapLegend-4aeafe6a28b2": {
+  "renderMapLegend": {
     "name": "renderMapLegend",
     "profiles": [
-      "kadaym"
-    ],
-    "bytes": 641
-  },
-  "renderMapLegend-5eb74e180b2d": {
-    "name": "renderMapLegend",
-    "profiles": [
-      "elysian"
-    ],
-    "bytes": 244
-  },
-  "renderMapLegend-c8f994aa0bf6": {
-    "name": "renderMapLegend",
-    "profiles": [
-      "calidor"
-    ],
-    "bytes": 235
-  },
-  "renderMapLegend-e99aba52b66e": {
-    "name": "renderMapLegend",
-    "profiles": [
-      "iulr"
-    ],
-    "bytes": 338
-  },
-  "renderMapLegend-f1619aeb17c0": {
-    "name": "renderMapLegend",
-    "profiles": [
+      "calidor",
+      "elysian",
+      "iulr",
+      "kadaym",
       "uacs"
     ],
-    "bytes": 219
+    "bytes": 687
   },
   "resetRealm": {
     "name": "resetRealm",

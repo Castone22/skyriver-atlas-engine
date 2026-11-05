@@ -24131,6 +24131,25 @@
       "minDivisorOverviewOnly": false,
       "maxWidth": 9000,
       "maxBaseMultiple": null
+    },
+    "legend": {
+      "entries": [
+        [
+          "#8ac9ee",
+          "Union system"
+        ],
+        [
+          "#ffde94",
+          "Capital system"
+        ]
+      ],
+      "overviewRegions": true,
+      "append": [
+        [
+          "#398cff",
+          "TORA shroud"
+        ]
+      ]
     }
   }
 }

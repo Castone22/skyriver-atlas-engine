@@ -7103,6 +7103,22 @@
       "minDivisorOverviewOnly": false,
       "maxWidth": 9000,
       "maxBaseMultiple": 4
+    },
+    "legend": {
+      "entries": [
+        [
+          "#ffe6a3",
+          "Stellar system"
+        ],
+        [
+          "#d7e6fa",
+          "Paired symbols · multiple stars"
+        ],
+        [
+          "#b9a0d9",
+          "Ringed dark center · black hole"
+        ]
+      ]
     }
   }
 }

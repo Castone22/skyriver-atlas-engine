@@ -1,1 +1,0 @@
-function renderMapLegend(){ $('mapLegend').innerHTML='<span style="--c:#ffe6a3">Stellar system</span><span style="--c:#d7e6fa">Paired symbols · multiple stars</span><span style="--c:#b9a0d9">Ringed dark center · black hole</span>'; }
