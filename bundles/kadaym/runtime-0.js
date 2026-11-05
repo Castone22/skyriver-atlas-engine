@@ -116,7 +116,8 @@ const illustrativeTypes={
 /* @atlas-function notableSitesMarkup */
 /* @atlas-function systemView-042c2ccd42ba */
 /* @atlas-function planetView */
-/* @atlas-function mountPlanet-028b1c9a2a66 */
+/* @atlas-function mountPlanet */
+/* @atlas-function solarPlanetGlyph */
 /* @atlas-function setPlanetFocus */
 
 /* @atlas-function stopOrbit */

@@ -1,14 +1,38 @@
 {
+  "bodyRenderOpacity": {
+    "description": "The central body of the local planet chart carries an opacity attribute taken from its renderOpacity (default 1).",
+    "default": false
+  },
   "elsewhereStations": {
     "description": "The local-orbit view lists the system's 'register' stations under an 'Elsewhere in the system' heading (and keeps the blank line the layout reserves for it).",
+    "default": false
+  },
+  "extendedChartMoonThreshold": {
+    "description": "When greater than 0, the local planet chart switches to its extended satellite layout once the planet has more moons than this number; when 0 it follows each world's extendedSatelliteChart field.",
+    "default": 0
+  },
+  "goldenAngleMoonPhase": {
+    "description": "Moons on the local planet chart always start a golden-angle step apart (2.39996 radians), not only in the extended layout (default step 2.1).",
     "default": false
   },
   "hiddenStationFilters": {
     "description": "Station categories left out of the local-orbit station filter bar (planetView).",
     "default": []
   },
+  "shortLabelsOnlyWhenExtended": {
+    "description": "Satellite labels on the local planet chart use a body's shortLabel only in the extended layout; otherwise they always use it.",
+    "default": false
+  },
+  "sizedFocusBodyLabel": {
+    "description": "Satellite labels on the local planet chart carry an explicit font-size (smaller in the extended layout).",
+    "default": false
+  },
   "titledLocalOrbitLabels": {
     "description": "The local-orbit accessible labels use the synchronised planet title (planetName) instead of the catalogue name.",
+    "default": false
+  },
+  "titledPlanetInspectLabel": {
+    "description": "The central body of the local planet chart is labelled 'Inspect <synchronised title>' (planetName) instead of the catalogue name.",
     "default": false
   }
 }

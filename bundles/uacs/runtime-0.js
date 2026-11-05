@@ -158,7 +158,7 @@ const toraParts=[
 let solarGlyphSequence=0;
 /* @atlas-function solarPlanetGlyph */
 
-/* @atlas-function mountPlanet-6b26a184d4fb */
+/* @atlas-function mountPlanet */
 /* @atlas-function setPlanetFocus */
 
 /* @atlas-function stopOrbit */

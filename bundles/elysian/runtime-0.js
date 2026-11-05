@@ -164,7 +164,8 @@ const triadParts=[
 /* @atlas-function systemView-21d3975cb065 */
 /* @atlas-function planetView */
 /* @atlas-function greatBlinkFrame */
-/* @atlas-function mountPlanet-7851c7e1056c */
+/* @atlas-function mountPlanet */
+/* @atlas-function solarPlanetGlyph */
 /* @atlas-function setPlanetFocus */
 
 /* @atlas-function stopOrbit */

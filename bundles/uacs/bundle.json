@@ -29,6 +29,9 @@
     "overviewTitle": "ALLIANCE OVERVIEW"
   },
   "flags": {
-    "titledLocalOrbitLabels": true
+    "extendedChartMoonThreshold": 10,
+    "sizedFocusBodyLabel": true,
+    "titledLocalOrbitLabels": true,
+    "titledPlanetInspectLabel": true
   }
 }

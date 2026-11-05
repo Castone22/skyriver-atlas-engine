@@ -29,5 +29,11 @@
     "localEmptyNote": "No local objects charted.",
     "localMoonNoun": "moon",
     "overviewAlias": "union"
+  },
+  "flags": {
+    "bodyRenderOpacity": true,
+    "goldenAngleMoonPhase": true,
+    "shortLabelsOnlyWhenExtended": true,
+    "titledPlanetInspectLabel": true
   }
 }

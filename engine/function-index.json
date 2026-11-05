@@ -1053,34 +1053,16 @@
     ],
     "bytes": 319
   },
-  "mountPlanet-028b1c9a2a66": {
+  "mountPlanet": {
     "name": "mountPlanet",
     "profiles": [
       "calidor",
-      "kadaym"
-    ],
-    "bytes": 5093
-  },
-  "mountPlanet-0bd1b42f8c6a": {
-    "name": "mountPlanet",
-    "profiles": [
-      "iulr"
-    ],
-    "bytes": 5136
-  },
-  "mountPlanet-6b26a184d4fb": {
-    "name": "mountPlanet",
-    "profiles": [
+      "elysian",
+      "iulr",
+      "kadaym",
       "uacs"
     ],
-    "bytes": 5206
-  },
-  "mountPlanet-7851c7e1056c": {
-    "name": "mountPlanet",
-    "profiles": [
-      "elysian"
-    ],
-    "bytes": 5445
+    "bytes": 5972
   },
   "mountSystem-02425195013d": {
     "name": "mountSystem",
@@ -2063,6 +2045,10 @@
   "solarPlanetGlyph": {
     "name": "solarPlanetGlyph",
     "profiles": [
+      "calidor",
+      "elysian",
+      "iulr",
+      "kadaym",
       "uacs"
     ],
     "bytes": 2500
