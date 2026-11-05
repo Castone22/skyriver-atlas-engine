@@ -32,8 +32,12 @@
     "localMoonNoun": "natural satellite"
   },
   "flags": {
+    "companionStars": true,
     "hiddenStationFilters": [
       "TORA"
-    ]
+    ],
+    "regionLabelStyle": "ink-title",
+    "solarMoonsVisibleOnly": true,
+    "visibilityResetsLabels": true
   }
 }

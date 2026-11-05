@@ -35,8 +35,12 @@
   "flags": {
     "architectureFacts": true,
     "bodyRenderOpacity": true,
+    "bordersToggleClass": true,
     "emptyDossierFactsFallBack": true,
     "goldenAngleMoonPhase": true,
+    "linkTitleSync": "worlds",
+    "minimapRegionPaths": true,
+    "minimapViewBox": "0 0 2850 2570",
     "searchSystemFields": [
       "architecture",
       "cloakStatusText",
@@ -45,6 +49,7 @@
     "shortLabelsOnlyWhenExtended": true,
     "stationLinksUseArticleTitle": true,
     "systemRecordArticleTitle": true,
-    "titledPlanetInspectLabel": true
+    "titledPlanetInspectLabel": true,
+    "visibilityResetsLabels": true
   }
 }

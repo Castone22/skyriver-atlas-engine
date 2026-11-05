@@ -24247,5 +24247,91 @@
   "documents": {},
   "presentation": {
     "notesHTML": "<p>This atlas assembles the known territory of the <a class=\"\" href=\"https://skyrivercodex.lzridgecodes.net/index.php?title=United_Federation_of_Kadaym\" target=\"_blank\" rel=\"noopener\">United Federation of Kadaym</a>, using current Codex articles and regional map images. Campaign reference: <b>134 CE</b>. Sources consulted 30 October 2026.</p><h3>How to use the atlas</h3><p>Drag to pan, scroll or pinch to zoom. Click inside a region to highlight it at the current zoom. Faint names repeat inside the regional boundaries. Select a star for its dossier; double-click its marker to focus its system; select a location’s <b>name</b> to open its Codex page. Search spans all regions, including unplotted worlds. Use + / − to zoom, arrow keys to pan, and 0 to fit the current region when the chart has keyboard focus.</p><h3>Animated system views</h3><p>Each selected system displays its named worlds in a compact orbital diagram. Documented orbital positions determine the actual numbered ring: a third planet is drawn on ring 3, with two smaller planets inward of it. Dim, unnamed planets fill gaps in the schematic diagram. The orbit-order strip reads from inner to outer. Asterisks mark named worlds whose orbital position is unspecified. Planetary views show the natural satellite counts recorded in the planet articles, including named moons and catalogue designations for unnamed moons. Only confirmed inhabited moons appear in solar-system view; Zelenzk remains visible around Mahanzk in both views. Select a numbered body to inspect it, or its name to open the Codex. Pause / Play controls the motion, and reduced-motion preferences are respected. Orbital positions shown as numbers come from planet infoboxes; orbital sizes, inclinations, speeds, phases and the ordering of worlds without a known orbital position are schematic. Stations use distinct symbols for Civil Engineering, Habitation, Military, Weaponry, Industry and Other; documented sites with no specialist category are grouped under Other and labelled as unspecified. Existing station and colony host orbits are not inferred: they appear in an unlocated row. Destroyed Salem Cross remains a historical site. Use Focus system to expand the solar system into the main chart, filter station categories, and inspect object dossiers. Return to region (or Escape) restores the regional chart. All station names link to their matching or expected Codex article titles. Reported binary primaries orbit their shared center. Select the central star or either binary member to inspect its own dossier; its name opens its Codex article. Use Focus planet & satellites to inspect a named world’s local moons and stations, and Return to system to step back. Faint asteroid belts can be hidden with the Belts control. Belt placement and stellar motion are schematic. Pulsar emission ribbons twist around a fixed polar axis; magnetars show a much gentler, slower depth shift in their ribbons and magnetic fields. The cataclysmic variable is an accreting white dwarf and donor pair. Stellar effects are slowed schematic illustrations, not measured rotation or outburst periods.</p><h3>Direct links &amp; widgets</h3><p>Link straight to a place with a URL fragment such as #Mahanzk, #Virezk or #Jurah%20Lendor. Copy the atlas address to retain the selected location. Use ?region=valteo&amp;view=widget for a regional chart. Add ?planet=Mahanzk&amp;view=widget for the local orbit alone, or ?system=virezk&amp;view=widget for the solar system alone. Widgets hide all atlas panels; their names and symbols still open Codex articles. Focus the diagram and press Space to pause or play. Reduced-motion preferences are respected.</p><h3>What the map establishes</h3><p>The <a class=\"\" href=\"https://skyrivercodex.lzridgecodes.net/index.php?title=File%3AJurahMakorMap3000x3000.png\" target=\"_blank\" rel=\"noopener\">Makor chart</a>, <a class=\"\" href=\"https://skyrivercodex.lzridgecodes.net/index.php?title=File%3AJurahLendorMap.png\" target=\"_blank\" rel=\"noopener\">Lendor chart</a> and <a class=\"\" href=\"https://skyrivercodex.lzridgecodes.net/index.php?title=File%3ADrayson-hinterlands.png\" target=\"_blank\" rel=\"noopener\">Hinterlands chart</a> establish local system arrangements and listed worlds. This atlas preserves their relative layouts. System points represent whole systems; worlds are listed beneath them and in dossiers.</p><p><b>Spacing between regions and territorial outlines are schematic.</b> The remote frontier is a separate inset. There is no measured navigational scale, route network or implied travel time. The 224-lightyear figure is the Federation’s published territorial span, not a pixel-to-distance conversion. Faint background stars are decoration and do not represent additional named systems.</p><p>Colors distinguish Federation systems, neighboring/neutral systems, and hazards/unresolved designations. They do not reproduce an undocumented color legend from the source images. An unnamed world slot does not mean a system is uninhabited. “Named worlds only” includes systems with named stations or other sites.</p><h3>Regional ownership</h3><p>Valteo is a compact acquired region of the Federation, centered on Xai and Histekka. Four of its five systems belonged to the former Oskalen Empire. <a class=\"\" href=\"https://skyrivercodex.lzridgecodes.net/index.php?title=Tserazk_Makai\" target=\"_blank\" rel=\"noopener\">Tserazk Makai</a>, <a class=\"\" href=\"https://skyrivercodex.lzridgecodes.net/index.php?title=Uldrei_Vahr\" target=\"_blank\" rel=\"noopener\">Uldrei Vahr</a> and <a class=\"\" href=\"https://skyrivercodex.lzridgecodes.net/index.php?title=Kezhrava\" target=\"_blank\" rel=\"noopener\">Kezhrava</a> are Kurzenzka sectors. Red hatching marks the occupied territory. Each KRZ marker shows its local infestation tier. The Drayson Hinterlands belong to the <a class=\"\" href=\"https://skyrivercodex.lzridgecodes.net/index.php?title=Elysian_Collective\" target=\"_blank\" rel=\"noopener\">Elysian Collective</a>, with the Kadaymian foothold on Prathia in Kevak and independent Montressor at the rimward edge.</p><h3>Source conflicts retained</h3><table><thead><tr><th>Record</th><th>How it is represented</th></tr></thead><tbody><tr><td><a class=\"\" href=\"https://skyrivercodex.lzridgecodes.net/index.php?title=Zekozha\" target=\"_blank\" rel=\"noopener\">Zekozha</a></td><td>At Tezzar per its infobox and the territorial table. The Lendor map repeats the name under Maken and Lezhak; those duplicates are flagged, not treated as additional worlds.</td></tr><tr><td><a class=\"\" href=\"https://skyrivercodex.lzridgecodes.net/index.php?title=Rakazk\" target=\"_blank\" rel=\"noopener\">Rakazk</a>, <a class=\"\" href=\"https://skyrivercodex.lzridgecodes.net/index.php?title=Vardis_Prime\" target=\"_blank\" rel=\"noopener\">Vardis Prime</a>, <a class=\"\" href=\"https://skyrivercodex.lzridgecodes.net/index.php?title=Helkana\" target=\"_blank\" rel=\"noopener\">Helkana</a></td><td>System labels follow the regional charts and territorial table. Older prose variants are noted in each dossier.</td></tr><tr><td><a class=\"\" href=\"https://skyrivercodex.lzridgecodes.net/index.php?title=Jurah_Lendor\" target=\"_blank\" rel=\"noopener\">Jurah Lendor</a></td><td>World assignments follow its chart and the controlled-worlds table, rather than the region infobox’s repeated Makor world list.</td></tr><tr><td><a class=\"\" href=\"https://skyrivercodex.lzridgecodes.net/index.php?title=Prathia\" target=\"_blank\" rel=\"noopener\">Prathia</a></td><td>Annexation dated to 129 CE; invasion and acquisition dates are distinguished. The 129 CE blockade is historical, not a drawn present-day blockade ring.</td></tr><tr><td><a class=\"\" href=\"https://skyrivercodex.lzridgecodes.net/index.php?title=Interstellar_Union_of_Liberated_Republics\" target=\"_blank\" rel=\"noopener\">I.U.L.R.</a></td><td>Spinward relationship is documented. Treaty peace in the nation article conflicts with “active war” in <a class=\"\" href=\"https://skyrivercodex.lzridgecodes.net/index.php?title=Relations%3A_Kadaym-IULR\" target=\"_blank\" rel=\"noopener\">the relations page</a>; no definite present battlefront is drawn.</td></tr><tr><td><a class=\"\" href=\"https://skyrivercodex.lzridgecodes.net/index.php?title=Yx-3041\" target=\"_blank\" rel=\"noopener\">Yx-3041</a></td><td>Red-coded on the source map, with no explanation. Not automatically classified as a Silent system.</td></tr></tbody></table><h3>Beyond the chart</h3><p><a class=\"\" href=\"https://skyrivercodex.lzridgecodes.net/index.php?title=Ferryman%E2%80%99s_Rest\" target=\"_blank\" rel=\"noopener\">Ferryman’s Rest</a> remains unplotted because its location is classified. Open MAKOR-9* from the Unplotted register to inspect its black hole and Ferryman’s Rest. The former unplotted settlements now appear under their host systems. The original unlocated KRZ records remain under <b>Unplotted</b>. The three charted Kurzenzka sectors use KRZ designations. At KRZ-147 in Tserazk Makai, the Nefandum Nefmaat follows a very slow orbit around a blackened star. The article describes 22 systems in the Hinterlands; the image shows 23 labels including independent <a class=\"\" href=\"https://skyrivercodex.lzridgecodes.net/index.php?title=Montressor\" target=\"_blank\" rel=\"noopener\">Montressor</a>.</p><p>This is a selective atlas: the Codex’s 200+ controlled worlds, thousands of stations and 31,223 stars are not all individually named. All named locations link to their matching articles or expected article titles, including pages that have not yet been written.</p><h3>Primary references</h3><div class=\"source-list\"><a class=\"\" href=\"https://skyrivercodex.lzridgecodes.net/index.php?title=United_Federation_of_Kadaym\" target=\"_blank\" rel=\"noopener\">United Federation of Kadaym</a><a class=\"\" href=\"https://skyrivercodex.lzridgecodes.net/index.php?title=Territory_of_the_Kadaymian_Federation\" target=\"_blank\" rel=\"noopener\">Territory of the Kadaymian Federation</a><a class=\"\" href=\"https://skyrivercodex.lzridgecodes.net/index.php?title=Template%3AKadaymian_planets\" target=\"_blank\" rel=\"noopener\">Template:Kadaymian planets</a><a class=\"\" href=\"https://skyrivercodex.lzridgecodes.net/index.php?title=Jurah_Makor\" target=\"_blank\" rel=\"noopener\">Jurah Makor</a><a class=\"\" href=\"https://skyrivercodex.lzridgecodes.net/index.php?title=Jurah_Lendor\" target=\"_blank\" rel=\"noopener\">Jurah Lendor</a><a class=\"\" href=\"https://skyrivercodex.lzridgecodes.net/index.php?title=Narthezk\" target=\"_blank\" rel=\"noopener\">Narthezk</a><a class=\"\" href=\"https://skyrivercodex.lzridgecodes.net/index.php?title=Drayson_Hinterlands\" target=\"_blank\" rel=\"noopener\">Drayson Hinterlands</a><a class=\"\" href=\"https://skyrivercodex.lzridgecodes.net/index.php?title=Kurzenzka_Sectors\" target=\"_blank\" rel=\"noopener\">Kurzenzka Sectors</a><a class=\"\" href=\"https://skyrivercodex.lzridgecodes.net/index.php?title=Yx-Morphis_Nefandum-class_shipbreaker\" target=\"_blank\" rel=\"noopener\">Yx-Morphis Nefandum-class shipbreaker</a><a class=\"\" href=\"https://skyrivercodex.lzridgecodes.net/index.php?title=Mahanzk\" target=\"_blank\" rel=\"noopener\">Mahanzk</a><a class=\"\" href=\"https://skyrivercodex.lzridgecodes.net/index.php?title=Helkana\" target=\"_blank\" rel=\"noopener\">Helkana</a><a class=\"\" href=\"https://skyrivercodex.lzridgecodes.net/index.php?title=Vardis_Prime\" target=\"_blank\" rel=\"noopener\">Vardis Prime</a><a class=\"\" href=\"https://skyrivercodex.lzridgecodes.net/index.php?title=Rakazk\" target=\"_blank\" rel=\"noopener\">Rakazk</a><a class=\"\" href=\"https://skyrivercodex.lzridgecodes.net/index.php?title=Zekozha\" target=\"_blank\" rel=\"noopener\">Zekozha</a><a class=\"\" href=\"https://skyrivercodex.lzridgecodes.net/index.php?title=Qerzhek\" target=\"_blank\" rel=\"noopener\">Qerzhek</a><a class=\"\" href=\"https://skyrivercodex.lzridgecodes.net/index.php?title=Prathia\" target=\"_blank\" rel=\"noopener\">Prathia</a><a class=\"\" href=\"https://skyrivercodex.lzridgecodes.net/index.php?title=Ferryman's_Rest\" target=\"_blank\" rel=\"noopener\">Ferryman&#39;s Rest</a><a class=\"\" href=\"https://skyrivercodex.lzridgecodes.net/index.php?title=Salem_Cross_Station\" target=\"_blank\" rel=\"noopener\">Salem Cross Station</a><a class=\"\" href=\"https://skyrivercodex.lzridgecodes.net/index.php?title=Circa's_Triad\" target=\"_blank\" rel=\"noopener\">Circa&#39;s Triad</a><a class=\"\" href=\"https://skyrivercodex.lzridgecodes.net/index.php?title=Siege_of_Drakkon_Prime\" target=\"_blank\" rel=\"noopener\">Siege of Drakkon Prime</a><a class=\"\" href=\"https://skyrivercodex.lzridgecodes.net/index.php?title=Conquest_of_the_Trilarian_Moons\" target=\"_blank\" rel=\"noopener\">Conquest of the Trilarian Moons</a><a class=\"\" href=\"https://skyrivercodex.lzridgecodes.net/index.php?title=Collective-Federation_War\" target=\"_blank\" rel=\"noopener\">Collective-Federation War</a></div><h3>Portable HTML</h3><p>The HTML download contains the map, data, scripts, styles and embedded Codex planet thumbnails. Bundled reference images remain available offline. Online dossiers read their facts and image from their own Codex infobox when opened, every minute while visible, and when you return to the atlas tab. Use Refresh data for an immediate check. Opening Codex articles requires an internet connection.</p><button class=\"top-btn\" onclick=\"downloadHTML()\">↓ Download self-contained HTML</button>"
+  },
+  "policies": {
+    "zoom": {
+      "minWidth": 260,
+      "minDivisor": 5,
+      "minDivisorOverviewOnly": true,
+      "maxWidth": 9000,
+      "maxBaseMultiple": null
+    },
+    "legend": {
+      "entries": [
+        [
+          "#dfbd78",
+          "Federation"
+        ],
+        [
+          "#7bbba0",
+          "Collective"
+        ],
+        [
+          "#93abc9",
+          "Neighbor / neutral"
+        ],
+        [
+          "#e57d82",
+          "Hazard / unresolved"
+        ]
+      ],
+      "regions": {
+        "frontier": [
+          [
+            "#7bbba0",
+            "Elysian Collective"
+          ],
+          [
+            "#dfbd78",
+            "Prathia / Kadaym"
+          ],
+          [
+            "#93abc9",
+            "Independent"
+          ],
+          [
+            "#e57d82",
+            "Silent hazard"
+          ]
+        ]
+      },
+      "tiers": true
+    },
+    "solarStations": {
+      "mode": "visibility",
+      "unset": "never",
+      "categories": []
+    },
+    "labels": {
+      "fixed": true,
+      "nodeScale": [
+        0.66,
+        0.78
+      ],
+      "overview": {
+        "active": [
+          272,
+          332
+        ],
+        "other": [
+          332,
+          495
+        ],
+        "otherRegion": [
+          332,
+          332
+        ]
+      },
+      "regional": {
+        "active": [
+          64,
+          80
+        ],
+        "other": [
+          80,
+          125
+        ]
+      }
+    }
   }
 }

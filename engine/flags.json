@@ -7,6 +7,14 @@
     "description": "The central body of the local planet chart carries an opacity attribute taken from its renderOpacity (default 1).",
     "default": false
   },
+  "bordersToggleClass": {
+    "description": "Hiding map borders toggles the borders-hidden class on the region layer instead of setting its display style.",
+    "default": false
+  },
+  "companionStars": {
+    "description": "A system's companion stars (primaries after the first) are drawn beside its main star.",
+    "default": false
+  },
   "derivedBelts": {
     "description": "A system with no beltSlot shows a belt when it has more than two orbits; with a beltSlot, a belt shows when the slot is greater than 0. Without the flag a belt shows only when beltSlot is set.",
     "default": false
@@ -39,9 +47,29 @@
     "description": "Inspect buttons in the system key are labelled with the synced planet title instead of the catalogue name.",
     "default": false
   },
+  "linkTitleSync": {
+    "description": "Link text shows a planet's synced title: off, worlds (only when the name is a catalogued world) or all (whenever the label equals the name).",
+    "default": "off"
+  },
+  "minimapRegionPaths": {
+    "description": "The minimap draws each region as a path built from outlines relative to the region bounds, instead of an absolute polygon or rectangle.",
+    "default": false
+  },
+  "minimapViewBox": {
+    "description": "Fixed viewBox for the minimap, for atlases with no atlasExtent; null uses the atlas extent.",
+    "default": null
+  },
   "planetArticleTracking": {
     "description": "Live article lookups use, and update, the tracked wiki page id of a planet (synced article titles).",
     "default": false
+  },
+  "planetLinkAttributes": {
+    "description": "Links to planets carry data-planet-link and data-planet-title attributes so the page can find and retitle them.",
+    "default": false
+  },
+  "regionLabelStyle": {
+    "description": "How regions are labelled, in drawing and when scaled: ink (Elysian), ink-title (Calidor), title-subtitle-ink (UACS) or title-subtitle-extent (Kadaym).",
+    "default": "ink"
   },
   "searchSystemFields": {
     "description": "Extra system fields (by property name) whose text is searchable, in addition to the classification terms.",
@@ -55,12 +83,32 @@
     "description": "Satellite labels on the local planet chart carry an explicit font-size (smaller in the extended layout).",
     "default": false
   },
+  "solarIllustrativeGuard": {
+    "description": "Only add an illustrative planet when its kind exists in illustrativeTypes, instead of assuming it does.",
+    "default": false
+  },
+  "solarLanesFromAllStations": {
+    "description": "System diagram width counts the lanes of every station record, not just the stations drawn on the diagram.",
+    "default": false
+  },
+  "solarMoonsVisibleOnly": {
+    "description": "The system diagram lists only moons that are visible at system level or inhabited, taken from the moon records, instead of every moon body.",
+    "default": false
+  },
+  "starTooltips": {
+    "description": "Each star carries a tooltip describing its stellar architecture and planet count.",
+    "default": false
+  },
   "stationLinksUseArticleTitle": {
     "description": "A station's first article link is its system's article title instead of the system name.",
     "default": false
   },
   "straightenImageTitleQuotes": {
     "description": "Curly apostrophes in the article title used for live images are replaced by straight ones.",
+    "default": false
+  },
+  "svgTextSyncedTitles": {
+    "description": "SVG text passes through planetName() so a planet's synced article title is shown instead of its catalogue name.",
     "default": false
   },
   "systemBodyRenderOpacity": {
@@ -77,6 +125,10 @@
   },
   "titledPlanetInspectLabel": {
     "description": "The central body of the local planet chart is labelled 'Inspect <synchronised title>' (planetName) instead of the catalogue name.",
+    "default": false
+  },
+  "visibilityResetsLabels": {
+    "description": "Updating visibility also resets every label's display from the labels checkbox before labels are rescaled.",
     "default": false
   },
   "worldKeySchematicOrbit": {

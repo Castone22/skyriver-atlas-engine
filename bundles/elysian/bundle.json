@@ -32,8 +32,11 @@
   },
   "flags": {
     "indexWorldLinks": true,
+    "linkTitleSync": "all",
     "planetArticleTracking": true,
+    "planetLinkAttributes": true,
     "systemBodyRenderOpacity": true,
+    "visibilityResetsLabels": true,
     "worldKeySchematicOrbit": true
   }
 }

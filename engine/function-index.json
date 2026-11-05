@@ -385,26 +385,14 @@
     ],
     "bytes": 786
   },
-  "draw-117dd77b0105": {
+  "draw": {
     "name": "draw",
     "profiles": [
-      "elysian"
-    ],
-    "bytes": 5175
-  },
-  "draw-3dd6f33ea9c1": {
-    "name": "draw",
-    "profiles": [
-      "calidor"
-    ],
-    "bytes": 5479
-  },
-  "draw-a6a4240adad2": {
-    "name": "draw",
-    "profiles": [
+      "calidor",
+      "elysian",
       "uacs"
     ],
-    "bytes": 5588
+    "bytes": 6487
   },
   "draw-ab708dae8498": {
     "name": "draw",
@@ -438,22 +426,16 @@
     ],
     "bytes": 1281
   },
-  "drawMinimap-a0c41a19f64d": {
-    "name": "drawMinimap",
-    "profiles": [
-      "iulr"
-    ],
-    "bytes": 453
-  },
-  "drawMinimap-bacdf6a5ea9f": {
+  "drawMinimap": {
     "name": "drawMinimap",
     "profiles": [
       "calidor",
       "elysian",
+      "iulr",
       "kadaym",
       "uacs"
     ],
-    "bytes": 636
+    "bytes": 778
   },
   "el": {
     "name": "el",
@@ -790,21 +772,22 @@
     ],
     "bytes": 928
   },
+  "labelThresholds": {
+    "name": "labelThresholds",
+    "profiles": [
+      "calidor",
+      "elysian",
+      "kadaym",
+      "uacs"
+    ],
+    "bytes": 394
+  },
   "labelThresholds-e09969274c09": {
     "name": "labelThresholds",
     "profiles": [
       "iulr"
     ],
     "bytes": 258
-  },
-  "labelThresholds-shared": {
-    "name": "labelThresholds",
-    "profiles": [
-      "calidor",
-      "elysian",
-      "uacs"
-    ],
-    "bytes": 379
   },
   "layout": {
     "name": "layout",
@@ -1415,40 +1398,16 @@
     ],
     "bytes": 3086
   },
-  "renderMapLegend-4aeafe6a28b2": {
+  "renderMapLegend": {
     "name": "renderMapLegend",
     "profiles": [
-      "kadaym"
-    ],
-    "bytes": 641
-  },
-  "renderMapLegend-5eb74e180b2d": {
-    "name": "renderMapLegend",
-    "profiles": [
-      "elysian"
-    ],
-    "bytes": 244
-  },
-  "renderMapLegend-c8f994aa0bf6": {
-    "name": "renderMapLegend",
-    "profiles": [
-      "calidor"
-    ],
-    "bytes": 235
-  },
-  "renderMapLegend-e99aba52b66e": {
-    "name": "renderMapLegend",
-    "profiles": [
-      "iulr"
-    ],
-    "bytes": 338
-  },
-  "renderMapLegend-f1619aeb17c0": {
-    "name": "renderMapLegend",
-    "profiles": [
+      "calidor",
+      "elysian",
+      "iulr",
+      "kadaym",
       "uacs"
     ],
-    "bytes": 219
+    "bytes": 687
   },
   "resetRealm": {
     "name": "resetRealm",
@@ -1668,19 +1627,15 @@
     ],
     "bytes": 162
   },
-  "scaleLabels-28ae69e249b4": {
+  "scaleLabels": {
     "name": "scaleLabels",
     "profiles": [
-      "kadaym"
-    ],
-    "bytes": 1551
-  },
-  "scaleLabels-33aba1a5f27b": {
-    "name": "scaleLabels",
-    "profiles": [
+      "calidor",
+      "elysian",
+      "kadaym",
       "uacs"
     ],
-    "bytes": 1158
+    "bytes": 2724
   },
   "scaleLabels-5982cc7d7bb0": {
     "name": "scaleLabels",
@@ -1688,20 +1643,6 @@
       "iulr"
     ],
     "bytes": 1133
-  },
-  "scaleLabels-87ef634aa138": {
-    "name": "scaleLabels",
-    "profiles": [
-      "elysian"
-    ],
-    "bytes": 964
-  },
-  "scaleLabels-9188e675f7fa": {
-    "name": "scaleLabels",
-    "profiles": [
-      "calidor"
-    ],
-    "bytes": 1239
   },
   "searchObject": {
     "name": "searchObject",
@@ -1867,40 +1808,16 @@
     ],
     "bytes": 927
   },
-  "solarLayout-1f15bde96813": {
+  "solarLayout": {
     "name": "solarLayout",
     "profiles": [
-      "calidor"
-    ],
-    "bytes": 1818
-  },
-  "solarLayout-4db56797e6fb": {
-    "name": "solarLayout",
-    "profiles": [
-      "kadaym"
-    ],
-    "bytes": 1714
-  },
-  "solarLayout-9246e73b7291": {
-    "name": "solarLayout",
-    "profiles": [
-      "iulr"
-    ],
-    "bytes": 1735
-  },
-  "solarLayout-d0af8d734afd": {
-    "name": "solarLayout",
-    "profiles": [
+      "calidor",
+      "elysian",
+      "iulr",
+      "kadaym",
       "uacs"
     ],
-    "bytes": 1760
-  },
-  "solarLayout-f526c44b9d79": {
-    "name": "solarLayout",
-    "profiles": [
-      "elysian"
-    ],
-    "bytes": 1762
+    "bytes": 2287
   },
   "solarPlanetGlyph": {
     "name": "solarPlanetGlyph",
@@ -2056,28 +1973,16 @@
     ],
     "bytes": 175
   },
-  "svgLink-32328fac037a": {
+  "svgLink": {
     "name": "svgLink",
     "profiles": [
       "calidor",
+      "elysian",
+      "iulr",
       "kadaym",
       "uacs"
     ],
-    "bytes": 294
-  },
-  "svgLink-5a82efb83326": {
-    "name": "svgLink",
-    "profiles": [
-      "elysian"
-    ],
-    "bytes": 448
-  },
-  "svgLink-b772889af571": {
-    "name": "svgLink",
-    "profiles": [
-      "iulr"
-    ],
-    "bytes": 344
+    "bytes": 622
   },
   "syncPlanetArticleTitles": {
     "name": "syncPlanetArticleTitles",
@@ -2207,22 +2112,16 @@
     ],
     "bytes": 6164
   },
-  "textSVG-4271b37f08ac": {
+  "textSVG": {
     "name": "textSVG",
     "profiles": [
       "calidor",
       "elysian",
       "iulr",
-      "kadaym"
-    ],
-    "bytes": 103
-  },
-  "textSVG-f0c6da8a455c": {
-    "name": "textSVG",
-    "profiles": [
+      "kadaym",
       "uacs"
     ],
-    "bytes": 115
+    "bytes": 159
   },
   "tierMarkup": {
     "name": "tierMarkup",
@@ -2336,34 +2235,16 @@
     ],
     "bytes": 299
   },
-  "updateVisibility-3bdaa5a55abc": {
-    "name": "updateVisibility",
-    "profiles": [
-      "iulr"
-    ],
-    "bytes": 629
-  },
-  "updateVisibility-7f01bd0a593a": {
+  "updateVisibility": {
     "name": "updateVisibility",
     "profiles": [
       "calidor",
+      "elysian",
+      "iulr",
+      "kadaym",
       "uacs"
     ],
-    "bytes": 617
-  },
-  "updateVisibility-a307d59f1553": {
-    "name": "updateVisibility",
-    "profiles": [
-      "kadaym"
-    ],
-    "bytes": 528
-  },
-  "updateVisibility-c50d0d4435c5": {
-    "name": "updateVisibility",
-    "profiles": [
-      "elysian"
-    ],
-    "bytes": 637
+    "bytes": 806
   },
   "url-1466fb4db7c9": {
     "name": "url",
@@ -2419,35 +2300,23 @@
     ],
     "bytes": 732
   },
+  "zoom": {
+    "name": "zoom",
+    "profiles": [
+      "calidor",
+      "elysian",
+      "iulr",
+      "kadaym",
+      "uacs"
+    ],
+    "bytes": 528
+  },
   "zoom-06a8e0e21ab3": {
     "name": "zoom",
     "profiles": [
       "mahanzk"
     ],
     "bytes": 143
-  },
-  "zoom-63c95ce3e23e": {
-    "name": "zoom",
-    "profiles": [
-      "iulr"
-    ],
-    "bytes": 288
-  },
-  "zoom-9565bf2c9b73": {
-    "name": "zoom",
-    "profiles": [
-      "kadaym"
-    ],
-    "bytes": 327
-  },
-  "zoom-c44842c8dbe1": {
-    "name": "zoom",
-    "profiles": [
-      "calidor",
-      "elysian",
-      "uacs"
-    ],
-    "bytes": 332
   },
   "zoomBy": {
     "name": "zoomBy",

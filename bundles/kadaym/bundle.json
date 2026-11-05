@@ -35,6 +35,9 @@
   "flags": {
     "derivedBelts": true,
     "elsewhereStations": true,
+    "regionLabelStyle": "title-subtitle-extent",
+    "solarIllustrativeGuard": true,
+    "solarLanesFromAllStations": true,
     "straightenImageTitleQuotes": true
   }
 }

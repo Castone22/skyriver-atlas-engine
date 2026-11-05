@@ -90,9 +90,9 @@ addEventListener('popstate',event=>restoreRoute(event.state));
 addEventListener('hashchange',()=>{if(location.href!==lastRestoredURL)restoreRoute(null,true)});
 
 /* @atlas-function svg */
-/* @atlas-function textSVG-4271b37f08ac */
+/* @atlas-function textSVG */
 /* @atlas-function objectTarget */
-/* @atlas-function svgLink-b772889af571 */
+/* @atlas-function svgLink */
 
 const ATLAS_BOUNDS=[40,60,2790,2490];
 /* @atlas-function regionPath */
@@ -100,7 +100,7 @@ const ATLAS_BOUNDS=[40,60,2790,2490];
 /* @atlas-function highlightRegion */
 /* @atlas-function draw-ab708dae8498 */
 /* @atlas-function updateSelection */
-/* @atlas-function updateVisibility-3bdaa5a55abc */
+/* @atlas-function updateVisibility */
 /* @atlas-function zoomPercent */
 // At least these displayed percentages. Short or narrow charts need more zoom
 // to give each label the same readable space as a full-size chart.
@@ -111,10 +111,10 @@ const LABEL_ZOOM={overview:{active:[120,150],neighbor:[150,220]},regional:{activ
 /* @atlas-function fitBounds */
 /* @atlas-function setView-b3d7ffb7defe */
 /* @atlas-function fitChart */
-/* @atlas-function zoom-63c95ce3e23e */
+/* @atlas-function zoom */
 /* @atlas-function select-ea9ed057f437 */
 /* @atlas-function tierMarkup */
-/* @atlas-function renderMapLegend-e99aba52b66e */
+/* @atlas-function renderMapLegend */
 /* @atlas-function affiliationMarkup */
 /* @atlas-function searchRecords */
 /* @atlas-function classificationTerms */
@@ -152,7 +152,7 @@ const illustrativeTypes={
  icy:[2.6,'#a6c1cd'],gas:[4.9,'#c7aa83'],ringed:[4.6,'#baab89'],'ice-giant':[4.2,'#76adbb']
 };
 /* @atlas-function illustrativePlanet */
-/* @atlas-function solarLayout-9246e73b7291 */
+/* @atlas-function solarLayout */
 /* @atlas-function ordinal */
 /* @atlas-function orbitalFact */
 /* @atlas-function worldRecord */
@@ -247,7 +247,7 @@ addEventListener('focus',()=>refreshVisibleImage(true));addEventListener('online
 
 /* @atlas-function renderDetail-04e12e93caa8 */
 /* @atlas-function bindDetail */
-/* @atlas-function drawMinimap-a0c41a19f64d */
+/* @atlas-function drawMinimap */
 /* @atlas-function buildNotes */
 
 /* @atlas-function downloadHTML */

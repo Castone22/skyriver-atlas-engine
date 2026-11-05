@@ -30900,7 +30900,52 @@
           80,
           125
         ]
-      }
+      },
+      "nodeScale": [
+        0.78,
+        0.88
+      ]
+    },
+    "zoom": {
+      "minWidth": 260,
+      "minDivisor": 8,
+      "minDivisorOverviewOnly": false,
+      "maxWidth": 9000,
+      "maxBaseMultiple": 4
+    },
+    "legend": {
+      "entries": [
+        [
+          "#fff0c0",
+          "Stellar system"
+        ],
+        [
+          "#c9e7ff",
+          "Natural stellar colors"
+        ],
+        [
+          "#d4bfd9",
+          "Accretion ring · black hole"
+        ]
+      ]
+    },
+    "solarStations": {
+      "mode": "visibility",
+      "unset": "always",
+      "categories": [
+        "TORA"
+      ]
+    },
+    "draw": {
+      "backdrop": {
+        "x": -1000,
+        "y": -900,
+        "w": 6500,
+        "h": 4800
+      },
+      "featuredSystem": "Sol",
+      "worldListField": "mapWorlds",
+      "worldListGatesLabel": false
     }
   }
 }

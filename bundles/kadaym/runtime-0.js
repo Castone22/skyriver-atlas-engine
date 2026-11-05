@@ -55,22 +55,23 @@ addEventListener('popstate',event=>restoreRoute(event.state));
 addEventListener('hashchange',()=>{if(location.href!==lastRestoredURL)restoreRoute(null,true)});
 
 /* @atlas-function svg */
-/* @atlas-function textSVG-4271b37f08ac */
+/* @atlas-function textSVG */
 /* @atlas-function objectTarget */
-/* @atlas-function svgLink-32328fac037a */
+/* @atlas-function svgLink */
 
 /* @atlas-function draw-b185cff73a7a */
 /* @atlas-function updateSelection */
-/* @atlas-function updateVisibility-a307d59f1553 */
+/* @atlas-function updateVisibility */
 /* @atlas-function zoomPercent */
-/* @atlas-function scaleLabels-28ae69e249b4 */
+/* @atlas-function labelThresholds */
+/* @atlas-function scaleLabels */
 /* @atlas-function applyView */
 /* @atlas-function fitBounds */
 /* @atlas-function setView-cd6ab0f8ae6d */
-/* @atlas-function zoom-9565bf2c9b73 */
+/* @atlas-function zoom */
 /* @atlas-function select-37c0546005ab */
 /* @atlas-function tierMarkup */
-/* @atlas-function renderMapLegend-4aeafe6a28b2 */
+/* @atlas-function renderMapLegend */
 /* @atlas-function affiliationMarkup */
 /* @atlas-function searchRecords */
 /* @atlas-function classificationTerms */
@@ -107,7 +108,7 @@ const illustrativeTypes={
  icy:[2.6,'#a6c1cd'],gas:[4.9,'#c7aa83'],ringed:[4.6,'#baab89'],'ice-giant':[4.2,'#76adbb']
 };
 /* @atlas-function illustrativePlanet */
-/* @atlas-function solarLayout-4db56797e6fb */
+/* @atlas-function solarLayout */
 /* @atlas-function ordinal */
 /* @atlas-function orbitalFact */
 /* @atlas-function worldRecord */
@@ -184,7 +185,7 @@ addEventListener('focus',()=>refreshVisibleImage(true));addEventListener('online
 
 /* @atlas-function renderDetail-503d62bf500c */
 /* @atlas-function bindDetail */
-/* @atlas-function drawMinimap-bacdf6a5ea9f */
+/* @atlas-function drawMinimap */
 /* @atlas-function buildNotes */
 /* @atlas-function toast */
 /* @atlas-function downloadHTML */
