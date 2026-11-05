@@ -1,5 +1,5 @@
 import { Atlas } from '../src/atlas.mjs';
-import definition from '../data/iulr.json' with { type: 'json' };
+import definition from '../bundles/iulr/atlas.json' with { type: 'json' };
 
 // Edit this data through the DSL, or edit its JSON catalogue directly.
 export default Atlas.fromJSON(definition).build({ strict: false });

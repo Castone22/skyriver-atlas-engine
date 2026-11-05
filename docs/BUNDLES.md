@@ -131,15 +131,41 @@ const result = compile({
 
 No `fs`, no globals, no atlas ids. `loadBundle` is the only place that touches transports.
 
+## Status after step 2
+
+Implemented: `src/bundle.mjs` (pure bundle model, manifest validation, version ranges),
+`src/bundle-fs.mjs` (directory transport), and seven atlas bundles under `bundles/<id>/`. An engine
+bundle manifest lives at `engine/bundle.json`. The compiler reads shells, styles, runtime scripts,
+defaults and shared functions through bundles and checks each atlas's `engine` range against the
+engine version. Output is byte-identical to before the move.
+
+Where the code differs from the target design above:
+
+- **`runtime` is a bundle part.** Each current atlas has an ordered `parts.runtime` list (the profile's
+  forked runtime scripts). The target design keeps runtime in the engine per kind; that comes with the
+  convergence in step 4.
+- **`title`** in `bundle.json` is the gallery display name.
+- **`renderer` names the bundle that supplies the parts.** An atlas definition's `renderer` is the id
+  of the bundle whose shell, styles and runtime it uses, and whose `atlas.json` supplies default
+  policies, constants and documents. For a shipped atlas that is its own id. A DSL atlas (for example
+  `examples/new-stellar.atlas.mjs`) points at another bundle (`elysian`) and inherits from it. A real
+  per-kind engine default will replace this.
+- **Shared functions still live in `engine/functions/`.** Atlas bundles reference them by marker key;
+  atlas-owned `functions/` overrides are not read yet.
+- **Not yet in the manifest:** `dependencies.children` (Grand still declares children in `atlas.json`),
+  per-file hashes (`files`), and bundle-local `assets`. Assets are still the shared `assets/` store.
+- **The compiler still reads `assets/` and gzips Grand snapshots with Node APIs.** Making `compile()`
+  pure is step 3.
+
 ## Migration plan
 
 Each step must leave `dist/` byte-identical to the previous step (diff the rebuilt output), and keep `npm run test:all` green.
 
-1. **Remove atlas knowledge from code, with no layout change.**
+1. **Remove atlas knowledge from code, with no layout change.** _Done._
    - Move the `['elysian','uacs','calidor']` policy-defaults rule, the Kadaym label rule, the Grand baseline and the gallery titles into data (`data/*.json` and `meta`).
    - Replace the "grand last" sort with a `dependencies.children` topological order.
    - Replace the `profile.brand` string substitution with template slots.
-2. **Introduce the bundle tree model** (`loadBundle`, validation, directory + tar.gz transports). Build the existing seven atlases into atlas bundles whose shell, style and runtime are the current profile files, declared as `replace`. Engine defaults are initially thin.
+2. **Introduce the bundle tree model** _(done; see "Status after step 2")_ (`loadBundle`, validation, directory + tar.gz transports). Build the existing seven atlases into atlas bundles whose shell, style and runtime are the current profile files, declared as `replace`. Engine defaults are initially thin.
 3. **Make `compile()` pure** (trees in, HTML out); move all I/O into loaders.
 4. **Converge the forks.** Deduplicate the function variants (for example the six `mountSystem` copies) into engine defaults plus declared overrides, one function at a time.
 5. **Wiki transports.** Release-URL loader first, then the `MediaWiki:` page-tree loader, implemented with the extension.

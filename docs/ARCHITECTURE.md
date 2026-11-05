@@ -34,7 +34,7 @@ The current profile boundary intentionally retains the full working source behav
 
 `engine/capabilities.json` records where capabilities exist. New optional modules should expose a documented hook and be covered by a cross-profile fixture before being marked portable. Label policies for Elysian/UACS/Calidor already share one configurable implementation. Profile-specific defaults live in catalogue policy data.
 
-To add a renderer, register its kind, shell, stylesheet paths and ordered script paths in `engine/profiles.json`, create an explicit data adapter, and add capability metadata. Prefer sharing existing functions when the lexical and behavioral contracts match. Do not add map records to renderer code.
+To add a renderer, create an atlas bundle under `bundles/<id>/` whose `bundle.json` declares its kind, brand, shell, stylesheets and ordered runtime scripts (see `docs/BUNDLES.md`), with its catalogue in `atlas.json`, and add capability metadata. Prefer sharing existing functions when the lexical and behavioral contracts match. Do not add map records to renderer code.
 
 ## Assets
 
@@ -44,7 +44,7 @@ The asset manifest maps SHA-256 IDs to local image bytes and MIME types. Definit
 
 The authoritative Grand definition stores empire seeds, scene settings, child catalogue references and the historical affiliation baseline. It does not store old child HTML snapshots or a duplicated search catalogue.
 
-A build obtains current child definitions, compiles them, gzips their portable HTML, and regenerates the location indexes. Full-project builds reuse child results already compiled. A direct Grand build resolves its declared child IDs from `data/`.
+A build obtains current child definitions, compiles them, gzips their portable HTML, and regenerates the location indexes. Full-project builds reuse child results already compiled. A direct Grand build resolves its declared child IDs from `bundles/`.
 
 The affiliation baseline must not be regenerated merely because a catalogue changed. It exists to detect an explicit transfer between Elysian and Kadaym affiliation. The policy then chooses the appropriate source while preserving the default Elysian Drayson / Kadaym Kevak priority.
 

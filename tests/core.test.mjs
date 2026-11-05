@@ -96,7 +96,9 @@ test('all seven migrated definitions retain their catalogue counts', async () =>
     await readFile(new URL('../docs/source-manifest.json', import.meta.url))
   );
   for (const entry of manifest) {
-    const d = JSON.parse(await readFile(new URL('../data/' + entry.id + '.json', import.meta.url)));
+    const d = JSON.parse(
+      await readFile(new URL('../bundles/' + entry.id + '/atlas.json', import.meta.url))
+    );
     assert.equal(validate(d, { strict: false }).valid, true, entry.id);
     if (entry.systems !== undefined) {
       assert.equal(d.data.systems.length, entry.systems);

@@ -1,0 +1,10 @@
+{
+  "bundleVersion": 1,
+  "type": "engine",
+  "version": "1.0.0",
+  "kinds": [
+    "stellar",
+    "geographic",
+    "galaxy"
+  ]
+}

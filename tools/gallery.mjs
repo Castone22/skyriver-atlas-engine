@@ -6,13 +6,20 @@ const descriptions = {
   stellar: 'Stellar · regions, systems and worlds'
 };
 export async function gallery(out, report, kinds = {}) {
-  const titles = JSON.parse(
-    await readFile(new URL('../data/gallery.json', import.meta.url), 'utf8')
-  );
+  // Display titles come from each atlas bundle's manifest.
+  const titles = {};
+  for (const r of report) {
+    try {
+      const manifest = await readFile(new URL(`../bundles/${r.id}/bundle.json`, import.meta.url));
+      titles[r.id] = JSON.parse(manifest).title;
+    } catch (e) {
+      if (e.code !== 'ENOENT') throw e;
+    }
+  }
   const cards = report
     .map(
       (r, i) =>
-        `<a class="card" href="${r.file}"><span class="number">0${i + 1}</span><h2>${titles[r.id]?.title || r.id}</h2><p>${descriptions[kinds[r.id]] || descriptions.stellar}</p><span class="open">Open atlas ↗</span></a>`
+        `<a class="card" href="${r.file}"><span class="number">0${i + 1}</span><h2>${titles[r.id] || r.id}</h2><p>${descriptions[kinds[r.id]] || descriptions.stellar}</p><span class="open">Open atlas ↗</span></a>`
     )
     .join('');
   await writeFile(

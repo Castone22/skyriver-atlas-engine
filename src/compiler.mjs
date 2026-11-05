@@ -5,16 +5,52 @@ import { gzipSync } from 'node:zlib';
 import vm from 'node:vm';
 import { clone, validate } from './atlas.mjs';
 import { render, safeJSON, escapeHTML as escape } from './template.mjs';
+import { satisfies } from './bundle.mjs';
+import { loadDirectory } from './bundle-fs.mjs';
 const ROOT = fileURLToPath(new URL('../', import.meta.url));
 const read = (p) => readFile(path.join(ROOT, p), 'utf8');
 const json = (p) => read(p).then(JSON.parse);
 const replace = (s, a, b) => s.split(a).join(b);
+const BUNDLE_ID = /^[a-z0-9][a-z0-9_-]*$/;
+const loaded = new Map();
+const cached = (key, load) => {
+  if (!loaded.has(key)) loaded.set(key, load());
+  return loaded.get(key);
+};
+/** The engine bundle: shared functions and, later, per-kind defaults. */
+const engineBundle = () =>
+  cached('engine', () => loadDirectory(path.join(ROOT, 'engine'), { expectType: 'engine' }));
+/** An atlas bundle by id, or null if there is none. */
+const atlasBundle = (id) =>
+  BUNDLE_ID.test(id)
+    ? cached('atlas:' + id, () =>
+        loadDirectory(path.join(ROOT, 'bundles', id), { expectType: 'atlas' }).catch((e) => {
+          if (e.code === 'ENOENT') return null;
+          throw e;
+        })
+      )
+    : Promise.resolve(null);
+/** Everything the compiler needs from a bundle, as plain data plus text readers. */
+function profileOf(bundle) {
+  const m = bundle.manifest;
+  return {
+    id: m.id,
+    kind: m.kind,
+    brand: m.brand,
+    capabilities: m.capabilities,
+    bundle,
+    atlas: m.atlas ?? 'atlas.json',
+    shell: m.parts.shell,
+    styles: m.parts.styles ?? [],
+    scripts: m.parts.runtime ?? []
+  };
+}
 async function linkRuntime(source, slots = {}) {
   const chunks = [...source.matchAll(/\/\* @atlas-function ([\w-]+) \*\//g)];
   const contents = await Promise.all(
     chunks.map(async (m) => {
-      const file = 'engine/functions/' + m[1] + '.js';
-      return render(await read(file), slots, file);
+      const file = 'functions/' + m[1] + '.js';
+      return render(await (await engineBundle()).text(file), slots, 'engine/' + file);
     })
   );
   for (let i = chunks.length - 1; i >= 0; i--)
@@ -79,14 +115,21 @@ function stellarHooks(d, profile) {
 export async function compile(definition, { strict = false, dependencies = {} } = {}) {
   const report = validate(definition, { strict });
   if (!report.valid) throw new Error(report.errors.join('\n'));
-  const profiles = await json('engine/profiles.json'),
-    profile = profiles[definition.renderer];
+  const base = await atlasBundle(definition.renderer),
+    profile = base && profileOf(base);
   featureChecks(definition, profile);
   if (!profile || profile.kind !== definition.kind)
     throw new Error(`Invalid ${definition.kind} renderer: ${definition.renderer}`);
   let d = clone(definition);
-  // A profile may name a defaults file. All inherited values become explicit in exported JSON.
-  const defaults = profile.defaults ? await json(profile.defaults) : null;
+  const engineVersion = (await engineBundle()).manifest.version,
+    range = base.manifest.engine;
+  if (!satisfies(engineVersion, range))
+    throw new Error(
+      `Bundle '${profile.id}' needs engine ${range}; this is engine ${engineVersion}`
+    );
+  // The renderer bundle's own atlas.json supplies defaults. All inherited values become explicit
+  // in exported JSON.
+  const defaults = await base.json(profile.atlas);
   if (defaults?.policies) d.policies = { ...defaults.policies, ...d.policies };
   // Geographic/galaxy profiles provide default scene assets.
   if (d.kind !== 'stellar') d.constants = { ...defaults?.constants, ...d.constants };
@@ -95,7 +138,9 @@ export async function compile(definition, { strict = false, dependencies = {} } 
     const seed = d.documents.seed || [],
       snapshots = { ...d.documents.snapshots },
       search = { ...d.documents.searchSeed };
-    const runtimes = await Promise.all(profile.scripts.map((x) => read(x.path).then(linkRuntime)));
+    const runtimes = await Promise.all(
+      profile.scripts.map((x) => base.text(x.path).then(linkRuntime))
+    );
     const context = vm.createContext({});
     vm.runInContext(runtimes[0], context, { timeout: 1000 });
     for (const entry of seed) {
@@ -104,7 +149,9 @@ export async function compile(definition, { strict = false, dependencies = {} } 
         const key = d.dependencies?.[entry.id] || entry.map;
         if (!key || !/^[a-z0-9][a-z0-9_-]*$/i.test(key))
           throw new Error(`Missing child atlas dependency: ${entry.id}`);
-        const childDef = JSON.parse(await read('data/' + key + '.json'));
+        const childBundle = await atlasBundle(key);
+        if (!childBundle) throw new Error(`Missing child atlas dependency: ${entry.id}`);
+        const childDef = await childBundle.json(childBundle.manifest.atlas ?? 'atlas.json');
         if (childDef.kind !== 'stellar')
           throw new Error('Galaxy dependencies must be stellar atlases');
         child = await compile(childDef);
@@ -121,9 +168,9 @@ export async function compile(definition, { strict = false, dependencies = {} } 
   const customBrand = d.meta.article !== profile.brand;
   // Template values for shells and runtime entry scripts.
   const slots = { brand: customBrand ? d.meta.article : profile.brand };
-  let html = render(await read(profile.shell), slots, profile.shell);
+  let html = render(await base.text(profile.shell), slots, profile.id + '/' + profile.shell);
   for (let i = 0; i < profile.styles.length; i++)
-    html = replace(html, `@@STYLE:${i}@@`, await read(profile.styles[i]));
+    html = replace(html, `@@STYLE:${i}@@`, await base.text(profile.styles[i]));
   for (const [key, value] of Object.entries(d.documents))
     html = replace(html, `@@DOCUMENT:${key}@@`, safeJSON(value));
   // Fresh stellar shells use current catalogue choices rather than baked-in dropdown entries.
@@ -153,7 +200,10 @@ export async function compile(definition, { strict = false, dependencies = {} } 
     );
   for (let i = 0; i < profile.scripts.length; i++) {
     const scriptPath = profile.scripts[i].path;
-    let code = await linkRuntime(render(await read(scriptPath), slots, scriptPath), slots);
+    let code = await linkRuntime(
+      render(await base.text(scriptPath), slots, profile.id + '/' + scriptPath),
+      slots
+    );
     code = replace(code, '__ATLAS__.data', safeJSON(d.data));
     if (d.kind === 'stellar' && i === 0) {
       const marker = 'const DATA = ' + safeJSON(d.data) + ';';
@@ -168,12 +218,12 @@ export async function compile(definition, { strict = false, dependencies = {} } 
         d.presentation?.notesHTML ||
         '<p>Interactive atlas. Names link to their corresponding Skyriver Codex articles. Orbital distances are schematic.</p>';
       // Replace the notes function through the AST include contract, never splice braces.
-      const original = await read(profile.scripts[i].path),
+      const original = await base.text(profile.scripts[i].path),
         marker = original.match(/\/\* @atlas-function (buildNotes-[\w-]+) \*\//);
       if (marker)
         code = replace(
           code,
-          await read('engine/functions/' + marker[1] + '.js'),
+          await (await engineBundle()).text('functions/' + marker[1] + '.js'),
           `function buildNotes(){$('notesContent').innerHTML=${safeJSON(notes)}}\n`
         );
     }

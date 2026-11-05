@@ -14,7 +14,7 @@ atlas bundles, loaded client-side by the AtlasEmbed MediaWiki extension. Read th
 One engine serves every atlas, and published atlases and wiki embeds already exist. When
 changing anything, prefer the change that keeps existing behavior working.
 
-- Existing atlas data (`data/*.json`), stable atlas, system and planet keys, and URL/query
+- Existing atlas data (`bundles/*/atlas.json`), stable atlas, system and planet keys, and URL/query
   deep links (`system=`, `planet=`, and so on) must keep working.
 - The standalone HTML output must remain a valid upload for the existing AtlasEmbed flow.
 - Do not rename or remove public exports (`src/atlas.mjs`, `src/compiler.mjs`,

@@ -34,7 +34,7 @@ for (const row of manifest) {
   assert.equal(createHash('sha256').update(html).digest('hex'), row.sha256);
   const original = dataLiteral(html);
   if (!original) continue;
-  const definition = JSON.parse(await readFile(path.join(root, 'data/' + row.id + '.json')));
+  const definition = JSON.parse(await readFile(path.join(root, 'bundles', row.id, 'atlas.json')));
   let serialized = JSON.stringify(definition.data);
   for (const id of new Set(
     [...serialized.matchAll(/atlas-asset:([a-f0-9]{64})/g)].map((m) => m[1])

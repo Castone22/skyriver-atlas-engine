@@ -2,7 +2,7 @@
 
 A working JavaScript DSL, JSON catalogue format, shared renderer source, and build pipeline extracted from the latest retrieved Kadaym, Elysian, UACS, IULR, Calidor, Grand, and Mahanzk atlases.
 
-Map authors edit `maps/` and `data/`. Renderer developers edit `engine/`. Builds produce portable, self-contained HTML in `dist/` for the existing Codex embedding workflow. Generated HTML contains the final bundle by design; it is no longer the source of truth.
+Map authors edit `bundles/` (and `maps/`). Renderer developers edit `engine/`. Builds produce portable, self-contained HTML in `dist/` for the existing Codex embedding workflow. Generated HTML contains the final bundle by design; it is no longer the source of truth.
 
 ## Run it
 
@@ -52,19 +52,19 @@ Callbacks run only while authoring. The result is plain JSON: no renderer functi
 
 ## What is separated
 
-| Location                   | Responsibility                                                      |
-| -------------------------- | ------------------------------------------------------------------- |
-| `src/atlas.mjs`            | Fluent DSL, JSON validation, relationships, article URLs            |
-| `src/compiler.mjs`         | Renderer linking, asset embedding, portable HTML output             |
-| `src/store.mjs`            | JSON persistence with revisions and atomic replacement              |
-| `maps/*.atlas.mjs`         | Authoring entry points                                              |
-| `data/*.json`              | Complete catalogues, geometry, map notes, presentation settings     |
-| `assets/`                  | Deduplicated images, addressed by SHA-256                           |
-| `engine/functions/`        | Shared source functions and explicitly retained behavioral variants |
-| `engine/profiles/`         | View shells, CSS and initialization adapters                        |
-| `engine/capabilities.json` | Preserved capabilities and supported feature settings               |
-| `dist/`                    | Generated HTML; rebuild after source edits                          |
-| `docs/`                    | Source provenance, migration notes and verification results         |
+| Location                   | Responsibility                                                                                             |
+| -------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `src/atlas.mjs`            | Fluent DSL, JSON validation, relationships, article URLs                                                   |
+| `src/compiler.mjs`         | Renderer linking, asset embedding, portable HTML output                                                    |
+| `src/store.mjs`            | JSON persistence with revisions and atomic replacement                                                     |
+| `maps/*.atlas.mjs`         | Authoring entry points                                                                                     |
+| `bundles/<id>/`            | One atlas bundle: `bundle.json`, `atlas.json` (catalogue, geometry, notes), shell, CSS and runtime scripts |
+| `assets/`                  | Deduplicated images, addressed by SHA-256                                                                  |
+| `engine/functions/`        | Shared source functions and explicitly retained behavioral variants                                        |
+| `engine/bundle.json`       | Engine bundle manifest (version, supported kinds)                                                          |
+| `engine/capabilities.json` | Preserved capabilities and supported feature settings                                                      |
+| `dist/`                    | Generated HTML; rebuild after source edits                                                                 |
+| `docs/`                    | Source provenance, migration notes and verification results                                                |
 
 The renderer linker resolves shared function references at build time. It does not use browser `eval`, fetch source code, or require a server-side renderer. This preserves the lexical dependencies of the original renderers while making a shared-function fix propagate to every profile that uses it.
 

@@ -1,0 +1,26 @@
+{
+  "bundleVersion": 1,
+  "type": "atlas",
+  "id": "kadaym",
+  "version": "1.0.0",
+  "engine": "^1.0.0",
+  "kind": "stellar",
+  "brand": "United Federation of Kadaym",
+  "title": "Kadaymian Federation",
+  "atlas": "atlas.json",
+  "parts": {
+    "shell": "shell.html",
+    "styles": [
+      "style-0.css"
+    ],
+    "runtime": [
+      {
+        "path": "runtime-0.js"
+      }
+    ]
+  },
+  "capabilities": {
+    "configurableLabels": false,
+    "configurableLabelsMessage": "Kadaym retains its native label policy; use its cartography data or another profile for configurable thresholds."
+  }
+}

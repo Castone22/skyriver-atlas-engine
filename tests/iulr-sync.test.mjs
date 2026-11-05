@@ -6,7 +6,7 @@ import { readFile } from 'node:fs/promises';
 import { gunzipSync } from 'node:zlib';
 const root = new URL('../', import.meta.url),
   read = (p) => readFile(new URL(p, root), 'utf8');
-let runtime = await read('engine/profiles/iulr/runtime-0.js');
+let runtime = await read('bundles/iulr/runtime-0.js');
 for (const m of [...runtime.matchAll(/\/\* @atlas-function ([\w-]+) \*\//g)].reverse())
   runtime =
     runtime.slice(0, m.index) +
@@ -267,7 +267,7 @@ test('IULR: rebuilt atlas and Grand snapshot contain the identical synchronized 
 });
 test('IULR: a direct Grand build refreshes its child without precompiled dependencies', async () => {
   const { compile } = await import('../src/compiler.mjs');
-  const definition = JSON.parse(await read('data/grand.json'));
+  const definition = JSON.parse(await read('bundles/grand/atlas.json'));
   const { html } = await compile(definition);
   const snapshots = JSON.parse(
     html.match(/<script[^>]*id="snapshots"[^>]*>([\s\S]*?)<\/script>/)[1]

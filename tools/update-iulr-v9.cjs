@@ -24,7 +24,7 @@ assert.equal(
 const scripts = [...original.matchAll(/<script\b[^>]*>([\s\S]*?)<\/script>/gi)].map((m) => m[1]);
 let code = scripts.find((s) => s.includes('const DATA = '));
 if (!code) throw Error('No IULR runtime');
-const def = json('data/iulr.json'),
+const def = json('bundles/iulr/atlas.json'),
   assets = json('assets/manifest.json');
 const ast = parse(code),
   body = (ast.program || ast).body;
@@ -96,14 +96,14 @@ for (const node of body) {
 }
 for (const edit of edits.sort((a, b) => b.start - a.start))
   code = code.slice(0, edit.start) + edit.text + code.slice(edit.end);
-write('engine/profiles/iulr/runtime-0.js', code);
-save('data/iulr.json', def);
-let shell = read('engine/profiles/iulr/shell.html');
+write('bundles/iulr/runtime-0.js', code);
+save('bundles/iulr/atlas.json', def);
+let shell = read('bundles/iulr/shell.html');
 shell = shell.replace(
   /(<small id="atlasVersion">)[\s\S]*?(<\/small>)/,
   (_, a, b) => a + 'IULR Stellar Atlas v.9' + b
 );
-write('engine/profiles/iulr/shell.html', shell);
+write('bundles/iulr/shell.html', shell);
 const manifest = json('docs/source-manifest.json'),
   row = manifest.find((x) => x.id === 'iulr');
 Object.assign(row, {
@@ -125,7 +125,16 @@ Object.assign(
   }
 );
 save('docs/retrieved-sources.json', retrieved);
-const profiles = json('engine/profiles.json'),
+const profiles = Object.fromEntries(
+    fs.readdirSync(path.join(root, 'bundles')).map((id) => [
+      id,
+      {
+        scripts: json('bundles/' + id + '/bundle.json').parts.runtime.map((r) => ({
+          path: 'bundles/' + id + '/' + r.path
+        }))
+      }
+    ])
+  ),
   index = {};
 for (const [id, profile] of Object.entries(profiles))
   for (const script of profile.scripts)
