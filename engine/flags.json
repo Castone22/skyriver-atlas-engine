@@ -1,1 +1,3 @@
-{}
+{
+  "svgTextSyncedTitles": { "description": "SVG text passes through planetName() so a planet's synced article title is shown instead of its catalogue name.", "default": false }
+}

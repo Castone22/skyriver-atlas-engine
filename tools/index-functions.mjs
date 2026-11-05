@@ -53,6 +53,8 @@ for (const key of files) names[key] = await nameOf(key);
 if (flag('fix-names')) {
   const renames = {};
   for (const key of files) {
+    // A file already named exactly after its function has no suffix to keep.
+    if (key === names[key].name) continue;
     const hash = key.slice(key.lastIndexOf('-') + 1);
     const wanted = `${names[key].name}-${hash}`;
     if (wanted !== key) renames[key] = wanted;

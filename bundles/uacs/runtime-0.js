@@ -69,7 +69,7 @@ addEventListener('popstate',event=>restoreRoute(event.state));
 addEventListener('hashchange',()=>{if(location.href!==lastRestoredURL)restoreRoute(null,true)});
 
 /* @atlas-function svg */
-/* @atlas-function textSVG-f0c6da8a455c */
+/* @atlas-function textSVG */
 /* @atlas-function objectTarget */
 /* @atlas-function svgLink-32328fac037a */
 

@@ -2384,22 +2384,16 @@
     ],
     "bytes": 6164
   },
-  "textSVG-4271b37f08ac": {
+  "textSVG": {
     "name": "textSVG",
     "profiles": [
       "calidor",
       "elysian",
       "iulr",
-      "kadaym"
-    ],
-    "bytes": 103
-  },
-  "textSVG-f0c6da8a455c": {
-    "name": "textSVG",
-    "profiles": [
+      "kadaym",
       "uacs"
     ],
-    "bytes": 115
+    "bytes": 159
   },
   "tierMarkup": {
     "name": "tierMarkup",

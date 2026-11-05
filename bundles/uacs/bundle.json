@@ -24,5 +24,8 @@
     "overviewTitle": "ALLIANCE OVERVIEW",
     "overviewSubtitle": "42 charted systems · five adjoining regional charts",
     "affiliationLink": "{{brand}}"
+  },
+  "flags": {
+    "svgTextSyncedTitles": true
   }
 }
