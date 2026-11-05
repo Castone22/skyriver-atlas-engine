@@ -150,6 +150,19 @@ Each step must leave `dist/` byte-identical to the previous step (diff the rebui
 - **The wiki supplies assets.** Bundles may embed `assets/`, but the normal path is `resolveAsset(sha256)` backed by the wiki. In a client-side host the resolver can return a URL, so images need not be inlined as data URLs; inlining stays available for the standalone-HTML export.
 - **The PHP extension owns storage and unpacking.** Bundles are stored unzipped in a directory and served over HTTP. The engine therefore needs no archive support: zip/tar handling belongs to the extension's upload path. The primary transport is an **HTTP directory loader**: it fetches `bundle.json` from a base URL, and the manifest lists every file with its sha256 (`files`), so the client fetches exactly those paths and verifies them. The directory transport is kept for the CLI and tests.
 
+## AtlasEmbed integration
+
+AtlasEmbed today stores one self-contained HTML file per slug outside the file repo and serves it from `Special:AtlasEmbed/<slug>` with `Content-Security-Policy: sandbox allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox` (no `allow-same-origin`), so the atlas runs as an opaque-origin document with no access to wiki cookies or DOM. Embedding is `<atlasembed slug=… query=… />` into an iframe. The bundle design keeps all of that.
+
+- **Backward compatible.** The standalone HTML export stays a first-class output, because it is exactly what AtlasEmbed accepts today. Existing slugs keep working unchanged; bundles are an additional kind of slug.
+- **A bundle slug serves a small loader page.** `Special:AtlasEmbed/<slug>` returns a tiny HTML host (same sandbox CSP) that loads the engine bundle and the atlas bundle over HTTP, runs `compile()` in the browser and renders. The loader forwards the page's query string, so deep links (`system=…&planet=…`) behave as they do now.
+- **Everything stays sandboxed.** Bundle code, including atlas-supplied `functions/*.js`, runs inside the opaque-origin iframe, so even an atlas bundle that carries code cannot reach wiki session state. This is the real protection; editor trust is a second layer.
+- **Sandboxed documents fetch cross-origin.** Without `allow-same-origin` the loader's origin is `null`, so bundle files must be served with `Access-Control-Allow-Origin: *` (they are public static files, no credentials). Test this early, including any `import()` or module loading, which also needs CORS.
+- **Storage shape.** One directory per engine version (stored once, shared by every atlas) and one per atlas slug, each with `bundle.json` listing files and sha256. Engine bundles are large and identical across atlases, so browser caching is a major win over today's 1 to 8 MB per standalone file. The `atlasembed_file` table gains a type column (`html` or `bundle`) and an engine reference.
+- **Revisions.** Today re-uploading a slug overwrites it. Bundles carry `version`; the manifest's `files` hashes give cache-safe URLs, so keeping old versions around is optional.
+- **Grand.** Composing child atlases means loading each child bundle in the browser. Child snapshots (today gzipped HTML) become either nested compiled documents or references to child slugs on the same host, which needs a decision when we reach step 3.
+
 ## Open questions
 
-- Should the standalone-HTML export remain a first-class output, or become a convenience on top of a live client-side render?
+- Should Grand's children be embedded snapshots or live references to the child slugs?
+- Should engine versions be pinned per atlas slug, or follow a wiki-wide "current engine" setting?
