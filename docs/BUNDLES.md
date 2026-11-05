@@ -105,13 +105,13 @@ Each transport is a small loader returning the same `Map<path, Uint8Array>`:
 | Transport              | Use                                                                |
 | ---------------------- | ------------------------------------------------------------------ |
 | Directory              | Authoring and tests                                                |
-| `.tar.gz` / `.zip`     | Distribution; uploads to the wiki                                  |
+| HTTP directory | Primary: base URL + manifest `files` list (sha256 each); stored unzipped by the extension |
 | Release URL            | GitHub/Forgejo release asset, pinned by version and sha256         |
 | `MediaWiki:` page tree | e.g. `MediaWiki:Atlas/kadaym/atlas.json`, `.../shell.html`, ...    |
 
 Notes:
 
-- Node has no built-in zip reader. `.tar.gz` needs only `node:zlib` plus a tiny tar parser, so the zero-dependency property is kept. Accepting `.zip` as well means one small dependency (or a minimal reader); decide when implementing.
+- Archives (zip, tar.gz) are handled by the wiki extension on upload; the engine reads only unpacked trees.
 - Wiki text pages cannot hold large binaries. Assets referenced by hash are resolved from the bundle's `assets/` first, then from a host-supplied `resolveAsset(sha256)` (for example backed by `File:` uploads).
 - Engine selection: a host pins an engine release by version and sha256. An atlas's `engine` range is checked against it at load time with a clear error.
 
@@ -144,8 +144,12 @@ Each step must leave `dist/` byte-identical to the previous step (diff the rebui
 4. **Converge the forks.** Deduplicate the function variants (for example the six `mountSystem` copies) into engine defaults plus declared overrides, one function at a time.
 5. **Wiki transports.** Release-URL loader first, then the `MediaWiki:` page-tree loader, implemented with the extension.
 
+## Decisions
+
+- **Compilation runs client-side.** `compile()` must run in a browser. That rules out `node:fs`, `node:vm` and `node:zlib` inside the compiler core. Grand's current uses of `gzipSync` (child snapshots) and `vm` (search indexing) need browser-capable replacements (`CompressionStream`, which is async, and a direct call to the search module). Node-only code stays in the CLI wrapper.
+- **The wiki supplies assets.** Bundles may embed `assets/`, but the normal path is `resolveAsset(sha256)` backed by the wiki. In a client-side host the resolver can return a URL, so images need not be inlined as data URLs; inlining stays available for the standalone-HTML export.
+- **The PHP extension owns storage and unpacking.** Bundles are stored unzipped in a directory and served over HTTP. The engine therefore needs no archive support: zip/tar handling belongs to the extension's upload path. The primary transport is an **HTTP directory loader**: it fetches `bundle.json` from a base URL, and the manifest lists every file with its sha256 (`files`), so the client fetches exactly those paths and verifies them. The directory transport is kept for the CLI and tests.
+
 ## Open questions
 
-- Where does compilation run: in Node on the server, in the browser, or both? The pure-function design keeps both possible.
-- Do atlas bundles carry their own assets, or does the wiki supply them via `resolveAsset`?
-- `.zip` support in addition to `.tar.gz`?
+- Should the standalone-HTML export remain a first-class output, or become a convenience on top of a live client-side render?
