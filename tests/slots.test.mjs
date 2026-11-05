@@ -29,7 +29,10 @@ test('bundle slots are available to shells and may use {{brand}}', async () => {
   const definition = await real.json('atlas.json');
   const shell = await real.text('shell.html');
   const patched = Object.create(real);
-  patched.manifest = { ...real.manifest, slots: { greeting: 'Hello {{brand}}' } };
+  patched.manifest = {
+    ...real.manifest,
+    slots: { ...real.manifest.slots, greeting: 'Hello {{brand}}' }
+  };
   patched.text = async (p) => (p === 'shell.html' ? '{{greeting|html}}' + shell : real.text(p));
   const { html } = await compileCore(definition, { ...disk, atlas: async () => patched });
   assert.ok(html.startsWith('Hello ' + real.manifest.brand));
