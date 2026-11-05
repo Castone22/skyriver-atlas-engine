@@ -386,7 +386,11 @@
         ],
         "mapWorlds": [],
         "description": "DSC 346 is one of the 24 systems named on the supplied UACS chart. A black hole with the charted blue-white companion DSC 346 B and V. Sokolov Observatory.",
-        "centralBodyType": "black-hole"
+        "centralBodyType": "black-hole",
+        "primaryDescriptions": [
+          "The black hole identified on the supplied Cluster chart. The surrounding orbital architecture is schematic.",
+          "DSC 346 B is the blue-white companion marked beside the black hole on the supplied chart."
+        ]
       },
       {
         "id": "koch",
