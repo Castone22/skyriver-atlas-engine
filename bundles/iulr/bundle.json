@@ -26,5 +26,8 @@
     "downloadName": "IULR-Stellar-Atlas.html",
     "overviewAlias": "union",
     "affiliationLink": "{{brand}}"
+  },
+  "flags": {
+    "planetArticleTitles": true
   }
 }

@@ -1,1 +1,5 @@
-{}
+{
+  "normalizeTitleApostrophes": { "description": "Article links turn curly apostrophes in a title into straight ones before building the URL.", "default": false },
+  "planetArticleTitles": { "description": "Planet links use the article title kept in sync with the Codex (planetArticleName) when the planet has one.", "default": false },
+  "planetPageLinks": { "description": "Planet links go to the Codex page by page id (curid) once the id is known from title synchronisation.", "default": false }
+}

@@ -2530,34 +2530,16 @@
     ],
     "bytes": 637
   },
-  "url-1466fb4db7c9": {
-    "name": "url",
-    "profiles": [
-      "kadaym"
-    ],
-    "bytes": 404
-  },
-  "url-28eb0c70ab46": {
-    "name": "url",
-    "profiles": [
-      "iulr"
-    ],
-    "bytes": 408
-  },
-  "url-ad223876f7d1": {
+  "url": {
     "name": "url",
     "profiles": [
       "calidor",
+      "elysian",
+      "iulr",
+      "kadaym",
       "uacs"
     ],
-    "bytes": 360
-  },
-  "url-def748458460": {
-    "name": "url",
-    "profiles": [
-      "elysian"
-    ],
-    "bytes": 516
+    "bytes": 843
   },
   "validateHTML": {
     "name": "validateHTML",
