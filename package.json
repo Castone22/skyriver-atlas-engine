@@ -25,7 +25,10 @@
     "extract": "node tools/extract.cjs",
     "update-iulr": "node tools/update-iulr-v9.cjs",
     "build:loader": "node tools/build-loader.mjs",
-    "manifest": "node tools/bundle-manifest.mjs"
+    "manifest": "node tools/bundle-manifest.mjs",
+    "test:golden": "node tests/golden.cjs",
+    "golden:update": "node tests/golden.cjs --update",
+    "dedup-lab": "node tools/dedup-lab.mjs"
   },
   "devDependencies": {
     "@babel/parser": "7.28.4",

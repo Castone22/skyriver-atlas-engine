@@ -7,3 +7,4 @@ MANIFEST.sha256
 bundles/
 .claude/
 build/
+tests/golden/

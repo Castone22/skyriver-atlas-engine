@@ -1,0 +1,177 @@
+// Golden-master tour. Drives every region, system, planet, satellite and station of each stellar
+// atlas through AtlasFramework.navigate in jsdom and records a hash of the rendered DOM per step.
+// Geometry is mocked (see dom.cjs), so this checks structure and text, not visual layout.
+//
+//   node tests/golden.cjs            compare against tests/golden/*.json
+//   node tests/golden.cjs --update   rewrite the golden files
+//   node tests/golden.cjs --quick    every 10th step only (fast smoke check)
+//   node tests/golden.cjs calidor    one atlas
+//   --html FILE --out FILE           tour another build of one atlas and write the raw result
+//                                    (used by tools/dedup-lab.mjs)
+const fs = require('node:fs'),
+  path = require('node:path'),
+  crypto = require('node:crypto');
+const { open } = require('./dom.cjs');
+const root = path.resolve(__dirname, '..');
+const ATLASES = ['calidor', 'elysian', 'iulr', 'kadaym', 'uacs'];
+
+/** Make the page deterministic: fixed clock and a seeded Math.random. */
+function freeze(w) {
+  let seed = 12345;
+  w.Math.random = () => (seed = (seed * 1664525 + 1013904223) % 4294967296) / 4294967296;
+  const FIXED = 1700000000000;
+  const RealDate = w.Date;
+  class FixedDate extends RealDate {
+    constructor(...a) {
+      super(...(a.length ? a : [FIXED]));
+    }
+    static now() {
+      return FIXED;
+    }
+  }
+  w.Date = FixedDate;
+  w.performance.now = () => 0;
+  // Track timers so the tour can cancel them before closing the window.
+  const timers = new Set();
+  for (const [set, clear] of [
+    ['setTimeout', 'clearTimeout'],
+    ['setInterval', 'clearInterval']
+  ]) {
+    const real = w[set].bind(w);
+    w[set] = (fn, ms, ...args) => {
+      const id = real(fn, ms, ...args);
+      timers.add([clear, id]);
+      return id;
+    };
+  }
+  w.__cancelTimers = () => {
+    for (const [clear, id] of timers) w[clear](id);
+    timers.clear();
+  };
+}
+
+/** The steps of the tour, derived from the atlas data. */
+function stepsFor(data) {
+  const steps = [
+    { key: 'start', route: null },
+    { key: 'all', route: {} }
+  ];
+  for (const id of Object.keys(data.regions)) {
+    steps.push({ key: 'region:' + id, route: { region: id } });
+    steps.push({ key: 'overview:' + id, route: { region: id, chart: 'overview' } });
+  }
+  for (const s of data.systems) {
+    steps.push({ key: 'system:' + s.id, route: { system: s.id } });
+    steps.push({ key: 'station-overview:' + s.id, route: { system: s.id, station: 1 } });
+    for (const world of s.worlds || [])
+      steps.push({ key: `planet:${s.id}:${world}`, route: { system: s.id, planet: world } });
+  }
+  for (const m of data.satellites || [])
+    steps.push({
+      key: `object:${m.system}:${m.name}`,
+      route: { system: m.system, object: m.name }
+    });
+  for (const st of data.stations || [])
+    steps.push({
+      key: `station:${st.system}:${st.name}`,
+      route: { system: st.system, object: st.name }
+    });
+  return steps;
+}
+
+function snapshot(w) {
+  const clone = w.document.body.cloneNode(true);
+  clone.querySelectorAll('script,style').forEach((n) => n.remove());
+  const text = w.location.search + '|' + w.document.title + '|' + clone.innerHTML;
+  return crypto.createHash('sha1').update(text).digest('hex').slice(0, 12);
+}
+
+/** Run the tour for one atlas page. Returns { key: hash | 'ERR: message' }. */
+async function tour(html, id, data, { quick = false } = {}) {
+  const { w, errors } = open(html, id, freeze);
+  await new Promise((r) => setTimeout(r, 15));
+  const out = {};
+  let steps = stepsFor(data);
+  if (quick) steps = steps.filter((_, i) => i % 10 === 0);
+  for (const step of steps) {
+    errors.length = 0;
+    try {
+      if (step.route) w.AtlasFramework.navigate(step.route);
+      out[step.key] = errors.length ? 'ERR: ' + errors[0].split('\n')[0] : snapshot(w);
+    } catch (e) {
+      out[step.key] = 'ERR: ' + String(e.message).split('\n')[0];
+    }
+  }
+  // The window is deliberately not closed: late page callbacks would throw on a closed window.
+  // Run each tour in its own short-lived process.
+  w.__cancelTimers();
+  return out;
+}
+
+function diff(expected, actual) {
+  const changed = [],
+    added = [],
+    missing = [];
+  for (const k of Object.keys(expected)) {
+    if (!(k in actual)) missing.push(k);
+    else if (expected[k] !== actual[k]) changed.push(k);
+  }
+  for (const k of Object.keys(actual)) if (!(k in expected)) added.push(k);
+  return { changed, added, missing };
+}
+
+module.exports = { tour, diff, stepsFor, ATLASES };
+
+if (require.main === module)
+  (async () => {
+    const args = process.argv.slice(2);
+    const update = args.includes('--update'),
+      quick = args.includes('--quick');
+    const opt = (n) => (args.includes('--' + n) ? args[args.indexOf('--' + n) + 1] : null);
+    const htmlOverride = opt('html'),
+      outFile = opt('out');
+    const ids = args.filter(
+      (a, i) => !a.startsWith('--') && !['--html', '--out'].includes(args[i - 1])
+    );
+    const targets = ids.length ? ids : ATLASES;
+    const goldenDir = path.join(root, 'tests', 'golden');
+    fs.mkdirSync(goldenDir, { recursive: true });
+    let failed = 0;
+    for (const id of targets) {
+      const html = fs.readFileSync(
+        htmlOverride || path.join(root, 'dist', id + '-atlas.html'),
+        'utf8'
+      );
+      const data = JSON.parse(
+        fs.readFileSync(path.join(root, 'bundles', id, 'atlas.json'), 'utf8')
+      ).data;
+      const started = Date.now();
+      const actual = await tour(html, id, data, { quick });
+      if (outFile) {
+        fs.writeFileSync(outFile, JSON.stringify(actual));
+        continue;
+      }
+      const file = path.join(goldenDir, id + '.json');
+      const errors = Object.entries(actual).filter(([, v]) => v.startsWith('ERR')).length;
+      if (update) {
+        fs.writeFileSync(file, JSON.stringify(actual, null, 0) + '\n');
+        console.log(`WROTE ${id}: ${Object.keys(actual).length} steps, ${errors} errors`);
+        continue;
+      }
+      const expected = JSON.parse(fs.readFileSync(file, 'utf8'));
+      const subset = quick
+        ? Object.fromEntries(Object.entries(expected).filter(([k]) => k in actual))
+        : expected;
+      const d = diff(subset, actual);
+      const bad = d.changed.length + d.added.length + d.missing.length;
+      const secs = ((Date.now() - started) / 1000).toFixed(1);
+      if (bad) {
+        failed++;
+        console.log(
+          `FAIL ${id}: ${d.changed.length} changed, ${d.added.length} added, ${d.missing.length} missing (${secs}s)`
+        );
+        console.log('  e.g.', [...d.changed, ...d.added, ...d.missing].slice(0, 5).join(', '));
+      } else console.log(`PASS ${id}: ${Object.keys(actual).length} steps (${secs}s)`);
+    }
+    process.exit(failed ? 1 : 0);
+  })();
