@@ -43,6 +43,7 @@
     "stationRoute": "station",
     "visibilityResetsLabels": true,
     "widgetKeepsAddress": true,
-    "widgetOutlineState": true
+    "widgetOutlineState": true,
+    "emptyDossierFactsFallBack": true
   }
 }

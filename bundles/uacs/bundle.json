@@ -44,6 +44,7 @@
     "titledPlanetInspectLabel": true,
     "visibilityResetsLabels": true,
     "widgetKeepsAddress": true,
-    "widgetOutlineState": true
+    "widgetOutlineState": true,
+    "emptyDossierFactsFallBack": true
   }
 }
