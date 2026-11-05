@@ -46,7 +46,7 @@ const MARKER_DOSSIER_DELAY=600;
 /* @atlas-function resolveHashRoute */
 /* @atlas-function resolvePlanetRoute */
 let lastRestoredURL='';
-/* @atlas-function routeSnapshot-3b3aa0ca2ed0 */
+/* @atlas-function routeSnapshot */
 /* @atlas-function routeURL-b7602e0d594a */
 /* @atlas-function persistRoute */
 /* @atlas-function beginNavigation */

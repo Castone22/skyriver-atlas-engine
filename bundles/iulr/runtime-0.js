@@ -80,7 +80,7 @@ let planetTitleSyncInFlight=null,planetTitleLastChecked=0;
 /* @atlas-function resolveHashRoute */
 /* @atlas-function resolvePlanetRoute */
 let lastRestoredURL='';
-/* @atlas-function routeSnapshot-32e4b784df70 */
+/* @atlas-function routeSnapshot */
 /* @atlas-function routeURL-7c04f49ba3ff */
 /* @atlas-function persistRoute */
 /* @atlas-function beginNavigation */

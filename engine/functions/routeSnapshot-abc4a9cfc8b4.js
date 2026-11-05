@@ -1,1 +1,0 @@
-function routeSnapshot(){return {atlas:true,view,overviewMode,stationOverview,selected,selectedWorld,focused:systemFocused,planetFocus,camera:{...vb},baseWidth,regionalCamera:regionalCamera?{...regionalCamera,camera:{...regionalCamera.camera}}:null}}

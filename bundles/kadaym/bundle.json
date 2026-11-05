@@ -30,6 +30,7 @@
     "affiliationLink": "Elysian Collective"
   },
   "flags": {
-    "normalizeTitleApostrophes": true
+    "normalizeTitleApostrophes": true,
+    "overviewStateKey": "federationOverview"
   }
 }

@@ -26,6 +26,7 @@
     "affiliationLink": "{{brand}}"
   },
   "flags": {
-    "planetPageLinks": true
+    "planetPageLinks": true,
+    "stationRoute": "station"
   }
 }

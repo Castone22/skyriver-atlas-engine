@@ -41,7 +41,7 @@ const normalizedName=value=>String(value||'').normalize('NFKD').replace(/[\u0300
 /* @atlas-function resolveHashRoute */
 /* @atlas-function resolvePlanetRoute */
 let lastRestoredURL='';
-/* @atlas-function routeSnapshot-abc4a9cfc8b4 */
+/* @atlas-function routeSnapshot */
 /* @atlas-function routeURL-66be76949ffb */
 /* @atlas-function persistRoute */
 /* @atlas-function beginNavigation */

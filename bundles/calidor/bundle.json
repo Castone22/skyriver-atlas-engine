@@ -29,6 +29,7 @@
     "affiliationLink": "{{brand}}"
   },
   "flags": {
-    "keepStationPart": true
+    "keepStationPart": true,
+    "stationRoute": "station"
   }
 }
