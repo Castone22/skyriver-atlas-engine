@@ -1,1 +1,42 @@
-{}
+{
+  "architectureFacts": {
+    "description": "The dossier lists a system's stellar architecture and station counts, and a planet's designation, orbital host and moon inventory.",
+    "default": false
+  },
+  "emptyDossierFactsFallBack": {
+    "description": "A live dossier whose fact list is empty falls back to the facts built from the catalogue record.",
+    "default": false
+  },
+  "indexWorldLinks": {
+    "description": "The index lists a system's worlds (its overviewWorlds when present) as article links instead of plain text.",
+    "default": false
+  },
+  "inspectLabelsUseTitles": {
+    "description": "Inspect buttons in the system key are labelled with the synced planet title instead of the catalogue name.",
+    "default": false
+  },
+  "planetArticleTracking": {
+    "description": "Live article lookups use, and update, the tracked wiki page id of a planet (synced article titles).",
+    "default": false
+  },
+  "searchSystemFields": {
+    "description": "Extra system fields (by property name) whose text is searchable, in addition to the classification terms.",
+    "default": []
+  },
+  "stationLinksUseArticleTitle": {
+    "description": "A station's first article link is its system's article title instead of the system name.",
+    "default": false
+  },
+  "straightenImageTitleQuotes": {
+    "description": "Curly apostrophes in the article title used for live images are replaced by straight ones.",
+    "default": false
+  },
+  "systemRecordArticleTitle": {
+    "description": "A charted system's own articleTitle is used as its article title instead of the generated '<name> System'.",
+    "default": false
+  },
+  "worldKeySchematicOrbit": {
+    "description": "A world without an orbit slot shows its schematic orbit slot in the system key.",
+    "default": false
+  }
+}

@@ -1,0 +1,1 @@
+function searchTerms(s){return [...classificationTerms(s),DATA.regions[s.region]?.name,...(s.searchAliases||[]),...__ATLAS__.flags.searchSystemFields.map(f=>s[f]),s.kind==='federation'?'{{brand|jsstr}}':'',...searchRecords(s).flatMap(classificationTerms)]}

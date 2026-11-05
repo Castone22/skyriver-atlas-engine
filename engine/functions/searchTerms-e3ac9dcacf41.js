@@ -1,1 +1,0 @@
-function searchTerms(s){return [...classificationTerms(s),DATA.regions[s.region]?.name,s.architecture,s.cloakStatusText,s.description,s.kind==='federation'?'{{brand|jsstr}}':'',...searchRecords(s).flatMap(classificationTerms)]}

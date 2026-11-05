@@ -341,7 +341,8 @@
           "Kestra",
           "Nuette",
           "Drallys"
-        ]
+        ],
+        "indexFirst": true
       },
       {
         "id": "tecarsi",
@@ -1545,7 +1546,10 @@
         "overviewWorlds": [
           "Prathia"
         ],
-        "sparseOrbits": true
+        "sparseOrbits": true,
+        "searchAliases": [
+          "Palorek"
+        ]
       },
       {
         "id": "drayson",

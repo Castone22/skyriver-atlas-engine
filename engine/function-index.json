@@ -190,57 +190,27 @@
     ],
     "bytes": 1186
   },
-  "bodyFacts-0eb86f4c84ff": {
+  "bodyFacts": {
     "name": "bodyFacts",
     "profiles": [
       "calidor",
+      "elysian",
+      "iulr",
       "kadaym",
       "uacs"
     ],
-    "bytes": 630
+    "bytes": 1513
   },
-  "bodyFacts-5cdfe803c5e8": {
-    "name": "bodyFacts",
-    "profiles": [
-      "iulr"
-    ],
-    "bytes": 1109
-  },
-  "bodyFacts-8ed6b2825a9e": {
-    "name": "bodyFacts",
-    "profiles": [
-      "elysian"
-    ],
-    "bytes": 916
-  },
-  "bodyKey-76d2ce6780e1": {
+  "bodyKey": {
     "name": "bodyKey",
     "profiles": [
       "calidor",
-      "iulr"
-    ],
-    "bytes": 1276
-  },
-  "bodyKey-7ac2d95fab76": {
-    "name": "bodyKey",
-    "profiles": [
+      "elysian",
+      "iulr",
+      "kadaym",
       "uacs"
     ],
-    "bytes": 1300
-  },
-  "bodyKey-84851d3446fd": {
-    "name": "bodyKey",
-    "profiles": [
-      "elysian"
-    ],
-    "bytes": 1329
-  },
-  "bodyKey-cbba6d726e90": {
-    "name": "bodyKey",
-    "profiles": [
-      "kadaym"
-    ],
-    "bytes": 1069
+    "bytes": 1453
   },
   "buildNotes": {
     "name": "buildNotes",
@@ -289,40 +259,16 @@
     ],
     "bytes": 935
   },
-  "classificationTerms-549b06cadb0d": {
+  "classificationTerms": {
     "name": "classificationTerms",
     "profiles": [
-      "iulr"
-    ],
-    "bytes": 585
-  },
-  "classificationTerms-766b72615379": {
-    "name": "classificationTerms",
-    "profiles": [
-      "calidor"
-    ],
-    "bytes": 561
-  },
-  "classificationTerms-936c39321d8a": {
-    "name": "classificationTerms",
-    "profiles": [
-      "elysian"
-    ],
-    "bytes": 585
-  },
-  "classificationTerms-c6b25d2adb0c": {
-    "name": "classificationTerms",
-    "profiles": [
+      "calidor",
+      "elysian",
+      "iulr",
+      "kadaym",
       "uacs"
     ],
-    "bytes": 615
-  },
-  "classificationTerms-fa60044fc097": {
-    "name": "classificationTerms",
-    "profiles": [
-      "kadaym"
-    ],
-    "bytes": 575
+    "bytes": 629
   },
   "cloakBadge": {
     "name": "cloakBadge",
@@ -368,40 +314,16 @@
     ],
     "bytes": 449
   },
-  "currentImageTitle-030d0f61958c": {
+  "currentImageTitle": {
     "name": "currentImageTitle",
     "profiles": [
-      "elysian"
-    ],
-    "bytes": 149
-  },
-  "currentImageTitle-03cc7fc0c093": {
-    "name": "currentImageTitle",
-    "profiles": [
+      "calidor",
+      "elysian",
+      "iulr",
+      "kadaym",
       "uacs"
     ],
-    "bytes": 113
-  },
-  "currentImageTitle-795639864731": {
-    "name": "currentImageTitle",
-    "profiles": [
-      "calidor"
-    ],
-    "bytes": 92
-  },
-  "currentImageTitle-bca6b129a55c": {
-    "name": "currentImageTitle",
-    "profiles": [
-      "kadaym"
-    ],
-    "bytes": 136
-  },
-  "currentImageTitle-dba1dd671d78": {
-    "name": "currentImageTitle",
-    "profiles": [
-      "iulr"
-    ],
-    "bytes": 134
+    "bytes": 222
   },
   "currentStationParts": {
     "name": "currentStationParts",
@@ -686,40 +608,16 @@
     ],
     "bytes": 244
   },
-  "focusableWorld-27a8652c176e": {
+  "focusableWorld": {
     "name": "focusableWorld",
     "profiles": [
-      "calidor"
-    ],
-    "bytes": 165
-  },
-  "focusableWorld-4b082e896312": {
-    "name": "focusableWorld",
-    "profiles": [
-      "kadaym"
-    ],
-    "bytes": 176
-  },
-  "focusableWorld-ae213eff48ce": {
-    "name": "focusableWorld",
-    "profiles": [
+      "calidor",
+      "elysian",
+      "iulr",
+      "kadaym",
       "uacs"
     ],
-    "bytes": 183
-  },
-  "focusableWorld-cb7f63b35c48": {
-    "name": "focusableWorld",
-    "profiles": [
-      "elysian"
-    ],
-    "bytes": 197
-  },
-  "focusableWorld-de83f9794db3": {
-    "name": "focusableWorld",
-    "profiles": [
-      "iulr"
-    ],
-    "bytes": 159
+    "bytes": 176
   },
   "foundryCorner": {
     "name": "foundryCorner",
@@ -942,22 +840,16 @@
     ],
     "bytes": 927
   },
-  "loadLiveImage-077ad175ff4d": {
-    "name": "loadLiveImage",
-    "profiles": [
-      "elysian"
-    ],
-    "bytes": 1893
-  },
-  "loadLiveImage-3ce892422fb7": {
+  "loadLiveImage": {
     "name": "loadLiveImage",
     "profiles": [
       "calidor",
+      "elysian",
       "iulr",
       "kadaym",
       "uacs"
     ],
-    "bytes": 1686
+    "bytes": 1936
   },
   "loadSource": {
     "name": "loadSource",
@@ -988,54 +880,24 @@
     ],
     "bytes": 385
   },
-  "matchesRecord-051b812e1fdd": {
-    "name": "matchesRecord",
-    "profiles": [
-      "elysian"
-    ],
-    "bytes": 198
-  },
-  "matchesRecord-769ca58b58d3": {
-    "name": "matchesRecord",
-    "profiles": [
-      "iulr"
-    ],
-    "bytes": 198
-  },
-  "matchesRecord-7deaec6d8fb2": {
+  "matchesRecord": {
     "name": "matchesRecord",
     "profiles": [
       "calidor",
-      "kadaym"
-    ],
-    "bytes": 174
-  },
-  "matchesRecord-c81f46900ace": {
-    "name": "matchesRecord",
-    "profiles": [
+      "elysian",
+      "iulr",
+      "kadaym",
       "uacs"
     ],
     "bytes": 228
   },
-  "matchesSearch-1e10758fbb3c": {
-    "name": "matchesSearch",
-    "profiles": [
-      "elysian"
-    ],
-    "bytes": 157
-  },
-  "matchesSearch-6e5b90f05584": {
+  "matchesSearch": {
     "name": "matchesSearch",
     "profiles": [
       "calidor",
+      "elysian",
       "iulr",
-      "kadaym"
-    ],
-    "bytes": 133
-  },
-  "matchesSearch-92320d6bf110": {
-    "name": "matchesSearch",
-    "profiles": [
+      "kadaym",
       "uacs"
     ],
     "bytes": 187
@@ -1199,28 +1061,16 @@
     ],
     "bytes": 446
   },
-  "orbitalFact-6d8890f36c62": {
+  "orbitalFact": {
     "name": "orbitalFact",
     "profiles": [
-      "calidor"
-    ],
-    "bytes": 1304
-  },
-  "orbitalFact-99b199ca0c90": {
-    "name": "orbitalFact",
-    "profiles": [
-      "iulr"
-    ],
-    "bytes": 1166
-  },
-  "orbitalFact-9ec16f8dcf1f": {
-    "name": "orbitalFact",
-    "profiles": [
+      "calidor",
       "elysian",
+      "iulr",
       "kadaym",
       "uacs"
     ],
-    "bytes": 1082
+    "bytes": 1390
   },
   "ordinal": {
     "name": "ordinal",
@@ -1279,12 +1129,44 @@
     ],
     "bytes": 111
   },
+  "planetAliases-none": {
+    "name": "planetAliases",
+    "profiles": [
+      "calidor",
+      "elysian",
+      "iulr",
+      "kadaym"
+    ],
+    "bytes": 39
+  },
   "planetArticle": {
     "name": "planetArticle",
     "profiles": [
       "uacs"
     ],
     "bytes": 92
+  },
+  "planetArticle-none": {
+    "name": "planetArticle",
+    "profiles": [
+      "calidor",
+      "kadaym"
+    ],
+    "bytes": 41
+  },
+  "planetArticle-resolved": {
+    "name": "planetArticle",
+    "profiles": [
+      "iulr"
+    ],
+    "bytes": 83
+  },
+  "planetArticle-synced": {
+    "name": "planetArticle",
+    "profiles": [
+      "elysian"
+    ],
+    "bytes": 100
   },
   "planetArticleName": {
     "name": "planetArticleName",
@@ -1320,6 +1202,14 @@
       "uacs"
     ],
     "bytes": 70
+  },
+  "planetName-identity": {
+    "name": "planetName",
+    "profiles": [
+      "calidor",
+      "kadaym"
+    ],
+    "bytes": 38
   },
   "planetNameMarkup": {
     "name": "planetNameMarkup",
@@ -1553,12 +1443,16 @@
     ],
     "bytes": 7133
   },
-  "renderIndex-0db203929943": {
+  "renderIndex": {
     "name": "renderIndex",
     "profiles": [
-      "iulr"
+      "calidor",
+      "elysian",
+      "iulr",
+      "kadaym",
+      "uacs"
     ],
-    "bytes": 1836
+    "bytes": 2126
   },
   "renderIndex-21d0753ef74d": {
     "name": "renderIndex",
@@ -1566,28 +1460,6 @@
       "grand"
     ],
     "bytes": 3086
-  },
-  "renderIndex-958d0331c817": {
-    "name": "renderIndex",
-    "profiles": [
-      "elysian"
-    ],
-    "bytes": 1906
-  },
-  "renderIndex-bb514b6b2378": {
-    "name": "renderIndex",
-    "profiles": [
-      "calidor",
-      "kadaym"
-    ],
-    "bytes": 1805
-  },
-  "renderIndex-c7aa6fecdbb1": {
-    "name": "renderIndex",
-    "profiles": [
-      "uacs"
-    ],
-    "bytes": 1805
   },
   "renderMapLegend-4aeafe6a28b2": {
     "name": "renderMapLegend",
@@ -1899,22 +1771,16 @@
     ],
     "bytes": 165
   },
-  "searchTerms-2f561ee034d3": {
+  "searchTerms": {
     "name": "searchTerms",
     "profiles": [
       "calidor",
       "elysian",
+      "iulr",
       "kadaym",
       "uacs"
     ],
-    "bytes": 210
-  },
-  "searchTerms-e3ac9dcacf41": {
-    "name": "searchTerms",
-    "profiles": [
-      "iulr"
-    ],
-    "bytes": 227
+    "bytes": 256
   },
   "select-2a33070d08e5": {
     "name": "select",
@@ -2107,10 +1973,12 @@
     ],
     "bytes": 1022
   },
-  "starRecords-26accc5af9e1": {
+  "starRecords": {
     "name": "starRecords",
     "profiles": [
-      "calidor"
+      "calidor",
+      "elysian",
+      "kadaym"
     ],
     "bytes": 1442
   },
@@ -2120,14 +1988,6 @@
       "uacs"
     ],
     "bytes": 794
-  },
-  "starRecords-ec33bfb46268": {
-    "name": "starRecords",
-    "profiles": [
-      "elysian",
-      "kadaym"
-    ],
-    "bytes": 1397
   },
   "starRecords-edf881d7ebd2": {
     "name": "starRecords",
@@ -2154,22 +2014,33 @@
     ],
     "bytes": 850
   },
-  "stationRecords-6dbf0bad7f69": {
+  "stationHasOverview-schematic": {
+    "name": "stationHasOverview",
+    "profiles": [
+      "elysian"
+    ],
+    "bytes": 61
+  },
+  "stationHasOverview-tora": {
+    "name": "stationHasOverview",
+    "profiles": [
+      "calidor",
+      "iulr",
+      "kadaym",
+      "uacs"
+    ],
+    "bytes": 58
+  },
+  "stationRecords": {
     "name": "stationRecords",
     "profiles": [
       "calidor",
       "elysian",
+      "iulr",
       "kadaym",
       "uacs"
     ],
-    "bytes": 347
-  },
-  "stationRecords-f53b5a9f2345": {
-    "name": "stationRecords",
-    "profiles": [
-      "iulr"
-    ],
-    "bytes": 435
+    "bytes": 491
   },
   "stationScreen-7218cedf4124": {
     "name": "stationScreen",
@@ -2299,22 +2170,16 @@
     ],
     "bytes": 233
   },
-  "systemArticleTitle-d0f52db05ad1": {
-    "name": "systemArticleTitle",
-    "profiles": [
-      "iulr"
-    ],
-    "bytes": 126
-  },
-  "systemArticleTitle-f58f1eb5d931": {
+  "systemArticleTitle": {
     "name": "systemArticleTitle",
     "profiles": [
       "calidor",
       "elysian",
+      "iulr",
       "kadaym",
       "uacs"
     ],
-    "bytes": 108
+    "bytes": 168
   },
   "systemBodies": {
     "name": "systemBodies",

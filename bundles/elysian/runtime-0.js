@@ -9,7 +9,7 @@ const referenceTargets=new Map([...(DATA.stations||[]),...(DATA.satellites||[])]
 const link=(name,label=name,cls='')=>{const key=planetKey(name);return `<a class="${cls}" ${key?'data-planet-link="'+esc(key)+'" '+(label===name?'data-planet-title="'+esc(key)+'"':''):''} href="${url(name)}" target="_blank" rel="noopener">${esc(label===name?planetName(name):label)}</a>`};
 /* @atlas-function systemNameTitle */
 /* @atlas-function hasOrbitChart */
-/* @atlas-function systemArticleTitle-f58f1eb5d931 */
+/* @atlas-function systemArticleTitle */
 /* @atlas-function systemLink */
 /* @atlas-function systemArticleRecord */
 const TIER_NAMES={1:'Quarantined',2:'Suppressed',3:'Active Threat',4:'High Contamination',5:'Critical Infestation'};
@@ -48,10 +48,10 @@ let planetTitleRequest=null,planetTitleTimer=0,planetTitlesChecked=0;
 
 restorePlanetArticles();
 /* @atlas-function resolveRegion */
-/* @atlas-function matchesRecord-051b812e1fdd */
+/* @atlas-function matchesRecord */
 /* @atlas-function resolveSystem */
 /* @atlas-function resolveObjectName */
-/* @atlas-function matchesSearch-1e10758fbb3c */
+/* @atlas-function matchesSearch */
 // Fragment links accept the friend's human-readable names, IDs and aliases.
 /* @atlas-function resolveNamedRoute */
 /* @atlas-function resolveHashRoute */
@@ -87,10 +87,11 @@ addEventListener('hashchange',()=>{if(location.href!==lastRestoredURL)restoreRou
 
 /* @atlas-function affiliationMarkup */
 /* @atlas-function searchRecords */
-/* @atlas-function classificationTerms-936c39321d8a */
-/* @atlas-function searchTerms-2f561ee034d3 */
+/* @atlas-function classificationTerms */
+/* @atlas-function planetAliases-none */
+/* @atlas-function searchTerms */
 /* @atlas-function searchObject */
-/* @atlas-function renderIndex-958d0331c817 */
+/* @atlas-function renderIndex */
 const reducedMotion=matchMedia('(prefers-reduced-motion: reduce)');
 let orbitPaused=reducedMotion.matches,orbitFrame=0,orbitClock=0,orbitLastTime=null;
 const worldColors={'Mahanzk':'#90bcd2','Zelenzk':'#c4a5d9','Helkana':'#91c4a1','Vardis Prime':'#c9a08b','Rakazk':'#c78e74','Zekozha':'#9bcdda','Qerzhek':'#b7c9e2','Prathia':'#9ec2a7'};
@@ -107,10 +108,10 @@ let stationOverview=false;
 let systemFocused=false,systemZoom=1,planetFocus=null,showBelts=true;
 const stationFilters=new Set(Object.keys(STATION_TYPES));
 const siteType=name=>/station|triad|jumpgate/i.test(name)?'Station / structure':/colony/i.test(name)?'Colony':'World';
-/* @atlas-function stationRecords-6dbf0bad7f69 */
+/* @atlas-function stationRecords */
 /* @atlas-function entityRecords */
-/* @atlas-function starRecords-ec33bfb46268 */
-/* @atlas-function focusableWorld-cb7f63b35c48 */
+/* @atlas-function starRecords */
+/* @atlas-function focusableWorld */
 /* @atlas-function localChartParent */
 /* @atlas-function localBodies */
 /* @atlas-function moonRecords */
@@ -123,9 +124,10 @@ const illustrativeTypes={
 /* @atlas-function illustrativePlanet */
 /* @atlas-function solarLayout-f526c44b9d79 */
 /* @atlas-function ordinal */
-/* @atlas-function orbitalFact-9ec16f8dcf1f */
+/* @atlas-function orbitalFact */
 /* @atlas-function worldRecord */
-/* @atlas-function bodyKey-84851d3446fd */
+/* @atlas-function bodyKey */
+/* @atlas-function stationHasOverview-schematic */
 const TORA_CLASS='Terranos Omnidirectional Reflector Array';
 const toraParts=[
  {title:'Axial mast',label:'MAST',x:329,y:95,lx:420,ly:70,note:'The upper tower narrows to a bright axial tip. Its internal equipment is unspecified in the class record.'},
@@ -212,11 +214,12 @@ const dossierFields=[
 /* @atlas-function dossierFacts */
 /* @atlas-function factValue */
 /* @atlas-function factGrid */
-/* @atlas-function bodyFacts-8ed6b2825a9e */
+/* @atlas-function bodyFacts */
 /* @atlas-function safeImageURL */
 /* @atlas-function imageAPI */
-/* @atlas-function currentImageTitle-030d0f61958c */
-/* @atlas-function loadLiveImage-077ad175ff4d */
+/* @atlas-function currentImageTitle */
+/* @atlas-function planetArticle-synced */
+/* @atlas-function loadLiveImage */
 /* @atlas-function embeddedImageMarkup */
 /* @atlas-function imageMarkup */
 /* @atlas-function referenceImage */

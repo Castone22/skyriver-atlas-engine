@@ -1,1 +1,0 @@
-function stationRecords(s){return (DATA.stations||[]).filter(b=>b.system===s.id).map((b,i)=>({...b,type:'Station',code:'S'+(i+1),tint:STATION_TYPES[b.category].color,tag:b.categoryUnspecified?'Station / structure':b.category+' station',ruined:/ruin|wreck/i.test(b.status||''),source:b.source||b.name,links:[s.name,...(b.parent?[b.parent]:[])]}));}

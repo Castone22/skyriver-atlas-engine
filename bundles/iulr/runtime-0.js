@@ -9,7 +9,7 @@ const referenceTargets=new Map([...(DATA.stations||[]),...(DATA.satellites||[])]
 const link=(name,label=name,cls='')=>`<a class="${cls}" href="${url(name)}" target="_blank" rel="noopener">${esc(DATA.worlds[name]&&label===name?planetName(name):label)}</a>`;
 /* @atlas-function systemNameTitle */
 /* @atlas-function hasOrbitChart */
-/* @atlas-function systemArticleTitle-d0f52db05ad1 */
+/* @atlas-function systemArticleTitle */
 /* @atlas-function systemLink */
 /* @atlas-function systemArticleRecord */
 const TIER_NAMES={1:'Quarantined',2:'Suppressed',3:'Active Threat',4:'High Contamination',5:'Critical Infestation'};
@@ -71,10 +71,10 @@ let planetTitleSyncInFlight=null,planetTitleLastChecked=0;
 /* @atlas-function triggerPlanetTitleCheck */
 
 /* @atlas-function resolveRegion */
-/* @atlas-function matchesRecord-769ca58b58d3 */
+/* @atlas-function matchesRecord */
 /* @atlas-function resolveSystem */
 /* @atlas-function resolveObjectName */
-/* @atlas-function matchesSearch-6e5b90f05584 */
+/* @atlas-function matchesSearch */
 // Fragment links accept the friend's human-readable names, IDs and aliases.
 /* @atlas-function resolveNamedRoute */
 /* @atlas-function resolveHashRoute */
@@ -117,15 +117,16 @@ const LABEL_ZOOM={overview:{active:[120,150],neighbor:[150,220]},regional:{activ
 /* @atlas-function renderMapLegend-e99aba52b66e */
 /* @atlas-function affiliationMarkup */
 /* @atlas-function searchRecords */
-/* @atlas-function classificationTerms-549b06cadb0d */
-/* @atlas-function searchTerms-e3ac9dcacf41 */
+/* @atlas-function classificationTerms */
+/* @atlas-function planetAliases-none */
+/* @atlas-function searchTerms */
 /* @atlas-function searchObject */
-/* @atlas-function renderIndex-0db203929943 */
+/* @atlas-function renderIndex */
 const reducedMotion=matchMedia('(prefers-reduced-motion: reduce)');
 let orbitPaused=reducedMotion.matches,orbitFrame=0,orbitClock=0,orbitLastTime=null;
 const worldColors={'Mahanzk':'#90bcd2','Zelenzk':'#c4a5d9','Helkana':'#91c4a1','Vardis Prime':'#c9a08b','Rakazk':'#c78e74','Zekozha':'#9bcdda','Qerzhek':'#b7c9e2','Prathia':'#9ec2a7'};
 const STATION_TYPES={
- 'TORA':{color:'#62d9ff',symbol:'◌'},
+ 'TORA':{color:'#62d9ff',symbol:'◌',article:'Terranos Omnidirectional Reflector Array'},
  'Civil Engineering':{color:'#83c9de',symbol:'⊞',path:'M-5-5H5V5H-5Z M0-7V7 M-7 0H7'},
  'Habitation':{color:'#9bcca3',symbol:'◎',path:'M-6 0A6 6 0 1 0 6 0A6 6 0 1 0-6 0 M-6 0H6 M0-6V6'},
  'Military':{color:'#b8a8e8',symbol:'▽',path:'M-6-5H6V0Q5 5 0 8Q-5 5-6 0Z M-3-1H3'},
@@ -137,10 +138,10 @@ let stationOverview=false;
 let systemFocused=false,systemZoom=1,planetFocus=null,showBelts=true;
 const stationFilters=new Set(Object.keys(STATION_TYPES));
 const siteType=name=>/station|triad|jumpgate/i.test(name)?'Station / structure':/colony/i.test(name)?'Colony':'World';
-/* @atlas-function stationRecords-f53b5a9f2345 */
+/* @atlas-function stationRecords */
 /* @atlas-function entityRecords */
 /* @atlas-function starRecords-edf881d7ebd2 */
-/* @atlas-function focusableWorld-de83f9794db3 */
+/* @atlas-function focusableWorld */
 /* @atlas-function localChartParent */
 /* @atlas-function localBodies */
 /* @atlas-function moonRecords */
@@ -153,9 +154,10 @@ const illustrativeTypes={
 /* @atlas-function illustrativePlanet */
 /* @atlas-function solarLayout-9246e73b7291 */
 /* @atlas-function ordinal */
-/* @atlas-function orbitalFact-99b199ca0c90 */
+/* @atlas-function orbitalFact */
 /* @atlas-function worldRecord */
-/* @atlas-function bodyKey-76d2ce6780e1 */
+/* @atlas-function bodyKey */
+/* @atlas-function stationHasOverview-tora */
 const TORA_CLASS='Terranos Omnidirectional Reflector Array';
 const toraParts=[
  {title:'Axial mast',label:'MAST',x:329,y:95,lx:420,ly:70,note:'The upper tower narrows to a bright axial tip. Its internal equipment is unspecified in the class record.'},
@@ -229,11 +231,12 @@ const dossierFields=[
 /* @atlas-function dossierFacts */
 /* @atlas-function factValue */
 /* @atlas-function factGrid */
-/* @atlas-function bodyFacts-5cdfe803c5e8 */
+/* @atlas-function bodyFacts */
 /* @atlas-function safeImageURL */
 /* @atlas-function imageAPI */
-/* @atlas-function currentImageTitle-dba1dd671d78 */
-/* @atlas-function loadLiveImage-3ce892422fb7 */
+/* @atlas-function currentImageTitle */
+/* @atlas-function planetArticle-resolved */
+/* @atlas-function loadLiveImage */
 /* @atlas-function embeddedImageMarkup */
 /* @atlas-function imageMarkup */
 /* @atlas-function referenceImage */
