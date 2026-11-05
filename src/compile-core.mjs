@@ -226,7 +226,7 @@ export async function compileCore(definition, host, { strict = false, dependenci
         '<p>Interactive atlas. Names link to their corresponding Skyriver Codex articles. Orbital distances are schematic.</p>';
       // Replace the notes function through the AST include contract, never splice braces.
       const original = await base.text(profile.scripts[i].path),
-        marker = original.match(/\/\* @atlas-function (buildNotes-[\w-]+) \*\//);
+        marker = original.match(/\/\* @atlas-function (buildNotes(?:-[\w-]+)?) \*\//);
       if (marker)
         code = replace(
           code,

@@ -6,32 +6,32 @@ let records=new Map(seeds.map(x=>[x.id,{...x}])),active='galaxy',generation=0,di
 const S=GrandAtlasSearch,locationIndexes=new Map(Object.entries(JSON.parse($('searchSeed').textContent)).map(([id,entries])=>[id,{entries,live:false,signature:'',checked:0}])),sourceTasks=new Map();
 const P=GrandAtlasPriority,priorityBaseline=JSON.parse($('prioritySeed').textContent),sharedSources=Object.fromEntries(Object.entries(priorityBaseline).map(([id,data])=>[id,{data,live:false,stamp:0}]));
 let sharedPolicy=P.policy(sharedSources,priorityBaseline);
-/* @atlas-function preferredEntry-9fc40583898c */
+/* @atlas-function preferredEntry */
 let indexTask=null,indexBusy=0,resultLimit=100,currentRoute=null;
 const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
 const sourceURL=slug=>WIKI+'index.php?title='+encodeURIComponent('Special:AtlasEmbed/'+slug);
 const articleURL=name=>WIKI+'index.php?title='+encodeURIComponent(name.replace(/ /g,'_'));
 const safeJSON=o=>JSON.stringify(o).replace(/</g,'\\u003c');
-/* @atlas-function status-ab361ce41a42 */
-/* @atlas-function notify-d92d287f00c5 */
-/* @atlas-function node-18122f34fe14 */
-/* @atlas-function sorted-9aa39a0a961c */
-/* @atlas-function rebuild-90f138e6aeb3 */
+/* @atlas-function status */
+/* @atlas-function notify */
+/* @atlas-function node */
+/* @atlas-function sorted */
+/* @atlas-function rebuild */
 /* @atlas-function renderIndex-21d0753ef74d */
-/* @atlas-function indexSource-1f2a8dda5e7e */
-/* @atlas-function refreshSearch-fb82eaf279f3 */
-/* @atlas-function drawMarkers-e3ce8ee8708e */
-/* @atlas-function fetchText-f02ffef82841 */
-/* @atlas-function api-1b350ec048af */
-/* @atlas-function discover-da0916ed08ba */
-/* @atlas-function unpack-d3d9028cb07a */
-/* @atlas-function validateHTML-ab1223893461 */
-/* @atlas-function loadSource-af646d9a0fec */
-/* @atlas-function readSource-4a6bf135e4d8 */
-/* @atlas-function adaptHTML-b521d4e9e420 */
-/* @atlas-function setIndex-fdd7bcf18faf */
-/* @atlas-function overlay-a2aa00dce931 */
-/* @atlas-function openAtlas-7405f138968e */
+/* @atlas-function indexSource */
+/* @atlas-function refreshSearch */
+/* @atlas-function drawMarkers */
+/* @atlas-function fetchText */
+/* @atlas-function api */
+/* @atlas-function discover */
+/* @atlas-function unpack */
+/* @atlas-function validateHTML */
+/* @atlas-function loadSource */
+/* @atlas-function readSource */
+/* @atlas-function adaptHTML */
+/* @atlas-function setIndex */
+/* @atlas-function overlay */
+/* @atlas-function openAtlas */
 window.addEventListener('message',e=>{
  const d=e.data;if(!frame||e.source!==frame.contentWindow||!d||d.token!==frame.dataset.token)return;
  if(d.channel==='grand-atlas-navigate'){if(!P.ids.includes(active)||!P.ids.includes(d.id)||!d.route||typeof d.route!=='object')return;const route=Object.fromEntries(Object.entries(d.route).filter(([k,v])=>['region','system','object','planet','focus','schematic'].includes(k)&&typeof v==='string'));const target=P.resolve(sharedPolicy,active,route);if(target.id===d.id&&target.id!==active)openAtlas(target.id,false,target.route);return}
@@ -41,15 +41,15 @@ window.addEventListener('message',e=>{
  status(frame.dataset.name+' · '+(live?'Live from Codex':'Bundled preview · '+frame.dataset.reason),live);
  if(!live)notify(frame.dataset.name+' is showing the bundled preview. '+(r?.live?'Its live source could not be reached.':'It will use the live atlas when that source is available.'));
 });
-/* @atlas-function galaxy-9e4e10a3b75c */
-/* @atlas-function paint-c24745f0a1de */
-/* @atlas-function flyTo-6899a770d5b0 */
-/* @atlas-function zoomBy-b37ae6fd8e6a */
-/* @atlas-function point-a856baa2704d */
+/* @atlas-function galaxy */
+/* @atlas-function paint */
+/* @atlas-function flyTo */
+/* @atlas-function zoomBy */
+/* @atlas-function point */
 let pointers=new Map(),dragged=false,pinch=null;
 $('galaxy').addEventListener('pointerdown',e=>{if(active!=='galaxy')return;cancelAnimationFrame(anim);const p=point(e);pointers.set(e.pointerId,p);dragged=false;if(!e.target.closest('.marker'))$('galaxy').setPointerCapture(e.pointerId);$('galaxy').classList.add('dragging');if(pointers.size===2){const a=[...pointers.values()];pinch={dist:Math.hypot(a[0].x-a[1].x,a[0].y-a[1].y)}}});
 $('galaxy').addEventListener('pointermove',e=>{if(!pointers.has(e.pointerId)||active!=='galaxy')return;const old=pointers.get(e.pointerId),p=point(e);pointers.set(e.pointerId,p);if(pointers.size===2){const a=[...pointers.values()],d=Math.hypot(a[0].x-a[1].x,a[0].y-a[1].y);if(pinch?.dist)zoomBy(d/pinch.dist,{x:(a[0].x+a[1].x)/2,y:(a[0].y+a[1].y)/2});pinch={dist:d};dragged=true}else if(Math.hypot(p.x-old.x,p.y-old.y)>1){view.x+=p.x-old.x;view.y+=p.y-old.y;dragged=true;paint()}});
-/* @atlas-function release-1374adf5d23c */
+/* @atlas-function release */
 $('galaxy').addEventListener('pointerup',release);$('galaxy').addEventListener('pointercancel',release);
 $('galaxy').addEventListener('wheel',e=>{if(active!=='galaxy')return;e.preventDefault();zoomBy(Math.exp(-e.deltaY*.0012),point(e))},{passive:false});
 $('galaxy').addEventListener('keydown',e=>{if(e.target.closest('.marker'))return;const delta=40;if(['ArrowLeft','ArrowRight','ArrowUp','ArrowDown','0','+','-','='].includes(e.key))e.preventDefault();if(e.key==='ArrowLeft')view.x+=delta;if(e.key==='ArrowRight')view.x-=delta;if(e.key==='ArrowUp')view.y+=delta;if(e.key==='ArrowDown')view.y-=delta;if(e.key==='0')view={x:0,y:0,k:1};if(['+','='].includes(e.key))zoomBy(1.2);if(e.key==='-')zoomBy(1/1.2);paint()});
@@ -62,7 +62,7 @@ $('refresh').onclick=async()=>{const id=active,route=currentRoute;$('refresh').d
 window.addEventListener('keydown',e=>{if(e.key==='Escape'&&!$('about').open){if(!$('index').hidden)setIndex(false);else if(active!=='galaxy')galaxy()}});
 window.addEventListener('hashchange',()=>{const m=location.hash.match(/^#atlas=(.+)/);if(m&&records.has(decodeURIComponent(m[1])))openAtlas(decodeURIComponent(m[1]));else if(location.hash==='#galaxy')galaxy()});
 setInterval(()=>{if(!document.hidden)discover()},300000);document.addEventListener('visibilitychange',()=>{if(!document.hidden&&Date.now()-lastDiscovery>300000)discover()});
-/* @atlas-function layout-806d020ea19c */
+/* @atlas-function layout */
 // One cancellable overlay owns the pixels until the destination acknowledges readiness.
 const transit=(()=>{
  const screen=$('transit'),ctx=screen.getContext('2d');
@@ -131,16 +131,16 @@ const transit=(()=>{
  return {warp,rift,stop};
 })();
 let finishWarp=null;
-/* @atlas-function cancelTransit-b7a00803376b */
+/* @atlas-function cancelTransit */
 
 // The Great Blink study splits a single image into eight opposing strips.
 // Reuse the live camera so the transition includes the map labels and current zoom.
 const darkGate=$('darkGate'), darkSignal=$('darkSignal');
 let darkverse=false, crossingTimer;
-/* @atlas-function showRealm-c306a635b73a */
-/* @atlas-function endCrossing-2e0cb3114415 */
-/* @atlas-function resetRealm-21c3070a5cb9 */
-/* @atlas-function crossRealm-c9de038d2b8d */
+/* @atlas-function showRealm */
+/* @atlas-function endCrossing */
+/* @atlas-function resetRealm */
+/* @atlas-function crossRealm */
 darkGate.onclick=crossRealm;
 
 const orbitSplash=(()=>{

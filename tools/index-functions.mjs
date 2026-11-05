@@ -6,6 +6,8 @@
 //   node tools/index-functions.mjs --prune       also delete function files no bundle links
 //   node tools/index-functions.mjs --fix-names   rename files whose prefix is not their function
 //                                                name, and update every marker that points at them
+//   node tools/index-functions.mjs --unhash      drop the suffix from functions that have a single
+//                                                linked file (<name>-abc123.js -> <name>.js)
 //
 // name     the first top-level function declared in the file (else the file name prefix)
 // profiles the atlas bundles whose runtime scripts link the file
@@ -91,6 +93,37 @@ if (orphans.length) {
     for (const k of orphans) await unlink(path.join(fnDir, k + '.js'));
     console.log(`pruned ${orphans.length} unlinked function files`);
   } else console.log(`warning: ${orphans.length} unlinked function files: ${orphans.join(', ')}`);
+}
+
+// A name with a single linked file needs no suffix: its file is just `<name>.js`. The suffix only
+// tells variants apart while a function still has more than one.
+if (flag('unhash')) {
+  const linked = files.filter((k) => usage[k]);
+  const count = {};
+  for (const k of linked) count[names[k].name] = (count[names[k].name] || 0) + 1;
+  const renames = {};
+  for (const k of linked) {
+    const name = names[k].name;
+    if (count[name] === 1 && k !== name) {
+      if (files.includes(name)) throw new Error(`Cannot rename ${k}: ${name}.js already exists`);
+      renames[k] = name;
+    }
+  }
+  for (const [from, to] of Object.entries(renames)) {
+    await rename(path.join(fnDir, from + '.js'), path.join(fnDir, to + '.js'));
+    files[files.indexOf(from)] = to;
+    names[to] = names[from];
+    usage[to] = usage[from];
+    delete usage[from];
+  }
+  for (const { file } of await runtimeFiles()) {
+    const text = await readFile(file, 'utf8');
+    const next = text.replace(MARKER, (whole, key) =>
+      renames[key] ? `/* @atlas-function ${renames[key]} */` : whole
+    );
+    if (next !== text) await writeFile(file, next);
+  }
+  console.log(`dropped the suffix from ${Object.keys(renames).length} function files`);
 }
 
 const index = {};

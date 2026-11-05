@@ -230,7 +230,7 @@ function deferMarkerDossier(id){if(innerWidth>700)return;cancelMarkerDossier();m
 
 
 const normalizedName=value=>String(value||'').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]/g,'');
-function resolveRegion(value){const n=normalizedName(value);if(n==='all'||n==='allianceoverview')return 'all';return Object.keys(DATA.regions).find(id=>normalizedName(id)===n||normalizedName(DATA.regions[id].name)===n)||null}
+function resolveRegion(value){const n=normalizedName(value);if(n==='all'||n==='federationoverview')return 'all';return Object.keys(DATA.regions).find(id=>normalizedName(id)===n||normalizedName(DATA.regions[id].name)===n||(n&&normalizedName(DATA.regions[id].formerEmpire)===n))||null}
 
 function matchesRecord(record,value){const n=normalizedName(value);return !!n&&[record.id,record.name,planetName(record.name),record.nickname,...planetAliases(record.name),...(record.aliases||[])].some(v=>normalizedName(v)===n)}
 
@@ -246,6 +246,8 @@ function matchesSearch(record,q){return [record.name,planetName(record.name),rec
 // Fragment links accept the friend's human-readable names, IDs and aliases.
 function resolveNamedRoute(name){
  if(!normalizedName(name))return null;
+ const legacy=DATA.legacyHoldings[name];
+ if(Array.isArray(legacy))return {system:resolveSystem(legacy[0]),object:legacy[1]};
  const system=resolveSystem(name);if(system)return {system,object:null};
  for(const system of allRecords){const object=resolveObjectName(system,name);if(object)return {system,object}}
  const region=resolveRegion(name);return region?{region}:null;
@@ -318,7 +320,7 @@ function textSVG(content,attrs,parent){const t=svg('text',attrs,parent);t.textCo
 
 function objectTarget(name,attrs,parent){
  if(!widgetMode)return svg('g',attrs,parent);
- return svg('a',{...attrs,role:'link',href:url(name),target:'_blank',rel:'noopener',
+ return svg('a',{...attrs,...(DATA.worlds[name]?{'data-planet-link':name}:{}),role:'link',href:url(name),target:'_blank',rel:'noopener',
   'aria-label':'Open '+planetName(name)+' in the Codex'},parent);
 }
 
@@ -494,7 +496,8 @@ function localChartParent(s,name){
  const moon=moonRecords(s).find(m=>m.name===name&&m.inhabited!==true);
  if(moon)return moon.parent;
  const station=stationRecords(s).find(st=>st.name===name);
- return DATA.worlds[station?.parent]?.extendedSatelliteChart?station.parent:null;
+ const host=moonRecords(s).find(m=>m.name===station?.parent)?.parent||station?.parent;
+ return station&&(station.visibility==='planet'||DATA.worlds[host]?.extendedSatelliteChart)?host:null;
 }
 
 function localBodies(s,name){const moons=moonRecords(s).filter(b=>b.parent===name),hosts=new Set([name,...moons.map(b=>b.name)]);return {moons,stations:stationRecords(s).filter(b=>hosts.has(b.parent))}}
@@ -599,6 +602,7 @@ function toraElevation(){
 }
 
 function stationScreen(s,st){
+ if(st.schematic==='triad')return triadScreen(s,st);
  const units=stationRecords(s).filter(unit=>unit.category==='TORA');
  const switcher=`<nav class="tora-units" aria-label="Reflector arrays in this system">${units.map((unit,i)=>`<button data-unit="${esc(unit.name)}" aria-pressed="${unit.name===st.name}">Array 0${i+1}</button>`).join('')}${link(TORA_CLASS,'Go to Article','tora-article')}</nav>`;
 
@@ -610,26 +614,27 @@ function stationScreen(s,st){
 }
 
 function highlightPart(index){
- const part=toraParts[index];if(!part)return;
+ stationPart=index;
+ const part=(selectedWorld==='Foundry'?foundryParts:toraParts)[index];if(!part)return;
  document.querySelectorAll('[data-part]').forEach(el=>el.setAttribute('aria-pressed',String(Number(el.dataset.part)===index)));
  for(const el of document.querySelectorAll('[data-hardware]')){
-  if(Number(el.dataset.hardware)===index)el.setAttribute('filter','url(#toraAmber)');
+  if(Number(el.dataset.hardware)===index)el.setAttribute('filter',selectedWorld==='Foundry'?'url(#foundryAmber)':'url(#toraAmber)');
   else el.removeAttribute('filter');
  }
  $('partReadout').innerHTML=`<b>0${index+1} / ${esc(part.title)}</b><p>${esc(part.note)}</p>`;
 }
 
 function openStation(name){
- const s=resolveSystem(selected),st=s&&stationRecords(s).find(b=>b.category==='TORA'&&b.name===name);
+ const s=resolveSystem(selected),st=s&&stationRecords(s).find(b=>(b.category==='TORA'||b.name==='Foundry')&&b.name===name);
  if(widgetMode||!st)return;
  beginNavigation();if(!systemFocused)setSystemFocus(true);
- planetFocus=null;selectedWorld=st.name;stationOverview=true;
+ planetFocus=null;selectedWorld=st.name;stationPart=0;stationOverview=true;
  renderDetail();$('systemFocus').scrollTop=0;setDetailOpen(false);$('leaveStation')?.focus({preventScroll:true});endNavigation();
 }
 
 function closeStation(){
  beginNavigation();stationOverview=false;renderDetail();$('systemFocus').scrollTop=0;
- const target=Array.from(document.querySelectorAll('[data-tora-open]')).find(el=>el.dataset.toraOpen===selectedWorld);target?.focus({preventScroll:true});endNavigation();
+ const target=Array.from(document.querySelectorAll('[data-tora-open], [data-foundry-open]')).find(el=>(el.dataset.toraOpen||el.dataset.foundryOpen)===selectedWorld);target?.focus({preventScroll:true});endNavigation();
 }
 
 function bindToraName(el,name){
@@ -677,7 +682,8 @@ function silentDecoration(s){return s.silentPresence?`<div id="silentOverlay" ar
 
 function notableSitesMarkup(s){
  const local=planetFocus?localBodies(s,planetFocus):null,visible=local?new Set([planetFocus,...local.moons.map(b=>b.name),...local.stations.map(b=>b.name)]):null;
- const sites=(s.notableSites||[]).filter(site=>resolveObjectName(s,site.name)&&(!visible||visible.has(site.name)));
+ const hiddenStations=new Set(local?[]:stationRecords(s).filter(st=>st.visibility!=='system').map(st=>st.name));
+ const sites=(s.notableSites||[]).filter(site=>!hiddenStations.has(site.name)&&resolveObjectName(s,site.name)&&(!visible||visible.has(site.name)));
  if(!sites.length)return '';
  return `<section class="notable-sites" aria-label="Notable sites in ${esc(planetFocus||s.name)}"><div class="orbit-site-heading">NOTABLE SITES</div><div class="notable-grid">${sites.map(site=>`<article class="notable-card ${selectedWorld===site.name?'active':''}"><h3>${link(site.name)}</h3><p>${esc(site.summary)}</p><button data-notable="${esc(site.name)}" aria-label="Inspect notable site ${esc(site.name)}">Inspect site →</button></article>`).join('')}</div></section>`;
 }
@@ -882,8 +888,8 @@ function bindOrbitalSelection(g,name,openPlanet=false){
  g.onkeydown=e=>{if(e.target===g&&(e.key==='Enter'||e.key===' ')){e.preventDefault();chooseSystemWorld(name)}}}
 
 function drawBelt(chart,s,seed,radius,cx,cy,expanded){
- const hole=s.centralBodyType==='black-hole',slot=s.beltSlot;
- const rx=radius(slot),ry=rx*.66,g=svg('g',{class:'asteroid-belt','aria-hidden':'true','pointer-events':'none',transform:`translate(${cx} ${cy}) rotate(-12)`},chart);
+ const hole=s.centralBodyType==='black-hole',total=solarLayout(s).total,slot=s.beltSlot??(hole?2.55:Math.min(total-.55,2.5+seed%Math.max(1,total-3)));
+ const rx=radius(slot),ry=rx*(s.projection?.flatten??.66),g=svg('g',{class:'asteroid-belt','aria-hidden':'true','pointer-events':'none',transform:`translate(${cx} ${cy}) rotate(${s.projection?.tilt??-12})`},chart);
  svg('ellipse',{rx,ry,fill:'none',stroke:hole?'#9e8aa7':'#8e9596','stroke-width':expanded?9:5,opacity:.045},g);
  let random=seed+17;const rand=()=>{random=(random*16807)%2147483647;return(random-1)/2147483646};
  for(let i=0;i<(expanded?144:74);i++){const a=rand()*Math.PI*2,spread=(rand()-.5)*(expanded?12:6),r=(expanded?.55:.35)+rand()*(expanded?1.05:.6);svg('circle',{cx:(rx+spread)*Math.cos(a),cy:(ry+spread*.65)*Math.sin(a),r,fill:hole?'#b7a5be':'#b1b1a4',opacity:.12+rand()*.28},g)}
@@ -1013,7 +1019,7 @@ function bindSystemControls(){
  $('focusFullscreen')?.addEventListener('click',()=>$('fullscreen').click());
 }
 
-function chooseSystemWorld(name){if(widgetMode)return;name=resolveObjectName(resolveSystem(selected),name);if(!name)return;beginNavigation();stationOverview=false;const scroll=$('detail').scrollTop;if(planetFocus&&!new Set([planetFocus,...localBodies(resolveSystem(selected),planetFocus).moons.map(b=>b.name),...localBodies(resolveSystem(selected),planetFocus).stations.map(b=>b.name)]).has(name))planetFocus=null;selectedWorld=name;const localHost=localChartParent(resolveSystem(selected),name);if(localHost&&!planetFocus){setPlanetFocus(localHost);selectedWorld=name;}renderDetail();$('detail').scrollTop=scroll;if(innerWidth<=700||embedMode)setDetailOpen(true);const target=(innerWidth<=700||embedMode)?$('detail').querySelector('.detail-close'):Array.from(document.querySelectorAll('[data-world]')).find(b=>b.dataset.world===name);target?.focus({preventScroll:true});endNavigation();}
+function chooseSystemWorld(name){if(widgetMode)return;if(name==='Foundry'){openStation(name);return;}name=resolveObjectName(resolveSystem(selected),name);if(!name)return;beginNavigation();stationOverview=false;const scroll=$('detail').scrollTop;if(planetFocus&&!new Set([planetFocus,...localBodies(resolveSystem(selected),planetFocus).moons.map(b=>b.name),...localBodies(resolveSystem(selected),planetFocus).stations.map(b=>b.name)]).has(name))planetFocus=null;selectedWorld=name;const localHost=localChartParent(resolveSystem(selected),name);if(localHost&&!planetFocus){setPlanetFocus(localHost);selectedWorld=name;}renderDetail();$('detail').scrollTop=scroll;if(innerWidth<=700||embedMode)setDetailOpen(true);const target=(innerWidth<=700||embedMode)?$('detail').querySelector('.detail-close'):Array.from(document.querySelectorAll('[data-world]')).find(b=>b.dataset.world===name);target?.focus({preventScroll:true});endNavigation();}
 
 function toggleAtlasMotion(focusId){const scroll=$('detail').scrollTop;orbitPaused=!orbitPaused;renderDetail();$('detail').scrollTop=scroll;$(focusId)?.focus({preventScroll:true})}
 
@@ -1060,7 +1066,10 @@ function legacyInfobox(wikitext){
 
 function leadInfobox(wikitext){
  const lead=wikitext.split(/^\s*={1,6}[^=]/m)[0].replace(/<!--[\s\S]*?-->/g,''),matches=[...lead.matchAll(/{{\s*(?:Template:)?InfoboxNeue[^|{}]*(?=[|}])/gi)];
- if(!matches.length){const marker=lead.search(/<blockquote[^>]*>\s*\[!infobox/i);return marker<0?null:legacyInfobox(wikitext.replace(/<!--[\s\S]*?-->/g,'').slice(marker))}if(matches.length!==1)throw Error('Ambiguous infobox');
+ if(!matches.length){
+  const marker=lead.search(/<blockquote[^>]*>\s*\[!infobox/i);
+  return marker<0?null:legacyInfobox(wikitext.replace(/<!--[\s\S]*?-->/g,'').slice(marker));
+ }if(matches.length!==1)throw Error('Ambiguous infobox');
  const start=matches[0].index;let i=start,depth=0;
  while(i<lead.length){if(lead.startsWith('{{',i)){depth++;i+=2}else if(lead.startsWith('}}',i)){depth--;i+=2;if(!depth)break}else i++}
  if(depth)throw Error('Unclosed infobox');
@@ -1228,14 +1237,14 @@ function renderDetail(){stopImageRefresh();
 function bindDetail(){
  const classified=$('classifiedSystem');
  if(classified)classified.onclick=()=>select(classified.dataset.system);
- $('refreshArticleData')?.addEventListener('click',()=>{syncPlanetTitles(true);refreshVisibleImage(true)});$('detail').querySelector('.detail-close').onclick=()=>setDetailOpen(false);document.querySelectorAll('[data-notable]').forEach(b=>b.onclick=()=>chooseSystemWorld(b.dataset.notable))}
+ $('refreshArticleData')?.addEventListener('click',()=>{refreshVisibleImage(true);syncPlanetArticleTitles(true)});$('detail').querySelector('.detail-close').onclick=()=>setDetailOpen(false);document.querySelectorAll('[data-notable]').forEach(b=>b.onclick=()=>chooseSystemWorld(b.dataset.notable))}
 
 function drawMinimap(){let h='<svg viewBox="'+DATA.atlasExtent.join(' ')+'" aria-hidden="true">';Object.values(DATA.regions).forEach(r=>{const[x,y,w,ht]=r.bounds;h+=r.outline?`<polygon points="${r.outline.map(p=>p.join(',')).join(' ')}" fill="${r.color}" opacity=".16"/>`:`<rect x="${x}" y="${y}" width="${w}" height="${ht}" rx="170" fill="${r.color}" opacity=".13"/>`});DATA.systems.forEach(s=>h+=`<circle cx="${s.x}" cy="${s.y}" r="${s.major?29:17}" fill="${color(s)}" opacity=".7"/>`);h+=`<rect x="${vb.x}" y="${vb.y}" width="${vb.w}" height="${vb.h}" fill="none" stroke="#e0c485" stroke-width="26"/></svg>`;$('minimap').innerHTML=h}
 
 function buildNotes(){$('notesContent').innerHTML="\u003cp>\u003cb>UACS Stellar Atlas · v.04 · 134 CE\u003c/b>\u003c/p>\u003ch3>Scope and sources\u003c/h3>\u003cp>The original 24 systems retain their relative positions from the supplied Cluster chart. Eighteen systems are proposed additions: three in each original region and six in the new Aster March. The Codex gives national totals of 253 systems and 42 member worlds; these are not the number of bodies in this first-pass catalogue. Every planet in the atlas has a selectable satellite family. The chart is schematic and does not establish travel distances.\u003c/p>\u003ch3>Regional divisions\u003c/h3>\u003cp>Occident Reach, Sol Commonwealths and Meridian Frontier are proposed chart divisions. Acheron Divide is documented in Jotunheim’s article, but its boundary and the assignment of nearby systems are proposed. All five regions share contiguous edges. Aster March is a proposed southern expansion with six new systems. Three further systems have been added to each original region. The source’s small secondary labels are transcribed provisionally where no article resolves their spelling.\u003c/p>\u003ch3>Documented relationships\u003c/h3>\u003cp>Karic orbits Eden. Varagandr orbits Jotunheim, which occupies Heimdall IV and has 78 moons. Heimdall is single-star. Carver V hosted the Carver Accords. The chart depicts DSC 346 as a black hole with DSC 346 B and V. Sokolov Observatory, and Weiss 287 contains New Dresden and Carson Station. Jotunheim’s prose calls it an ice giant, while its older infobox says gas giant.\u003c/p>\u003ch3>Sol visual model\u003c/h3>\u003cp>At the author’s direction, Sol follows the Solar System’s sequence of four rocky planets, two gas giants and two ice giants, with an asteroid belt between the fourth and fifth planets. Eden is Earth-like; Arcadia retains its provisional fifth orbit and now has Jupiter-like bands, while the sixth planet carries Saturn-like rings. Existing names and fictional satellite families are preserved. Sizes and distances are compressed, not physically to scale.\u003c/p>\u003ch3>First-pass additions\u003c/h3>\u003cp>Undocumented planetary slots, physical appearances, moon counts, station names and most orbital hosts are proposed. Generic planets use system-and-Roman-numeral designations and dimmer symbols. The 77 unnamed Jotunheim satellites use provisional catalogue names while preserving the documented count. Binary and triple configurations are proposed except the charted DSC 346 companion. Colors stay within natural stellar colors; they do not assert measured spectral classes. System views show vital satellites and major stations; planet views include every local moon and station.\u003c/p>\u003ch3>Navigation\u003c/h3>\u003cp>Index starts collapsed. The dropdown beside it opens a chart; clicking territory highlights it without moving the camera. Scroll or pinch to zoom, drag to pan, use Escape to return. Double-click a system or planet symbol to enter its chart; location names open Codex articles. Dossiers and Index collapse independently.\u003c/p>\u003ch3>Label visibility\u003c/h3>\u003cp>At normal chart sizes, overview names appear at 145%, or 110% for a highlighted region; planetary sublabels appear at 190%, or 150% highlighted. Dedicated regional charts use 64% / 80% for active names / sublabels, and 80% / 125% for neighbors. Narrow embeds increase these thresholds to preserve legibility.\u003c/p>\u003ch3>Article embeds\u003c/h3>\u003cp>Use \u003ccode>?view=widget&amp;system=sol\u003c/code>, \u003ccode>?view=widget&amp;planet=Eden\u003c/code>, or \u003ccode>?view=widget&amp;region=acheron\u003c/code>. Region keys: western, sol, acheron, outer, aster. Widgets keep Codex links. The MediaWiki importer may set \u003ccode>window.SKYRIVER_ATLAS_QUERY\u003c/code> before initialization. Full interactive embeds use \u003ccode>?embed=1\u003c/code>.\u003c/p>\u003ch3>Live planet names\u003c/h3>\u003cp>Planet labels use their existing atlas names until a matching Codex article exists. Existing articles supply their current page titles; article moves and redirect chains update the labels and links. Checks run on opening, returning to the atlas, every minute while visible, and Refresh data. Cached page IDs follow later moves in the same browser even without a redirect. Keep a redirect at the original atlas title when moving an article so first-time visitors and other devices can discover the new title. Missing articles use the original atlas name; connection failures keep the last successful name. Planet identities, moon and station hosts, and old atlas links remain stable. A wholly separate article requires a redirect from the original atlas title.\u003c/p>\u003ch3>Live article data\u003c/h3>\u003cp>Dossiers refresh available images and infobox fields from the selected article. Missing pages or network failures retain the bundled atlas entry. All locations link to their intended Codex title, including articles not yet written.\u003c/p>\u003cdiv class=\"source-list\">\u003ca class=\"\" href=\"https://skyrivercodex.lzridgecodes.net/index.php?title=United_Alliance_of_Commonwealth_States\" target=\"_blank\" rel=\"noopener\">United Alliance of Commonwealth States\u003c/a>\u003ca class=\"\" href=\"https://skyrivercodex.lzridgecodes.net/index.php?title=Carver_Accords\" target=\"_blank\" rel=\"noopener\">Carver Accords\u003c/a>\u003ca class=\"\" href=\"https://skyrivercodex.lzridgecodes.net/index.php?title=Jotunheim\" target=\"_blank\" rel=\"noopener\">Jotunheim\u003c/a>\u003ca class=\"\" href=\"https://skyrivercodex.lzridgecodes.net/index.php?title=Timeline_and_chronology\" target=\"_blank\" rel=\"noopener\">Timeline and chronology\u003c/a>\u003ca class=\"\" href=\"https://skyrivercodex.lzridgecodes.net/index.php?title=Challenger-TLE_Demonstration_Flight\" target=\"_blank\" rel=\"noopener\">Challenger-TLE Demonstration Flight\u003c/a>\u003ca class=\"\" href=\"https://skyrivercodex.lzridgecodes.net/index.php?title=Relations%3A_Collective-UACS\" target=\"_blank\" rel=\"noopener\">Relations: Collective-UACS\u003c/a>\u003ca class=\"\" href=\"https://skyrivercodex.lzridgecodes.net/index.php?title=Drayson_Hinterlands\" target=\"_blank\" rel=\"noopener\">Drayson Hinterlands\u003c/a>\u003ca class=\"\" href=\"https://skyrivercodex.lzridgecodes.net/index.php?title=Jumpgate\" target=\"_blank\" rel=\"noopener\">Jumpgate\u003c/a>\u003c/div>\u003cbutton class=\"top-btn\" onclick=\"downloadHTML()\">↓ Download HTML\u003c/button>"}
 
 
-function toast(message){$('toast').textContent=message;$('toast').classList.remove('hidden');setTimeout(()=>$('toast').classList.add('hidden'),3500)}
+function toast(message){$('toast').textContent=message;$('toast').classList.remove('hidden');clearTimeout(toast.timer);toast.timer=setTimeout(()=>$('toast').classList.add('hidden'),3500)}
 
 async function downloadHTML(){try{const response=await fetch(location.pathname);if(!response.ok)throw Error();const blob=await response.blob(),address=URL.createObjectURL(blob),a=document.createElement('a');a.href=address;a.download='UACS-Stellar-Atlas.html';a.click();setTimeout(()=>URL.revokeObjectURL(address),3000)}catch{const clone=document.documentElement.cloneNode(true);clone.querySelector('#scene').innerHTML='';clone.querySelector('#systemFocus').innerHTML='';clone.querySelectorAll('dialog').forEach(n=>n.removeAttribute('open'));const address=URL.createObjectURL(new Blob(['<!doctype html>\n'+clone.outerHTML],{type:'text/html'})),a=document.createElement('a');a.href=address;a.download='UACS-Stellar-Atlas.html';a.click();setTimeout(()=>URL.revokeObjectURL(address),3000)}}
 
@@ -1257,11 +1266,11 @@ $('fullscreen').onclick=async()=>{try{if(document.fullscreenElement)await docume
 const map=$('map');map.addEventListener('dragstart',event=>event.preventDefault());map.addEventListener('wheel',e=>{e.preventDefault();zoom(Math.exp(Math.max(-100,Math.min(100,e.deltaY))*.002),e.clientX,e.clientY)},{passive:false});
 map.addEventListener('pointerdown',e=>{if(e.target.closest('a'))return;e.preventDefault();moved=false;pointers.set(e.pointerId,{x:e.clientX,y:e.clientY});(e.target.closest('[data-region-outline]')||map).setPointerCapture(e.pointerId);drag={x:e.clientX,y:e.clientY,v:{...vb},id:e.pointerId};if(pointers.size===2){const p=[...pointers.values()];pinch={d:Math.hypot(p[0].x-p[1].x,p[0].y-p[1].y)}}});
 map.addEventListener('pointermove',e=>{if(!pointers.has(e.pointerId))return;pointers.set(e.pointerId,{x:e.clientX,y:e.clientY});if(pointers.size===2&&pinch){const p=[...pointers.values()],d=Math.hypot(p[0].x-p[1].x,p[0].y-p[1].y);zoom(pinch.d/d,(p[0].x+p[1].x)/2,(p[0].y+p[1].y)/2);pinch.d=d;moved=true;return}if(!drag||drag.id!==e.pointerId)return;const dx=e.clientX-drag.x,dy=e.clientY-drag.y;if(!moved&&Math.abs(dx)+Math.abs(dy)<=4)return;moved=true;const b=map.getBoundingClientRect();vb.x=drag.v.x-dx*vb.w/b.width;vb.y=drag.v.y-dy*vb.h/b.height;applyView()});
-function endPointer(e){pointers.delete(e.pointerId);drag=null;pinch=null;if(e.type==='pointercancel')moved=true}
+function endPointer(e){const region=drag?.region;if(e.type!=='pointercancel'&&!moved&&pointers.size===1&&region)highlightRegion(region);pointers.delete(e.pointerId);drag=null;pinch=null;}
 map.addEventListener('pointerup',endPointer);map.addEventListener('pointercancel',endPointer);
 map.addEventListener('keydown',e=>{if(e.target!==map)return;const f=.12;if(['+','=','-','0','ArrowUp','ArrowDown','ArrowLeft','ArrowRight'].includes(e.key))e.preventDefault();switch(e.key){case '+':case '=':zoom(.8);break;case '-':zoom(1.25);break;case '0':setView(view,true,false,overviewMode);break;case 'ArrowUp':vb.y-=vb.h*f;applyView();break;case 'ArrowDown':vb.y+=vb.h*f;applyView();break;case 'ArrowLeft':vb.x-=vb.w*f;applyView();break;case 'ArrowRight':vb.x+=vb.w*f;applyView();break}});
 document.addEventListener('keydown',e=>{if(!widgetMode&&e.key==='Escape'&&!$('notes').open){const returning=stationOverview||planetFocus||systemFocused;if(stationOverview){closeStation()}else if(planetFocus){setPlanetFocus(null)}else if(systemFocused){setSystemFocus(false)}$('filters').classList.add('hidden');$('filterBtn').setAttribute('aria-expanded','false');if(!returning)setIndexOpen(false);setDetailOpen(false)}});
-let resizeTimer;function resizeChart(){clearTimeout(resizeTimer);resizeTimer=setTimeout(()=>{const b=$('mapArea').getBoundingClientRect();if(!b.width||!b.height)return;const h=vb.w*b.height/b.width;vb.y-=(h-vb.h)/2;vb.h=h;applyView()},100)}
+let resizeTimer;function resizeChart(){clearTimeout(resizeTimer);resizeTimer=setTimeout(()=>{if(widgetRegion){fitBounds(DATA.regions[widgetRegion]?.bounds||DATA.atlasExtent);return}const b=$('mapArea').getBoundingClientRect();if(!b.width||!b.height)return;const h=vb.w*b.height/b.width;vb.y-=(h-vb.h)/2;vb.h=h;applyView()},100)}
 
 addEventListener('resize',resizeChart);
 $('systemFocus').innerHTML='';$('systemFocus').classList.add('hidden');$('mapArea').classList.remove('system-focused');$('flag').src=DATA.assets.flag;$('flagLink').href=$('federationLink').href=url('United Alliance of Commonwealth States');$('filters').classList.add('hidden');$('toast').classList.add('hidden');$('filterBtn').setAttribute('aria-expanded','false');document.querySelectorAll('[data-scope]').forEach(b=>b.classList.toggle('active',b.dataset.scope==='region'));document.body.classList.toggle('embed',embedMode);document.body.classList.toggle('widget',widgetMode);setIndexOpen(false);buildNotes();draw();restoreRoute();routeReady=true;persistRoute();startPlanetTitleSync();

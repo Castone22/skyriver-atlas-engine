@@ -35,12 +35,15 @@ atlas that had the feature sets it on in its `bundle.json`. Name flags for the c
      lack it.
    - _a bug in one variant_: do not decide alone. Keep the behaviour of the atlas as it is and
      record the question in the group's notes file.
-2. **Write the converged function** as a new file under `engine/functions/` named
-   `<name>-<12 hex chars>.js` (any unique suffix). Keep formatting close to the source variants.
+2. **Write the converged function** as `engine/functions/<name>.js`. The canonical file has no
+   hash or suffix: a suffix only tells variants apart, and a converged function has none. If the
+   name is still taken by a variant you have not removed yet, use a temporary `<name>-new.js` and
+   let step 4 rename it. Keep formatting close to the source variants.
 3. **Point every atlas at it**: change the `@atlas-function` marker in `bundles/<id>/runtime-*.js`.
    Set the flags each atlas needs in its `bundle.json` so it behaves exactly as before.
 4. **Remove the old variants** and regenerate the index. Do not edit the index by hand:
-   `node tools/index-functions.mjs --prune --fix-names`.
+   `node tools/index-functions.mjs --prune --fix-names --unhash`. `--unhash` renames any function
+   that now has a single linked file to `<name>.js` and updates the markers.
 5. **Verify** with `npm run check` (build, unit tests, DOM tests, quick golden tours).
    A converged function must leave every tour step unchanged for every atlas. If a step differs,
    the flags for that atlas are wrong or a difference was missed; fix it, do not update the golden

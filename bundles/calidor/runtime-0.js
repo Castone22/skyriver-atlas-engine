@@ -7,11 +7,11 @@ const canonicalTitle=name=>{const n=normalizedName(name);const record=[...allRec
 const referenceTargets=new Map([...(DATA.stations||[]),...(DATA.satellites||[])].filter(r=>r.referencePage).map(r=>[r.name,r]));
 /* @atlas-function url-ad223876f7d1 */
 const link=(name,label=name,cls='')=>`<a class="${cls}" href="${url(name)}" target="_blank" rel="noopener">${esc(label)}</a>`;
-/* @atlas-function systemNameTitle-9fda0c6f7dde */
-/* @atlas-function hasOrbitChart-cd9024002c05 */
+/* @atlas-function systemNameTitle */
+/* @atlas-function hasOrbitChart */
 /* @atlas-function systemArticleTitle-f58f1eb5d931 */
-/* @atlas-function systemLink-fdecf73a043c */
-/* @atlas-function systemArticleRecord-76a46d93a886 */
+/* @atlas-function systemLink */
+/* @atlas-function systemArticleRecord */
 const TIER_NAMES={1:'Quarantined',2:'Suppressed',3:'Active Threat',4:'High Contamination',5:'Critical Infestation'};
 const TIER_COLORS={1:'#c7bb86',2:'#c9a375',3:'#da8b7c',4:'#df6c87',5:'#ec5391'};
 const color=s=>s.stellarColor||"#ffe6a3";
@@ -26,54 +26,54 @@ const widgetMode=atlasParams().get('view')==='widget';
 const embedMode=widgetMode||atlasParams().get('embed')==='1';
 let routeReady=false,routeChanging=0,restoringRoute=false,regionalCamera=null,markerDossierTimer=0;
 const MARKER_DOSSIER_DELAY=600;
-/* @atlas-function cancelMarkerDossier-15bccd3721a6 */
-/* @atlas-function setDetailOpen-e2782282528c */
-/* @atlas-function deferMarkerDossier-0e62c8c49927 */
+/* @atlas-function cancelMarkerDossier */
+/* @atlas-function setDetailOpen */
+/* @atlas-function deferMarkerDossier */
 
 const normalizedName=value=>String(value||'').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]/g,'');
-/* @atlas-function resolveRegion-3addd3c05c4b */
+/* @atlas-function resolveRegion */
 /* @atlas-function matchesRecord-7deaec6d8fb2 */
-/* @atlas-function resolveSystem-b072cde34b21 */
-/* @atlas-function resolveObjectName-5012baba771b */
+/* @atlas-function resolveSystem */
+/* @atlas-function resolveObjectName */
 /* @atlas-function matchesSearch-6e5b90f05584 */
 // Fragment links accept the friend's human-readable names, IDs and aliases.
-/* @atlas-function resolveNamedRoute-1c697381e61c */
-/* @atlas-function resolveHashRoute-5116f419e4ca */
-/* @atlas-function resolvePlanetRoute-629fd3a45518 */
+/* @atlas-function resolveNamedRoute */
+/* @atlas-function resolveHashRoute */
+/* @atlas-function resolvePlanetRoute */
 let lastRestoredURL='';
 /* @atlas-function routeSnapshot-abc4a9cfc8b4 */
 /* @atlas-function routeURL-66be76949ffb */
-/* @atlas-function persistRoute-d9e0092dba25 */
-/* @atlas-function beginNavigation-0fd5ef194092 */
-/* @atlas-function endNavigation-6e8b075af270 */
+/* @atlas-function persistRoute */
+/* @atlas-function beginNavigation */
+/* @atlas-function endNavigation */
 /* @atlas-function restoreRoute-e2c1998e4e99 */
 addEventListener('popstate',event=>restoreRoute(event.state));
 addEventListener('hashchange',()=>{if(location.href!==lastRestoredURL)restoreRoute(null,true)});
 
-/* @atlas-function svg-15cbb58776ce */
+/* @atlas-function svg */
 /* @atlas-function textSVG-4271b37f08ac */
-/* @atlas-function objectTarget-31970347527c */
+/* @atlas-function objectTarget */
 /* @atlas-function svgLink-32328fac037a */
 
 /* @atlas-function draw-3dd6f33ea9c1 */
-/* @atlas-function updateSelection-c7b25b859c12 */
+/* @atlas-function updateSelection */
 /* @atlas-function updateVisibility-7f01bd0a593a */
-/* @atlas-function zoomPercent-95c4be08c40a */
+/* @atlas-function zoomPercent */
 /* @atlas-function labelThresholds-shared */
 /* @atlas-function scaleLabels-9188e675f7fa */
-/* @atlas-function applyView-92d149458601 */
-/* @atlas-function fitBounds-b4532b0852c7 */
+/* @atlas-function applyView */
+/* @atlas-function fitBounds */
 /* @atlas-function setView-5a65e3a280b5 */
 /* @atlas-function zoom-c44842c8dbe1 */
 /* @atlas-function select-2a33070d08e5 */
-/* @atlas-function tierMarkup-7d5f85e75120 */
+/* @atlas-function tierMarkup */
 /* @atlas-function renderMapLegend-c8f994aa0bf6 */
 
-/* @atlas-function affiliationMarkup-0a15fc73509c */
-/* @atlas-function searchRecords-2c82af157790 */
+/* @atlas-function affiliationMarkup */
+/* @atlas-function searchRecords */
 /* @atlas-function classificationTerms-766b72615379 */
 /* @atlas-function searchTerms-2f561ee034d3 */
-/* @atlas-function searchObject-79fc0f1f6bd8 */
+/* @atlas-function searchObject */
 /* @atlas-function renderIndex-bb514b6b2378 */
 const reducedMotion=matchMedia('(prefers-reduced-motion: reduce)');
 let orbitPaused=reducedMotion.matches,orbitFrame=0,orbitClock=0,orbitLastTime=null;
@@ -92,23 +92,23 @@ let systemFocused=false,systemZoom=1,planetFocus=null,showBelts=true;
 const stationFilters=new Set(Object.keys(STATION_TYPES));
 const siteType=name=>/station|triad|jumpgate/i.test(name)?'Station / structure':/colony/i.test(name)?'Colony':'World';
 /* @atlas-function stationRecords-6dbf0bad7f69 */
-/* @atlas-function entityRecords-0f5c4922bbe2 */
+/* @atlas-function entityRecords */
 /* @atlas-function starRecords-26accc5af9e1 */
 /* @atlas-function focusableWorld-27a8652c176e */
-/* @atlas-function localChartParent-98437f6b46e0 */
-/* @atlas-function localBodies-d9b7cb24c73f */
-/* @atlas-function moonRecords-a24c1b17c702 */
-/* @atlas-function systemBodies-90b5d3a3d39f */
+/* @atlas-function localChartParent */
+/* @atlas-function localBodies */
+/* @atlas-function moonRecords */
+/* @atlas-function systemBodies */
 // Size and colour keep illustrative bodies subordinate to named Codex worlds.
 const illustrativeTypes={
  cinder:[2.5,'#c38970'],rocky:[2.8,'#a29b91'],desert:[3.3,'#cfaa76'],
  icy:[2.6,'#a6c1cd'],gas:[4.9,'#c7aa83'],ringed:[4.6,'#baab89'],'ice-giant':[4.2,'#76adbb']
 };
-/* @atlas-function illustrativePlanet-73a0b9ed368f */
+/* @atlas-function illustrativePlanet */
 /* @atlas-function solarLayout-1f15bde96813 */
-/* @atlas-function ordinal-ae1883835ce5 */
+/* @atlas-function ordinal */
 /* @atlas-function orbitalFact-6d8890f36c62 */
-/* @atlas-function worldRecord-84ce24ab94d2 */
+/* @atlas-function worldRecord */
 /* @atlas-function bodyKey-76d2ce6780e1 */
 
 const foundryParts=[
@@ -119,10 +119,10 @@ const foundryParts=[
  {title:'Central forge spine',label:'FORGE SPINE',x:330,y:387,lx:470,ly:418,note:'The ancient Vy’Tiir megastructure supplies the Calidor system with extraordinary energy. The national article also describes a military-production role whose use would cripple the civilian economy. The exact internal mechanisms are not documented.'},
  {title:'Stellar interface',label:'STELLAR INTERFACE',x:331,y:491,lx:180,ly:500,note:'The illustration shows bright streams linking the lower tip to the stellar surface. The Codex locates the Foundry in orbit around Calidor’s sun. The flow paths shown here are visual interpretations, not measured field geometry.'}
 ];
-/* @atlas-function foundryIcon-fdc408dd52fd */
-/* @atlas-function foundryCorner-b3edfb8c7ca5 */
-/* @atlas-function foundryElevation-cd1c48a66bc6 */
-/* @atlas-function foundryScreen-4193fc83fe69 */
+/* @atlas-function foundryIcon */
+/* @atlas-function foundryCorner */
+/* @atlas-function foundryElevation */
+/* @atlas-function foundryScreen */
 
 const TORA_CLASS='Terranos Omnidirectional Reflector Array';
 const toraParts=[
@@ -133,30 +133,30 @@ const toraParts=[
  {title:'Ventral spindle',label:'SPINDLE',x:342,y:377,lx:445,ly:408,note:'A stepped lower hull tapers to a second axial tip. The class power plant is classified and its position is unknown.'}
 ];
 
-/* @atlas-function hardware-03831a59e0b0 */
-/* @atlas-function toraHubDetail-00225664361b */
-/* @atlas-function toraElevation-821522f988eb */
+/* @atlas-function hardware */
+/* @atlas-function toraHubDetail */
+/* @atlas-function toraElevation */
 /* @atlas-function stationScreen-7218cedf4124 */
 /* @atlas-function highlightPart-3b673ff30d38 */
 /* @atlas-function openStation-8874c87f6a8d */
-/* @atlas-function closeStation-ee7ad2bd286b */
-/* @atlas-function bindToraName-19110e3dcd02 */
-/* @atlas-function bindToraControl-33a926f53fd4 */
+/* @atlas-function closeStation */
+/* @atlas-function bindToraName */
+/* @atlas-function bindToraControl */
 
-/* @atlas-function cloakDecoration-24ab67234ecf */
-/* @atlas-function cloakBadge-5cc2d9eae220 */
-/* @atlas-function silentDecoration-976cdad40c22 */
-/* @atlas-function notableSitesMarkup-4b8c38b6fa92 */
+/* @atlas-function cloakDecoration */
+/* @atlas-function cloakBadge */
+/* @atlas-function silentDecoration */
+/* @atlas-function notableSitesMarkup */
 /* @atlas-function systemView-79175591a142 */
 /* @atlas-function planetView-a28a3e40f648 */
 /* @atlas-function mountPlanet-028b1c9a2a66 */
-/* @atlas-function setPlanetFocus-b177c4195ac6 */
+/* @atlas-function setPlanetFocus */
 
-/* @atlas-function stopOrbit-0cc176473bd1 */
-/* @atlas-function blackHoleGlyph-7eab0f0383d5 */
-/* @atlas-function exoticGlyph-927b08292c59 */
-/* @atlas-function deadStarGlyph-dd5460ecd152 */
-/* @atlas-function nefandumGlyph-4af1b0d5f19a */
+/* @atlas-function stopOrbit */
+/* @atlas-function blackHoleGlyph */
+/* @atlas-function exoticGlyph */
+/* @atlas-function deadStarGlyph */
+/* @atlas-function nefandumGlyph */
 const STATION_SILHOUETTES={
  'Civil Engineering':{hull:'M-9-7H-5V5H5V-7H9V9H-9Z',detail:'M-2-5H2V5H-2Z M-9-3H-5 M5-3H9 M-9 3H-5 M5 3H9'},
  'Habitation':{hull:'M-7 0A7 7 0 1 0 7 0A7 7 0 1 0-7 0 M-3 0A3 3 0 1 1 3 0A3 3 0 1 1-3 0 M-13-4H-9V4H-13Z M9-4H13V4H9Z',detail:'M-9 0H9 M0-7V7'},
@@ -165,29 +165,29 @@ const STATION_SILHOUETTES={
  'Industry':{hull:'M-10-5Q-7-8-4-5V5Q-7 8-10 5Z M-3-7Q0-10 3-7V7Q0 10-3 7Z M4-5Q7-8 10-5V5Q7 8 4 5Z',detail:'M-10 0H10 M-7-5V5 M7-5V5 M0-7V7'},
  'Other':{hull:'M-8-8Q0 2 8-8Q6 3 0 4Q-6 3-8-8Z M-3 6H3V10H-3Z',detail:'M0-8V6 M-10 10H10 M-4-3L0-8 4-3'}
 };
-/* @atlas-function foundryGlyph-a5838c5eb139 */
-/* @atlas-function stationGlyph-e953be378c82 */
+/* @atlas-function foundryGlyph */
+/* @atlas-function stationGlyph */
 let planetClickTimer;
-/* @atlas-function bindOrbitalSelection-2ada81283e17 */
-/* @atlas-function drawBelt-8b00d00c4a09 */
+/* @atlas-function bindOrbitalSelection */
+/* @atlas-function drawBelt */
 /* @atlas-function mountSystem-d80d9c15a5ef */
 /* @atlas-function setSystemFocus-fa97a454091d */
 
 /* @atlas-function syncSystemFocus-83b192ca5f37 */
-/* @atlas-function applySystemZoom-1e5bda2d6702 */
+/* @atlas-function applySystemZoom */
 /* @atlas-function bindSystemControls-cf2f9cf9b847 */
-/* @atlas-function chooseSystemWorld-81795bb00923 */
-/* @atlas-function toggleAtlasMotion-de18252fe945 */
+/* @atlas-function chooseSystemWorld */
+/* @atlas-function toggleAtlasMotion */
 reducedMotion.addEventListener('change',e=>{if(e.matches){orbitPaused=true;renderDetail()}});
-/* @atlas-function imageRecord-4fabc53fa463 */
+/* @atlas-function imageRecord */
 // Read the current own-article infobox; embedded images remain the offline fallback.
 const liveImages=new Map(),liveImageRequests=new Map(),IMAGE_REFRESH_MS=60000;
 let liveImageTimer=0;
-/* @atlas-function splitWiki-7001aae8a9fe */
-/* @atlas-function infoboxFile-77a2b60f484d */
-/* @atlas-function legacyInfobox-fe5c174ea60e */
-/* @atlas-function leadInfobox-2c49558cef8a */
-/* @atlas-function fileFromInfobox-7cd1972b28f5 */
+/* @atlas-function splitWiki */
+/* @atlas-function infoboxFile */
+/* @atlas-function legacyInfobox */
+/* @atlas-function leadInfobox */
+/* @atlas-function fileFromInfobox */
 const dossierFields=[
  ['Population','population'],['Capital','planetary capital','capital','capital city','system capital'],
  ['Type','object type','type','classification','class','structure type'],['Region','region'],['System','star system','system'],
@@ -195,29 +195,29 @@ const dossierFields=[
  ['Natural satellites','natural satellites'],['Sovereignty','current sovereignty','controlling faction','sovereignty'],
  ['Status','status'],['Location','location'],['Role','role','role in logistics'],['Mass','mass'],['Radius','radius'],['Rotation period','rotation period'],['QERA production','qera production'],['Access restrictions','access restrictions']
 ];
-/* @atlas-function dossierFacts-52ca6cd92702 */
-/* @atlas-function factValue-b555ac85a06d */
-/* @atlas-function factGrid-57fecff486ec */
+/* @atlas-function dossierFacts */
+/* @atlas-function factValue */
+/* @atlas-function factGrid */
 /* @atlas-function bodyFacts-0eb86f4c84ff */
-/* @atlas-function safeImageURL-dd9793f79487 */
-/* @atlas-function imageAPI-d9cceff5dd0a */
+/* @atlas-function safeImageURL */
+/* @atlas-function imageAPI */
 /* @atlas-function currentImageTitle-795639864731 */
 /* @atlas-function loadLiveImage-3ce892422fb7 */
-/* @atlas-function embeddedImageMarkup-e051b4bd8690 */
-/* @atlas-function imageMarkup-d02b3f7a0d61 */
-/* @atlas-function referenceImage-8b3a85e9be79 */
-/* @atlas-function stopImageRefresh-8e16449d7d4c */
-/* @atlas-function refreshVisibleImage-56c4427266bb */
+/* @atlas-function embeddedImageMarkup */
+/* @atlas-function imageMarkup */
+/* @atlas-function referenceImage */
+/* @atlas-function stopImageRefresh */
+/* @atlas-function refreshVisibleImage */
 addEventListener('focus',()=>refreshVisibleImage(true));addEventListener('online',()=>refreshVisibleImage(true));document.addEventListener('visibilitychange',()=>document.hidden?stopImageRefresh():refreshVisibleImage(true));
 
-/* @atlas-function regionalSystemSummary-7dd62db15248 */
+/* @atlas-function regionalSystemSummary */
 /* @atlas-function renderDetail-73b50a205c37 */
-/* @atlas-function bindDetail-ae25d4896505 */
+/* @atlas-function bindDetail */
 /* @atlas-function drawMinimap-bacdf6a5ea9f */
-/* @atlas-function buildNotes-shared */
+/* @atlas-function buildNotes */
 
-/* @atlas-function toast-4b4587647c32 */
-/* @atlas-function downloadHTML-679a5647ab5c */
+/* @atlas-function toast */
+/* @atlas-function downloadHTML */
 $('regionPicker').onchange=()=>setView($('regionPicker').value);
 $('regionPicker').addEventListener('keydown',e=>e.stopPropagation());document.querySelectorAll('[data-scope]').forEach(b=>b.onclick=()=>{scope=b.dataset.scope;document.querySelectorAll('[data-scope]').forEach(n=>n.classList.toggle('active',n===b));renderIndex()});$('search').oninput=()=>{clearTimeout(searchTimer);searchTimer=setTimeout(renderIndex,90)};
 $('zoomIn').onclick=()=>zoom(.8);$('zoomOut').onclick=()=>zoom(1.25);$('fit').onclick=()=>setView(view,true,false,overviewMode);$('minimap').onclick=()=>setView('all');$('minimap').onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();setView('all')}};
@@ -225,7 +225,7 @@ $('zoomIn').onclick=()=>zoom(.8);$('zoomOut').onclick=()=>zoom(1.25);$('fit').on
 $('filterBtn').onclick=()=>{const open=$('filters').classList.toggle('hidden');$('filterBtn').setAttribute('aria-expanded',String(!open))};
 $('embedDetails').onclick=()=>setDetailOpen(!$('detail').classList.contains('open'),true);
 let indexOpen=false;
-/* @atlas-function setIndexOpen-fae6a2ac47dc */
+/* @atlas-function setIndexOpen */
 for(const id of ['toggleIndexPanel','indexToggle','embedIndex'])$(id).onclick=()=>setIndexOpen(!indexOpen);
 $('toggleDetailPanel').onclick=()=>{if(embedMode){setDetailOpen(!$('detail').classList.contains('open'),true);return}const hidden=$('atlasLayout').classList.toggle('dossier-collapsed');$('toggleDetailPanel').setAttribute('aria-expanded',String(!hidden));resizeChart()};
 $('mobileInspect').onclick=()=>setDetailOpen(true,true);
@@ -234,9 +234,9 @@ $('fullscreen').onclick=async()=>{try{if(document.fullscreenElement)await docume
 const map=$('map');map.addEventListener('dragstart',event=>event.preventDefault());map.addEventListener('wheel',e=>{e.preventDefault();zoom(Math.exp(Math.max(-100,Math.min(100,e.deltaY))*.002),e.clientX,e.clientY)},{passive:false});
 map.addEventListener('pointerdown',e=>{if(e.target.closest('a'))return;e.preventDefault();moved=false;pointers.set(e.pointerId,{x:e.clientX,y:e.clientY});(e.target.closest('[data-region-outline]')||map).setPointerCapture(e.pointerId);drag={x:e.clientX,y:e.clientY,v:{...vb},id:e.pointerId};if(pointers.size===2){const p=[...pointers.values()];pinch={d:Math.hypot(p[0].x-p[1].x,p[0].y-p[1].y)}}});
 map.addEventListener('pointermove',e=>{if(!pointers.has(e.pointerId))return;pointers.set(e.pointerId,{x:e.clientX,y:e.clientY});if(pointers.size===2&&pinch){const p=[...pointers.values()],d=Math.hypot(p[0].x-p[1].x,p[0].y-p[1].y);zoom(pinch.d/d,(p[0].x+p[1].x)/2,(p[0].y+p[1].y)/2);pinch.d=d;moved=true;return}if(!drag||drag.id!==e.pointerId)return;const dx=e.clientX-drag.x,dy=e.clientY-drag.y;if(!moved&&Math.abs(dx)+Math.abs(dy)<=4)return;moved=true;const b=map.getBoundingClientRect();vb.x=drag.v.x-dx*vb.w/b.width;vb.y=drag.v.y-dy*vb.h/b.height;applyView()});
-/* @atlas-function endPointer-28a00b6b73ab */map.addEventListener('pointerup',endPointer);map.addEventListener('pointercancel',endPointer);
+/* @atlas-function endPointer */map.addEventListener('pointerup',endPointer);map.addEventListener('pointercancel',endPointer);
 map.addEventListener('keydown',e=>{if(e.target!==map)return;const f=.12;if(['+','=','-','0','ArrowUp','ArrowDown','ArrowLeft','ArrowRight'].includes(e.key))e.preventDefault();switch(e.key){case '+':case '=':zoom(.8);break;case '-':zoom(1.25);break;case '0':setView(view,true,false,overviewMode);break;case 'ArrowUp':vb.y-=vb.h*f;applyView();break;case 'ArrowDown':vb.y+=vb.h*f;applyView();break;case 'ArrowLeft':vb.x-=vb.w*f;applyView();break;case 'ArrowRight':vb.x+=vb.w*f;applyView();break}});
 document.addEventListener('keydown',e=>{if(!widgetMode&&e.key==='Escape'&&!$('notes').open){const returning=stationOverview||planetFocus||systemFocused;if(stationOverview){closeStation()}else if(planetFocus){setPlanetFocus(null)}else if(systemFocused){setSystemFocus(false)}$('filters').classList.add('hidden');$('filterBtn').setAttribute('aria-expanded','false');if(!returning)setIndexOpen(false);setDetailOpen(false)}});
-let resizeTimer;/* @atlas-function resizeChart-58872a43c687 */
+let resizeTimer;/* @atlas-function resizeChart */
 addEventListener('resize',resizeChart);
 $('systemFocus').innerHTML='';$('systemFocus').classList.add('hidden');$('mapArea').classList.remove('system-focused');$('flag').src=DATA.assets.flag;$('flagLink').href=$('federationLink').href=url('{{brand|jsstr}}');$('filters').classList.add('hidden');$('toast').classList.add('hidden');$('filterBtn').setAttribute('aria-expanded','false');document.querySelectorAll('[data-scope]').forEach(b=>b.classList.toggle('active',b.dataset.scope==='region'));document.body.classList.toggle('embed',embedMode);document.body.classList.toggle('widget',widgetMode);setIndexOpen(false);buildNotes();draw();restoreRoute();routeReady=true;persistRoute();

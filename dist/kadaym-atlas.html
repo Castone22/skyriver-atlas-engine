@@ -129,7 +129,7 @@ function systemArticleTitle(s){return hasOrbitChart(s)?systemNameTitle(s.name):s
 
 function systemLink(s,label=systemArticleTitle(s)){return link(systemArticleTitle(s),label)}
 
-function systemArticleRecord(s){if(!hasOrbitChart(s))return s;const title=systemArticleTitle(s),own=DATA.objectImages?.[title];return {...s,articleTitle:title,image:own?.image||null,imageSource:own?.imageSource}}
+function systemArticleRecord(s){if(!hasOrbitChart(s))return s;const title=systemArticleTitle(s),own=DATA.objectImages?.[title];return {...s,articleTitle:s.systemDataArticle||title,image:own?.image||null,imageSource:own?.imageSource}}
 
 const TIER_NAMES={1:'Quarantined',2:'Suppressed',3:'Active Threat',4:'High Contamination',5:'Critical Infestation'};
 const TIER_COLORS={1:'#c7bb86',2:'#c9a375',3:'#da8b7c',4:'#df6c87',5:'#ec5391'};
@@ -163,7 +163,7 @@ let routeReady=false,routeChanging=0,restoringRoute=false,regionalCamera=null,ma
 const MARKER_DOSSIER_DELAY=600;
 function cancelMarkerDossier(){clearTimeout(markerDossierTimer);markerDossierTimer=0}
 
-function setDetailOpen(open,moveFocus=false){if(widgetMode)return;cancelMarkerDossier();const panel=$('detail'),returnFocus=!open&&panel.contains(document.activeElement);panel.classList.toggle('open',open);$('embedDetails').setAttribute('aria-expanded',String(open));if(open&&moveFocus)panel.querySelector('.detail-close')?.focus({preventScroll:true});else if(returnFocus)(embedMode?$('embedDetails'):$('mobileInspect')).focus({preventScroll:true})}
+function setDetailOpen(open,moveFocus=false){if(widgetMode)return;cancelMarkerDossier();const panel=$('detail'),returnFocus=!open&&panel.contains(document.activeElement);panel.classList.toggle('open',open);$('embedDetails').setAttribute('aria-expanded',String(open));if(embedMode)$('toggleDetailPanel').setAttribute('aria-expanded',String(open));if(open&&moveFocus)panel.querySelector('.detail-close')?.focus({preventScroll:true});else if(returnFocus)(embedMode?$('embedDetails'):$('mobileInspect')).focus({preventScroll:true})}
 
 function deferMarkerDossier(id){if(innerWidth>700)return;cancelMarkerDossier();markerDossierTimer=setTimeout(()=>{markerDossierTimer=0;if(selected===id&&!systemFocused)setDetailOpen(true)},MARKER_DOSSIER_DELAY)}
 
@@ -257,8 +257,8 @@ function textSVG(content,attrs,parent){const t=svg('text',attrs,parent);t.textCo
 
 function objectTarget(name,attrs,parent){
  if(!widgetMode)return svg('g',attrs,parent);
- return svg('a',{...attrs,role:'link',href:url(name),target:'_blank',rel:'noopener',
-  'aria-label':'Open '+name+' in the Codex'},parent);
+ return svg('a',{...attrs,...(DATA.worlds[name]?{'data-planet-link':name}:{}),role:'link',href:url(name),target:'_blank',rel:'noopener',
+  'aria-label':'Open '+planetName(name)+' in the Codex'},parent);
 }
 
 function svgLink(name,label,attrs,parent){
@@ -444,15 +444,15 @@ function localChartParent(s,name){
  const moon=moonRecords(s).find(m=>m.name===name&&m.inhabited!==true);
  if(moon)return moon.parent;
  const station=stationRecords(s).find(st=>st.name===name);
- if(station?.visibility!=='planet'&&!DATA.worlds[station?.parent]?.extendedSatelliteChart)return null;
- return moonRecords(s).find(m=>m.name===station.parent)?.parent||station.parent;
+ const host=moonRecords(s).find(m=>m.name===station?.parent)?.parent||station?.parent;
+ return station&&(station.visibility==='planet'||DATA.worlds[host]?.extendedSatelliteChart)?host:null;
 }
 
 function localBodies(s,name){const moons=moonRecords(s).filter(b=>b.parent===name),hosts=new Set([name,...moons.map(b=>b.name)]);return {moons,stations:stationRecords(s).filter(b=>hosts.has(b.parent))}}
 
 function moonRecords(s){if(!s)return [];return [...s.worlds.filter(name=>DATA.worlds[name]?.bodyType==='Moon').map(name=>({name,...DATA.worlds[name]})),...(DATA.satellites||[]).filter(b=>b.system===s.id)].map((b,i)=>({...b,index:i+1,type:'Moon',tint:b.tint||worldColors[b.name]||['#b6b2c8','#a6bac7','#baa990'][i%3]}))}
 
-function systemBodies(s){const names=new Set(stationRecords(s).map(b=>b.name));const bodies=s.worlds.filter(n=>!names.has(n)&&DATA.worlds[n]?.bodyType!=='Moon').map((name,i)=>({name,index:i+1,type:DATA.worlds[name]?.bodyType||siteType(name),parent:DATA.worlds[name]?.parent,tint:DATA.worlds[name]?.tint||worldColors[name]||['#c3ad8b','#99b9c9','#b7a0cb'][i%3],slot:DATA.worlds[name]?.orbitalPosition,diagramSlot:DATA.worlds[name]?.diagramSlot,appearance:DATA.worlds[name]?.appearance,size:DATA.worlds[name]?.size}));return [...bodies,...moonRecords(s).filter(b=>b.inhabited===true)];}
+function systemBodies(s){const names=new Set(stationRecords(s).map(b=>b.name));const bodies=s.worlds.filter(n=>!names.has(n)&&DATA.worlds[n]?.bodyType!=='Moon').map((name,i)=>({name,index:i+1,type:DATA.worlds[name]?.bodyType||siteType(name),parent:DATA.worlds[name]?.parent,tint:DATA.worlds[name]?.tint||worldColors[name]||['#c3ad8b','#99b9c9','#b7a0cb'][i%3],slot:DATA.worlds[name]?.orbitalPosition,diagramSlot:DATA.worlds[name]?.diagramSlot,appearance:DATA.worlds[name]?.appearance,renderOpacity:DATA.worlds[name]?.renderOpacity,size:DATA.worlds[name]?.size}));return [...bodies,...moonRecords(s).filter(b=>b.inhabited===true)];}
 
 // Size and colour keep illustrative bodies subordinate to named Codex worlds.
 const illustrativeTypes={
@@ -591,7 +591,7 @@ function mountPlanet(s){
 
 function setPlanetFocus(name){
  const s=resolveSystem(selected),target=name?focusableWorld(s,name):null;if(name&&!target)return;
- beginNavigation();if(target&&!systemFocused)setSystemFocus(true);if(!target&&planetFocus&&localChartParent(s,selectedWorld))selectedWorld=planetFocus;planetFocus=target;systemZoom=1;if(target)selectedWorld=target;
+ beginNavigation();stationOverview=false;if(target&&!systemFocused)setSystemFocus(true);if(!target&&planetFocus&&localChartParent(s,selectedWorld))selectedWorld=planetFocus;planetFocus=target;systemZoom=1;if(target)selectedWorld=target;
  renderDetail();$('systemFocus').scrollTop=0;setDetailOpen(false);(target?$('backToSystem'):$('backToRegion'))?.focus({preventScroll:true});endNavigation();
 }
 
@@ -659,7 +659,11 @@ const STATION_SILHOUETTES={
  'Industry':{hull:'M-10-5Q-7-8-4-5V5Q-7 8-10 5Z M-3-7Q0-10 3-7V7Q0 10-3 7Z M4-5Q7-8 10-5V5Q7 8 4 5Z',detail:'M-10 0H10 M-7-5V5 M7-5V5 M0-7V7'},
  'Other':{hull:'M-8-8Q0 2 8-8Q6 3 0 4Q-6 3-8-8Z M-3 6H3V10H-3Z',detail:'M0-8V6 M-10 10H10 M-4-3L0-8 4-3'}
 };
-function stationGlyph(parent,tint,category,scale=1,ruined=false){const shape=STATION_SILHOUETTES[category],g=svg('g',{transform:`scale(${scale})`,'data-station-shape':category,...(ruined?{'data-ruined':'true',opacity:.65}:{})},parent);svg('path',{d:shape.hull,fill:'#122331',stroke:tint,'stroke-width':1.2,'fill-rule':'evenodd','stroke-linejoin':'round'},g);svg('path',{d:shape.detail,fill:'none',stroke:tint,'stroke-width':.85,opacity:.85},g);if(ruined)svg('path',{d:'M-11 8L-3 2 0 4 10-9',stroke:'#090f17','stroke-width':2.5,fill:'none'},g);}
+function stationGlyph(parent,tint,category,scale=1,ruined=false){if(category==='TORA'){
+ const icon=svg('g',{transform:'scale('+scale+')','data-station-shape':'TORA'},parent);
+ svg('circle',{r:9,fill:'#102a44',stroke:tint,'stroke-dasharray':'12 5','stroke-width':2},icon);
+ svg('circle',{r:2.5,fill:tint},icon);svg('circle',{cx:8,cy:-4,r:2,fill:'#398cff'},icon);return}
+ const shape=STATION_SILHOUETTES[category],g=svg('g',{transform:`scale(${scale})`,'data-station-shape':category,...(ruined?{'data-ruined':'true',opacity:.65}:{})},parent);svg('path',{d:shape.hull,fill:'#122331',stroke:tint,'stroke-width':1.2,'fill-rule':'evenodd','stroke-linejoin':'round'},g);svg('path',{d:shape.detail,fill:'none',stroke:tint,'stroke-width':.85,opacity:.85},g);if(ruined)svg('path',{d:'M-11 8L-3 2 0 4 10-9',stroke:'#090f17','stroke-width':2.5,fill:'none'},g);}
 
 let planetClickTimer;
 function bindOrbitalSelection(g,name,openPlanet=false){
@@ -788,7 +792,7 @@ function bindSystemControls(){
  $('focusFullscreen')?.addEventListener('click',()=>$('fullscreen').click());
 }
 
-function chooseSystemWorld(name){if(widgetMode)return;name=resolveObjectName(resolveSystem(selected),name);if(!name)return;beginNavigation();const scroll=$('detail').scrollTop;if(planetFocus&&!new Set([planetFocus,...localBodies(resolveSystem(selected),planetFocus).moons.map(b=>b.name),...localBodies(resolveSystem(selected),planetFocus).stations.map(b=>b.name)]).has(name))planetFocus=null;selectedWorld=name;const localHost=localChartParent(resolveSystem(selected),name);if(localHost&&!planetFocus){setPlanetFocus(localHost);selectedWorld=name;}renderDetail();$('detail').scrollTop=scroll;if(innerWidth<=700||embedMode)setDetailOpen(true);const target=(innerWidth<=700||embedMode)?$('detail').querySelector('.detail-close'):Array.from(document.querySelectorAll('[data-world]')).find(b=>b.dataset.world===name);target?.focus({preventScroll:true});endNavigation();}
+function chooseSystemWorld(name){if(widgetMode)return;if(name==='Foundry'){openStation(name);return;}name=resolveObjectName(resolveSystem(selected),name);if(!name)return;beginNavigation();stationOverview=false;const scroll=$('detail').scrollTop;if(planetFocus&&!new Set([planetFocus,...localBodies(resolveSystem(selected),planetFocus).moons.map(b=>b.name),...localBodies(resolveSystem(selected),planetFocus).stations.map(b=>b.name)]).has(name))planetFocus=null;selectedWorld=name;const localHost=localChartParent(resolveSystem(selected),name);if(localHost&&!planetFocus){setPlanetFocus(localHost);selectedWorld=name;}renderDetail();$('detail').scrollTop=scroll;if(innerWidth<=700||embedMode)setDetailOpen(true);const target=(innerWidth<=700||embedMode)?$('detail').querySelector('.detail-close'):Array.from(document.querySelectorAll('[data-world]')).find(b=>b.dataset.world===name);target?.focus({preventScroll:true});endNavigation();}
 
 function toggleAtlasMotion(focusId){const scroll=$('detail').scrollTop;orbitPaused=!orbitPaused;renderDetail();$('detail').scrollTop=scroll;$(focusId)?.focus({preventScroll:true})}
 
@@ -1003,7 +1007,7 @@ function renderDetail(){stopImageRefresh();
 function bindDetail(){
  const classified=$('classifiedSystem');
  if(classified)classified.onclick=()=>select(classified.dataset.system);
- $('refreshArticleData')?.addEventListener('click',()=>refreshVisibleImage(true));$('detail').querySelector('.detail-close').onclick=()=>setDetailOpen(false);document.querySelectorAll('[data-notable]').forEach(b=>b.onclick=()=>chooseSystemWorld(b.dataset.notable))}
+ $('refreshArticleData')?.addEventListener('click',()=>{refreshVisibleImage(true);syncPlanetArticleTitles(true)});$('detail').querySelector('.detail-close').onclick=()=>setDetailOpen(false);document.querySelectorAll('[data-notable]').forEach(b=>b.onclick=()=>chooseSystemWorld(b.dataset.notable))}
 
 function drawMinimap(){let h='<svg viewBox="'+DATA.atlasExtent.join(' ')+'" aria-hidden="true">';Object.values(DATA.regions).forEach(r=>{const[x,y,w,ht]=r.bounds;h+=r.outline?`<polygon points="${r.outline.map(p=>p.join(',')).join(' ')}" fill="${r.color}" opacity=".16"/>`:`<rect x="${x}" y="${y}" width="${w}" height="${ht}" rx="170" fill="${r.color}" opacity=".13"/>`});DATA.systems.forEach(s=>h+=`<circle cx="${s.x}" cy="${s.y}" r="${s.major?29:17}" fill="${color(s)}" opacity=".7"/>`);h+=`<rect x="${vb.x}" y="${vb.y}" width="${vb.w}" height="${vb.h}" fill="none" stroke="#e0c485" stroke-width="26"/></svg>`;$('minimap').innerHTML=h}
 
@@ -1011,7 +1015,7 @@ function buildNotes(){$('notesContent').innerHTML="\u003cp>This atlas assembles 
 
 function toast(message){$('toast').textContent=message;$('toast').classList.remove('hidden');clearTimeout(toast.timer);toast.timer=setTimeout(()=>$('toast').classList.add('hidden'),3500)}
 
-function downloadHTML(){const clone=document.documentElement.cloneNode(true);clone.querySelectorAll('dialog').forEach(n=>n.removeAttribute('open'));clone.querySelectorAll('.open').forEach(n=>n.classList.remove('open'));clone.querySelector('#search').setAttribute('value','');const b=new Blob(['<!doctype html>\n'+clone.outerHTML],{type:'text/html'});const u=URL.createObjectURL(b),a=document.createElement('a');a.href=u;a.download='Kadaym-Stellar-Atlas.html';a.click();setTimeout(()=>URL.revokeObjectURL(u),3000)}
+async function downloadHTML(){try{const response=await fetch(location.pathname);if(!response.ok)throw Error();const blob=await response.blob(),address=URL.createObjectURL(blob),a=document.createElement('a');a.href=address;a.download='UACS-Stellar-Atlas.html';a.click();setTimeout(()=>URL.revokeObjectURL(address),3000)}catch{const clone=document.documentElement.cloneNode(true);clone.querySelector('#scene').innerHTML='';clone.querySelector('#systemFocus').innerHTML='';clone.querySelectorAll('dialog').forEach(n=>n.removeAttribute('open'));const address=URL.createObjectURL(new Blob(['<!doctype html>\n'+clone.outerHTML],{type:'text/html'})),a=document.createElement('a');a.href=address;a.download='UACS-Stellar-Atlas.html';a.click();setTimeout(()=>URL.revokeObjectURL(address),3000)}}
 
 const regionGroups=new Map();
 for(const [id,r] of Object.entries(DATA.regions)){
@@ -1041,7 +1045,7 @@ $('fullscreen').onclick=async()=>{try{if(document.fullscreenElement)await docume
 const map=$('map');map.addEventListener('dragstart',event=>event.preventDefault());map.addEventListener('wheel',e=>{e.preventDefault();zoom(Math.exp(Math.max(-100,Math.min(100,e.deltaY))*.002),e.clientX,e.clientY)},{passive:false});
 map.addEventListener('pointerdown',e=>{if(e.target.closest('a'))return;e.preventDefault();moved=false;pointers.set(e.pointerId,{x:e.clientX,y:e.clientY});(e.target.closest('[data-region-outline]')||map).setPointerCapture(e.pointerId);drag={x:e.clientX,y:e.clientY,v:{...vb},id:e.pointerId};if(pointers.size===2){const p=[...pointers.values()];pinch={d:Math.hypot(p[0].x-p[1].x,p[0].y-p[1].y)}}});
 map.addEventListener('pointermove',e=>{if(!pointers.has(e.pointerId))return;pointers.set(e.pointerId,{x:e.clientX,y:e.clientY});if(pointers.size===2&&pinch){const p=[...pointers.values()],d=Math.hypot(p[0].x-p[1].x,p[0].y-p[1].y);zoom(pinch.d/d,(p[0].x+p[1].x)/2,(p[0].y+p[1].y)/2);pinch.d=d;moved=true;return}if(!drag||drag.id!==e.pointerId)return;const dx=e.clientX-drag.x,dy=e.clientY-drag.y;if(!moved&&Math.abs(dx)+Math.abs(dy)<=4)return;moved=true;const b=map.getBoundingClientRect();vb.x=drag.v.x-dx*vb.w/b.width;vb.y=drag.v.y-dy*vb.h/b.height;applyView()});
-function endPointer(e){pointers.delete(e.pointerId);drag=null;pinch=null;if(e.type==='pointercancel')moved=true}
+function endPointer(e){const region=drag?.region;if(e.type!=='pointercancel'&&!moved&&pointers.size===1&&region)highlightRegion(region);pointers.delete(e.pointerId);drag=null;pinch=null;}
 map.addEventListener('pointerup',endPointer);map.addEventListener('pointercancel',endPointer);
 map.addEventListener('keydown',e=>{if(e.target!==map)return;const f=.12;if(['+','=','-','0','ArrowUp','ArrowDown','ArrowLeft','ArrowRight'].includes(e.key))e.preventDefault();switch(e.key){case '+':case '=':zoom(.8);break;case '-':zoom(1.25);break;case '0':setView(view,true,false,overviewMode);break;case 'ArrowUp':vb.y-=vb.h*f;applyView();break;case 'ArrowDown':vb.y+=vb.h*f;applyView();break;case 'ArrowLeft':vb.x-=vb.w*f;applyView();break;case 'ArrowRight':vb.x+=vb.w*f;applyView();break}});
 document.addEventListener('keydown',e=>{if(!widgetMode&&e.key==='Escape'&&!$('notes').open){if(planetFocus){setPlanetFocus(null)}else if(systemFocused){setSystemFocus(false)}$('filters').classList.add('hidden');$('filterBtn').setAttribute('aria-expanded','false');$('sidebar').classList.remove('open');setDetailOpen(false)}});

@@ -7,8 +7,8 @@ let p=0,target=0,auto=false,W=0,H=0,dpr=1,last=0,frame=0,scale=1,panX=0,panY=0,f
 const planet=new Image();planet.src=TEXTURE;
 
 const globe=document.createElement('canvas');globe.width=globe.height=1024;const gl=globe.getContext('webgl',{alpha:true,premultipliedAlpha:false,antialias:true,preserveDrawingBuffer:true});let globeReady=false;
-/* @atlas-function nearestRotation-58617e8657ed */
-/* @atlas-function rotationUI-9c3f9726f0b6 */
+/* @atlas-function nearestRotation */
+/* @atlas-function rotationUI */
 let drawGlobe=()=>{};
 if(gl){const vs=`attribute vec2 pos;varying vec2 uv;void main(){uv=pos;gl_Position=vec4(pos,0.,1.);}`;const fs=`precision highp float;
 varying vec2 uv;
@@ -45,28 +45,28 @@ function shader(type,src){const sh=gl.createShader(type);gl.shaderSource(sh,src)
 
 const c=$('space'),ctx=c.getContext('2d'),cloud=$('clouds'),cc=cloud.getContext('2d');
 const clamp=(v,a=0,b=1)=>Math.max(a,Math.min(b,v)),smooth=(a,b,v)=>{let t=clamp((v-a)/(b-a));return t*t*(3-2*t)};
-let seed=71;/* @atlas-function rand-990344079c5a */const stars=Array.from({length:230},()=>[rand(),rand(),rand()*1.2+.25,rand()*.55+.12]);
+let seed=71;/* @atlas-function rand */const stars=Array.from({length:230},()=>[rand(),rand(),rand()*1.2+.25,rand()*.55+.12]);
 // A reusable volumetric-looking noise layer, generated locally without network assets.
 const fog=document.createElement('canvas');fog.width=fog.height=384;const fx=fog.getContext('2d'),im=fx.createImageData(384,384),grid=Array.from({length:65*65},()=>rand());
-/* @atlas-function noise-148ea094fd92 */
+/* @atlas-function noise */
 for(let y=0;y<384;y++)for(let x=0;x<384;x++){let n=0,amp=.55,f=3;for(let j=0;j<5;j++){n+=noise(x/384*f,y/384*f)*amp;amp*=.52;f*=2}let i=(y*384+x)*4;im.data[i]=135+n*75;im.data[i+1]=156+n*66;im.data[i+2]=171+n*60;im.data[i+3]=clamp((n-.27)*1.8)*255*(1-smooth(.55,1,Math.hypot((x-192)/192,(y-192)/192)))}fx.putImageData(im,0,0);
-/* @atlas-function resize-aec8d96ecc4f */
-/* @atlas-function fitMap-f865b10d5b3b */
-/* @atlas-function constrain-717e3b0220a5 */
-/* @atlas-function updateMap-de691a63702e */
+/* @atlas-function resize */
+/* @atlas-function fitMap */
+/* @atlas-function constrain */
+/* @atlas-function updateMap */
 /* @atlas-function zoom-06a8e0e21ab3 */
-/* @atlas-function go-b79478f253f0 */
-/* @atlas-function choose-d6d508233ab1 */
-/* @atlas-function focusPlace-0f490c824840 */
-/* @atlas-function toggleIndex-9a72808f9c1c */
+/* @atlas-function go */
+/* @atlas-function choose */
+/* @atlas-function focusPlace */
+/* @atlas-function toggleIndex */
 
 
 const geometry=__ATLAS__.constants["boundaries"],NS='http://www.w3.org/2000/svg',svg=$('vectorMap');
-/* @atlas-function el-9145f60d5f3a */
+/* @atlas-function el */
 svg.innerHTML=`<defs><pattern id="grid" width="128" height="128" patternUnits="userSpaceOnUse"><path d="M128 0H0V128" fill="none" stroke="#7893a8" stroke-width=".65" opacity=".13"/></pattern><pattern id="subgrid" width="32" height="32" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r=".8" fill="#7595ac" opacity=".14"/></pattern><pattern id="hazard" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(35)"><path d="M0 0V12" stroke="#bb626b" stroke-width="2" opacity=".18"/></pattern><linearGradient id="water" x2="0" y2="1"><stop stop-color="#0d1825"/><stop offset="1" stop-color="#080e18"/></linearGradient></defs>`;
 el('rect',{width:2048,height:1078,fill:'url(#water)'});el('rect',{width:2048,height:1078,fill:'url(#grid)'});el('rect',{width:2048,height:1078,fill:'url(#subgrid)'});
 const colors=__ATLAS__.constants["palette"];
-/* @atlas-function placeLink-bf0a6bd282b7 */
+/* @atlas-function placeLink */
 for(const[name,path]of Object.entries(geometry)){if(name==='lakes')continue;el('path',{d:path,class:'coast'});const place=places.find(p=>p.name===name),a=placeLink(place);el('path',{d:path,class:'region',fill:name==='Makal Bound'?'#261d2a':colors[name]},a);if(name==='Makal Bound'){el('path',{d:path,fill:'url(#hazard)',stroke:'#ae616d','stroke-width':2,'stroke-dasharray':'7 4','pointer-events':'none'},a)}}
 el('path',{d:geometry.lakes,fill:'#143248',stroke:'#506b91','stroke-width':1.2});
 
@@ -105,10 +105,10 @@ for(const place of places.filter(p=>['City','Lost settlement'].includes(p.kind))
 el('rect',{x:14,y:14,width:2020,height:1050,fill:'none',stroke:'#688299','stroke-width':1,opacity:.25});for(let x=128;x<2048;x+=128){el('path',{d:`M${x} 14v8 M${x} 1064v-8`,stroke:'#8096a8','stroke-width':1,opacity:.5})}const legend=el('g',{'pointer-events':'none'});el('text',{x:42,y:1030,fill:'#8ca3b3',style:'font:12px ui-monospace,monospace;letter-spacing:2px'},legend).textContent='MAHANZK / GEOGRAPHIC CHART';el('text',{x:42,y:1050,fill:'#637c8f',style:'font:10px ui-monospace,monospace;letter-spacing:1px'},legend).textContent='◇ CAPITAL     ○ SETTLEMENT     × LOST SETTLEMENT';
 
 
-/* @atlas-function list-83d511a7dd7f */
-/* @atlas-function render-88a93eaa378f */
+/* @atlas-function list */
+/* @atlas-function render */
 $('enter').onclick=()=>go(1);$('orbitButton').onclick=()=>go(0);$('stepOrbit').onclick=()=>go(0);$('stepSurface').onclick=()=>go(1);$('stepCloud').onclick=()=>go(.53);$('plus').onclick=()=>adjustCamera(.13);$('minus').onclick=()=>adjustCamera(-.13);$('fit').onclick=()=>{if(target>=1)fitMap();else go(0)};$('indexToggle').onclick=()=>toggleIndex($('index').hidden);$('closeIndex').onclick=()=>toggleIndex(false);$('search').oninput=list;$('closeDetail').onclick=()=>{$('detail').hidden=true};$('aboutButton').onclick=()=>$('about').showModal();$('closeAbout').onclick=()=>$('about').close();
-/* @atlas-function adjustCamera-79269f6b188e */
+/* @atlas-function adjustCamera */
 $('stage').addEventListener('wheel',e=>{
  if(e.target.closest('aside,dialog'))return;
  e.preventDefault();const pixels=e.deltaY*(e.deltaMode===1?16:e.deltaMode===2?H:1),now=performance.now(),gap=now-lastWheelTime;lastWheelTime=now;
@@ -144,6 +144,6 @@ $('stage').addEventListener('pointermove',e=>{
  else{rotation-=(e.clientX-previous.x)/Math.max(500,W);rotationAim=null;rotating=false;rotationUI()}
 });
 for(const event of ['pointerup','pointercancel'])$('stage').addEventListener(event,e=>{orbitTouches.delete(e.pointerId);orbitPinch=0});
-const vp=$('mapViewport');vp.addEventListener('pointerdown',e=>{pointers.set(e.pointerId,{x:e.clientX,y:e.clientY});moved=0;drag={id:e.pointerId,x:e.clientX,y:e.clientY,px:panX,py:panY};if(!e.target.closest('a'))vp.setPointerCapture(e.pointerId);vp.classList.add('dragging');if(pointers.size===2){const [a,b]=[...pointers.values()];pinch={distance:Math.hypot(a.x-b.x,a.y-b.y),scale}}});window.addEventListener('pointermove',e=>{if(!pointers.has(e.pointerId))return;pointers.set(e.pointerId,{x:e.clientX,y:e.clientY});if(pointers.size===2&&pinch){const[a,b]=[...pointers.values()],r=vp.getBoundingClientRect();zoom(pinch.scale*Math.hypot(a.x-b.x,a.y-b.y)/pinch.distance/scale,(a.x+b.x)/2-r.left,(a.y+b.y)/2-r.top);moved=20}else if(drag){const dx=e.clientX-drag.x,dy=e.clientY-drag.y;moved=Math.max(moved,Math.hypot(dx,dy));panX=drag.px+dx;panY=drag.py+dy;updateMap()}});/* @atlas-function end-9ad662e1b2eb */window.addEventListener('pointerup',end);window.addEventListener('pointercancel',end);
+const vp=$('mapViewport');vp.addEventListener('pointerdown',e=>{pointers.set(e.pointerId,{x:e.clientX,y:e.clientY});moved=0;drag={id:e.pointerId,x:e.clientX,y:e.clientY,px:panX,py:panY};if(!e.target.closest('a'))vp.setPointerCapture(e.pointerId);vp.classList.add('dragging');if(pointers.size===2){const [a,b]=[...pointers.values()];pinch={distance:Math.hypot(a.x-b.x,a.y-b.y),scale}}});window.addEventListener('pointermove',e=>{if(!pointers.has(e.pointerId))return;pointers.set(e.pointerId,{x:e.clientX,y:e.clientY});if(pointers.size===2&&pinch){const[a,b]=[...pointers.values()],r=vp.getBoundingClientRect();zoom(pinch.scale*Math.hypot(a.x-b.x,a.y-b.y)/pinch.distance/scale,(a.x+b.x)/2-r.left,(a.y+b.y)/2-r.top);moved=20}else if(drag){const dx=e.clientX-drag.x,dy=e.clientY-drag.y;moved=Math.max(moved,Math.hypot(dx,dy));panX=drag.px+dx;panY=drag.py+dy;updateMap()}});/* @atlas-function end */window.addEventListener('pointerup',end);window.addEventListener('pointercancel',end);
 $('download').onclick=()=>{const html='<!doctype html>\n'+document.documentElement.outerHTML;const url=URL.createObjectURL(new Blob([html],{type:'text/html'}));const a=document.createElement('a');a.href=url;a.download='Mahanzk-Geographic-Atlas.html';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)};
 $('rotateToggle').onclick=()=>{rotating=!rotating;rotationAim=null;rotationUI()};$('stormSide').onclick=()=>{rotationAim=nearestRotation(.34);rotating=false;rotationUI()};$('clearSide').onclick=()=>{rotationAim=nearestRotation(.84);rotating=false;rotationUI()};$('layerButton').onclick=()=>{let v=$('vectorMap').classList.toggle('hide-labels');$('layerButton').setAttribute('aria-pressed',String(!v))};document.querySelectorAll('[data-filter]').forEach(b=>b.onclick=()=>{category=b.dataset.filter;document.querySelectorAll('[data-filter]').forEach(q=>q.setAttribute('aria-pressed',String(q===b)));list()});rotationUI();list();resize();new ResizeObserver(resize).observe($('stage'));if(new URLSearchParams(location.search).get('view')==='surface'){p=target=1}requestAnimationFrame(render);
