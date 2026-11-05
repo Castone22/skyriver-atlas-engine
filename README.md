@@ -64,7 +64,7 @@ Callbacks run only while authoring. The result is plain JSON: no renderer functi
 | `engine/bundle.json`       | Engine bundle manifest (version, supported kinds)                                                          |
 | `engine/capabilities.json` | Preserved capabilities and supported feature settings                                                      |
 | `dist/`                    | Generated HTML; rebuild after source edits                                                                 |
-| `docs/`                    | Source provenance, migration notes and verification results                                                |
+| `docs/`                    | Design docs. `docs/history/` holds the original extraction records                                         |
 
 The renderer linker resolves shared function references at build time. It does not use browser `eval`, fetch source code, or require a server-side renderer. This preserves the lexical dependencies of the original renderers while making a shared-function fix propagate to every profile that uses it.
 

@@ -3,7 +3,7 @@ import { readFile, writeFile } from 'node:fs/promises';
 import vm from 'node:vm';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-const root = fileURLToPath(new URL('../', import.meta.url)),
+const root = fileURLToPath(new URL('../../', import.meta.url)),
   read = (p) => readFile(path.join(root, p), 'utf8'),
   write = (p, s) => writeFile(path.join(root, p), s);
 const profiles = JSON.parse(await read('engine/profiles.json'));

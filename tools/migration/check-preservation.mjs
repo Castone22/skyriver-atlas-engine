@@ -4,7 +4,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
-const root = fileURLToPath(new URL('../', import.meta.url)),
+const root = fileURLToPath(new URL('../../', import.meta.url)),
   source = process.argv[2];
 if (!source) throw new Error('Supply the original HTML source directory');
 const manifest = JSON.parse(await readFile(path.join(root, 'docs/source-manifest.json'))),
@@ -58,7 +58,7 @@ for (const row of manifest) {
   });
 }
 await writeFile(
-  path.join(root, 'docs/data-preservation.json'),
+  path.join(root, 'docs/history/data-preservation.json'),
   JSON.stringify(results, null, 2) + '\n'
 );
 console.log('Full catalogue preservation:', results.length, 'atlases');

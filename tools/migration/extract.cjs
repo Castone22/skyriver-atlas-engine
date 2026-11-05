@@ -5,7 +5,7 @@ const fs = require('node:fs'),
   crypto = require('node:crypto'),
   vm = require('node:vm');
 const { parse } = require('@babel/parser');
-const root = path.resolve(__dirname, '..'),
+const root = path.resolve(__dirname, '..', '..'),
   source = path.resolve(process.argv[2] || '../sources/Full-Scale HTML Maps');
 const names = {
   kadaym: 'Kadaym-Stellar-Atlas(3).html',
@@ -224,7 +224,7 @@ json(
 );
 const all = [...functions.values()],
   shared = all.filter((f) => new Set(f.profiles).size > 1);
-json('docs/extraction-metrics.json', {
+json('docs/history/extraction-metrics.json', {
   profiles: 7,
   uniqueFunctions: all.length,
   sharedFunctions: shared.length,

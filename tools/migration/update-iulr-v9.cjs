@@ -7,7 +7,7 @@ const fs = require('node:fs'),
   vm = require('node:vm'),
   assert = require('node:assert/strict');
 const { parse } = require('@babel/parser');
-const root = path.resolve(__dirname, '..'),
+const root = path.resolve(__dirname, '..', '..'),
   input = process.argv[2];
 if (!input) throw Error('Supply the standalone IULR v9 HTML path');
 const read = (p) => fs.readFileSync(path.join(root, p), 'utf8'),
@@ -112,7 +112,7 @@ Object.assign(row, {
   sizeBytes: Buffer.byteLength(original)
 });
 save('docs/source-manifest.json', manifest);
-const retrieved = json('docs/retrieved-sources.json');
+const retrieved = json('docs/history/retrieved-sources.json');
 Object.assign(
   retrieved.find((x) => x.name.startsWith('IULR-')),
   {
@@ -124,7 +124,7 @@ Object.assign(
     path: '/Full-Scale HTML Maps/' + path.basename(input)
   }
 );
-save('docs/retrieved-sources.json', retrieved);
+save('docs/history/retrieved-sources.json', retrieved);
 const profiles = Object.fromEntries(
     fs.readdirSync(path.join(root, 'bundles')).map((id) => [
       id,
@@ -150,14 +150,14 @@ for (const [id, profile] of Object.entries(profiles))
     }
 save('engine/function-index.json', index);
 const entries = Object.values(index);
-save('docs/extraction-metrics.json', {
+save('docs/history/extraction-metrics.json', {
   profiles: Object.keys(profiles).length,
   uniqueFunctions: entries.length,
   sharedFunctions: entries.filter((f) => f.profiles.length > 1).length,
   duplicateFunctionBytesRemoved: entries.reduce((n, f) => n + (f.profiles.length - 1) * f.bytes, 0),
   assets: Object.keys(assets).length
 });
-save('docs/iulr-v9-migration.json', {
+save('docs/history/iulr-v9-migration.json', {
   sourceFile: path.basename(input),
   sourceSha256: hash(original),
   sourceLibraryFileId: 'libfile_a90654b060348191a6ad9cd98e6150a1',
