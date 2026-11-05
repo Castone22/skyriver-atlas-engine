@@ -54,7 +54,6 @@
       "description"
     ],
     "selectFirstWorld": true,
-    "shortLabelsOnlyWhenExtended": true,
     "stationLinksUseArticleTitle": true,
     "stationRoute": "focus",
     "systemRecordArticleTitle": true,

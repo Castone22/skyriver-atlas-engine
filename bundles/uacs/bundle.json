@@ -32,6 +32,7 @@
     "overviewOptionLabel": "Overview · "
   },
   "flags": {
+    "emptyDossierFactsFallBack": true,
     "extendedChartMoonThreshold": 10,
     "inspectLabelsUseTitles": true,
     "regionLabelStyle": "title-subtitle-ink",
@@ -44,7 +45,6 @@
     "titledPlanetInspectLabel": true,
     "visibilityResetsLabels": true,
     "widgetKeepsAddress": true,
-    "widgetOutlineState": true,
-    "emptyDossierFactsFallBack": true
+    "widgetOutlineState": true
   }
 }
