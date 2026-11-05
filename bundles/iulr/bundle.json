@@ -21,5 +21,8 @@
   },
   "capabilities": {
     "labelThresholdsByLevel": true
+  },
+  "slots": {
+    "downloadName": "IULR-Stellar-Atlas.html"
   }
 }

@@ -217,7 +217,7 @@ addEventListener('focus',()=>refreshVisibleImage(true));addEventListener('online
 /* @atlas-function buildNotes-shared */
 
 /* @atlas-function toast-4b4587647c32 */
-/* @atlas-function downloadHTML-a22d3da9c366 */
+/* @atlas-function downloadHTML-679a5647ab5c */
 $('regionPicker').onchange=()=>setView($('regionPicker').value);
 $('regionPicker').addEventListener('keydown',e=>e.stopPropagation());document.querySelectorAll('[data-scope]').forEach(b=>b.onclick=()=>{scope=b.dataset.scope;document.querySelectorAll('[data-scope]').forEach(n=>n.classList.toggle('active',n===b));renderIndex()});$('search').oninput=()=>{clearTimeout(searchTimer);searchTimer=setTimeout(renderIndex,90)};
 $('zoomIn').onclick=()=>zoom(.8);$('zoomOut').onclick=()=>zoom(1.25);$('fit').onclick=()=>setView(view,true,false,overviewMode);$('minimap').onclick=()=>setView('all');$('minimap').onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();setView('all')}};

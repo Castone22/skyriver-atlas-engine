@@ -246,7 +246,7 @@ addEventListener('focus',()=>refreshVisibleImage(true));addEventListener('online
 /* @atlas-function drawMinimap-a0c41a19f64d */
 /* @atlas-function buildNotes-shared */
 
-/* @atlas-function downloadHTML-4c2b45ad1a97 */
+/* @atlas-function downloadHTML-679a5647ab5c */
 $('regionSelect').onchange=()=>setView($('regionSelect').value);document.querySelectorAll('[data-scope]').forEach(b=>b.onclick=()=>{scope=b.dataset.scope;document.querySelectorAll('[data-scope]').forEach(n=>n.classList.toggle('active',n===b));renderIndex()});$('search').oninput=()=>{clearTimeout(searchTimer);searchTimer=setTimeout(renderIndex,90)};
 $('zoomIn').onclick=()=>zoom(.8);$('zoomOut').onclick=()=>zoom(1.25);$('fit').onclick=fitChart;$('minimap').onclick=()=>setView('all');$('minimap').onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();setView('all')}};
 ['labels','borders','hexes','majorOnly'].forEach(id=>$(id).onchange=updateVisibility);document.querySelectorAll('[data-filter]').forEach(c=>c.onchange=()=>{flags[c.dataset.filter]=c.checked;updateVisibility()});

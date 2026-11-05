@@ -973,9 +973,11 @@
   "downloadHTML-679a5647ab5c": {
     "name": "downloadHTML",
     "profiles": [
+      "calidor",
+      "iulr",
       "kadaym"
     ],
-    "bytes": 513
+    "bytes": 511
   },
   "endPointer-28a00b6b73ab": {
     "name": "endPointer",
@@ -2295,13 +2297,6 @@
     ],
     "bytes": 453
   },
-  "downloadHTML-4c2b45ad1a97": {
-    "name": "downloadHTML",
-    "profiles": [
-      "iulr"
-    ],
-    "bytes": 511
-  },
   "endPointer-3b5ee6b87344": {
     "name": "endPointer",
     "profiles": [
@@ -2518,13 +2513,6 @@
       "calidor"
     ],
     "bytes": 7141
-  },
-  "downloadHTML-a22d3da9c366": {
-    "name": "downloadHTML",
-    "profiles": [
-      "calidor"
-    ],
-    "bytes": 514
   },
   "preferredEntry-9fc40583898c": {
     "name": "preferredEntry",

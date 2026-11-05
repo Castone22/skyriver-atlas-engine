@@ -18,5 +18,8 @@
         "path": "runtime-0.js"
       }
     ]
+  },
+  "slots": {
+    "downloadName": "Calidor-Stellar-Atlas.html"
   }
 }
