@@ -1,19 +1,18 @@
-import { writeFile } from 'node:fs/promises';
+import { readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
-export async function gallery(out, report) {
-  const titles = {
-    kadaym: 'Kadaymian Federation',
-    elysian: 'Elysian Collective',
-    uacs: 'Allied Commonwealth',
-    iulr: 'Union of Liberated Republics',
-    calidor: 'Dominion of Calidor',
-    grand: 'Grand Atlas',
-    mahanzk: 'Mahanzk'
-  };
+const descriptions = {
+  galaxy: 'Galaxy · current child atlases',
+  geographic: 'Geography · globe and surface',
+  stellar: 'Stellar · regions, systems and worlds'
+};
+export async function gallery(out, report, kinds = {}) {
+  const titles = JSON.parse(
+    await readFile(new URL('../data/gallery.json', import.meta.url), 'utf8')
+  );
   const cards = report
     .map(
       (r, i) =>
-        `<a class="card" href="${r.file}"><span class="number">0${i + 1}</span><h2>${titles[r.id] || r.id}</h2><p>${r.id === 'grand' ? 'Galaxy · current child atlases' : r.id === 'mahanzk' ? 'Geography · globe and surface' : 'Stellar · regions, systems and worlds'}</p><span class="open">Open atlas ↗</span></a>`
+        `<a class="card" href="${r.file}"><span class="number">0${i + 1}</span><h2>${titles[r.id]?.title || r.id}</h2><p>${descriptions[kinds[r.id]] || descriptions.stellar}</p><span class="open">Open atlas ↗</span></a>`
     )
     .join('');
   await writeFile(

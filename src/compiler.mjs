@@ -58,17 +58,15 @@ async function hydrateText(text, asset) {
     text = replace(text, 'atlas-asset:' + id, await asset(id));
   return text;
 }
-function featureChecks(d) {
+function featureChecks(d, profile) {
   const supported = d.kind === 'stellar' ? ['index', 'labels', 'motion'] : [];
   for (const key of Object.keys(d.features || {}))
     if (!supported.includes(key))
       throw new Error(
         `Feature configuration '${key}' is not supported by ${d.renderer}. Capabilities are inherited from the renderer; see engine/capabilities.json.`
       );
-  if (d.features?.labels && d.renderer === 'kadaym')
-    throw new Error(
-      'Kadaym retains its native label policy; use its cartography data or another profile for configurable thresholds.'
-    );
+  if (d.features?.labels && profile?.capabilities?.configurableLabels === false)
+    throw new Error(profile.capabilities.configurableLabelsMessage);
   if (d.features?.labels) {
     for (const mode of ['overview', 'regional'])
       for (const level of ['active', 'other']) {
@@ -78,31 +76,26 @@ function featureChecks(d) {
       }
   }
 }
-function stellarHooks(d) {
-  return `\n// Shared host API: immutable exported catalogue and source-compatible navigation.\nwindow.AtlasFramework = Object.freeze({\n version:'1.0.0', id:${safeJSON(d.id)},\n exportJSON:()=>JSON.parse(JSON.stringify({...__ATLAS__,data:__ATLAS_SOURCE_DATA__,documents:{}})),\n navigate(route){\n  const address=new URL(location.href);for(const k of ['region','system','planet','object','view','chart','focus','station'])address.searchParams.delete(k);\n  for(const [k,v] of Object.entries(route))if(['region','system','planet','object','view','chart','focus','station'].includes(k)&&v!=null)address.searchParams.set(k,String(v));\n  address.hash='';history.pushState(null,'',address);restoreRoute(null,false);\n },\n articleURL(name){return url(name)},\n snapshot(){return {region:view,system:selected,planet:planetFocus,zoom:baseWidth/vb.w*100}}\n});\nif(__ATLAS__.features?.index){\n const open=__ATLAS__.features.index.collapsed===false;\n if(typeof setIndexOpen==='function')setIndexOpen(open);\n else if(document.getElementById('toggleIndexPanel')){const button=document.getElementById('toggleIndexPanel');if((button.getAttribute('aria-expanded')==='true')!==open)button.click();}\n}\nif(__ATLAS__.features?.motion?.paused===true){orbitPaused=true;stopOrbit();renderDetail();}\n${d.features?.labels ? `labelThresholds=function(active){\n const box=$('map').getBoundingClientRect(),factor=Math.max(1,640/Math.max(1,box.width),360/Math.max(1,box.height));\n const overview=typeof overviewMode!=='undefined'?overviewMode:view==='all',policy=__ATLAS__.features.labels[overview?'overview':'regional'];\n const result=Object.fromEntries(Object.entries(policy).map(([k,p])=>[k,p.map(v=>Math.ceil(v*factor))]));\n return ${d.renderer === 'iulr' ? "result[active?'active':'other']" : 'result'};\n};applyView();` : ''}\n`;
+function stellarHooks(d, profile) {
+  return `\n// Shared host API: immutable exported catalogue and source-compatible navigation.\nwindow.AtlasFramework = Object.freeze({\n version:'1.0.0', id:${safeJSON(d.id)},\n exportJSON:()=>JSON.parse(JSON.stringify({...__ATLAS__,data:__ATLAS_SOURCE_DATA__,documents:{}})),\n navigate(route){\n  const address=new URL(location.href);for(const k of ['region','system','planet','object','view','chart','focus','station'])address.searchParams.delete(k);\n  for(const [k,v] of Object.entries(route))if(['region','system','planet','object','view','chart','focus','station'].includes(k)&&v!=null)address.searchParams.set(k,String(v));\n  address.hash='';history.pushState(null,'',address);restoreRoute(null,false);\n },\n articleURL(name){return url(name)},\n snapshot(){return {region:view,system:selected,planet:planetFocus,zoom:baseWidth/vb.w*100}}\n});\nif(__ATLAS__.features?.index){\n const open=__ATLAS__.features.index.collapsed===false;\n if(typeof setIndexOpen==='function')setIndexOpen(open);\n else if(document.getElementById('toggleIndexPanel')){const button=document.getElementById('toggleIndexPanel');if((button.getAttribute('aria-expanded')==='true')!==open)button.click();}\n}\nif(__ATLAS__.features?.motion?.paused===true){orbitPaused=true;stopOrbit();renderDetail();}\n${d.features?.labels ? `labelThresholds=function(active){\n const box=$('map').getBoundingClientRect(),factor=Math.max(1,640/Math.max(1,box.width),360/Math.max(1,box.height));\n const overview=typeof overviewMode!=='undefined'?overviewMode:view==='all',policy=__ATLAS__.features.labels[overview?'overview':'regional'];\n const result=Object.fromEntries(Object.entries(policy).map(([k,p])=>[k,p.map(v=>Math.ceil(v*factor))]));\n return ${profile.capabilities?.labelThresholdsByLevel ? "result[active?'active':'other']" : 'result'};\n};applyView();` : ''}\n`;
 }
 /** Link shared source functions and profile adapters; emit a portable, self-contained artifact. */
 export async function compile(definition, { strict = false, dependencies = {} } = {}) {
   const report = validate(definition, { strict });
   if (!report.valid) throw new Error(report.errors.join('\n'));
-  featureChecks(definition);
   const profiles = await json('engine/profiles.json'),
     profile = profiles[definition.renderer];
+  featureChecks(definition, profile);
   if (!profile || profile.kind !== definition.kind)
     throw new Error(`Invalid ${definition.kind} renderer: ${definition.renderer}`);
   let d = clone(definition);
-  if (['elysian', 'uacs', 'calidor'].includes(d.renderer)) {
-    const defaults = await json('data/' + d.renderer + '.json');
-    d.policies = { ...defaults.policies, ...d.policies };
-  }
-  // Geographic/galaxy profiles provide default scene assets. All values become explicit in exported JSON.
-  if (d.kind !== 'stellar') {
-    const baseline = await json('data/' + d.renderer + '.json');
-    d.constants = { ...baseline.constants, ...d.constants };
-  }
+  // A profile may name a defaults file. All inherited values become explicit in exported JSON.
+  const defaults = profile.defaults ? await json(profile.defaults) : null;
+  if (defaults?.policies) d.policies = { ...defaults.policies, ...d.policies };
+  // Geographic/galaxy profiles provide default scene assets.
+  if (d.kind !== 'stellar') d.constants = { ...defaults?.constants, ...d.constants };
   if (d.kind === 'galaxy') {
-    const baseline = await json('data/grand.json');
-    d.documents = { ...baseline.documents, ...d.documents };
+    d.documents = { ...defaults?.documents, ...d.documents };
     const seed = d.documents.seed || [],
       snapshots = { ...d.documents.snapshots },
       search = { ...d.documents.searchSeed };
@@ -198,7 +191,7 @@ export async function compile(definition, { strict = false, dependencies = {} } 
       delete config.documents;
       code = `const __ATLAS__=${safeJSON(config)};\n` + code;
     }
-    if (i === profile.scripts.length - 1 && d.kind === 'stellar') code += stellarHooks(d);
+    if (i === profile.scripts.length - 1 && d.kind === 'stellar') code += stellarHooks(d, profile);
     // Generated code must never terminate its enclosing script through a data string.
     code = code.replace(/<\/script/gi, '<\\/script');
     html = replace(html, `@@RUNTIME:${i}@@`, code);

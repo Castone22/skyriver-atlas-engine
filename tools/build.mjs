@@ -12,18 +12,23 @@ const files = input
   ? [path.resolve(input)]
   : (await readdir(path.join(root, 'maps')))
       .filter((n) => n.endsWith('.atlas.mjs'))
-      .sort(
-        (a, b) =>
-          (a.startsWith('grand') ? 1 : 0) - (b.startsWith('grand') ? 1 : 0) || a.localeCompare(b)
-      )
+      .sort()
       .map((n) => path.join(root, 'maps', n));
-const dependencies = {},
-  report = [];
-await mkdir(out, { recursive: true });
-for (const file of files) {
-  const definition = file.endsWith('.json')
+const loadDefinition = async (file) =>
+  file.endsWith('.json')
     ? JSON.parse(await readFile(file, 'utf8'))
     : (await import(pathToFileURL(file).href)).default;
+// Atlases that declare dependencies (for example galaxy atlases) build after the others.
+const hasDependencies = (definition) => Object.keys(definition.dependencies || {}).length > 0;
+const entries = [];
+for (const file of files) entries.push({ file, definition: await loadDefinition(file) });
+entries.sort((a, b) => hasDependencies(a.definition) - hasDependencies(b.definition));
+const dependencies = {},
+  report = [],
+  kinds = {};
+await mkdir(out, { recursive: true });
+for (const { definition } of entries) {
+  kinds[definition.id] = definition.kind;
   const result = await compile(definition, { dependencies });
   dependencies[definition.id] = result;
   const name = definition.id + '-atlas.html';
@@ -43,4 +48,4 @@ await writeFile(
   JSON.stringify(report, null, 2) + '\n'
 );
 
-if (!input) await gallery(out, report);
+if (!input) await gallery(out, report, kinds);

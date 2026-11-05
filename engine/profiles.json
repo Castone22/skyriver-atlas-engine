@@ -12,7 +12,11 @@
         "path": "engine/profiles/kadaym/runtime-0.js",
         "attrs": ""
       }
-    ]
+    ],
+    "capabilities": {
+      "configurableLabels": false,
+      "configurableLabelsMessage": "Kadaym retains its native label policy; use its cartography data or another profile for configurable thresholds."
+    }
   },
   "elysian": {
     "id": "elysian",
@@ -27,7 +31,8 @@
         "path": "engine/profiles/elysian/runtime-0.js",
         "attrs": ""
       }
-    ]
+    ],
+    "defaults": "data/elysian.json"
   },
   "uacs": {
     "id": "uacs",
@@ -42,7 +47,8 @@
         "path": "engine/profiles/uacs/runtime-0.js",
         "attrs": ""
       }
-    ]
+    ],
+    "defaults": "data/uacs.json"
   },
   "iulr": {
     "id": "iulr",
@@ -57,7 +63,10 @@
         "path": "engine/profiles/iulr/runtime-0.js",
         "attrs": ""
       }
-    ]
+    ],
+    "capabilities": {
+      "labelThresholdsByLevel": true
+    }
   },
   "calidor": {
     "id": "calidor",
@@ -72,7 +81,8 @@
         "path": "engine/profiles/calidor/runtime-0.js",
         "attrs": ""
       }
-    ]
+    ],
+    "defaults": "data/calidor.json"
   },
   "grand": {
     "id": "grand",
@@ -99,7 +109,8 @@
         "path": "engine/profiles/grand/runtime-3.js",
         "attrs": ""
       }
-    ]
+    ],
+    "defaults": "data/grand.json"
   },
   "mahanzk": {
     "id": "mahanzk",
@@ -114,6 +125,7 @@
         "path": "engine/profiles/mahanzk/runtime-0.js",
         "attrs": ""
       }
-    ]
+    ],
+    "defaults": "data/mahanzk.json"
   }
 }
