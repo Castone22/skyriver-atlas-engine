@@ -181,7 +181,7 @@ let planetClickTimer;
 /* @atlas-function mountSystem-a3742fa457e9 */
 /* @atlas-function setSystemFocus-fa97a454091d */
 
-/* @atlas-function syncSystemFocus-83b192ca5f37 */
+/* @atlas-function syncSystemFocus */
 /* @atlas-function applySystemZoom */
 /* @atlas-function bindSystemControls-da72bdbb7f06 */
 /* @atlas-function chooseSystemWorld */

@@ -23,6 +23,7 @@ for(const record of [...allRecords,...DATA.stations,...DATA.satellites,...DATA.e
 }
 const EXOTIC_TYPES={'pulsar':'Pulsar','magnetar':'Magnetar','cataclysmic-variable':'Cataclysmic variable'};
 let overviewMode=false;
+let stationOverview=false;
 let view='makor',scope='region',selected='virezk',selectedWorld='Mahanzk',vb={x:0,y:0,w:1000,h:1000},baseWidth=1000,drag=null,moved=false,pointers=new Map(),pinch=null,searchTimer;
 const flags={federation:true,context:true,hazard:true};
 /* @atlas-function atlasParams */
@@ -137,7 +138,7 @@ let planetClickTimer;
 /* @atlas-function mountSystem-02425195013d */
 /* @atlas-function setSystemFocus-fa10b9ff0fee */
 
-/* @atlas-function syncSystemFocus-dd319a0c86e0 */
+/* @atlas-function syncSystemFocus */
 /* @atlas-function applySystemZoom */
 /* @atlas-function bindSystemControls-f39c2600afc8 */
 /* @atlas-function chooseSystemWorld */

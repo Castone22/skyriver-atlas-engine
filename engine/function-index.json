@@ -2259,22 +2259,16 @@
     ],
     "bytes": 1840
   },
-  "syncSystemFocus-83b192ca5f37": {
+  "syncSystemFocus": {
     "name": "syncSystemFocus",
     "profiles": [
       "calidor",
       "elysian",
       "iulr",
+      "kadaym",
       "uacs"
     ],
     "bytes": 325
-  },
-  "syncSystemFocus-dd319a0c86e0": {
-    "name": "syncSystemFocus",
-    "profiles": [
-      "kadaym"
-    ],
-    "bytes": 261
   },
   "systemArticleRecord": {
     "name": "systemArticleRecord",
