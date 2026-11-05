@@ -789,9 +789,12 @@
   "hasStationSchematic": {
     "name": "hasStationSchematic",
     "profiles": [
-      "elysian"
+      "calidor",
+      "elysian",
+      "iulr",
+      "uacs"
     ],
-    "bytes": 87
+    "bytes": 109
   },
   "highlightPart-3b673ff30d38": {
     "name": "highlightPart",
@@ -1171,21 +1174,15 @@
     ],
     "bytes": 2671
   },
-  "openStation-19e4d19bff3f": {
-    "name": "openStation",
-    "profiles": [
-      "elysian"
-    ],
-    "bytes": 413
-  },
-  "openStation-8874c87f6a8d": {
+  "openStation": {
     "name": "openStation",
     "profiles": [
       "calidor",
+      "elysian",
       "iulr",
       "uacs"
     ],
-    "bytes": 446
+    "bytes": 427
   },
   "orbitalFact-6d8890f36c62": {
     "name": "orbitalFact",

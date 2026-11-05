@@ -106,7 +106,7 @@ const STATION_TYPES={
  'Industry':{color:'#dab879',symbol:'▥',path:'M-6 6V-3L-2 0V-3L2 0V-6H6V6Z M-3 3H3'},
  'Other':{color:'#9bb6c8',symbol:'✧',path:'M0-7L6-3V3L0 7-6 3V-3Z M-3 0H3 M0-3V3'}
 };
-let stationOverview=false;
+let stationOverview=false,stationPart=0;
 let systemFocused=false,systemZoom=1,planetFocus=null,showBelts=true;
 const stationFilters=new Set(Object.keys(STATION_TYPES));
 const siteType=name=>/station|triad|jumpgate/i.test(name)?'Station / structure':/colony/i.test(name)?'Colony':'World';
@@ -143,7 +143,8 @@ const toraParts=[
 /* @atlas-function toraElevation */
 /* @atlas-function stationScreen-9033d810843c */
 /* @atlas-function highlightPart-3b673ff30d38 */
-/* @atlas-function openStation-8874c87f6a8d */
+/* @atlas-function openStation */
+/* @atlas-function hasStationSchematic */
 /* @atlas-function closeStation */
 /* @atlas-function bindToraName */
 /* @atlas-function bindToraControl */
