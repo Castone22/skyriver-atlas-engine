@@ -76,6 +76,94 @@ function stepsFor(data) {
       key: `station:${st.system}:${st.name}`,
       route: { system: st.system, object: st.name }
     });
+  // Station screens (schematics) are opened through a function, not a route.
+  for (const st of data.stations || []) {
+    steps.push({
+      key: `open-station:${st.system}:${st.name}`,
+      route: { system: st.system },
+      act: openStation(st.name)
+    });
+    steps.push({ key: `close-station:${st.system}:${st.name}`, act: closeStation });
+  }
+  return steps.concat(interactionSteps(data));
+}
+
+const click =
+  (sel, n = 0) =>
+  (w) =>
+    w.document.querySelectorAll(sel)[n]?.click();
+const flip = (n) => (w) => {
+  const el = w.document.querySelectorAll('[data-filter]')[n];
+  if (!el) return;
+  el.checked = !el.checked;
+  el.dispatchEvent(new w.Event('change', { bubbles: true }));
+};
+const typeSearch = (term) => (w) => {
+  const el = w.document.getElementById('search');
+  if (!el) return;
+  el.value = term;
+  el.dispatchEvent(new w.Event('input', { bubbles: true }));
+  // The page debounces search input with a short timer.
+  return new Promise((resolve) => setTimeout(resolve, 130));
+};
+const keyOnMap = (key) => (w) =>
+  w.document
+    .getElementById('map')
+    ?.dispatchEvent(new w.KeyboardEvent('keydown', { key, bubbles: true }));
+const openStation = (name) => (w) => {
+  if (w.eval('typeof openStation') === 'function')
+    w.eval('openStation(' + JSON.stringify(name) + ')');
+};
+const closeStation = (w) => {
+  if (w.eval('typeof closeStation') === 'function') w.eval('closeStation()');
+};
+
+/** Steps that use the page's own controls rather than routes. Always run, even in quick mode. */
+function interactionSteps(data) {
+  const steps = [];
+  const add = (key, act, route) => steps.push({ key: 'ui:' + key, act, route, always: true });
+  add('reset', null, {});
+  const names = [
+    ...data.systems
+      .filter((_, i) => i % 4 === 0)
+      .slice(0, 40)
+      .map((x) => x.name),
+    ...Object.keys(data.worlds || {})
+      .filter((_, i) => i % 25 === 0)
+      .slice(0, 40)
+  ];
+  for (const term of ['', 'zzz-no-such-thing', 'station', 'federation', 'silent', 'moon', ...names])
+    add('search:' + term, typeSearch(term));
+  add('search:clear', typeSearch(''));
+  for (let i = 0; i < 4; i++) add('scope:' + i, click('[data-scope]', i));
+  for (let i = 0; i < 6; i++) {
+    add(`filter:${i}:off`, flip(i));
+    add(`filter:${i}:on`, flip(i));
+  }
+  for (const id of [
+    'zoomIn',
+    'zoomIn',
+    'zoomOut',
+    'fit',
+    'indexToggle',
+    'indexToggle',
+    'toggleDetailPanel',
+    'toggleDetailPanel',
+    'filterBtn',
+    'filterBtn',
+    'footerNotes',
+    'closeNotes',
+    'download'
+  ])
+    add('button:' + id + ':' + steps.length, (w) => w.document.getElementById(id)?.click());
+  for (const key of ['+', '-', '0', 'ArrowUp', 'ArrowLeft', 'ArrowDown', 'ArrowRight'])
+    add('key:' + key, keyOnMap(key));
+  const first = data.systems[0];
+  if (first) {
+    add('zoom-in-system', click('#zoomIn'), { system: first.id });
+    add('key-in-system:+', keyOnMap('+'));
+    add('key-in-system:0', keyOnMap('0'));
+  }
   return steps;
 }
 
@@ -94,11 +182,12 @@ async function tour(html, id, data, { quick = false } = {}) {
   // Errors thrown while the page loaded. Absent (and so absent from golden files) when clean.
   if (errors.length) out.__load = 'ERR: ' + errors[0].split('\n')[0];
   let steps = stepsFor(data);
-  if (quick) steps = steps.filter((_, i) => i % 10 === 0);
+  if (quick) steps = steps.filter((st, i) => st.always || i % 10 === 0);
   for (const step of steps) {
     errors.length = 0;
     try {
       if (step.route) w.AtlasFramework.navigate(step.route);
+      if (step.act) await step.act(w);
       out[step.key] = errors.length ? 'ERR: ' + errors[0].split('\n')[0] : snapshot(w);
     } catch (e) {
       out[step.key] = 'ERR: ' + String(e.message).split('\n')[0];

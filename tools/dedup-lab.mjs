@@ -54,8 +54,13 @@ async function currentKeys() {
   return used;
 }
 
+// --patch bundle/path=local/file replaces one file of the atlas bundle (for example a shell).
+const patches = args
+  .filter((a, i) => args[i - 1] === '--patch')
+  .map((p) => [p.slice(0, p.indexOf('=')), p.slice(p.indexOf('=') + 1)]);
+
 /** Compile the atlas with `swaps` ({ name: key }) applied to its runtime markers. */
-async function build(swaps) {
+async function build(swaps, withPatches = false) {
   const files = new Map();
   for (const f of original.files) files.set(f, await original.text(f));
   for (const r of original.manifest.parts.runtime ?? []) {
@@ -67,6 +72,10 @@ async function build(swaps) {
       })
     );
   }
+  for (const [target, local] of withPatches ? patches : []) {
+    if (!files.has(target)) throw new Error('--patch: no such bundle file ' + target);
+    files.set(target, await readFile(local, 'utf8'));
+  }
   const patched = await openBundle(Bundle.fromMap(files), { expectType: 'atlas' });
   const patchedHost = { ...host, atlas: async (id) => (id === atlasId ? patched : host.atlas(id)) };
   return (await compileCore(definition, patchedHost)).html;
@@ -74,8 +83,8 @@ async function build(swaps) {
 
 let runCount = 0;
 /** Tour a swapped build in a child process. Returns { ok, errors, changed, total }. */
-async function trial(swaps, label) {
-  const html = await build(swaps);
+async function trial(swaps, label, withPatches = false) {
+  const html = await build(swaps, withPatches);
   const dir = path.join(root, 'build', 'lab');
   await mkdir(dir, { recursive: true });
   const stem = `${atlasId}-${process.pid}-${++runCount}`;
@@ -125,6 +134,12 @@ const control = await trial({}, 'control (no swaps)');
 if (!control.ok) {
   console.error('The control build differs from the golden snapshots; aborting.');
   process.exit(2);
+}
+
+if (patches.length) {
+  const r = await trial({}, 'patched: ' + patches.map((p) => p[0]).join(', '), true);
+  for (const line of [...r.errors.slice(0, 5), ...r.changed.slice(0, 5)]) console.log('   ', line);
+  process.exit(r.ok ? 0 : 1);
 }
 
 const current = await currentKeys();
