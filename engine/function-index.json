@@ -74,28 +74,16 @@
     ],
     "bytes": 284
   },
-  "atlasParams-6271ec249f97": {
+  "atlasParams": {
     "name": "atlasParams",
     "profiles": [
       "calidor",
       "elysian",
+      "iulr",
+      "kadaym",
       "uacs"
     ],
-    "bytes": 201
-  },
-  "atlasParams-f5f2e5e347d4": {
-    "name": "atlasParams",
-    "profiles": [
-      "kadaym"
-    ],
-    "bytes": 429
-  },
-  "atlasParams-f611caacc97e": {
-    "name": "atlasParams",
-    "profiles": [
-      "iulr"
-    ],
-    "bytes": 215
+    "bytes": 417
   },
   "beginNavigation": {
     "name": "beginNavigation",

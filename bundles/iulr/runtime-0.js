@@ -20,7 +20,7 @@ const EXOTIC_TYPES={'pulsar':'Pulsar','magnetar':'Magnetar','cataclysmic-variabl
 let highlightedRegion='avendonraik';
 let view='avendonraik',scope='region',selected=null,selectedWorld=null,vb={x:0,y:0,w:1000,h:1000},baseWidth=1000,drag=null,moved=false,pointers=new Map(),pinch=null,searchTimer;
 const flags={federation:true,context:true,hazard:true};
-/* @atlas-function atlasParams-f611caacc97e */
+/* @atlas-function atlasParams */
 let widgetRegion=null;
 const widgetMode=atlasParams().get('view')==='widget';
 const embedMode=widgetMode||atlasParams().get('embed')==='1';
