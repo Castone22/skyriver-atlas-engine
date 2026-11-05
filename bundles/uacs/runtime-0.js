@@ -49,7 +49,7 @@ const MARKER_DOSSIER_DELAY=600;
 /* @atlas-function deferMarkerDossier-0e62c8c49927 */
 
 const normalizedName=value=>String(value||'').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]/g,'');
-/* @atlas-function resolveRegion-54cda7599ebb */
+/* @atlas-function resolveRegion-3addd3c05c4b */
 /* @atlas-function matchesRecord-c81f46900ace */
 /* @atlas-function resolveSystem-b072cde34b21 */
 /* @atlas-function resolveObjectName-5012baba771b */
@@ -81,7 +81,7 @@ addEventListener('hashchange',()=>{if(location.href!==lastRestoredURL)restoreRou
 /* @atlas-function scaleLabels-33aba1a5f27b */
 /* @atlas-function applyView-92d149458601 */
 /* @atlas-function fitBounds-b4532b0852c7 */
-/* @atlas-function setView-5ab4293d595a */
+/* @atlas-function setView-5a65e3a280b5 */
 /* @atlas-function zoom-c44842c8dbe1 */
 /* @atlas-function select-abff9c66530d */
 /* @atlas-function tierMarkup-7d5f85e75120 */

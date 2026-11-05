@@ -142,8 +142,15 @@ export async function compileCore(definition, host, { strict = false, dependenci
   const hydrated = await resolveAssets(d, host);
   d = hydrated.definition;
   const customBrand = d.meta.article !== profile.brand;
-  // Template values for shells and runtime entry scripts.
-  const slots = { brand: customBrand ? d.meta.article : profile.brand };
+  // Template values for shells, runtime scripts and functions: the brand, plus the bundle's own
+  // `slots` (per-atlas text such as file names). A bundle slot may use {{brand}} itself.
+  const brand = customBrand ? d.meta.article : profile.brand;
+  const slots = { brand };
+  for (const [name, value] of Object.entries(base.manifest.slots ?? {})) {
+    if (typeof value !== 'string')
+      throw new Error(`Bundle '${profile.id}': slot '${name}' must be a string`);
+    if (name !== 'brand') slots[name] = replace(value, '{{brand}}', brand);
+  }
   let html = render(await base.text(profile.shell), slots, profile.id + '/' + profile.shell);
   for (let i = 0; i < profile.styles.length; i++)
     html = replace(html, `@@STYLE:${i}@@`, await base.text(profile.styles[i]));

@@ -18,5 +18,14 @@
         "path": "runtime-0.js"
       }
     ]
+  },
+  "slots": {
+    "downloadName": "Calidor-Stellar-Atlas.html",
+    "overviewAlias": "dominion",
+    "overviewTitle": "DOMINION OVERVIEW",
+    "overviewSubtitle": "53 systems · six adjoining regions",
+    "indexFirstSystem": "Forge",
+    "indexHintAtlas": "Dominion of Calidor",
+    "affiliationLink": "{{brand}}"
   }
 }

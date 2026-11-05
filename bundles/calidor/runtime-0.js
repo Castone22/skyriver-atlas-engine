@@ -31,7 +31,7 @@ const MARKER_DOSSIER_DELAY=600;
 /* @atlas-function deferMarkerDossier-0e62c8c49927 */
 
 const normalizedName=value=>String(value||'').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]/g,'');
-/* @atlas-function resolveRegion-f83bb58e5835 */
+/* @atlas-function resolveRegion-3addd3c05c4b */
 /* @atlas-function matchesRecord-7deaec6d8fb2 */
 /* @atlas-function resolveSystem-b072cde34b21 */
 /* @atlas-function resolveObjectName-5012baba771b */
@@ -63,7 +63,7 @@ addEventListener('hashchange',()=>{if(location.href!==lastRestoredURL)restoreRou
 /* @atlas-function scaleLabels-9188e675f7fa */
 /* @atlas-function applyView-92d149458601 */
 /* @atlas-function fitBounds-b4532b0852c7 */
-/* @atlas-function setView-f2d93097408d */
+/* @atlas-function setView-5a65e3a280b5 */
 /* @atlas-function zoom-c44842c8dbe1 */
 /* @atlas-function select-2a33070d08e5 */
 /* @atlas-function tierMarkup-7d5f85e75120 */
@@ -74,7 +74,7 @@ addEventListener('hashchange',()=>{if(location.href!==lastRestoredURL)restoreRou
 /* @atlas-function classificationTerms-766b72615379 */
 /* @atlas-function searchTerms-2f561ee034d3 */
 /* @atlas-function searchObject-79fc0f1f6bd8 */
-/* @atlas-function renderIndex-3a14299e1307 */
+/* @atlas-function renderIndex-bb514b6b2378 */
 const reducedMotion=matchMedia('(prefers-reduced-motion: reduce)');
 let orbitPaused=reducedMotion.matches,orbitFrame=0,orbitClock=0,orbitLastTime=null;
 const worldColors={'Mahanzk':'#90bcd2','Zelenzk':'#c4a5d9','Helkana':'#91c4a1','Vardis Prime':'#c9a08b','Rakazk':'#c78e74','Zekozha':'#9bcdda','Qerzhek':'#b7c9e2','Prathia':'#9ec2a7'};
@@ -217,7 +217,7 @@ addEventListener('focus',()=>refreshVisibleImage(true));addEventListener('online
 /* @atlas-function buildNotes-shared */
 
 /* @atlas-function toast-4b4587647c32 */
-/* @atlas-function downloadHTML-a22d3da9c366 */
+/* @atlas-function downloadHTML-679a5647ab5c */
 $('regionPicker').onchange=()=>setView($('regionPicker').value);
 $('regionPicker').addEventListener('keydown',e=>e.stopPropagation());document.querySelectorAll('[data-scope]').forEach(b=>b.onclick=()=>{scope=b.dataset.scope;document.querySelectorAll('[data-scope]').forEach(n=>n.classList.toggle('active',n===b));renderIndex()});$('search').oninput=()=>{clearTimeout(searchTimer);searchTimer=setTimeout(renderIndex,90)};
 $('zoomIn').onclick=()=>zoom(.8);$('zoomOut').onclick=()=>zoom(1.25);$('fit').onclick=()=>setView(view,true,false,overviewMode);$('minimap').onclick=()=>setView('all');$('minimap').onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();setView('all')}};

@@ -365,13 +365,6 @@
     ],
     "bytes": 641
   },
-  "affiliationMarkup-2be05974aae3": {
-    "name": "affiliationMarkup",
-    "profiles": [
-      "kadaym"
-    ],
-    "bytes": 219
-  },
   "searchRecords-2c82af157790": {
     "name": "searchRecords",
     "profiles": [
@@ -414,9 +407,10 @@
   "renderIndex-bb514b6b2378": {
     "name": "renderIndex",
     "profiles": [
+      "calidor",
       "kadaym"
     ],
-    "bytes": 1759
+    "bytes": 1806
   },
   "stationRecords-6dbf0bad7f69": {
     "name": "stationRecords",
@@ -973,9 +967,11 @@
   "downloadHTML-679a5647ab5c": {
     "name": "downloadHTML",
     "profiles": [
+      "calidor",
+      "iulr",
       "kadaym"
     ],
-    "bytes": 513
+    "bytes": 511
   },
   "endPointer-28a00b6b73ab": {
     "name": "endPointer",
@@ -1095,9 +1091,12 @@
   "resolveRegion-3addd3c05c4b": {
     "name": "resolveRegion",
     "profiles": [
-      "elysian"
+      "calidor",
+      "elysian",
+      "iulr",
+      "uacs"
     ],
-    "bytes": 227
+    "bytes": 241
   },
   "matchesRecord-051b812e1fdd": {
     "name": "matchesRecord",
@@ -1195,9 +1194,11 @@
   "setView-5a65e3a280b5": {
     "name": "setView",
     "profiles": [
-      "elysian"
+      "calidor",
+      "elysian",
+      "uacs"
     ],
-    "bytes": 1524
+    "bytes": 1488
   },
   "zoom-c44842c8dbe1": {
     "name": "zoom",
@@ -1684,13 +1685,6 @@
     ],
     "bytes": 360
   },
-  "resolveRegion-54cda7599ebb": {
-    "name": "resolveRegion",
-    "profiles": [
-      "uacs"
-    ],
-    "bytes": 225
-  },
   "matchesRecord-c81f46900ace": {
     "name": "matchesRecord",
     "profiles": [
@@ -1748,13 +1742,6 @@
     ],
     "bytes": 1158
   },
-  "setView-5ab4293d595a": {
-    "name": "setView",
-    "profiles": [
-      "uacs"
-    ],
-    "bytes": 1553
-  },
   "renderMapLegend-f1619aeb17c0": {
     "name": "renderMapLegend",
     "profiles": [
@@ -1768,9 +1755,10 @@
       "calidor",
       "elysian",
       "iulr",
+      "kadaym",
       "uacs"
     ],
-    "bytes": 259
+    "bytes": 234
   },
   "classificationTerms-c6b25d2adb0c": {
     "name": "classificationTerms",
@@ -2006,13 +1994,6 @@
       "iulr"
     ],
     "bytes": 85
-  },
-  "resolveRegion-ade28fbeae2d": {
-    "name": "resolveRegion",
-    "profiles": [
-      "iulr"
-    ],
-    "bytes": 222
   },
   "matchesRecord-769ca58b58d3": {
     "name": "matchesRecord",
@@ -2295,26 +2276,12 @@
     ],
     "bytes": 453
   },
-  "downloadHTML-4c2b45ad1a97": {
-    "name": "downloadHTML",
-    "profiles": [
-      "iulr"
-    ],
-    "bytes": 511
-  },
   "endPointer-3b5ee6b87344": {
     "name": "endPointer",
     "profiles": [
       "iulr"
     ],
     "bytes": 187
-  },
-  "resolveRegion-f83bb58e5835": {
-    "name": "resolveRegion",
-    "profiles": [
-      "calidor"
-    ],
-    "bytes": 225
   },
   "restoreRoute-e2c1998e4e99": {
     "name": "restoreRoute",
@@ -2337,13 +2304,6 @@
     ],
     "bytes": 1239
   },
-  "setView-f2d93097408d": {
-    "name": "setView",
-    "profiles": [
-      "calidor"
-    ],
-    "bytes": 1498
-  },
   "select-2a33070d08e5": {
     "name": "select",
     "profiles": [
@@ -2364,13 +2324,6 @@
       "calidor"
     ],
     "bytes": 561
-  },
-  "renderIndex-3a14299e1307": {
-    "name": "renderIndex",
-    "profiles": [
-      "calidor"
-    ],
-    "bytes": 1758
   },
   "starRecords-26accc5af9e1": {
     "name": "starRecords",
@@ -2518,13 +2471,6 @@
       "calidor"
     ],
     "bytes": 7141
-  },
-  "downloadHTML-a22d3da9c366": {
-    "name": "downloadHTML",
-    "profiles": [
-      "calidor"
-    ],
-    "bytes": 514
   },
   "preferredEntry-9fc40583898c": {
     "name": "preferredEntry",

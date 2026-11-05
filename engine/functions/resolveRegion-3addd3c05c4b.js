@@ -1,1 +1,1 @@
-function resolveRegion(value){const n=normalizedName(value);if(n==='all'||n==='collectiveoverview')return 'all';return Object.keys(DATA.regions).find(id=>normalizedName(id)===n||normalizedName(DATA.regions[id].name)===n)||null}
+function resolveRegion(value){const n=normalizedName(value);if(n==='all'||n==='{{overviewAlias|jsstr}}overview')return 'all';return Object.keys(DATA.regions).find(id=>normalizedName(id)===n||normalizedName(DATA.regions[id].name)===n)||null}

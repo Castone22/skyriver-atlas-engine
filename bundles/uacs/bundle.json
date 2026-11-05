@@ -18,5 +18,11 @@
         "path": "runtime-0.js"
       }
     ]
+  },
+  "slots": {
+    "overviewAlias": "alliance",
+    "overviewTitle": "ALLIANCE OVERVIEW",
+    "overviewSubtitle": "42 charted systems · five adjoining regional charts",
+    "affiliationLink": "{{brand}}"
   }
 }

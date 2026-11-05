@@ -18,5 +18,11 @@
         "path": "runtime-0.js"
       }
     ]
+  },
+  "slots": {
+    "overviewAlias": "collective",
+    "overviewTitle": "COLLECTIVE OVERVIEW",
+    "overviewSubtitle": "Five known regions · boundaries and separation are schematic",
+    "affiliationLink": "{{brand}}"
   }
 }
