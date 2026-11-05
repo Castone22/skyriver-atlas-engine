@@ -164,9 +164,10 @@ const triadParts=[
 /* @atlas-function silentDecoration */
 /* @atlas-function notableSitesMarkup */
 /* @atlas-function systemView-21d3975cb065 */
-/* @atlas-function planetView-e9459c82ce5a */
+/* @atlas-function planetView */
 /* @atlas-function greatBlinkFrame */
-/* @atlas-function mountPlanet-7851c7e1056c */
+/* @atlas-function mountPlanet */
+/* @atlas-function solarPlanetGlyph */
 /* @atlas-function setPlanetFocus */
 
 /* @atlas-function stopOrbit */
@@ -186,7 +187,7 @@ const STATION_SILHOUETTES={
 let planetClickTimer;
 /* @atlas-function bindOrbitalSelection */
 /* @atlas-function drawBelt */
-/* @atlas-function mountSystem-c0022918dba2 */
+/* @atlas-function mountSystem-shared */
 /* @atlas-function setSystemFocus-fa97a454091d */
 
 /* @atlas-function syncSystemFocus-83b192ca5f37 */

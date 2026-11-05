@@ -3,9 +3,33 @@
     "description": "The dossier lists a system's stellar architecture and station counts, and a planet's designation, orbital host and moon inventory.",
     "default": false
   },
+  "bodyRenderOpacity": {
+    "description": "The central body of the local planet chart carries an opacity attribute taken from its renderOpacity (default 1).",
+    "default": false
+  },
+  "derivedBelts": {
+    "description": "A system with no beltSlot shows a belt when it has more than two orbits; with a beltSlot, a belt shows when the slot is greater than 0. Without the flag a belt shows only when beltSlot is set.",
+    "default": false
+  },
+  "elsewhereStations": {
+    "description": "The local-orbit view lists the system's 'register' stations under an 'Elsewhere in the system' heading (and keeps the blank line the layout reserves for it).",
+    "default": false
+  },
   "emptyDossierFactsFallBack": {
     "description": "A live dossier whose fact list is empty falls back to the facts built from the catalogue record.",
     "default": false
+  },
+  "extendedChartMoonThreshold": {
+    "description": "When greater than 0, the local planet chart switches to its extended satellite layout once the planet has more moons than this number; when 0 it follows each world's extendedSatelliteChart field.",
+    "default": 0
+  },
+  "goldenAngleMoonPhase": {
+    "description": "Moons on the local planet chart always start a golden-angle step apart (2.39996 radians), not only in the extended layout (default step 2.1).",
+    "default": false
+  },
+  "hiddenStationFilters": {
+    "description": "Station categories left out of the local-orbit station filter bar (planetView).",
+    "default": []
   },
   "indexWorldLinks": {
     "description": "The index lists a system's worlds (its overviewWorlds when present) as article links instead of plain text.",
@@ -23,6 +47,14 @@
     "description": "Extra system fields (by property name) whose text is searchable, in addition to the classification terms.",
     "default": []
   },
+  "shortLabelsOnlyWhenExtended": {
+    "description": "Satellite labels on the local planet chart use a body's shortLabel only in the extended layout; otherwise they always use it.",
+    "default": false
+  },
+  "sizedFocusBodyLabel": {
+    "description": "Satellite labels on the local planet chart carry an explicit font-size (smaller in the extended layout).",
+    "default": false
+  },
   "stationLinksUseArticleTitle": {
     "description": "A station's first article link is its system's article title instead of the system name.",
     "default": false
@@ -31,8 +63,20 @@
     "description": "Curly apostrophes in the article title used for live images are replaced by straight ones.",
     "default": false
   },
+  "systemBodyRenderOpacity": {
+    "description": "Bodies in the system chart carry an opacity attribute taken from their renderOpacity (default 1).",
+    "default": false
+  },
   "systemRecordArticleTitle": {
     "description": "A charted system's own articleTitle is used as its article title instead of the generated '<name> System'.",
+    "default": false
+  },
+  "titledLocalOrbitLabels": {
+    "description": "The local-orbit accessible labels use the synchronised planet title (planetName) instead of the catalogue name.",
+    "default": false
+  },
+  "titledPlanetInspectLabel": {
+    "description": "The central body of the local planet chart is labelled 'Inspect <synchronised title>' (planetName) instead of the catalogue name.",
     "default": false
   },
   "worldKeySchematicOrbit": {

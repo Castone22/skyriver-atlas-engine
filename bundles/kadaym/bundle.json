@@ -27,9 +27,14 @@
     "downloadName": "Kadaym-Stellar-Atlas.html",
     "affiliationLink": "Elysian Collective",
     "indexHint": "Try a name, Tier 5, Elysian Collective, ruins or magnetar.",
-    "orbitalRegister": "CODEX"
+    "orbitalRegister": "CODEX",
+    "localCaptionNote": "Only recorded host relationships are shown",
+    "localEmptyNote": "No moons or hosted stations are catalogued for this world.",
+    "localMoonNoun": "natural satellite"
   },
   "flags": {
+    "derivedBelts": true,
+    "elsewhereStations": true,
     "straightenImageTitleQuotes": true
   }
 }

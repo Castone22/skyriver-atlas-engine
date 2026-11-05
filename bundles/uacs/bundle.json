@@ -25,9 +25,16 @@
     "overviewSubtitle": "42 charted systems · five adjoining regional charts",
     "affiliationLink": "{{brand}}",
     "indexHint": "Try a name, Tier 5, United Alliance of Commonwealth States, ruins or magnetar.",
-    "orbitalRegister": "CODEX"
+    "orbitalRegister": "CODEX",
+    "localCaptionNote": "Only recorded host relationships are shown",
+    "localEmptyNote": "No moons or hosted stations are catalogued for this world.",
+    "localMoonNoun": "natural satellite"
   },
   "flags": {
-    "inspectLabelsUseTitles": true
+    "extendedChartMoonThreshold": 10,
+    "inspectLabelsUseTitles": true,
+    "sizedFocusBodyLabel": true,
+    "titledLocalOrbitLabels": true,
+    "titledPlanetInspectLabel": true
   }
 }

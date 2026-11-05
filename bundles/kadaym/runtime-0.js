@@ -113,11 +113,15 @@ const illustrativeTypes={
 /* @atlas-function worldRecord */
 /* @atlas-function bodyKey */
 /* @atlas-function stationHasOverview-tora */
+function hasStationSchematic(){return false} // Kadaym has no station schematics.
+/* @atlas-function cloakBadge */
+/* @atlas-function cloakDecoration */
 /* @atlas-function silentDecoration */
 /* @atlas-function notableSitesMarkup */
 /* @atlas-function systemView-042c2ccd42ba */
-/* @atlas-function planetView-c55e4f5e2a4a */
-/* @atlas-function mountPlanet-028b1c9a2a66 */
+/* @atlas-function planetView */
+/* @atlas-function mountPlanet */
+/* @atlas-function solarPlanetGlyph */
 /* @atlas-function setPlanetFocus */
 
 /* @atlas-function stopOrbit */
@@ -137,7 +141,7 @@ const STATION_SILHOUETTES={
 let planetClickTimer;
 /* @atlas-function bindOrbitalSelection */
 /* @atlas-function drawBelt */
-/* @atlas-function mountSystem-02425195013d */
+/* @atlas-function mountSystem-shared */
 /* @atlas-function setSystemFocus-fa10b9ff0fee */
 
 /* @atlas-function syncSystemFocus-dd319a0c86e0 */

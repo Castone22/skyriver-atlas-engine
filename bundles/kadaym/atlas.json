@@ -11924,6 +11924,7 @@
         "naturalSatellites": 3
       },
       "Lur": {
+        "orbitTiltOffset": 23,
         "articleTitle": "Lur",
         "source": "Lur",
         "tag": "Settled world",

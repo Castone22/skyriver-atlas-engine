@@ -27,17 +27,24 @@
     "overviewAlias": "union",
     "affiliationLink": "{{brand}}",
     "indexHint": "Try a planet name, TORA designation or stellar class.",
-    "orbitalRegister": "UNION REGISTER"
+    "orbitalRegister": "UNION REGISTER",
+    "localCaptionNote": "Moon and station assignments follow the second-edition survey",
+    "localEmptyNote": "No local objects charted.",
+    "localMoonNoun": "moon"
   },
   "flags": {
+    "architectureFacts": true,
+    "bodyRenderOpacity": true,
+    "emptyDossierFactsFallBack": true,
+    "goldenAngleMoonPhase": true,
     "searchSystemFields": [
       "architecture",
       "cloakStatusText",
       "description"
     ],
-    "systemRecordArticleTitle": true,
+    "shortLabelsOnlyWhenExtended": true,
     "stationLinksUseArticleTitle": true,
-    "architectureFacts": true,
-    "emptyDossierFactsFallBack": true
+    "systemRecordArticleTitle": true,
+    "titledPlanetInspectLabel": true
   }
 }

@@ -26,6 +26,14 @@
     "overviewSubtitle": "53 systems · six adjoining regions",
     "affiliationLink": "{{brand}}",
     "indexHint": "Try a name, Tier 5, Dominion of Calidor, ruins or magnetar.",
-    "orbitalRegister": "CODEX"
+    "orbitalRegister": "CODEX",
+    "localCaptionNote": "Only recorded host relationships are shown",
+    "localEmptyNote": "No moons or hosted stations are catalogued for this world.",
+    "localMoonNoun": "natural satellite"
+  },
+  "flags": {
+    "hiddenStationFilters": [
+      "TORA"
+    ]
   }
 }
