@@ -30,6 +30,7 @@
     "affiliationLink": "Elysian Collective"
   },
   "flags": {
+    "regionLabelStyle": "title-subtitle-extent",
     "solarIllustrativeGuard": true,
     "solarLanesFromAllStations": true
   }

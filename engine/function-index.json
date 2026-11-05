@@ -872,21 +872,22 @@
     ],
     "bytes": 928
   },
+  "labelThresholds": {
+    "name": "labelThresholds",
+    "profiles": [
+      "calidor",
+      "elysian",
+      "kadaym",
+      "uacs"
+    ],
+    "bytes": 394
+  },
   "labelThresholds-e09969274c09": {
     "name": "labelThresholds",
     "profiles": [
       "iulr"
     ],
     "bytes": 258
-  },
-  "labelThresholds-shared": {
-    "name": "labelThresholds",
-    "profiles": [
-      "calidor",
-      "elysian",
-      "uacs"
-    ],
-    "bytes": 379
   },
   "layout": {
     "name": "layout",
@@ -1800,19 +1801,15 @@
     ],
     "bytes": 162
   },
-  "scaleLabels-28ae69e249b4": {
+  "scaleLabels": {
     "name": "scaleLabels",
     "profiles": [
-      "kadaym"
-    ],
-    "bytes": 1551
-  },
-  "scaleLabels-33aba1a5f27b": {
-    "name": "scaleLabels",
-    "profiles": [
+      "calidor",
+      "elysian",
+      "kadaym",
       "uacs"
     ],
-    "bytes": 1158
+    "bytes": 2724
   },
   "scaleLabels-5982cc7d7bb0": {
     "name": "scaleLabels",
@@ -1820,20 +1817,6 @@
       "iulr"
     ],
     "bytes": 1133
-  },
-  "scaleLabels-87ef634aa138": {
-    "name": "scaleLabels",
-    "profiles": [
-      "elysian"
-    ],
-    "bytes": 964
-  },
-  "scaleLabels-9188e675f7fa": {
-    "name": "scaleLabels",
-    "profiles": [
-      "calidor"
-    ],
-    "bytes": 1239
   },
   "searchObject": {
     "name": "searchObject",

@@ -24296,6 +24296,37 @@
       "mode": "visibility",
       "unset": "never",
       "categories": []
+    },
+    "labels": {
+      "fixed": true,
+      "nodeScale": [
+        0.66,
+        0.78
+      ],
+      "overview": {
+        "active": [
+          272,
+          332
+        ],
+        "other": [
+          332,
+          495
+        ],
+        "otherRegion": [
+          332,
+          332
+        ]
+      },
+      "regional": {
+        "active": [
+          64,
+          80
+        ],
+        "other": [
+          80,
+          125
+        ]
+      }
     }
   }
 }
