@@ -28,7 +28,10 @@
     "manifest": "node tools/bundle-manifest.mjs",
     "test:golden": "node tests/golden.cjs",
     "golden:update": "node tests/golden.cjs --update",
-    "dedup-lab": "node tools/dedup-lab.mjs"
+    "dedup-lab": "node tools/dedup-lab.mjs",
+    "check": "node tools/check.mjs",
+    "check:full": "node tools/check.mjs --full",
+    "index-functions": "node tools/index-functions.mjs"
   },
   "devDependencies": {
     "@babel/parser": "7.28.4",

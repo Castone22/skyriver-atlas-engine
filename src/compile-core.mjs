@@ -87,6 +87,28 @@ function featureChecks(d, profile) {
 function stellarHooks(d, profile) {
   return `\n// Shared host API: immutable exported catalogue and source-compatible navigation.\nwindow.AtlasFramework = Object.freeze({\n version:'1.0.0', id:${safeJSON(d.id)},\n exportJSON:()=>JSON.parse(JSON.stringify({...__ATLAS__,data:__ATLAS_SOURCE_DATA__,documents:{}})),\n navigate(route){\n  const address=new URL(location.href);for(const k of ['region','system','planet','object','view','chart','focus','station'])address.searchParams.delete(k);\n  for(const [k,v] of Object.entries(route))if(['region','system','planet','object','view','chart','focus','station'].includes(k)&&v!=null)address.searchParams.set(k,String(v));\n  address.hash='';history.pushState(null,'',address);restoreRoute(null,false);\n },\n articleURL(name){return url(name)},\n snapshot(){return {region:view,system:selected,planet:planetFocus,zoom:baseWidth/vb.w*100}}\n});\nif(__ATLAS__.features?.index){\n const open=__ATLAS__.features.index.collapsed===false;\n if(typeof setIndexOpen==='function')setIndexOpen(open);\n else if(document.getElementById('toggleIndexPanel')){const button=document.getElementById('toggleIndexPanel');if((button.getAttribute('aria-expanded')==='true')!==open)button.click();}\n}\nif(__ATLAS__.features?.motion?.paused===true){orbitPaused=true;stopOrbit();renderDetail();}\n${d.features?.labels ? `labelThresholds=function(active){\n const box=$('map').getBoundingClientRect(),factor=Math.max(1,640/Math.max(1,box.width),360/Math.max(1,box.height));\n const overview=typeof overviewMode!=='undefined'?overviewMode:view==='all',policy=__ATLAS__.features.labels[overview?'overview':'regional'];\n const result=Object.fromEntries(Object.entries(policy).map(([k,p])=>[k,p.map(v=>Math.ceil(v*factor))]));\n return ${profile.capabilities?.labelThresholdsByLevel ? "result[active?'active':'other']" : 'result'};\n};applyView();` : ''}\n`;
 }
+/**
+ * Capability flags. The engine's flags.json lists every flag with a description and a default;
+ * the renderer bundle's `flags` set them for its atlases and a definition may override. Shared
+ * functions read them as `__ATLAS__.flags.name`. A name that is not in the registry is an error,
+ * so a typo cannot silently disable a feature.
+ */
+async function resolveFlags(definition, base, host) {
+  const engine = await host.engine();
+  const registry = engine.has('flags.json') ? await engine.json('flags.json') : {};
+  const flags = {};
+  for (const [name, spec] of Object.entries(registry)) flags[name] = spec.default;
+  for (const [where, source] of [
+    [`bundle '${base.manifest.id}'`, base.manifest.flags],
+    ['the definition', definition.flags]
+  ])
+    for (const [name, value] of Object.entries(source ?? {})) {
+      if (!Object.hasOwn(registry, name))
+        throw new Error(`Unknown flag '${name}' in ${where}; add it to engine/flags.json`);
+      flags[name] = value;
+    }
+  return flags;
+}
 /** Link shared source functions and profile adapters; emit a portable, self-contained artifact. */
 export async function compileCore(definition, host, { strict = false, dependencies = {} } = {}) {
   const report = validate(definition, { strict });
@@ -107,6 +129,7 @@ export async function compileCore(definition, host, { strict = false, dependenci
   // in exported JSON.
   const defaults = await base.json(profile.atlas);
   if (defaults?.policies) d.policies = { ...defaults.policies, ...d.policies };
+  if (d.kind === 'stellar') d.flags = await resolveFlags(definition, base, host);
   // Geographic/galaxy profiles provide default scene assets.
   if (d.kind !== 'stellar') d.constants = { ...defaults?.constants, ...d.constants };
   if (d.kind === 'galaxy') {
