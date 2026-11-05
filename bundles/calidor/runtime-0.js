@@ -71,7 +71,9 @@ addEventListener('hashchange',()=>{if(location.href!==lastRestoredURL)restoreRou
 
 /* @atlas-function affiliationMarkup */
 /* @atlas-function searchRecords */
-/* @atlas-function classificationTerms-766b72615379 */
+/* @atlas-function classificationTerms */
+/* @atlas-function planetName-identity */
+/* @atlas-function planetAliases-none */
 /* @atlas-function searchTerms */
 /* @atlas-function searchObject */
 /* @atlas-function renderIndex-bb514b6b2378 */

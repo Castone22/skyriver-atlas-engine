@@ -53,8 +53,9 @@ for (const key of files) names[key] = await nameOf(key);
 if (flag('fix-names')) {
   const renames = {};
   for (const key of files) {
-    const hash = key.slice(key.lastIndexOf('-') + 1);
-    const wanted = `${names[key].name}-${hash}`;
+    // A key with no hyphen has no suffix to keep.
+    const hash = key.includes('-') ? key.slice(key.lastIndexOf('-') + 1) : '';
+    const wanted = hash ? `${names[key].name}-${hash}` : names[key].name;
     if (wanted !== key) renames[key] = wanted;
   }
   for (const [from, to] of Object.entries(renames)) {

@@ -90,7 +90,7 @@ addEventListener('hashchange',()=>{if(location.href!==lastRestoredURL)restoreRou
 
 /* @atlas-function affiliationMarkup */
 /* @atlas-function searchRecords */
-/* @atlas-function classificationTerms-c6b25d2adb0c */
+/* @atlas-function classificationTerms */
 /* @atlas-function searchTerms */
 /* @atlas-function searchObject */
 /* @atlas-function renderIndex-c7aa6fecdbb1 */

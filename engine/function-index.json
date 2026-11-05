@@ -289,40 +289,16 @@
     ],
     "bytes": 935
   },
-  "classificationTerms-549b06cadb0d": {
+  "classificationTerms": {
     "name": "classificationTerms",
     "profiles": [
-      "iulr"
-    ],
-    "bytes": 585
-  },
-  "classificationTerms-766b72615379": {
-    "name": "classificationTerms",
-    "profiles": [
-      "calidor"
-    ],
-    "bytes": 561
-  },
-  "classificationTerms-936c39321d8a": {
-    "name": "classificationTerms",
-    "profiles": [
-      "elysian"
-    ],
-    "bytes": 585
-  },
-  "classificationTerms-c6b25d2adb0c": {
-    "name": "classificationTerms",
-    "profiles": [
+      "calidor",
+      "elysian",
+      "iulr",
+      "kadaym",
       "uacs"
     ],
-    "bytes": 615
-  },
-  "classificationTerms-fa60044fc097": {
-    "name": "classificationTerms",
-    "profiles": [
-      "kadaym"
-    ],
-    "bytes": 575
+    "bytes": 629
   },
   "cloakBadge": {
     "name": "cloakBadge",
@@ -1279,6 +1255,16 @@
     ],
     "bytes": 111
   },
+  "planetAliases-none": {
+    "name": "planetAliases",
+    "profiles": [
+      "calidor",
+      "elysian",
+      "iulr",
+      "kadaym"
+    ],
+    "bytes": 39
+  },
   "planetArticle": {
     "name": "planetArticle",
     "profiles": [
@@ -1320,6 +1306,14 @@
       "uacs"
     ],
     "bytes": 70
+  },
+  "planetName-identity": {
+    "name": "planetName",
+    "profiles": [
+      "calidor",
+      "kadaym"
+    ],
+    "bytes": 38
   },
   "planetNameMarkup": {
     "name": "planetNameMarkup",
