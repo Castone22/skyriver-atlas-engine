@@ -1693,40 +1693,16 @@
     ],
     "bytes": 194
   },
-  "restoreRoute-0b88bbe100e3": {
+  "restoreRoute": {
     "name": "restoreRoute",
     "profiles": [
-      "elysian"
-    ],
-    "bytes": 3343
-  },
-  "restoreRoute-3bff77d8f6c1": {
-    "name": "restoreRoute",
-    "profiles": [
-      "kadaym"
-    ],
-    "bytes": 3145
-  },
-  "restoreRoute-415cec56bec0": {
-    "name": "restoreRoute",
-    "profiles": [
-      "iulr"
-    ],
-    "bytes": 3506
-  },
-  "restoreRoute-b46dfe049969": {
-    "name": "restoreRoute",
-    "profiles": [
+      "calidor",
+      "elysian",
+      "iulr",
+      "kadaym",
       "uacs"
     ],
-    "bytes": 3353
-  },
-  "restoreRoute-e2c1998e4e99": {
-    "name": "restoreRoute",
-    "profiles": [
-      "calidor"
-    ],
-    "bytes": 3375
+    "bytes": 4361
   },
   "rotationUI": {
     "name": "rotationUI",

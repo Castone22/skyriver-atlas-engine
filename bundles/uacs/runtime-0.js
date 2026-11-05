@@ -64,7 +64,7 @@ let lastRestoredURL='';
 /* @atlas-function persistRoute */
 /* @atlas-function beginNavigation */
 /* @atlas-function endNavigation */
-/* @atlas-function restoreRoute-b46dfe049969 */
+/* @atlas-function restoreRoute */
 addEventListener('popstate',event=>restoreRoute(event.state));
 addEventListener('hashchange',()=>{if(location.href!==lastRestoredURL)restoreRoute(null,true)});
 

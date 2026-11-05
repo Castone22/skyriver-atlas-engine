@@ -32,6 +32,7 @@
   },
   "flags": {
     "closeSidebarOnSelect": true,
+    "fallbackRegion": "avendonraik",
     "planetArticleTitles": true,
     "regionHighlight": true,
     "selectFirstWorld": true,

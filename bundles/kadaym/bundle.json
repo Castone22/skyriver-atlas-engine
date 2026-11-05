@@ -34,6 +34,7 @@
   },
   "flags": {
     "closeSidebarOnSelect": true,
+    "fallbackRegion": "makor",
     "normalizeTitleApostrophes": true,
     "overviewChart": "federation",
     "overviewStateKey": "federationOverview",
