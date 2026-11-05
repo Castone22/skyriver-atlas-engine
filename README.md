@@ -2,6 +2,8 @@
 
 A working JavaScript DSL, JSON catalogue format, shared renderer source, and build pipeline extracted from the latest retrieved Kadaym, Elysian, UACS, IULR, Calidor, Grand, and Mahanzk atlases.
 
+See docs/HANDOFF.md for the current state and how to run the checks.
+
 Map authors edit `bundles/` (and `maps/`). Renderer developers edit `engine/`. Builds produce portable, self-contained HTML in `dist/` for the existing Codex embedding workflow. Generated HTML contains the final bundle by design; it is no longer the source of truth.
 
 ## Run it
@@ -151,4 +153,4 @@ The IULR renderer now includes the standalone v9 planet-name synchronization. It
 
 Both `dist/iulr-atlas.html` and Grand Atlas's embedded IULR snapshot were rebuilt. The other six atlas definitions and the five unrelated built atlases are unchanged. No live deployment or wiki edit was made.
 
-The update passes 22 core/synchronization tests, eight full-atlas DOM scenarios and ten focused IULR DOM scenarios. Grand's IULR snapshot is byte-identical to the rebuilt IULR HTML. See `docs/IULR-V9-UPDATE.md` for test scope and limitations. Visual browser and live Codex API/CORS verification remain unverified.
+The update passed the core and synchronization tests, the full-atlas DOM scenarios and the focused IULR DOM scenarios (`npm run check` now runs these plus the golden tours; see `docs/HANDOFF.md`). Grand's IULR snapshot is byte-identical to the rebuilt IULR HTML. See `docs/IULR-V9-UPDATE.md` for test scope and limitations. Visual browser and live Codex API/CORS verification remain unverified.

@@ -14,7 +14,7 @@ This is deliberately a build-time framework. The profiles are compatibility adap
 
 ## Shared function edits
 
-Use `engine/function-index.json` to identify every consuming profile. Function filenames contain their original source fingerprint; a normal fix need not rename the file. Edit the shared implementation and run all relevant DOM tests. If one profile needs a different contract, create an explicit variant and update that profile's marker. Do not paste the same fixed body into multiple profiles.
+Use `engine/function-index.json` to identify every consuming profile. A function with a single linked file is named `<name>.js`; while a name still has several variants, each carries a hash suffix. Regenerate the index with `node tools/index-functions.mjs --prune --fix-names --unhash` instead of editing it by hand. See `docs/CONVERGING.md`. Edit the shared implementation and run all relevant DOM tests. If one profile needs a different contract, create an explicit variant and update that profile's marker. Do not paste the same fixed body into multiple profiles.
 
 The linker fails if a referenced file is absent. Each executable script keeps its original ordering and lexical scope. Nested private helpers stay in their owner function. Do not move stateful initialization expressions into shared data; arrays and maps used as accumulators must remain freshly allocated at their original call sites.
 
