@@ -49,7 +49,7 @@ const MARKER_DOSSIER_DELAY=600;
 /* @atlas-function deferMarkerDossier-0e62c8c49927 */
 
 const normalizedName=value=>String(value||'').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]/g,'');
-/* @atlas-function resolveRegion-54cda7599ebb */
+/* @atlas-function resolveRegion-3addd3c05c4b */
 /* @atlas-function matchesRecord-c81f46900ace */
 /* @atlas-function resolveSystem-b072cde34b21 */
 /* @atlas-function resolveObjectName-5012baba771b */

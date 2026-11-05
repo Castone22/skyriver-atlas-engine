@@ -20,6 +20,7 @@
     ]
   },
   "slots": {
-    "downloadName": "Calidor-Stellar-Atlas.html"
+    "downloadName": "Calidor-Stellar-Atlas.html",
+    "overviewAlias": "dominion"
   }
 }

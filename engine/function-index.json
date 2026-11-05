@@ -1097,9 +1097,12 @@
   "resolveRegion-3addd3c05c4b": {
     "name": "resolveRegion",
     "profiles": [
-      "elysian"
+      "calidor",
+      "elysian",
+      "iulr",
+      "uacs"
     ],
-    "bytes": 227
+    "bytes": 241
   },
   "matchesRecord-051b812e1fdd": {
     "name": "matchesRecord",
@@ -1686,13 +1689,6 @@
     ],
     "bytes": 360
   },
-  "resolveRegion-54cda7599ebb": {
-    "name": "resolveRegion",
-    "profiles": [
-      "uacs"
-    ],
-    "bytes": 225
-  },
   "matchesRecord-c81f46900ace": {
     "name": "matchesRecord",
     "profiles": [
@@ -2009,13 +2005,6 @@
     ],
     "bytes": 85
   },
-  "resolveRegion-ade28fbeae2d": {
-    "name": "resolveRegion",
-    "profiles": [
-      "iulr"
-    ],
-    "bytes": 222
-  },
   "matchesRecord-769ca58b58d3": {
     "name": "matchesRecord",
     "profiles": [
@@ -2303,13 +2292,6 @@
       "iulr"
     ],
     "bytes": 187
-  },
-  "resolveRegion-f83bb58e5835": {
-    "name": "resolveRegion",
-    "profiles": [
-      "calidor"
-    ],
-    "bytes": 225
   },
   "restoreRoute-e2c1998e4e99": {
     "name": "restoreRoute",

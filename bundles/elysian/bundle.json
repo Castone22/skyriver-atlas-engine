@@ -18,5 +18,8 @@
         "path": "runtime-0.js"
       }
     ]
+  },
+  "slots": {
+    "overviewAlias": "collective"
   }
 }

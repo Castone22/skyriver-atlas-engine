@@ -23,6 +23,7 @@
     "labelThresholdsByLevel": true
   },
   "slots": {
-    "downloadName": "IULR-Stellar-Atlas.html"
+    "downloadName": "IULR-Stellar-Atlas.html",
+    "overviewAlias": "union"
   }
 }

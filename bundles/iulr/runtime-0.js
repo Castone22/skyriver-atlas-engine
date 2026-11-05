@@ -70,7 +70,7 @@ let planetTitleSyncInFlight=null,planetTitleLastChecked=0;
 /* @atlas-function syncPlanetArticleTitles-1dbd57e790a9 */
 /* @atlas-function triggerPlanetTitleCheck-48c3009aff22 */
 
-/* @atlas-function resolveRegion-ade28fbeae2d */
+/* @atlas-function resolveRegion-3addd3c05c4b */
 /* @atlas-function matchesRecord-769ca58b58d3 */
 /* @atlas-function resolveSystem-b072cde34b21 */
 /* @atlas-function resolveObjectName-5012baba771b */
