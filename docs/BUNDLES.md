@@ -154,8 +154,31 @@ Where the code differs from the target design above:
   atlas-owned `functions/` overrides are not read yet.
 - **Not yet in the manifest:** `dependencies.children` (Grand still declares children in `atlas.json`),
   per-file hashes (`files`), and bundle-local `assets`. Assets are still the shared `assets/` store.
-- **The compiler still reads `assets/` and gzips Grand snapshots with Node APIs.** Making `compile()`
-  pure is step 3.
+
+## Status after step 3
+
+The compiler is split in two:
+
+- `src/compile-core.mjs` is pure. It imports only `atlas.mjs`, `template.mjs` and `bundle.mjs`, none
+  of which use Node modules or globals, so it can run in a browser. `tests/pure.test.mjs` enforces
+  this and also compiles from in-memory bundles to show the core depends only on its host.
+- `src/compiler.mjs` is the Node host. `compile(definition, options)` and `writeAtlas` keep their
+  signatures. `createNodeHost()` is exported for tests and tools.
+
+`compileCore(definition, host, { strict, dependencies })` takes a host with:
+
+| Member | Purpose |
+| --- | --- |
+| `engine()` | Promise of the opened engine bundle |
+| `atlas(id)` | Promise of an opened atlas bundle, or `null` |
+| `asset(sha256)` | Promise of a URL or `data:` URL for an asset. A wiki host can return a plain URL |
+| `gzipBase64(text)` | Needed only to embed Grand child snapshots; its absence is a clear error |
+| `loadSearch(code)` | Optional. Precomputes Grand's search seed; without it the seed is omitted |
+
+A browser host would implement `engine`/`atlas` over the HTTP directory transport (step 5),
+`gzipBase64` with `CompressionStream`, and leave `loadSearch` out (Grand's runtime builds its own index).
+Browser gzip output is not byte-identical to zlib's, which only matters for the committed `dist/` files
+and is why the CLI keeps zlib.
 
 ## Migration plan
 
@@ -166,7 +189,7 @@ Each step must leave `dist/` byte-identical to the previous step (diff the rebui
    - Replace the "grand last" sort with a `dependencies.children` topological order.
    - Replace the `profile.brand` string substitution with template slots.
 2. **Introduce the bundle tree model** _(done; see "Status after step 2")_ (`loadBundle`, validation, directory + tar.gz transports). Build the existing seven atlases into atlas bundles whose shell, style and runtime are the current profile files, declared as `replace`. Engine defaults are initially thin.
-3. **Make `compile()` pure** (trees in, HTML out); move all I/O into loaders.
+3. **Make `compile()` pure** (trees in, HTML out); move all I/O into loaders. _Done; see "Status after step 3"._
 4. **Converge the forks.** Deduplicate the function variants (for example the six `mountSystem` copies) into engine defaults plus declared overrides, one function at a time.
 5. **Wiki transports.** Release-URL loader first, then the `MediaWiki:` page-tree loader, implemented with the extension.
 
