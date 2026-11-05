@@ -21,6 +21,8 @@
   },
   "slots": {
     "downloadName": "Calidor-Stellar-Atlas.html",
-    "overviewAlias": "dominion"
+    "overviewAlias": "dominion",
+    "overviewTitle": "DOMINION OVERVIEW",
+    "overviewSubtitle": "53 systems · six adjoining regions"
   }
 }

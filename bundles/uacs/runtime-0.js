@@ -81,7 +81,7 @@ addEventListener('hashchange',()=>{if(location.href!==lastRestoredURL)restoreRou
 /* @atlas-function scaleLabels-33aba1a5f27b */
 /* @atlas-function applyView-92d149458601 */
 /* @atlas-function fitBounds-b4532b0852c7 */
-/* @atlas-function setView-5ab4293d595a */
+/* @atlas-function setView-5a65e3a280b5 */
 /* @atlas-function zoom-c44842c8dbe1 */
 /* @atlas-function select-abff9c66530d */
 /* @atlas-function tierMarkup-7d5f85e75120 */

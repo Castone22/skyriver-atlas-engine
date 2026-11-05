@@ -20,6 +20,8 @@
     ]
   },
   "slots": {
-    "overviewAlias": "collective"
+    "overviewAlias": "collective",
+    "overviewTitle": "COLLECTIVE OVERVIEW",
+    "overviewSubtitle": "Five known regions · boundaries and separation are schematic"
   }
 }

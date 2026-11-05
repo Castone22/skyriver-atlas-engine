@@ -20,6 +20,8 @@
     ]
   },
   "slots": {
-    "overviewAlias": "alliance"
+    "overviewAlias": "alliance",
+    "overviewTitle": "ALLIANCE OVERVIEW",
+    "overviewSubtitle": "42 charted systems · five adjoining regional charts"
   }
 }

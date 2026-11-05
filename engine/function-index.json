@@ -1200,9 +1200,11 @@
   "setView-5a65e3a280b5": {
     "name": "setView",
     "profiles": [
-      "elysian"
+      "calidor",
+      "elysian",
+      "uacs"
     ],
-    "bytes": 1524
+    "bytes": 1488
   },
   "zoom-c44842c8dbe1": {
     "name": "zoom",
@@ -1745,13 +1747,6 @@
       "uacs"
     ],
     "bytes": 1158
-  },
-  "setView-5ab4293d595a": {
-    "name": "setView",
-    "profiles": [
-      "uacs"
-    ],
-    "bytes": 1553
   },
   "renderMapLegend-f1619aeb17c0": {
     "name": "renderMapLegend",
@@ -2313,13 +2308,6 @@
       "calidor"
     ],
     "bytes": 1239
-  },
-  "setView-f2d93097408d": {
-    "name": "setView",
-    "profiles": [
-      "calidor"
-    ],
-    "bytes": 1498
   },
   "select-2a33070d08e5": {
     "name": "select",
