@@ -32,6 +32,7 @@
   },
   "devDependencies": {
     "@babel/parser": "7.28.4",
+    "@babel/traverse": "7.28.4",
     "jsdom": "26.1.0",
     "playwright": "1.56.1",
     "prettier": "3.3.3"

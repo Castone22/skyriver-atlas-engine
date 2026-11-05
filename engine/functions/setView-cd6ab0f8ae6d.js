@@ -1,4 +1,4 @@
-function setView(key,keepSelection=false,keepCamera=false,federal=keepCamera?federationOverview:key==='all'){beginNavigation();planetFocus=null;if(systemFocused){systemFocused=false;syncSystemFocus(null);if(keepSelection)renderDetail()}regionalCamera=null;view=key;federationOverview=federal;
+function setView(key,keepSelection=false,keepCamera=false,federal=keepCamera?overviewMode:key==='all'){beginNavigation();planetFocus=null;if(systemFocused){systemFocused=false;syncSystemFocus(null);if(keepSelection)renderDetail()}regionalCamera=null;view=key;overviewMode=federal;
  const picker=$('regionPicker');$('overviewSelection')?.remove();
  if(federal&&DATA.regions[key]){
   const option=document.createElement('option');

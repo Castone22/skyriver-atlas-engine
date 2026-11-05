@@ -12,7 +12,7 @@ async function syncPlanetArticleTitles(force=false){
    // Stable IDs take precedence over an unrelated article recreated at the old title.
    if(!byId&&oldId&&oldId!==page.pageid)return;
    planetArticleIDs.set(name,page.pageid);
-   if(planetDisplayName(name)!==page.title)changed=true;
+   if(planetName(name)!==page.title)changed=true;
    planetResolvedTitles.set(name,page.title);
   };
   // Query known page IDs first: they keep following a page after a move, even

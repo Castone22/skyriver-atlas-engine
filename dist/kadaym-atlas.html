@@ -141,7 +141,7 @@ for(const record of [...allRecords,...DATA.stations,...DATA.satellites,...DATA.e
  for(const name of [record.name,...(record.aliases||[])]){const key=normalizedName(name);if(!titleLookup.has(key))titleLookup.set(key,record.articleTitle||record.name)}
 }
 const EXOTIC_TYPES={'pulsar':'Pulsar','magnetar':'Magnetar','cataclysmic-variable':'Cataclysmic variable'};
-let federationOverview=false;
+let overviewMode=false;
 let view='makor',scope='region',selected='virezk',selectedWorld='Mahanzk',vb={x:0,y:0,w:1000,h:1000},baseWidth=1000,drag=null,moved=false,pointers=new Map(),pinch=null,searchTimer;
 const flags={federation:true,context:true,hazard:true};
 function atlasParams(){
@@ -196,14 +196,14 @@ function resolveHashRoute(){try{return resolveNamedRoute(decodeURIComponent(loca
 function resolvePlanetRoute(name){for(const system of allRecords.filter(hasOrbitChart)){const object=focusableWorld(system,name);if(object)return {system,object}}return null}
 
 let lastRestoredURL='';
-function routeSnapshot(){return {atlas:true,view,federationOverview,selected,selectedWorld,focused:systemFocused,planetFocus,camera:{...vb},baseWidth,regionalCamera:regionalCamera?{...regionalCamera,camera:{...regionalCamera.camera}}:null}}
+function routeSnapshot(){return {atlas:true,view,federationOverview: overviewMode,selected,selectedWorld,focused:systemFocused,planetFocus,camera:{...vb},baseWidth,regionalCamera:regionalCamera?{...regionalCamera,camera:{...regionalCamera.camera}}:null}}
 
 function routeURL(){
  const address=new URL(location.href);if(widgetMode&&!systemFocused)return address;
  ['region','system','planet','object','focus','chart'].forEach(key=>address.searchParams.delete(key));
  const record=resolveSystem(selected);
  if(!record?.unplottedSystem)address.searchParams.set('region',view);
- if(federationOverview&&(view!=='all'||record))address.searchParams.set('chart','federation');
+ if(overviewMode&&(view!=='all'||record))address.searchParams.set('chart','federation');
  if(record){address.searchParams.set('system',record.id);address.searchParams.set('object',selectedWorld||'');if(!systemFocused)address.searchParams.set('focus','region');}
  if(systemFocused&&planetFocus)address.searchParams.set('planet',planetFocus);
  if(widgetMode){address.searchParams.set('view','widget');address.searchParams.delete('embed')}else if(embedMode)address.searchParams.set('embed','1');else address.searchParams.delete('embed');
@@ -342,8 +342,8 @@ function zoomPercent(){return Math.round(baseWidth/vb.w*100)}
 
 function scaleLabels(){const width=$('map').getBoundingClientRect().width;if(!width)return;const unit=vb.w/width,overview=(view==='all'&&vb.w>2300)||vb.w>=DATA.atlasExtent[2]*.75,percent=zoomPercent();
  const regionSelected=view!=='all',labelsEnabled=$('labels').checked;
- const localSystems=federationOverview?272:64,otherSystems=federationOverview?332:80;
- const localPlanets=federationOverview?332:80,otherPlanets=federationOverview?(regionSelected?332:495):125;
+ const localSystems=overviewMode?272:64,otherSystems=overviewMode?332:80;
+ const localPlanets=overviewMode?332:80,otherPlanets=overviewMode?(regionSelected?332:495):125;
  document.querySelectorAll('.region-ink').forEach(e=>{
   e.style.display=view==='all'||overview||!$('labels').checked?'none':'';
   e.style.fontSize=Math.min(30,Math.max(14*unit,Math.min(23*unit,22)))+'px';
@@ -366,7 +366,7 @@ function applyView(){
 
 function fitBounds(bounds){const box=$('mapArea').getBoundingClientRect(),ratio=box.width>0&&box.height>0?box.width/box.height:1;let[x,y,w,h]=bounds;h+=130;y-=60;if(w/h<ratio){const nw=h*ratio;x-=(nw-w)/2;w=nw}else{const nh=w/ratio;y-=(nh-h)/2;h=nh}vb={x,y,w,h};baseWidth=w;applyView()}
 
-function setView(key,keepSelection=false,keepCamera=false,federal=keepCamera?federationOverview:key==='all'){beginNavigation();planetFocus=null;if(systemFocused){systemFocused=false;syncSystemFocus(null);if(keepSelection)renderDetail()}regionalCamera=null;view=key;federationOverview=federal;
+function setView(key,keepSelection=false,keepCamera=false,federal=keepCamera?overviewMode:key==='all'){beginNavigation();planetFocus=null;if(systemFocused){systemFocused=false;syncSystemFocus(null);if(keepSelection)renderDetail()}regionalCamera=null;view=key;overviewMode=federal;
  const picker=$('regionPicker');$('overviewSelection')?.remove();
  if(federal&&DATA.regions[key]){
   const option=document.createElement('option');
@@ -384,13 +384,13 @@ function setView(key,keepSelection=false,keepCamera=false,federal=keepCamera?fed
  renderIndex();endNavigation();
 }
 
-function zoom(factor,cx,cy){const box=$('map').getBoundingClientRect();const px=cx==null?.5:(cx-box.left)/box.width,py=cy==null?.5:(cy-box.top)/box.height;const w=Math.max(federationOverview?Math.min(260,baseWidth/5):260,Math.min(9000,vb.w*factor)),h=w*box.height/box.width;vb={x:vb.x+px*(vb.w-w),y:vb.y+py*(vb.h-h),w,h};applyView()}
+function zoom(factor,cx,cy){const box=$('map').getBoundingClientRect();const px=cx==null?.5:(cx-box.left)/box.width,py=cy==null?.5:(cy-box.top)/box.height;const w=Math.max(overviewMode?Math.min(260,baseWidth/5):260,Math.min(9000,vb.w*factor)),h=w*box.height/box.width;vb={x:vb.x+px*(vb.w-w),y:vb.y+py*(vb.h-h),w,h};applyView()}
 
 function select(id,world=null,focus=false,openDrawer=true){const s=resolveSystem(id);if(!s)return;id=s.id;beginNavigation();
  const keepSystemFocus=systemFocused;planetFocus=null;if(selected!==id)systemZoom=1;
- if(s.region&&view!==s.region&&!federationOverview)setView(s.region,true);
+ if(s.region&&view!==s.region&&!overviewMode)setView(s.region,true);
  if(focus&&s.region){setView(s.region,true)}
- if((keepSystemFocus||s.unplottedSystem)&&hasOrbitChart(s)&&!regionalCamera)regionalCamera={view,federationOverview,camera:{...vb},baseWidth};systemFocused=Boolean((keepSystemFocus||s.unplottedSystem)&&hasOrbitChart(s));if(!hasOrbitChart(s))regionalCamera=null;selected=id;selectedWorld=resolveObjectName(s,world)||(s.worlds.find(w=>DATA.worlds[w])||null);const localHost=localChartParent(s,selectedWorld);if(localHost&&hasOrbitChart(s)){if(s.region&&view!==s.region&&!federationOverview)setView(s.region,true);if(!regionalCamera)regionalCamera={view,federationOverview,camera:{...vb},baseWidth};systemFocused=true;planetFocus=localHost;}updateSelection();renderIndex();renderDetail();if(openDrawer&&innerWidth<=700)setDetailOpen(true);else if(!openDrawer)setDetailOpen(false);$('sidebar').classList.remove('open');endNavigation();
+ if((keepSystemFocus||s.unplottedSystem)&&hasOrbitChart(s)&&!regionalCamera)regionalCamera={view,federationOverview: overviewMode,camera:{...vb},baseWidth};systemFocused=Boolean((keepSystemFocus||s.unplottedSystem)&&hasOrbitChart(s));if(!hasOrbitChart(s))regionalCamera=null;selected=id;selectedWorld=resolveObjectName(s,world)||(s.worlds.find(w=>DATA.worlds[w])||null);const localHost=localChartParent(s,selectedWorld);if(localHost&&hasOrbitChart(s)){if(s.region&&view!==s.region&&!overviewMode)setView(s.region,true);if(!regionalCamera)regionalCamera={view,federationOverview: overviewMode,camera:{...vb},baseWidth};systemFocused=true;planetFocus=localHost;}updateSelection();renderIndex();renderDetail();if(openDrawer&&innerWidth<=700)setDetailOpen(true);else if(!openDrawer)setDetailOpen(false);$('sidebar').classList.remove('open');endNavigation();
 }
 
 function tierMarkup(s){return s?.tier?`<span class="tier-badge" style="--tier-color:${TIER_COLORS[s.tier]}">TIER ${s.tier} · ${TIER_NAMES[s.tier]}</span>${s.centralBodyType==='silent-darkened'?'<span class="tier-badge" style="--tier-color:#ab8498">DEAD STAR</span>':''}`:''}
@@ -765,7 +765,7 @@ function mountSystem(s){if(planetFocus&&systemFocused){mountPlanet(s);return}con
 }
 
 function setSystemFocus(active){const s=allRecords.find(x=>x.id===selected);beginNavigation();
- if(active&&hasOrbitChart(s)&&!systemFocused){if(s.region&&view!==s.region&&!federationOverview)setView(s.region,true);regionalCamera={view,federationOverview,camera:{...vb},baseWidth}}
+ if(active&&hasOrbitChart(s)&&!systemFocused){if(s.region&&view!==s.region&&!overviewMode)setView(s.region,true);regionalCamera={view,federationOverview: overviewMode,camera:{...vb},baseWidth}}
  if(!active&&planetFocus&&localChartParent(s,selectedWorld))selectedWorld=planetFocus;planetFocus=null;systemFocused=!!active&&hasOrbitChart(s);
  if(!systemFocused&&regionalCamera){const saved=regionalCamera;setView(saved.view,true,false,saved.federationOverview);vb={...saved.camera};baseWidth=saved.baseWidth;applyView();regionalCamera=null}
  renderDetail();setDetailOpen(false);(systemFocused?$('backToRegion'):$('focusSystem'))?.focus({preventScroll:true});endNavigation();}
@@ -1023,7 +1023,7 @@ $('regionPicker').innerHTML='<option value="all">Federation overview</option>'+A
 $('regionPicker').onchange=e=>setView(e.target.value);
 $('regionPicker').addEventListener('keydown',e=>e.stopPropagation());
 document.querySelectorAll('[data-scope]').forEach(b=>b.onclick=()=>{scope=b.dataset.scope;document.querySelectorAll('[data-scope]').forEach(n=>n.classList.toggle('active',n===b));renderIndex()});$('search').oninput=()=>{clearTimeout(searchTimer);searchTimer=setTimeout(renderIndex,90)};
-$('zoomIn').onclick=()=>zoom(.8);$('zoomOut').onclick=()=>zoom(1.25);$('fit').onclick=()=>setView(view,true,false,federationOverview);$('minimap').onclick=()=>setView('all');$('minimap').onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();setView('all')}};
+$('zoomIn').onclick=()=>zoom(.8);$('zoomOut').onclick=()=>zoom(1.25);$('fit').onclick=()=>setView(view,true,false,overviewMode);$('minimap').onclick=()=>setView('all');$('minimap').onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();setView('all')}};
 ['labels','borders','hexes','majorOnly'].forEach(id=>$(id).onchange=updateVisibility);document.querySelectorAll('[data-filter]').forEach(c=>c.onchange=()=>{flags[c.dataset.filter]=c.checked;updateVisibility()});
 $('filterBtn').onclick=()=>{const open=$('filters').classList.toggle('hidden');$('filterBtn').setAttribute('aria-expanded',String(!open))};
 $('embedDetails').onclick=()=>setDetailOpen(!$('detail').classList.contains('open'),true);
@@ -1043,7 +1043,7 @@ map.addEventListener('pointerdown',e=>{if(e.target.closest('a'))return;e.prevent
 map.addEventListener('pointermove',e=>{if(!pointers.has(e.pointerId))return;pointers.set(e.pointerId,{x:e.clientX,y:e.clientY});if(pointers.size===2&&pinch){const p=[...pointers.values()],d=Math.hypot(p[0].x-p[1].x,p[0].y-p[1].y);zoom(pinch.d/d,(p[0].x+p[1].x)/2,(p[0].y+p[1].y)/2);pinch.d=d;moved=true;return}if(!drag||drag.id!==e.pointerId)return;const dx=e.clientX-drag.x,dy=e.clientY-drag.y;if(!moved&&Math.abs(dx)+Math.abs(dy)<=4)return;moved=true;const b=map.getBoundingClientRect();vb.x=drag.v.x-dx*vb.w/b.width;vb.y=drag.v.y-dy*vb.h/b.height;applyView()});
 function endPointer(e){pointers.delete(e.pointerId);drag=null;pinch=null;if(e.type==='pointercancel')moved=true}
 map.addEventListener('pointerup',endPointer);map.addEventListener('pointercancel',endPointer);
-map.addEventListener('keydown',e=>{if(e.target!==map)return;const f=.12;if(['+','=','-','0','ArrowUp','ArrowDown','ArrowLeft','ArrowRight'].includes(e.key))e.preventDefault();switch(e.key){case '+':case '=':zoom(.8);break;case '-':zoom(1.25);break;case '0':setView(view,true,false,federationOverview);break;case 'ArrowUp':vb.y-=vb.h*f;applyView();break;case 'ArrowDown':vb.y+=vb.h*f;applyView();break;case 'ArrowLeft':vb.x-=vb.w*f;applyView();break;case 'ArrowRight':vb.x+=vb.w*f;applyView();break}});
+map.addEventListener('keydown',e=>{if(e.target!==map)return;const f=.12;if(['+','=','-','0','ArrowUp','ArrowDown','ArrowLeft','ArrowRight'].includes(e.key))e.preventDefault();switch(e.key){case '+':case '=':zoom(.8);break;case '-':zoom(1.25);break;case '0':setView(view,true,false,overviewMode);break;case 'ArrowUp':vb.y-=vb.h*f;applyView();break;case 'ArrowDown':vb.y+=vb.h*f;applyView();break;case 'ArrowLeft':vb.x-=vb.w*f;applyView();break;case 'ArrowRight':vb.x+=vb.w*f;applyView();break}});
 document.addEventListener('keydown',e=>{if(!widgetMode&&e.key==='Escape'&&!$('notes').open){if(planetFocus){setPlanetFocus(null)}else if(systemFocused){setSystemFocus(false)}$('filters').classList.add('hidden');$('filterBtn').setAttribute('aria-expanded','false');$('sidebar').classList.remove('open');setDetailOpen(false)}});
 let resizeTimer;function resizeChart(){clearTimeout(resizeTimer);resizeTimer=setTimeout(()=>{if(widgetRegion){fitBounds(DATA.regions[widgetRegion]?.bounds||DATA.atlasExtent);return}const b=$('mapArea').getBoundingClientRect();if(!b.width||!b.height)return;const h=vb.w*b.height/b.width;vb.y-=(h-vb.h)/2;vb.h=h;applyView()},100)}
 

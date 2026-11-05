@@ -75,7 +75,7 @@ function fixture({
     DATA,
     setFetch: (f) => (fetchImpl = f),
     sync: (force = true) => run(`syncPlanetArticleTitles(${force})`),
-    name: (n) => run(`planetDisplayName(${JSON.stringify(n)})`)
+    name: (n) => run(`planetName(${JSON.stringify(n)})`)
   };
 }
 test('IULR: absent articles retain original names and do not mutate the catalogue', async () => {
@@ -253,7 +253,7 @@ test('IULR: rebuilt atlas and Grand snapshot contain the identical synchronized 
   );
   assert.equal(gunzipSync(Buffer.from(snapshots['iulr-stellar-atlas'], 'base64')).toString(), html);
   for (const name of [
-    'planetDisplayName',
+    'planetName',
     'planetArticleIDs',
     'planetResolvedTitles',
     'syncPlanetArticleTitles',

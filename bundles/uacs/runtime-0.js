@@ -24,7 +24,7 @@ const titles={'Ferryman’s Rest':"Ferryman's Rest",'Circa’s Triad':"Circa's T
 const canonicalTitle=name=>{const live=planetArticle(name);if(live)return live;const n=normalizedName(name);const record=[...allRecords,...Object.entries(DATA.worlds).map(([name,r])=>({name,...r})),...(DATA.stations||[]),...(DATA.satellites||[]),...(DATA.entities||[])].find(r=>[r.name,...(r.aliases||[])].some(v=>normalizedName(v)===n));return record?.articleTitle||record?.name||name};
 const referenceTargets=new Map([...(DATA.stations||[]),...(DATA.satellites||[])].filter(r=>r.referencePage).map(r=>[r.name,r]));
 /* @atlas-function url-ad223876f7d1 */
-const link=(name,label=name,cls='')=>`<a class="${cls}" href="${url(name)}" target="_blank" rel="noopener">${esc(label===name?planetLabel(name):label)}</a>`;
+const link=(name,label=name,cls='')=>`<a class="${cls}" href="${url(name)}" target="_blank" rel="noopener">${esc(label===name?planetName(name):label)}</a>`;
 /* @atlas-function systemNameTitle-9fda0c6f7dde */
 /* @atlas-function hasOrbitChart-cd9024002c05 */
 /* @atlas-function systemArticleTitle-f58f1eb5d931 */

@@ -50,7 +50,7 @@ function passed(name) {
     const api = w.AtlasFramework,
       system = w.eval(`DATA.systems.find(s=>s.worlds.includes(${JSON.stringify(planet)})).id`);
     const original = JSON.stringify(api.exportJSON());
-    assert.equal(w.eval(`planetDisplayName(${JSON.stringify(planet)})`), planet);
+    assert.equal(w.eval(`planetName(${JSON.stringify(planet)})`), planet);
     assert.equal(w.eval('planetArticleIDs.size'), 0);
     passed('missing articles retain atlas names');
     api.navigate({ system, planet });
@@ -101,7 +101,7 @@ function passed(name) {
     const previous = state.calls.length;
     await w.eval('syncPlanetArticleTitles(true)');
     assert.equal(state.calls[previous].get('pageids'), '42');
-    assert.equal(w.eval(`planetDisplayName(${JSON.stringify(planet)})`), state.title);
+    assert.equal(w.eval(`planetName(${JSON.stringify(planet)})`), state.title);
     assert.equal(
       new URL(api.articleURL(planet)).searchParams.get('title'),
       'Avendon_Without_Redirect'
@@ -166,7 +166,7 @@ function passed(name) {
     await tick();
     await reload.w.eval('planetTitleSyncInFlight');
     assert.equal(
-      reload.w.eval(`planetDisplayName(${JSON.stringify(planet)})`),
+      reload.w.eval(`planetName(${JSON.stringify(planet)})`),
       'Avendon Manual Refresh'
     );
     assert.deepEqual(reload.errors, []);

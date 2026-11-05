@@ -156,7 +156,7 @@ function url(name){
  return 'https://skyrivercodex.lzridgecodes.net/index.php?title='+encodeURIComponent(title)+anchor;
 }
 
-const link=(name,label=name,cls='')=>`<a class="${cls}" href="${url(name)}" target="_blank" rel="noopener">${esc(DATA.worlds[name]&&label===name?planetDisplayName(name):label)}</a>`;
+const link=(name,label=name,cls='')=>`<a class="${cls}" href="${url(name)}" target="_blank" rel="noopener">${esc(DATA.worlds[name]&&label===name?planetName(name):label)}</a>`;
 function systemNameTitle(name){return /\bSystem$/i.test(name)?name:name+' System'}
 
 function hasOrbitChart(s){return Boolean(s && (s.region || s.unplottedSystem))}
@@ -222,7 +222,7 @@ for(const name of Object.keys(DATA.worlds)){
  const title=planetTitleCache.names[name];
  if(typeof title==='string'&&title.trim())planetResolvedTitles.set(name,title);
 }
-function planetDisplayName(name){return planetResolvedTitles.get(name)||name}
+function planetName(name){return planetResolvedTitles.get(name)||name}
 
 function planetArticleName(name){return planetResolvedTitles.get(name)||canonicalTitle(name)}
 
@@ -288,7 +288,7 @@ async function syncPlanetArticleTitles(force=false){
    // Stable IDs take precedence over an unrelated article recreated at the old title.
    if(!byId&&oldId&&oldId!==page.pageid)return;
    planetArticleIDs.set(name,page.pageid);
-   if(planetDisplayName(name)!==page.title)changed=true;
+   if(planetName(name)!==page.title)changed=true;
    planetResolvedTitles.set(name,page.title);
   };
   // Query known page IDs first: they keep following a page after a move, even
@@ -324,7 +324,7 @@ function triggerPlanetTitleCheck(){if(!document.hidden)syncPlanetArticleTitles(t
 
 function resolveRegion(value){const n=normalizedName(value);if(n==='all'||n==='unionoverview')return 'all';return Object.keys(DATA.regions).find(id=>normalizedName(id)===n||normalizedName(DATA.regions[id].name)===n)||null}
 
-function matchesRecord(record,value){const n=normalizedName(value);return !!n&&[record.id,record.name,planetDisplayName(record.name),record.nickname,...(record.aliases||[])].some(v=>normalizedName(v)===n)}
+function matchesRecord(record,value){const n=normalizedName(value);return !!n&&[record.id,record.name,planetName(record.name),record.nickname,...(record.aliases||[])].some(v=>normalizedName(v)===n)}
 
 function resolveSystem(value){
  const bare=String(value||'').trim().replace(/[ _-]+system$/i,'');
@@ -424,7 +424,7 @@ function objectTarget(name,attrs,parent){
 function svgLink(name,label,attrs,parent){
  const group=parent.tagName.toLowerCase()==='a'?svg('g',{},parent):
   svg('a',{href:url(name),target:'_blank',rel:'noopener'},parent);
-  textSVG(DATA.worlds[name]&&label===name?planetDisplayName(name):label,attrs,group);
+  textSVG(DATA.worlds[name]&&label===name?planetName(name):label,attrs,group);
  group.addEventListener('pointerdown',event=>event.stopPropagation());
  return group;
 }
@@ -480,7 +480,7 @@ function draw(){
   const c=color(s),points=Array.from({length:6},(_,i)=>{const a=(i*60-90)*Math.PI/180;return[s.x+94*Math.cos(a),s.y+94*Math.sin(a)].join(',')}).join(' ');
   svg('polygon',{points,fill:c,stroke:c,class:'chart-cell'},hexLayer);
   const g=svg('g',{id:'node-'+s.id,class:s.major?'major':'', 'data-region':s.region},nodes);
-  const hit=objectTarget(systemArticleTitle(s),{class:'star-hit',tabindex:'0',role:'button','aria-label':`Inspect ${s.name}${s.tier?', Tier '+s.tier+' '+TIER_NAMES[s.tier]:''}${s.centralBodyType==='silent-darkened'?', Silent-darkened dead star':''}${s.centralBodyType==='black-hole'?', black-hole system':''}${s.worlds.length?', '+s.worlds.map(planetDisplayName).join(', '):''}`},g);
+  const hit=objectTarget(systemArticleTitle(s),{class:'star-hit',tabindex:'0',role:'button','aria-label':`Inspect ${s.name}${s.tier?', Tier '+s.tier+' '+TIER_NAMES[s.tier]:''}${s.centralBodyType==='silent-darkened'?', Silent-darkened dead star':''}${s.centralBodyType==='black-hole'?', black-hole system':''}${s.worlds.length?', '+s.worlds.map(planetName).join(', '):''}`},g);
   svg('circle',{cx:s.x,cy:s.y,r:25,fill:'transparent'},hit);
   svg('circle',{cx:s.x,cy:s.y,r:22,fill:'none',stroke:c,'stroke-width':1,class:'focus-ring'},hit);
   if(s.cloaked)svg('circle',{cx:s.x,cy:s.y,r:21,fill:'none',stroke:'#398cff','stroke-width':1.8,'stroke-dasharray':'12 6 3 7',opacity:.85,'pointer-events':'none'},hit);
@@ -572,7 +572,7 @@ function affiliationMarkup(s){return s?.affiliation?`<div class="affiliation">${
 
 function searchRecords(s){return [...entityRecords(s),...moonRecords(s),...starRecords(s),...stationRecords(s),...s.worlds.map(name=>({name,...DATA.worlds[name]}))]}
 
-function classificationTerms(record){return [record.name,planetDisplayName(record.name),record.nickname,...(record.aliases||[]),record.type,record.bodyType,record.tag,record.category,record.status,/ruin|wreck|destroyed/i.test(record.status||'')?'ruins ruined wrecks destroyed historical':'',record.affiliation,record.kind,record.centralBodyType,EXOTIC_TYPES[record.centralBodyType],record.tier?'Tier '+record.tier:'',TIER_NAMES[record.tier],record.silentPresence?'Silent infested':'',record.centralBodyType==='silent-darkened'?'Dead star dead system':'',record.capital,...(record.links||[])]}
+function classificationTerms(record){return [record.name,planetName(record.name),record.nickname,...(record.aliases||[]),record.type,record.bodyType,record.tag,record.category,record.status,/ruin|wreck|destroyed/i.test(record.status||'')?'ruins ruined wrecks destroyed historical':'',record.affiliation,record.kind,record.centralBodyType,EXOTIC_TYPES[record.centralBodyType],record.tier?'Tier '+record.tier:'',TIER_NAMES[record.tier],record.silentPresence?'Silent infested':'',record.centralBodyType==='silent-darkened'?'Dead star dead system':'',record.capital,...(record.links||[])]}
 
 function searchTerms(s){return [...classificationTerms(s),DATA.regions[s.region]?.name,s.architecture,s.cloakStatusText,s.description,s.kind==='federation'?'Interstellar Union of Liberated Republics':'',...searchRecords(s).flatMap(classificationTerms)]}
 
@@ -582,7 +582,7 @@ function renderIndex(){let q=normalizedName($('search').value.trim());let list=s
  if(q)list=list.filter(s=>searchTerms(s).some(value=>value&&normalizedName(value).includes(q)));
  list=[...list].sort((a,b)=>(a.isCapitalSystem?-1:b.isCapitalSystem?1:a.name.localeCompare(b.name)));
  $('indexCount').textContent=list.length+' '+(scope==='unplaced'?'RECORDS':'RESULTS');
- $('index').innerHTML=list.length?list.map(s=>`<div class="index-row ${selected===s.id?'selected':''}" style="--row-color:${color(s)}"><span class="dot"></span><div class="row-text">${systemLink(s,s.name)}${s.nickname?`<small>${esc(s.nickname)}</small>`:''}${q?`<small class="search-match">${esc(planetDisplayName(searchObject(s,q)?.name)||s.affiliation||(s.tier?'Tier '+s.tier+' · '+TIER_NAMES[s.tier]:s.centralBodyType||''))}</small>`:''}${s.tier?`<small style="color:${TIER_COLORS[s.tier]}">Tier ${s.tier} · ${TIER_NAMES[s.tier]}${s.centralBodyType==='silent-darkened'?' · Dead star':''}</small>`:''}${s.unplottedSystem?'<small>Black hole · coordinates classified</small>':''}<small>${esc(s.namedWorlds.map(planetDisplayName).join(' · ')||(s.region?DATA.regions[s.region].name:s.kind==='classified'?'Coordinates classified':s.kind==='hazard'?'Kurzenzka · unplotted':'Position unspecified'))}</small></div><button class="inspect" data-inspect="${esc(s.id)}" aria-label="Inspect ${esc(s.name)}">›</button></div>`).join(''):'<div class="index-empty">No matching locations.<br>Try a planet name, TORA designation or stellar class.</div>';
+ $('index').innerHTML=list.length?list.map(s=>`<div class="index-row ${selected===s.id?'selected':''}" style="--row-color:${color(s)}"><span class="dot"></span><div class="row-text">${systemLink(s,s.name)}${s.nickname?`<small>${esc(s.nickname)}</small>`:''}${q?`<small class="search-match">${esc(planetName(searchObject(s,q)?.name)||s.affiliation||(s.tier?'Tier '+s.tier+' · '+TIER_NAMES[s.tier]:s.centralBodyType||''))}</small>`:''}${s.tier?`<small style="color:${TIER_COLORS[s.tier]}">Tier ${s.tier} · ${TIER_NAMES[s.tier]}${s.centralBodyType==='silent-darkened'?' · Dead star':''}</small>`:''}${s.unplottedSystem?'<small>Black hole · coordinates classified</small>':''}<small>${esc(s.namedWorlds.map(planetName).join(' · ')||(s.region?DATA.regions[s.region].name:s.kind==='classified'?'Coordinates classified':s.kind==='hazard'?'Kurzenzka · unplotted':'Position unspecified'))}</small></div><button class="inspect" data-inspect="${esc(s.id)}" aria-label="Inspect ${esc(s.name)}">›</button></div>`).join(''):'<div class="index-empty">No matching locations.<br>Try a planet name, TORA designation or stellar class.</div>';
  $('index').querySelectorAll('[data-inspect]').forEach(b=>b.onclick=()=>select(b.dataset.inspect,q?searchObject(resolveSystem(b.dataset.inspect),q)?.name||null:null,true));
 }
 
@@ -807,7 +807,7 @@ function notableSitesMarkup(s){
 }
 
 function systemView(s,expanded=false){if(!hasOrbitChart(s))return '';if(expanded&&planetFocus)return planetView(s);const layout=solarLayout(s),{orbits,moons,sites,stations,entities}=layout,planets=orbits.filter(b=>!b.synthetic),shown=stations.filter(b=>!expanded||stationFilters.has(b.category));
- const order=layout.total?`<div class="orbit-order"><div class="orbit-order-label"><span>PLANET ORBIT ORDER</span><span>INNER → OUTER</span></div><div class="orbit-order-slots">${orbits.map(b=>b.synthetic?`<span title="Orbit ${b.layoutSlot}: unnamed ${b.kind} planet (illustrative)">${b.layoutSlot}</span>`:`<button class="${selectedWorld===b.name?'selected':''}" data-world="${esc(b.name)}" aria-label="Inspect ${esc(planetDisplayName(b.name))}, ${b.confirmed?'orbital position':'schematic orbit'} ${b.layoutSlot}" title="${esc(planetDisplayName(b.name))} · ${b.confirmed?'register orbit':'orbit unspecified; diagram ring'} ${b.layoutSlot}">${b.layoutSlot}${b.confirmed?'':'*'}</button>`).join('')}</div></div>`:'';
+ const order=layout.total?`<div class="orbit-order"><div class="orbit-order-label"><span>PLANET ORBIT ORDER</span><span>INNER → OUTER</span></div><div class="orbit-order-slots">${orbits.map(b=>b.synthetic?`<span title="Orbit ${b.layoutSlot}: unnamed ${b.kind} planet (illustrative)">${b.layoutSlot}</span>`:`<button class="${selectedWorld===b.name?'selected':''}" data-world="${esc(b.name)}" aria-label="Inspect ${esc(planetName(b.name))}, ${b.confirmed?'orbital position':'schematic orbit'} ${b.layoutSlot}" title="${esc(planetName(b.name))} · ${b.confirmed?'register orbit':'orbit unspecified; diagram ring'} ${b.layoutSlot}">${b.layoutSlot}${b.confirmed?'':'*'}</button>`).join('')}</div></div>`:'';
  const pause=layout.total||s.silentPresence||s.centralBodyType==='black-hole'||EXOTIC_TYPES[s.centralBodyType]?`<button id="orbitToggle" class="orbit-toggle" aria-label="${orbitPaused?'Play':'Pause'} orbital animation" aria-pressed="${orbitPaused}">${orbitPaused?'▶ Play':'Ⅱ Pause'}</button>`:'';
  const filter=expanded?`<div class="station-filters" aria-label="Visible station categories">${Object.entries(STATION_TYPES).map(([name,t],i)=>{const count=stations.filter(b=>b.category===name).length;return `<button id="stationFilter${i}" data-station-filter="${name}" aria-pressed="${stationFilters.has(name)}" ${count?'':'disabled'} style="--station-color:${t.color}"><span aria-hidden="true">${t.symbol}</span> ${name} <b>${count}</b></button>`}).join('')}<button id="showAllStations">Show all</button></div>`:'';
  const named=planets.length?`<div class="orbit-labels">${planets.flatMap(b=>[bodyKey(b),...moons.filter(m=>m.parent===b.name).map(bodyKey)]).join('')}</div>`:`<div class="orbit-empty">${s.kind==='uncertain'?'Stellar configuration unresolved.':'No major worlds named in this record.'}</div>`;
@@ -840,7 +840,7 @@ function mountPlanet(s){
  const extended=Boolean(DATA.worlds[planetFocus]?.extendedSatelliteChart);
  for(let i=0;i<86;i++)svg('circle',{cx:(i*97+13)%760,cy:(i*53+7)%580,r:i%4===0?.8:.45,fill:'#acbfd8',opacity:.14+i%3*.07},chart);
  svg('path',{d:`M22 ${cy}H738M${cx} 24V548`,stroke:'#64758b','stroke-width':.5,opacity:.12},chart);
- const center=objectTarget(root.name,{opacity:root.renderOpacity??1,class:'orbit-body'+(selectedWorld===root.name?' selected':''),transform:`translate(${cx} ${cy})`,tabindex:0,role:'button','data-local-center':root.name,'aria-label':'Inspect '+planetDisplayName(root.name)},chart);
+ const center=objectTarget(root.name,{opacity:root.renderOpacity??1,class:'orbit-body'+(selectedWorld===root.name?' selected':''),transform:`translate(${cx} ${cy})`,tabindex:0,role:'button','data-local-center':root.name,'aria-label':'Inspect '+planetName(root.name)},chart);
  svg('circle',{r:52,fill:'transparent'},center);svg('circle',{r:49,fill:'none',stroke:root.tint,'stroke-width':1,class:'body-focus'},center);
  svg('circle',{r:39,fill:root.tint,opacity:.08},center);svg('circle',{r:32,fill:root.tint},center);
  svg('ellipse',{cx:-8,cy:-6,rx:13,ry:22,fill:'#edf6fa',opacity:.08,transform:'rotate(-28)'},center);
@@ -1019,8 +1019,8 @@ function mountSystem(s){if(planetFocus&&systemFocused){mountPlanet(s);return}con
    svg('path',{d:'M0-1A1 1 0 0 1 0 1Q1 0 0-1',transform:'scale('+r+')',fill:'#152637',opacity:.56},g);
    if(b.kind==='ringed')svg('ellipse',{rx:r*1.75,ry:r*.39,fill:'none',stroke:b.tint,'stroke-width':scale*.85,opacity:.8,transform:'rotate(-24)'},g);
    b.element=g;return}
-  const g=objectTarget(b.name,{opacity:b.renderOpacity??1,class:'orbit-body'+(selectedWorld===b.name?' selected':''),tabindex:0,role:'button','data-orbit-name':b.name,'data-layout-slot':b.layoutSlot||(entity?'entity':station?'station':'moon'),'aria-label':`Inspect ${planetDisplayName(b.name)}${entity?', Silent macroform in a slow stellar orbit':station?', '+b.category+' station':moon?', moon of '+b.parent:b.slot?', orbital position '+b.slot:', schematic orbit '+b.layoutSlot}`},chart);
-  svg('title',{},g).textContent=planetDisplayName(b.name)+(station?' · '+b.category:'');svg('circle',{r:(moon?11:15)*scale,fill:'transparent'},g);svg('circle',{r:(moon?8:station?11:11)*scale,fill:'none',stroke:b.tint,'stroke-width':1,class:'body-focus'},g);
+  const g=objectTarget(b.name,{opacity:b.renderOpacity??1,class:'orbit-body'+(selectedWorld===b.name?' selected':''),tabindex:0,role:'button','data-orbit-name':b.name,'data-layout-slot':b.layoutSlot||(entity?'entity':station?'station':'moon'),'aria-label':`Inspect ${planetName(b.name)}${entity?', Silent macroform in a slow stellar orbit':station?', '+b.category+' station':moon?', moon of '+b.parent:b.slot?', orbital position '+b.slot:', schematic orbit '+b.layoutSlot}`},chart);
+  svg('title',{},g).textContent=planetName(b.name)+(station?' · '+b.category:'');svg('circle',{r:(moon?11:15)*scale,fill:'transparent'},g);svg('circle',{r:(moon?8:station?11:11)*scale,fill:'none',stroke:b.tint,'stroke-width':1,class:'body-focus'},g);
   if(station)svg('circle',{r:expanded?12:8,fill:'#101d2b',stroke:b.tint,'stroke-width':.8,opacity:.95},g);
   if(entity)nefandumGlyph(g,expanded?1.2:.65);else if(station)stationGlyph(g,b.tint,b.category,expanded?1.1:.77,b.ruined);else{const bodySize=moon?3.5:(b.size||6.5);svg('circle',{r:bodySize*scale,fill:b.tint},g);if(b.appearance==='storm-bands')svg('path',{d:'M-.86-.32Q0-.08 .92-.28M-.9 .2Q0 .41 .92 .22',transform:'scale('+bodySize*scale+')',fill:'none',stroke:'#f3e7d4','stroke-width':.16,opacity:.48},g);if(b.appearance==='ringed')svg('ellipse',{rx:bodySize*1.8*scale,ry:bodySize*.5*scale,transform:'rotate(-24)',fill:'none',stroke:b.tint,'stroke-width':1,opacity:.7},g);if(b.appearance==='scarred')svg('path',{d:'M-2-3L1-1-1 2 2 4',transform:`scale(${scale*.6})`,stroke:'#452e39','stroke-width':1,fill:'none'},g);svg('path',{d:'M0-7 A7 7 0 0 1 0 7 A4 7 0 0 0 0-7',transform:`scale(${bodySize/7*scale})`,fill:'#0b1420',opacity:'.5'},g)}
   textSVG(entity?'':station?b.code:moon?(expanded?'':'M'):String(b.layoutSlot)+(b.confirmed?'':'*'),{x:(moon?8:10)*scale,y:(moon?-7:-9)*scale,class:'body-number'},g);
@@ -1278,12 +1278,12 @@ function renderDetail(){stopImageRefresh();
    return;
   }
   $('mapArea').classList.add('system-focused');$('systemFocus').classList.remove('hidden');$('detail').innerHTML='';
-  $('systemFocus').innerHTML=valid?`<div class="focus-visual">${cloakDecoration(s)}${silentDecoration(s)}<svg id="orbitDiagram" class="orbit-diagram" viewBox="0 0 760 580" tabindex="0" role="group" aria-label="${esc(planetDisplayName(planetFocus)||s.name)} orbital widget. Focus this diagram and press Space to pause or play. Names and symbols open Codex articles."></svg></div>`:'<p class="widget-error" role="status">Choose a catalogued region, system, or planet for this widget.</p>';
+  $('systemFocus').innerHTML=valid?`<div class="focus-visual">${cloakDecoration(s)}${silentDecoration(s)}<svg id="orbitDiagram" class="orbit-diagram" viewBox="0 0 760 580" tabindex="0" role="group" aria-label="${esc(planetName(planetFocus)||s.name)} orbital widget. Focus this diagram and press Space to pause or play. Names and symbols open Codex articles."></svg></div>`:'<p class="widget-error" role="status">Choose a catalogued region, system, or planet for this widget.</p>';
   if(valid){mountSystem(s);const chart=$('orbitDiagram');chart.onkeydown=e=>{if(e.target===chart&&e.key===' '){e.preventDefault();toggleAtlasMotion('orbitDiagram')}}}
   return;
  }
  const focusScroll=$('systemFocus').scrollTop;stopOrbit();document.body.classList.toggle('orbit-paused',orbitPaused);
- const s=allRecords.find(x=>x.id===selected);selectedWorld=resolveObjectName(s,selectedWorld);syncSystemFocus(s);$('mobileInspect').textContent=s?(planetDisplayName(selectedWorld)||s.name)+' dossier ↗':'Region dossier ↗';
+ const s=allRecords.find(x=>x.id===selected);selectedWorld=resolveObjectName(s,selectedWorld);syncSystemFocus(s);$('mobileInspect').textContent=s?(planetName(selectedWorld)||s.name)+' dossier ↗':'Region dossier ↗';
  if(!s){
  const region=highlightedRegion||view,r=DATA.regions[region],systems=DATA.systems.filter(v=>!r||v.region===region);
  const total=key=>systems.reduce((n,v)=>n+v[key],0),pick=systems[0];
@@ -1292,7 +1292,7 @@ function renderDetail(){stopImageRefresh();
 
  const w=worldRecord(s,selectedWorld),display=w?selectedWorld:hasOrbitChart(s)?systemArticleTitle(s):s.name;
  const status=w?w.tag:s.centralBodyType==='silent-darkened'?'Dead system · Silent-darkened star':s.centralBodyType==='black-hole'?'Black hole system':EXOTIC_TYPES[s.centralBodyType]?EXOTIC_TYPES[s.centralBodyType]+' system':s.kind==='classified'?'Classified location':s.kind==='hazard'?'Hazard register':s.kind==='uncertain'?'Unresolved chart marker':s.kind==='context'?'Neighboring system':s.kind==='neutral'?'Independent / CONCORD':s.region?'Union system · proposed':'Unplotted holding';
- $('detail').innerHTML=`<div class="detail-top"><span class="eyebrow">Location dossier</span><button class="detail-close" aria-label="Close dossier">×</button></div>${hasOrbitChart(s)?(systemFocused?'<div class="focused-dossier">System explorer is open in the main chart.<button id="returnSystem">← Return to '+(s.unplottedSystem?'chart':'region view')+'</button></div>':systemView(s)):`<div class="no-hero"><div class="orb"></div></div>${s.silentPresence?'<p class="silent-status" role="status">Silent activity detected · signal interference</p>':''}`}<div class="detail-content">${referenceImage(w||systemArticleRecord(s),display)}<div class="type" id="dossierType" data-atlas-type="${esc(status.toUpperCase())}">${esc(status.toUpperCase())}</div><h2>${link(display)}</h2>${(w||s).nickname?`<p class="nickname">${esc((w||s).nickname)}</p>`:''}<div class="system-subtitle">${s.region?`${systemLink(s)} / ${link(DATA.regions[s.region].name)}`:(s.unplottedSystem?systemLink(s)+' / ':'')+'POSITION '+(s.kind==='classified'?'CLASSIFIED':'UNSPECIFIED')}</div>${tierMarkup(s)}${cloakBadge(s)}<div id="bodyFacts">${bodyFacts(s,w,liveImages.get(currentImageTitle(w||systemArticleRecord(s),display)))}</div>${focusableWorld(s,selectedWorld)?`<button id="focusPlanet" class="focus-world">◎ &nbsp; ${planetFocus===selectedWorld?'Viewing local orbit':'Focus planet & satellites'}</button>`:''}${w?.category==='TORA'&&!stationOverview?`<button class="focus-world" data-tora-open="${esc(w.name)}">Open station overview ↗</button>`:''}<p class="description">${esc(w?w.description:s.description)}</p>${!systemFocused?notableSitesMarkup(s):''}${s.worlds.length&&!hasOrbitChart(s)?`<h3>Associated sites</h3>${s.worlds.map(n=>`<div class="world-chip ${selectedWorld===n?'active':''}">${link(n)}<button data-world="${esc(n)}" aria-label="View ${esc(n)} dossier">VIEW</button></div>`).join('')}`:''}${(w?.links||s.links||[]).length?`<h3>Related locations & records</h3><div class="link-pills">${(w?.links||s.links).map(n=>link(n)).join('')}</div>`:''}<a href="${url(display)}" target="_blank" rel="noopener" class="codex-button">Open ${esc(planetDisplayName(display))} in Codex ↗</a>${(s.notes||[]).map(n=>`<div class="note">${esc(n)}</div>`).join('')}<div class="source-line">${'Source: '+(w?.sourceNote?esc(w.sourceNote)+' · ':'')}${w?.sourceSection?`<a href="${esc(url(w.source)+'#'+encodeURIComponent(w.sourceSection))}" target="_blank" rel="noopener">${esc(w.source)} · station register</a>`:link(w?w.source:s.source)}${s.region&&s.source!==(w?.source)?'<br>Chart / context: '+link(s.source):''}<br>${s.unplottedSystem?'Coordinates withheld. Regional assignment unknown.':s.centralBodyType==='black-hole'||s.schematicPosition?'System position is schematic.':s.region&&DATA.regions[s.region]?.file?'System position follows the regional chart.':s.kind==='classified'?'Coordinates deliberately withheld.':s.region?'No measured coordinates available.':'No map coordinates assigned.'}</div></div>`;
+ $('detail').innerHTML=`<div class="detail-top"><span class="eyebrow">Location dossier</span><button class="detail-close" aria-label="Close dossier">×</button></div>${hasOrbitChart(s)?(systemFocused?'<div class="focused-dossier">System explorer is open in the main chart.<button id="returnSystem">← Return to '+(s.unplottedSystem?'chart':'region view')+'</button></div>':systemView(s)):`<div class="no-hero"><div class="orb"></div></div>${s.silentPresence?'<p class="silent-status" role="status">Silent activity detected · signal interference</p>':''}`}<div class="detail-content">${referenceImage(w||systemArticleRecord(s),display)}<div class="type" id="dossierType" data-atlas-type="${esc(status.toUpperCase())}">${esc(status.toUpperCase())}</div><h2>${link(display)}</h2>${(w||s).nickname?`<p class="nickname">${esc((w||s).nickname)}</p>`:''}<div class="system-subtitle">${s.region?`${systemLink(s)} / ${link(DATA.regions[s.region].name)}`:(s.unplottedSystem?systemLink(s)+' / ':'')+'POSITION '+(s.kind==='classified'?'CLASSIFIED':'UNSPECIFIED')}</div>${tierMarkup(s)}${cloakBadge(s)}<div id="bodyFacts">${bodyFacts(s,w,liveImages.get(currentImageTitle(w||systemArticleRecord(s),display)))}</div>${focusableWorld(s,selectedWorld)?`<button id="focusPlanet" class="focus-world">◎ &nbsp; ${planetFocus===selectedWorld?'Viewing local orbit':'Focus planet & satellites'}</button>`:''}${w?.category==='TORA'&&!stationOverview?`<button class="focus-world" data-tora-open="${esc(w.name)}">Open station overview ↗</button>`:''}<p class="description">${esc(w?w.description:s.description)}</p>${!systemFocused?notableSitesMarkup(s):''}${s.worlds.length&&!hasOrbitChart(s)?`<h3>Associated sites</h3>${s.worlds.map(n=>`<div class="world-chip ${selectedWorld===n?'active':''}">${link(n)}<button data-world="${esc(n)}" aria-label="View ${esc(n)} dossier">VIEW</button></div>`).join('')}`:''}${(w?.links||s.links||[]).length?`<h3>Related locations & records</h3><div class="link-pills">${(w?.links||s.links).map(n=>link(n)).join('')}</div>`:''}<a href="${url(display)}" target="_blank" rel="noopener" class="codex-button">Open ${esc(planetName(display))} in Codex ↗</a>${(s.notes||[]).map(n=>`<div class="note">${esc(n)}</div>`).join('')}<div class="source-line">${'Source: '+(w?.sourceNote?esc(w.sourceNote)+' · ':'')}${w?.sourceSection?`<a href="${esc(url(w.source)+'#'+encodeURIComponent(w.sourceSection))}" target="_blank" rel="noopener">${esc(w.source)} · station register</a>`:link(w?w.source:s.source)}${s.region&&s.source!==(w?.source)?'<br>Chart / context: '+link(s.source):''}<br>${s.unplottedSystem?'Coordinates withheld. Regional assignment unknown.':s.centralBodyType==='black-hole'||s.schematicPosition?'System position is schematic.':s.region&&DATA.regions[s.region]?.file?'System position follows the regional chart.':s.kind==='classified'?'Coordinates deliberately withheld.':s.region?'No measured coordinates available.':'No map coordinates assigned.'}</div></div>`;
  bindDetail();bindSystemControls();mountSystem(s);applySystemZoom();$('systemFocus').scrollTop=focusScroll;refreshVisibleImage();
 }
 

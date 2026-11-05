@@ -1601,7 +1601,7 @@
     "bytes": 141
   },
   "planetLabel-b16b654e272b": {
-    "name": "planetLabel",
+    "name": "planetName",
     "profiles": [
       "uacs"
     ],
@@ -1933,7 +1933,7 @@
     "bytes": 215
   },
   "planetDisplayName-27a93d2d3c84": {
-    "name": "planetDisplayName",
+    "name": "planetName",
     "profiles": [
       "iulr"
     ],

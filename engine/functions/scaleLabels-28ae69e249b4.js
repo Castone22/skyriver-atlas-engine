@@ -1,7 +1,7 @@
 function scaleLabels(){const width=$('map').getBoundingClientRect().width;if(!width)return;const unit=vb.w/width,overview=(view==='all'&&vb.w>2300)||vb.w>=DATA.atlasExtent[2]*.75,percent=zoomPercent();
  const regionSelected=view!=='all',labelsEnabled=$('labels').checked;
- const localSystems=federationOverview?272:64,otherSystems=federationOverview?332:80;
- const localPlanets=federationOverview?332:80,otherPlanets=federationOverview?(regionSelected?332:495):125;
+ const localSystems=overviewMode?272:64,otherSystems=overviewMode?332:80;
+ const localPlanets=overviewMode?332:80,otherPlanets=overviewMode?(regionSelected?332:495):125;
  document.querySelectorAll('.region-ink').forEach(e=>{
   e.style.display=view==='all'||overview||!$('labels').checked?'none':'';
   e.style.fontSize=Math.min(30,Math.max(14*unit,Math.min(23*unit,22)))+'px';

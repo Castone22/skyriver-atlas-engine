@@ -1,1 +1,1 @@
-function matchesRecord(record,value){const n=normalizedName(value);return !!n&&[record.id,record.name,planetLabel(record.name),record.nickname,...planetAliases(record.name),...(record.aliases||[])].some(v=>normalizedName(v)===n)}
+function matchesRecord(record,value){const n=normalizedName(value);return !!n&&[record.id,record.name,planetName(record.name),record.nickname,...planetAliases(record.name),...(record.aliases||[])].some(v=>normalizedName(v)===n)}

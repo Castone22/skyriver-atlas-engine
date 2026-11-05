@@ -23,7 +23,7 @@ function draw(){
   const c=color(s),points=Array.from({length:6},(_,i)=>{const a=(i*60-90)*Math.PI/180;return[s.x+94*Math.cos(a),s.y+94*Math.sin(a)].join(',')}).join(' ');
   svg('polygon',{points,fill:c,stroke:c,class:'chart-cell'},hexLayer);
   const g=svg('g',{id:'node-'+s.id,class:s.major?'major':'', 'data-region':s.region},nodes);
-  const hit=objectTarget(systemArticleTitle(s),{class:'star-hit',tabindex:'0',role:'button','aria-label':`Inspect ${s.name}${s.tier?', Tier '+s.tier+' '+TIER_NAMES[s.tier]:''}${s.centralBodyType==='silent-darkened'?', Silent-darkened dead star':''}${s.centralBodyType==='black-hole'?', black-hole system':''}${s.worlds.length?', '+s.worlds.map(planetDisplayName).join(', '):''}`},g);
+  const hit=objectTarget(systemArticleTitle(s),{class:'star-hit',tabindex:'0',role:'button','aria-label':`Inspect ${s.name}${s.tier?', Tier '+s.tier+' '+TIER_NAMES[s.tier]:''}${s.centralBodyType==='silent-darkened'?', Silent-darkened dead star':''}${s.centralBodyType==='black-hole'?', black-hole system':''}${s.worlds.length?', '+s.worlds.map(planetName).join(', '):''}`},g);
   svg('circle',{cx:s.x,cy:s.y,r:25,fill:'transparent'},hit);
   svg('circle',{cx:s.x,cy:s.y,r:22,fill:'none',stroke:c,'stroke-width':1,class:'focus-ring'},hit);
   if(s.cloaked)svg('circle',{cx:s.x,cy:s.y,r:21,fill:'none',stroke:'#398cff','stroke-width':1.8,'stroke-dasharray':'12 6 3 7',opacity:.85,'pointer-events':'none'},hit);

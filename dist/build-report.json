@@ -14,13 +14,13 @@
   {
     "id": "iulr",
     "file": "iulr-atlas.html",
-    "bytes": 938116,
+    "bytes": 937997,
     "warnings": []
   },
   {
     "id": "kadaym",
     "file": "kadaym-atlas.html",
-    "bytes": 1471418,
+    "bytes": 1471390,
     "warnings": [
       "vije: missing planet record Chorus",
       "querial: missing planet record Corianna",
@@ -37,13 +37,13 @@
   {
     "id": "uacs",
     "file": "uacs-atlas.html",
-    "bytes": 2158751,
+    "bytes": 2158731,
     "warnings": []
   },
   {
     "id": "grand",
     "file": "grand-atlas.html",
-    "bytes": 8164609,
+    "bytes": 8164617,
     "warnings": []
   }
 ]

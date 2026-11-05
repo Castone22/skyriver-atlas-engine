@@ -1,1 +1,1 @@
-function planetDisplayName(name){return planetResolvedTitles.get(name)||name}
+function planetName(name){return planetResolvedTitles.get(name)||name}
