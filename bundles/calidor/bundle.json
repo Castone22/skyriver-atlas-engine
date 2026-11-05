@@ -23,6 +23,8 @@
     "downloadName": "Calidor-Stellar-Atlas.html",
     "overviewAlias": "dominion",
     "overviewTitle": "DOMINION OVERVIEW",
-    "overviewSubtitle": "53 systems · six adjoining regions"
+    "overviewSubtitle": "53 systems · six adjoining regions",
+    "indexFirstSystem": "Forge",
+    "indexHintAtlas": "Dominion of Calidor"
   }
 }

@@ -24,6 +24,8 @@
     "configurableLabelsMessage": "Kadaym retains its native label policy; use its cartography data or another profile for configurable thresholds."
   },
   "slots": {
-    "downloadName": "Kadaym-Stellar-Atlas.html"
+    "downloadName": "Kadaym-Stellar-Atlas.html",
+    "indexFirstSystem": "Virezk",
+    "indexHintAtlas": "Elysian Collective"
   }
 }
