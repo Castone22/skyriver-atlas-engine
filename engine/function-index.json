@@ -1916,28 +1916,16 @@
     ],
     "bytes": 1086
   },
-  "setView-5a65e3a280b5": {
+  "setView": {
     "name": "setView",
     "profiles": [
       "calidor",
       "elysian",
+      "iulr",
+      "kadaym",
       "uacs"
     ],
-    "bytes": 1487
-  },
-  "setView-b3d7ffb7defe": {
-    "name": "setView",
-    "profiles": [
-      "iulr"
-    ],
-    "bytes": 619
-  },
-  "setView-cd6ab0f8ae6d": {
-    "name": "setView",
-    "profiles": [
-      "kadaym"
-    ],
-    "bytes": 1873
+    "bytes": 2241
   },
   "showRealm": {
     "name": "showRealm",

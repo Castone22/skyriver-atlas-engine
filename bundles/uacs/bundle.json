@@ -23,11 +23,13 @@
     "overviewAlias": "alliance",
     "overviewTitle": "ALLIANCE OVERVIEW",
     "overviewSubtitle": "42 charted systems · five adjoining regional charts",
-    "affiliationLink": "{{brand}}"
+    "affiliationLink": "{{brand}}",
+    "overviewOptionLabel": "Overview · "
   },
   "flags": {
     "selectFirstWorld": true,
     "stationRoute": "station",
-    "widgetKeepsAddress": true
+    "widgetKeepsAddress": true,
+    "widgetOutlineState": true
   }
 }

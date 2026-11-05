@@ -23,12 +23,14 @@
     "overviewAlias": "collective",
     "overviewTitle": "COLLECTIVE OVERVIEW",
     "overviewSubtitle": "Five known regions · boundaries and separation are schematic",
-    "affiliationLink": "{{brand}}"
+    "affiliationLink": "{{brand}}",
+    "overviewOptionLabel": "Overview · "
   },
   "flags": {
     "planetPageLinks": true,
     "selectFirstWorld": true,
     "stationRoute": "station",
-    "widgetKeepsAddress": true
+    "widgetKeepsAddress": true,
+    "widgetOutlineState": true
   }
 }

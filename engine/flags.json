@@ -9,5 +9,6 @@
   "regionHighlight": { "description": "The whole-atlas chart highlights one region (highlightedRegion) instead of switching between overview and regional charts.", "default": false },
   "selectFirstWorld": { "description": "Selecting a system without naming an object also selects its first catalogued world.", "default": false },
   "stationRoute": { "description": "How the station overview appears in the address: station (station=1), focus (focus=station) or empty for no station overview route.", "default": "" },
-  "widgetKeepsAddress": { "description": "In widget mode with no system open the address bar is left untouched instead of being rewritten with the current view.", "default": false }
+  "widgetKeepsAddress": { "description": "In widget mode with no system open the address bar is left untouched instead of being rewritten with the current view.", "default": false },
+  "widgetOutlineState": { "description": "Region outlines on the chart get their pressed state set even in widget mode.", "default": false }
 }

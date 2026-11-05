@@ -25,7 +25,10 @@
   "slots": {
     "downloadName": "IULR-Stellar-Atlas.html",
     "overviewAlias": "union",
-    "affiliationLink": "{{brand}}"
+    "affiliationLink": "{{brand}}",
+    "overviewOptionLabel": "",
+    "overviewTitle": "",
+    "overviewSubtitle": ""
   },
   "flags": {
     "closeSidebarOnSelect": true,

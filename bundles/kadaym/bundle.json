@@ -27,7 +27,10 @@
     "downloadName": "Kadaym-Stellar-Atlas.html",
     "indexFirstSystem": "Virezk",
     "indexHintAtlas": "Elysian Collective",
-    "affiliationLink": "Elysian Collective"
+    "affiliationLink": "Elysian Collective",
+    "overviewOptionLabel": "Federation overview · ",
+    "overviewTitle": "FEDERAL TERRITORIAL OVERVIEW",
+    "overviewSubtitle": "Regional positions are schematic · remote holdings shown separately"
   },
   "flags": {
     "closeSidebarOnSelect": true,

@@ -26,11 +26,13 @@
     "overviewSubtitle": "53 systems · six adjoining regions",
     "indexFirstSystem": "Forge",
     "indexHintAtlas": "Dominion of Calidor",
-    "affiliationLink": "{{brand}}"
+    "affiliationLink": "{{brand}}",
+    "overviewOptionLabel": "Overview · "
   },
   "flags": {
     "keepStationPart": true,
     "stationRoute": "station",
-    "widgetKeepsAddress": true
+    "widgetKeepsAddress": true,
+    "widgetOutlineState": true
   }
 }
