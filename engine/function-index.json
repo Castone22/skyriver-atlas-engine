@@ -1923,28 +1923,16 @@
     ],
     "bytes": 524
   },
-  "setSystemFocus-b1b2fd2900d0": {
-    "name": "setSystemFocus",
-    "profiles": [
-      "iulr"
-    ],
-    "bytes": 778
-  },
-  "setSystemFocus-fa10b9ff0fee": {
-    "name": "setSystemFocus",
-    "profiles": [
-      "kadaym"
-    ],
-    "bytes": 767
-  },
-  "setSystemFocus-fa97a454091d": {
+  "setSystemFocus": {
     "name": "setSystemFocus",
     "profiles": [
       "calidor",
       "elysian",
+      "iulr",
+      "kadaym",
       "uacs"
     ],
-    "bytes": 763
+    "bytes": 1086
   },
   "setView-5a65e3a280b5": {
     "name": "setView",

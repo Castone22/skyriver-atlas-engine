@@ -185,7 +185,7 @@ let planetClickTimer;
 /* @atlas-function bindOrbitalSelection */
 /* @atlas-function drawBelt */
 /* @atlas-function mountSystem-c0022918dba2 */
-/* @atlas-function setSystemFocus-fa97a454091d */
+/* @atlas-function setSystemFocus */
 
 /* @atlas-function syncSystemFocus */
 /* @atlas-function applySystemZoom */
