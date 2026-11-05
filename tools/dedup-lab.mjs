@@ -16,7 +16,7 @@
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { spawnSync } from 'node:child_process';
 import path from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 import { Bundle, openBundle } from '../src/bundle.mjs';
 import { compileCore } from '../src/compile-core.mjs';
 import { createNodeHost } from '../src/compiler.mjs';
@@ -40,7 +40,10 @@ const canonical = (name) =>
 const host = createNodeHost({ root });
 const original = await host.atlas(atlasId);
 if (!original) throw new Error('No such atlas bundle: ' + atlasId);
-const definition = await original.json(original.manifest.atlas ?? 'atlas.json');
+// Build from the same definition the real build uses (maps/<id>.atlas.mjs normalises it).
+const definition = (
+  await import(pathToFileURL(path.join(root, 'maps', atlasId + '.atlas.mjs')).href)
+).default;
 const MARKER = /\/\* @atlas-function ([\w-]+) \*\//g;
 
 /** { name: key } for the functions this atlas uses, with their current keys. */
@@ -95,12 +98,16 @@ async function trial(swaps, label) {
     };
   }
   const expected = JSON.parse(
-    await readFile(path.join(root, 'tests/golden', atlasId + '.json'), 'utf8')
+    await readFile(
+      path.join(root, 'tests/golden', flag('quick') ? 'quick' : '', atlasId + '.json'),
+      'utf8'
+    )
   );
   const errors = [],
     changed = [];
+  if (actual.__load) errors.push('page load  ' + actual.__load);
   for (const [k, v] of Object.entries(actual)) {
-    if (!(k in expected)) continue;
+    if (k === '__load' || !(k in expected)) continue;
     if (v.startsWith('ERR')) errors.push(`${k}  ${v}`);
     else if (v !== expected[k]) changed.push(k);
   }
@@ -110,6 +117,14 @@ async function trial(swaps, label) {
       `(${errors.length} errors, ${changed.length} changed of ${total})`
   );
   return { ok: !errors.length && !changed.length, errors, changed, total };
+}
+
+// Control: with nothing swapped the lab build must reproduce the golden snapshots exactly,
+// otherwise the lab itself is not comparable to the real build and its results mean nothing.
+const control = await trial({}, 'control (no swaps)');
+if (!control.ok) {
+  console.error('The control build differs from the golden snapshots; aborting.');
+  process.exit(2);
 }
 
 const current = await currentKeys();

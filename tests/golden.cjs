@@ -91,6 +91,8 @@ async function tour(html, id, data, { quick = false } = {}) {
   const { w, errors } = open(html, id, freeze);
   await new Promise((r) => setTimeout(r, 15));
   const out = {};
+  // Errors thrown while the page loaded. Absent (and so absent from golden files) when clean.
+  if (errors.length) out.__load = 'ERR: ' + errors[0].split('\n')[0];
   let steps = stepsFor(data);
   if (quick) steps = steps.filter((_, i) => i % 10 === 0);
   for (const step of steps) {
@@ -135,7 +137,10 @@ if (require.main === module)
     );
     const targets = ids.length ? ids : ATLASES;
     const goldenDir = path.join(root, 'tests', 'golden');
-    fs.mkdirSync(goldenDir, { recursive: true });
+    // Quick mode skips steps, and some atlases (IULR) render a step differently depending on earlier
+    // steps, so quick runs have their own golden files.
+    const goldenFor = (id) => path.join(goldenDir, quick ? 'quick' : '', id + '.json');
+    fs.mkdirSync(path.dirname(goldenFor('x')), { recursive: true });
     let failed = 0;
     for (const id of targets) {
       const html = fs.readFileSync(
@@ -151,7 +156,7 @@ if (require.main === module)
         fs.writeFileSync(outFile, JSON.stringify(actual));
         continue;
       }
-      const file = path.join(goldenDir, id + '.json');
+      const file = goldenFor(id);
       const errors = Object.entries(actual).filter(([, v]) => v.startsWith('ERR')).length;
       if (update) {
         fs.writeFileSync(file, JSON.stringify(actual, null, 0) + '\n');
@@ -159,10 +164,7 @@ if (require.main === module)
         continue;
       }
       const expected = JSON.parse(fs.readFileSync(file, 'utf8'));
-      const subset = quick
-        ? Object.fromEntries(Object.entries(expected).filter(([k]) => k in actual))
-        : expected;
-      const d = diff(subset, actual);
+      const d = diff(expected, actual);
       const bad = d.changed.length + d.added.length + d.missing.length;
       const secs = ((Date.now() - started) / 1000).toFixed(1);
       if (bad) {
