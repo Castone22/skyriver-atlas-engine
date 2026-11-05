@@ -73,3 +73,19 @@ Rules:
 - Functions that differ only by a slot value are one function. Do not keep duplicate variants.
 - The template module must stay free of Node imports; it has to run in a browser.
 - Add a test in `tests/template.test.mjs` when adding a filter.
+
+## Bundle slots
+
+`bundle.json` may carry a `slots` object of per-atlas strings. The compiler merges it into the
+template values, so a shared function can use `'{{name|jsstr}}'` where atlases differ only by a
+string (for example a download file name). A slot value may itself use `{{brand}}`. Before merging
+function variants this way, prove that each profile's rendered text is unchanged (default brand and
+a custom brand), then rebuild and compare output as described above. Variants that differ in real
+logic stay separate; do not force a merge by changing behaviour.
+
+## Transports and the loader
+
+`src/bundle-http.mjs`, `src/host-browser.mjs` and `loader/` are browser code: keep them free of Node
+imports (`tests/transport.test.mjs` and `tests/pure.test.mjs` enforce this). The serving contract for
+the wiki extension is in `docs/TRANSPORTS.md`; do not change URL layout, placeholders or the `files`
+contract without updating that file. Generated `files` digests are not committed.
