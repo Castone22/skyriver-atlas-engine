@@ -180,7 +180,7 @@ const toraParts=[
 /* @atlas-function silentDecoration */
 /* @atlas-function notableSitesMarkup */
 /* @atlas-function systemView-11dd718e88f5 */
-/* @atlas-function planetView-cf20bf164e17 */
+/* @atlas-function planetView */
 /* @atlas-function mountPlanet-0bd1b42f8c6a */
 /* @atlas-function setPlanetFocus */
 

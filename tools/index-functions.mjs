@@ -53,6 +53,7 @@ for (const key of files) names[key] = await nameOf(key);
 if (flag('fix-names')) {
   const renames = {};
   for (const key of files) {
+    if (!key.includes('-')) continue; // already unhashed (<name>.js)
     const hash = key.slice(key.lastIndexOf('-') + 1);
     const wanted = `${names[key].name}-${hash}`;
     if (wanted !== key) renames[key] = wanted;

@@ -24,9 +24,15 @@
     "configurableLabelsMessage": "Kadaym retains its native label policy; use its cartography data or another profile for configurable thresholds."
   },
   "slots": {
+    "affiliationLink": "Elysian Collective",
     "downloadName": "Kadaym-Stellar-Atlas.html",
     "indexFirstSystem": "Virezk",
     "indexHintAtlas": "Elysian Collective",
-    "affiliationLink": "Elysian Collective"
+    "localCaptionNote": "Only recorded host relationships are shown",
+    "localEmptyNote": "No moons or hosted stations are catalogued for this world.",
+    "localMoonNoun": "natural satellite"
+  },
+  "flags": {
+    "elsewhereStations": true
   }
 }

@@ -23,8 +23,11 @@
     "labelThresholdsByLevel": true
   },
   "slots": {
+    "affiliationLink": "{{brand}}",
     "downloadName": "IULR-Stellar-Atlas.html",
-    "overviewAlias": "union",
-    "affiliationLink": "{{brand}}"
+    "localCaptionNote": "Moon and station assignments follow the second-edition survey",
+    "localEmptyNote": "No local objects charted.",
+    "localMoonNoun": "moon",
+    "overviewAlias": "union"
   }
 }

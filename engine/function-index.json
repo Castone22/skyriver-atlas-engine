@@ -330,6 +330,7 @@
       "calidor",
       "elysian",
       "iulr",
+      "kadaym",
       "uacs"
     ],
     "bytes": 106
@@ -340,6 +341,7 @@
       "calidor",
       "elysian",
       "iulr",
+      "kadaym",
       "uacs"
     ],
     "bytes": 564
@@ -1363,40 +1365,16 @@
     ],
     "bytes": 141
   },
-  "planetView-0715b777abc0": {
+  "planetView": {
     "name": "planetView",
     "profiles": [
+      "calidor",
+      "elysian",
+      "iulr",
+      "kadaym",
       "uacs"
     ],
-    "bytes": 3203
-  },
-  "planetView-a28a3e40f648": {
-    "name": "planetView",
-    "profiles": [
-      "calidor"
-    ],
-    "bytes": 3219
-  },
-  "planetView-c55e4f5e2a4a": {
-    "name": "planetView",
-    "profiles": [
-      "kadaym"
-    ],
-    "bytes": 3424
-  },
-  "planetView-cf20bf164e17": {
-    "name": "planetView",
-    "profiles": [
-      "iulr"
-    ],
-    "bytes": 3168
-  },
-  "planetView-e9459c82ce5a": {
-    "name": "planetView",
-    "profiles": [
-      "elysian"
-    ],
-    "bytes": 3210
+    "bytes": 3669
   },
   "planetWikiQuery": {
     "name": "planetWikiQuery",

@@ -20,12 +20,20 @@
     ]
   },
   "slots": {
+    "affiliationLink": "{{brand}}",
     "downloadName": "Calidor-Stellar-Atlas.html",
-    "overviewAlias": "dominion",
-    "overviewTitle": "DOMINION OVERVIEW",
-    "overviewSubtitle": "53 systems · six adjoining regions",
     "indexFirstSystem": "Forge",
     "indexHintAtlas": "Dominion of Calidor",
-    "affiliationLink": "{{brand}}"
+    "localCaptionNote": "Only recorded host relationships are shown",
+    "localEmptyNote": "No moons or hosted stations are catalogued for this world.",
+    "localMoonNoun": "natural satellite",
+    "overviewAlias": "dominion",
+    "overviewSubtitle": "53 systems · six adjoining regions",
+    "overviewTitle": "DOMINION OVERVIEW"
+  },
+  "flags": {
+    "hiddenStationFilters": [
+      "TORA"
+    ]
   }
 }

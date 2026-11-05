@@ -110,10 +110,12 @@ const illustrativeTypes={
 /* @atlas-function orbitalFact-9ec16f8dcf1f */
 /* @atlas-function worldRecord */
 /* @atlas-function bodyKey-cbba6d726e90 */
+/* @atlas-function cloakBadge */
+/* @atlas-function cloakDecoration */
 /* @atlas-function silentDecoration */
 /* @atlas-function notableSitesMarkup */
 /* @atlas-function systemView-042c2ccd42ba */
-/* @atlas-function planetView-c55e4f5e2a4a */
+/* @atlas-function planetView */
 /* @atlas-function mountPlanet-028b1c9a2a66 */
 /* @atlas-function setPlanetFocus */
 

@@ -162,7 +162,7 @@ const triadParts=[
 /* @atlas-function silentDecoration */
 /* @atlas-function notableSitesMarkup */
 /* @atlas-function systemView-21d3975cb065 */
-/* @atlas-function planetView-e9459c82ce5a */
+/* @atlas-function planetView */
 /* @atlas-function greatBlinkFrame */
 /* @atlas-function mountPlanet-7851c7e1056c */
 /* @atlas-function setPlanetFocus */

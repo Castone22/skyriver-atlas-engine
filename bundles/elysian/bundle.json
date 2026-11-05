@@ -20,9 +20,12 @@
     ]
   },
   "slots": {
+    "affiliationLink": "{{brand}}",
+    "localCaptionNote": "Only recorded host relationships are shown",
+    "localEmptyNote": "No moons or hosted stations are catalogued for this world.",
+    "localMoonNoun": "natural satellite",
     "overviewAlias": "collective",
-    "overviewTitle": "COLLECTIVE OVERVIEW",
     "overviewSubtitle": "Five known regions · boundaries and separation are schematic",
-    "affiliationLink": "{{brand}}"
+    "overviewTitle": "COLLECTIVE OVERVIEW"
   }
 }

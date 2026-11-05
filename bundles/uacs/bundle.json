@@ -20,9 +20,15 @@
     ]
   },
   "slots": {
+    "affiliationLink": "{{brand}}",
+    "localCaptionNote": "Only recorded host relationships are shown",
+    "localEmptyNote": "No moons or hosted stations are catalogued for this world.",
+    "localMoonNoun": "natural satellite",
     "overviewAlias": "alliance",
-    "overviewTitle": "ALLIANCE OVERVIEW",
     "overviewSubtitle": "42 charted systems · five adjoining regional charts",
-    "affiliationLink": "{{brand}}"
+    "overviewTitle": "ALLIANCE OVERVIEW"
+  },
+  "flags": {
+    "titledLocalOrbitLabels": true
   }
 }

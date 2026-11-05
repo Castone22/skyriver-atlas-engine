@@ -153,7 +153,7 @@ const toraParts=[
 /* @atlas-function silentDecoration */
 /* @atlas-function notableSitesMarkup */
 /* @atlas-function systemView-491b4eedc9e8 */
-/* @atlas-function planetView-0715b777abc0 */
+/* @atlas-function planetView */
 // Solar-system analogues. Diameters and distances are compressed for readability.
 let solarGlyphSequence=0;
 /* @atlas-function solarPlanetGlyph */

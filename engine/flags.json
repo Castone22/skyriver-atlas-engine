@@ -1,1 +1,14 @@
-{}
+{
+  "elsewhereStations": {
+    "description": "The local-orbit view lists the system's 'register' stations under an 'Elsewhere in the system' heading (and keeps the blank line the layout reserves for it).",
+    "default": false
+  },
+  "hiddenStationFilters": {
+    "description": "Station categories left out of the local-orbit station filter bar (planetView).",
+    "default": []
+  },
+  "titledLocalOrbitLabels": {
+    "description": "The local-orbit accessible labels use the synchronised planet title (planetName) instead of the catalogue name.",
+    "default": false
+  }
+}
