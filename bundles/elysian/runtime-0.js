@@ -150,7 +150,7 @@ const triadParts=[
 /* @atlas-function triadElevation */
 /* @atlas-function triadScreen */
 
-/* @atlas-function stationScreen-9033d810843c */
+/* @atlas-function stationScreen */
 /* @atlas-function highlightPart */
 /* @atlas-function openStation */
 /* @atlas-function closeStation */

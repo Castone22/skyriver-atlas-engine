@@ -2153,21 +2153,15 @@
     ],
     "bytes": 435
   },
-  "stationScreen-7218cedf4124": {
+  "stationScreen": {
     "name": "stationScreen",
     "profiles": [
-      "calidor"
-    ],
-    "bytes": 1589
-  },
-  "stationScreen-9033d810843c": {
-    "name": "stationScreen",
-    "profiles": [
+      "calidor",
       "elysian",
       "iulr",
       "uacs"
     ],
-    "bytes": 1592
+    "bytes": 1643
   },
   "status": {
     "name": "status",
