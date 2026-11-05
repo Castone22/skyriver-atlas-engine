@@ -216,8 +216,9 @@ const dossierFields=[
 /* @atlas-function bodyFacts-8ed6b2825a9e */
 /* @atlas-function safeImageURL */
 /* @atlas-function imageAPI */
-/* @atlas-function currentImageTitle-030d0f61958c */
-/* @atlas-function loadLiveImage-077ad175ff4d */
+/* @atlas-function currentImageTitle */
+/* @atlas-function planetArticle-synced */
+/* @atlas-function loadLiveImage */
 /* @atlas-function embeddedImageMarkup */
 /* @atlas-function imageMarkup */
 /* @atlas-function referenceImage */

@@ -4,7 +4,7 @@ async function loadLiveImage(title,force=false){
  const request=(async()=>{
   let facts=saved?.facts;
   try{
-   const key=planetKey(title),identity=key&&planetArticles[key];
+   const key=__ATLAS__.flags.planetArticleTracking?planetKey(title):null,identity=key&&planetArticles[key];
    const page=await imageAPI({...identity?.pageid?{pageids:String(identity.pageid)}:{titles:title},prop:'revisions',rvprop:'ids|content',rvslots:'main'});
    if(key&&rememberPlanetArticle(key,page)){savePlanetArticles();applyPlanetTitles()}
    let asset={articleTitle:title,image:null,imageSource:{articleTitle:title,articleUrl:url(page.title||title)}};

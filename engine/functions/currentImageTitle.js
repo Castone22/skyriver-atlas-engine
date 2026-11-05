@@ -1,0 +1,1 @@
+function currentImageTitle(record,name){const title=planetArticle(name)||record?.articleTitle||canonicalTitle(name);return __ATLAS__.flags.straightenImageTitleQuotes?title.replaceAll('’',"'").replaceAll('‘',"'"):title}

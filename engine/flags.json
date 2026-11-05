@@ -1,6 +1,14 @@
 {
+  "planetArticleTracking": {
+    "description": "Live article lookups use, and update, the tracked wiki page id of a planet (synced article titles).",
+    "default": false
+  },
   "searchSystemFields": {
     "description": "Extra system fields (by property name) whose text is searchable, in addition to the classification terms.",
     "default": []
+  },
+  "straightenImageTitleQuotes": {
+    "description": "Curly apostrophes in the article title used for live images are replaced by straight ones.",
+    "default": false
   }
 }
