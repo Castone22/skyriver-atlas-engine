@@ -30,6 +30,8 @@
   "flags": {
     "bordersToggleClass": true,
     "linkTitleSync": "worlds",
+    "minimapRegionPaths": true,
+    "minimapViewBox": "0 0 2850 2570",
     "visibilityResetsLabels": true
   }
 }

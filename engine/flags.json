@@ -1,6 +1,8 @@
 {
   "bordersToggleClass": { "description": "Hiding map borders toggles the borders-hidden class on the region layer instead of setting its display style.", "default": false },
   "linkTitleSync": { "description": "Link text shows a planet's synced title: off, worlds (only when the name is a catalogued world) or all (whenever the label equals the name).", "default": "off" },
+  "minimapRegionPaths": { "description": "The minimap draws each region as a path built from outlines relative to the region bounds, instead of an absolute polygon or rectangle.", "default": false },
+  "minimapViewBox": { "description": "Fixed viewBox for the minimap, for atlases with no atlasExtent; null uses the atlas extent.", "default": null },
   "planetLinkAttributes": { "description": "Links to planets carry data-planet-link and data-planet-title attributes so the page can find and retitle them.", "default": false },
   "svgTextSyncedTitles": { "description": "SVG text passes through planetName() so a planet's synced article title is shown instead of its catalogue name.", "default": false },
   "visibilityResetsLabels": { "description": "Updating visibility also resets every label's display from the labels checkbox before labels are rescaled.", "default": false }

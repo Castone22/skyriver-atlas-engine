@@ -226,7 +226,7 @@ addEventListener('focus',()=>refreshVisibleImage(true));addEventListener('online
 
 /* @atlas-function renderDetail-33028d7ad651 */
 /* @atlas-function bindDetail */
-/* @atlas-function drawMinimap-bacdf6a5ea9f */
+/* @atlas-function drawMinimap */
 /* @atlas-function buildNotes */
 
 /* @atlas-function toast */

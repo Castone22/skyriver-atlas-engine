@@ -514,22 +514,16 @@
     ],
     "bytes": 1281
   },
-  "drawMinimap-a0c41a19f64d": {
-    "name": "drawMinimap",
-    "profiles": [
-      "iulr"
-    ],
-    "bytes": 453
-  },
-  "drawMinimap-bacdf6a5ea9f": {
+  "drawMinimap": {
     "name": "drawMinimap",
     "profiles": [
       "calidor",
       "elysian",
+      "iulr",
       "kadaym",
       "uacs"
     ],
-    "bytes": 636
+    "bytes": 778
   },
   "el": {
     "name": "el",
