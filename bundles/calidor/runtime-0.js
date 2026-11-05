@@ -53,7 +53,7 @@ addEventListener('hashchange',()=>{if(location.href!==lastRestoredURL)restoreRou
 /* @atlas-function svg */
 /* @atlas-function textSVG */
 /* @atlas-function objectTarget */
-/* @atlas-function svgLink-32328fac037a */
+/* @atlas-function svgLink */
 
 /* @atlas-function draw-3dd6f33ea9c1 */
 /* @atlas-function updateSelection */

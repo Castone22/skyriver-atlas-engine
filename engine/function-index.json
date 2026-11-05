@@ -2227,28 +2227,16 @@
     ],
     "bytes": 175
   },
-  "svgLink-32328fac037a": {
+  "svgLink": {
     "name": "svgLink",
     "profiles": [
       "calidor",
+      "elysian",
+      "iulr",
       "kadaym",
       "uacs"
     ],
-    "bytes": 294
-  },
-  "svgLink-5a82efb83326": {
-    "name": "svgLink",
-    "profiles": [
-      "elysian"
-    ],
-    "bytes": 448
-  },
-  "svgLink-b772889af571": {
-    "name": "svgLink",
-    "profiles": [
-      "iulr"
-    ],
-    "bytes": 344
+    "bytes": 622
   },
   "syncPlanetArticleTitles": {
     "name": "syncPlanetArticleTitles",
