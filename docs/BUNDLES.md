@@ -2,6 +2,8 @@
 
 Status: proposal. Nothing here is implemented yet.
 
+HTTP transport, the browser host, the loader page and the serving contract: see `docs/TRANSPORTS.md`.
+
 ## Goal
 
 The engine must not know which atlas it is serving. An atlas is a self-contained **atlas bundle**.

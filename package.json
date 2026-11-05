@@ -23,7 +23,9 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "extract": "node tools/extract.cjs",
-    "update-iulr": "node tools/update-iulr-v9.cjs"
+    "update-iulr": "node tools/update-iulr-v9.cjs",
+    "build:loader": "node tools/build-loader.mjs",
+    "manifest": "node tools/bundle-manifest.mjs"
   },
   "devDependencies": {
     "@babel/parser": "7.28.4",

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="generator" content="skyriver-atlas-loader {{version|html}}" />
+    <title>@@TITLE@@</title>
+    <style>
+      body {
+        margin: 0;
+        background: #09111c;
+        color: #e7edf4;
+        font:
+          16px/1.6 system-ui,
+          sans-serif;
+      }
+      .status {
+        padding: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="status" id="status">Loading atlas…</p>
+    <!-- The serving host fills in the title and this JSON block. See docs/TRANSPORTS.md. -->
+    <script type="application/json" id="atlas-loader-config">
+      @@CONFIG@@
+    </script>
+    <script>
+      @@LOADER@@
+    </script>
+  </body>
+</html>
