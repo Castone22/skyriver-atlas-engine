@@ -2,3 +2,4 @@ node_modules/
 *.lock
 *.tmp
 .test-tools/
+.claude/
