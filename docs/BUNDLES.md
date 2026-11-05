@@ -232,3 +232,30 @@ Because one engine serves every atlas, **backward compatibility is a standing re
 ## Open questions
 
 - None currently blocking.
+
+## Status after step 4
+
+Function variants were converged only where the difference is data that a slot can reproduce
+exactly. `bundle.json` may carry a `slots` object of per-atlas strings; the compiler merges it into
+the template values next to `brand`, and a slot value may itself use `{{brand}}`. Functions use
+them as `'{{name|jsstr}}'`. Each merge was proven before it was applied: for every affected profile,
+with its real brand and a hostile custom brand, the shared source renders to exactly the text that
+profile's own variant rendered to. All nine default `dist/` outputs stayed byte-identical.
+
+Merged (373 to 364 function files):
+
+| Function | Profiles merged | Slots |
+| --- | --- | --- |
+| `downloadHTML` | Kadaym, IULR, Calidor | `downloadName` |
+| `resolveRegion` | Elysian, UACS, IULR, Calidor | `overviewAlias` |
+| `setView` | Elysian, UACS, Calidor | `overviewTitle`, `overviewSubtitle` |
+| `renderIndex` | Kadaym, Calidor | `indexFirstSystem`, `indexHintAtlas` |
+| `affiliationMarkup` | all five stellar profiles using it | `affiliationLink` |
+
+Everything else stays as separate variants because the differences are logic, not data. Typical
+causes: different helper calls (`planetName`, `planetLabel`, `planetDisplayName`,
+`planetArticleName`), extra branches (Calidor's Foundry, IULR's outer-system zone and cloak status,
+TORA schematics), Kadaym's federation-overview camera, different DOM handling, and markup or colour
+differences. Variants that differ by a stray semicolon or whitespace (for example `leadInfobox`)
+cannot be merged without changing some atlas's output bytes. A further reduction needs a deliberate
+behaviour decision per group (for example one `planetName` helper contract), not mechanical slots.
