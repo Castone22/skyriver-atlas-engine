@@ -1,0 +1,1 @@
+function overlay(title,text,error=false){$('loading').hidden=false;$('loadTitle').textContent=title;$('loadText').textContent=text;$('spinner').hidden=error;$('errorActions').hidden=!error;$('loadKind').textContent=error?'ATLAS UNAVAILABLE':'OPENING STELLAR ATLAS'}

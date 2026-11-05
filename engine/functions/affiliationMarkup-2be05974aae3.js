@@ -1,0 +1,1 @@
+function affiliationMarkup(s){return s?.affiliation?`<div class="affiliation">${s.affiliation==='Elysian Collective'?link('Elysian Collective'):esc(s.affiliation)}${s.acquisition?'<br>'+esc(s.acquisition):''}</div>`:''}

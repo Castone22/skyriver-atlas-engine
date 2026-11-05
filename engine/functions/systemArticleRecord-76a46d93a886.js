@@ -1,0 +1,1 @@
+function systemArticleRecord(s){if(!hasOrbitChart(s))return s;const title=systemArticleTitle(s),own=DATA.objectImages?.[title];return {...s,articleTitle:s.systemDataArticle||title,image:own?.image||null,imageSource:own?.imageSource}}

@@ -1,0 +1,1 @@
+function affiliationMarkup(s){return s?.affiliation?`<div class="affiliation">${s.affiliation==='Interstellar Union of Liberated Republics'?link('Interstellar Union of Liberated Republics'):esc(s.affiliation)}${s.acquisition?'<br>'+esc(s.acquisition):''}</div>`:''}

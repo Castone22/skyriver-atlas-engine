@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://skyrivercodex.lzridgecodes.net/atlas/schema/v1",
+  "title": "Skyriver Atlas Definition",
+  "type": "object",
+  "required": ["schemaVersion", "id", "kind", "renderer", "meta", "data"],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "id": { "type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]*$" },
+    "kind": { "enum": ["stellar", "galaxy", "geographic"] },
+    "renderer": { "type": "string" },
+    "meta": {
+      "type": "object",
+      "required": ["title", "article"],
+      "properties": { "title": { "type": "string" }, "article": { "type": "string" } }
+    },
+    "data": { "type": "object" },
+    "constants": { "type": "object" },
+    "documents": { "type": "object" },
+    "features": { "type": "object" },
+    "policies": { "type": "object" },
+    "presentation": { "type": "object" },
+    "dependencies": { "type": "object", "additionalProperties": { "type": "string" } }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "kind": { "const": "stellar" } } },
+      "then": {
+        "properties": {
+          "data": {
+            "required": ["systems", "regions", "worlds"],
+            "properties": {
+              "systems": { "type": "array" },
+              "regions": { "type": "object" },
+              "worlds": { "type": "object" },
+              "stations": { "type": "array" },
+              "satellites": { "type": "array" },
+              "entities": { "type": "array" }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

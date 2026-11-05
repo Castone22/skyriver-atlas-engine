@@ -1,0 +1,256 @@
+
+const DATA = __ATLAS__.data;
+const $=id=>document.getElementById(id),NS='http://www.w3.org/2000/svg';
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const titles={'Ferryman’s Rest':"Ferryman's Rest",'Circa’s Triad':"Circa's Triad",'Ysh Kha’lah':"Ysh Kha'lah",'Da’zha':"Da'zha"};
+const canonicalTitle=name=>{const key=planetKey(name);if(key&&planetArticles[key]?.title)return planetArticles[key].title;const n=normalizedName(name);const record=[...allRecords,...Object.entries(DATA.worlds).map(([name,r])=>({name,...r})),...(DATA.stations||[]),...(DATA.satellites||[]),...(DATA.entities||[])].find(r=>[r.name,...(r.aliases||[])].some(v=>normalizedName(v)===n));return record?.articleTitle||record?.name||name};
+const referenceTargets=new Map([...(DATA.stations||[]),...(DATA.satellites||[])].filter(r=>r.referencePage).map(r=>[r.name,r]));
+/* @atlas-function url-def748458460 */
+const link=(name,label=name,cls='')=>{const key=planetKey(name);return `<a class="${cls}" ${key?'data-planet-link="'+esc(key)+'" '+(label===name?'data-planet-title="'+esc(key)+'"':''):''} href="${url(name)}" target="_blank" rel="noopener">${esc(label===name?planetName(name):label)}</a>`};
+/* @atlas-function systemNameTitle-9fda0c6f7dde */
+/* @atlas-function hasOrbitChart-cd9024002c05 */
+/* @atlas-function systemArticleTitle-f58f1eb5d931 */
+/* @atlas-function systemLink-fdecf73a043c */
+/* @atlas-function systemArticleRecord-76a46d93a886 */
+const TIER_NAMES={1:'Quarantined',2:'Suppressed',3:'Active Threat',4:'High Contamination',5:'Critical Infestation'};
+const TIER_COLORS={1:'#c7bb86',2:'#c9a375',3:'#da8b7c',4:'#df6c87',5:'#ec5391'};
+const color=s=>s.tier?TIER_COLORS[s.tier]:s.kind==='hazard'||s.kind==='uncertain'?'#e58088':s.affiliation==='United Federation of Kadaym'?'#dfbd78':s.kind==='context'||s.kind==='neutral'?'#a9afc5':DATA.regions[s.region]?.color||'#8ac9ee';
+const allRecords=[...DATA.systems,...DATA.unplaced];
+const EXOTIC_TYPES={'pulsar':'Pulsar','magnetar':'Magnetar','cataclysmic-variable':'Cataclysmic variable'};
+let overviewMode=true;
+let view='all',scope='region',selected=null,selectedWorld=null,vb={x:0,y:0,w:1000,h:1000},baseWidth=1000,drag=null,moved=false,pointers=new Map(),pinch=null,searchTimer;
+const flags={federation:true,context:true,hazard:true};
+/* @atlas-function atlasParams-6271ec249f97 */
+let widgetRegion=null;
+const widgetMode=atlasParams().get('view')==='widget';
+const embedMode=widgetMode||atlasParams().get('embed')==='1';
+let routeReady=false,routeChanging=0,restoringRoute=false,regionalCamera=null,markerDossierTimer=0;
+const MARKER_DOSSIER_DELAY=600;
+/* @atlas-function cancelMarkerDossier-15bccd3721a6 */
+/* @atlas-function setDetailOpen-e2782282528c */
+/* @atlas-function deferMarkerDossier-0e62c8c49927 */
+
+const normalizedName=value=>String(value||'').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]/g,'');
+// Planet catalogue keys remain stable for saved routes and parent relationships.
+// Article page IDs survive MediaWiki moves, even after an old redirect is removed.
+const planetArticles=DATA.planetArticles||(DATA.planetArticles={});
+const PLANET_TITLE_CACHE='elysian-atlas-planet-articles-v1';
+/* @atlas-function planetKey-1cb13ea29086 */
+/* @atlas-function planetName-2cc548f30373 */
+/* @atlas-function planetNameMarkup-8843193ce798 */
+/* @atlas-function rememberPlanetArticle-ed41223e9d6f */
+/* @atlas-function savePlanetArticles-26235763916d */
+/* @atlas-function restorePlanetArticles-2d59dd2322d4 */
+/* @atlas-function applyPlanetTitles-53535df4d141 */
+/* @atlas-function acceptPlanetTitleBatch-334c25617fa1 */
+let planetTitleRequest=null,planetTitleTimer=0,planetTitlesChecked=0;
+/* @atlas-function syncPlanetTitles-9dcb91258d04 */
+
+restorePlanetArticles();
+/* @atlas-function resolveRegion-3addd3c05c4b */
+/* @atlas-function matchesRecord-051b812e1fdd */
+/* @atlas-function resolveSystem-b072cde34b21 */
+/* @atlas-function resolveObjectName-5012baba771b */
+/* @atlas-function matchesSearch-1e10758fbb3c */
+// Fragment links accept the friend's human-readable names, IDs and aliases.
+/* @atlas-function resolveNamedRoute-1c697381e61c */
+/* @atlas-function resolveHashRoute-5116f419e4ca */
+/* @atlas-function resolvePlanetRoute-629fd3a45518 */
+let lastRestoredURL='';
+/* @atlas-function routeSnapshot-abc4a9cfc8b4 */
+/* @atlas-function routeURL-66be76949ffb */
+/* @atlas-function persistRoute-d9e0092dba25 */
+/* @atlas-function beginNavigation-0fd5ef194092 */
+/* @atlas-function endNavigation-6e8b075af270 */
+/* @atlas-function restoreRoute-0b88bbe100e3 */
+addEventListener('popstate',event=>restoreRoute(event.state));
+addEventListener('hashchange',()=>{if(location.href!==lastRestoredURL)restoreRoute(null,true)});
+
+/* @atlas-function svg-15cbb58776ce */
+/* @atlas-function textSVG-4271b37f08ac */
+/* @atlas-function objectTarget-5ac46b52abf4 */
+/* @atlas-function svgLink-5a82efb83326 */
+
+/* @atlas-function draw-117dd77b0105 */
+/* @atlas-function updateSelection-c7b25b859c12 */
+/* @atlas-function updateVisibility-c50d0d4435c5 */
+/* @atlas-function zoomPercent-95c4be08c40a */
+/* @atlas-function labelThresholds-shared */
+/* @atlas-function scaleLabels-87ef634aa138 */
+/* @atlas-function applyView-92d149458601 */
+/* @atlas-function fitBounds-b4532b0852c7 */
+/* @atlas-function setView-5a65e3a280b5 */
+/* @atlas-function zoom-c44842c8dbe1 */
+/* @atlas-function select-abff9c66530d */
+/* @atlas-function tierMarkup-7d5f85e75120 */
+/* @atlas-function renderMapLegend-5eb74e180b2d */
+
+/* @atlas-function affiliationMarkup-2be05974aae3 */
+/* @atlas-function searchRecords-2c82af157790 */
+/* @atlas-function classificationTerms-936c39321d8a */
+/* @atlas-function searchTerms-d729ac0d2d99 */
+/* @atlas-function searchObject-79fc0f1f6bd8 */
+/* @atlas-function renderIndex-958d0331c817 */
+const reducedMotion=matchMedia('(prefers-reduced-motion: reduce)');
+let orbitPaused=reducedMotion.matches,orbitFrame=0,orbitClock=0,orbitLastTime=null;
+const worldColors={'Mahanzk':'#90bcd2','Zelenzk':'#c4a5d9','Helkana':'#91c4a1','Vardis Prime':'#c9a08b','Rakazk':'#c78e74','Zekozha':'#9bcdda','Qerzhek':'#b7c9e2','Prathia':'#9ec2a7'};
+const STATION_TYPES={
+ 'TORA':{color:'#62d9ff',symbol:'◌'},
+ 'Civil Engineering':{color:'#83c9de',symbol:'⊞',path:'M-5-5H5V5H-5Z M0-7V7 M-7 0H7'},
+ 'Habitation':{color:'#9bcca3',symbol:'◎',path:'M-6 0A6 6 0 1 0 6 0A6 6 0 1 0-6 0 M-6 0H6 M0-6V6'},
+ 'Military':{color:'#b8a8e8',symbol:'▽',path:'M-6-5H6V0Q5 5 0 8Q-5 5-6 0Z M-3-1H3'},
+ 'Weaponry':{color:'#e69b91',symbol:'◇',path:'M0-7L7 0 0 7-7 0Z M-3 0H3 M0-3V3'},
+ 'Industry':{color:'#dab879',symbol:'▥',path:'M-6 6V-3L-2 0V-3L2 0V-6H6V6Z M-3 3H3'},
+ 'Other':{color:'#9bb6c8',symbol:'✧',path:'M0-7L6-3V3L0 7-6 3V-3Z M-3 0H3 M0-3V3'}
+};
+let stationOverview=false;
+let systemFocused=false,systemZoom=1,planetFocus=null,showBelts=true;
+const stationFilters=new Set(Object.keys(STATION_TYPES));
+const siteType=name=>/station|triad|jumpgate/i.test(name)?'Station / structure':/colony/i.test(name)?'Colony':'World';
+/* @atlas-function stationRecords-6dbf0bad7f69 */
+/* @atlas-function entityRecords-0f5c4922bbe2 */
+/* @atlas-function starRecords-ec33bfb46268 */
+/* @atlas-function focusableWorld-cb7f63b35c48 */
+/* @atlas-function localChartParent-d4abf6b96bca */
+/* @atlas-function localBodies-d9b7cb24c73f */
+/* @atlas-function moonRecords-a24c1b17c702 */
+/* @atlas-function systemBodies-90b5d3a3d39f */
+// Size and colour keep illustrative bodies subordinate to named Codex worlds.
+const illustrativeTypes={
+ cinder:[2.5,'#c38970'],rocky:[2.8,'#a29b91'],desert:[3.3,'#cfaa76'],
+ icy:[2.6,'#a6c1cd'],gas:[4.9,'#c7aa83'],ringed:[4.6,'#baab89'],'ice-giant':[4.2,'#76adbb']
+};
+/* @atlas-function illustrativePlanet-73a0b9ed368f */
+/* @atlas-function solarLayout-f526c44b9d79 */
+/* @atlas-function ordinal-ae1883835ce5 */
+/* @atlas-function orbitalFact-9ec16f8dcf1f */
+/* @atlas-function worldRecord-84ce24ab94d2 */
+/* @atlas-function bodyKey-84851d3446fd */
+const TORA_CLASS='Terranos Omnidirectional Reflector Array';
+const toraParts=[
+ {title:'Axial mast',label:'MAST',x:329,y:95,lx:420,ly:70,note:'The upper tower narrows to a bright axial tip. Its internal equipment is unspecified in the class record.'},
+ {title:'Annular disc',label:'ANNULUS',x:372,y:190,lx:435,ly:129,note:'The disc encircles the narrow neck between the axial mast and the hub. Its wide rim is visible edge-on in the class illustration.'},
+ {title:'Reflector panels',label:'PANELS',x:195,y:174,lx:96,ly:159,note:'Three pairs of broad, segmented panels extend from the central structure. The array network screens Union systems from distant observation.'},
+ {title:'Equatorial hub',label:'HUB',x:295,y:258,lx:121,ly:356,note:'The panel trusses meet at the cyan-banded hub. The class carries approximately 2,500 crew. The deck plan is undisclosed.'},
+ {title:'Ventral spindle',label:'SPINDLE',x:342,y:377,lx:445,ly:408,note:'A stepped lower hull tapers to a second axial tip. The class power plant is classified and its position is unknown.'}
+];
+
+/* @atlas-function hardware-03831a59e0b0 */
+/* @atlas-function toraHubDetail-00225664361b */
+/* @atlas-function toraElevation-821522f988eb */
+const triadParts=[
+ {title:'Port hub',label:'PORT HUB',x:137,y:329,lx:36,ly:398,note:'One of the two outer ring-shaped hubs visible in the published illustration. “Port” is a schematic orientation label.'},
+ {title:'Central hub',label:'CENTRAL HUB',x:331,y:215,lx:205,ly:66,note:'The largest hub in the illustration, with concentric decks, a tall spire cluster and a lower axial structure. Internal deck assignments are unspecified.'},
+ {title:'Starboard hub',label:'STARBOARD HUB',x:538,y:179,lx:525,ly:61,note:'The second outer hub repeats the circular decks and central spire silhouette. “Starboard” is a schematic orientation label.'},
+ {title:'Transit bridges',label:'BRIDGES',x:432,y:224,lx:520,ly:356,note:'Two illuminated structural bridges connect the three hubs. This schematic interprets them as transit connections without assigning undocumented routes or capacities.'},
+ {title:'Docking rims',label:'DOCKING RIMS',x:342,y:310,lx:430,ly:430,note:'The article confirms that the Triad welcomes visiting ships and charges docking fees. Peripheral docking structures are visible in the illustration, but individual berth locations are not documented.'}
+];
+/* @atlas-function hasStationSchematic-1ff9c4185627 */
+/* @atlas-function currentStationParts-59d77381ae0f */
+/* @atlas-function triadElevation-249c03fd59b4 */
+/* @atlas-function triadScreen-444c940134f9 */
+
+/* @atlas-function stationScreen-9033d810843c */
+/* @atlas-function highlightPart-ec06a7b48e22 */
+/* @atlas-function openStation-19e4d19bff3f */
+/* @atlas-function closeStation-ca9b2daff778 */
+/* @atlas-function bindToraName-19110e3dcd02 */
+/* @atlas-function bindToraControl-33a926f53fd4 */
+
+/* @atlas-function cloakDecoration-24ab67234ecf */
+/* @atlas-function cloakBadge-5cc2d9eae220 */
+/* @atlas-function silentDecoration-976cdad40c22 */
+/* @atlas-function notableSitesMarkup-4b8c38b6fa92 */
+/* @atlas-function systemView-21d3975cb065 */
+/* @atlas-function planetView-e9459c82ce5a */
+/* @atlas-function greatBlinkFrame-585a93d619d8 */
+/* @atlas-function mountPlanet-7851c7e1056c */
+/* @atlas-function setPlanetFocus-b177c4195ac6 */
+
+/* @atlas-function stopOrbit-0cc176473bd1 */
+/* @atlas-function blackHoleGlyph-7eab0f0383d5 */
+/* @atlas-function exoticGlyph-927b08292c59 */
+/* @atlas-function deadStarGlyph-dd5460ecd152 */
+/* @atlas-function nefandumGlyph-4af1b0d5f19a */
+const STATION_SILHOUETTES={
+ 'Civil Engineering':{hull:'M-9-7H-5V5H5V-7H9V9H-9Z',detail:'M-2-5H2V5H-2Z M-9-3H-5 M5-3H9 M-9 3H-5 M5 3H9'},
+ 'Habitation':{hull:'M-7 0A7 7 0 1 0 7 0A7 7 0 1 0-7 0 M-3 0A3 3 0 1 1 3 0A3 3 0 1 1-3 0 M-13-4H-9V4H-13Z M9-4H13V4H9Z',detail:'M-9 0H9 M0-7V7'},
+ 'Military':{hull:'M0-10L6-4H10V4H6L0 10-6 4H-10V-4H-6Z',detail:'M-3-4H3V4H-3Z M-8-2V2 M8-2V2'},
+ 'Weaponry':{hull:'M-4-5H4V6H-4Z M-9-2H-5V4H-9Z M5-2H9V4H5Z M-2-12H2V-5H-2Z',detail:'M-6 1H6 M0 6V10 M-4 10H4'},
+ 'Industry':{hull:'M-10-5Q-7-8-4-5V5Q-7 8-10 5Z M-3-7Q0-10 3-7V7Q0 10-3 7Z M4-5Q7-8 10-5V5Q7 8 4 5Z',detail:'M-10 0H10 M-7-5V5 M7-5V5 M0-7V7'},
+ 'Other':{hull:'M-8-8Q0 2 8-8Q6 3 0 4Q-6 3-8-8Z M-3 6H3V10H-3Z',detail:'M0-8V6 M-10 10H10 M-4-3L0-8 4-3'}
+};
+/* @atlas-function stationGlyph-e953be378c82 */
+let planetClickTimer;
+/* @atlas-function bindOrbitalSelection-2ada81283e17 */
+/* @atlas-function drawBelt-8b00d00c4a09 */
+/* @atlas-function mountSystem-c0022918dba2 */
+/* @atlas-function setSystemFocus-fa97a454091d */
+
+/* @atlas-function syncSystemFocus-83b192ca5f37 */
+/* @atlas-function applySystemZoom-1e5bda2d6702 */
+/* @atlas-function bindSystemControls-a6497c8f29aa */
+/* @atlas-function chooseSystemWorld-dd954dc2f0f2 */
+/* @atlas-function toggleAtlasMotion-de18252fe945 */
+reducedMotion.addEventListener('change',e=>{if(e.matches){orbitPaused=true;renderDetail()}});
+/* @atlas-function imageRecord-4fabc53fa463 */
+// Read the current own-article infobox; embedded images remain the offline fallback.
+const liveImages=new Map(),liveImageRequests=new Map(),IMAGE_REFRESH_MS=60000;
+let liveImageTimer=0;
+/* @atlas-function splitWiki-7001aae8a9fe */
+/* @atlas-function infoboxFile-77a2b60f484d */
+/* @atlas-function legacyInfobox-fe5c174ea60e */
+/* @atlas-function leadInfobox-2c49558cef8a */
+/* @atlas-function fileFromInfobox-7cd1972b28f5 */
+const dossierFields=[
+ ['Population','population'],['Capital','planetary capital','capital','capital city','system capital'],
+ ['Type','object type','type','classification','class','structure type'],['Region','region'],['System','star system','system'],
+ ['Central body','central body','central body(s)','suns'],['Parent body','parent body'],['Orbital position','orbital position'],
+ ['Natural satellites','natural satellites'],['Sovereignty','current sovereignty','controlling faction','sovereignty'],
+ ['Status','status'],['Location','location'],['Role','role','role in logistics'],['Mass','mass'],['Radius','radius'],['Rotation period','rotation period'],['QERA production','qera production'],['Access restrictions','access restrictions']
+];
+/* @atlas-function dossierFacts-52ca6cd92702 */
+/* @atlas-function factValue-b555ac85a06d */
+/* @atlas-function factGrid-57fecff486ec */
+/* @atlas-function bodyFacts-8ed6b2825a9e */
+/* @atlas-function safeImageURL-dd9793f79487 */
+/* @atlas-function imageAPI-d9cceff5dd0a */
+/* @atlas-function currentImageTitle-030d0f61958c */
+/* @atlas-function loadLiveImage-077ad175ff4d */
+/* @atlas-function embeddedImageMarkup-e051b4bd8690 */
+/* @atlas-function imageMarkup-d02b3f7a0d61 */
+/* @atlas-function referenceImage-8b3a85e9be79 */
+/* @atlas-function stopImageRefresh-8e16449d7d4c */
+/* @atlas-function refreshVisibleImage-56c4427266bb */
+addEventListener('focus',()=>refreshVisibleImage(true));addEventListener('online',()=>refreshVisibleImage(true));document.addEventListener('visibilitychange',()=>document.hidden?stopImageRefresh():refreshVisibleImage(true));
+
+/* @atlas-function renderDetail-33028d7ad651 */
+/* @atlas-function bindDetail-db46506a33e0 */
+/* @atlas-function drawMinimap-bacdf6a5ea9f */
+/* @atlas-function buildNotes-shared */
+
+/* @atlas-function toast-4b4587647c32 */
+/* @atlas-function downloadHTML-870878028ca0 */
+$('regionPicker').onchange=()=>setView($('regionPicker').value);
+$('regionPicker').addEventListener('keydown',e=>e.stopPropagation());document.querySelectorAll('[data-scope]').forEach(b=>b.onclick=()=>{scope=b.dataset.scope;document.querySelectorAll('[data-scope]').forEach(n=>n.classList.toggle('active',n===b));renderIndex()});$('search').oninput=()=>{clearTimeout(searchTimer);searchTimer=setTimeout(renderIndex,90)};
+$('zoomIn').onclick=()=>zoom(.8);$('zoomOut').onclick=()=>zoom(1.25);$('fit').onclick=()=>setView(view,true,false,overviewMode);$('minimap').onclick=()=>setView('all');$('minimap').onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();setView('all')}};
+['labels','borders','hexes','majorOnly'].forEach(id=>$(id).onchange=updateVisibility);document.querySelectorAll('[data-filter]').forEach(c=>c.onchange=()=>{flags[c.dataset.filter]=c.checked;updateVisibility()});
+$('filterBtn').onclick=()=>{const open=$('filters').classList.toggle('hidden');$('filterBtn').setAttribute('aria-expanded',String(!open))};
+$('embedDetails').onclick=()=>setDetailOpen(!$('detail').classList.contains('open'),true);
+let indexOpen=false;
+/* @atlas-function setIndexOpen-fae6a2ac47dc */
+for(const id of ['toggleIndexPanel','indexToggle','embedIndex'])$(id).onclick=()=>setIndexOpen(!indexOpen);
+$('toggleDetailPanel').onclick=()=>{if(embedMode){setDetailOpen(!$('detail').classList.contains('open'),true);return}const hidden=$('atlasLayout').classList.toggle('dossier-collapsed');$('toggleDetailPanel').setAttribute('aria-expanded',String(!hidden));resizeChart()};
+$('mobileInspect').onclick=()=>setDetailOpen(true,true);
+$('fullscreen').onclick=async()=>{try{if(document.fullscreenElement)await document.exitFullscreen();else await document.documentElement.requestFullscreen()}catch{toast('Fullscreen is unavailable in this view.')}};
+['sourcesBtn','footerNotes'].forEach(id=>$(id).onclick=()=>$('notes').showModal());$('closeNotes').onclick=()=>$('notes').close();$('notes').onclick=e=>{if(e.target===$('notes')){const b=$('notes').getBoundingClientRect();if(e.clientX<b.left||e.clientX>b.right||e.clientY<b.top||e.clientY>b.bottom)$('notes').close()}};$('download').onclick=downloadHTML;
+const map=$('map');map.addEventListener('dragstart',event=>event.preventDefault());map.addEventListener('wheel',e=>{e.preventDefault();zoom(Math.exp(Math.max(-100,Math.min(100,e.deltaY))*.002),e.clientX,e.clientY)},{passive:false});
+map.addEventListener('pointerdown',e=>{if(e.target.closest('a'))return;e.preventDefault();moved=false;pointers.set(e.pointerId,{x:e.clientX,y:e.clientY});(e.target.closest('[data-region-outline]')||map).setPointerCapture(e.pointerId);drag={x:e.clientX,y:e.clientY,v:{...vb},id:e.pointerId};if(pointers.size===2){const p=[...pointers.values()];pinch={d:Math.hypot(p[0].x-p[1].x,p[0].y-p[1].y)}}});
+map.addEventListener('pointermove',e=>{if(!pointers.has(e.pointerId))return;pointers.set(e.pointerId,{x:e.clientX,y:e.clientY});if(pointers.size===2&&pinch){const p=[...pointers.values()],d=Math.hypot(p[0].x-p[1].x,p[0].y-p[1].y);zoom(pinch.d/d,(p[0].x+p[1].x)/2,(p[0].y+p[1].y)/2);pinch.d=d;moved=true;return}if(!drag||drag.id!==e.pointerId)return;const dx=e.clientX-drag.x,dy=e.clientY-drag.y;if(!moved&&Math.abs(dx)+Math.abs(dy)<=4)return;moved=true;const b=map.getBoundingClientRect();vb.x=drag.v.x-dx*vb.w/b.width;vb.y=drag.v.y-dy*vb.h/b.height;applyView()});
+/* @atlas-function endPointer-28a00b6b73ab */map.addEventListener('pointerup',endPointer);map.addEventListener('pointercancel',endPointer);
+map.addEventListener('keydown',e=>{if(e.target!==map)return;const f=.12;if(['+','=','-','0','ArrowUp','ArrowDown','ArrowLeft','ArrowRight'].includes(e.key))e.preventDefault();switch(e.key){case '+':case '=':zoom(.8);break;case '-':zoom(1.25);break;case '0':setView(view,true,false,overviewMode);break;case 'ArrowUp':vb.y-=vb.h*f;applyView();break;case 'ArrowDown':vb.y+=vb.h*f;applyView();break;case 'ArrowLeft':vb.x-=vb.w*f;applyView();break;case 'ArrowRight':vb.x+=vb.w*f;applyView();break}});
+document.addEventListener('keydown',e=>{if(!widgetMode&&e.key==='Escape'&&!$('notes').open){const returning=stationOverview||planetFocus||systemFocused;if(stationOverview){closeStation()}else if(planetFocus){setPlanetFocus(null)}else if(systemFocused){setSystemFocus(false)}$('filters').classList.add('hidden');$('filterBtn').setAttribute('aria-expanded','false');if(!returning)setIndexOpen(false);setDetailOpen(false)}});
+let resizeTimer;/* @atlas-function resizeChart-58872a43c687 */
+addEventListener('resize',resizeChart);
+$('systemFocus').innerHTML='';$('systemFocus').classList.add('hidden');$('mapArea').classList.remove('system-focused');$('flag').src=DATA.assets.flag;$('flagLink').href=$('federationLink').href=url('Elysian Collective');$('filters').classList.add('hidden');$('toast').classList.add('hidden');$('filterBtn').setAttribute('aria-expanded','false');document.querySelectorAll('[data-scope]').forEach(b=>b.classList.toggle('active',b.dataset.scope==='region'));document.body.classList.toggle('embed',embedMode);document.body.classList.toggle('widget',widgetMode);setIndexOpen(false);buildNotes();draw();restoreRoute();routeReady=true;persistRoute();applyPlanetTitles();syncPlanetTitles();
+addEventListener('focus',()=>syncPlanetTitles(true));addEventListener('online',()=>syncPlanetTitles(true));document.addEventListener('visibilitychange',()=>{if(document.hidden)clearTimeout(planetTitleTimer);else syncPlanetTitles(true)});

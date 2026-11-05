@@ -1,0 +1,1 @@
+function localBodies(s,name){const moons=moonRecords(s).filter(b=>b.parent===name),hosts=new Set([name,...moons.map(b=>b.name)]);return {moons,stations:stationRecords(s).filter(b=>hosts.has(b.parent))}}

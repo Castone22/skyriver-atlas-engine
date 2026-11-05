@@ -1,0 +1,119 @@
+{
+  "method": "JSDOM with mocked canvas and geometry; not visual browser verification",
+  "results": [
+    {
+      "id": "calidor",
+      "systems": 53,
+      "regions": 6,
+      "navigation": [
+        "overview",
+        "system",
+        "planet",
+        "overview"
+      ],
+      "markers": 53,
+      "specialized": [
+        "Foundry"
+      ],
+      "errors": []
+    },
+    {
+      "id": "elysian",
+      "systems": 66,
+      "regions": 5,
+      "navigation": [
+        "overview",
+        "system",
+        "planet",
+        "overview"
+      ],
+      "markers": 66,
+      "specialized": [
+        "Circa’s Triad",
+        "page-id title moves"
+      ],
+      "errors": []
+    },
+    {
+      "id": "iulr",
+      "systems": 41,
+      "regions": 3,
+      "navigation": [
+        "overview",
+        "system",
+        "planet",
+        "overview"
+      ],
+      "markers": 41,
+      "specialized": [
+        "Ouua TORA-01"
+      ],
+      "errors": []
+    },
+    {
+      "id": "kadaym",
+      "systems": 188,
+      "regions": 15,
+      "navigation": [
+        "overview",
+        "system",
+        "planet",
+        "overview"
+      ],
+      "markers": 188,
+      "specialized": [],
+      "errors": []
+    },
+    {
+      "id": "uacs",
+      "systems": 42,
+      "regions": 5,
+      "navigation": [
+        "overview",
+        "system",
+        "planet",
+        "overview"
+      ],
+      "markers": 42,
+      "specialized": [
+        "Solar System glyphs"
+      ],
+      "errors": []
+    },
+    {
+      "id": "dsl-demo",
+      "systems": 2,
+      "regions": 1,
+      "navigation": [
+        "overview",
+        "system",
+        "planet",
+        "overview"
+      ],
+      "markers": 2,
+      "specialized": [],
+      "errors": []
+    },
+    {
+      "id": "mahanzk",
+      "places": 36,
+      "placeSelection": true,
+      "errors": []
+    },
+    {
+      "id": "grand",
+      "empireRows": 5,
+      "search": true,
+      "priority": true,
+      "affiliationTransfer": true,
+      "snapshotSystems": {
+        "elysian-stellar-atlas": 66,
+        "uacs-stellar-atlas": 42,
+        "calidor-stellar-atlas": 53,
+        "kadaym-stellar-atlas": 188,
+        "iulr-stellar-atlas": 41
+      },
+      "errors": []
+    }
+  ]
+}

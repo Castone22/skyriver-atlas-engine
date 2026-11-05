@@ -1,0 +1,1 @@
+function tierMarkup(s){return s?.tier?`<span class="tier-badge" style="--tier-color:${TIER_COLORS[s.tier]}">TIER ${s.tier} · ${TIER_NAMES[s.tier]}</span>${s.centralBodyType==='silent-darkened'?'<span class="tier-badge" style="--tier-color:#ab8498">DEAD STAR</span>':''}`:''}

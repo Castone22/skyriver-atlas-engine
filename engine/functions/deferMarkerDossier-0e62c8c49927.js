@@ -1,0 +1,1 @@
+function deferMarkerDossier(id){if(innerWidth>700)return;cancelMarkerDossier();markerDossierTimer=setTimeout(()=>{markerDossierTimer=0;if(selected===id&&!systemFocused)setDetailOpen(true)},MARKER_DOSSIER_DELAY)}

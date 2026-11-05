@@ -1,0 +1,1 @@
+function persistRoute(mode='replace'){if(!routeReady||restoringRoute||routeChanging)return;const address=routeURL();try{history[mode==='push'?'pushState':'replaceState'](routeSnapshot(),'',address)}catch{}lastRestoredURL=location.href;const full=new URL(address);full.searchParams.delete('embed');full.searchParams.delete('view');$('openFullAtlas').href=full.href}

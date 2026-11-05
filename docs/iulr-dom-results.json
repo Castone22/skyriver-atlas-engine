@@ -1,0 +1,45 @@
+{
+  "method": "JSDOM with mocked canvas/SVG geometry and read-only MediaWiki fixtures; not visual or live API verification",
+  "results": [
+    {
+      "name": "missing articles retain atlas names",
+      "passed": true
+    },
+    {
+      "name": "canonical title reaches dossier, orbit labels, article links and image lookup",
+      "passed": true
+    },
+    {
+      "name": "rename preserves focused planet, camera, zoom, URL and exported catalogue",
+      "passed": true
+    },
+    {
+      "name": "renamed search and routes resolve the original stable planet key",
+      "passed": true
+    },
+    {
+      "name": "cached page ID tracks a move without redirect and rejects old-title recreation",
+      "passed": true
+    },
+    {
+      "name": "focus, online and visible-again refresh; hidden tabs stay quiet",
+      "passed": true
+    },
+    {
+      "name": "180-second polling callback refreshes visible tabs only",
+      "passed": true
+    },
+    {
+      "name": "Refresh data updates title and persists cache",
+      "passed": true
+    },
+    {
+      "name": "offline reload retains cached canonical title without runtime errors",
+      "passed": true
+    },
+    {
+      "name": "widget planet symbol links to the canonical renamed article",
+      "passed": true
+    }
+  ]
+}

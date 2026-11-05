@@ -1,0 +1,32 @@
+[
+  {
+    "id": "kadaym",
+    "sourceHashMatches": true,
+    "completeCatalogueMatches": true,
+    "generatedCatalogueMatches": true
+  },
+  {
+    "id": "elysian",
+    "sourceHashMatches": true,
+    "completeCatalogueMatches": true,
+    "generatedCatalogueMatches": true
+  },
+  {
+    "id": "uacs",
+    "sourceHashMatches": true,
+    "completeCatalogueMatches": true,
+    "generatedCatalogueMatches": true
+  },
+  {
+    "id": "iulr",
+    "sourceHashMatches": true,
+    "completeCatalogueMatches": true,
+    "generatedCatalogueMatches": true
+  },
+  {
+    "id": "calidor",
+    "sourceHashMatches": true,
+    "completeCatalogueMatches": true,
+    "generatedCatalogueMatches": true
+  }
+]

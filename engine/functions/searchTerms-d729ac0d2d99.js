@@ -1,0 +1,1 @@
+function searchTerms(s){return [...classificationTerms(s),DATA.regions[s.region]?.name,s.name==='Kevak'?'Palorek':'',s.kind==='federation'?'Elysian Collective':'',...searchRecords(s).flatMap(classificationTerms)]}

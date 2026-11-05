@@ -1,0 +1,1 @@
+function go(value){if(value===1&&p<.9999){fitMap();wheelEntryGuard=true;}target=value;auto=true;$('detail').hidden=true;if(value===0){pendingFocus=null;history.replaceState(null,'',location.pathname+location.search.replace(/([?&])view=surface(&|$)/,'$1').replace(/[?&]$/,''))}if(reduced){p=target;auto=false;if(p===1&&pendingFocus){focusPlace(pendingFocus);pendingFocus=null}}}

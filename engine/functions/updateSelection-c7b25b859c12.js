@@ -1,0 +1,1 @@
+function updateSelection(){const l=$('selectionLayer');if(!l)return;l.innerHTML='';const s=DATA.systems.find(s=>s.id===selected);if(!s)return;svg('circle',{cx:s.x,cy:s.y,r:26,class:'selected-ring'},l);svg('path',{d:`M${s.x-35} ${s.y}h-8m78 0h8M${s.x} ${s.y-35}v-8m0 78v8`,class:'selected-cross'},l)}

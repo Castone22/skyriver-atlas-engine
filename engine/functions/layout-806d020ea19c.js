@@ -1,0 +1,1 @@
+function layout(){const rect=$('workspace').getBoundingClientRect();const ratio=rect.width/rect.height;if(ratio<1){$('galaxy').setAttribute('viewBox','240 0 1020 1000')}else{$('galaxy').setAttribute('viewBox','0 0 1500 1000')}}

@@ -1,0 +1,73 @@
+[
+  {
+    "id": "kadaym",
+    "file": "Kadaym-Stellar-Atlas(3).html",
+    "sha256": "69e16cb98a578d819e04a39480fc819c9352be64574577296b872d487ccf31b2",
+    "sizeBytes": 1926115,
+    "systems": 188,
+    "worlds": 234,
+    "satellites": 420,
+    "stations": 79,
+    "regions": 15
+  },
+  {
+    "id": "elysian",
+    "file": "Elysian-Stellar-Atlas.html",
+    "sha256": "3982e9a41a98be5084664affaeed51a7ac1f2cc488100580b8e1d333c28c32f6",
+    "sizeBytes": 2638463,
+    "systems": 66,
+    "worlds": 336,
+    "satellites": 762,
+    "stations": 42,
+    "regions": 5
+  },
+  {
+    "id": "uacs",
+    "file": "UACS-Stellar-Atlas.html",
+    "sha256": "50d833cf5e1c107c0ddb26a08e9edc905bb838c779cd358ec2a48eb4d5fe8734",
+    "sizeBytes": 2149265,
+    "systems": 42,
+    "worlds": 269,
+    "satellites": 1202,
+    "stations": 122,
+    "regions": 5
+  },
+  {
+    "id": "iulr",
+    "file": "IULR-Stellar-Atlas(2).html",
+    "sha256": "086360afcea27c85f78d07bc07d3138c85ef90909daad20893db0560b315ccd6",
+    "sizeBytes": 1188538,
+    "systems": 41,
+    "worlds": 265,
+    "satellites": 504,
+    "stations": 308,
+    "regions": 3
+  },
+  {
+    "id": "calidor",
+    "file": "Calidor-Stellar-Atlas.html",
+    "sha256": "2d9ac7fd3cb57e898bf619ea3a2f78c0173b40bcb2d3ccb2dd544c94db800011",
+    "sizeBytes": 358954,
+    "systems": 53,
+    "worlds": 89,
+    "satellites": 197,
+    "stations": 59,
+    "regions": 6
+  },
+  {
+    "id": "grand",
+    "file": "Grand-Atlas.html",
+    "sha256": "2c025ba853886382149f9c8ee1befb66a2d93121ee58ca8e78000147bd9d64d6",
+    "sizeBytes": 7964393,
+    "worlds": 0,
+    "regions": 0
+  },
+  {
+    "id": "mahanzk",
+    "file": "Mahanzk-Geographic-Atlas.html",
+    "sha256": "04afc2dbdd15ba107f3ce424ab68ed32874cdfbc7a9234590eb18c686729d14e",
+    "sizeBytes": 4382554,
+    "worlds": 0,
+    "regions": 0
+  }
+]

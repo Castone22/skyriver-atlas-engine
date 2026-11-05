@@ -1,0 +1,47 @@
+{
+  "coreTests": {
+    "passed": 22,
+    "failed": 0,
+    "originalCore": 9,
+    "iulrSynchronizationAndBuild": 13
+  },
+  "domIntegration": {
+    "passed": [
+      "calidor",
+      "elysian",
+      "iulr",
+      "kadaym",
+      "uacs",
+      "dsl-demo",
+      "mahanzk",
+      "grand"
+    ],
+    "failed": [],
+    "method": "JSDOM; mocked canvas/SVG geometry"
+  },
+  "sourcePreservation": {
+    "iulrV9FullDataMatches": true,
+    "otherDefinitionsUnchangedFromPriorPackage": 6,
+    "unrelatedAtlasOutputsUnchanged": 5,
+    "grandIulrSnapshotByteIdentical": true,
+    "otherGrandSnapshotsUnchanged": 4
+  },
+  "visualBrowserTesting": {
+    "status": "blocked",
+    "reason": "Chromium launch attempted; process singleton socket was prohibited by the execution environment."
+  },
+  "liveCodexApi": {
+    "status": "not verified",
+    "reason": "Title API responses were simulated; live availability and browser CORS were not tested."
+  },
+  "generatedJavaScript": {
+    "syntaxCheckedScripts": 11,
+    "errors": 0
+  },
+  "checkedAtUTC": "2026-11-05T03:12:13.042562+00:00",
+  "iulrDOMIntegration": {
+    "passed": 10,
+    "failed": 0,
+    "method": "JSDOM with read-only MediaWiki API fixtures and mocked canvas/SVG geometry"
+  }
+}

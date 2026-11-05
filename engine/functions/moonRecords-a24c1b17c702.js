@@ -1,0 +1,1 @@
+function moonRecords(s){if(!s)return [];return [...s.worlds.filter(name=>DATA.worlds[name]?.bodyType==='Moon').map(name=>({name,...DATA.worlds[name]})),...(DATA.satellites||[]).filter(b=>b.system===s.id)].map((b,i)=>({...b,index:i+1,type:'Moon',tint:b.tint||worldColors[b.name]||['#b6b2c8','#a6bac7','#baa990'][i%3]}))}

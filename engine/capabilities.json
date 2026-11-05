@@ -1,0 +1,117 @@
+{
+  "commonStellar": [
+    "region dropdown",
+    "zoom and pan",
+    "region highlighting",
+    "zoom-dependent labels",
+    "system and planet navigation",
+    "moons",
+    "station categories",
+    "multiple stars",
+    "black holes, pulsars and magnetars",
+    "Silent status",
+    "Codex links",
+    "live article images and dossier fields",
+    "widget and embed routes",
+    "keyboard controls",
+    "reduced motion"
+  ],
+  "profiles": {
+    "kadaym": {
+      "kind": "stellar",
+      "specialties": [
+        "federation overview camera",
+        "classified holdings",
+        "Nefmaat and Silent entities",
+        "federation label thresholds"
+      ],
+      "configurable": [
+        "index",
+        "motion"
+      ]
+    },
+    "elysian": {
+      "kind": "stellar",
+      "specialties": [
+        "page-ID-backed planet title updates",
+        "Circa’s Triad schematic",
+        "TORA schematic",
+        "nebula presentation"
+      ],
+      "configurable": [
+        "index",
+        "labels",
+        "motion"
+      ]
+    },
+    "uacs": {
+      "kind": "stellar",
+      "specialties": [
+        "page-ID-backed planet title updates",
+        "Solar System analogue glyphs",
+        "TORA schematic"
+      ],
+      "configurable": [
+        "index",
+        "labels",
+        "motion"
+      ]
+    },
+    "iulr": {
+      "kind": "stellar",
+      "specialties": [
+        "page-ID-backed planet title updates",
+        "animated cloak",
+        "TORA schematic",
+        "register and historical records",
+        "independent region highlight state"
+      ],
+      "configurable": [
+        "index",
+        "labels",
+        "motion"
+      ]
+    },
+    "calidor": {
+      "kind": "stellar",
+      "specialties": [
+        "Foundry schematic",
+        "TORA schematic",
+        "Calidor stellar glyphs"
+      ],
+      "configurable": [
+        "index",
+        "labels",
+        "motion"
+      ]
+    },
+    "grand": {
+      "kind": "galaxy",
+      "specialties": [
+        "live discovery",
+        "current generated snapshots",
+        "cross-atlas search",
+        "Drayson and Kevak authority policy",
+        "label collision avoidance",
+        "animated galaxy and darkverse"
+      ]
+    },
+    "mahanzk": {
+      "kind": "geographic",
+      "specialties": [
+        "WebGL globe with canvas fallback",
+        "cloud descent",
+        "surface cartography",
+        "terrain and contours",
+        "place filters",
+        "scaling labels",
+        "100 percent surface entry"
+      ]
+    }
+  },
+  "notes": [
+    "Capabilities describe retained source behavior; they are not all boolean feature switches.",
+    "Renderer-specific variants remain explicit. A specialized function is shared by profiles only when its contract and behavior match.",
+    "Live article title updates are retained in Elysian, UACS and IULR v9. Other profiles preserve their source article behavior."
+  ]
+}

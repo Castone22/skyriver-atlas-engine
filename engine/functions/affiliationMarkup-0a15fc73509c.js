@@ -1,0 +1,1 @@
+function affiliationMarkup(s){return s?.affiliation?`<div class="affiliation">${s.affiliation==='United Alliance of Commonwealth States'?link('United Alliance of Commonwealth States'):esc(s.affiliation)}${s.acquisition?'<br>'+esc(s.acquisition):''}</div>`:''}

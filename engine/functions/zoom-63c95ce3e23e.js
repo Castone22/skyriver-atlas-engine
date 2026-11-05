@@ -1,0 +1,1 @@
+function zoom(factor,cx,cy){const box=$('map').getBoundingClientRect();const px=cx==null?.5:(cx-box.left)/box.width,py=cy==null?.5:(cy-box.top)/box.height;const w=Math.max(260,Math.min(9000,vb.w*factor)),h=w*box.height/box.width;vb={x:vb.x+px*(vb.w-w),y:vb.y+py*(vb.h-h),w,h};applyView()}

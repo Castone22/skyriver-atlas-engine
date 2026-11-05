@@ -1,0 +1,1 @@
+function searchTerms(s){return [...classificationTerms(s),DATA.regions[s.region]?.name,s.name==='Kevak'?'Palorek':'',s.kind==='federation'?'United Alliance of Commonwealth States':'',...searchRecords(s).flatMap(classificationTerms)]}

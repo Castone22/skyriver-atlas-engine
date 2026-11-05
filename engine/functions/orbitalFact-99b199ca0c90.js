@@ -1,0 +1,5 @@
+function orbitalFact(w,s){
+ if(w?.type==='Entity')return `<div class="orbital-fact"><b>✧</b><div><small>SILENT MACROFORM</small><span>Slow stellar orbit · ${link(w.classArticle,'Nefandum class')}</span></div></div>`;
+ if(w?.type==='Station')return `<div class="orbital-fact station-fact" style="--station-color:${w.tint}"><b>${STATION_TYPES[w.category].symbol}</b><div><small>${w.categoryUnspecified?'CATEGORY UNSPECIFIED':esc(w.category.toUpperCase())}</small><span>${w.parent?'Orbits '+link(w.parent):w.orbitalZone==='outer-system'?'Outer stellar orbit · beyond chart scale':w.lane?'Independent stellar orbit':'Host orbit unspecified'}</span></div></div>`;
+ const slot=w?.orbitalPosition||(!w?s.orbitalPosition:null);if(w?.parent)return `<div class="orbital-fact"><b>☾</b><div><small>NATURAL SATELLITE</small><span>Orbits ${link(w.parent)}</span></div></div>`;if(!slot)return '';return `<div class="orbital-fact"><b>${String(slot).padStart(2,'0')}</b><div><small>ORBITAL POSITION · UNION REGISTER</small><span>${ordinal(slot)} planet${hasOrbitChart(s)?' in '+systemLink(s):s.orbitalHost?' in '+link(systemNameTitle(s.orbitalHost)):''}</span></div></div>`;
+}

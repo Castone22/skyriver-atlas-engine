@@ -1,0 +1,1 @@
+function focusPlace(place){if(p<.98){pendingFocus=place;go(1);return}scale=fitScale*(place.kind==='City'||place.kind==='Lost settlement'?3:1.8);panX=W/2-place.x*scale;panY=H/2-place.y*scale;updateMap();choose(place);if(W<700)toggleIndex(false)}

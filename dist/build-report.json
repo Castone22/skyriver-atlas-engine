@@ -1,0 +1,49 @@
+[
+  {
+    "id": "calidor",
+    "file": "calidor-atlas.html",
+    "bytes": 366130,
+    "warnings": []
+  },
+  {
+    "id": "elysian",
+    "file": "elysian-atlas.html",
+    "bytes": 2614632,
+    "warnings": []
+  },
+  {
+    "id": "iulr",
+    "file": "iulr-atlas.html",
+    "bytes": 963494,
+    "warnings": []
+  },
+  {
+    "id": "kadaym",
+    "file": "kadaym-atlas.html",
+    "bytes": 1517114,
+    "warnings": [
+      "vije: missing planet record Chorus",
+      "querial: missing planet record Corianna",
+      "victus: missing planet record Malvora",
+      "talus: missing planet record Ivory Vale"
+    ]
+  },
+  {
+    "id": "mahanzk",
+    "file": "mahanzk-atlas.html",
+    "bytes": 4384267,
+    "warnings": []
+  },
+  {
+    "id": "uacs",
+    "file": "uacs-atlas.html",
+    "bytes": 2158817,
+    "warnings": []
+  },
+  {
+    "id": "grand",
+    "file": "grand-atlas.html",
+    "bytes": 8179329,
+    "warnings": []
+  }
+]

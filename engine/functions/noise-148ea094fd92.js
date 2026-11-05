@@ -1,0 +1,1 @@
+function noise(x,y){let ix=Math.floor(x)%64,iy=Math.floor(y)%64,tx=x%1,ty=y%1;tx=tx*tx*(3-2*tx);ty=ty*ty*(3-2*ty);const a=grid[iy*65+ix]*(1-tx)+grid[iy*65+ix+1]*tx,b=grid[(iy+1)*65+ix]*(1-tx)+grid[(iy+1)*65+ix+1]*tx;return a*(1-ty)+b*ty}

@@ -1,0 +1,2009 @@
+{
+  "schemaVersion": 1,
+  "id": "grand",
+  "kind": "galaxy",
+  "renderer": "grand",
+  "meta": {
+    "title": "Grand Atlas",
+    "article": "Grand Atlas"
+  },
+  "data": {},
+  "constants": {
+    "galaxyImage": "atlas-asset:d5135455f8cbf4ad43144b3913ea1c5a7331663c87bd716ed0ab21c463e5dbc7",
+    "palette": [
+      "#c1d5e9",
+      "#a0b9d0",
+      "#d9c5a6",
+      "#ede0c3",
+      "#8faccb",
+      "#b5a6b8"
+    ],
+    "zones": [
+      {
+        "id": "great-wildlands",
+        "name": "< Great Wildlands >",
+        "article": "Great Wildlands",
+        "position": [
+          0.335844,
+          0.505645
+        ],
+        "color": "#b83b4d",
+        "security": "zero",
+        "atlasId": null
+      }
+    ]
+  },
+  "documents": {
+    "seed": [
+      {
+        "id": "elysian-stellar-atlas",
+        "slug": "elysian-stellar-atlas",
+        "name": "Elysian Collective",
+        "article": "Elysian Collective",
+        "position": [
+          0.332,
+          0.544
+        ],
+        "label": [
+          -28,
+          -36,
+          -114
+        ],
+        "color": "#78cfdf",
+        "live": true,
+        "aliases": [
+          "Elysium"
+        ]
+      },
+      {
+        "id": "uacs-stellar-atlas",
+        "slug": "uacs-stellar-altas",
+        "name": "Allied Commonwealth",
+        "article": "United Alliance of Commonwealth States",
+        "position": [
+          0.343,
+          0.595
+        ],
+        "label": [
+          -38,
+          48,
+          -66
+        ],
+        "color": "#73c895",
+        "live": true,
+        "aliases": [
+          "UACS",
+          "Alliance"
+        ]
+      },
+      {
+        "id": "calidor-stellar-atlas",
+        "slug": "calidor-stellar-atlas",
+        "name": "Dominion of Calidor",
+        "article": "Dominion of Calidor",
+        "position": [
+          0.393,
+          0.582
+        ],
+        "label": [
+          34,
+          46,
+          96
+        ],
+        "color": "#e48a89",
+        "live": true,
+        "aliases": [
+          "Calidor"
+        ]
+      },
+      {
+        "id": "kadaym-stellar-atlas",
+        "slug": "kadaym-stellar-altas",
+        "name": "Kadaymian Federation",
+        "article": "United Federation of Kadaym",
+        "position": [
+          0.566,
+          0.411
+        ],
+        "label": [
+          -32,
+          -42,
+          -100
+        ],
+        "color": "#dfb76c",
+        "live": true,
+        "aliases": [
+          "Kadaym"
+        ]
+      },
+      {
+        "id": "iulr-stellar-atlas",
+        "slug": "iulr-stellar-atlas",
+        "name": "Union of Liberated Republics",
+        "article": "Interstellar Union of Liberated Republics",
+        "position": [
+          0.653,
+          0.458
+        ],
+        "label": [
+          28,
+          -32,
+          62
+        ],
+        "color": "#b99bd8",
+        "live": true,
+        "aliases": [
+          "IULR",
+          "IURL"
+        ]
+      }
+    ],
+    "prioritySeed": {
+      "elysian-stellar-atlas": {
+        "regions": {
+          "traga": "Traga Expanse",
+          "aradian": "Aradian Flow",
+          "arvis": "Arvis Gulf",
+          "spinward": "Spinward Expanse",
+          "drayson": "Drayson Hinterlands"
+        },
+        "systems": [
+          {
+            "id": "varro",
+            "name": "Varro",
+            "aliases": [
+              "Varro A/B"
+            ],
+            "region": "traga",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "vantus",
+            "name": "Vantus",
+            "aliases": [],
+            "region": "traga",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "traga",
+            "name": "Traga",
+            "aliases": [],
+            "region": "traga",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "aegi",
+            "name": "Aegi",
+            "aliases": [],
+            "region": "traga",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "ixco",
+            "name": "Ixco",
+            "aliases": [],
+            "region": "traga",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "velka",
+            "name": "Velka",
+            "aliases": [],
+            "region": "traga",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "sylust",
+            "name": "Sylust",
+            "aliases": [],
+            "region": "traga",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "echuma",
+            "name": "Echuma",
+            "aliases": [],
+            "region": "traga",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "palasco",
+            "name": "Palasco",
+            "aliases": [],
+            "region": "traga",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "connol",
+            "name": "Connol",
+            "aliases": [],
+            "region": "traga",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "forge",
+            "name": "Forge",
+            "aliases": [],
+            "region": "traga",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "tecarsi",
+            "name": "Tecarsi",
+            "aliases": [],
+            "region": "traga",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "lerras",
+            "name": "Lerras",
+            "aliases": [],
+            "region": "traga",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "iseki",
+            "name": "Iseki",
+            "aliases": [],
+            "region": "traga",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "seerus",
+            "name": "Seerus",
+            "aliases": [],
+            "region": "traga",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "usean",
+            "name": "Usean",
+            "aliases": [],
+            "region": "aradian",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "sorenson",
+            "name": "Sorenson",
+            "aliases": [],
+            "region": "aradian",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "sigma-aradis",
+            "name": "Sigma Aradis",
+            "aliases": [],
+            "region": "aradian",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "orzen",
+            "name": "Orzen",
+            "aliases": [
+              "Orzen A/B"
+            ],
+            "region": "aradian",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "meekra",
+            "name": "Meekra",
+            "aliases": [],
+            "region": "aradian",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "karnak",
+            "name": "Karnak",
+            "aliases": [],
+            "region": "aradian",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "weyla",
+            "name": "Weyla",
+            "aliases": [],
+            "region": "aradian",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "maevis",
+            "name": "Maevis",
+            "aliases": [],
+            "region": "aradian",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "viro",
+            "name": "Viro",
+            "aliases": [],
+            "region": "aradian",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "sevore",
+            "name": "Sevore",
+            "aliases": [],
+            "region": "aradian",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "vaedim",
+            "name": "Vaedim",
+            "aliases": [],
+            "region": "aradian",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "rennick",
+            "name": "Rennick",
+            "aliases": [],
+            "region": "aradian",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "herrah",
+            "name": "Herrah",
+            "aliases": [],
+            "region": "aradian",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "oson",
+            "name": "Oson",
+            "aliases": [],
+            "region": "aradian",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "tsyresi",
+            "name": "Tsyresi",
+            "aliases": [],
+            "region": "aradian",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "tovis",
+            "name": "Tovis",
+            "aliases": [],
+            "region": "aradian",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "kavosk",
+            "name": "Kavosk",
+            "aliases": [],
+            "region": "aradian",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "lighthouse",
+            "name": "Lighthouse",
+            "aliases": [
+              "The Lighthouse",
+              "PSR-LHA-0921"
+            ],
+            "region": "aradian",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "narik",
+            "name": "Narik",
+            "aliases": [],
+            "region": "aradian",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "mauro",
+            "name": "Mauro",
+            "aliases": [],
+            "region": "aradian",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "faro",
+            "name": "Faro",
+            "aliases": [],
+            "region": "arvis",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "viric",
+            "name": "Viric",
+            "aliases": [],
+            "region": "arvis",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "kih-kot-haar",
+            "name": "Kih'Kot'Haar",
+            "aliases": [],
+            "region": "arvis",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "dorian-reach",
+            "name": "Dorian Reach",
+            "aliases": [],
+            "region": "arvis",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "seychel",
+            "name": "Seychel",
+            "aliases": [],
+            "region": "arvis",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "hesper",
+            "name": "Hesper",
+            "aliases": [],
+            "region": "arvis",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "calmore",
+            "name": "Calmore",
+            "aliases": [],
+            "region": "spinward",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "kaldana",
+            "name": "Kaldana",
+            "aliases": [],
+            "region": "drayson",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "jesha",
+            "name": "Jesha",
+            "aliases": [],
+            "region": "drayson",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "vije",
+            "name": "Vije",
+            "aliases": [],
+            "region": "drayson",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "columa",
+            "name": "Columa",
+            "aliases": [],
+            "region": "drayson",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "lykko",
+            "name": "Lykko",
+            "aliases": [],
+            "region": "drayson",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "amolon",
+            "name": "Amolon",
+            "aliases": [],
+            "region": "drayson",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "bekral",
+            "name": "Bekral",
+            "aliases": [],
+            "region": "drayson",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "kevak",
+            "name": "Kevak",
+            "aliases": [],
+            "region": "drayson",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "drayson",
+            "name": "Drayson",
+            "aliases": [],
+            "region": "drayson",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "portus",
+            "name": "Portus",
+            "aliases": [],
+            "region": "drayson",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "marius",
+            "name": "Marius",
+            "aliases": [],
+            "region": "drayson",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "selone",
+            "name": "Selone",
+            "aliases": [],
+            "region": "drayson",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "querial",
+            "name": "Querial",
+            "aliases": [],
+            "region": "drayson",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "victus",
+            "name": "Victus",
+            "aliases": [],
+            "region": "drayson",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "havl",
+            "name": "Havl",
+            "aliases": [],
+            "region": "drayson",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "excelsior",
+            "name": "Excelsior",
+            "aliases": [],
+            "region": "drayson",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "talus",
+            "name": "Talus",
+            "aliases": [],
+            "region": "drayson",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "ikson",
+            "name": "Ikson",
+            "aliases": [],
+            "region": "drayson",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "rapsin",
+            "name": "Rapsin",
+            "aliases": [],
+            "region": "drayson",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "valmaris",
+            "name": "Valmaris",
+            "aliases": [],
+            "region": "drayson",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "maxis",
+            "name": "Maxis",
+            "aliases": [],
+            "region": "drayson",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "odravek",
+            "name": "Odravek",
+            "aliases": [],
+            "region": "drayson",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "montressor",
+            "name": "Montressor",
+            "aliases": [],
+            "region": "drayson",
+            "affiliation": "Independent / CONCORD"
+          },
+          {
+            "id": "prometheus",
+            "name": "Prometheus",
+            "aliases": [],
+            "region": "spinward"
+          },
+          {
+            "id": "nebula",
+            "name": "Lighthouse Nebula",
+            "aliases": []
+          }
+        ]
+      },
+      "kadaym-stellar-atlas": {
+        "regions": {
+          "makor": "Jurah Makor",
+          "lendor": "Jurah Lendor",
+          "narthezk": "Narthezk",
+          "frontier": "Drayson Hinterlands",
+          "valteo": "Valteo",
+          "tserazk-makai": "Tserazk Makai",
+          "drezhvahl": "Drezhvahl",
+          "ildovahr": "Ildovahr",
+          "krevach": "Krevach",
+          "daurovna": "Daurovna",
+          "velkharn": "Velkharn",
+          "orravai": "Orravai",
+          "kharnevik": "Kharnevik",
+          "uldrei-vahr": "Uldrei Vahr",
+          "kezhrava": "Kezhrava"
+        },
+        "systems": [
+          {
+            "id": "yndach",
+            "name": "Yndach",
+            "aliases": [],
+            "region": "makor"
+          },
+          {
+            "id": "pateli",
+            "name": "Pateli",
+            "aliases": [],
+            "region": "makor"
+          },
+          {
+            "id": "vauzk",
+            "name": "Vauzk",
+            "aliases": [],
+            "region": "makor"
+          },
+          {
+            "id": "tamus",
+            "name": "Tamus",
+            "aliases": [],
+            "region": "makor"
+          },
+          {
+            "id": "cyrich",
+            "name": "Cyrich",
+            "aliases": [],
+            "region": "makor"
+          },
+          {
+            "id": "izhket",
+            "name": "Izhket",
+            "aliases": [],
+            "region": "makor"
+          },
+          {
+            "id": "eltoroz",
+            "name": "Eltoroz",
+            "aliases": [],
+            "region": "makor"
+          },
+          {
+            "id": "beithen",
+            "name": "Beithen",
+            "aliases": [],
+            "region": "makor"
+          },
+          {
+            "id": "mathelkor",
+            "name": "Mathelkor",
+            "aliases": [],
+            "region": "makor"
+          },
+          {
+            "id": "virezk",
+            "name": "Virezk",
+            "aliases": [],
+            "region": "makor"
+          },
+          {
+            "id": "lokuz",
+            "name": "Lokuz",
+            "aliases": [],
+            "region": "makor"
+          },
+          {
+            "id": "idaar",
+            "name": "Idaar",
+            "aliases": [],
+            "region": "makor"
+          },
+          {
+            "id": "eturzk",
+            "name": "Eturzk",
+            "aliases": [],
+            "region": "makor"
+          },
+          {
+            "id": "azhtar",
+            "name": "Azhtar",
+            "aliases": [],
+            "region": "makor"
+          },
+          {
+            "id": "moraz",
+            "name": "Moraz",
+            "aliases": [],
+            "region": "makor"
+          },
+          {
+            "id": "drelkov",
+            "name": "Drelkov",
+            "aliases": [],
+            "region": "makor"
+          },
+          {
+            "id": "eiridu-b",
+            "name": "Eiridu B",
+            "aliases": [],
+            "region": "makor"
+          },
+          {
+            "id": "eiridu-a",
+            "name": "Eiridu A",
+            "aliases": [],
+            "region": "makor"
+          },
+          {
+            "id": "zcheta",
+            "name": "Zcheta",
+            "aliases": [],
+            "region": "lendor"
+          },
+          {
+            "id": "ichtor",
+            "name": "Ichtor",
+            "aliases": [],
+            "region": "lendor"
+          },
+          {
+            "id": "da’zha",
+            "name": "Da’zha",
+            "aliases": [],
+            "region": "lendor"
+          },
+          {
+            "id": "nazkei",
+            "name": "Nazkei",
+            "aliases": [],
+            "region": "lendor"
+          },
+          {
+            "id": "tazh",
+            "name": "Tazh",
+            "aliases": [],
+            "region": "lendor"
+          },
+          {
+            "id": "vezeir",
+            "name": "Vezeir",
+            "aliases": [],
+            "region": "lendor"
+          },
+          {
+            "id": "tezzar",
+            "name": "Tezzar",
+            "aliases": [],
+            "region": "lendor"
+          },
+          {
+            "id": "yzhter",
+            "name": "Yzhter",
+            "aliases": [],
+            "region": "lendor"
+          },
+          {
+            "id": "zulten",
+            "name": "Zulten",
+            "aliases": [],
+            "region": "lendor"
+          },
+          {
+            "id": "oðal",
+            "name": "Oðal",
+            "aliases": [],
+            "region": "lendor"
+          },
+          {
+            "id": "imaner",
+            "name": "Imaner",
+            "aliases": [],
+            "region": "lendor"
+          },
+          {
+            "id": "manuz",
+            "name": "Manuz",
+            "aliases": [],
+            "region": "lendor"
+          },
+          {
+            "id": "maken",
+            "name": "Maken",
+            "aliases": [],
+            "region": "lendor"
+          },
+          {
+            "id": "hezach",
+            "name": "Hezach",
+            "aliases": [],
+            "region": "lendor"
+          },
+          {
+            "id": "balthi",
+            "name": "Balthi",
+            "aliases": [],
+            "region": "lendor"
+          },
+          {
+            "id": "lezhak",
+            "name": "Lezhak",
+            "aliases": [],
+            "region": "lendor"
+          },
+          {
+            "id": "akatan",
+            "name": "Akatan",
+            "aliases": [],
+            "region": "lendor"
+          },
+          {
+            "id": "yx-3041",
+            "name": "Yx-3041",
+            "aliases": [],
+            "region": "lendor"
+          },
+          {
+            "id": "haktur",
+            "name": "Haktur",
+            "aliases": [],
+            "region": "narthezk"
+          },
+          {
+            "id": "kaldana",
+            "name": "Kaldana",
+            "aliases": [],
+            "region": "frontier",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "jesha",
+            "name": "Jesha",
+            "aliases": [],
+            "region": "frontier",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "vije",
+            "name": "Vije",
+            "aliases": [],
+            "region": "frontier",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "columa",
+            "name": "Columa",
+            "aliases": [],
+            "region": "frontier",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "lykko",
+            "name": "Lykko",
+            "aliases": [],
+            "region": "frontier",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "amolon",
+            "name": "Amolon",
+            "aliases": [],
+            "region": "frontier",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "bekral",
+            "name": "Bekral",
+            "aliases": [],
+            "region": "frontier",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "kevak",
+            "name": "Kevak",
+            "aliases": [],
+            "region": "frontier",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "drayson",
+            "name": "Drayson",
+            "aliases": [],
+            "region": "frontier",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "portus",
+            "name": "Portus",
+            "aliases": [],
+            "region": "frontier",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "marius",
+            "name": "Marius",
+            "aliases": [],
+            "region": "frontier",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "selone",
+            "name": "Selone",
+            "aliases": [],
+            "region": "frontier",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "querial",
+            "name": "Querial",
+            "aliases": [],
+            "region": "frontier",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "victus",
+            "name": "Victus",
+            "aliases": [],
+            "region": "frontier",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "havl",
+            "name": "Havl",
+            "aliases": [],
+            "region": "frontier",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "excelsior",
+            "name": "Excelsior",
+            "aliases": [],
+            "region": "frontier",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "talus",
+            "name": "Talus",
+            "aliases": [],
+            "region": "frontier",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "ikson",
+            "name": "Ikson",
+            "aliases": [],
+            "region": "frontier",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "rapsin",
+            "name": "Rapsin",
+            "aliases": [],
+            "region": "frontier",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "valmaris",
+            "name": "Valmaris",
+            "aliases": [],
+            "region": "frontier",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "maxis",
+            "name": "Maxis",
+            "aliases": [],
+            "region": "frontier",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "odravek",
+            "name": "Odravek",
+            "aliases": [],
+            "region": "frontier",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "montressor",
+            "name": "Montressor",
+            "aliases": [],
+            "region": "frontier",
+            "affiliation": "Independent / CONCORD"
+          },
+          {
+            "id": "varkesh-abyss",
+            "name": "Varkesh Abyss",
+            "aliases": [],
+            "region": "makor"
+          },
+          {
+            "id": "narthezk-maw",
+            "name": "Narthezk Maw",
+            "aliases": [],
+            "region": "narthezk"
+          },
+          {
+            "id": "hinterland-null",
+            "name": "Vezkarn Singularity",
+            "aliases": [
+              "Hinterland Null",
+              "the Null"
+            ],
+            "region": "frontier",
+            "affiliation": "Elysian Collective"
+          },
+          {
+            "id": "vezhkar-pulsar",
+            "name": "Vezhkar Pulsar",
+            "aliases": [],
+            "region": "makor"
+          },
+          {
+            "id": "tazhvek-variable",
+            "name": "Tazhvek Variable",
+            "aliases": [],
+            "region": "lendor"
+          },
+          {
+            "id": "kharveth-magnetar",
+            "name": "Kharveth Magnetar",
+            "aliases": [],
+            "region": "narthezk"
+          },
+          {
+            "id": "ozhvar-pulsar",
+            "name": "Ozhvar Pulsar",
+            "aliases": [],
+            "region": "lendor",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "xai",
+            "name": "Xai",
+            "aliases": [],
+            "region": "valteo",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "zhorel",
+            "name": "Zhorel",
+            "aliases": [],
+            "region": "valteo",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "vadrask",
+            "name": "Vadrask",
+            "aliases": [],
+            "region": "valteo",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "oltzheim",
+            "name": "Oltzheim",
+            "aliases": [],
+            "region": "valteo",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "khevrin",
+            "name": "Khevrin",
+            "aliases": [],
+            "region": "valteo",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "krz-114",
+            "name": "KRZ-114",
+            "aliases": [
+              "Velkhar"
+            ],
+            "region": "tserazk-makai",
+            "affiliation": "Contested · The Silent"
+          },
+          {
+            "id": "krz-118",
+            "name": "KRZ-118",
+            "aliases": [
+              "Izhvar"
+            ],
+            "region": "tserazk-makai",
+            "affiliation": "Contested · The Silent"
+          },
+          {
+            "id": "krz-126",
+            "name": "KRZ-126",
+            "aliases": [
+              "Rhazken"
+            ],
+            "region": "tserazk-makai",
+            "affiliation": "Contested · The Silent"
+          },
+          {
+            "id": "krz-133",
+            "name": "KRZ-133",
+            "aliases": [
+              "Zherak"
+            ],
+            "region": "tserazk-makai",
+            "affiliation": "Contested · The Silent"
+          },
+          {
+            "id": "krz-147",
+            "name": "KRZ-147",
+            "aliases": [
+              "Ozhmak"
+            ],
+            "region": "tserazk-makai",
+            "affiliation": "Contested · The Silent"
+          },
+          {
+            "id": "krz-151",
+            "name": "KRZ-151",
+            "aliases": [
+              "Kezhral"
+            ],
+            "region": "tserazk-makai",
+            "affiliation": "Contested · The Silent"
+          },
+          {
+            "id": "urrakh",
+            "name": "Urrakh",
+            "aliases": [],
+            "region": "narthezk",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "thol-ezh",
+            "name": "Thol Ezh",
+            "aliases": [],
+            "region": "narthezk",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "kharuun",
+            "name": "Kharuun",
+            "aliases": [],
+            "region": "narthezk",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "eruun",
+            "name": "Eruun",
+            "aliases": [],
+            "region": "narthezk",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "izhkhal",
+            "name": "Izhkhal",
+            "aliases": [],
+            "region": "narthezk",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "rhuut",
+            "name": "Rhuut",
+            "aliases": [],
+            "region": "narthezk",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "zaathir",
+            "name": "Zaathir",
+            "aliases": [],
+            "region": "narthezk",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "ulem-ket",
+            "name": "Ulem Ket",
+            "aliases": [],
+            "region": "narthezk",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "zhodru",
+            "name": "Zhodru",
+            "aliases": [],
+            "region": "narthezk",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "makhel",
+            "name": "Makhel",
+            "aliases": [],
+            "region": "narthezk",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "ozhuun",
+            "name": "Ozhuun",
+            "aliases": [],
+            "region": "narthezk",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "orzheld",
+            "name": "Orzheld",
+            "aliases": [],
+            "region": "drezhvahl",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "karnot",
+            "name": "Karnot",
+            "aliases": [],
+            "region": "drezhvahl",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "zheldei",
+            "name": "Zheldei",
+            "aliases": [],
+            "region": "drezhvahl",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "auvik",
+            "name": "Auvik",
+            "aliases": [],
+            "region": "makor",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "keldran",
+            "name": "Keldran",
+            "aliases": [],
+            "region": "drezhvahl",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "uktaro",
+            "name": "Uktaro",
+            "aliases": [],
+            "region": "drezhvahl",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "vordek",
+            "name": "Vordek",
+            "aliases": [],
+            "region": "drezhvahl",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "belzhau",
+            "name": "Belzhau",
+            "aliases": [],
+            "region": "drezhvahl",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "eiken",
+            "name": "Eikheln",
+            "aliases": [
+              "Eiken"
+            ],
+            "region": "drezhvahl",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "torvai",
+            "name": "Torvai",
+            "aliases": [],
+            "region": "drezhvahl",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "zurnach",
+            "name": "Zurnach",
+            "aliases": [],
+            "region": "drezhvahl",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "ikovar",
+            "name": "Ikovar",
+            "aliases": [],
+            "region": "drezhvahl",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "ravelt",
+            "name": "Ravelt",
+            "aliases": [],
+            "region": "drezhvahl",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "malkeir",
+            "name": "Malkeir",
+            "aliases": [],
+            "region": "drezhvahl",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "zhurei",
+            "name": "Zhurei",
+            "aliases": [],
+            "region": "drezhvahl",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "drehn",
+            "name": "Drehn",
+            "aliases": [],
+            "region": "drezhvahl",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "atervek",
+            "name": "Atervek",
+            "aliases": [],
+            "region": "drezhvahl",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "gollai",
+            "name": "Gollai",
+            "aliases": [],
+            "region": "kharnevik",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "drakkon-stellaris",
+            "name": "Drakkon Stellaris",
+            "aliases": [],
+            "region": "ildovahr",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "telior",
+            "name": "Telvahr",
+            "aliases": [
+              "Telior"
+            ],
+            "region": "ildovahr",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "odrale",
+            "name": "Odravelt",
+            "aliases": [
+              "Odrale"
+            ],
+            "region": "ildovahr",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "cevran",
+            "name": "Khevran",
+            "aliases": [
+              "Cevran"
+            ],
+            "region": "ildovahr",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "mirello",
+            "name": "Mairzhel",
+            "aliases": [
+              "Mirello"
+            ],
+            "region": "ildovahr",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "vautr",
+            "name": "Vautr",
+            "aliases": [],
+            "region": "ildovahr",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "ivera",
+            "name": "Irvazh",
+            "aliases": [
+              "Ivera"
+            ],
+            "region": "ildovahr",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "brenalt",
+            "name": "Brenalt",
+            "aliases": [],
+            "region": "ildovahr",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "zovre",
+            "name": "Zovre",
+            "aliases": [],
+            "region": "ildovahr",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "alt-jerrin",
+            "name": "Alt Jerrin",
+            "aliases": [],
+            "region": "ildovahr",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "rauno",
+            "name": "Raunvek",
+            "aliases": [
+              "Rauno"
+            ],
+            "region": "ildovahr",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "velcir",
+            "name": "Velzhir",
+            "aliases": [
+              "Velcir"
+            ],
+            "region": "ildovahr",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "avrezha",
+            "name": "Avrezha",
+            "aliases": [],
+            "region": "ildovahr",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "calven",
+            "name": "Kalvehn",
+            "aliases": [
+              "Calven"
+            ],
+            "region": "ildovahr",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "evje",
+            "name": "Eivrekh",
+            "aliases": [
+              "Evje"
+            ],
+            "region": "ildovahr",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "taurenne",
+            "name": "Taurvekh",
+            "aliases": [
+              "Taurenne"
+            ],
+            "region": "kharnevik",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "dovrel",
+            "name": "Dovrel",
+            "aliases": [],
+            "region": "makor",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "brakk",
+            "name": "Brakk",
+            "aliases": [],
+            "region": "krevach",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "uldren",
+            "name": "Uldren",
+            "aliases": [],
+            "region": "krevach",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "tarnek",
+            "name": "Tarnek",
+            "aliases": [],
+            "region": "krevach",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "ord",
+            "name": "Ordvekh",
+            "aliases": [
+              "Ord"
+            ],
+            "region": "krevach",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "heizhal",
+            "name": "Heizhal",
+            "aliases": [],
+            "region": "krevach",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "kavruk",
+            "name": "Kavruk",
+            "aliases": [],
+            "region": "krevach",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "inzek",
+            "name": "Inzek",
+            "aliases": [],
+            "region": "krevach",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "zordai",
+            "name": "Zordai",
+            "aliases": [],
+            "region": "krevach",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "varzh",
+            "name": "Varzh",
+            "aliases": [],
+            "region": "krevach",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "alvek",
+            "name": "Alvek",
+            "aliases": [],
+            "region": "krevach",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "rettan",
+            "name": "Rettan",
+            "aliases": [],
+            "region": "krevach",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "izhor",
+            "name": "Izhor",
+            "aliases": [],
+            "region": "krevach",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "delk",
+            "name": "Delk",
+            "aliases": [],
+            "region": "krevach",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "uzhven",
+            "name": "Uzhven",
+            "aliases": [],
+            "region": "krevach",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "kairz",
+            "name": "Kairz",
+            "aliases": [],
+            "region": "krevach",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "vennit",
+            "name": "Vennit",
+            "aliases": [],
+            "region": "krevach",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "trilaria-stellaris",
+            "name": "Trilaria Stellaris",
+            "aliases": [
+              "Trilarian Moons"
+            ],
+            "region": "daurovna",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "ozhava",
+            "name": "Ozhava",
+            "aliases": [],
+            "region": "daurovna",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "hadrul",
+            "name": "Hadrul",
+            "aliases": [],
+            "region": "daurovna",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "heth-aun",
+            "name": "Heth Aun",
+            "aliases": [],
+            "region": "daurovna",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "zairen",
+            "name": "Zairen",
+            "aliases": [],
+            "region": "daurovna",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "kezhar-vey",
+            "name": "Kezhar Vey",
+            "aliases": [],
+            "region": "daurovna",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "ul-zaar",
+            "name": "Ul Zaar",
+            "aliases": [],
+            "region": "daurovna",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "velumai",
+            "name": "Velumai",
+            "aliases": [],
+            "region": "daurovna",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "nuren",
+            "name": "Nuren",
+            "aliases": [],
+            "region": "daurovna",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "dareth",
+            "name": "Dareth",
+            "aliases": [],
+            "region": "daurovna",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "hazhoi",
+            "name": "Hazhoi",
+            "aliases": [],
+            "region": "daurovna",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "tahmer",
+            "name": "Tahmer",
+            "aliases": [],
+            "region": "daurovna",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "irzhek",
+            "name": "Irzhek",
+            "aliases": [],
+            "region": "daurovna",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "oumez",
+            "name": "Aumezh",
+            "aliases": [
+              "Oumez"
+            ],
+            "region": "kharnevik",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "eldein",
+            "name": "Eldein",
+            "aliases": [],
+            "region": "velkharn",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "zaumer",
+            "name": "Zaumer",
+            "aliases": [],
+            "region": "velkharn",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "arelitz",
+            "name": "Arelitz",
+            "aliases": [],
+            "region": "velkharn",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "oveya",
+            "name": "Oveirna",
+            "aliases": [
+              "Oveya"
+            ],
+            "region": "velkharn",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "nezhair",
+            "name": "Nezhair",
+            "aliases": [],
+            "region": "velkharn",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "hulden",
+            "name": "Hulden",
+            "aliases": [],
+            "region": "velkharn",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "yzhen",
+            "name": "Yzhen",
+            "aliases": [],
+            "region": "velkharn",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "tellen",
+            "name": "Tellen",
+            "aliases": [],
+            "region": "velkharn",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "maurek",
+            "name": "Maurek",
+            "aliases": [],
+            "region": "velkharn",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "lioran",
+            "name": "Ljorvek",
+            "aliases": [
+              "Lioran"
+            ],
+            "region": "velkharn",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "revik",
+            "name": "Revik",
+            "aliases": [],
+            "region": "kharnevik",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "korlai",
+            "name": "Korlai",
+            "aliases": [],
+            "region": "velkharn",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "oru-vol",
+            "name": "Oru Vol",
+            "aliases": [],
+            "region": "orravai",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "tehru",
+            "name": "Tehru",
+            "aliases": [],
+            "region": "orravai",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "kethrai",
+            "name": "Kethrai",
+            "aliases": [],
+            "region": "orravai",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "hauket",
+            "name": "Hauket",
+            "aliases": [],
+            "region": "orravai",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "vurun",
+            "name": "Vurun",
+            "aliases": [],
+            "region": "orravai",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "zhuun",
+            "name": "Zhuun",
+            "aliases": [],
+            "region": "orravai",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "arroth",
+            "name": "Arroth",
+            "aliases": [],
+            "region": "orravai",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "daumir",
+            "name": "Daumir",
+            "aliases": [],
+            "region": "kharnevik",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "dreivar",
+            "name": "Dreivar",
+            "aliases": [],
+            "region": "krevach",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "korlun",
+            "name": "Korlun",
+            "aliases": [],
+            "region": "velkharn",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "drevau",
+            "name": "Drevau",
+            "aliases": [],
+            "region": "kharnevik",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "yovrek",
+            "name": "Yovrek",
+            "aliases": [],
+            "region": "kharnevik",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "vaurzhek",
+            "name": "Vaurzhek",
+            "aliases": [],
+            "region": "kharnevik",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "othreln",
+            "name": "Othreln",
+            "aliases": [],
+            "region": "kharnevik",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "kelvair",
+            "name": "Kelvair",
+            "aliases": [],
+            "region": "kharnevik",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "drezhun",
+            "name": "Drezhun",
+            "aliases": [],
+            "region": "kharnevik",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "irvauk",
+            "name": "Irvauk",
+            "aliases": [],
+            "region": "kharnevik",
+            "affiliation": "United Federation of Kadaym"
+          },
+          {
+            "id": "krz-162",
+            "name": "KRZ-162",
+            "aliases": [],
+            "region": "uldrei-vahr",
+            "affiliation": "Contested · The Silent"
+          },
+          {
+            "id": "krz-168",
+            "name": "KRZ-168",
+            "aliases": [],
+            "region": "uldrei-vahr",
+            "affiliation": "Contested · The Silent"
+          },
+          {
+            "id": "krz-175",
+            "name": "KRZ-175",
+            "aliases": [],
+            "region": "uldrei-vahr",
+            "affiliation": "Contested · The Silent"
+          },
+          {
+            "id": "krz-183",
+            "name": "KRZ-183",
+            "aliases": [],
+            "region": "kezhrava",
+            "affiliation": "Contested · The Silent"
+          },
+          {
+            "id": "krz-189",
+            "name": "KRZ-189",
+            "aliases": [],
+            "region": "kezhrava",
+            "affiliation": "Contested · The Silent"
+          },
+          {
+            "id": "makor-9",
+            "name": "MAKOR-9*",
+            "aliases": [
+              "ferryman"
+            ]
+          },
+          {
+            "id": "krz-02",
+            "name": "KRZ-02",
+            "aliases": []
+          },
+          {
+            "id": "krz-19",
+            "name": "KRZ-19",
+            "aliases": []
+          },
+          {
+            "id": "krz-41",
+            "name": "KRZ-41",
+            "aliases": []
+          },
+          {
+            "id": "krz-73",
+            "name": "KRZ-73",
+            "aliases": []
+          },
+          {
+            "id": "krz-91",
+            "name": "KRZ-91",
+            "aliases": []
+          }
+        ]
+      }
+    }
+  },
+  "dependencies": {
+    "elysian-stellar-atlas": "elysian",
+    "uacs-stellar-atlas": "uacs",
+    "calidor-stellar-atlas": "calidor",
+    "kadaym-stellar-atlas": "kadaym",
+    "iulr-stellar-atlas": "iulr"
+  }
+}

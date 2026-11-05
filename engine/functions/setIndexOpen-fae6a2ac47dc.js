@@ -1,0 +1,1 @@
+function setIndexOpen(open){indexOpen=!!open;$('atlasLayout').classList.toggle('index-collapsed',!indexOpen);$('sidebar').classList.toggle('open',indexOpen);for(const id of ['toggleIndexPanel','indexToggle','embedIndex'])$(id).setAttribute('aria-expanded',String(indexOpen));resizeChart()}

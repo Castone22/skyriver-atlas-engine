@@ -1,0 +1,1 @@
+function fitBounds(bounds){const box=$('mapArea').getBoundingClientRect(),ratio=box.width>0&&box.height>0?box.width/box.height:1;let[x,y,w,h]=bounds;h+=130;y-=60;if(w/h<ratio){const nw=h*ratio;x-=(nw-w)/2;w=nw}else{const nh=w/ratio;y-=(nh-h)/2;h=nh}vb={x,y,w,h};baseWidth=w;applyView()}

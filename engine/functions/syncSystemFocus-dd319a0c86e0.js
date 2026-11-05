@@ -1,0 +1,1 @@
+function syncSystemFocus(s){if(!hasOrbitChart(s))systemFocused=false;const panel=$('systemFocus');$('mapArea').classList.toggle('system-focused',systemFocused);panel.classList.toggle('hidden',!systemFocused);panel.innerHTML=systemFocused?systemView(s,true):'';}
