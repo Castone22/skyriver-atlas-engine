@@ -89,3 +89,23 @@ logic stay separate; do not force a merge by changing behaviour.
 imports (`tests/transport.test.mjs` and `tests/pure.test.mjs` enforce this). The serving contract for
 the wiki extension is in `docs/TRANSPORTS.md`; do not change URL layout, placeholders or the `files`
 contract without updating that file. Generated `files` digests are not committed.
+
+## Converging function variants
+
+When two variants of a function differ, the canonical version supports the **union** of their
+features. Do not remove a capability from one atlas to match another.
+
+- Behaviour that only some atlases want is controlled by configuration or data (`__ATLAS__`
+  features and policies, slots, or fields on the atlas data), and is **off for any atlas that did
+  not have it**, so every existing atlas renders exactly as before. Examples: IULR's region
+  highlighting, extra search fields, station overview, label policy constants.
+- Lore or content written into code (for example a hard-coded search alias for one system)
+  moves into the atlas data. Code never names a specific system, planet or faction.
+- Different names for the same concept are renamed to one name with `tools/rename-global.mjs`.
+  Missing page state a canonical function expects (for example a `let` it assigns) is declared in
+  the atlas runtime that lacked it.
+- Atlas-supplied behaviour (how a planet's display title is resolved, for instance) is a small hook
+  the atlas defines under the canonical name. Canonical functions only call the hook.
+- Prove each convergence with the golden tours (`npm run test:golden`, `tools/dedup-lab.mjs`) and
+  `tools/dedup-normalize.mjs` where variants are textually equivalent. The tour does not cover
+  CSS; check styling separately.
