@@ -160,7 +160,7 @@ AtlasEmbed today stores one self-contained HTML file per slug outside the file r
 - **Sandboxed documents fetch cross-origin.** Without `allow-same-origin` the loader's origin is `null`, so bundle files must be served with `Access-Control-Allow-Origin: *` (they are public static files, no credentials). Test this early, including any `import()` or module loading, which also needs CORS.
 - **Storage shape.** One directory per engine version (stored once, shared by every atlas) and one per atlas slug, each with `bundle.json` listing files and sha256. Engine bundles are large and identical across atlases, so browser caching is a major win over today's 1 to 8 MB per standalone file. The `atlasembed_file` table gains a type column (`html` or `bundle`) and an engine reference.
 - **Revisions.** Today re-uploading a slug overwrites it. Bundles carry `version`; the manifest's `files` hashes give cache-safe URLs, so keeping old versions around is optional.
-- **Grand.** Child atlases are **live references to child slugs** on the same host, not embedded snapshots. The galaxy atlas lists child ids in `dependencies.children`; the loader resolves each id to a slug and loads it on demand. (The standalone export may still embed snapshots, as today.)
+- **Grand.** Child atlases are **live references to child slugs** on the same host, not embedded snapshots. The galaxy atlas lists child ids in `dependencies.children`; the loader resolves each id to a slug and loads it on demand, **composing it in page** rather than in a nested iframe. (The standalone export may still embed snapshots, as today.)
 
 ## Engine versioning
 
@@ -170,4 +170,4 @@ Because one engine serves every atlas, **backward compatibility is a standing re
 
 ## Open questions
 
-- How are live child references loaded inside the sandbox: nested iframes of the child slug, or in-page composition?
+- None currently blocking.
