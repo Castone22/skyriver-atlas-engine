@@ -28,6 +28,8 @@
     "affiliationLink": "{{brand}}"
   },
   "flags": {
-    "linkTitleSync": "worlds"
+    "bordersToggleClass": true,
+    "linkTitleSync": "worlds",
+    "visibilityResetsLabels": true
   }
 }

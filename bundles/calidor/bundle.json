@@ -27,5 +27,8 @@
     "indexFirstSystem": "Forge",
     "indexHintAtlas": "Dominion of Calidor",
     "affiliationLink": "{{brand}}"
+  },
+  "flags": {
+    "visibilityResetsLabels": true
   }
 }

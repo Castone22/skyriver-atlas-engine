@@ -100,7 +100,7 @@ const ATLAS_BOUNDS=[40,60,2790,2490];
 /* @atlas-function highlightRegion */
 /* @atlas-function draw-ab708dae8498 */
 /* @atlas-function updateSelection */
-/* @atlas-function updateVisibility-3bdaa5a55abc */
+/* @atlas-function updateVisibility */
 /* @atlas-function zoomPercent */
 // At least these displayed percentages. Short or narrow charts need more zoom
 // to give each label the same readable space as a full-size chart.

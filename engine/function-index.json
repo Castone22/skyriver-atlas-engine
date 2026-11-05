@@ -2495,34 +2495,16 @@
     ],
     "bytes": 299
   },
-  "updateVisibility-3bdaa5a55abc": {
-    "name": "updateVisibility",
-    "profiles": [
-      "iulr"
-    ],
-    "bytes": 629
-  },
-  "updateVisibility-7f01bd0a593a": {
+  "updateVisibility": {
     "name": "updateVisibility",
     "profiles": [
       "calidor",
+      "elysian",
+      "iulr",
+      "kadaym",
       "uacs"
     ],
-    "bytes": 617
-  },
-  "updateVisibility-a307d59f1553": {
-    "name": "updateVisibility",
-    "profiles": [
-      "kadaym"
-    ],
-    "bytes": 528
-  },
-  "updateVisibility-c50d0d4435c5": {
-    "name": "updateVisibility",
-    "profiles": [
-      "elysian"
-    ],
-    "bytes": 637
+    "bytes": 806
   },
   "url-1466fb4db7c9": {
     "name": "url",

@@ -27,6 +27,7 @@
   },
   "flags": {
     "linkTitleSync": "all",
-    "planetLinkAttributes": true
+    "planetLinkAttributes": true,
+    "visibilityResetsLabels": true
   }
 }
