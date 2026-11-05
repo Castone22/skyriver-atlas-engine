@@ -25,9 +25,8 @@
   },
   "slots": {
     "downloadName": "Kadaym-Stellar-Atlas.html",
-    "indexFirstSystem": "Virezk",
-    "indexHintAtlas": "Elysian Collective",
-    "affiliationLink": "Elysian Collective"
+    "affiliationLink": "Elysian Collective",
+    "indexHint": "Try a name, Tier 5, Elysian Collective, ruins or magnetar."
   },
   "flags": {
     "straightenImageTitleQuotes": true

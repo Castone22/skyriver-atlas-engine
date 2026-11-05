@@ -1,4 +1,8 @@
 {
+  "indexWorldLinks": {
+    "description": "The index lists a system's worlds (its overviewWorlds when present) as article links instead of plain text.",
+    "default": false
+  },
   "planetArticleTracking": {
     "description": "Live article lookups use, and update, the tracked wiki page id of a planet (synced article titles).",
     "default": false

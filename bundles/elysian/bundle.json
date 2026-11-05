@@ -23,9 +23,11 @@
     "overviewAlias": "collective",
     "overviewTitle": "COLLECTIVE OVERVIEW",
     "overviewSubtitle": "Five known regions · boundaries and separation are schematic",
-    "affiliationLink": "{{brand}}"
+    "affiliationLink": "{{brand}}",
+    "indexHint": "Try a name, Tier 5, Elysian Collective, ruins or magnetar."
   },
   "flags": {
-    "planetArticleTracking": true
+    "planetArticleTracking": true,
+    "indexWorldLinks": true
   }
 }

@@ -4426,7 +4426,8 @@
             "summary": "A rotating garden habitat serving lunar families, pilgrims and long-stay visitors."
           }
         ],
-        "settlements": 2
+        "settlements": 2,
+        "indexFirst": true
       },
       {
         "id": "lokuz",

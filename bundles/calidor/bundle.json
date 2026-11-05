@@ -24,8 +24,7 @@
     "overviewAlias": "dominion",
     "overviewTitle": "DOMINION OVERVIEW",
     "overviewSubtitle": "53 systems · six adjoining regions",
-    "indexFirstSystem": "Forge",
-    "indexHintAtlas": "Dominion of Calidor",
-    "affiliationLink": "{{brand}}"
+    "affiliationLink": "{{brand}}",
+    "indexHint": "Try a name, Tier 5, Dominion of Calidor, ruins or magnetar."
   }
 }

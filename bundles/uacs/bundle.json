@@ -23,6 +23,7 @@
     "overviewAlias": "alliance",
     "overviewTitle": "ALLIANCE OVERVIEW",
     "overviewSubtitle": "42 charted systems · five adjoining regional charts",
-    "affiliationLink": "{{brand}}"
+    "affiliationLink": "{{brand}}",
+    "indexHint": "Try a name, Tier 5, United Alliance of Commonwealth States, ruins or magnetar."
   }
 }

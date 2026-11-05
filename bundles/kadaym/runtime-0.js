@@ -78,7 +78,7 @@ addEventListener('hashchange',()=>{if(location.href!==lastRestoredURL)restoreRou
 /* @atlas-function planetAliases-none */
 /* @atlas-function searchTerms */
 /* @atlas-function searchObject */
-/* @atlas-function renderIndex-bb514b6b2378 */
+/* @atlas-function renderIndex */
 const reducedMotion=matchMedia('(prefers-reduced-motion: reduce)');
 let orbitPaused=reducedMotion.matches,orbitFrame=0,orbitClock=0,orbitLastTime=null;
 const worldColors={'Mahanzk':'#90bcd2','Zelenzk':'#c4a5d9','Helkana':'#91c4a1','Vardis Prime':'#c9a08b','Rakazk':'#c78e74','Zekozha':'#9bcdda','Qerzhek':'#b7c9e2','Prathia':'#9ec2a7'};

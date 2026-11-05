@@ -1485,12 +1485,16 @@
     ],
     "bytes": 7133
   },
-  "renderIndex-0db203929943": {
+  "renderIndex": {
     "name": "renderIndex",
     "profiles": [
-      "iulr"
+      "calidor",
+      "elysian",
+      "iulr",
+      "kadaym",
+      "uacs"
     ],
-    "bytes": 1836
+    "bytes": 2126
   },
   "renderIndex-21d0753ef74d": {
     "name": "renderIndex",
@@ -1498,28 +1502,6 @@
       "grand"
     ],
     "bytes": 3086
-  },
-  "renderIndex-958d0331c817": {
-    "name": "renderIndex",
-    "profiles": [
-      "elysian"
-    ],
-    "bytes": 1906
-  },
-  "renderIndex-bb514b6b2378": {
-    "name": "renderIndex",
-    "profiles": [
-      "calidor",
-      "kadaym"
-    ],
-    "bytes": 1805
-  },
-  "renderIndex-c7aa6fecdbb1": {
-    "name": "renderIndex",
-    "profiles": [
-      "uacs"
-    ],
-    "bytes": 1805
   },
   "renderMapLegend-4aeafe6a28b2": {
     "name": "renderMapLegend",

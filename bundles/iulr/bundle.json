@@ -25,7 +25,8 @@
   "slots": {
     "downloadName": "IULR-Stellar-Atlas.html",
     "overviewAlias": "union",
-    "affiliationLink": "{{brand}}"
+    "affiliationLink": "{{brand}}",
+    "indexHint": "Try a planet name, TORA designation or stellar class."
   },
   "flags": {
     "searchSystemFields": [
