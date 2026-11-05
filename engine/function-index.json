@@ -2017,40 +2017,16 @@
     ],
     "bytes": 927
   },
-  "solarLayout-1f15bde96813": {
+  "solarLayout": {
     "name": "solarLayout",
     "profiles": [
-      "calidor"
-    ],
-    "bytes": 1818
-  },
-  "solarLayout-4db56797e6fb": {
-    "name": "solarLayout",
-    "profiles": [
-      "kadaym"
-    ],
-    "bytes": 1714
-  },
-  "solarLayout-9246e73b7291": {
-    "name": "solarLayout",
-    "profiles": [
-      "iulr"
-    ],
-    "bytes": 1735
-  },
-  "solarLayout-d0af8d734afd": {
-    "name": "solarLayout",
-    "profiles": [
+      "calidor",
+      "elysian",
+      "iulr",
+      "kadaym",
       "uacs"
     ],
-    "bytes": 1760
-  },
-  "solarLayout-f526c44b9d79": {
-    "name": "solarLayout",
-    "profiles": [
-      "elysian"
-    ],
-    "bytes": 1762
+    "bytes": 2287
   },
   "solarPlanetGlyph": {
     "name": "solarPlanetGlyph",

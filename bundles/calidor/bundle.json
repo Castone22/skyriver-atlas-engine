@@ -29,6 +29,7 @@
     "affiliationLink": "{{brand}}"
   },
   "flags": {
+    "solarMoonsVisibleOnly": true,
     "visibilityResetsLabels": true
   }
 }

@@ -105,7 +105,7 @@ const illustrativeTypes={
  icy:[2.6,'#a6c1cd'],gas:[4.9,'#c7aa83'],ringed:[4.6,'#baab89'],'ice-giant':[4.2,'#76adbb']
 };
 /* @atlas-function illustrativePlanet */
-/* @atlas-function solarLayout-4db56797e6fb */
+/* @atlas-function solarLayout */
 /* @atlas-function ordinal */
 /* @atlas-function orbitalFact-9ec16f8dcf1f */
 /* @atlas-function worldRecord */

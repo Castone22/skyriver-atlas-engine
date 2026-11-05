@@ -30924,6 +30924,13 @@
           "Accretion ring · black hole"
         ]
       ]
+    },
+    "solarStations": {
+      "mode": "visibility",
+      "unset": "always",
+      "categories": [
+        "TORA"
+      ]
     }
   }
 }

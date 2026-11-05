@@ -1,0 +1,11 @@
+function solarLayout(s){
+ const f=__ATLAS__.flags,rule=__ATLAS__.policies.solarStations;
+ const shown=b=>!(rule.excludeNames||[]).includes(b.name)&&((rule.mode==='systemMajor'?b.systemMajor:(b.visibility==='system'||(!b.visibility&&(rule.unset==='always'||(rule.unset==='unlessUnimportant'&&b.important!==false)))))||(rule.categories||[]).includes(b.category));
+ const bodies=systemBodies(s),allStations=stationRecords(s),stations=allStations.filter(shown),entities=entityRecords(s),planets=bodies.filter(b=>b.type==='World'),used=new Set(planets.filter(b=>b.slot).map(b=>b.slot));
+ const seed=Array.from(s.name).reduce((a,c)=>a+c.charCodeAt(0),0);
+ const assigned=planets.map((b,i)=>{let slot=b.slot||b.diagramSlot;if(!slot){slot=s.centralBodyType==='black-hole'?i+1:2+i*2;while(used.has(slot))slot++;used.add(slot)}return {...b,layoutSlot:slot,confirmed:!!b.slot,synthetic:false}});
+ const lanes=(f.solarLanesFromAllStations?allStations:stations).map(b=>Math.ceil(b.lane||0));
+ const maxSlot=Math.max(0,...assigned.map(b=>b.layoutSlot)),total=s.schematicPlanets?Math.max(maxSlot,...Object.keys(s.schematicPlanets).map(Number),...lanes,...entities.map(b=>Math.ceil(b.lane||0))):s.sparseOrbits?Math.max(maxSlot,...lanes,...entities.map(b=>Math.ceil(b.lane||0))):(s.centralBodyType==='black-hole'||EXOTIC_TYPES[s.centralBodyType])?maxSlot:s.kind==='uncertain'&&!planets.length?0:Math.max(5+seed%3,maxSlot+2,...lanes);
+ const orbits=[];for(let slot=1;slot<=total;slot++){const known=assigned.filter(b=>b.layoutSlot===slot);if(known.length)orbits.push(...known);else if(s.schematicPlanets){const kind=s.schematicPlanets[slot];if(f.solarIllustrativeGuard?Object.hasOwn(illustrativeTypes,kind):kind)orbits.push(illustrativePlanet(slot,kind))}else if(!s.sparseOrbits){const kind=slot>=total-1?['icy','gas','ice-giant','ringed'][(slot+seed)%4]:['rocky','cinder','desert'][(slot+seed)%3];if(!f.solarIllustrativeGuard||Object.hasOwn(illustrativeTypes,kind))orbits.push(illustrativePlanet(slot,kind))}}
+ return {orbits:s.sparseOrbits?orbits.filter(b=>!b.synthetic):orbits,entities,moons:f.solarMoonsVisibleOnly?moonRecords(s).filter(b=>b.visibility==='system'||b.inhabited===true):bodies.filter(b=>b.type==='Moon'),sites:bodies.filter(b=>!['World','Moon'].includes(b.type)),stations,total,seed};
+}

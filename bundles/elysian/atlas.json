@@ -24951,6 +24951,11 @@
           "Hazard / quarantine"
         ]
       ]
+    },
+    "solarStations": {
+      "mode": "visibility",
+      "unset": "unlessUnimportant",
+      "categories": []
     }
   }
 }

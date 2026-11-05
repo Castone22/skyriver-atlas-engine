@@ -4,6 +4,9 @@
   "minimapRegionPaths": { "description": "The minimap draws each region as a path built from outlines relative to the region bounds, instead of an absolute polygon or rectangle.", "default": false },
   "minimapViewBox": { "description": "Fixed viewBox for the minimap, for atlases with no atlasExtent; null uses the atlas extent.", "default": null },
   "planetLinkAttributes": { "description": "Links to planets carry data-planet-link and data-planet-title attributes so the page can find and retitle them.", "default": false },
+  "solarIllustrativeGuard": { "description": "Only add an illustrative planet when its kind exists in illustrativeTypes, instead of assuming it does.", "default": false },
+  "solarLanesFromAllStations": { "description": "System diagram width counts the lanes of every station record, not just the stations drawn on the diagram.", "default": false },
+  "solarMoonsVisibleOnly": { "description": "The system diagram lists only moons that are visible at system level or inhabited, taken from the moon records, instead of every moon body.", "default": false },
   "svgTextSyncedTitles": { "description": "SVG text passes through planetName() so a planet's synced article title is shown instead of its catalogue name.", "default": false },
   "visibilityResetsLabels": { "description": "Updating visibility also resets every label's display from the labels checkbox before labels are rescaled.", "default": false }
 }

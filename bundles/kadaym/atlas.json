@@ -24291,6 +24291,11 @@
         ]
       },
       "tiers": true
+    },
+    "solarStations": {
+      "mode": "visibility",
+      "unset": "never",
+      "categories": []
     }
   }
 }

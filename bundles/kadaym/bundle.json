@@ -28,5 +28,9 @@
     "indexFirstSystem": "Virezk",
     "indexHintAtlas": "Elysian Collective",
     "affiliationLink": "Elysian Collective"
+  },
+  "flags": {
+    "solarIllustrativeGuard": true,
+    "solarLanesFromAllStations": true
   }
 }

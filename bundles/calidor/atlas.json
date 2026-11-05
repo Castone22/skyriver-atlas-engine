@@ -7119,6 +7119,16 @@
           "Ringed dark center · black hole"
         ]
       ]
+    },
+    "solarStations": {
+      "mode": "visibility",
+      "unset": "always",
+      "categories": [
+        "TORA"
+      ],
+      "excludeNames": [
+        "Foundry"
+      ]
     }
   }
 }
