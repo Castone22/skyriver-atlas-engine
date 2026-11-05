@@ -8,6 +8,7 @@
 //
 // Exit code 0 only if every step passes.
 import { spawn, spawnSync } from 'node:child_process';
+import { readdirSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -34,7 +35,10 @@ const node = process.execPath;
 
 run('function index up to date', node, ['tools/index-functions.mjs', '--check']);
 if (!run('build', node, ['tools/build.mjs'])) process.exit(1);
-run('unit tests', node, ['--test', 'tests/'], {
+const unitTests = readdirSync(path.join(root, 'tests'))
+  .filter((f) => f.endsWith('.test.mjs'))
+  .map((f) => 'tests/' + f);
+run('unit tests', node, ['--test', ...unitTests], {
   pass: (o) => /ℹ fail 0/.test(o)
 });
 run('DOM tests', node, ['tests/dom.cjs'], { pass: (o) => (o.match(/^PASS/gm) || []).length >= 8 });

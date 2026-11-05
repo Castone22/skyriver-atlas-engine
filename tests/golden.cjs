@@ -174,6 +174,32 @@ function snapshot(w) {
   return crypto.createHash('sha1').update(text).digest('hex').slice(0, 12);
 }
 
+/**
+ * Quick mode skips most steps, so find the stations whose screen really opens (they render an
+ * element whose class ends in "-plate") and keep those: they exercise the station functions.
+ * Returns the step keys to keep. Capped so a quick tour stays quick.
+ */
+function probeOpens(w, data, limit = 8) {
+  const keys = new Set();
+  let found = 0;
+  for (const st of data.stations || []) {
+    if (found >= limit) break;
+    try {
+      w.AtlasFramework.navigate({ system: st.system });
+      openStation(st.name)(w);
+      if (w.document.querySelector('[class*="-plate"]')) {
+        keys.add(`open-station:${st.system}:${st.name}`);
+        keys.add(`close-station:${st.system}:${st.name}`);
+        found++;
+      }
+      closeStation(w);
+    } catch {
+      // A station that cannot open is simply not kept.
+    }
+  }
+  return keys;
+}
+
 /** Run the tour for one atlas page. Returns { key: hash | 'ERR: message' }. */
 async function tour(html, id, data, { quick = false } = {}) {
   const { w, errors } = open(html, id, freeze);
@@ -182,7 +208,10 @@ async function tour(html, id, data, { quick = false } = {}) {
   // Errors thrown while the page loaded. Absent (and so absent from golden files) when clean.
   if (errors.length) out.__load = 'ERR: ' + errors[0].split('\n')[0];
   let steps = stepsFor(data);
-  if (quick) steps = steps.filter((st, i) => st.always || i % 10 === 0);
+  if (quick) {
+    const keep = probeOpens(w, data);
+    steps = steps.filter((st, i) => st.always || i % 10 === 0 || keep.has(st.key));
+  }
   for (const step of steps) {
     errors.length = 0;
     try {
