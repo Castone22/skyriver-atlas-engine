@@ -35,6 +35,8 @@ const node = process.execPath;
 
 run('function index up to date', node, ['tools/index-functions.mjs', '--check']);
 if (!run('build', node, ['tools/build.mjs'])) process.exit(1);
+// The DOM tests also load the DSL demo, which the default build does not produce.
+run('build DSL demo', node, ['tools/build.mjs', 'examples/new-stellar.atlas.mjs', 'dist']);
 const unitTests = readdirSync(path.join(root, 'tests'))
   .filter((f) => f.endsWith('.test.mjs'))
   .map((f) => 'tests/' + f);

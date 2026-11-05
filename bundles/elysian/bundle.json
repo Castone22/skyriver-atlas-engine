@@ -28,15 +28,22 @@
     "orbitalRegister": "CODEX",
     "localCaptionNote": "Only recorded host relationships are shown",
     "localEmptyNote": "No moons or hosted stations are catalogued for this world.",
-    "localMoonNoun": "natural satellite"
+    "localMoonNoun": "natural satellite",
+    "overviewOptionLabel": "Overview · "
   },
   "flags": {
     "indexWorldLinks": true,
     "linkTitleSync": "all",
     "planetArticleTracking": true,
     "planetLinkAttributes": true,
+    "planetPageLinks": true,
+    "selectFirstWorld": true,
+    "stationRoute": "station",
     "systemBodyRenderOpacity": true,
     "visibilityResetsLabels": true,
+    "widgetKeepsAddress": true,
+    "widgetOutlineState": true,
+    "widgetStationOverview": true,
     "worldKeySchematicOrbit": true
   }
 }

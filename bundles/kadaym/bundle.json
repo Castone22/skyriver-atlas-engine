@@ -30,14 +30,24 @@
     "orbitalRegister": "CODEX",
     "localCaptionNote": "Only recorded host relationships are shown",
     "localEmptyNote": "No moons or hosted stations are catalogued for this world.",
-    "localMoonNoun": "natural satellite"
+    "localMoonNoun": "natural satellite",
+    "overviewOptionLabel": "Federation overview · ",
+    "overviewTitle": "FEDERAL TERRITORIAL OVERVIEW",
+    "overviewSubtitle": "Regional positions are schematic · remote holdings shown separately"
   },
   "flags": {
+    "closeSidebarOnSelect": true,
     "derivedBelts": true,
     "elsewhereStations": true,
+    "fallbackRegion": "makor",
+    "normalizeTitleApostrophes": true,
+    "overviewChart": "federation",
+    "overviewStateKey": "federationOverview",
     "regionLabelStyle": "title-subtitle-extent",
+    "selectFirstWorld": true,
     "solarIllustrativeGuard": true,
     "solarLanesFromAllStations": true,
-    "straightenImageTitleQuotes": true
+    "straightenImageTitleQuotes": true,
+    "widgetKeepsAddress": true
   }
 }

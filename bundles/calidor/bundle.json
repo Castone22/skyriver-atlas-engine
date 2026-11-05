@@ -29,15 +29,20 @@
     "orbitalRegister": "CODEX",
     "localCaptionNote": "Only recorded host relationships are shown",
     "localEmptyNote": "No moons or hosted stations are catalogued for this world.",
-    "localMoonNoun": "natural satellite"
+    "localMoonNoun": "natural satellite",
+    "overviewOptionLabel": "Overview · "
   },
   "flags": {
     "companionStars": true,
     "hiddenStationFilters": [
       "TORA"
     ],
+    "keepStationPart": true,
     "regionLabelStyle": "ink-title",
     "solarMoonsVisibleOnly": true,
-    "visibilityResetsLabels": true
+    "stationRoute": "station",
+    "visibilityResetsLabels": true,
+    "widgetKeepsAddress": true,
+    "widgetOutlineState": true
   }
 }

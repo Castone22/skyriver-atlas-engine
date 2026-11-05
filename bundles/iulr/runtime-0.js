@@ -5,7 +5,7 @@ const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'
 const titles={'Ferryman’s Rest':"Ferryman's Rest",'Circa’s Triad':"Circa's Triad",'Ysh Kha’lah':"Ysh Kha'lah",'Da’zha':"Da'zha"};
 const canonicalTitle=name=>articleTitles.get(normalizedName(name))||name;
 const referenceTargets=new Map([...(DATA.stations||[]),...(DATA.satellites||[])].filter(r=>r.referencePage).map(r=>[r.name,r]));
-/* @atlas-function url-28eb0c70ab46 */
+/* @atlas-function url */
 const link=(name,label=name,cls='')=>`<a class="${cls}" href="${url(name)}" target="_blank" rel="noopener">${esc(DATA.worlds[name]&&label===name?planetName(name):label)}</a>`;
 /* @atlas-function systemNameTitle */
 /* @atlas-function hasOrbitChart */
@@ -20,7 +20,7 @@ const EXOTIC_TYPES={'pulsar':'Pulsar','magnetar':'Magnetar','cataclysmic-variabl
 let highlightedRegion='avendonraik';
 let view='avendonraik',scope='region',selected=null,selectedWorld=null,vb={x:0,y:0,w:1000,h:1000},baseWidth=1000,drag=null,moved=false,pointers=new Map(),pinch=null,searchTimer;
 const flags={federation:true,context:true,hazard:true};
-/* @atlas-function atlasParams-f611caacc97e */
+/* @atlas-function atlasParams */
 let widgetRegion=null;
 const widgetMode=atlasParams().get('view')==='widget';
 const embedMode=widgetMode||atlasParams().get('embed')==='1';
@@ -80,12 +80,12 @@ let planetTitleSyncInFlight=null,planetTitleLastChecked=0;
 /* @atlas-function resolveHashRoute */
 /* @atlas-function resolvePlanetRoute */
 let lastRestoredURL='';
-/* @atlas-function routeSnapshot-32e4b784df70 */
-/* @atlas-function routeURL-7c04f49ba3ff */
+/* @atlas-function routeSnapshot */
+/* @atlas-function routeURL */
 /* @atlas-function persistRoute */
 /* @atlas-function beginNavigation */
 /* @atlas-function endNavigation */
-/* @atlas-function restoreRoute-415cec56bec0 */
+/* @atlas-function restoreRoute */
 addEventListener('popstate',event=>restoreRoute(event.state));
 addEventListener('hashchange',()=>{if(location.href!==lastRestoredURL)restoreRoute(null,true)});
 
@@ -109,10 +109,10 @@ const LABEL_ZOOM={overview:{active:[120,150],neighbor:[150,220]},regional:{activ
 /* @atlas-function scaleLabels-5982cc7d7bb0 */
 /* @atlas-function applyView */
 /* @atlas-function fitBounds */
-/* @atlas-function setView-b3d7ffb7defe */
+/* @atlas-function setView */
 /* @atlas-function fitChart */
 /* @atlas-function zoom */
-/* @atlas-function select-ea9ed057f437 */
+/* @atlas-function select */
 /* @atlas-function tierMarkup */
 /* @atlas-function renderMapLegend */
 /* @atlas-function affiliationMarkup */
@@ -134,7 +134,7 @@ const STATION_TYPES={
  'Industry':{color:'#dab879',symbol:'▥',path:'M-6 6V-3L-2 0V-3L2 0V-6H6V6Z M-3 3H3'},
  'Other':{color:'#9bb6c8',symbol:'✧',path:'M0-7L6-3V3L0 7-6 3V-3Z M-3 0H3 M0-3V3'}
 };
-let stationOverview=false;
+let stationOverview=false,stationPart=0;
 let systemFocused=false,systemZoom=1,planetFocus=null,showBelts=true;
 const stationFilters=new Set(Object.keys(STATION_TYPES));
 const siteType=name=>/station|triad|jumpgate/i.test(name)?'Station / structure':/colony/i.test(name)?'Colony':'World';
@@ -170,9 +170,11 @@ const toraParts=[
 /* @atlas-function hardware */
 /* @atlas-function toraHubDetail */
 /* @atlas-function toraElevation */
-/* @atlas-function stationScreen-9033d810843c */
-/* @atlas-function highlightPart-3b673ff30d38 */
-/* @atlas-function openStation-8874c87f6a8d */
+/* @atlas-function stationScreen */
+/* @atlas-function highlightPart */
+/* @atlas-function currentStationParts */
+/* @atlas-function openStation */
+/* @atlas-function hasStationSchematic */
 /* @atlas-function closeStation */
 /* @atlas-function bindToraName */
 /* @atlas-function bindToraControl */
@@ -205,11 +207,11 @@ let planetClickTimer;
 /* @atlas-function bindOrbitalSelection */
 /* @atlas-function drawBelt */
 /* @atlas-function mountSystem-368a20b29dd5 */
-/* @atlas-function setSystemFocus-b1b2fd2900d0 */
+/* @atlas-function setSystemFocus */
 
-/* @atlas-function syncSystemFocus-83b192ca5f37 */
+/* @atlas-function syncSystemFocus */
 /* @atlas-function applySystemZoom */
-/* @atlas-function bindSystemControls-da72bdbb7f06 */
+/* @atlas-function bindSystemControls */
 /* @atlas-function chooseSystemWorld */
 /* @atlas-function toggleAtlasMotion */
 reducedMotion.addEventListener('change',e=>{if(e.matches){orbitPaused=true;renderDetail()}});

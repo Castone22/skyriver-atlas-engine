@@ -5,7 +5,7 @@ const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'
 const titles={'Ferryman’s Rest':"Ferryman's Rest",'Circa’s Triad':"Circa's Triad",'Ysh Kha’lah':"Ysh Kha'lah",'Da’zha':"Da'zha"};
 const canonicalTitle=name=>titleLookup.get(normalizedName(name))||name;
 const referenceTargets=new Map([...(DATA.stations||[]),...(DATA.satellites||[])].filter(r=>r.referencePage).map(r=>[r.name,r]));
-/* @atlas-function url-1466fb4db7c9 */
+/* @atlas-function url */
 const link=(name,label=name,cls='')=>`<a class="${cls}" href="${url(name)}" target="_blank" rel="noopener">${esc(label)}</a>`;
 /* @atlas-function systemNameTitle */
 /* @atlas-function hasOrbitChart */
@@ -23,9 +23,10 @@ for(const record of [...allRecords,...DATA.stations,...DATA.satellites,...DATA.e
 }
 const EXOTIC_TYPES={'pulsar':'Pulsar','magnetar':'Magnetar','cataclysmic-variable':'Cataclysmic variable'};
 let overviewMode=false;
+let stationOverview=false;
 let view='makor',scope='region',selected='virezk',selectedWorld='Mahanzk',vb={x:0,y:0,w:1000,h:1000},baseWidth=1000,drag=null,moved=false,pointers=new Map(),pinch=null,searchTimer;
 const flags={federation:true,context:true,hazard:true};
-/* @atlas-function atlasParams-f5f2e5e347d4 */
+/* @atlas-function atlasParams */
 let widgetRegion=null;
 const widgetMode=atlasParams().get('view')==='widget';
 const embedMode=widgetMode||atlasParams().get('embed')==='1';
@@ -45,12 +46,12 @@ const MARKER_DOSSIER_DELAY=600;
 /* @atlas-function resolveHashRoute */
 /* @atlas-function resolvePlanetRoute */
 let lastRestoredURL='';
-/* @atlas-function routeSnapshot-3b3aa0ca2ed0 */
-/* @atlas-function routeURL-b7602e0d594a */
+/* @atlas-function routeSnapshot */
+/* @atlas-function routeURL */
 /* @atlas-function persistRoute */
 /* @atlas-function beginNavigation */
 /* @atlas-function endNavigation */
-/* @atlas-function restoreRoute-3bff77d8f6c1 */
+/* @atlas-function restoreRoute */
 addEventListener('popstate',event=>restoreRoute(event.state));
 addEventListener('hashchange',()=>{if(location.href!==lastRestoredURL)restoreRoute(null,true)});
 
@@ -67,9 +68,9 @@ addEventListener('hashchange',()=>{if(location.href!==lastRestoredURL)restoreRou
 /* @atlas-function scaleLabels */
 /* @atlas-function applyView */
 /* @atlas-function fitBounds */
-/* @atlas-function setView-cd6ab0f8ae6d */
+/* @atlas-function setView */
 /* @atlas-function zoom */
-/* @atlas-function select-37c0546005ab */
+/* @atlas-function select */
 /* @atlas-function tierMarkup */
 /* @atlas-function renderMapLegend */
 /* @atlas-function affiliationMarkup */
@@ -143,11 +144,11 @@ let planetClickTimer;
 /* @atlas-function bindOrbitalSelection */
 /* @atlas-function drawBelt */
 /* @atlas-function mountSystem-shared */
-/* @atlas-function setSystemFocus-fa10b9ff0fee */
+/* @atlas-function setSystemFocus */
 
-/* @atlas-function syncSystemFocus-dd319a0c86e0 */
+/* @atlas-function syncSystemFocus */
 /* @atlas-function applySystemZoom */
-/* @atlas-function bindSystemControls-f39c2600afc8 */
+/* @atlas-function bindSystemControls */
 /* @atlas-function chooseSystemWorld */
 /* @atlas-function toggleAtlasMotion */
 reducedMotion.addEventListener('change',e=>{if(e.matches){orbitPaused=true;renderDetail()}});

@@ -30,24 +30,33 @@
     "orbitalRegister": "UNION REGISTER",
     "localCaptionNote": "Moon and station assignments follow the second-edition survey",
     "localEmptyNote": "No local objects charted.",
-    "localMoonNoun": "moon"
+    "localMoonNoun": "moon",
+    "overviewOptionLabel": "",
+    "overviewTitle": "",
+    "overviewSubtitle": ""
   },
   "flags": {
     "architectureFacts": true,
     "bodyRenderOpacity": true,
     "bordersToggleClass": true,
+    "closeSidebarOnSelect": true,
     "emptyDossierFactsFallBack": true,
+    "fallbackRegion": "avendonraik",
     "goldenAngleMoonPhase": true,
     "linkTitleSync": "worlds",
     "minimapRegionPaths": true,
     "minimapViewBox": "0 0 2850 2570",
+    "planetArticleTitles": true,
+    "regionHighlight": true,
     "searchSystemFields": [
       "architecture",
       "cloakStatusText",
       "description"
     ],
+    "selectFirstWorld": true,
     "shortLabelsOnlyWhenExtended": true,
     "stationLinksUseArticleTitle": true,
+    "stationRoute": "focus",
     "systemRecordArticleTitle": true,
     "titledPlanetInspectLabel": true,
     "visibilityResetsLabels": true

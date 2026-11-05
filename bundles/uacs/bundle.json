@@ -28,17 +28,22 @@
     "orbitalRegister": "CODEX",
     "localCaptionNote": "Only recorded host relationships are shown",
     "localEmptyNote": "No moons or hosted stations are catalogued for this world.",
-    "localMoonNoun": "natural satellite"
+    "localMoonNoun": "natural satellite",
+    "overviewOptionLabel": "Overview · "
   },
   "flags": {
     "extendedChartMoonThreshold": 10,
     "inspectLabelsUseTitles": true,
     "regionLabelStyle": "title-subtitle-ink",
+    "selectFirstWorld": true,
     "sizedFocusBodyLabel": true,
     "starTooltips": true,
+    "stationRoute": "station",
     "svgTextSyncedTitles": true,
     "titledLocalOrbitLabels": true,
     "titledPlanetInspectLabel": true,
-    "visibilityResetsLabels": true
+    "visibilityResetsLabels": true,
+    "widgetKeepsAddress": true,
+    "widgetOutlineState": true
   }
 }

@@ -1,0 +1,5 @@
+function setSystemFocus(active){const flags=__ATLAS__.flags,OV=flags.overviewStateKey,s=allRecords.find(x=>x.id===selected);beginNavigation();stationOverview=false;
+ if(active&&hasOrbitChart(s)&&!systemFocused){if(!flags.regionHighlight&&s.region&&view!==s.region&&!overviewMode)setView(s.region,true);regionalCamera=flags.regionHighlight?{view,highlightedRegion,camera:{...vb},baseWidth}:{view,[OV]:overviewMode,camera:{...vb},baseWidth}}
+ if(!active&&planetFocus&&localChartParent(s,selectedWorld))selectedWorld=planetFocus;planetFocus=null;systemFocused=!!active&&hasOrbitChart(s);
+ if(!systemFocused&&regionalCamera){const saved=regionalCamera;if(flags.regionHighlight)setView(saved.view,true);else setView(saved.view,true,false,saved[OV]);vb={...saved.camera};baseWidth=saved.baseWidth;if(flags.regionHighlight){highlightedRegion=saved.highlightedRegion??(saved.view==='all'?null:saved.view);updateRegionDisplay()}applyView();regionalCamera=null}
+ renderDetail();setDetailOpen(false);(systemFocused?$('backToRegion'):$('focusSystem'))?.focus({preventScroll:true});endNavigation();}

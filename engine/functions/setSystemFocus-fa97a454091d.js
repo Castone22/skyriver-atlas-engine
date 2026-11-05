@@ -1,5 +1,0 @@
-function setSystemFocus(active){const s=allRecords.find(x=>x.id===selected);beginNavigation();stationOverview=false;
- if(active&&hasOrbitChart(s)&&!systemFocused){if(s.region&&view!==s.region&&!overviewMode)setView(s.region,true);regionalCamera={view,overviewMode,camera:{...vb},baseWidth}}
- if(!active&&planetFocus&&localChartParent(s,selectedWorld))selectedWorld=planetFocus;planetFocus=null;systemFocused=!!active&&hasOrbitChart(s);
- if(!systemFocused&&regionalCamera){const saved=regionalCamera;setView(saved.view,true,false,saved.overviewMode);vb={...saved.camera};baseWidth=saved.baseWidth;applyView();regionalCamera=null}
- renderDetail();setDetailOpen(false);(systemFocused?$('backToRegion'):$('focusSystem'))?.focus({preventScroll:true});endNavigation();}

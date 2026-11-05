@@ -11,6 +11,10 @@
     "description": "Hiding map borders toggles the borders-hidden class on the region layer instead of setting its display style.",
     "default": false
   },
+  "closeSidebarOnSelect": {
+    "description": "Selecting a system closes the location index drawer on narrow screens.",
+    "default": false
+  },
   "companionStars": {
     "description": "A system's companion stars (primaries after the first) are drawn beside its main star.",
     "default": false
@@ -31,6 +35,10 @@
     "description": "When greater than 0, the local planet chart switches to its extended satellite layout once the planet has more moons than this number; when 0 it follows each world's extendedSatelliteChart field.",
     "default": 0
   },
+  "fallbackRegion": {
+    "description": "Region shown when an address names no region and no system.",
+    "default": "all"
+  },
   "goldenAngleMoonPhase": {
     "description": "Moons on the local planet chart always start a golden-angle step apart (2.39996 radians), not only in the extended layout (default step 2.1).",
     "default": false
@@ -47,6 +55,10 @@
     "description": "Inspect buttons in the system key are labelled with the synced planet title instead of the catalogue name.",
     "default": false
   },
+  "keepStationPart": {
+    "description": "A station screen that is drawn again keeps the highlighted part instead of resetting to the first part.",
+    "default": false
+  },
   "linkTitleSync": {
     "description": "Link text shows a planet's synced title: off, worlds (only when the name is a catalogued world) or all (whenever the label equals the name).",
     "default": "off"
@@ -59,12 +71,36 @@
     "description": "Fixed viewBox for the minimap, for atlases with no atlasExtent; null uses the atlas extent.",
     "default": null
   },
+  "normalizeTitleApostrophes": {
+    "description": "Article links turn curly apostrophes in a title into straight ones before building the URL.",
+    "default": false
+  },
+  "overviewChart": {
+    "description": "Value of the chart address parameter that selects the overview chart (overview, or federation for Kadaym).",
+    "default": "overview"
+  },
+  "overviewStateKey": {
+    "description": "Name of the saved-state field that records the overview flag (route history and the camera memory).",
+    "default": "overviewMode"
+  },
+  "planetArticleTitles": {
+    "description": "Planet links use the article title kept in sync with the Codex (planetArticleName) when the planet has one.",
+    "default": false
+  },
   "planetArticleTracking": {
     "description": "Live article lookups use, and update, the tracked wiki page id of a planet (synced article titles).",
     "default": false
   },
   "planetLinkAttributes": {
     "description": "Links to planets carry data-planet-link and data-planet-title attributes so the page can find and retitle them.",
+    "default": false
+  },
+  "planetPageLinks": {
+    "description": "Planet links go to the Codex page by page id (curid) once the id is known from title synchronisation.",
+    "default": false
+  },
+  "regionHighlight": {
+    "description": "The whole-atlas chart highlights one region (highlightedRegion) instead of switching between overview and regional charts.",
     "default": false
   },
   "regionLabelStyle": {
@@ -74,6 +110,10 @@
   "searchSystemFields": {
     "description": "Extra system fields (by property name) whose text is searchable, in addition to the classification terms.",
     "default": []
+  },
+  "selectFirstWorld": {
+    "description": "Selecting a system without naming an object also selects its first catalogued world.",
+    "default": false
   },
   "shortLabelsOnlyWhenExtended": {
     "description": "Satellite labels on the local planet chart use a body's shortLabel only in the extended layout; otherwise they always use it.",
@@ -103,6 +143,10 @@
     "description": "A station's first article link is its system's article title instead of the system name.",
     "default": false
   },
+  "stationRoute": {
+    "description": "How the station overview appears in the address: station (station=1), focus (focus=station) or empty for no station overview route.",
+    "default": ""
+  },
   "straightenImageTitleQuotes": {
     "description": "Curly apostrophes in the article title used for live images are replaced by straight ones.",
     "default": false
@@ -129,6 +173,18 @@
   },
   "visibilityResetsLabels": {
     "description": "Updating visibility also resets every label's display from the labels checkbox before labels are rescaled.",
+    "default": false
+  },
+  "widgetKeepsAddress": {
+    "description": "In widget mode with no system open the address bar is left untouched instead of being rewritten with the current view.",
+    "default": false
+  },
+  "widgetOutlineState": {
+    "description": "Region outlines on the chart get their pressed state set even in widget mode.",
+    "default": false
+  },
+  "widgetStationOverview": {
+    "description": "A widget can open straight into a station overview from the address.",
     "default": false
   },
   "worldKeySchematicOrbit": {

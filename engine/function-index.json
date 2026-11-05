@@ -74,28 +74,16 @@
     ],
     "bytes": 284
   },
-  "atlasParams-6271ec249f97": {
+  "atlasParams": {
     "name": "atlasParams",
     "profiles": [
       "calidor",
       "elysian",
+      "iulr",
+      "kadaym",
       "uacs"
     ],
-    "bytes": 201
-  },
-  "atlasParams-f5f2e5e347d4": {
-    "name": "atlasParams",
-    "profiles": [
-      "kadaym"
-    ],
-    "bytes": 429
-  },
-  "atlasParams-f611caacc97e": {
-    "name": "atlasParams",
-    "profiles": [
-      "iulr"
-    ],
-    "bytes": 215
+    "bytes": 417
   },
   "beginNavigation": {
     "name": "beginNavigation",
@@ -130,34 +118,16 @@
     ],
     "bytes": 699
   },
-  "bindSystemControls-a6497c8f29aa": {
+  "bindSystemControls": {
     "name": "bindSystemControls",
     "profiles": [
-      "elysian"
-    ],
-    "bytes": 2829
-  },
-  "bindSystemControls-cf2f9cf9b847": {
-    "name": "bindSystemControls",
-    "profiles": [
-      "calidor"
-    ],
-    "bytes": 2920
-  },
-  "bindSystemControls-da72bdbb7f06": {
-    "name": "bindSystemControls",
-    "profiles": [
+      "calidor",
+      "elysian",
       "iulr",
+      "kadaym",
       "uacs"
     ],
-    "bytes": 2805
-  },
-  "bindSystemControls-f39c2600afc8": {
-    "name": "bindSystemControls",
-    "profiles": [
-      "kadaym"
-    ],
-    "bytes": 1606
+    "bytes": 2978
   },
   "bindToraControl": {
     "name": "bindToraControl",
@@ -330,9 +300,12 @@
   "currentStationParts": {
     "name": "currentStationParts",
     "profiles": [
-      "elysian"
+      "calidor",
+      "elysian",
+      "iulr",
+      "uacs"
     ],
-    "bytes": 131
+    "bytes": 170
   },
   "deadStarGlyph": {
     "name": "deadStarGlyph",
@@ -683,25 +656,22 @@
   "hasStationSchematic": {
     "name": "hasStationSchematic",
     "profiles": [
-      "elysian"
-    ],
-    "bytes": 87
-  },
-  "highlightPart-3b673ff30d38": {
-    "name": "highlightPart",
-    "profiles": [
       "calidor",
+      "elysian",
       "iulr",
       "uacs"
     ],
-    "bytes": 599
+    "bytes": 109
   },
-  "highlightPart-ec06a7b48e22": {
+  "highlightPart": {
     "name": "highlightPart",
     "profiles": [
-      "elysian"
+      "calidor",
+      "elysian",
+      "iulr",
+      "uacs"
     ],
-    "bytes": 503
+    "bytes": 570
   },
   "highlightRegion": {
     "name": "highlightRegion",
@@ -1006,21 +976,15 @@
     ],
     "bytes": 2671
   },
-  "openStation-19e4d19bff3f": {
-    "name": "openStation",
-    "profiles": [
-      "elysian"
-    ],
-    "bytes": 413
-  },
-  "openStation-8874c87f6a8d": {
+  "openStation": {
     "name": "openStation",
     "profiles": [
       "calidor",
+      "elysian",
       "iulr",
       "uacs"
     ],
-    "bytes": 446
+    "bytes": 427
   },
   "orbitalFact": {
     "name": "orbitalFact",
@@ -1514,40 +1478,16 @@
     ],
     "bytes": 194
   },
-  "restoreRoute-0b88bbe100e3": {
+  "restoreRoute": {
     "name": "restoreRoute",
     "profiles": [
-      "elysian"
-    ],
-    "bytes": 3343
-  },
-  "restoreRoute-3bff77d8f6c1": {
-    "name": "restoreRoute",
-    "profiles": [
-      "kadaym"
-    ],
-    "bytes": 3145
-  },
-  "restoreRoute-415cec56bec0": {
-    "name": "restoreRoute",
-    "profiles": [
-      "iulr"
-    ],
-    "bytes": 3506
-  },
-  "restoreRoute-b46dfe049969": {
-    "name": "restoreRoute",
-    "profiles": [
+      "calidor",
+      "elysian",
+      "iulr",
+      "kadaym",
       "uacs"
     ],
-    "bytes": 3353
-  },
-  "restoreRoute-e2c1998e4e99": {
-    "name": "restoreRoute",
-    "profiles": [
-      "calidor"
-    ],
-    "bytes": 3375
+    "bytes": 4361
   },
   "rotationUI": {
     "name": "rotationUI",
@@ -1556,51 +1496,27 @@
     ],
     "bytes": 166
   },
-  "routeSnapshot-32e4b784df70": {
-    "name": "routeSnapshot",
-    "profiles": [
-      "iulr"
-    ],
-    "bytes": 348
-  },
-  "routeSnapshot-3b3aa0ca2ed0": {
-    "name": "routeSnapshot",
-    "profiles": [
-      "kadaym"
-    ],
-    "bytes": 254
-  },
-  "routeSnapshot-abc4a9cfc8b4": {
+  "routeSnapshot": {
     "name": "routeSnapshot",
     "profiles": [
       "calidor",
       "elysian",
+      "iulr",
+      "kadaym",
       "uacs"
     ],
-    "bytes": 250
+    "bytes": 466
   },
-  "routeURL-66be76949ffb": {
+  "routeURL": {
     "name": "routeURL",
     "profiles": [
       "calidor",
       "elysian",
+      "iulr",
+      "kadaym",
       "uacs"
     ],
-    "bytes": 1036
-  },
-  "routeURL-7c04f49ba3ff": {
-    "name": "routeURL",
-    "profiles": [
-      "iulr"
-    ],
-    "bytes": 1011
-  },
-  "routeURL-b7602e0d594a": {
-    "name": "routeURL",
-    "profiles": [
-      "kadaym"
-    ],
-    "bytes": 969
+    "bytes": 1462
   },
   "safeImageURL": {
     "name": "safeImageURL",
@@ -1677,34 +1593,16 @@
     ],
     "bytes": 256
   },
-  "select-2a33070d08e5": {
+  "select": {
     "name": "select",
     "profiles": [
-      "calidor"
-    ],
-    "bytes": 1087
-  },
-  "select-37c0546005ab": {
-    "name": "select",
-    "profiles": [
-      "kadaym"
-    ],
-    "bytes": 1179
-  },
-  "select-abff9c66530d": {
-    "name": "select",
-    "profiles": [
+      "calidor",
       "elysian",
+      "iulr",
+      "kadaym",
       "uacs"
     ],
-    "bytes": 1123
-  },
-  "select-ea9ed057f437": {
-    "name": "select",
-    "profiles": [
-      "iulr"
-    ],
-    "bytes": 1036
+    "bytes": 1376
   },
   "setDetailOpen": {
     "name": "setDetailOpen",
@@ -1744,51 +1642,27 @@
     ],
     "bytes": 524
   },
-  "setSystemFocus-b1b2fd2900d0": {
-    "name": "setSystemFocus",
-    "profiles": [
-      "iulr"
-    ],
-    "bytes": 778
-  },
-  "setSystemFocus-fa10b9ff0fee": {
-    "name": "setSystemFocus",
-    "profiles": [
-      "kadaym"
-    ],
-    "bytes": 767
-  },
-  "setSystemFocus-fa97a454091d": {
+  "setSystemFocus": {
     "name": "setSystemFocus",
     "profiles": [
       "calidor",
       "elysian",
+      "iulr",
+      "kadaym",
       "uacs"
     ],
-    "bytes": 763
+    "bytes": 1086
   },
-  "setView-5a65e3a280b5": {
+  "setView": {
     "name": "setView",
     "profiles": [
       "calidor",
       "elysian",
+      "iulr",
+      "kadaym",
       "uacs"
     ],
-    "bytes": 1487
-  },
-  "setView-b3d7ffb7defe": {
-    "name": "setView",
-    "profiles": [
-      "iulr"
-    ],
-    "bytes": 619
-  },
-  "setView-cd6ab0f8ae6d": {
-    "name": "setView",
-    "profiles": [
-      "kadaym"
-    ],
-    "bytes": 1873
+    "bytes": 2241
   },
   "showRealm": {
     "name": "showRealm",
@@ -1917,21 +1791,15 @@
     ],
     "bytes": 491
   },
-  "stationScreen-7218cedf4124": {
+  "stationScreen": {
     "name": "stationScreen",
     "profiles": [
-      "calidor"
-    ],
-    "bytes": 1589
-  },
-  "stationScreen-9033d810843c": {
-    "name": "stationScreen",
-    "profiles": [
+      "calidor",
       "elysian",
       "iulr",
       "uacs"
     ],
-    "bytes": 1592
+    "bytes": 1643
   },
   "status": {
     "name": "status",
@@ -2005,22 +1873,16 @@
     ],
     "bytes": 1840
   },
-  "syncSystemFocus-83b192ca5f37": {
+  "syncSystemFocus": {
     "name": "syncSystemFocus",
     "profiles": [
       "calidor",
       "elysian",
       "iulr",
+      "kadaym",
       "uacs"
     ],
     "bytes": 325
-  },
-  "syncSystemFocus-dd319a0c86e0": {
-    "name": "syncSystemFocus",
-    "profiles": [
-      "kadaym"
-    ],
-    "bytes": 261
   },
   "systemArticleRecord": {
     "name": "systemArticleRecord",
@@ -2246,34 +2108,16 @@
     ],
     "bytes": 806
   },
-  "url-1466fb4db7c9": {
-    "name": "url",
-    "profiles": [
-      "kadaym"
-    ],
-    "bytes": 404
-  },
-  "url-28eb0c70ab46": {
-    "name": "url",
-    "profiles": [
-      "iulr"
-    ],
-    "bytes": 408
-  },
-  "url-ad223876f7d1": {
+  "url": {
     "name": "url",
     "profiles": [
       "calidor",
+      "elysian",
+      "iulr",
+      "kadaym",
       "uacs"
     ],
-    "bytes": 360
-  },
-  "url-def748458460": {
-    "name": "url",
-    "profiles": [
-      "elysian"
-    ],
-    "bytes": 516
+    "bytes": 843
   },
   "validateHTML": {
     "name": "validateHTML",

@@ -1,5 +1,6 @@
 function stationScreen(s,st){
- if(st.schematic==='triad')return triadScreen(s,st);
+ if(st?.name==='Foundry')return foundryScreen(s);
+ if(st?.schematic==='triad')return triadScreen(s,st);
  const units=stationRecords(s).filter(unit=>unit.category==='TORA');
  const switcher=`<nav class="tora-units" aria-label="Reflector arrays in this system">${units.map((unit,i)=>`<button data-unit="${esc(unit.name)}" aria-pressed="${unit.name===st.name}">Array 0${i+1}</button>`).join('')}${link(TORA_CLASS,'Go to Article','tora-article')}</nav>`;
 

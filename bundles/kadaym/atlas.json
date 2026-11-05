@@ -286,7 +286,8 @@
         "watermarkAnchor": [
           955,
           1151
-        ]
+        ],
+        "mapKicker": "01 / IMPERIAL HEARTLAND"
       },
       "lendor": {
         "name": "Jurah Lendor",
@@ -565,7 +566,8 @@
         "watermarkAnchor": [
           1573,
           1044
-        ]
+        ],
+        "mapKicker": "02 / FIRST EXPANSION"
       },
       "narthezk": {
         "name": "Narthezk",
@@ -843,7 +845,9 @@
         "watermarkAnchor": [
           2953,
           543
-        ]
+        ],
+        "mapKicker": "03 / ACQUIRED TERRITORIES",
+        "mapSubtitle": "Turahk homeworld · Haktur system"
       },
       "frontier": {
         "name": "Drayson Hinterlands",
@@ -1067,7 +1071,9 @@
         "watermarkAnchor": [
           4853,
           2181
-        ]
+        ],
+        "mapKicker": "04 / ELYSIAN COLLECTIVE",
+        "mapSubtitle": "Elysian Collective · Prathia is the Kadaymian foothold"
       },
       "valteo": {
         "name": "Valteo",
@@ -1349,7 +1355,8 @@
         "watermarkAnchor": [
           1128,
           1964
-        ]
+        ],
+        "mapKicker": "05 / ACQUIRED IMPERIAL MARCHES"
       },
       "tserazk-makai": {
         "name": "Tserazk Makai",
@@ -1742,7 +1749,8 @@
         "watermarkAnchor": [
           2381,
           2350
-        ]
+        ],
+        "mapKicker": "06 / KURZENZKA SECTOR"
       },
       "drezhvahl": {
         "name": "Drezhvahl",
@@ -2072,7 +2080,8 @@
         "watermarkAnchor": [
           -410,
           540
-        ]
+        ],
+        "mapKicker": "FEDERATION / REGIONAL CHART"
       },
       "ildovahr": {
         "name": "Ildovahr",
@@ -2402,7 +2411,8 @@
         "watermarkAnchor": [
           670,
           235
-        ]
+        ],
+        "mapKicker": "FEDERATION / REGIONAL CHART"
       },
       "krevach": {
         "name": "Krevach",
@@ -2715,7 +2725,8 @@
         "watermarkAnchor": [
           171,
           1947
-        ]
+        ],
+        "mapKicker": "FEDERATION / REGIONAL CHART"
       },
       "daurovna": {
         "name": "Daurovna",
@@ -3019,7 +3030,8 @@
         "watermarkAnchor": [
           1575,
           164
-        ]
+        ],
+        "mapKicker": "FEDERATION / REGIONAL CHART"
       },
       "velkharn": {
         "name": "Velkharn",
@@ -3332,7 +3344,8 @@
         "watermarkAnchor": [
           2462,
           -17
-        ]
+        ],
+        "mapKicker": "FEDERATION / REGIONAL CHART"
       },
       "orravai": {
         "name": "Orravai",
@@ -3606,7 +3619,8 @@
         "watermarkAnchor": [
           89,
           1520
-        ]
+        ],
+        "mapKicker": "FEDERATION / REGIONAL CHART"
       },
       "kharnevik": {
         "name": "Kharnevik",
@@ -3948,7 +3962,8 @@
         "watermarkAnchor": [
           3026,
           1250
-        ]
+        ],
+        "mapKicker": "FEDERATION / REGIONAL CHART"
       },
       "uldrei-vahr": {
         "name": "Uldrei Vahr",
@@ -4025,7 +4040,8 @@
         "watermarkAnchor": [
           -855,
           -374
-        ]
+        ],
+        "mapKicker": "KURZENZKA SECTOR / SILENT OCCUPATION"
       },
       "kezhrava": {
         "name": "Kezhrava",
@@ -4094,7 +4110,8 @@
         "watermarkAnchor": [
           351,
           -839
-        ]
+        ],
+        "mapKicker": "KURZENZKA SECTOR / SILENT OCCUPATION"
       }
     },
     "systems": [

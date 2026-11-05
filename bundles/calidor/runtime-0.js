@@ -5,7 +5,7 @@ const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'
 const titles={'Ferryman’s Rest':"Ferryman's Rest",'Circa’s Triad':"Circa's Triad",'Ysh Kha’lah':"Ysh Kha'lah",'Da’zha':"Da'zha"};
 const canonicalTitle=name=>{const n=normalizedName(name);const record=[...allRecords,...Object.entries(DATA.worlds).map(([name,r])=>({name,...r})),...(DATA.stations||[]),...(DATA.satellites||[]),...(DATA.entities||[])].find(r=>[r.name,...(r.aliases||[])].some(v=>normalizedName(v)===n));return record?.articleTitle||record?.name||name};
 const referenceTargets=new Map([...(DATA.stations||[]),...(DATA.satellites||[])].filter(r=>r.referencePage).map(r=>[r.name,r]));
-/* @atlas-function url-ad223876f7d1 */
+/* @atlas-function url */
 const link=(name,label=name,cls='')=>`<a class="${cls}" href="${url(name)}" target="_blank" rel="noopener">${esc(label)}</a>`;
 /* @atlas-function systemNameTitle */
 /* @atlas-function hasOrbitChart */
@@ -20,7 +20,7 @@ const EXOTIC_TYPES={'pulsar':'Pulsar','magnetar':'Magnetar','cataclysmic-variabl
 let overviewMode=true;
 let view='all',scope='region',selected=null,selectedWorld=null,vb={x:0,y:0,w:1000,h:1000},baseWidth=1000,drag=null,moved=false,pointers=new Map(),pinch=null,searchTimer;
 const flags={federation:true,context:true,hazard:true};
-/* @atlas-function atlasParams-6271ec249f97 */
+/* @atlas-function atlasParams */
 let widgetRegion=null;
 const widgetMode=atlasParams().get('view')==='widget';
 const embedMode=widgetMode||atlasParams().get('embed')==='1';
@@ -41,12 +41,12 @@ const normalizedName=value=>String(value||'').normalize('NFKD').replace(/[\u0300
 /* @atlas-function resolveHashRoute */
 /* @atlas-function resolvePlanetRoute */
 let lastRestoredURL='';
-/* @atlas-function routeSnapshot-abc4a9cfc8b4 */
-/* @atlas-function routeURL-66be76949ffb */
+/* @atlas-function routeSnapshot */
+/* @atlas-function routeURL */
 /* @atlas-function persistRoute */
 /* @atlas-function beginNavigation */
 /* @atlas-function endNavigation */
-/* @atlas-function restoreRoute-e2c1998e4e99 */
+/* @atlas-function restoreRoute */
 addEventListener('popstate',event=>restoreRoute(event.state));
 addEventListener('hashchange',()=>{if(location.href!==lastRestoredURL)restoreRoute(null,true)});
 
@@ -63,9 +63,9 @@ addEventListener('hashchange',()=>{if(location.href!==lastRestoredURL)restoreRou
 /* @atlas-function scaleLabels */
 /* @atlas-function applyView */
 /* @atlas-function fitBounds */
-/* @atlas-function setView-5a65e3a280b5 */
+/* @atlas-function setView */
 /* @atlas-function zoom */
-/* @atlas-function select-2a33070d08e5 */
+/* @atlas-function select */
 /* @atlas-function tierMarkup */
 /* @atlas-function renderMapLegend */
 
@@ -139,9 +139,11 @@ const toraParts=[
 /* @atlas-function hardware */
 /* @atlas-function toraHubDetail */
 /* @atlas-function toraElevation */
-/* @atlas-function stationScreen-7218cedf4124 */
-/* @atlas-function highlightPart-3b673ff30d38 */
-/* @atlas-function openStation-8874c87f6a8d */
+/* @atlas-function stationScreen */
+/* @atlas-function highlightPart */
+/* @atlas-function currentStationParts */
+/* @atlas-function openStation */
+/* @atlas-function hasStationSchematic */
 /* @atlas-function closeStation */
 /* @atlas-function bindToraName */
 /* @atlas-function bindToraControl */
@@ -175,11 +177,11 @@ let planetClickTimer;
 /* @atlas-function bindOrbitalSelection */
 /* @atlas-function drawBelt */
 /* @atlas-function mountSystem-d80d9c15a5ef */
-/* @atlas-function setSystemFocus-fa97a454091d */
+/* @atlas-function setSystemFocus */
 
-/* @atlas-function syncSystemFocus-83b192ca5f37 */
+/* @atlas-function syncSystemFocus */
 /* @atlas-function applySystemZoom */
-/* @atlas-function bindSystemControls-cf2f9cf9b847 */
+/* @atlas-function bindSystemControls */
 /* @atlas-function chooseSystemWorld */
 /* @atlas-function toggleAtlasMotion */
 reducedMotion.addEventListener('change',e=>{if(e.matches){orbitPaused=true;renderDetail()}});
