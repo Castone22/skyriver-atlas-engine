@@ -26,7 +26,8 @@
   "slots": {
     "downloadName": "Kadaym-Stellar-Atlas.html",
     "affiliationLink": "Elysian Collective",
-    "indexHint": "Try a name, Tier 5, Elysian Collective, ruins or magnetar."
+    "indexHint": "Try a name, Tier 5, Elysian Collective, ruins or magnetar.",
+    "orbitalRegister": "CODEX"
   },
   "flags": {
     "straightenImageTitleQuotes": true

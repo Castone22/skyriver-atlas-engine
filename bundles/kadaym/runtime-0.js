@@ -109,9 +109,10 @@ const illustrativeTypes={
 /* @atlas-function illustrativePlanet */
 /* @atlas-function solarLayout-4db56797e6fb */
 /* @atlas-function ordinal */
-/* @atlas-function orbitalFact-9ec16f8dcf1f */
+/* @atlas-function orbitalFact */
 /* @atlas-function worldRecord */
-/* @atlas-function bodyKey-cbba6d726e90 */
+/* @atlas-function bodyKey */
+/* @atlas-function stationHasOverview-tora */
 /* @atlas-function silentDecoration */
 /* @atlas-function notableSitesMarkup */
 /* @atlas-function systemView-042c2ccd42ba */
@@ -164,7 +165,7 @@ const dossierFields=[
 /* @atlas-function dossierFacts */
 /* @atlas-function factValue */
 /* @atlas-function factGrid */
-/* @atlas-function bodyFacts-0eb86f4c84ff */
+/* @atlas-function bodyFacts */
 /* @atlas-function safeImageURL */
 /* @atlas-function imageAPI */
 /* @atlas-function currentImageTitle */

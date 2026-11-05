@@ -124,9 +124,10 @@ const illustrativeTypes={
 /* @atlas-function illustrativePlanet */
 /* @atlas-function solarLayout-f526c44b9d79 */
 /* @atlas-function ordinal */
-/* @atlas-function orbitalFact-9ec16f8dcf1f */
+/* @atlas-function orbitalFact */
 /* @atlas-function worldRecord */
-/* @atlas-function bodyKey-84851d3446fd */
+/* @atlas-function bodyKey */
+/* @atlas-function stationHasOverview-schematic */
 const TORA_CLASS='Terranos Omnidirectional Reflector Array';
 const toraParts=[
  {title:'Axial mast',label:'MAST',x:329,y:95,lx:420,ly:70,note:'The upper tower narrows to a bright axial tip. Its internal equipment is unspecified in the class record.'},
@@ -213,7 +214,7 @@ const dossierFields=[
 /* @atlas-function dossierFacts */
 /* @atlas-function factValue */
 /* @atlas-function factGrid */
-/* @atlas-function bodyFacts-8ed6b2825a9e */
+/* @atlas-function bodyFacts */
 /* @atlas-function safeImageURL */
 /* @atlas-function imageAPI */
 /* @atlas-function currentImageTitle */

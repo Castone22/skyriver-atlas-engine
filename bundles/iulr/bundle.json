@@ -26,7 +26,8 @@
     "downloadName": "IULR-Stellar-Atlas.html",
     "overviewAlias": "union",
     "affiliationLink": "{{brand}}",
-    "indexHint": "Try a planet name, TORA designation or stellar class."
+    "indexHint": "Try a planet name, TORA designation or stellar class.",
+    "orbitalRegister": "UNION REGISTER"
   },
   "flags": {
     "searchSystemFields": [
@@ -35,6 +36,8 @@
       "description"
     ],
     "systemRecordArticleTitle": true,
-    "stationLinksUseArticleTitle": true
+    "stationLinksUseArticleTitle": true,
+    "architectureFacts": true,
+    "emptyDossierFactsFallBack": true
   }
 }

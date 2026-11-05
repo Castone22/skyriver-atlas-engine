@@ -190,57 +190,27 @@
     ],
     "bytes": 1186
   },
-  "bodyFacts-0eb86f4c84ff": {
+  "bodyFacts": {
     "name": "bodyFacts",
     "profiles": [
       "calidor",
+      "elysian",
+      "iulr",
       "kadaym",
       "uacs"
     ],
-    "bytes": 630
+    "bytes": 1513
   },
-  "bodyFacts-5cdfe803c5e8": {
-    "name": "bodyFacts",
-    "profiles": [
-      "iulr"
-    ],
-    "bytes": 1109
-  },
-  "bodyFacts-8ed6b2825a9e": {
-    "name": "bodyFacts",
-    "profiles": [
-      "elysian"
-    ],
-    "bytes": 916
-  },
-  "bodyKey-76d2ce6780e1": {
+  "bodyKey": {
     "name": "bodyKey",
     "profiles": [
       "calidor",
-      "iulr"
-    ],
-    "bytes": 1276
-  },
-  "bodyKey-7ac2d95fab76": {
-    "name": "bodyKey",
-    "profiles": [
+      "elysian",
+      "iulr",
+      "kadaym",
       "uacs"
     ],
-    "bytes": 1300
-  },
-  "bodyKey-84851d3446fd": {
-    "name": "bodyKey",
-    "profiles": [
-      "elysian"
-    ],
-    "bytes": 1329
-  },
-  "bodyKey-cbba6d726e90": {
-    "name": "bodyKey",
-    "profiles": [
-      "kadaym"
-    ],
-    "bytes": 1069
+    "bytes": 1453
   },
   "buildNotes": {
     "name": "buildNotes",
@@ -1091,28 +1061,16 @@
     ],
     "bytes": 446
   },
-  "orbitalFact-6d8890f36c62": {
+  "orbitalFact": {
     "name": "orbitalFact",
     "profiles": [
-      "calidor"
-    ],
-    "bytes": 1304
-  },
-  "orbitalFact-99b199ca0c90": {
-    "name": "orbitalFact",
-    "profiles": [
-      "iulr"
-    ],
-    "bytes": 1166
-  },
-  "orbitalFact-9ec16f8dcf1f": {
-    "name": "orbitalFact",
-    "profiles": [
+      "calidor",
       "elysian",
+      "iulr",
       "kadaym",
       "uacs"
     ],
-    "bytes": 1082
+    "bytes": 1390
   },
   "ordinal": {
     "name": "ordinal",
@@ -2055,6 +2013,23 @@
       "uacs"
     ],
     "bytes": 850
+  },
+  "stationHasOverview-schematic": {
+    "name": "stationHasOverview",
+    "profiles": [
+      "elysian"
+    ],
+    "bytes": 61
+  },
+  "stationHasOverview-tora": {
+    "name": "stationHasOverview",
+    "profiles": [
+      "calidor",
+      "iulr",
+      "kadaym",
+      "uacs"
+    ],
+    "bytes": 58
   },
   "stationRecords": {
     "name": "stationRecords",
