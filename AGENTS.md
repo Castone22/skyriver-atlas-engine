@@ -40,4 +40,34 @@ changing anything, prefer the change that keeps existing behavior working.
   effect of other work.
 - Keep atlas-specific knowledge (names, brands, titles, per-atlas rules) out of engine and
   compiler code; it belongs in the atlas's own data.
+- Never match on text to substitute per-atlas values (brand names, titles). Use template slots
+  from `src/template.mjs`; see below.
 - Do not add new Canon content or places to data as a side effect of code changes.
+
+## Templating
+
+Shells, styles and runtime entry scripts under `engine/` may contain slots rendered by
+`src/template.mjs` at compile time. Syntax: `{{name}}` or `{{name|filter}}`, where `name` is a
+dotted path into the slot values (today: `brand`).
+
+Choose the filter by where the slot lands in the output:
+
+| Filter  | Use                                                                  |
+| ------- | -------------------------------------------------------------------- |
+| `html`  | HTML text or attribute values. This is the default.                  |
+| `js`    | A complete JS string literal, quotes included: `url({{brand\|js}})`. |
+| `jsstr` | Inside a JS string you quoted yourself: `url('{{brand\|jsstr}}')`.   |
+| `json`  | Any JSON value inside an inline `<script>`.                          |
+
+Rules:
+
+- There is no logic: no loops, conditionals or expressions. Put anything beyond substitution
+  in data or code.
+- An unknown slot or filter is a build error, not an empty string. Do not add fallbacks.
+- Only write a slot where the text means "this atlas's own value". A literal that names another
+  atlas (for example an affiliation) is content and must stay a literal.
+- Shared function sources in `engine/functions/` do not use slots yet; they still carry brand
+  literals, which the compiler rewrites for custom-branded atlases. Converting them is
+  planned, one function at a time.
+- The template module must stay free of Node imports; it has to run in a browser.
+- Add a test in `tests/template.test.mjs` when adding a filter.

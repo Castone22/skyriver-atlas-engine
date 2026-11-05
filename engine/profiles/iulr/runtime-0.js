@@ -273,7 +273,7 @@ document.addEventListener('keydown',e=>{if(!widgetMode&&e.key==='Escape'&&!$('no
 let resizeTimer;/* @atlas-function resizeChart-58872a43c687 */
 addEventListener('resize',resizeChart);
 $('atlasLayout').classList.add('index-collapsed');$('toggleIndexPanel').setAttribute('aria-expanded','false');$('indexToggle').setAttribute('aria-expanded','false');
-$('systemFocus').innerHTML='';$('systemFocus').classList.add('hidden');$('mapArea').classList.remove('system-focused');$('flag').src=DATA.assets.flag;$('flagLink').href=$('federationLink').href=url('@@BRAND@@');$('filters').classList.add('hidden');$('toast').classList.add('hidden');$('filterBtn').setAttribute('aria-expanded','false');document.querySelectorAll('[data-scope]').forEach(b=>b.classList.toggle('active',b.dataset.scope==='region'));document.body.classList.toggle('embed',embedMode);document.body.classList.toggle('widget',widgetMode);buildNotes();draw();restoreRoute();routeReady=true;persistRoute();
+$('systemFocus').innerHTML='';$('systemFocus').classList.add('hidden');$('mapArea').classList.remove('system-focused');$('flag').src=DATA.assets.flag;$('flagLink').href=$('federationLink').href=url('{{brand|jsstr}}');$('filters').classList.add('hidden');$('toast').classList.add('hidden');$('filterBtn').setAttribute('aria-expanded','false');document.querySelectorAll('[data-scope]').forEach(b=>b.classList.toggle('active',b.dataset.scope==='region'));document.body.classList.toggle('embed',embedMode);document.body.classList.toggle('widget',widgetMode);buildNotes();draw();restoreRoute();routeReady=true;persistRoute();
 
 // Planet titles refresh independently of the existing image/infobox refresh.
 addEventListener('focus',triggerPlanetTitleCheck);

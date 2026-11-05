@@ -4,19 +4,10 @@ import { fileURLToPath } from 'node:url';
 import { gzipSync } from 'node:zlib';
 import vm from 'node:vm';
 import { clone, validate } from './atlas.mjs';
+import { render, safeJSON, escapeHTML as escape } from './template.mjs';
 const ROOT = fileURLToPath(new URL('../', import.meta.url));
 const read = (p) => readFile(path.join(ROOT, p), 'utf8');
 const json = (p) => read(p).then(JSON.parse);
-const safeJSON = (x) =>
-  JSON.stringify(x)
-    .replace(/</g, '\\u003c')
-    .replace(/\u2028/g, '\\u2028')
-    .replace(/\u2029/g, '\\u2029');
-const escape = (x) =>
-  String(x).replace(
-    /[&<>"']/g,
-    (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]
-  );
 const replace = (s, a, b) => s.split(a).join(b);
 async function linkRuntime(source) {
   const chunks = [...source.matchAll(/\/\* @atlas-function ([\w-]+) \*\//g)];
@@ -122,7 +113,10 @@ export async function compile(definition, { strict = false, dependencies = {} } 
   }
   const hydrated = await resolveAssets(d);
   d = hydrated.definition;
-  let html = await read(profile.shell);
+  const customBrand = d.meta.article !== profile.brand;
+  // Template values for shells and runtime entry scripts.
+  const slots = { brand: customBrand ? d.meta.article : profile.brand };
+  let html = render(await read(profile.shell), slots, profile.shell);
   for (let i = 0; i < profile.styles.length; i++)
     html = replace(html, `@@STYLE:${i}@@`, await read(profile.styles[i]));
   for (const [key, value] of Object.entries(d.documents))
@@ -141,9 +135,6 @@ export async function compile(definition, { strict = false, dependencies = {} } 
     );
   html = html.replace(/<title>[\s\S]*?<\/title>/, `<title>${escape(d.meta.title)}</title>`);
   // Only explicitly customized definitions replace branding and optional presentation content.
-  const customBrand = d.meta.article !== profile.brand;
-  // Shells carry {{brand}} slots: the profile's own brand by default, an escaped custom one otherwise.
-  html = replace(html, '{{brand}}', customBrand ? escape(d.meta.article) : profile.brand);
   if (customBrand) html = html.replace(/<div class="stat">[\s\S]*?<\/div>/g, '');
   if (d.presentation?.version)
     html = html.replace(
@@ -156,7 +147,8 @@ export async function compile(definition, { strict = false, dependencies = {} } 
       (_, a, b) => a + escape(d.presentation.subtitle) + b
     );
   for (let i = 0; i < profile.scripts.length; i++) {
-    let code = await linkRuntime(await read(profile.scripts[i].path));
+    const scriptPath = profile.scripts[i].path;
+    let code = await linkRuntime(render(await read(scriptPath), slots, scriptPath));
     code = replace(code, '__ATLAS__.data', safeJSON(d.data));
     if (d.kind === 'stellar' && i === 0) {
       const marker = 'const DATA = ' + safeJSON(d.data) + ';';
@@ -166,10 +158,6 @@ export async function compile(definition, { strict = false, dependencies = {} } 
         marker + '\nconst __ATLAS_SOURCE_DATA__=JSON.parse(JSON.stringify(DATA));'
       );
     }
-    // Runtimes carry a quoted '@@BRAND@@' slot where they link to the atlas's own article.
-    code = customBrand
-      ? replace(code, "'@@BRAND@@'", safeJSON(d.meta.article))
-      : replace(code, '@@BRAND@@', profile.brand);
     // Shared function sources still carry the brand as a literal. Until they are templated too,
     // a custom brand replaces those literals in the linked code.
     if (customBrand) {
