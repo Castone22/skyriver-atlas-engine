@@ -1856,34 +1856,16 @@
     ],
     "bytes": 227
   },
-  "select-2a33070d08e5": {
+  "select": {
     "name": "select",
     "profiles": [
-      "calidor"
-    ],
-    "bytes": 1087
-  },
-  "select-37c0546005ab": {
-    "name": "select",
-    "profiles": [
-      "kadaym"
-    ],
-    "bytes": 1179
-  },
-  "select-abff9c66530d": {
-    "name": "select",
-    "profiles": [
+      "calidor",
       "elysian",
+      "iulr",
+      "kadaym",
       "uacs"
     ],
-    "bytes": 1123
-  },
-  "select-ea9ed057f437": {
-    "name": "select",
-    "profiles": [
-      "iulr"
-    ],
-    "bytes": 1036
+    "bytes": 1376
   },
   "setDetailOpen": {
     "name": "setDetailOpen",

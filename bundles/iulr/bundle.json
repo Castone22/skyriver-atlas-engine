@@ -28,8 +28,10 @@
     "affiliationLink": "{{brand}}"
   },
   "flags": {
+    "closeSidebarOnSelect": true,
     "planetArticleTitles": true,
     "regionHighlight": true,
+    "selectFirstWorld": true,
     "stationRoute": "focus"
   }
 }

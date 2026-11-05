@@ -112,7 +112,7 @@ const LABEL_ZOOM={overview:{active:[120,150],neighbor:[150,220]},regional:{activ
 /* @atlas-function setView-b3d7ffb7defe */
 /* @atlas-function fitChart */
 /* @atlas-function zoom-63c95ce3e23e */
-/* @atlas-function select-ea9ed057f437 */
+/* @atlas-function select */
 /* @atlas-function tierMarkup */
 /* @atlas-function renderMapLegend-e99aba52b66e */
 /* @atlas-function affiliationMarkup */

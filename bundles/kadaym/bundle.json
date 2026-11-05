@@ -30,9 +30,11 @@
     "affiliationLink": "Elysian Collective"
   },
   "flags": {
+    "closeSidebarOnSelect": true,
     "normalizeTitleApostrophes": true,
     "overviewChart": "federation",
     "overviewStateKey": "federationOverview",
+    "selectFirstWorld": true,
     "widgetKeepsAddress": true
   }
 }
