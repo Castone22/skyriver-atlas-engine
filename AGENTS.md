@@ -106,6 +106,8 @@ features. Do not remove a capability from one atlas to match another.
   the atlas runtime that lacked it.
 - Atlas-supplied behaviour (how a planet's display title is resolved, for instance) is a small hook
   the atlas defines under the canonical name. Canonical functions only call the hook.
+- A converged group is finished only when the **full** golden tours pass (`npm run check:full`). The
+  quick tours sample about one step in ten and are only a screen.
 - Prove each convergence with the golden tours (`npm run test:golden`, `tools/dedup-lab.mjs`) and
   `tools/dedup-normalize.mjs` where variants are textually equivalent. The tour does not cover
   CSS; check styling separately.

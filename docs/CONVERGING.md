@@ -54,6 +54,14 @@ atlas that had the feature sets it on in its `bundle.json`. Name flags for the c
 
 ## Verification notes
 
+- **Quick tours are a screen, not proof.** They sample about one step in ten, so a converged function
+  that drops a code path used by a single planet or station can pass them. A group is only done when
+  `npm run check:full` passes. This happened once: the converged `planetView` dropped Elysian's
+  `greatBlinkFrame` call, which only the Primex step exercises, and only the full tour caught it.
+- **Similarity scores hide differences inside template literals** (a whole template literal is one
+  token), and the large render functions are mostly template literals. Diff those by hand, or tokenise
+  inside them, before trusting a number.
+
 - The golden tours compare the rendered page structure, text and attributes, but not CSS. A change
   that could affect styling needs a screenshot check.
 - The tours drive every region, system, planet, satellite and station, the station screens, search,

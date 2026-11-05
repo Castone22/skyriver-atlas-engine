@@ -154,6 +154,7 @@ const toraParts=[
 /* @atlas-function notableSitesMarkup */
 /* @atlas-function systemView-79175591a142 */
 /* @atlas-function planetView */
+/* @atlas-function greatBlinkFrame */
 /* @atlas-function mountPlanet */
 /* @atlas-function solarPlanetGlyph */
 /* @atlas-function setPlanetFocus */

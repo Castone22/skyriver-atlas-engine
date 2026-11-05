@@ -778,12 +778,25 @@ function planetView(s){
  <div class="system-view-head"><div class="focus-title"><div class="local-return-row"><button id="backToSystem" class="back-region">← Return to system</button><button id="backToRegion" class="back-region">Return to ${s.unplottedSystem?'chart':'region'}</button></div><div class="eyebrow">PLANET & SATELLITES</div><h2>${link(name)}</h2><div class="local-breadcrumb">${systemLink(s)}<span>›</span>${link(name)}</div><p>${moons.length} natural satellite${moons.length===1?'':'s'} · ${stations.length} hosted station${stations.length===1?'':'s'}</p>${cloakBadge(s)}</div>
  <div class="system-actions"><button id="orbitToggle" class="orbit-toggle" aria-label="${orbitPaused?'Play':'Pause'} orbital animation" aria-pressed="${orbitPaused}">${orbitPaused?'▶ Play':'Ⅱ Pause'}</button><button id="systemZoomIn" class="orbit-toggle system-zoom" aria-label="Zoom in local diagram">+</button><button id="systemZoomOut" class="orbit-toggle system-zoom" aria-label="Zoom out local diagram">−</button><button id="focusFullscreen" class="orbit-toggle" aria-label="Toggle fullscreen">⛶</button></div></div>
  ${filters}${s.silentPresence?'<p class="silent-status" role="status">Silent activity detected · signal interference</p>':''}
- <div class="focus-visual">${cloakDecoration(s)}${silentDecoration(s)}<svg id="orbitDiagram" class="orbit-diagram" viewBox="0 0 760 580" role="group" aria-label="${esc(__ATLAS__.flags.titledLocalOrbitLabels?planetName(name):name)} and its recorded moons and stations"></svg></div>
+ <div class="focus-visual">${greatBlinkFrame(planetFocus)}${cloakDecoration(s)}${silentDecoration(s)}<svg id="orbitDiagram" class="orbit-diagram" viewBox="0 0 760 580" role="group" aria-label="${esc(__ATLAS__.flags.titledLocalOrbitLabels?planetName(name):name)} and its recorded moons and stations"></svg></div>
  ${notableSitesMarkup(s)}<div class="system-center">Local center: ${link(name)} · Parent system: ${systemLink(s)}</div>
  ${!moons.length&&!stations.length?'<p class="local-empty">No moons or hosted stations are catalogued for this world.</p>':''}
  <div class="system-catalog"><div><div class="orbit-site-heading">MOONS</div><div class="orbit-labels">${moons.map(bodyKey).join('')||'<p class="orbit-empty">No natural satellites catalogued.</p>'}</div></div><div><div class="orbit-site-heading">HOSTED STATIONS <span>${shown.length} / ${stations.length}</span></div><div class="orbit-labels">${shown.map(bodyKey).join('')||'<p class="orbit-empty">'+(stations.length?'All local station categories are hidden.':'No hosted stations catalogued.')+'</p>'}</div></div></div>${__ATLAS__.flags.elsewhereStations?`
  ${elsewhere.length?`<div class="orbit-site-heading">ELSEWHERE IN THE ${esc(s.name.toUpperCase())} SYSTEM</div><div class="link-pills">${elsewhere.map(st=>link(st.name)).join('')}</div>`:''}`:''}
  <p class="orbit-caption">Select a body or station symbol to inspect it; names open the Codex. Only recorded host relationships are shown. Sizes, orbit spacing and speeds are schematic.</p></section>`;
+}
+
+function greatBlinkFrame(planet){
+ if(DATA.worlds[planet]?.appearance!=='great-blink')return '';
+ const bands=[[3,12,71],[18,3,92],[25,17,36],[48,5,78],[58,11,55],[76,3,100],[85,9,48]];
+ const rails=['left','top','right','bottom'].map((side,index)=>{
+  const strips=bands.map(([at,length,reach],i)=>{
+   const lag=-(i*.014+index*.071);
+   return `<i class="blink-fragment" style="--at:${at}%;--length:${length}%;--reach:${reach}%;--lag:${lag}s"></i>`;
+  }).join('');
+  return `<span class="blink-rail blink-${side}">${strips}</span>`;
+ });
+ return `<div class="blink-frame" aria-hidden="true">${rails.join('')}</div>`;
 }
 
 function mountPlanet(s){

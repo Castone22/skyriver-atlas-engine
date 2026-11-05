@@ -111,7 +111,7 @@ body.embed:not(.widget)>.toolbar{display:flex!important;height:48px;gap:8px;padd
 <header><div class="identity"><a id="flagLink" target="_blank" rel="noopener"><img id="flag" class="flag" alt="Flag of the Atlas Framework Demonstration"></a><div><div class="eyebrow"><a id="federationLink" target="_blank" rel="noopener">Atlas Framework Demonstration</a></div><h1>STELLAR <span>ATLAS</span></h1></div></div><div class="header-right"><button class="top-btn" id="download">↓ &nbsp; HTML</button><button class="top-btn" id="sourcesBtn">Chart notes ↗</button></div></header>
 <nav class="toolbar" aria-label="Atlas regions"><button class="panel-toggle index-panel-toggle" id="toggleIndexPanel" aria-controls="sidebar" aria-expanded="false">Index</button><button class="mobile-index" id="indexToggle" aria-controls="sidebar" aria-expanded="false">☷ Index</button><div class="region-picker-wrap"><label for="regionPicker">Chart</label><select id="regionPicker" aria-label="Open a regional chart"><option value="all">Whole atlas overview</option><option value="demo-reach">Demonstration Reach</option></select></div><button class="panel-toggle detail-panel-toggle" id="toggleDetailPanel" aria-controls="detail" aria-expanded="true">Dossier</button><span class="edition"><span class="live-dot"></span>134 CE &nbsp; / &nbsp; CODEX ATLAS</span></nav>
 <main class="app index-collapsed" id="atlasLayout"><aside class="sidebar" id="sidebar"><div class="sidebar-head"><div class="section-head"><span class="eyebrow">Location index</span><span id="indexCount">18 SYSTEMS</span></div><div class="search-box"><span aria-hidden="true">⌕</span><input type="search" id="search" placeholder="Name, tier, ownership, type…" aria-label="Search names, tiers, ownership, types and status across every region"></div><div class="scope"><button class="active" data-scope="region">This region</button><button data-scope="all">All</button><button data-scope="unplaced">Unplotted</button></div></div><div class="index" id="index"></div><div class="sidebar-foot"><strong>Stars open dossiers.</strong><br>Location names link to the Codex.<br>Search covers every region.</div></aside>
-<section id="mapArea" class="map-area" aria-label="Interactive stellar map"><div class="map-heading"><div class="mini-line"></div><div class="eyebrow" id="mapKicker">01 / COLLECTIVE HEARTLAND</div><h2><a id="mapTitle" target="_blank" rel="noopener">Traga Expanse</a></h2><p id="mapSubtitle">Capital worlds · 15 charted systems</p></div><svg id="map" class="map-stage" xmlns="http://www.w3.org/2000/svg" aria-label="Pan and zoom star chart; activate a star to inspect its system" tabindex="0"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M100 0H0V100" fill="none" stroke="#64809a" stroke-width=".65" opacity=".12"/></pattern><radialGradient id="cloud"><stop offset="0" stop-color="#4a6b83" stop-opacity=".12"/><stop offset="1" stop-color="#132331" stop-opacity="0"/></radialGradient><filter id="glow" x="-200%" y="-200%" width="500%" height="500%"><feGaussianBlur stdDeviation="4"/></filter><pattern id="hatch" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(35)"><line y2="14" stroke="#c57c86" opacity=".12"/></pattern></defs><g id="scene"></g></svg>
+<section id="mapArea" class="map-area" aria-label="Interactive stellar map"><div class="map-heading"><div class="mini-line"></div><div class="eyebrow" id="mapKicker"></div><h2><a id="mapTitle" target="_blank" rel="noopener"></a></h2><p id="mapSubtitle"></p></div><svg id="map" class="map-stage" xmlns="http://www.w3.org/2000/svg" aria-label="Pan and zoom star chart; activate a star to inspect its system" tabindex="0"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M100 0H0V100" fill="none" stroke="#64809a" stroke-width=".65" opacity=".12"/></pattern><radialGradient id="cloud"><stop offset="0" stop-color="#4a6b83" stop-opacity=".12"/><stop offset="1" stop-color="#132331" stop-opacity="0"/></radialGradient><filter id="glow" x="-200%" y="-200%" width="500%" height="500%"><feGaussianBlur stdDeviation="4"/></filter><pattern id="hatch" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(35)"><line y2="14" stroke="#c57c86" opacity=".12"/></pattern></defs><g id="scene"></g></svg>
 <div class="map-tools"><button id="zoomIn" aria-label="Zoom in" title="Zoom in (+)">+</button><button id="zoomOut" aria-label="Zoom out" title="Zoom out (−)">−</button><button id="fit" aria-label="Fit current region" title="Fit region (0)">⌖</button><button id="filterBtn" aria-label="Map filters" aria-expanded="false" title="Map filters">☷</button><button id="fullscreen" aria-label="Toggle fullscreen" title="Fullscreen">⛶</button></div>
 <div class="filter-pop hidden" id="filters"><div class="eyebrow">Visible systems</div><label><input type="checkbox" data-filter="federation" checked> Collective holdings</label><label><input type="checkbox" data-filter="context" checked> Neighboring systems</label><label><input type="checkbox" data-filter="hazard" checked> Hazards &amp; unresolved</label><label><input type="checkbox" id="majorOnly"> Named worlds only</label></div>
 <div class="legend" id="mapLegend"><span style="--c:#dfbd78">Collective</span><span style="--c:#93abc9">Neighbor / neutral</span><span style="--c:#e57d82">Hazard / unresolved</span></div><div class="minimap" id="minimap" title="Return to Collective overview" role="button" tabindex="0" aria-label="Return to Collective overview"></div><button id="mobileInspect" class="mobile-inspect">Elysium dossier ↗</button>
@@ -121,7 +121,7 @@ body.embed:not(.widget)>.toolbar{display:flex!important;height:48px;gap:8px;padd
 <dialog id="notes"><div class="dialog-header"><h2>About this chart</h2><button id="closeNotes" aria-label="Close chart notes">×</button></div><div class="dialog-body" id="notesContent"></div></dialog>
 
 
-<script>const __ATLAS__={"schemaVersion":1,"id":"dsl-demo","kind":"stellar","renderer":"elysian","meta":{"title":"Atlas DSL · Working example","article":"Atlas Framework Demonstration"},"constants":{},"features":{"index":{"collapsed":true},"labels":{"overview":{"active":[100,130],"other":[130,170]},"regional":{"active":[64,80],"other":[80,125]}}},"presentation":{"version":"Atlas DSL v1","notesHTML":"\u003cp>A noncanonical demonstration of the JavaScript atlas DSL.\u003c/p>"},"policies":{"labels":{"overview":{"active":[160,220],"other":[220,320]},"regional":{"active":[64,80],"other":[80,125]}}}};
+<script>const __ATLAS__={"schemaVersion":1,"id":"dsl-demo","kind":"stellar","renderer":"elysian","meta":{"title":"Atlas DSL · Working example","article":"Atlas Framework Demonstration"},"constants":{},"features":{"index":{"collapsed":true},"labels":{"overview":{"active":[100,130],"other":[130,170]},"regional":{"active":[64,80],"other":[80,125]}}},"presentation":{"version":"Atlas DSL v1","notesHTML":"\u003cp>A noncanonical demonstration of the JavaScript atlas DSL.\u003c/p>"},"policies":{"labels":{"overview":{"active":[160,220],"other":[220,320]},"regional":{"active":[64,80],"other":[80,125]},"nodeScale":[0.78,0.88]},"zoom":{"minWidth":260,"minDivisor":8,"minDivisorOverviewOnly":false,"maxWidth":9000,"maxBaseMultiple":4},"legend":{"entries":[["#8ac9ee","Collective"],["#dfbd78","Kadaym holding"],["#a9afc5","Independent"],["#e58088","Hazard / quarantine"]]},"solarStations":{"mode":"visibility","unset":"unlessUnimportant","categories":[]},"draw":{"backdrop":{"x":-1000,"y":-900,"w":6500,"h":4800},"featuredSystem":"Forge","worldListField":"overviewWorlds","worldListGatesLabel":true}},"flags":{"architectureFacts":false,"bodyRenderOpacity":false,"bordersToggleClass":false,"closeSidebarOnSelect":false,"companionStars":false,"derivedBelts":false,"elsewhereStations":false,"emptyDossierFactsFallBack":false,"extendedChartMoonThreshold":0,"fallbackRegion":"all","goldenAngleMoonPhase":false,"hiddenStationFilters":[],"indexWorldLinks":true,"inspectLabelsUseTitles":false,"keepStationPart":false,"linkTitleSync":"all","minimapRegionPaths":false,"minimapViewBox":null,"normalizeTitleApostrophes":false,"overviewChart":"overview","overviewStateKey":"overviewMode","planetArticleTitles":false,"planetArticleTracking":true,"planetLinkAttributes":true,"planetPageLinks":true,"regionHighlight":false,"regionLabelStyle":"ink","searchSystemFields":[],"selectFirstWorld":true,"shortLabelsOnlyWhenExtended":false,"sizedFocusBodyLabel":false,"solarIllustrativeGuard":false,"solarLanesFromAllStations":false,"solarMoonsVisibleOnly":false,"starTooltips":false,"stationLinksUseArticleTitle":false,"stationRoute":"station","straightenImageTitleQuotes":false,"svgTextSyncedTitles":false,"systemBodyRenderOpacity":true,"systemRecordArticleTitle":false,"titledLocalOrbitLabels":false,"titledPlanetInspectLabel":false,"visibilityResetsLabels":true,"widgetKeepsAddress":true,"widgetOutlineState":true,"widgetStationOverview":true,"worldKeySchematicOrbit":true}};
 
 const DATA = {"systems":[{"source":"Atlas Framework Demonstration","name":"Demo Star","kind":"federation","worlds":["Demo Star III"],"notes":[],"description":"","major":false,"x":390,"y":420,"primaries":["Demo Star"],"affiliation":"Atlas Framework Demonstration","region":"demo-reach","id":"demo-star"},{"source":"Atlas Framework Demonstration","name":"Demo Pulsar","kind":"hazard","worlds":[],"notes":[],"description":"","major":false,"x":730,"y":620,"centralBodyType":"pulsar","region":"demo-reach","id":"demo-pulsar"}],"regions":{"demo-reach":{"name":"Demonstration Reach","subtitle":"","description":"An example region defined entirely by data.","color":"#78cfdf","bounds":[0,0,1000,900],"outline":[[0,0],[600,0],[1000,220],[880,850],[300,900],[0,600]],"labelAnchor":[450,450],"labelPosition":[450,450]}},"worlds":{"Demo Star III":{"source":"Atlas Framework Demonstration","description":"Stable catalogue key; its article title may change.","links":[],"articleTitle":"Demo Star III","bodyType":"World","orbitalPosition":3,"tag":"Example world","tint":"#8bbbd2","renderOpacity":1}},"satellites":[{"source":"Atlas Framework Demonstration","description":"","links":[],"articleTitle":"Demo Moon","bodyType":"Moon","visibility":"system","inhabited":true,"system":"demo-star","parent":"Demo Star III","name":"Demo Moon"}],"stations":[{"source":"Atlas Framework Demonstration","description":"","links":[],"articleTitle":"Demo Orbital","category":"Habitation","major":true,"visibility":"system","system":"demo-star","parent":"Demo Star III","name":"Demo Orbital"}],"entities":[],"unplaced":[],"assets":{"flag":"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MCA1MCI+PHBhdGggZmlsbD0iIzBkMTcyNiIgZD0iTTAgMGg4MHY1MEgweiIvPjxjaXJjbGUgY3g9IjQwIiBjeT0iMjUiIHI9IjE0IiBmaWxsPSJub25lIiBzdHJva2U9IiM3OGNmZGYiIHN0cm9rZS13aWR0aD0iMiIvPjwvc3ZnPg=="},"objectImages":{},"atlasExtent":[-100,-100,1400,1100]};
 const __ATLAS_SOURCE_DATA__=JSON.parse(JSON.stringify(DATA));
@@ -131,9 +131,12 @@ const titles={'Ferryman’s Rest':"Ferryman's Rest",'Circa’s Triad':"Circa's T
 const canonicalTitle=name=>{const key=planetKey(name);if(key&&planetArticles[key]?.title)return planetArticles[key].title;const n=normalizedName(name);const record=[...allRecords,...Object.entries(DATA.worlds).map(([name,r])=>({name,...r})),...(DATA.stations||[]),...(DATA.satellites||[]),...(DATA.entities||[])].find(r=>[r.name,...(r.aliases||[])].some(v=>normalizedName(v)===n));return record?.articleTitle||record?.name||name};
 const referenceTargets=new Map([...(DATA.stations||[]),...(DATA.satellites||[])].filter(r=>r.referencePage).map(r=>[r.name,r]));
 function url(name){
- const key=planetKey(name);if(key&&planetArticles[key]?.pageid)return 'https://skyrivercodex.lzridgecodes.net/index.php?curid='+planetArticles[key].pageid;
+ // Link a planet by its Codex page id when the atlas synchronises article titles and knows it.
+ if(__ATLAS__.flags.planetPageLinks){const key=planetKey(name);if(key&&planetArticles[key]?.pageid)return 'https://skyrivercodex.lzridgecodes.net/index.php?curid='+planetArticles[key].pageid;}
  const reference=referenceTargets.get(name);
- const title=(reference?.referencePage||titles[name]||canonicalTitle(name)).replaceAll(' ','_');
+ let title=reference?.referencePage||titles[name]||(__ATLAS__.flags.planetArticleTitles&&DATA.worlds[name]?planetArticleName(name):canonicalTitle(name));
+ if(__ATLAS__.flags.normalizeTitleApostrophes)title=title.replaceAll('’',"'").replaceAll('‘',"'");
+ title=title.replaceAll(' ','_');
  const anchor=reference?.referenceSection?'#'+encodeURIComponent(reference.referenceSection):'';
  return 'https://skyrivercodex.lzridgecodes.net/index.php?title='+encodeURIComponent(title)+anchor;
 }
@@ -143,7 +146,7 @@ function systemNameTitle(name){return /\bSystem$/i.test(name)?name:name+' System
 
 function hasOrbitChart(s){return Boolean(s && (s.region || s.unplottedSystem))}
 
-function systemArticleTitle(s){return hasOrbitChart(s)?systemNameTitle(s.name):s?.articleTitle||s?.name||''}
+function systemArticleTitle(s){return hasOrbitChart(s)?(__ATLAS__.flags.systemRecordArticleTitle&&s.articleTitle||systemNameTitle(s.name)):s?.articleTitle||s?.name||''}
 
 function systemLink(s,label=systemArticleTitle(s)){return link(systemArticleTitle(s),label)}
 
@@ -160,7 +163,13 @@ const flags={federation:true,context:true,hazard:true};
 function atlasParams(){
  const input=typeof window.SKYRIVER_ATLAS_QUERY==='string'
   ? window.SKYRIVER_ATLAS_QUERY : location.search;
- return new URLSearchParams(String(input||'').replace(/^\?/,''));
+ const params=new URLSearchParams(String(input||'').replace(/^\?/,''));
+ const legacy=DATA.legacyHoldings?.[params.get('system')];
+ if(Array.isArray(legacy)){
+  params.set('system',legacy[0]);
+  if(legacy[1]&&!params.get('object'))params.set('object',legacy[1]);
+ }
+ return params;
 }
 
 let widgetRegion=null;
@@ -253,9 +262,9 @@ async function syncPlanetTitles(force=false){
 
 
 restorePlanetArticles();
-function resolveRegion(value){const n=normalizedName(value);if(n==='all'||n==='collectiveoverview')return 'all';return Object.keys(DATA.regions).find(id=>normalizedName(id)===n||normalizedName(DATA.regions[id].name)===n)||null}
+function resolveRegion(value){const n=normalizedName(value);if(n==='all'||n==='federationoverview')return 'all';return Object.keys(DATA.regions).find(id=>normalizedName(id)===n||normalizedName(DATA.regions[id].name)===n||(n&&normalizedName(DATA.regions[id].formerEmpire)===n))||null}
 
-function matchesRecord(record,value){const n=normalizedName(value);return !!n&&[record.id,record.name,planetName(record.name),record.nickname,...(record.aliases||[])].some(v=>normalizedName(v)===n)}
+function matchesRecord(record,value){const n=normalizedName(value);return !!n&&[record.id,record.name,planetName(record.name),record.nickname,...planetAliases(record.name),...(record.aliases||[])].some(v=>normalizedName(v)===n)}
 
 function resolveSystem(value){
  const bare=String(value||'').trim().replace(/[ _-]+system$/i,'');
@@ -264,11 +273,13 @@ function resolveSystem(value){
 
 function resolveObjectName(s,value){if(!s||!value)return null;const entity=entityRecords(s).find(b=>matchesRecord(b,value));if(entity)return entity.name;const moon=moonRecords(s).find(b=>matchesRecord(b,value));if(moon)return moon.name;const star=starRecords(s).find(b=>matchesRecord(b,value));if(star)return star.name;const station=stationRecords(s).find(b=>matchesRecord(b,value));if(station)return station.name;return s.worlds.find(name=>matchesRecord({name,...DATA.worlds[name]},value))||null}
 
-function matchesSearch(record,q){return [record.name,planetName(record.name),record.nickname,...(record.aliases||[])].some(v=>normalizedName(v).includes(q))}
+function matchesSearch(record,q){return [record.name,planetName(record.name),record.nickname,...planetAliases(record.name),...(record.aliases||[])].some(v=>normalizedName(v).includes(q))}
 
 // Fragment links accept the friend's human-readable names, IDs and aliases.
 function resolveNamedRoute(name){
  if(!normalizedName(name))return null;
+ const legacy=DATA.legacyHoldings[name];
+ if(Array.isArray(legacy))return {system:resolveSystem(legacy[0]),object:legacy[1]};
  const system=resolveSystem(name);if(system)return {system,object:null};
  for(const system of allRecords){const object=resolveObjectName(system,name);if(object)return {system,object}}
  const region=resolveRegion(name);return region?{region}:null;
@@ -279,16 +290,25 @@ function resolveHashRoute(){try{return resolveNamedRoute(decodeURIComponent(loca
 function resolvePlanetRoute(name){for(const system of allRecords.filter(hasOrbitChart)){const object=focusableWorld(system,name);if(object)return {system,object}}return null}
 
 let lastRestoredURL='';
-function routeSnapshot(){return {atlas:true,view,overviewMode,stationOverview,selected,selectedWorld,focused:systemFocused,planetFocus,camera:{...vb},baseWidth,regionalCamera:regionalCamera?{...regionalCamera,camera:{...regionalCamera.camera}}:null}}
+function routeSnapshot(){
+ const flags=__ATLAS__.flags,snapshot={atlas:true,view};
+ if(flags.regionHighlight)snapshot.highlightedRegion=highlightedRegion;else snapshot[flags.overviewStateKey]=overviewMode;
+ if(flags.stationRoute)snapshot.stationOverview=stationOverview;
+ return {...snapshot,selected,selectedWorld,focused:systemFocused,planetFocus,camera:{...vb},baseWidth,regionalCamera:regionalCamera?{...regionalCamera,camera:{...regionalCamera.camera}}:null};
+}
 
 function routeURL(){
- const address=new URL(location.href);if(widgetMode&&!systemFocused)return address;
- ['region','system','planet','object','focus','chart','station'].forEach(key=>address.searchParams.delete(key));
+ const flags=__ATLAS__.flags,address=new URL(location.href);
+ if(flags.widgetKeepsAddress&&widgetMode&&!systemFocused)return address;
+ ['region','system','planet','object','focus',...(flags.regionHighlight?['highlight']:['chart']),...(flags.stationRoute==='station'?['station']:[])].forEach(key=>address.searchParams.delete(key));
  const record=resolveSystem(selected);
+ if(flags.regionHighlight&&highlightedRegion)address.searchParams.set('highlight',highlightedRegion);
  if(!record?.unplottedSystem)address.searchParams.set('region',view);
- if(overviewMode&&(view!=='all'||record))address.searchParams.set('chart','overview');
- if(record){address.searchParams.set('system',record.id);address.searchParams.set('object',selectedWorld||'');if(!systemFocused)address.searchParams.set('focus','region');}
- if(systemFocused&&planetFocus)address.searchParams.set('planet',planetFocus);if(stationOverview)address.searchParams.set('station','1');
+ if(!flags.regionHighlight&&overviewMode&&(view!=='all'||record))address.searchParams.set('chart',flags.overviewChart);
+ if(record){address.searchParams.set('system',record.slug||record.id);address.searchParams.set('object',selectedWorld||'');if(!systemFocused)address.searchParams.set('focus','region');}
+ if(flags.stationRoute==='focus'&&stationOverview&&systemFocused)address.searchParams.set('focus','station');
+ if(systemFocused&&planetFocus)address.searchParams.set('planet',planetFocus);
+ if(flags.stationRoute==='station'&&stationOverview)address.searchParams.set('station','1');
  if(widgetMode){address.searchParams.set('view','widget');address.searchParams.delete('embed')}else if(embedMode)address.searchParams.set('embed','1');else address.searchParams.delete('embed');
  address.hash=encodeURIComponent(record?selectedWorld||record.name:DATA.regions[view]?.name||'all');return address;
 }
@@ -301,9 +321,11 @@ function endNavigation(){routeChanging=Math.max(0,routeChanging-1);if(!routeChan
 
 function restoreRoute(state=null,preferHash=false){
  restoringRoute=true;
+ const flags=__ATLAS__.flags,OV=flags.overviewStateKey,highlight=flags.regionHighlight;
  const params=atlasParams(),querySystem=resolveSystem(params.get('system')),queryPlanet=params.get('planet');
  const planetRoute=queryPlanet?(querySystem?(focusableWorld(querySystem,queryPlanet)?{system:querySystem,object:focusableWorld(querySystem,queryPlanet)}:null):resolvePlanetRoute(queryPlanet)):null;
- const fragment=resolveHashRoute(),exact=!!querySystem&&params.has('object')&&!preferHash;
+ const explicitRegion=resolveRegion(params.get('region'));
+ const fragment=highlight&&!preferHash&&!querySystem&&!queryPlanet&&explicitRegion?null:resolveHashRoute(),exact=!!querySystem&&params.has('object')&&!preferHash;
  const route=exact?{system:querySystem,object:resolveObjectName(querySystem,params.get('object'))}:widgetMode&&(queryPlanet||params.get('system'))?(queryPlanet?planetRoute:querySystem?{system:querySystem}:null):fragment||planetRoute||(querySystem?{system:querySystem}:null);
  widgetRegion=null;
  if(widgetMode && !params.get('system') && !queryPlanet){
@@ -311,23 +333,30 @@ function restoreRoute(state=null,preferHash=false){
  }
  document.body.classList.toggle('region-widget',!!widgetRegion);
  const record=widgetRegion?null:route?.system,regional=exact&&!widgetMode&&params.get('focus')==='region';
- const overviewRoute=!widgetMode&&!preferHash&&params.get('chart')==='overview';
- const region=widgetRegion||(overviewRoute?resolveRegion(params.get('region')):null)||(regional?resolveRegion(params.get('region')):null)||route?.region||record?.region||resolveRegion(params.get('region'))||(record?.unplottedSystem?'all':'all');
- systemFocused=false;planetFocus=null;selected=null;selectedWorld=null;regionalCamera=null;setView(region,true,false,overviewRoute||region==='all');
+ const overviewRoute=!highlight&&!widgetMode&&!preferHash&&params.get('chart')===flags.overviewChart;
+ const region=widgetRegion||(overviewRoute?explicitRegion:null)||(regional&&!highlight?explicitRegion:null)||route?.region||(highlight?explicitRegion:null)||record?.region||(highlight?null:explicitRegion)||(record?.unplottedSystem?'all':flags.fallbackRegion);
+ systemFocused=false;planetFocus=null;selected=null;selectedWorld=null;regionalCamera=null;if(highlight)setView(region,true);else setView(region,true,false,overviewRoute||region==='all');
  if(record){
   select(record.id,route.object||null);
   if(hasOrbitChart(record)&&!regional){
    setSystemFocus(true);
    const object=route.object||(!fragment?queryPlanet:null),moon=moonRecords(record).find(m=>m.name===object);
-   const planet=exact?(focusableWorld(record,queryPlanet)||localChartParent(record,object)):focusableWorld(record,object)||focusableWorld(record,moon?.parent)||localChartParent(record,object);
+   const planet=exact?(highlight?focusableWorld(record,queryPlanet):(focusableWorld(record,queryPlanet)||localChartParent(record,object))):focusableWorld(record,object)||focusableWorld(record,moon?.parent)||localChartParent(record,object);
    if(planet)setPlanetFocus(planet);
   }
-  if(exact){systemFocused=hasOrbitChart(record)&&!regional;planetFocus=systemFocused?(focusableWorld(record,queryPlanet)||localChartParent(record,route.object)):null;selectedWorld=route.object;renderDetail();}
+  if(exact){systemFocused=hasOrbitChart(record)&&!regional;planetFocus=systemFocused?(highlight?focusableWorld(record,queryPlanet):(focusableWorld(record,queryPlanet)||localChartParent(record,route.object))):null;selectedWorld=route.object;renderDetail();}
   else if(route.object){selectedWorld=route.object;renderDetail();}
  }else{renderDetail();updateSelection();renderIndex()}
- if(state?.atlas){const historical=resolveSystem(state.selected);if(resolveRegion(state.view)){setView(state.view,true,false,state.overviewMode);selected=historical?.id||null;selectedWorld=resolveObjectName(historical,state.selectedWorld);systemFocused=!!state.focused&&hasOrbitChart(historical);regionalCamera=state.regionalCamera||null;planetFocus=systemFocused?focusableWorld(historical,state.planetFocus):null;renderDetail();renderIndex();updateSelection()}
+ if(highlight){const requestedHighlight=resolveRegion(params.get('highlight'));if(requestedHighlight&&requestedHighlight!=='all')highlightedRegion=requestedHighlight;}
+ if(state?.atlas){const historical=resolveSystem(state.selected);if(resolveRegion(state.view)){if(highlight){setView(state.view,true);highlightedRegion=state.highlightedRegion===null?null:resolveRegion(state.highlightedRegion)||highlightedRegion}else setView(state.view,true,false,state[OV]);selected=historical?.id||null;selectedWorld=resolveObjectName(historical,state.selectedWorld);systemFocused=!!state.focused&&hasOrbitChart(historical);regionalCamera=state.regionalCamera||null;planetFocus=systemFocused?focusableWorld(historical,state.planetFocus):null;renderDetail();renderIndex();updateSelection()}
  if(state.camera&&['x','y','w','h'].every(k=>Number.isFinite(state.camera[k]))&&state.camera.w>0&&state.camera.h>0){vb={...state.camera};baseWidth=state.baseWidth||vb.w;applyView()}}
- if(systemFocused&&(state?.stationOverview||params.get('station')==='1')&&stationRecords(resolveSystem(selected)).some(b=>hasStationSchematic(b)&&b.name===selectedWorld)){stationOverview=true;renderDetail()}
+ if(flags.stationRoute){
+  const wantsStation=flags.stationRoute==='focus'?(state?.atlas?state.stationOverview:params.get('focus')==='station'):(state?.stationOverview||params.get('station')==='1');
+  if((flags.widgetStationOverview||!widgetMode)&&systemFocused&&wantsStation&&stationRecords(resolveSystem(selected)).some(b=>hasStationSchematic(b)&&b.name===selectedWorld)){
+   stationOverview=true;if(flags.stationRoute==='focus')planetFocus=null;renderDetail();
+  }
+ }
+ if(highlight){updateRegionDisplay();scaleLabels();}
  if(record&&!hasOrbitChart(record))setDetailOpen(true);
  restoringRoute=false;persistRoute();lastRestoredURL=location.href;
 }
@@ -337,7 +366,7 @@ addEventListener('hashchange',()=>{if(location.href!==lastRestoredURL)restoreRou
 
 function svg(tag,attrs={},parent=null){const e=document.createElementNS(NS,tag);for(const[k,v]of Object.entries(attrs))e.setAttribute(k,v);if(parent)parent.append(e);return e}
 
-function textSVG(content,attrs,parent){const t=svg('text',attrs,parent);t.textContent=content;return t}
+function textSVG(content,attrs,parent){const t=svg('text',attrs,parent);t.textContent=__ATLAS__.flags.svgTextSyncedTitles?planetName(content):content;return t}
 
 function objectTarget(name,attrs,parent){
  if(!widgetMode)return svg('g',attrs,parent);
@@ -346,9 +375,11 @@ function objectTarget(name,attrs,parent){
 }
 
 function svgLink(name,label,attrs,parent){
+ const f=__ATLAS__.flags,world=DATA.worlds[name],sameName=label===name;
  const group=parent.tagName.toLowerCase()==='a'?svg('g',{},parent):
-  svg('a',{href:url(name),...(DATA.worlds[name]?{'data-planet-link':name}:{}),target:'_blank',rel:'noopener'},parent);
- textSVG(label===name?planetName(name):label,{...attrs,...(DATA.worlds[name]&&label===name?{'data-planet-title':name}:{})},group);
+  svg('a',{href:url(name),...(f.planetLinkAttributes&&world?{'data-planet-link':name}:{}),target:'_blank',rel:'noopener'},parent);
+ const synced=f.linkTitleSync==='all'?sameName:f.linkTitleSync==='worlds'&&world&&sameName;
+ textSVG(synced?planetName(name):label,f.planetLinkAttributes&&world&&sameName?{...attrs,'data-planet-title':name}:attrs,group);
  group.addEventListener('pointerdown',event=>event.stopPropagation());
  return group;
 }
@@ -360,7 +391,8 @@ function draw(){
  svg('rect',{x:-15000,y:-15000,width:30000,height:30000,fill:'url(#grid)'},scene);
  [[700,900,700,950],[2100,950,450,800],[3250,2100,650,730]].forEach(a=>svg('ellipse',{cx:a[0],cy:a[1],rx:a[2],ry:a[3],fill:'url(#cloud)',transform:`rotate(-30 ${a[0]} ${a[1]})`},scene));
  let seed=1935;const rand=()=>{seed=(seed*16807)%2147483647;return(seed-1)/2147483646};
- const backdrop=svg('g',{'pointer-events':'none'},scene);for(let i=0;i<950;i++)svg('circle',{cx:rand()*6500-1000,cy:rand()*4800-900,r:.35+rand()*1.1,fill:rand()>.75?'#9bb6c5':'#b4bcc9',opacity:.1+rand()*.3},backdrop);
+ const dp=__ATLAS__.policies.draw,bd=dp.backdrop||{x:DATA.atlasExtent[0],y:DATA.atlasExtent[1],w:DATA.atlasExtent[2],h:DATA.atlasExtent[3]};
+ const backdrop=svg('g',{'pointer-events':'none'},scene);for(let i=0;i<950;i++)svg('circle',{cx:bd.x+rand()*bd.w,cy:bd.y+rand()*bd.h,r:.35+rand()*1.1,fill:rand()>.75?'#9bb6c5':'#b4bcc9',opacity:.1+rand()*.3},backdrop);
  const regions=svg('g',{id:'regionLayer'},scene);
  Object.entries(DATA.regions).forEach(([key,r])=>{
   const shell=svg('g',{'data-region-shell':key},regions);
@@ -368,7 +400,15 @@ function draw(){
   const area=svg('path',{d:path,fill:r.color,stroke:r.color,class:'region-outline','data-region-outline':key,'vector-effect':'non-scaling-stroke'},shell);
   if(!widgetMode){area.setAttribute('role','button');area.setAttribute('tabindex','0');area.setAttribute('aria-label','Highlight '+r.name+' without moving the chart');area.addEventListener('click',()=>{if(!moved)setView(key,false,true)});area.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();e.stopPropagation();setView(key,false,true)}})}
   if(r.silentPresence)svg('path',{d:path,fill:'url(#hatch)','pointer-events':'none'},shell);
-  textSVG(r.name.toUpperCase(),{x:r.labelAnchor[0],y:r.labelAnchor[1],class:'region-ink',fill:r.color,'font-size':r.labelSize||30,'text-anchor':'middle','data-region-ink':key,'pointer-events':'none','aria-hidden':'true'},shell);
+  const lx=r.labelAnchor[0],ly=r.labelAnchor[1],labelStyle=__ATLAS__.flags.regionLabelStyle;
+  if(labelStyle==='title-subtitle-ink'){
+   svgLink(r.name,r.name.toUpperCase(),{x:lx,y:ly,class:'region-title','text-anchor':'middle'},shell);
+   textSVG(r.subtitle.toUpperCase(),{x:lx,y:ly+35,class:'region-subtitle','text-anchor':'middle'},shell);
+   svgLink(r.name,r.name.toUpperCase(),{x:lx,y:ly,class:'region-ink',fill:r.color,'text-anchor':'middle','data-region-ink':key},shell);
+  }else{
+   textSVG(r.name.toUpperCase(),{x:lx,y:ly,class:'region-ink',fill:r.color,...(labelStyle==='ink'?{'font-size':r.labelSize||30}:{}),'text-anchor':'middle','data-region-ink':key,'pointer-events':'none','aria-hidden':'true'},shell);
+   if(labelStyle==='ink-title')textSVG(r.name.toUpperCase(),{x:lx,y:ly,class:'region-title',fill:r.color,'text-anchor':'middle','data-region-title':key},shell);
+  }
  });
  const n=svg('g',{id:'neighborLabel','pointer-events':'none'},regions);
  const hexLayer=svg('g',{id:'hexLayer',display:'none','pointer-events':'none'},scene);
@@ -378,6 +418,7 @@ function draw(){
   svg('polygon',{points,fill:c,stroke:c,class:'chart-cell'},hexLayer);
   const g=svg('g',{id:'node-'+s.id,class:s.major?'major':'', 'data-region':s.region},nodes);
   const hit=objectTarget(systemArticleTitle(s),{class:'star-hit',tabindex:'0',role:'button','aria-label':`Inspect ${s.name}${s.tier?', Tier '+s.tier+' '+TIER_NAMES[s.tier]:''}${s.centralBodyType==='silent-darkened'?', Silent-darkened dead star':''}${s.centralBodyType==='black-hole'?', black-hole system':''}${s.worlds.length?', '+s.worlds.join(', '):''}`},g);
+  if(__ATLAS__.flags.starTooltips)svg('title',{},hit).textContent=s.name+' · '+(s.centralBodyType==='black-hole'?'Black hole + stellar companion':s.primaries.length===3?'Triple system':s.primaries.length===2?'Binary system':'Single star')+' · '+s.worlds.length+' planets';
   svg('circle',{cx:s.x,cy:s.y,r:25,fill:'transparent'},hit);
   svg('circle',{cx:s.x,cy:s.y,r:22,fill:'none',stroke:c,'stroke-width':1,class:'focus-ring'},hit);
   if(s.major&&s.centralBodyType!=='black-hole'){svg('circle',{cx:s.x,cy:s.y,r:12,fill:c,opacity:.35,filter:'url(#glow)'},hit);svg('circle',{cx:s.x,cy:s.y,r:16,fill:'none',stroke:c,opacity:.25,'stroke-width':1},hit)}
@@ -385,13 +426,15 @@ function draw(){
   else if(s.centralBodyType==='black-hole'){blackHoleGlyph(hit,s.x,s.y,1)}
   else if(EXOTIC_TYPES[s.centralBodyType]){exoticGlyph(hit,s.centralBodyType,s.x,s.y,.65)}
   else if(s.kind==='hazard'||s.kind==='uncertain'){svg('path',{d:`M${s.x} ${s.y-8}l8 15h-16Z`,fill:'#341c27',stroke:c,'stroke-width':1.6},hit);textSVG('!',{x:s.x,y:s.y+4,'text-anchor':'middle',fill:c,'font-size':10},hit)}
-  else if(s.name==='Forge'){svg('path',{d:`M${s.x} ${s.y-9}l2.5 6.5 7 .5-5.5 4.5 1.8 7-5.8-4-5.8 4 1.8-7-5.5-4.5 7-.5Z`,fill:'#ffde94'},hit)}
+  else if(s.name===dp.featuredSystem){svg('path',{d:`M${s.x} ${s.y-9}l2.5 6.5 7 .5-5.5 4.5 1.8 7-5.8-4-5.8 4 1.8-7-5.5-4.5 7-.5Z`,fill:'#ffde94'},hit)}
   else{svg('circle',{cx:s.x,cy:s.y,r:s.major?5.5:3.6,fill:c},hit);if(s.kind==='neutral')svg('circle',{cx:s.x,cy:s.y,r:9,fill:'none',stroke:c,'stroke-width':1},hit)}
+  if(__ATLAS__.flags.companionStars&&s.primaries?.length>1){s.primaries.slice(1).forEach((n,i)=>svg('circle',{cx:s.x+19-i*35,cy:s.y+8,r:3.7,fill:s.starColors?.[i+1]||'#ddeaff'},hit))}
   const label=svg('g',{class:'node-label '+(!s.major?'minor-label':''),'data-x':s.x,'data-y':s.y,'data-id':s.id},g);
   const y=s.y+34,tierOffset=s.tier?19:0;
   if(s.tier)textSVG('TIER '+s.tier+(s.centralBodyType==='silent-darkened'?' · DEAD STAR':' · '+TIER_NAMES[s.tier].toUpperCase()),{x:s.x,y:y+18,'text-anchor':'middle',class:'tier-label',fill:TIER_COLORS[s.tier],'data-tier-label':s.tier},label);
   svgLink(systemArticleTitle(s),s.name.toUpperCase(),{x:s.x,y,'text-anchor':'middle',class:'system-label'},label);
-  if((s.overviewWorlds||s.worlds).length){const worlds=svg('g',{class:'world-names'},label);(s.overviewWorlds||s.worlds).slice(0,2).forEach((world,i)=>svgLink(world,world,{x:s.x,y:y+20+16*i+tierOffset,'text-anchor':'middle',class:'world-label'},worlds))}
+  const wl=(dp.worldListField&&s[dp.worldListField])||s.worlds;
+  if((dp.worldListGatesLabel?wl:s.worlds).length){const worlds=svg('g',{class:'world-names'},label);wl.slice(0,2).forEach((world,i)=>svgLink(world,world,{x:s.x,y:y+20+16*i+tierOffset,'text-anchor':'middle',class:'world-label'},worlds))}
   if(widgetMode)return;
   hit.addEventListener('pointerdown',e=>{e.stopPropagation();moved=false});hit.addEventListener('click',e=>{e.stopPropagation();if(!moved&&e.detail<2){select(s.id,null,false,false);deferMarkerDossier(s.id)}});hit.addEventListener('dblclick',e=>{e.preventDefault();e.stopPropagation();select(s.id);setSystemFocus(true)});hit.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();select(s.id)}});
  });
@@ -400,31 +443,47 @@ function draw(){
 
 function updateSelection(){const l=$('selectionLayer');if(!l)return;l.innerHTML='';const s=DATA.systems.find(s=>s.id===selected);if(!s)return;svg('circle',{cx:s.x,cy:s.y,r:26,class:'selected-ring'},l);svg('path',{d:`M${s.x-35} ${s.y}h-8m78 0h8M${s.x} ${s.y-35}v-8m0 78v8`,class:'selected-cross'},l)}
 
-function updateVisibility(){DATA.systems.forEach(s=>{let cat=['hazard','uncertain'].includes(s.kind)?'hazard':['context','neutral'].includes(s.kind)?'context':'federation';const visible=flags[cat]&&(!$('majorOnly').checked||(s.overviewWorlds||s.worlds).length);$('node-'+s.id).classList.toggle('hidden-node',!visible);$('node-'+s.id).querySelector('.star-hit').setAttribute('tabindex',visible?'0':'-1')});document.querySelectorAll('.node-label').forEach(e=>e.style.display=$('labels').checked?'':'none');$('regionLayer').style.display=$('borders').checked?'':'none';$('hexLayer').style.display=$('hexes').checked?'':'none';scaleLabels()}
+function updateVisibility(){DATA.systems.forEach(s=>{let cat=s.cordon||['hazard','uncertain'].includes(s.kind)?'hazard':['context','neutral'].includes(s.kind)?'context':'federation';const visible=flags[cat]&&(!$('majorOnly').checked||(s.overviewWorlds||s.worlds).length);$('node-'+s.id).classList.toggle('hidden-node',!visible);$('node-'+s.id).querySelector('.star-hit').setAttribute('tabindex',visible?'0':'-1')});if(__ATLAS__.flags.visibilityResetsLabels)document.querySelectorAll('.node-label').forEach(e=>e.style.display=$('labels').checked?'':'none');if(__ATLAS__.flags.bordersToggleClass)$('regionLayer').classList.toggle('borders-hidden',!$('borders').checked);else $('regionLayer').style.display=$('borders').checked?'':'none';$('hexLayer').style.display=$('hexes').checked?'':'none';scaleLabels()}
 
 function zoomPercent(){return Math.round(baseWidth/vb.w*100)}
 
 function labelThresholds(){
- const box=$('map').getBoundingClientRect(),factor=Math.max(1,640/Math.max(1,box.width),360/Math.max(1,box.height));
  const policy=__ATLAS__.features?.labels||__ATLAS__.policies.labels;
+ const box=$('map').getBoundingClientRect(),factor=policy.fixed?1:Math.max(1,640/Math.max(1,box.width),360/Math.max(1,box.height));
  const base=policy[overviewMode?'overview':'regional'];
  return Object.fromEntries(Object.entries(base).map(([key,pair])=>[key,pair.map(v=>Math.ceil(v*factor))]));
 }
 
 function scaleLabels(){
  const width=$('map').getBoundingClientRect().width;if(!width)return;
- const unit=vb.w/width,percent=zoomPercent(),enabled=$('labels').checked,hasRegion=view!=='all';
- const thresholds=labelThresholds();
+ const unit=vb.w/width,percent=zoomPercent(),enabled=$('labels').checked,hasRegion=view!=='all',style=__ATLAS__.flags.regionLabelStyle;
+ const thresholds=labelThresholds(),[near,far]=__ATLAS__.policies.labels.nodeScale;
  document.querySelectorAll('.node-label').forEach(e=>{
   const active=hasRegion&&e.closest('[data-region]').dataset.region===view;
-  const levels=active?thresholds.active:thresholds.other;
-  const x=+e.dataset.x,y=+e.dataset.y,k=unit*(innerWidth<=700?.78:.88);
+  const levels=active?thresholds.active:(hasRegion&&thresholds.otherRegion)||thresholds.other;
+  const x=+e.dataset.x,y=+e.dataset.y,k=unit*(innerWidth<=700?near:far);
   e.setAttribute('transform',`translate(${x} ${y}) scale(${k}) translate(${-x} ${-y})`);
   e.style.display=enabled&&percent>=levels[0]?'':'none';
   e.classList.toggle('hide-world-names',percent<levels[1]);
   e.style.opacity=hasRegion&&!active?'0.30':'';
  });
- document.querySelectorAll('.region-ink').forEach(e=>{e.style.display=enabled?'':'none';e.style.fontSize=Math.min(84,Math.max(24,12*unit))+'px';e.style.opacity=hasRegion&&e.dataset.regionInk!==view?'0.13':'0.26'});
+ if(style==='ink'){
+  document.querySelectorAll('.region-ink').forEach(e=>{e.style.display=enabled?'':'none';e.style.fontSize=Math.min(84,Math.max(24,12*unit))+'px';e.style.opacity=hasRegion&&e.dataset.regionInk!==view?'0.13':'0.26'});
+ }else if(style==='ink-title'){
+  document.querySelectorAll('.region-ink').forEach(e=>{e.style.display=enabled&&!overviewMode?'':'none';e.style.fontSize=Math.min(30,Math.max(14*unit,Math.min(23*unit,22)))+'px';e.style.opacity=hasRegion&&e.dataset.regionInk!==view?'0.10':'0.25'});
+  document.querySelectorAll('.region-title').forEach(e=>{e.style.display=enabled&&overviewMode?'':'none';e.style.fontSize=Math.min(13,Math.max(6,84/unit))*unit*1.25+'px';e.style.opacity=hasRegion&&e.dataset.regionTitle!==view?'0.12':'0.32'});
+ }else if(style==='title-subtitle-ink'){
+  const wide=overviewMode&&percent<145;
+  document.querySelectorAll('.region-ink').forEach(e=>{e.style.display=enabled&&hasRegion&&!wide?'':'none';e.style.fontSize=Math.min(30,Math.max(14*unit,22))+'px'});
+  document.querySelectorAll('.region-title,.region-subtitle').forEach(e=>{const title=e.classList.contains('region-title');e.style.display=enabled&&wide?'':'none';e.style.fontSize=(title?12:7)*unit+'px'});
+ }else{
+  const overview=(view==='all'&&vb.w>2300)||vb.w>=DATA.atlasExtent[2]*.75;
+  document.querySelectorAll('.region-ink').forEach(e=>{
+   e.style.display=view==='all'||overview||!$('labels').checked?'none':'';
+   e.style.fontSize=Math.min(30,Math.max(14*unit,Math.min(23*unit,22)))+'px';
+  });
+  document.querySelectorAll('.region-title,.region-subtitle').forEach(e=>{const title=e.classList.contains('region-title');e.style.display=(view==='all'||overview)&&(title||!overview)?'':'none';e.style.fontSize=(title?(overview?Math.min(13,Math.max(6,84/unit)):17):8)*unit+'px'});$('neighborLabel').style.display=view==='all'?'':'none';
+ }
 }
 
 function applyView(){
@@ -435,51 +494,76 @@ function applyView(){
 function fitBounds(bounds){const box=$('mapArea').getBoundingClientRect(),ratio=box.width>0&&box.height>0?box.width/box.height:1;let[x,y,w,h]=bounds;h+=130;y-=60;if(w/h<ratio){const nw=h*ratio;x-=(nw-w)/2;w=nw}else{const nh=w/ratio;y-=(nh-h)/2;h=nh}vb={x,y,w,h};baseWidth=w;applyView()}
 
 function setView(key,keepSelection=false,keepCamera=false,overview=keepCamera?overviewMode:key==='all'){
+ if(__ATLAS__.flags.regionHighlight){
+  if(key!=='all'&&!DATA.regions[key])return;
+  beginNavigation();stationOverview=false;planetFocus=null;
+  if(systemFocused){systemFocused=false;syncSystemFocus(null);if(keepSelection)renderDetail()}
+  regionalCamera=null;view=key;highlightedRegion=key==='all'?null:key;
+  if(widgetMode&&widgetRegion){widgetRegion=key;document.body.classList.add('region-widget')}
+  updateRegionDisplay();renderMapLegend(key);fitBounds(DATA.regions[key]?.bounds||ATLAS_BOUNDS);
+  if(!keepSelection){selected=null;selectedWorld=null;updateSelection();renderDetail()}
+  renderIndex();endNavigation();
+  return;
+ }
  if(!resolveRegion(key))return;
  beginNavigation();planetFocus=null;stationOverview=false;
  if(systemFocused){systemFocused=false;syncSystemFocus(null);if(keepSelection)renderDetail()}
  regionalCamera=null;view=key;overviewMode=overview;
  const picker=$('regionPicker');$('overviewSelection')?.remove();
  if(overview&&DATA.regions[key]){const option=document.createElement('option');option.id='overviewSelection';option.value='overview-selection';option.disabled=true;option.textContent='Overview · '+DATA.regions[key].name;picker.append(option);picker.value=option.value}else picker.value=key;
- const r=DATA.regions[key];$('mapTitle').textContent=r?r.name:"Atlas Framework Demonstration";$('mapTitle').href=url(r?r.name:"Atlas Framework Demonstration");
- $('mapKicker').textContent=overview?'COLLECTIVE OVERVIEW'+(r?' / REGION HIGHLIGHTED':''):'REGIONAL CHART / '+r.subtitle.toUpperCase();
- $('mapSubtitle').textContent=r?r.subtitle+' · '+DATA.systems.filter(s=>s.region===key).length+' charted systems':'Five known regions · boundaries and separation are schematic';
+ const r=DATA.regions[key];$('mapTitle').textContent=r?r.name:'Atlas Framework Demonstration';$('mapTitle').href=url(r?r.name:'Atlas Framework Demonstration');
+ $('mapKicker').textContent=r?(r.mapKicker??(overview?'COLLECTIVE OVERVIEW / REGION HIGHLIGHTED':'REGIONAL CHART / '+r.subtitle.toUpperCase())):'COLLECTIVE OVERVIEW';
+ $('mapSubtitle').textContent=r?(r.mapSubtitle??r.subtitle+' · '+DATA.systems.filter(s=>s.region===key).length+' charted systems'):'Five known regions · boundaries and separation are schematic';
  renderMapLegend(key);
- document.querySelectorAll('[data-region-outline]').forEach(area=>area.setAttribute('aria-pressed',String(area.dataset.regionOutline===key)));
+ if(__ATLAS__.flags.widgetOutlineState||!widgetMode)document.querySelectorAll('[data-region-outline]').forEach(area=>area.setAttribute('aria-pressed',String(area.dataset.regionOutline===key)));
  if(keepCamera)applyView();else fitBounds(r&&!overview?r.bounds:DATA.atlasExtent);
  if(!keepSelection){selected=null;selectedWorld=null;updateSelection();renderDetail()}
  renderIndex();endNavigation();
 }
 
-function zoom(factor,cx,cy){const box=$('map').getBoundingClientRect();const px=cx==null?.5:(cx-box.left)/box.width,py=cy==null?.5:(cy-box.top)/box.height;const w=Math.max(Math.min(260,baseWidth/8),Math.min(Math.max(9000,baseWidth*4),vb.w*factor)),h=w*box.height/box.width;vb={x:vb.x+px*(vb.w-w),y:vb.y+py*(vb.h-h),w,h};applyView()}
+function zoom(factor,cx,cy){const box=$('map').getBoundingClientRect();const px=cx==null?.5:(cx-box.left)/box.width,py=cy==null?.5:(cy-box.top)/box.height;const z=__ATLAS__.policies.zoom,floor=z.minDivisor&&(!z.minDivisorOverviewOnly||overviewMode)?Math.min(z.minWidth,baseWidth/z.minDivisor):z.minWidth,ceiling=z.maxBaseMultiple?Math.max(z.maxWidth,baseWidth*z.maxBaseMultiple):z.maxWidth;const w=Math.max(floor,Math.min(ceiling,vb.w*factor)),h=w*box.height/box.width;vb={x:vb.x+px*(vb.w-w),y:vb.y+py*(vb.h-h),w,h};applyView()}
 
-function select(id,world=null,focus=false,openDrawer=true){const s=resolveSystem(id);if(!s)return;id=s.id;beginNavigation();stationOverview=false;
+function select(id,world=null,focus=false,openDrawer=true){const flags=__ATLAS__.flags,OV=flags.overviewStateKey,s=resolveSystem(id);if(!s)return;id=s.id;beginNavigation();stationOverview=false;
  const keepSystemFocus=systemFocused;planetFocus=null;if(selected!==id)systemZoom=1;
- if(s.region&&view!==s.region&&!overviewMode)setView(s.region,true);
+ const rememberCamera=()=>flags.regionHighlight?{view,highlightedRegion,camera:{...vb},baseWidth}:{view,[OV]:overviewMode,camera:{...vb},baseWidth};
+ const followRegion=()=>{if(!flags.regionHighlight&&s.region&&view!==s.region&&!overviewMode)setView(s.region,true)};
+ followRegion();
  if(focus&&s.region){setView(s.region,true)}
- if((keepSystemFocus||s.unplottedSystem)&&hasOrbitChart(s)&&!regionalCamera)regionalCamera={view,overviewMode,camera:{...vb},baseWidth};systemFocused=Boolean((keepSystemFocus||s.unplottedSystem)&&hasOrbitChart(s));if(!hasOrbitChart(s))regionalCamera=null;selected=id;selectedWorld=resolveObjectName(s,world)||(s.worlds.find(w=>DATA.worlds[w])||null);const localHost=localChartParent(s,selectedWorld);if(localHost&&hasOrbitChart(s)){if(s.region&&view!==s.region&&!overviewMode)setView(s.region,true);if(!regionalCamera)regionalCamera={view,overviewMode,camera:{...vb},baseWidth};systemFocused=true;planetFocus=localHost;}updateSelection();renderIndex();renderDetail();if(openDrawer&&innerWidth<=700)setDetailOpen(true);else if(!openDrawer)setDetailOpen(false);endNavigation();
+ if((keepSystemFocus||s.unplottedSystem)&&hasOrbitChart(s)&&!regionalCamera)regionalCamera=rememberCamera();systemFocused=Boolean((keepSystemFocus||s.unplottedSystem)&&hasOrbitChart(s));if(!hasOrbitChart(s))regionalCamera=null;selected=id;selectedWorld=resolveObjectName(s,world)||(flags.selectFirstWorld?(s.worlds.find(w=>DATA.worlds[w])||null):null);const localHost=localChartParent(s,selectedWorld);if(localHost&&hasOrbitChart(s)){followRegion();if(!regionalCamera)regionalCamera=rememberCamera();systemFocused=true;planetFocus=localHost;}updateSelection();renderIndex();renderDetail();if(openDrawer&&innerWidth<=700)setDetailOpen(true);else if(!openDrawer)setDetailOpen(false);if(flags.closeSidebarOnSelect)$('sidebar').classList.remove('open');endNavigation();
 }
 
 function tierMarkup(s){return s?.tier?`<span class="tier-badge" style="--tier-color:${TIER_COLORS[s.tier]}">TIER ${s.tier} · ${TIER_NAMES[s.tier]}</span>${s.centralBodyType==='silent-darkened'?'<span class="tier-badge" style="--tier-color:#ab8498">DEAD STAR</span>':''}`:''}
 
-function renderMapLegend(key){$('mapLegend').innerHTML='<span style="--c:#8ac9ee">Collective</span><span style="--c:#dfbd78">Kadaym holding</span><span style="--c:#a9afc5">Independent</span><span style="--c:#e58088">Hazard / quarantine</span>'}
+function renderMapLegend(key){
+ const legend=__ATLAS__.policies.legend,region=DATA.regions[key],span=(c,inner)=>`<span style="--c:${c}">${inner}</span>`;
+ let items;
+ if(legend.tiers&&(region?.silentPresence||region?.cordon))items=Object.entries(TIER_NAMES).map(([tier,name])=>span(TIER_COLORS[tier],esc(`T${tier} ${name}`)));
+ else if(legend.regions?.[key])items=legend.regions[key].map(([c,n])=>span(c,esc(n)));
+ else if(legend.overviewRegions&&key==='all')items=Object.values(DATA.regions).map(r=>span(r.color,link(r.name)));
+ else items=legend.entries.map(([c,n])=>span(c,esc(n)));
+ $('mapLegend').innerHTML=items.join('')+(legend.append||[]).map(([c,n])=>span(c,esc(n))).join('');
+}
 
 
-function affiliationMarkup(s){return s?.affiliation?`<div class="affiliation">${s.affiliation==="Atlas Framework Demonstration"?link("Atlas Framework Demonstration"):esc(s.affiliation)}${s.acquisition?'<br>'+esc(s.acquisition):''}</div>`:''}
+function affiliationMarkup(s){return s?.affiliation?`<div class="affiliation">${s.affiliation==='Atlas Framework Demonstration'?link('Atlas Framework Demonstration'):esc(s.affiliation)}${s.acquisition?'<br>'+esc(s.acquisition):''}</div>`:''}
 
 function searchRecords(s){return [...entityRecords(s),...moonRecords(s),...starRecords(s),...stationRecords(s),...s.worlds.map(name=>({name,...DATA.worlds[name]}))]}
 
-function classificationTerms(record){return [record.name,planetName(record.name),record.nickname,...(record.aliases||[]),record.type,record.bodyType,record.tag,record.category,record.status,/ruin|wreck|destroyed/i.test(record.status||'')?'ruins ruined wrecks destroyed historical':'',record.affiliation,record.kind,record.centralBodyType,EXOTIC_TYPES[record.centralBodyType],record.tier?'Tier '+record.tier:'',TIER_NAMES[record.tier],record.silentPresence?'Silent infested':'',record.centralBodyType==='silent-darkened'?'Dead star dead system':'',record.capital,...(record.links||[])]}
+function classificationTerms(record){return [record.name,planetName(record.name),record.nickname,...planetAliases(record.name),...(record.aliases||[]),record.type,record.bodyType,record.tag,record.category,record.status,record.cordon,/ruin|wreck|destroyed/i.test(record.status||'')?'ruins ruined wrecks destroyed historical':'',record.affiliation,record.kind,record.centralBodyType,EXOTIC_TYPES[record.centralBodyType],record.tier?'Tier '+record.tier:'',TIER_NAMES[record.tier],record.silentPresence?'Silent infested':'',record.centralBodyType==='silent-darkened'?'Dead star dead system':'',record.capital,...(record.links||[])]}
 
-function searchTerms(s){return [...classificationTerms(s),DATA.regions[s.region]?.name,s.name==='Kevak'?'Palorek':'',s.kind==='federation'?"Atlas Framework Demonstration":'',...searchRecords(s).flatMap(classificationTerms)]}
+function planetAliases(name){return []}
+
+function searchTerms(s){return [...classificationTerms(s),DATA.regions[s.region]?.name,...(s.searchAliases||[]),...__ATLAS__.flags.searchSystemFields.map(f=>s[f]),s.kind==='federation'?'Atlas Framework Demonstration':'',...searchRecords(s).flatMap(classificationTerms)]}
 
 function searchObject(s,q){return searchRecords(s).find(b=>matchesSearch(b,q))||searchRecords(s).find(b=>classificationTerms(b).some(v=>v&&normalizedName(v).includes(q)))}
 
-function renderIndex(){let q=normalizedName($('search').value.trim());let list=scope==='unplaced'?DATA.unplaced:scope==='all'||q?allRecords:DATA.systems.filter(s=>view==='all'||s.region===view);
+function renderIndex(){let q=normalizedName($('search').value.trim());let list=scope==='unplaced'?DATA.unplaced:scope==='all'||q?allRecords:DATA.systems.filter(s=>(typeof highlightedRegion!=='undefined'&&highlightedRegion?s.region===highlightedRegion:view==='all'||s.region===view));
  if(q)list=list.filter(s=>searchTerms(s).some(value=>value&&normalizedName(value).includes(q)));
- list=[...list].sort((a,b)=>(a.name==='Forge'?-1:b.name==='Forge'?1:a.name.localeCompare(b.name)));
+ const first=r=>r.indexFirst||r.isCapitalSystem;
+ list=[...list].sort((a,b)=>(first(a)?-1:first(b)?1:a.name.localeCompare(b.name)));
  $('indexCount').textContent=list.length+' '+(scope==='unplaced'?'RECORDS':'RESULTS');
- $('index').innerHTML=list.length?list.map(s=>`<div class="index-row ${selected===s.id?'selected':''}" style="--row-color:${color(s)}"><span class="dot"></span><div class="row-text">${systemLink(s,s.name)}${s.nickname?`<small>${esc(s.nickname)}</small>`:''}${q?`<small class="search-match">${esc(planetName(searchObject(s,q)?.name)||s.affiliation||(s.tier?'Tier '+s.tier+' · '+TIER_NAMES[s.tier]:s.centralBodyType||''))}</small>`:''}${s.tier?`<small style="color:${TIER_COLORS[s.tier]}">Tier ${s.tier} · ${TIER_NAMES[s.tier]}${s.centralBodyType==='silent-darkened'?' · Dead star':''}</small>`:''}${s.unplottedSystem?'<small>Black hole · coordinates classified</small>':''}<small>${(s.overviewWorlds||s.worlds).length?(s.overviewWorlds||s.worlds).map(planetNameMarkup).join(' · '):esc((s.worlds.length?s.worlds.length+' catalogued planets':'')||(s.region?DATA.regions[s.region].name:s.kind==='classified'?'Coordinates classified':s.kind==='hazard'?'Kurzenzka · unplotted':'Position unspecified'))}</small></div><button class="inspect" data-inspect="${esc(s.id)}" aria-label="Inspect ${esc(s.name)}">›</button></div>`).join(''):'<div class="index-empty">No matching locations.<br>Try a name, Tier 5, Elysian Collective, ruins or magnetar.</div>';
+ const noWorlds=s=>s.region?DATA.regions[s.region].name:s.kind==='classified'?'Coordinates classified':s.kind==='hazard'?'Kurzenzka · unplotted':'Position unspecified';
+ $('index').innerHTML=list.length?list.map(s=>`<div class="index-row ${selected===s.id?'selected':''}" style="--row-color:${color(s)}"><span class="dot"></span><div class="row-text">${systemLink(s,s.name)}${s.nickname?`<small>${esc(s.nickname)}</small>`:''}${q?`<small class="search-match">${esc(planetName(searchObject(s,q)?.name)||s.affiliation||(s.tier?'Tier '+s.tier+' · '+TIER_NAMES[s.tier]:s.centralBodyType||''))}</small>`:''}${s.tier?`<small style="color:${TIER_COLORS[s.tier]}">Tier ${s.tier} · ${TIER_NAMES[s.tier]}${s.centralBodyType==='silent-darkened'?' · Dead star':''}</small>`:''}${s.unplottedSystem?'<small>Black hole · coordinates classified</small>':''}<small>${__ATLAS__.flags.indexWorldLinks?((s.overviewWorlds||s.worlds).length?(s.overviewWorlds||s.worlds).map(planetNameMarkup).join(' · '):esc((s.worlds.length?s.worlds.length+' catalogued planets':'')||noWorlds(s))):esc((s.namedWorlds||s.worlds).map(planetName).join(' · ')||noWorlds(s))}</small></div><button class="inspect" data-inspect="${esc(s.id)}" aria-label="Inspect ${esc(s.name)}">›</button></div>`).join(''):'<div class="index-empty">No matching locations.<br>Try a name, Tier 5, Elysian Collective, ruins or magnetar.</div>';
  $('index').querySelectorAll('[data-inspect]').forEach(b=>b.onclick=()=>select(b.dataset.inspect,q?searchObject(resolveSystem(b.dataset.inspect),q)?.name||null:null,true));
 }
 
@@ -495,20 +579,20 @@ const STATION_TYPES={
  'Industry':{color:'#dab879',symbol:'▥',path:'M-6 6V-3L-2 0V-3L2 0V-6H6V6Z M-3 3H3'},
  'Other':{color:'#9bb6c8',symbol:'✧',path:'M0-7L6-3V3L0 7-6 3V-3Z M-3 0H3 M0-3V3'}
 };
-let stationOverview=false;
+let stationOverview=false,stationPart=0;
 let systemFocused=false,systemZoom=1,planetFocus=null,showBelts=true;
 const stationFilters=new Set(Object.keys(STATION_TYPES));
 const siteType=name=>/station|triad|jumpgate/i.test(name)?'Station / structure':/colony/i.test(name)?'Colony':'World';
-function stationRecords(s){return (DATA.stations||[]).filter(b=>b.system===s.id).map((b,i)=>({...b,type:'Station',code:'S'+(i+1),tint:STATION_TYPES[b.category].color,tag:b.categoryUnspecified?'Station / structure':b.category+' station',ruined:/ruin|wreck/i.test(b.status||''),source:b.source||b.name,links:[s.name,...(b.parent?[b.parent]:[])]}));}
+function stationRecords(s){return (DATA.stations||[]).filter(b=>b.system===s.id).map((b,i)=>({...b,type:'Station',code:'S'+(i+1),tint:STATION_TYPES[b.category].color,tag:b.categoryUnspecified?'Station / structure':b.category+' station',ruined:/ruin|wreck/i.test(b.status||''),source:b.source||b.name,links:[__ATLAS__.flags.stationLinksUseArticleTitle?systemArticleTitle(s):s.name,...(STATION_TYPES[b.category].article?[STATION_TYPES[b.category].article]:[]),...(b.parent?[b.parent]:[])]}));}
 
 function entityRecords(s){return (DATA.entities||[]).filter(b=>b.system===s?.id).map((b,i)=>({...b,type:'Entity',code:'E'+(i+1)}))}
 
 function starRecords(s){if(!hasOrbitChart(s))return [];return (s.primaries?.length?s.primaries:[s.name]).map((name,i)=>{
- const own=name===s.name?s:(DATA.objectImages?.[name]||{}),black=s.centralBodyType==='black-hole';
- return {...own,name,type:'Star',tag:s.centralBodyType==='silent-darkened'?'Silent-darkened star':black?'Black hole':s.centralBodyType==='cataclysmic-variable'?(i?'Donor star':'Accreting white dwarf'):EXOTIC_TYPES[s.centralBodyType]|| (s.primaries?.length===3?(i===2?'Trinary outer companion':'Trinary inner-pair star'):s.primaries?.length===2?'Binary primary star':'Central star'),articleTitle:own.articleTitle||name,source:name,tint:s.centralBodyType==='silent-darkened'?'#af7895':s.centralBodyType==='cataclysmic-variable'?(i?'#dc8c73':'#c4e7fc'):s.centralBodyType==='magnetar'?'#d4b8f2':s.centralBodyType==='pulsar'?'#a0e6ef':i===2?'#eab09a':i?'#a6c9ee':'#efca84',description:s.primaries?.length===3?(i===2?`${name} follows a wide orbit around the close pair ${s.primaries[0]} and ${s.primaries[1]}.`:`${name} and ${s.primaries[1-i]} form the close pair. ${s.primaries[2]} circles both stars.`):name===s.name?s.description:`${name} is one of the named primary stars of the ${s.name} system. Its companion is ${s.primaries.filter(n=>n!==name).join(' and ')}.`,links:[systemArticleTitle(s),...(name===s.name?(s.links||[]):[]),...(s.primaries||[]).filter(n=>n!==name)]};
+ const own=name===s.name?s:(DATA.objectImages?.[name]||{}),black=s.centralBodyType==='black-hole'&&i===0;
+ return {...own,name,type:'Star',tag:s.centralBodyType==='silent-darkened'?'Silent-darkened star':black?'Black hole':s.centralBodyType==='cataclysmic-variable'?(i?'Donor star':'Accreting white dwarf'):EXOTIC_TYPES[s.centralBodyType]|| (s.primaries?.length===3?(i===2?'Trinary outer companion':'Trinary inner-pair star'):s.primaries?.length===2?'Binary primary star':'Central star'),articleTitle:own.articleTitle||name,source:name,tint:s.starColors?.[i]||s.stellarColor|| (s.centralBodyType==='silent-darkened'?'#af7895':s.centralBodyType==='cataclysmic-variable'?(i?'#dc8c73':'#c4e7fc'):s.centralBodyType==='magnetar'?'#d4b8f2':s.centralBodyType==='pulsar'?'#a0e6ef':i===2?'#eab09a':i?'#a6c9ee':'#efca84'),description:s.primaries?.length===3?(i===2?`${name} follows a wide orbit around the close pair ${s.primaries[0]} and ${s.primaries[1]}.`:`${name} and ${s.primaries[1-i]} form the close pair. ${s.primaries[2]} circles both stars.`):name===s.name?s.description:`${name} is one of the named primary stars of the ${s.name} system. Its companion is ${s.primaries.filter(n=>n!==name).join(' and ')}.`,links:[systemArticleTitle(s),...(name===s.name?(s.links||[]):[]),...(s.primaries||[]).filter(n=>n!==name)]};
  });}
 
-function focusableWorld(s,name){if(!s||!name)return null;return systemBodies(s).find(b=>b.type==='World'&&[b.name,planetName(b.name)].some(n=>normalizedName(n)===normalizedName(name)))?.name||null}
+function focusableWorld(s,name){if(!s||!name)return null;return systemBodies(s).find(b=>b.type==='World'&&matchesRecord({name:b.name,...DATA.worlds[b.name]},name))?.name||null}
 
 function localChartParent(s,name){
  const moon=moonRecords(s).find(m=>m.name===name&&m.inhabited!==true);
@@ -534,27 +618,33 @@ function illustrativePlanet(slot,kind){
 }
 
 function solarLayout(s){
- const bodies=systemBodies(s),stations=stationRecords(s).filter(b=>b.visibility==='system'||(!b.visibility&&b.important!==false)),entities=entityRecords(s),planets=bodies.filter(b=>b.type==='World'),used=new Set(planets.filter(b=>b.slot).map(b=>b.slot));
+ const f=__ATLAS__.flags,rule=__ATLAS__.policies.solarStations;
+ const shown=b=>!(rule.excludeNames||[]).includes(b.name)&&((rule.mode==='systemMajor'?b.systemMajor:(b.visibility==='system'||(!b.visibility&&(rule.unset==='always'||(rule.unset==='unlessUnimportant'&&b.important!==false)))))||(rule.categories||[]).includes(b.category));
+ const bodies=systemBodies(s),allStations=stationRecords(s),stations=allStations.filter(shown),entities=entityRecords(s),planets=bodies.filter(b=>b.type==='World'),used=new Set(planets.filter(b=>b.slot).map(b=>b.slot));
  const seed=Array.from(s.name).reduce((a,c)=>a+c.charCodeAt(0),0);
  const assigned=planets.map((b,i)=>{let slot=b.slot||b.diagramSlot;if(!slot){slot=s.centralBodyType==='black-hole'?i+1:2+i*2;while(used.has(slot))slot++;used.add(slot)}return {...b,layoutSlot:slot,confirmed:!!b.slot,synthetic:false}});
- const maxSlot=Math.max(0,...assigned.map(b=>b.layoutSlot)),total=s.schematicPlanets?Math.max(maxSlot,...Object.keys(s.schematicPlanets).map(Number),...stations.map(b=>Math.ceil(b.lane||0)),...entities.map(b=>Math.ceil(b.lane||0))):s.sparseOrbits?Math.max(maxSlot,...stations.map(b=>Math.ceil(b.lane||0)),...entities.map(b=>Math.ceil(b.lane||0))):(s.centralBodyType==='black-hole'||EXOTIC_TYPES[s.centralBodyType])?maxSlot:s.kind==='uncertain'&&!planets.length?0:Math.max(5+seed%3,maxSlot+2,...stations.map(b=>Math.ceil(b.lane||0)));
- const orbits=[];for(let slot=1;slot<=total;slot++){const known=assigned.filter(b=>b.layoutSlot===slot);if(known.length)orbits.push(...known);else if(s.schematicPlanets){const kind=s.schematicPlanets[slot];if(kind)orbits.push(illustrativePlanet(slot,kind))}else if(!s.sparseOrbits){const kind=slot>=total-1?['icy','gas','ice-giant','ringed'][(slot+seed)%4]:['rocky','cinder','desert'][(slot+seed)%3];orbits.push(illustrativePlanet(slot,kind))}}
- return {orbits:s.sparseOrbits?orbits.filter(b=>!b.synthetic):orbits,entities,moons:bodies.filter(b=>b.type==='Moon'),sites:bodies.filter(b=>!['World','Moon'].includes(b.type)),stations,total,seed};
+ const lanes=(f.solarLanesFromAllStations?allStations:stations).map(b=>Math.ceil(b.lane||0));
+ const maxSlot=Math.max(0,...assigned.map(b=>b.layoutSlot)),total=s.schematicPlanets?Math.max(maxSlot,...Object.keys(s.schematicPlanets).map(Number),...lanes,...entities.map(b=>Math.ceil(b.lane||0))):s.sparseOrbits?Math.max(maxSlot,...lanes,...entities.map(b=>Math.ceil(b.lane||0))):(s.centralBodyType==='black-hole'||EXOTIC_TYPES[s.centralBodyType])?maxSlot:s.kind==='uncertain'&&!planets.length?0:Math.max(5+seed%3,maxSlot+2,...lanes);
+ const orbits=[];for(let slot=1;slot<=total;slot++){const known=assigned.filter(b=>b.layoutSlot===slot);if(known.length)orbits.push(...known);else if(s.schematicPlanets){const kind=s.schematicPlanets[slot];if(f.solarIllustrativeGuard?Object.hasOwn(illustrativeTypes,kind):kind)orbits.push(illustrativePlanet(slot,kind))}else if(!s.sparseOrbits){const kind=slot>=total-1?['icy','gas','ice-giant','ringed'][(slot+seed)%4]:['rocky','cinder','desert'][(slot+seed)%3];if(!f.solarIllustrativeGuard||Object.hasOwn(illustrativeTypes,kind))orbits.push(illustrativePlanet(slot,kind))}}
+ return {orbits:s.sparseOrbits?orbits.filter(b=>!b.synthetic):orbits,entities,moons:f.solarMoonsVisibleOnly?moonRecords(s).filter(b=>b.visibility==='system'||b.inhabited===true):bodies.filter(b=>b.type==='Moon'),sites:bodies.filter(b=>!['World','Moon'].includes(b.type)),stations,total,seed};
 }
 
 function ordinal(n){return n+([11,12,13].includes(n%100)?'th':({1:'st',2:'nd',3:'rd'}[n%10]||'th'))}
 
 function orbitalFact(w,s){
+ if(w?.orbitalFact)return `<div class="orbital-fact station-fact" style="--station-color:${w.orbitalFact.color}"><b>✧</b><div><small>${w.orbitalFact.label}</small><span>${w.orbitalFact.note}</span></div></div>`;
  if(w?.type==='Entity')return `<div class="orbital-fact"><b>✧</b><div><small>SILENT MACROFORM</small><span>Slow stellar orbit · ${link(w.classArticle,'Nefandum class')}</span></div></div>`;
- if(w?.type==='Station')return `<div class="orbital-fact station-fact" style="--station-color:${w.tint}"><b>${STATION_TYPES[w.category].symbol}</b><div><small>${w.categoryUnspecified?'CATEGORY UNSPECIFIED':esc(w.category.toUpperCase())}</small><span>${w.parent?'Orbits '+link(w.parent):w.lane?'Independent stellar orbit':'Host orbit unspecified'}</span></div></div>`;
+ if(w?.type==='Station')return `<div class="orbital-fact station-fact" style="--station-color:${w.tint}"><b>${STATION_TYPES[w.category].symbol}</b><div><small>${w.categoryUnspecified?'CATEGORY UNSPECIFIED':esc(w.category.toUpperCase())}</small><span>${w.parent?'Orbits '+link(w.parent):w.orbitalZone==='outer-system'?'Outer stellar orbit · beyond chart scale':w.lane?'Independent stellar orbit':'Host orbit unspecified'}</span></div></div>`;
  const slot=w?.orbitalPosition||(!w?s.orbitalPosition:null);if(w?.parent)return `<div class="orbital-fact"><b>☾</b><div><small>NATURAL SATELLITE</small><span>Orbits ${link(w.parent)}</span></div></div>`;if(!slot)return '';return `<div class="orbital-fact"><b>${String(slot).padStart(2,'0')}</b><div><small>ORBITAL POSITION · CODEX</small><span>${ordinal(slot)} planet${hasOrbitChart(s)?' in '+systemLink(s):s.orbitalHost?' in '+link(systemNameTitle(s.orbitalHost)):''}</span></div></div>`;
 }
 
 function worldRecord(s,name){name=resolveObjectName(s,name);const entity=entityRecords(s).find(b=>b.name===name);if(entity)return entity;const moon=moonRecords(s).find(b=>b.name===name);if(moon)return moon;const star=starRecords(s).find(b=>b.name===name);if(star)return star;const station=stationRecords(s).find(b=>b.name===name);if(station)return station;if(!name||!s.worlds.includes(name))return null;return DATA.worlds[name]||{tag:siteType(name)==='World'?'Charted world':'Charted site',description:`${name} is named on the ${DATA.regions[s.region]?.name||'Codex'} chart${s.region?' in the '+s.name+' system':''}. Further physical and orbital details are not specified in the records used for this atlas.`,source:name,links:[]};}
 
-function bodyKey(b){if(b.type==='Entity')return `<div class="orbit-key entity-key ${selectedWorld===b.name?'selected':''}" style="--body-color:${b.tint}"><button data-world="${esc(b.name)}" aria-label="Inspect ${esc(b.name)}">✧</button><div class="object-key-name">${link(b.name)}<small>${esc(b.tag)} · slow stellar orbit</small></div></div>`;const station=b.type==='Station',label=station?b.code:b.type==='Moon'?'M':b.layoutSlot||'◇';
- return `<div class="orbit-key ${!['World','Moon'].includes(b.type)?'site ':''}${selectedWorld===b.name?'selected':''}" style="--body-color:${b.tint}"><button data-world="${esc(b.name)}" ${hasStationSchematic(b)?'data-tora=""':''} aria-label="Inspect ${esc(b.name)}">${label}</button><div class="object-key-name">${link(b.name,b.name,hasStationSchematic(b)?'tora-register-link':'')}${station?`<small>${esc(b.categoryUnspecified?'Other · category unknown':b.category)} · ${esc(b.status||'operational')}</small>`:''}${hasStationSchematic(b)?`<button class="tora-link" data-tora-open="${esc(b.name)}">Station overview ↗</button>`:''}</div>${!station?`<small>${b.type==='Moon'?'moon of '+link(b.parent):b.slot?'orbit '+String(b.slot).padStart(2,'0'):b.type==='World'?'schematic orbit '+(b.layoutSlot||b.diagramSlot||'unspecified'):b.type==='Colony'?'colony':'site'}</small>`:''}</div>`;
+function bodyKey(b){const nm=__ATLAS__.flags.inspectLabelsUseTitles?planetName(b.name):b.name;if(b.type==='Entity')return `<div class="orbit-key entity-key ${selectedWorld===b.name?'selected':''}" style="--body-color:${b.tint}"><button data-world="${esc(b.name)}" aria-label="Inspect ${esc(nm)}">✧</button><div class="object-key-name">${link(b.name)}<small>${esc(b.tag)} · slow stellar orbit</small></div></div>`;const station=b.type==='Station',label=station?b.code:b.type==='Moon'?'M':b.layoutSlot||'◇';
+ return `<div class="orbit-key ${!['World','Moon'].includes(b.type)?'site ':''}${selectedWorld===b.name?'selected':''}" style="--body-color:${b.tint}"><button data-world="${esc(b.name)}" ${stationHasOverview(b)?'data-tora=""':''} aria-label="Inspect ${esc(nm)}">${label}</button><div class="object-key-name">${link(b.name,b.name,stationHasOverview(b)?'tora-register-link':'')}${station?`<small>${esc(b.categoryUnspecified?'Other · category unknown':b.category)} · ${esc(b.status||'operational')}</small>`:''}${stationHasOverview(b)?`<button class="tora-link" data-tora-open="${esc(b.name)}">Station overview ↗</button>`:''}</div>${!station?`<small>${b.type==='Moon'?'moon of '+link(b.parent):b.slot?'orbit '+String(b.slot).padStart(2,'0'):b.type==='World'?(__ATLAS__.flags.worldKeySchematicOrbit?'schematic orbit '+(b.layoutSlot||b.diagramSlot||'unspecified'):'orbit unspecified'):b.type==='Colony'?'colony':'site'}</small>`:''}</div>`;
 }
+
+function stationHasOverview(b){return hasStationSchematic(b)}
 
 const TORA_CLASS='Terranos Omnidirectional Reflector Array';
 const toraParts=[
@@ -626,9 +716,9 @@ const triadParts=[
  {title:'Transit bridges',label:'BRIDGES',x:432,y:224,lx:520,ly:356,note:'Two illuminated structural bridges connect the three hubs. This schematic interprets them as transit connections without assigning undocumented routes or capacities.'},
  {title:'Docking rims',label:'DOCKING RIMS',x:342,y:310,lx:430,ly:430,note:'The article confirms that the Triad welcomes visiting ships and charges docking fees. Peripheral docking structures are visible in the illustration, but individual berth locations are not documented.'}
 ];
-function hasStationSchematic(st){return st?.category==='TORA'||st?.schematic==='triad'}
+function hasStationSchematic(st){return st?.category==='TORA'||st?.schematic==='triad'||st?.name==='Foundry'}
 
-function currentStationParts(){return worldRecord(resolveSystem(selected),selectedWorld)?.schematic==='triad'?triadParts:toraParts}
+function currentStationParts(){return selectedWorld==='Foundry'?foundryParts:worldRecord(resolveSystem(selected),selectedWorld)?.schematic==='triad'?triadParts:toraParts}
 
 function triadElevation(){
  const bridge=(x1,y1,x2,y2)=>`<path d="M${x1} ${y1-9}L${x2} ${y2-9}V${y2+9}L${x1} ${y1+9}Z" fill="#102936" stroke="#81bdcd"/><path d="M${x1} ${y1+4}L${x2} ${y2+4}" stroke="#76edff" stroke-width="3" filter="url(#toraGlow)"/><path d="M${x1} ${y1-4}L${x2} ${y2-4}" stroke="#a7d8df" stroke-width="1"/>`;
@@ -646,7 +736,8 @@ function triadScreen(s,st){return `<section class="station-screen"><div class="t
 
 
 function stationScreen(s,st){
- if(st.schematic==='triad')return triadScreen(s,st);
+ if(st?.name==='Foundry')return foundryScreen(s);
+ if(st?.schematic==='triad')return triadScreen(s,st);
  const units=stationRecords(s).filter(unit=>unit.category==='TORA');
  const switcher=`<nav class="tora-units" aria-label="Reflector arrays in this system">${units.map((unit,i)=>`<button data-unit="${esc(unit.name)}" aria-pressed="${unit.name===st.name}">Array 0${i+1}</button>`).join('')}${link(TORA_CLASS,'Go to Article','tora-article')}</nav>`;
 
@@ -658,10 +749,11 @@ function stationScreen(s,st){
 }
 
 function highlightPart(index){
+ stationPart=index;
  const part=currentStationParts()[index];if(!part)return;
  document.querySelectorAll('[data-part]').forEach(el=>el.setAttribute('aria-pressed',String(Number(el.dataset.part)===index)));
  for(const el of document.querySelectorAll('[data-hardware]')){
-  if(Number(el.dataset.hardware)===index)el.setAttribute('filter','url(#toraAmber)');
+  if(Number(el.dataset.hardware)===index)el.setAttribute('filter',selectedWorld==='Foundry'?'url(#foundryAmber)':'url(#toraAmber)');
   else el.removeAttribute('filter');
  }
  $('partReadout').innerHTML=`<b>0${index+1} / ${esc(part.title)}</b><p>${esc(part.note)}</p>`;
@@ -671,13 +763,13 @@ function openStation(name){
  const s=resolveSystem(selected),st=s&&stationRecords(s).find(b=>hasStationSchematic(b)&&b.name===name);
  if(widgetMode||!st)return;
  beginNavigation();if(!systemFocused)setSystemFocus(true);
- planetFocus=null;selectedWorld=st.name;stationOverview=true;
+ planetFocus=null;selectedWorld=st.name;stationPart=0;stationOverview=true;
  renderDetail();$('systemFocus').scrollTop=0;setDetailOpen(false);$('leaveStation')?.focus({preventScroll:true});endNavigation();
 }
 
 function closeStation(){
  beginNavigation();stationOverview=false;renderDetail();$('systemFocus').scrollTop=0;
- const target=Array.from(document.querySelectorAll('[data-tora-open]')).find(el=>el.dataset.toraOpen===selectedWorld);target?.focus({preventScroll:true});endNavigation();
+ const target=Array.from(document.querySelectorAll('[data-tora-open], [data-foundry-open]')).find(el=>(el.dataset.toraOpen||el.dataset.foundryOpen)===selectedWorld);target?.focus({preventScroll:true});endNavigation();
 }
 
 function bindToraName(el,name){
@@ -725,7 +817,8 @@ function silentDecoration(s){return s.silentPresence?`<div id="silentOverlay" ar
 
 function notableSitesMarkup(s){
  const local=planetFocus?localBodies(s,planetFocus):null,visible=local?new Set([planetFocus,...local.moons.map(b=>b.name),...local.stations.map(b=>b.name)]):null;
- const sites=(s.notableSites||[]).filter(site=>resolveObjectName(s,site.name)&&(!visible||visible.has(site.name)));
+ const hiddenStations=new Set(local?[]:stationRecords(s).filter(st=>st.visibility!=='system').map(st=>st.name));
+ const sites=(s.notableSites||[]).filter(site=>!hiddenStations.has(site.name)&&resolveObjectName(s,site.name)&&(!visible||visible.has(site.name)));
  if(!sites.length)return '';
  return `<section class="notable-sites" aria-label="Notable sites in ${esc(planetFocus||s.name)}"><div class="orbit-site-heading">NOTABLE SITES</div><div class="notable-grid">${sites.map(site=>`<article class="notable-card ${selectedWorld===site.name?'active':''}"><h3>${link(site.name)}</h3><p>${esc(site.summary)}</p><button data-notable="${esc(site.name)}" aria-label="Inspect notable site ${esc(site.name)}">Inspect site →</button></article>`).join('')}</div></section>`;
 }
@@ -746,15 +839,17 @@ function systemView(s,expanded=false){if(!hasOrbitChart(s))return '';if(expanded
 
 function planetView(s){
  const name=planetFocus,{moons,stations}=localBodies(s,name),shown=stations.filter(b=>stationFilters.has(b.category));
- const filters=stations.length?`<div class="station-filters" aria-label="Visible local station categories">${Object.entries(STATION_TYPES).map(([category,t],i)=>{const count=stations.filter(b=>b.category===category).length;return `<button id="stationFilter${i}" data-station-filter="${category}" aria-pressed="${stationFilters.has(category)}" ${count?'':'disabled'} style="--station-color:${t.color}">${t.symbol} ${category} <b>${count}</b></button>`}).join('')}<button id="showAllStations">Show all</button></div>`:'';
- return `<section class="system-view expanded-system local-system" aria-label="${esc(name)} local orbit">
- <div class="system-view-head"><div class="focus-title"><div class="local-return-row"><button id="backToSystem" class="back-region">← Return to system</button><button id="backToRegion" class="back-region">Return to ${s.unplottedSystem?'chart':'region'}</button></div><div class="eyebrow">PLANET & SATELLITES</div><h2>${link(name)}</h2><div class="local-breadcrumb">${systemLink(s)}<span>›</span>${link(name)}</div><p>${moons.length} natural satellite${moons.length===1?'':'s'} · ${stations.length} hosted station${stations.length===1?'':'s'}</p></div>
+ const elsewhere=__ATLAS__.flags.elsewhereStations?stationRecords(s).filter(st=>st.visibility==='register'):[];
+ const filters=stations.length?`<div class="station-filters" aria-label="Visible local station categories">${Object.entries(STATION_TYPES).filter(([category])=>!__ATLAS__.flags.hiddenStationFilters.includes(category)).map(([category,t],i)=>{const count=stations.filter(b=>b.category===category).length;return `<button id="stationFilter${i}" data-station-filter="${category}" aria-pressed="${stationFilters.has(category)}" ${count?'':'disabled'} style="--station-color:${t.color}">${t.symbol} ${category} <b>${count}</b></button>`}).join('')}<button id="showAllStations">Show all</button></div>`:'';
+ return `<section class="system-view expanded-system local-system" aria-label="${esc(__ATLAS__.flags.titledLocalOrbitLabels?planetName(name):name)} local orbit">
+ <div class="system-view-head"><div class="focus-title"><div class="local-return-row"><button id="backToSystem" class="back-region">← Return to system</button><button id="backToRegion" class="back-region">Return to ${s.unplottedSystem?'chart':'region'}</button></div><div class="eyebrow">PLANET & SATELLITES</div><h2>${link(name)}</h2><div class="local-breadcrumb">${systemLink(s)}<span>›</span>${link(name)}</div><p>${moons.length} natural satellite${moons.length===1?'':'s'} · ${stations.length} hosted station${stations.length===1?'':'s'}</p>${cloakBadge(s)}</div>
  <div class="system-actions"><button id="orbitToggle" class="orbit-toggle" aria-label="${orbitPaused?'Play':'Pause'} orbital animation" aria-pressed="${orbitPaused}">${orbitPaused?'▶ Play':'Ⅱ Pause'}</button><button id="systemZoomIn" class="orbit-toggle system-zoom" aria-label="Zoom in local diagram">+</button><button id="systemZoomOut" class="orbit-toggle system-zoom" aria-label="Zoom out local diagram">−</button><button id="focusFullscreen" class="orbit-toggle" aria-label="Toggle fullscreen">⛶</button></div></div>
  ${filters}${s.silentPresence?'<p class="silent-status" role="status">Silent activity detected · signal interference</p>':''}
- <div class="focus-visual">${greatBlinkFrame(planetFocus)}${cloakDecoration(s)}${silentDecoration(s)}<svg id="orbitDiagram" class="orbit-diagram" viewBox="0 0 760 580" role="group" aria-label="${esc(name)} and its recorded moons and stations"></svg></div>
+ <div class="focus-visual">${greatBlinkFrame(planetFocus)}${cloakDecoration(s)}${silentDecoration(s)}<svg id="orbitDiagram" class="orbit-diagram" viewBox="0 0 760 580" role="group" aria-label="${esc(__ATLAS__.flags.titledLocalOrbitLabels?planetName(name):name)} and its recorded moons and stations"></svg></div>
  ${notableSitesMarkup(s)}<div class="system-center">Local center: ${link(name)} · Parent system: ${systemLink(s)}</div>
  ${!moons.length&&!stations.length?'<p class="local-empty">No moons or hosted stations are catalogued for this world.</p>':''}
- <div class="system-catalog"><div><div class="orbit-site-heading">MOONS</div><div class="orbit-labels">${moons.map(bodyKey).join('')||'<p class="orbit-empty">No natural satellites catalogued.</p>'}</div></div><div><div class="orbit-site-heading">HOSTED STATIONS <span>${shown.length} / ${stations.length}</span></div><div class="orbit-labels">${shown.map(bodyKey).join('')||'<p class="orbit-empty">'+(stations.length?'All local station categories are hidden.':'No hosted stations catalogued.')+'</p>'}</div></div></div>
+ <div class="system-catalog"><div><div class="orbit-site-heading">MOONS</div><div class="orbit-labels">${moons.map(bodyKey).join('')||'<p class="orbit-empty">No natural satellites catalogued.</p>'}</div></div><div><div class="orbit-site-heading">HOSTED STATIONS <span>${shown.length} / ${stations.length}</span></div><div class="orbit-labels">${shown.map(bodyKey).join('')||'<p class="orbit-empty">'+(stations.length?'All local station categories are hidden.':'No hosted stations catalogued.')+'</p>'}</div></div></div>${__ATLAS__.flags.elsewhereStations?`
+ ${elsewhere.length?`<div class="orbit-site-heading">ELSEWHERE IN THE ${esc(s.name.toUpperCase())} SYSTEM</div><div class="link-pills">${elsewhere.map(st=>link(st.name)).join('')}</div>`:''}`:''}
  <p class="orbit-caption">Select a body or station symbol to inspect it; names open the Codex. Only recorded host relationships are shown. Sizes, orbit spacing and speeds are schematic.</p></section>`;
 }
 
@@ -774,11 +869,12 @@ function greatBlinkFrame(planet){
 function mountPlanet(s){
  const chart=$('orbitDiagram'),root=systemBodies(s).find(b=>b.name===planetFocus);if(!chart||!root)return;
  const {moons,stations}=localBodies(s,planetFocus),cx=380,cy=265;
- const extended=Boolean(DATA.worlds[planetFocus]?.extendedSatelliteChart);
+ const extended=__ATLAS__.flags.extendedChartMoonThreshold?localBodies(s,planetFocus).moons.length>__ATLAS__.flags.extendedChartMoonThreshold:Boolean(DATA.worlds[planetFocus]?.extendedSatelliteChart);
  for(let i=0;i<86;i++)svg('circle',{cx:(i*97+13)%760,cy:(i*53+7)%580,r:i%4===0?.8:.45,fill:'#acbfd8',opacity:.14+i%3*.07},chart);
  svg('path',{d:`M22 ${cy}H738M${cx} 24V548`,stroke:'#64758b','stroke-width':.5,opacity:.12},chart);
- const center=objectTarget(root.name,{class:'orbit-body'+(selectedWorld===root.name?' selected':''),transform:`translate(${cx} ${cy})`,tabindex:0,role:'button','data-local-center':root.name,'aria-label':'Inspect '+root.name},chart);
+ const center=objectTarget(root.name,{...(__ATLAS__.flags.bodyRenderOpacity?{opacity:root.renderOpacity??1}:{}),class:'orbit-body'+(selectedWorld===root.name?' selected':''),transform:`translate(${cx} ${cy})`,tabindex:0,role:'button','data-local-center':root.name,'aria-label':'Inspect '+(__ATLAS__.flags.titledPlanetInspectLabel?planetName(root.name):root.name)},chart);
  svg('circle',{r:root.appearance==='great-blink'?80:52,fill:'transparent'},center);svg('circle',{r:49,fill:'none',stroke:root.tint,'stroke-width':1,class:'body-focus'},center);
+ if(DATA.worlds[root.name]?.solarAnalogue){solarPlanetGlyph(center,root.name,32)}else{
  if(root.appearance==='great-blink'){
   const clip=svg('clipPath',{id:'primex-limb'},center);
   svg('circle',{r:75},clip);
@@ -798,9 +894,10 @@ function mountPlanet(s){
   svg('path',{d:'M0-32A32 32 0 0 1 0 32A19 32 0 0 0 0-32',fill:'#101d2b',opacity:.56},globe);
  }
  if(root.appearance==='ringed')svg('ellipse',{rx:56,ry:15,fill:'none',stroke:root.tint,'stroke-width':3,opacity:.7,transform:'rotate(-24)'},center);
+ }
  svgLink(root.name,root.name,{x:0,y:extended?286:root.appearance==='great-blink'?108:68,class:'local-center-label'},center);bindOrbitalSelection(center,root.name);
  const movers=[];
- moons.forEach((b,i)=>{const rx=extended?166+i*178/Math.max(1,moons.length-1):180+i*85/Math.max(1,moons.length-1),ry=rx*.7,track=svg('ellipse',{cx,cy,rx,ry,fill:'none',class:'orbit-track'+(selectedWorld===b.name?' active':''),'data-local-moon-track':b.name},chart);movers.push({...b,rx,ry,phase:1.3+i*(extended?2.39996:2.1),duration:38+i*17,track:null})});
+ moons.forEach((b,i)=>{const rx=extended?166+i*178/Math.max(1,moons.length-1):180+i*85/Math.max(1,moons.length-1),ry=rx*.7,track=svg('ellipse',{cx,cy,rx,ry,fill:'none',class:'orbit-track'+(selectedWorld===b.name?' active':''),'data-local-moon-track':b.name},chart);movers.push({...b,rx,ry,phase:1.3+i*(__ATLAS__.flags.goldenAngleMoonPhase||extended?2.39996:2.1),duration:38+i*17,track:null})});
  const direct=stations.filter(b=>b.parent===root.name);
  stations.filter(b=>stationFilters.has(b.category)).forEach(b=>{
   const parent=b.parent===root.name?null:movers.find(m=>m.name===b.parent);if(b.parent!==root.name&&!parent)return;
@@ -813,13 +910,42 @@ function mountPlanet(s){
   const station=b.type==='Station',g=objectTarget(b.name,{class:'orbit-body'+(selectedWorld===b.name?' selected':''),tabindex:0,role:'button','data-orbit-name':b.name,'data-local-orbit':b.name,'aria-label':'Inspect '+b.name+(station?', '+b.category+' station':', moon')},chart);
   svg('title',{},g).textContent=b.name;svg('circle',{r:extended?10:18,fill:'transparent'},g);svg('circle',{r:extended?9:15,fill:'none',stroke:b.tint,'stroke-width':1,class:'body-focus'},g);
   if(station)stationGlyph(g,b.tint,b.category,extended?.68:1,b.ruined);else {svg('circle',{r:extended?5:9,fill:b.tint},g);svg('path',{d:'M0-9A9 9 0 0 1 0 9A5 9 0 0 0 0-9',transform:extended?'scale(.55)':'',fill:'#101925',opacity:.55},g)}
-  if(station)textSVG(b.code,{x:14,y:-11,class:'body-number'},g);else svgLink(b.name,b.shortLabel||b.name,{x:0,y:extended?15:26,class:'focus-body-label','text-anchor':'middle'},g);
+  if(station)textSVG(b.code,{x:14,y:-11,class:'body-number'},g);else svgLink(b.name,__ATLAS__.flags.shortLabelsOnlyWhenExtended&&!extended?b.name:b.shortLabel||b.name,{x:0,y:extended?15:26,class:'focus-body-label',...(__ATLAS__.flags.sizedFocusBodyLabel?{'font-size':extended?8:11}:{}),'text-anchor':'middle'},g);
   bindOrbitalSelection(g,b.name);b.element=g;
  });
  function paint(){movers.forEach(b=>{const parent=b.parent?movers.find(m=>m.name===b.parent):null,x=parent?parent.px:cx,y=parent?parent.py:cy,a=b.phase+orbitClock*Math.PI*2/b.duration;b.px=x+b.rx*Math.cos(a);b.py=y+b.ry*Math.sin(a);b.element.setAttribute('transform',`translate(${b.px} ${b.py})`);if(b.track)b.track.setAttribute('transform',`translate(${x} ${y})`)})}
  function frame(now){if(orbitLastTime!==null&&!document.hidden)orbitClock+=Math.min((now-orbitLastTime)/1000,.1);orbitLastTime=now;paint();orbitFrame=requestAnimationFrame(frame)}
  paint();if(!orbitPaused&&movers.length)orbitFrame=requestAnimationFrame(frame);
  if($('orbitToggle'))$('orbitToggle').onclick=()=>toggleAtlasMotion('orbitToggle');
+}
+
+function solarPlanetGlyph(parent,world,radius){
+ const w=DATA.worlds[world],kind=w.solarAnalogue;
+ const g=svg('g',{transform:`scale(${radius/32})`,'data-solar-analogue':kind,'pointer-events':'none'},parent);
+ const ring=()=>svg('ellipse',{rx:55,ry:17,fill:'none',stroke:'#c9bda0','stroke-width':8,transform:'rotate(-23)'},g);
+ if(kind==='Saturn')ring();
+ svg('circle',{r:32,fill:w.tint},g);
+ const id='solar-limb-'+(++solarGlyphSequence),clip=svg('clipPath',{id},g);svg('circle',{r:32},clip);
+ const surface=svg('g',{'clip-path':`url(#${id})`},g);
+ if(kind==='Mercury')[[12,-12,7],[-13,8,5],[9,17,4],[-16,-17,3]].forEach(([cx,cy,r])=>{svg('circle',{cx,cy,r,fill:'#626160',opacity:.55},surface);svg('path',{d:`M${cx-r} ${cy}a${r} ${r} 0 0 1 ${r*2} 0`,fill:'none',stroke:'#c2bdb4',opacity:.5},surface)});
+ if(['Venus','Jupiter','Saturn','Uranus','Neptune'].includes(kind)){
+  const palette=kind==='Jupiter'?['#ab7b57','#e2c9a6','#c09b78']:kind==='Saturn'?['#bbab81','#e8d8ad','#d3c093']:kind==='Venus'?['#dfc38f','#f1dfb8','#cdb783']:kind==='Uranus'?['#a9d2d6','#bfe1df','#a3ccd1']:['#789fac','#9dbcc6','#7295a9'];
+  [-23,-14,-5,5,15,24].forEach((y,i)=>svg('path',{d:`M-36 ${y}Q-12 ${y+5} 8 ${y+2}T36 ${y+1}`,fill:'none',stroke:palette[i%3],'stroke-width':kind==='Jupiter'?5:3,opacity:kind==='Uranus'?.25:.7},surface));
+ }
+ if(kind==='Jupiter'){svg('ellipse',{cx:13,cy:12,rx:8,ry:4,fill:'#a76449'},surface);svg('ellipse',{cx:12,cy:11,rx:5,ry:2,fill:'#c58361'},surface)}
+ if(kind==='Earth'){
+  svg('path',{d:'M-26-22L-13-26-5-19-9-12-3-8-7-2-16-5-17 5-24 1-29-10Z M-12 8L-3 6 3 15-2 25-9 32-12 20Z M8-23L25-24 35-10 24-7 20 1 11-3 5-12Z M20 17L29 16 33 24 24 27Z',fill:'#78956b'},surface);
+  ['M-31-13Q-15-22 0-14T32-17','M-26 4Q-9 0 5 6T33 3','M-23 23Q-9 16 8 22'].forEach(d=>svg('path',{d,fill:'none',stroke:'#e5eef0','stroke-width':2.8,opacity:.8},surface));
+ }
+ if(kind==='Mars'){svg('path',{d:'M-25-4Q-11-16 3-3T29 12L16 20-2 10-17 14Z',fill:'#805f50',opacity:.6},surface);svg('ellipse',{cy:-29,rx:12,ry:6,fill:'#e4ddd1'},surface)}
+ svg('path',{d:'M0-32A32 32 0 0 1 0 32Q23 0 0-32',fill:'#08111c',opacity:.42},g);
+ svg('ellipse',{cx:-11,cy:-12,rx:10,ry:15,fill:'#ffffff',opacity:.07,transform:'rotate(-30)'},g);
+ if(kind==='Saturn'){
+  const front=svg('g',{transform:'rotate(-23)'},g);
+  svg('path',{d:'M-55 0A55 17 0 0 0 55 0',fill:'none',stroke:'#d8c9a5','stroke-width':8},front);
+  svg('path',{d:'M-55 0A55 17 0 0 0 55 0',fill:'none',stroke:'#655b4e','stroke-width':1.1},front);
+ }
+ return g;
 }
 
 function setPlanetFocus(name){
@@ -915,8 +1041,8 @@ function bindOrbitalSelection(g,name,openPlanet=false){
  g.onkeydown=e=>{if(e.target===g&&(e.key==='Enter'||e.key===' ')){e.preventDefault();chooseSystemWorld(name)}}}
 
 function drawBelt(chart,s,seed,radius,cx,cy,expanded){
- const hole=s.centralBodyType==='black-hole',slot=s.beltSlot;
- const rx=radius(slot),ry=rx*.66,g=svg('g',{class:'asteroid-belt','aria-hidden':'true','pointer-events':'none',transform:`translate(${cx} ${cy}) rotate(-12)`},chart);
+ const hole=s.centralBodyType==='black-hole',total=solarLayout(s).total,slot=s.beltSlot??(hole?2.55:Math.min(total-.55,2.5+seed%Math.max(1,total-3)));
+ const rx=radius(slot),ry=rx*(s.projection?.flatten??.66),g=svg('g',{class:'asteroid-belt','aria-hidden':'true','pointer-events':'none',transform:`translate(${cx} ${cy}) rotate(${s.projection?.tilt??-12})`},chart);
  svg('ellipse',{rx,ry,fill:'none',stroke:hole?'#9e8aa7':'#8e9596','stroke-width':expanded?9:5,opacity:.045},g);
  let random=seed+17;const rand=()=>{random=(random*16807)%2147483647;return(random-1)/2147483646};
  for(let i=0;i<(expanded?144:74);i++){const a=rand()*Math.PI*2,spread=(rand()-.5)*(expanded?12:6),r=(expanded?.55:.35)+rand()*(expanded?1.05:.6);svg('circle',{cx:(rx+spread)*Math.cos(a),cy:(ry+spread*.65)*Math.sin(a),r,fill:hole?'#b7a5be':'#b1b1a4',opacity:.12+rand()*.28},g)}
@@ -931,8 +1057,8 @@ function mountSystem(s){if(planetFocus&&systemFocused){mountPlanet(s);return}con
  const baseRadius=slot=>(s.centralBodyType==='black-hole'?(expanded?94:49):(triple?(expanded?99:68):(expanded?65:32)))+(slot-1)*((s.centralBodyType==='black-hole'?(expanded?216:89):(triple?(expanded?211:70):(expanded?245:106)))/Math.max(1,total-1));
  const projection=s.projection;
  const radius=projection?slot=>baseRadius(1)+(baseRadius(total)-baseRadius(1))*projection.span*Math.pow((slot-1)/Math.max(1,total-1),projection.curve):baseRadius;
- if(showBelts&&s.beltSlot)drawBelt(chart,s,seed,radius,cx,cy,expanded);
- const movers=[];orbits.forEach(b=>{const rx=radius(b.layoutSlot),ry=rx*((projection?.flatten??.64)+Math.sin(seed+b.layoutSlot*.7)*.04),tilt=(projection?.tilt??-12)+Math.sin(seed*.1+b.layoutSlot*.3)*5,rad=tilt*Math.PI/180;
+ if(showBelts&&(__ATLAS__.flags.derivedBelts?(s.beltSlot===undefined?total>2:s.beltSlot>0):s.beltSlot))drawBelt(chart,s,seed,radius,cx,cy,expanded);
+ const movers=[];orbits.forEach(b=>{const rx=radius(b.layoutSlot),ry=rx*((projection?.flatten??.64)+Math.sin(seed+b.layoutSlot*.7)*.04),tilt=(projection?.tilt??-12)+(DATA.worlds[b.name]?.orbitTiltOffset??0)+Math.sin(seed*.1+b.layoutSlot*.3)*5,rad=tilt*Math.PI/180;
   svg('ellipse',{cx,cy,rx,ry,transform:`rotate(${tilt} ${cx} ${cy})`,'data-orbit-slot':b.layoutSlot,class:'orbit-track'+(b.synthetic?' filler':'')+((b.name&&selectedWorld===b.name)||moons.some(m=>m.name===selectedWorld&&m.parent===b.name)?' active':'')},chart);
   textSVG(String(b.layoutSlot),{x:cx+rx*Math.cos(rad)+3,y:cy+rx*Math.sin(rad)+3,class:'orbit-number'+(b.confirmed?' known':'')},chart);
   movers.push({...b,rx,ry,rad,phase:seed*.013+b.layoutSlot*2.4,duration:20+b.layoutSlot*11});
@@ -965,7 +1091,7 @@ function mountSystem(s){if(planetFocus&&systemFocused){mountPlanet(s);return}con
    svg('path',{d:'M0-1A1 1 0 0 1 0 1Q1 0 0-1',transform:'scale('+r+')',fill:'#152637',opacity:.56},g);
    if(b.kind==='ringed')svg('ellipse',{rx:r*1.75,ry:r*.39,fill:'none',stroke:b.tint,'stroke-width':scale*.85,opacity:.8,transform:'rotate(-24)'},g);
    b.element=g;return}
-  const g=objectTarget(b.name,{opacity:b.renderOpacity??1,class:'orbit-body'+(selectedWorld===b.name?' selected':''),tabindex:0,role:'button','data-orbit-name':b.name,'data-layout-slot':b.layoutSlot||(entity?'entity':station?'station':'moon'),'aria-label':`Inspect ${b.name}${entity?', Silent macroform in a slow stellar orbit':station?', '+b.category+' station':moon?', moon of '+b.parent:b.slot?', orbital position '+b.slot:', schematic orbit '+b.layoutSlot}`},chart);
+  const g=objectTarget(b.name,{...(__ATLAS__.flags.systemBodyRenderOpacity?{opacity:b.renderOpacity??1}:{}),class:'orbit-body'+(selectedWorld===b.name?' selected':''),tabindex:0,role:'button','data-orbit-name':b.name,'data-layout-slot':b.layoutSlot||(entity?'entity':station?'station':'moon'),'aria-label':`Inspect ${b.name}${entity?', Silent macroform in a slow stellar orbit':station?', '+b.category+' station':moon?', moon of '+b.parent:b.slot?', orbital position '+b.slot:', schematic orbit '+b.layoutSlot}`},chart);
   svg('title',{},g).textContent=b.name+(station?' · '+b.category:'');svg('circle',{r:(station?9:moon?11:15)*scale,fill:'transparent'},g);svg('circle',{r:(moon?8:station?11:11)*scale,fill:'none',stroke:b.tint,'stroke-width':1,class:'body-focus'},g);
   if(entity)nefandumGlyph(g,expanded?1.2:.65);else if(station)stationGlyph(g,b.tint,b.category,expanded?1:.7,b.ruined);else{const bodySize=moon?3.5:(b.size||6.5);svg('circle',{r:bodySize*scale,fill:b.tint},g);if(b.appearance==='ringed')svg('ellipse',{rx:bodySize*1.8*scale,ry:bodySize*.5*scale,transform:'rotate(-24)',fill:'none',stroke:b.tint,'stroke-width':1,opacity:.7},g);if(b.appearance==='scarred')svg('path',{d:'M-2-3L1-1-1 2 2 4',transform:`scale(${scale*.6})`,stroke:'#452e39','stroke-width':1,fill:'none'},g);svg('path',{d:'M0-7 A7 7 0 0 1 0 7 A4 7 0 0 0 0-7',transform:`scale(${bodySize/7*scale})`,fill:'#0b1420',opacity:'.5'},g)}
   textSVG(entity?'':station?b.code:moon?(expanded?'':'M'):String(b.layoutSlot)+(b.confirmed?'':'*'),{x:(moon?8:10)*scale,y:(moon?-7:-9)*scale,class:'body-number'},g);
@@ -1001,10 +1127,10 @@ function mountSystem(s){if(planetFocus&&systemFocused){mountPlanet(s);return}con
  if($('orbitToggle'))$('orbitToggle').onclick=()=>toggleAtlasMotion('orbitToggle');
 }
 
-function setSystemFocus(active){const s=allRecords.find(x=>x.id===selected);beginNavigation();stationOverview=false;
- if(active&&hasOrbitChart(s)&&!systemFocused){if(s.region&&view!==s.region&&!overviewMode)setView(s.region,true);regionalCamera={view,overviewMode,camera:{...vb},baseWidth}}
+function setSystemFocus(active){const flags=__ATLAS__.flags,OV=flags.overviewStateKey,s=allRecords.find(x=>x.id===selected);beginNavigation();stationOverview=false;
+ if(active&&hasOrbitChart(s)&&!systemFocused){if(!flags.regionHighlight&&s.region&&view!==s.region&&!overviewMode)setView(s.region,true);regionalCamera=flags.regionHighlight?{view,highlightedRegion,camera:{...vb},baseWidth}:{view,[OV]:overviewMode,camera:{...vb},baseWidth}}
  if(!active&&planetFocus&&localChartParent(s,selectedWorld))selectedWorld=planetFocus;planetFocus=null;systemFocused=!!active&&hasOrbitChart(s);
- if(!systemFocused&&regionalCamera){const saved=regionalCamera;setView(saved.view,true,false,saved.overviewMode);vb={...saved.camera};baseWidth=saved.baseWidth;applyView();regionalCamera=null}
+ if(!systemFocused&&regionalCamera){const saved=regionalCamera;if(flags.regionHighlight)setView(saved.view,true);else setView(saved.view,true,false,saved[OV]);vb={...saved.camera};baseWidth=saved.baseWidth;if(flags.regionHighlight){highlightedRegion=saved.highlightedRegion??(saved.view==='all'?null:saved.view);updateRegionDisplay()}applyView();regionalCamera=null}
  renderDetail();setDetailOpen(false);(systemFocused?$('backToRegion'):$('focusSystem'))?.focus({preventScroll:true});endNavigation();}
 
 
@@ -1013,6 +1139,7 @@ function syncSystemFocus(s){if(!hasOrbitChart(s))systemFocused=false;const panel
 function applySystemZoom(){const chart=$('orbitDiagram');if(!chart||!systemFocused)return;const w=760/systemZoom,h=580/systemZoom;chart.setAttribute('viewBox',`${380-w/2} ${290-h/2} ${w} ${h}`)}
 
 function bindSystemControls(){
+ for(const el of document.querySelectorAll('[data-foundry-open]'))el.onclick=()=>openStation('Foundry');
  if(stationOverview){
   $('leaveStation').onclick=closeStation;
   for(const el of document.querySelectorAll('[data-unit]'))el.onclick=()=>{if(el.dataset.unit!==selectedWorld)openStation(el.dataset.unit)};
@@ -1021,7 +1148,7 @@ function bindSystemControls(){
    el.onclick=()=>highlightPart(Number(el.dataset.part));
    if(el.tagName.toLowerCase()==='g')el.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();el.onclick()}};
   }
-  highlightPart(0);
+  highlightPart(__ATLAS__.flags.keepStationPart?stationPart:0);
   if(widgetMode)return;
  }
  if(!widgetMode)for(const el of document.querySelectorAll('.tora-register-link'))bindToraName(el,el.textContent);
@@ -1047,7 +1174,7 @@ function bindSystemControls(){
  $('focusFullscreen')?.addEventListener('click',()=>$('fullscreen').click());
 }
 
-function chooseSystemWorld(name){if(widgetMode)return;name=resolveObjectName(resolveSystem(selected),name);if(!name)return;beginNavigation();stationOverview=false;const scroll=$('detail').scrollTop;if(planetFocus&&!new Set([planetFocus,...localBodies(resolveSystem(selected),planetFocus).moons.map(b=>b.name),...localBodies(resolveSystem(selected),planetFocus).stations.map(b=>b.name)]).has(name))planetFocus=null;selectedWorld=name;const localHost=localChartParent(resolveSystem(selected),name);if(localHost&&!planetFocus){setPlanetFocus(localHost);selectedWorld=name;}renderDetail();$('detail').scrollTop=scroll;if(innerWidth<=700||embedMode)setDetailOpen(true);const target=(innerWidth<=700||embedMode)?$('detail').querySelector('.detail-close'):Array.from(document.querySelectorAll('[data-world]')).find(b=>b.dataset.world===name);target?.focus({preventScroll:true});endNavigation();}
+function chooseSystemWorld(name){if(widgetMode)return;if(name==='Foundry'){openStation(name);return;}name=resolveObjectName(resolveSystem(selected),name);if(!name)return;beginNavigation();stationOverview=false;const scroll=$('detail').scrollTop;if(planetFocus&&!new Set([planetFocus,...localBodies(resolveSystem(selected),planetFocus).moons.map(b=>b.name),...localBodies(resolveSystem(selected),planetFocus).stations.map(b=>b.name)]).has(name))planetFocus=null;selectedWorld=name;const localHost=localChartParent(resolveSystem(selected),name);if(localHost&&!planetFocus){setPlanetFocus(localHost);selectedWorld=name;}renderDetail();$('detail').scrollTop=scroll;if(innerWidth<=700||embedMode)setDetailOpen(true);const target=(innerWidth<=700||embedMode)?$('detail').querySelector('.detail-close'):Array.from(document.querySelectorAll('[data-world]')).find(b=>b.dataset.world===name);target?.focus({preventScroll:true});endNavigation();}
 
 function toggleAtlasMotion(focusId){const scroll=$('detail').scrollTop;orbitPaused=!orbitPaused;renderDetail();$('detail').scrollTop=scroll;$(focusId)?.focus({preventScroll:true})}
 
@@ -1094,7 +1221,10 @@ function legacyInfobox(wikitext){
 
 function leadInfobox(wikitext){
  const lead=wikitext.split(/^\s*={1,6}[^=]/m)[0].replace(/<!--[\s\S]*?-->/g,''),matches=[...lead.matchAll(/{{\s*(?:Template:)?InfoboxNeue[^|{}]*(?=[|}])/gi)];
- if(!matches.length){const marker=lead.search(/<blockquote[^>]*>\s*\[!infobox/i);return marker<0?null:legacyInfobox(wikitext.replace(/<!--[\s\S]*?-->/g,'').slice(marker))}if(matches.length!==1)throw Error('Ambiguous infobox');
+ if(!matches.length){
+  const marker=lead.search(/<blockquote[^>]*>\s*\[!infobox/i);
+  return marker<0?null:legacyInfobox(wikitext.replace(/<!--[\s\S]*?-->/g,'').slice(marker));
+ }if(matches.length!==1)throw Error('Ambiguous infobox');
  const start=matches[0].index;let i=start,depth=0;
  while(i<lead.length){if(lead.startsWith('{{',i)){depth++;i+=2}else if(lead.startsWith('}}',i)){depth--;i+=2;if(!depth)break}else i++}
  if(depth)throw Error('Unclosed infobox');
@@ -1153,12 +1283,16 @@ function factGrid(facts){
 }
 
 function bodyFacts(s,w,entry){
- if(Array.isArray(entry?.facts)){
+ if(Array.isArray(entry?.facts)&&(entry.facts.length||!__ATLAS__.flags.emptyDossierFactsFallBack)){
  const facts=entry.facts.map(([label,value])=>[label,label==='Natural satellites'&&w?.satelliteExpansion?String(w.naturalSatellites):value]);
  if(w?.satelliteExpansion&&!facts.some(([label])=>label==='Natural satellites'))facts.push(['Natural satellites',String(w.naturalSatellites)]);
  return factGrid(facts);
  }
  const facts=[];
+ if(__ATLAS__.flags.architectureFacts){
+  if(!w)facts.push(['Stellar architecture',s.architecture],['Star components',String(s.stars.length)],['Primary planets',String(s.worlds.length)],['Permanent stations',String(s.stationCount)],['TORA arrays',String(s.toraCount)],['Other stations',String(s.otherStationCount)]);
+  if(w?.orbitalPosition)facts.push(['Designation',w.catalogueDesignation],['Orbital host',w.orbitHost==='AB'?'Inner pair AB':'[['+s.primaries[0]+']]'],['Moon inventory',String(w.naturalSatellites)+' charted']);
+ }
  if(w?.population)facts.push(['Population',String(w.population)]);
  if(w?.capital)facts.push(['Capital','[['+w.capital+']]']);
  const count=Number.isInteger(w?.naturalSatellites)?`<div class="satellite-count">${w.naturalSatellites} natural satellite${w.naturalSatellites===1?'':'s'}</div>`:'';
@@ -1176,7 +1310,9 @@ async function imageAPI(params){
  try{const response=await fetch(address.href,{mode:'cors',credentials:'omit',cache:'no-store',signal:controller.signal});if(!response.ok)throw Error('Codex unavailable');const result=await response.json();if(result.error||!Array.isArray(result.query?.pages)||result.query.pages.length!==1)throw Error('Invalid Codex response');return result.query.pages[0]}finally{clearTimeout(timeout)}
 }
 
-function currentImageTitle(record,name){const key=planetKey(name);return key&&planetArticles[key]?.title||record?.articleTitle||canonicalTitle(name)}
+function currentImageTitle(record,name){const title=planetArticle(name)||record?.articleTitle||canonicalTitle(name);return __ATLAS__.flags.straightenImageTitleQuotes?title.replaceAll('’',"'").replaceAll('‘',"'"):title}
+
+function planetArticle(name){const key=planetKey(name);return key&&planetArticles[key]?.title||null}
 
 async function loadLiveImage(title,force=false){
  if(liveImageRequests.has(title))return liveImageRequests.get(title);
@@ -1184,7 +1320,7 @@ async function loadLiveImage(title,force=false){
  const request=(async()=>{
   let facts=saved?.facts;
   try{
-   const key=planetKey(title),identity=key&&planetArticles[key];
+   const key=__ATLAS__.flags.planetArticleTracking?planetKey(title):null,identity=key&&planetArticles[key];
    const page=await imageAPI({...identity?.pageid?{pageids:String(identity.pageid)}:{titles:title},prop:'revisions',rvprop:'ids|content',rvslots:'main'});
    if(key&&rememberPlanetArticle(key,page)){savePlanetArticles();applyPlanetTitles()}
    let asset={articleTitle:title,image:null,imageSource:{articleTitle:title,articleUrl:url(page.title||title)}};
@@ -1256,7 +1392,7 @@ function renderDetail(){stopImageRefresh();
  }
  const focusScroll=$('systemFocus').scrollTop;stopOrbit();document.body.classList.toggle('orbit-paused',orbitPaused);
  const s=allRecords.find(x=>x.id===selected);selectedWorld=resolveObjectName(s,selectedWorld);syncSystemFocus(s);$('mobileInspect').textContent=s?(selectedWorld||s.name)+' dossier ↗':'Region dossier ↗';
- if(!s){const r=DATA.regions[view];$('detail').innerHTML=`<div class="detail-top"><span class="eyebrow">Regional dossier</span><button class="detail-close" aria-label="Close dossier">×</button></div><div class="empty-detail"><div class="eyebrow">${view==='all'?'One Sky, Many Peoples':'Chart summary'}</div><h2>${link(r?r.name:"Atlas Framework Demonstration")}</h2><p>${r?esc(r.description):'The Collective comprises 57 inhabited planets across 463 controlled star systems. This atlas brings together all five named regions and the systems identified in their published charts and articles; additional catalogue-designated planets and local satellites make the charted systems explorable.'}</p><div class="region-stat"><b>${view==='all'?DATA.systems.length:DATA.systems.filter(s=>s.region===view).length}</b><span>charted system markers</span></div>${link(r?r.name:'Territory of the Elysian Collective','Open Codex register ↗','region-link')}${r?.file?link('File:'+r.file,'Original regional map ↗','region-link'):''}<h3>The Lighthouse Nebula</h3><p>The ${link('Lighthouse Nebula')} stretches across Collective space. Explore the ${link('Lighthouse')} and its ${link('Lighthouse Core Array')} in Aradian Flow.</p><button class="focus-world" id="exploreLighthouse">Explore the Lighthouse →</button><p class="tiny">Select a star to inspect its worlds. Double-click a marker to enter its system. Names open the corresponding Codex articles.</p><div class="note">Regional spacing and outlines are schematic. Arvis Gulf and Spinward Expanse have no published regional map; their markers do not establish measured coordinates. No trade routes are inferred.</div></div>`;bindDetail();$('exploreLighthouse').onclick=()=>{select('lighthouse');setSystemFocus(true)};return}
+ if(!s){const r=DATA.regions[view];$('detail').innerHTML=`<div class="detail-top"><span class="eyebrow">Regional dossier</span><button class="detail-close" aria-label="Close dossier">×</button></div><div class="empty-detail"><div class="eyebrow">${view==='all'?'One Sky, Many Peoples':'Chart summary'}</div><h2>${link(r?r.name:'Atlas Framework Demonstration')}</h2><p>${r?esc(r.description):'The Collective comprises 57 inhabited planets across 463 controlled star systems. This atlas brings together all five named regions and the systems identified in their published charts and articles; additional catalogue-designated planets and local satellites make the charted systems explorable.'}</p><div class="region-stat"><b>${view==='all'?DATA.systems.length:DATA.systems.filter(s=>s.region===view).length}</b><span>charted system markers</span></div>${link(r?r.name:'Territory of the Elysian Collective','Open Codex register ↗','region-link')}${r?.file?link('File:'+r.file,'Original regional map ↗','region-link'):''}<h3>The Lighthouse Nebula</h3><p>The ${link('Lighthouse Nebula')} stretches across Collective space. Explore the ${link('Lighthouse')} and its ${link('Lighthouse Core Array')} in Aradian Flow.</p><button class="focus-world" id="exploreLighthouse">Explore the Lighthouse →</button><p class="tiny">Select a star to inspect its worlds. Double-click a marker to enter its system. Names open the corresponding Codex articles.</p><div class="note">Regional spacing and outlines are schematic. Arvis Gulf and Spinward Expanse have no published regional map; their markers do not establish measured coordinates. No trade routes are inferred.</div></div>`;bindDetail();$('exploreLighthouse').onclick=()=>{select('lighthouse');setSystemFocus(true)};return}
 
  const w=worldRecord(s,selectedWorld),display=w?selectedWorld:hasOrbitChart(s)?systemArticleTitle(s):s.name;
  const status=w?w.tag:s.centralBodyType==='silent-darkened'?'Dead system · Silent-darkened star':s.centralBodyType==='black-hole'?'Black hole system':EXOTIC_TYPES[s.centralBodyType]?EXOTIC_TYPES[s.centralBodyType]+' system':s.kind==='classified'?'Classified location':s.kind==='hazard'?'Hazard register':s.kind==='uncertain'?'Unresolved chart marker':s.kind==='context'?'Neighboring system':s.kind==='neutral'?'Independent / CONCORD':s.region?'Collective region system':'Unplotted holding';
@@ -1267,16 +1403,16 @@ function renderDetail(){stopImageRefresh();
 function bindDetail(){
  const classified=$('classifiedSystem');
  if(classified)classified.onclick=()=>select(classified.dataset.system);
- $('refreshArticleData')?.addEventListener('click',()=>{refreshVisibleImage(true);syncPlanetTitles(true)});$('detail').querySelector('.detail-close').onclick=()=>setDetailOpen(false);document.querySelectorAll('[data-notable]').forEach(b=>b.onclick=()=>chooseSystemWorld(b.dataset.notable))}
+ $('refreshArticleData')?.addEventListener('click',()=>{refreshVisibleImage(true);syncPlanetArticleTitles(true)});$('detail').querySelector('.detail-close').onclick=()=>setDetailOpen(false);document.querySelectorAll('[data-notable]').forEach(b=>b.onclick=()=>chooseSystemWorld(b.dataset.notable))}
 
-function drawMinimap(){let h='<svg viewBox="'+DATA.atlasExtent.join(' ')+'" aria-hidden="true">';Object.values(DATA.regions).forEach(r=>{const[x,y,w,ht]=r.bounds;h+=r.outline?`<polygon points="${r.outline.map(p=>p.join(',')).join(' ')}" fill="${r.color}" opacity=".16"/>`:`<rect x="${x}" y="${y}" width="${w}" height="${ht}" rx="170" fill="${r.color}" opacity=".13"/>`});DATA.systems.forEach(s=>h+=`<circle cx="${s.x}" cy="${s.y}" r="${s.major?29:17}" fill="${color(s)}" opacity=".7"/>`);h+=`<rect x="${vb.x}" y="${vb.y}" width="${vb.w}" height="${vb.h}" fill="none" stroke="#e0c485" stroke-width="26"/></svg>`;$('minimap').innerHTML=h}
+function drawMinimap(){const f=__ATLAS__.flags;let h='<svg viewBox="'+(f.minimapViewBox||DATA.atlasExtent.join(' '))+'" aria-hidden="true">';Object.values(DATA.regions).forEach(r=>{if(f.minimapRegionPaths){h+=`<path d="${regionPath(r)}" fill="${r.color}" opacity=".23"/>`;return}const[x,y,w,ht]=r.bounds;h+=r.outline?`<polygon points="${r.outline.map(p=>p.join(',')).join(' ')}" fill="${r.color}" opacity=".16"/>`:`<rect x="${x}" y="${y}" width="${w}" height="${ht}" rx="170" fill="${r.color}" opacity=".13"/>`});DATA.systems.forEach(s=>h+=`<circle cx="${s.x}" cy="${s.y}" r="${s.major?29:17}" fill="${color(s)}" opacity=".7"/>`);h+=`<rect x="${vb.x}" y="${vb.y}" width="${vb.w}" height="${vb.h}" fill="none" stroke="#e0c485" stroke-width="26"/></svg>`;$('minimap').innerHTML=h}
 
 function buildNotes(){$('notesContent').innerHTML="\u003cp>A noncanonical demonstration of the JavaScript atlas DSL.\u003c/p>"}
 
 
-function toast(message){$('toast').textContent=message;$('toast').classList.remove('hidden');setTimeout(()=>$('toast').classList.add('hidden'),3500)}
+function toast(message){$('toast').textContent=message;$('toast').classList.remove('hidden');clearTimeout(toast.timer);toast.timer=setTimeout(()=>$('toast').classList.add('hidden'),3500)}
 
-function downloadHTML(){const clone=document.documentElement.cloneNode(true);clone.querySelectorAll('dialog').forEach(n=>n.removeAttribute('open'));clone.querySelectorAll('.open').forEach(n=>n.classList.remove('open'));clone.querySelector('#search').setAttribute('value','');const code=clone.querySelector('script');code.textContent=code.textContent.replace(/const DATA = [\s\S]*?;\nconst \$/,()=> 'const DATA = '+JSON.stringify(DATA).replaceAll('<','\\u003c')+';\nconst $');const b=new Blob(['<!doctype html>\n'+clone.outerHTML],{type:'text/html'});const u=URL.createObjectURL(b),a=document.createElement('a');a.href=u;a.download='Elysian-Stellar-Atlas.html';a.click();setTimeout(()=>URL.revokeObjectURL(u),3000)}
+async function downloadHTML(){try{const response=await fetch(location.pathname);if(!response.ok)throw Error();const blob=await response.blob(),address=URL.createObjectURL(blob),a=document.createElement('a');a.href=address;a.download='UACS-Stellar-Atlas.html';a.click();setTimeout(()=>URL.revokeObjectURL(address),3000)}catch{const clone=document.documentElement.cloneNode(true);clone.querySelector('#scene').innerHTML='';clone.querySelector('#systemFocus').innerHTML='';clone.querySelectorAll('dialog').forEach(n=>n.removeAttribute('open'));const address=URL.createObjectURL(new Blob(['<!doctype html>\n'+clone.outerHTML],{type:'text/html'})),a=document.createElement('a');a.href=address;a.download='UACS-Stellar-Atlas.html';a.click();setTimeout(()=>URL.revokeObjectURL(address),3000)}}
 
 $('regionPicker').onchange=()=>setView($('regionPicker').value);
 $('regionPicker').addEventListener('keydown',e=>e.stopPropagation());document.querySelectorAll('[data-scope]').forEach(b=>b.onclick=()=>{scope=b.dataset.scope;document.querySelectorAll('[data-scope]').forEach(n=>n.classList.toggle('active',n===b));renderIndex()});$('search').oninput=()=>{clearTimeout(searchTimer);searchTimer=setTimeout(renderIndex,90)};
@@ -1295,14 +1431,14 @@ $('fullscreen').onclick=async()=>{try{if(document.fullscreenElement)await docume
 const map=$('map');map.addEventListener('dragstart',event=>event.preventDefault());map.addEventListener('wheel',e=>{e.preventDefault();zoom(Math.exp(Math.max(-100,Math.min(100,e.deltaY))*.002),e.clientX,e.clientY)},{passive:false});
 map.addEventListener('pointerdown',e=>{if(e.target.closest('a'))return;e.preventDefault();moved=false;pointers.set(e.pointerId,{x:e.clientX,y:e.clientY});(e.target.closest('[data-region-outline]')||map).setPointerCapture(e.pointerId);drag={x:e.clientX,y:e.clientY,v:{...vb},id:e.pointerId};if(pointers.size===2){const p=[...pointers.values()];pinch={d:Math.hypot(p[0].x-p[1].x,p[0].y-p[1].y)}}});
 map.addEventListener('pointermove',e=>{if(!pointers.has(e.pointerId))return;pointers.set(e.pointerId,{x:e.clientX,y:e.clientY});if(pointers.size===2&&pinch){const p=[...pointers.values()],d=Math.hypot(p[0].x-p[1].x,p[0].y-p[1].y);zoom(pinch.d/d,(p[0].x+p[1].x)/2,(p[0].y+p[1].y)/2);pinch.d=d;moved=true;return}if(!drag||drag.id!==e.pointerId)return;const dx=e.clientX-drag.x,dy=e.clientY-drag.y;if(!moved&&Math.abs(dx)+Math.abs(dy)<=4)return;moved=true;const b=map.getBoundingClientRect();vb.x=drag.v.x-dx*vb.w/b.width;vb.y=drag.v.y-dy*vb.h/b.height;applyView()});
-function endPointer(e){pointers.delete(e.pointerId);drag=null;pinch=null;if(e.type==='pointercancel')moved=true}
+function endPointer(e){const region=drag?.region;if(e.type!=='pointercancel'&&!moved&&pointers.size===1&&region)highlightRegion(region);pointers.delete(e.pointerId);drag=null;pinch=null;}
 map.addEventListener('pointerup',endPointer);map.addEventListener('pointercancel',endPointer);
 map.addEventListener('keydown',e=>{if(e.target!==map)return;const f=.12;if(['+','=','-','0','ArrowUp','ArrowDown','ArrowLeft','ArrowRight'].includes(e.key))e.preventDefault();switch(e.key){case '+':case '=':zoom(.8);break;case '-':zoom(1.25);break;case '0':setView(view,true,false,overviewMode);break;case 'ArrowUp':vb.y-=vb.h*f;applyView();break;case 'ArrowDown':vb.y+=vb.h*f;applyView();break;case 'ArrowLeft':vb.x-=vb.w*f;applyView();break;case 'ArrowRight':vb.x+=vb.w*f;applyView();break}});
 document.addEventListener('keydown',e=>{if(!widgetMode&&e.key==='Escape'&&!$('notes').open){const returning=stationOverview||planetFocus||systemFocused;if(stationOverview){closeStation()}else if(planetFocus){setPlanetFocus(null)}else if(systemFocused){setSystemFocus(false)}$('filters').classList.add('hidden');$('filterBtn').setAttribute('aria-expanded','false');if(!returning)setIndexOpen(false);setDetailOpen(false)}});
-let resizeTimer;function resizeChart(){clearTimeout(resizeTimer);resizeTimer=setTimeout(()=>{const b=$('mapArea').getBoundingClientRect();if(!b.width||!b.height)return;const h=vb.w*b.height/b.width;vb.y-=(h-vb.h)/2;vb.h=h;applyView()},100)}
+let resizeTimer;function resizeChart(){clearTimeout(resizeTimer);resizeTimer=setTimeout(()=>{if(widgetRegion){fitBounds(DATA.regions[widgetRegion]?.bounds||DATA.atlasExtent);return}const b=$('mapArea').getBoundingClientRect();if(!b.width||!b.height)return;const h=vb.w*b.height/b.width;vb.y-=(h-vb.h)/2;vb.h=h;applyView()},100)}
 
 addEventListener('resize',resizeChart);
-$('systemFocus').innerHTML='';$('systemFocus').classList.add('hidden');$('mapArea').classList.remove('system-focused');$('flag').src=DATA.assets.flag;$('flagLink').href=$('federationLink').href=url("Atlas Framework Demonstration");$('filters').classList.add('hidden');$('toast').classList.add('hidden');$('filterBtn').setAttribute('aria-expanded','false');document.querySelectorAll('[data-scope]').forEach(b=>b.classList.toggle('active',b.dataset.scope==='region'));document.body.classList.toggle('embed',embedMode);document.body.classList.toggle('widget',widgetMode);setIndexOpen(false);buildNotes();draw();restoreRoute();routeReady=true;persistRoute();applyPlanetTitles();syncPlanetTitles();
+$('systemFocus').innerHTML='';$('systemFocus').classList.add('hidden');$('mapArea').classList.remove('system-focused');$('flag').src=DATA.assets.flag;$('flagLink').href=$('federationLink').href=url('Atlas Framework Demonstration');$('filters').classList.add('hidden');$('toast').classList.add('hidden');$('filterBtn').setAttribute('aria-expanded','false');document.querySelectorAll('[data-scope]').forEach(b=>b.classList.toggle('active',b.dataset.scope==='region'));document.body.classList.toggle('embed',embedMode);document.body.classList.toggle('widget',widgetMode);setIndexOpen(false);buildNotes();draw();restoreRoute();routeReady=true;persistRoute();applyPlanetTitles();syncPlanetTitles();
 addEventListener('focus',()=>syncPlanetTitles(true));addEventListener('online',()=>syncPlanetTitles(true));document.addEventListener('visibilitychange',()=>{if(document.hidden)clearTimeout(planetTitleTimer);else syncPlanetTitles(true)});
 
 // Shared host API: immutable exported catalogue and source-compatible navigation.

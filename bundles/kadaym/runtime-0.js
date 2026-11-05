@@ -122,6 +122,7 @@ function hasStationSchematic(){return false} // Kadaym has no station schematics
 /* @atlas-function notableSitesMarkup */
 /* @atlas-function systemView-042c2ccd42ba */
 /* @atlas-function planetView */
+/* @atlas-function greatBlinkFrame */
 /* @atlas-function mountPlanet */
 /* @atlas-function solarPlanetGlyph */
 /* @atlas-function setPlanetFocus */

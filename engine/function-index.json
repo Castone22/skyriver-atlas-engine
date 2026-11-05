@@ -628,7 +628,11 @@
   "greatBlinkFrame": {
     "name": "greatBlinkFrame",
     "profiles": [
-      "elysian"
+      "calidor",
+      "elysian",
+      "iulr",
+      "kadaym",
+      "uacs"
     ],
     "bytes": 620
   },
@@ -1187,7 +1191,7 @@
       "kadaym",
       "uacs"
     ],
-    "bytes": 3669
+    "bytes": 3700
   },
   "planetWikiQuery": {
     "name": "planetWikiQuery",
