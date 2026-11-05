@@ -30931,6 +30931,17 @@
       "categories": [
         "TORA"
       ]
+    },
+    "draw": {
+      "backdrop": {
+        "x": -1000,
+        "y": -900,
+        "w": 6500,
+        "h": 4800
+      },
+      "featuredSystem": "Sol",
+      "worldListField": "mapWorlds",
+      "worldListGatesLabel": false
     }
   }
 }

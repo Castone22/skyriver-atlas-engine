@@ -26,6 +26,8 @@
     "affiliationLink": "{{brand}}"
   },
   "flags": {
+    "regionLabelStyle": "title-subtitle-ink",
+    "starTooltips": true,
     "svgTextSyncedTitles": true,
     "visibilityResetsLabels": true
   }

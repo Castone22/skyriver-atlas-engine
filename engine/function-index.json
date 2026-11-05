@@ -461,26 +461,14 @@
     ],
     "bytes": 786
   },
-  "draw-117dd77b0105": {
+  "draw": {
     "name": "draw",
     "profiles": [
-      "elysian"
-    ],
-    "bytes": 5175
-  },
-  "draw-3dd6f33ea9c1": {
-    "name": "draw",
-    "profiles": [
-      "calidor"
-    ],
-    "bytes": 5479
-  },
-  "draw-a6a4240adad2": {
-    "name": "draw",
-    "profiles": [
+      "calidor",
+      "elysian",
       "uacs"
     ],
-    "bytes": 5588
+    "bytes": 6487
   },
   "draw-ab708dae8498": {
     "name": "draw",

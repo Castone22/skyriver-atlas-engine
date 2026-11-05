@@ -29,6 +29,8 @@
     "affiliationLink": "{{brand}}"
   },
   "flags": {
+    "companionStars": true,
+    "regionLabelStyle": "ink-title",
     "solarMoonsVisibleOnly": true,
     "visibilityResetsLabels": true
   }

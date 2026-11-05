@@ -24956,6 +24956,17 @@
       "mode": "visibility",
       "unset": "unlessUnimportant",
       "categories": []
+    },
+    "draw": {
+      "backdrop": {
+        "x": -1000,
+        "y": -900,
+        "w": 6500,
+        "h": 4800
+      },
+      "featuredSystem": "Forge",
+      "worldListField": "overviewWorlds",
+      "worldListGatesLabel": true
     }
   }
 }

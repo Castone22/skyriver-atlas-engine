@@ -1,12 +1,15 @@
 {
   "bordersToggleClass": { "description": "Hiding map borders toggles the borders-hidden class on the region layer instead of setting its display style.", "default": false },
+  "companionStars": { "description": "A system's companion stars (primaries after the first) are drawn beside its main star.", "default": false },
   "linkTitleSync": { "description": "Link text shows a planet's synced title: off, worlds (only when the name is a catalogued world) or all (whenever the label equals the name).", "default": "off" },
   "minimapRegionPaths": { "description": "The minimap draws each region as a path built from outlines relative to the region bounds, instead of an absolute polygon or rectangle.", "default": false },
   "minimapViewBox": { "description": "Fixed viewBox for the minimap, for atlases with no atlasExtent; null uses the atlas extent.", "default": null },
   "planetLinkAttributes": { "description": "Links to planets carry data-planet-link and data-planet-title attributes so the page can find and retitle them.", "default": false },
+  "regionLabelStyle": { "description": "How each region is labelled on the chart: ink (one label with its own font size), ink-title (ink plus a title), or title-subtitle-ink (linked title, subtitle and ink).", "default": "ink" },
   "solarIllustrativeGuard": { "description": "Only add an illustrative planet when its kind exists in illustrativeTypes, instead of assuming it does.", "default": false },
   "solarLanesFromAllStations": { "description": "System diagram width counts the lanes of every station record, not just the stations drawn on the diagram.", "default": false },
   "solarMoonsVisibleOnly": { "description": "The system diagram lists only moons that are visible at system level or inhabited, taken from the moon records, instead of every moon body.", "default": false },
+  "starTooltips": { "description": "Each star carries a tooltip describing its stellar architecture and planet count.", "default": false },
   "svgTextSyncedTitles": { "description": "SVG text passes through planetName() so a planet's synced article title is shown instead of its catalogue name.", "default": false },
   "visibilityResetsLabels": { "description": "Updating visibility also resets every label's display from the labels checkbox before labels are rescaled.", "default": false }
 }
