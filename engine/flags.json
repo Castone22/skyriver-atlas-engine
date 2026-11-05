@@ -3,6 +3,10 @@
     "description": "The central body of the local planet chart carries an opacity attribute taken from its renderOpacity (default 1).",
     "default": false
   },
+  "derivedBelts": {
+    "description": "A system with no beltSlot shows a belt when it has more than two orbits; with a beltSlot, a belt shows when the slot is greater than 0. Without the flag a belt shows only when beltSlot is set.",
+    "default": false
+  },
   "elsewhereStations": {
     "description": "The local-orbit view lists the system's 'register' stations under an 'Elsewhere in the system' heading (and keeps the blank line the layout reserves for it).",
     "default": false
@@ -25,6 +29,10 @@
   },
   "sizedFocusBodyLabel": {
     "description": "Satellite labels on the local planet chart carry an explicit font-size (smaller in the extended layout).",
+    "default": false
+  },
+  "systemBodyRenderOpacity": {
+    "description": "Bodies in the system chart carry an opacity attribute taken from their renderOpacity (default 1).",
     "default": false
   },
   "titledLocalOrbitLabels": {

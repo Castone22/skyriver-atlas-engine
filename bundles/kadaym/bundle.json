@@ -33,6 +33,7 @@
     "localMoonNoun": "natural satellite"
   },
   "flags": {
+    "derivedBelts": true,
     "elsewhereStations": true
   }
 }

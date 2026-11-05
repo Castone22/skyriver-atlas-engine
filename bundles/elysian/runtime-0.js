@@ -185,7 +185,7 @@ const STATION_SILHOUETTES={
 let planetClickTimer;
 /* @atlas-function bindOrbitalSelection */
 /* @atlas-function drawBelt */
-/* @atlas-function mountSystem-c0022918dba2 */
+/* @atlas-function mountSystem-shared */
 /* @atlas-function setSystemFocus-fa97a454091d */
 
 /* @atlas-function syncSystemFocus-83b192ca5f37 */

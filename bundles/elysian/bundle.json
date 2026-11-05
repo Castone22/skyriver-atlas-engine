@@ -27,5 +27,8 @@
     "overviewAlias": "collective",
     "overviewSubtitle": "Five known regions · boundaries and separation are schematic",
     "overviewTitle": "COLLECTIVE OVERVIEW"
+  },
+  "flags": {
+    "systemBodyRenderOpacity": true
   }
 }
