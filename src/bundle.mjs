@@ -11,6 +11,7 @@ export const BUNDLE_VERSION = 1;
 export const KINDS = ['stellar', 'geographic', 'galaxy'];
 const ID = /^[a-z0-9][a-z0-9_-]*$/;
 const SEMVER = /^(\d+)\.(\d+)\.(\d+)$/;
+const SHA256 = /^[a-f0-9]{64}$/;
 
 /** A relative path made only of safe segments. */
 export function isSafePath(p) {
@@ -86,6 +87,16 @@ export function validateManifest(manifest, files) {
     errors.push(`Unsupported bundleVersion ${manifest.bundleVersion}; expected ${BUNDLE_VERSION}`);
   if (!['atlas', 'engine'].includes(manifest.type)) errors.push(`Unknown type '${manifest.type}'`);
   if (!parse(manifest.version)) errors.push(`version must be x.y.z, found '${manifest.version}'`);
+  if (manifest.files !== undefined) {
+    if (!manifest.files || typeof manifest.files !== 'object' || Array.isArray(manifest.files))
+      errors.push('files must be an object mapping path to sha256');
+    else
+      for (const [p, hash] of Object.entries(manifest.files)) {
+        need(p, 'files');
+        if (p === 'bundle.json') errors.push("files: must not list 'bundle.json'");
+        if (!SHA256.test(hash)) errors.push(`files: '${p}' needs a lowercase sha256 hex digest`);
+      }
+  }
   if (manifest.type === 'engine') {
     if (!Array.isArray(manifest.kinds) || !manifest.kinds.every((k) => KINDS.includes(k)))
       errors.push('engine kinds must be a list of known kinds');
@@ -122,4 +133,30 @@ export async function openBundle(source, { expectType } = {}) {
   if (errors.length) throw new Error(`Invalid bundle:\n- ${errors.join('\n- ')}`);
   bundle.manifest = manifest;
   return bundle;
+}
+
+/** Lowercase sha256 hex of a string's UTF-8 bytes, using Web Crypto (browser and Node). */
+export async function sha256Text(text) {
+  const digest = await globalThis.crypto.subtle.digest('SHA-256', new TextEncoder().encode(text));
+  return [...new Uint8Array(digest)].map((b) => b.toString(16).padStart(2, '0')).join('');
+}
+
+/**
+ * Check every file listed in the manifest's `files` map against its digest.
+ * Returns a list of problems; empty means everything matched (or nothing was listed).
+ */
+export async function verifyFiles(bundle) {
+  const problems = [];
+  for (const [p, expected] of Object.entries(bundle.manifest?.files ?? {})) {
+    let actual;
+    try {
+      actual = await sha256Text(await bundle.text(p));
+    } catch (e) {
+      problems.push(`${p}: ${e.message}`);
+      continue;
+    }
+    if (actual !== expected)
+      problems.push(`${p}: sha256 mismatch (expected ${expected}, got ${actual})`);
+  }
+  return problems;
 }

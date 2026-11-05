@@ -2,8 +2,8 @@ import { readdir, readFile } from 'node:fs/promises';
 import path from 'node:path';
 import { Bundle, openBundle } from './bundle.mjs';
 
-/** Directory transport: lists files recursively and reads them lazily as UTF-8 text. */
-export async function loadDirectory(dir, options) {
+/** Every file under `dir` as a normalized relative path using '/'. */
+export async function listDirectory(dir) {
   const root = path.resolve(dir);
   const files = [];
   async function walk(rel) {
@@ -14,6 +14,13 @@ export async function loadDirectory(dir, options) {
     }
   }
   await walk('');
+  return files;
+}
+
+/** Directory transport: lists files recursively and reads them lazily as UTF-8 text. */
+export async function loadDirectory(dir, options) {
+  const root = path.resolve(dir);
+  const files = await listDirectory(root);
   return openBundle(
     new Bundle({ files, read: (p) => readFile(path.join(root, ...p.split('/')), 'utf8') }),
     options
