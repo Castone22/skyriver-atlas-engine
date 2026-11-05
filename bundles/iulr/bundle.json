@@ -33,6 +33,8 @@
       "architecture",
       "cloakStatusText",
       "description"
-    ]
+    ],
+    "systemRecordArticleTitle": true,
+    "stationLinksUseArticleTitle": true
   }
 }

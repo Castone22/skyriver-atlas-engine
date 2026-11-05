@@ -2015,10 +2015,12 @@
     ],
     "bytes": 1022
   },
-  "starRecords-26accc5af9e1": {
+  "starRecords": {
     "name": "starRecords",
     "profiles": [
-      "calidor"
+      "calidor",
+      "elysian",
+      "kadaym"
     ],
     "bytes": 1442
   },
@@ -2028,14 +2030,6 @@
       "uacs"
     ],
     "bytes": 794
-  },
-  "starRecords-ec33bfb46268": {
-    "name": "starRecords",
-    "profiles": [
-      "elysian",
-      "kadaym"
-    ],
-    "bytes": 1397
   },
   "starRecords-edf881d7ebd2": {
     "name": "starRecords",
@@ -2062,22 +2056,16 @@
     ],
     "bytes": 850
   },
-  "stationRecords-6dbf0bad7f69": {
+  "stationRecords": {
     "name": "stationRecords",
     "profiles": [
       "calidor",
       "elysian",
+      "iulr",
       "kadaym",
       "uacs"
     ],
-    "bytes": 347
-  },
-  "stationRecords-f53b5a9f2345": {
-    "name": "stationRecords",
-    "profiles": [
-      "iulr"
-    ],
-    "bytes": 435
+    "bytes": 491
   },
   "stationScreen-7218cedf4124": {
     "name": "stationScreen",
@@ -2207,22 +2195,16 @@
     ],
     "bytes": 233
   },
-  "systemArticleTitle-d0f52db05ad1": {
-    "name": "systemArticleTitle",
-    "profiles": [
-      "iulr"
-    ],
-    "bytes": 126
-  },
-  "systemArticleTitle-f58f1eb5d931": {
+  "systemArticleTitle": {
     "name": "systemArticleTitle",
     "profiles": [
       "calidor",
       "elysian",
+      "iulr",
       "kadaym",
       "uacs"
     ],
-    "bytes": 108
+    "bytes": 168
   },
   "systemBodies": {
     "name": "systemBodies",

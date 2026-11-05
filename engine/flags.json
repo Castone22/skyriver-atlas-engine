@@ -11,8 +11,16 @@
     "description": "Extra system fields (by property name) whose text is searchable, in addition to the classification terms.",
     "default": []
   },
+  "stationLinksUseArticleTitle": {
+    "description": "A station's first article link is its system's article title instead of the system name.",
+    "default": false
+  },
   "straightenImageTitleQuotes": {
     "description": "Curly apostrophes in the article title used for live images are replaced by straight ones.",
+    "default": false
+  },
+  "systemRecordArticleTitle": {
+    "description": "A charted system's own articleTitle is used as its article title instead of the generated '<name> System'.",
     "default": false
   }
 }

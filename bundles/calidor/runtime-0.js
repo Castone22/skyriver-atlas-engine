@@ -9,7 +9,7 @@ const referenceTargets=new Map([...(DATA.stations||[]),...(DATA.satellites||[])]
 const link=(name,label=name,cls='')=>`<a class="${cls}" href="${url(name)}" target="_blank" rel="noopener">${esc(label)}</a>`;
 /* @atlas-function systemNameTitle */
 /* @atlas-function hasOrbitChart */
-/* @atlas-function systemArticleTitle-f58f1eb5d931 */
+/* @atlas-function systemArticleTitle */
 /* @atlas-function systemLink */
 /* @atlas-function systemArticleRecord */
 const TIER_NAMES={1:'Quarantined',2:'Suppressed',3:'Active Threat',4:'High Contamination',5:'Critical Infestation'};
@@ -93,9 +93,9 @@ let stationOverview=false,stationPart=0;
 let systemFocused=false,systemZoom=1,planetFocus=null,showBelts=true;
 const stationFilters=new Set(Object.keys(STATION_TYPES));
 const siteType=name=>/station|triad|jumpgate/i.test(name)?'Station / structure':/colony/i.test(name)?'Colony':'World';
-/* @atlas-function stationRecords-6dbf0bad7f69 */
+/* @atlas-function stationRecords */
 /* @atlas-function entityRecords */
-/* @atlas-function starRecords-26accc5af9e1 */
+/* @atlas-function starRecords */
 /* @atlas-function focusableWorld */
 /* @atlas-function localChartParent */
 /* @atlas-function localBodies */

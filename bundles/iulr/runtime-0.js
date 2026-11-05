@@ -9,7 +9,7 @@ const referenceTargets=new Map([...(DATA.stations||[]),...(DATA.satellites||[])]
 const link=(name,label=name,cls='')=>`<a class="${cls}" href="${url(name)}" target="_blank" rel="noopener">${esc(DATA.worlds[name]&&label===name?planetName(name):label)}</a>`;
 /* @atlas-function systemNameTitle */
 /* @atlas-function hasOrbitChart */
-/* @atlas-function systemArticleTitle-d0f52db05ad1 */
+/* @atlas-function systemArticleTitle */
 /* @atlas-function systemLink */
 /* @atlas-function systemArticleRecord */
 const TIER_NAMES={1:'Quarantined',2:'Suppressed',3:'Active Threat',4:'High Contamination',5:'Critical Infestation'};
@@ -126,7 +126,7 @@ const reducedMotion=matchMedia('(prefers-reduced-motion: reduce)');
 let orbitPaused=reducedMotion.matches,orbitFrame=0,orbitClock=0,orbitLastTime=null;
 const worldColors={'Mahanzk':'#90bcd2','Zelenzk':'#c4a5d9','Helkana':'#91c4a1','Vardis Prime':'#c9a08b','Rakazk':'#c78e74','Zekozha':'#9bcdda','Qerzhek':'#b7c9e2','Prathia':'#9ec2a7'};
 const STATION_TYPES={
- 'TORA':{color:'#62d9ff',symbol:'◌'},
+ 'TORA':{color:'#62d9ff',symbol:'◌',article:'Terranos Omnidirectional Reflector Array'},
  'Civil Engineering':{color:'#83c9de',symbol:'⊞',path:'M-5-5H5V5H-5Z M0-7V7 M-7 0H7'},
  'Habitation':{color:'#9bcca3',symbol:'◎',path:'M-6 0A6 6 0 1 0 6 0A6 6 0 1 0-6 0 M-6 0H6 M0-6V6'},
  'Military':{color:'#b8a8e8',symbol:'▽',path:'M-6-5H6V0Q5 5 0 8Q-5 5-6 0Z M-3-1H3'},
@@ -138,7 +138,7 @@ let stationOverview=false;
 let systemFocused=false,systemZoom=1,planetFocus=null,showBelts=true;
 const stationFilters=new Set(Object.keys(STATION_TYPES));
 const siteType=name=>/station|triad|jumpgate/i.test(name)?'Station / structure':/colony/i.test(name)?'Colony':'World';
-/* @atlas-function stationRecords-f53b5a9f2345 */
+/* @atlas-function stationRecords */
 /* @atlas-function entityRecords */
 /* @atlas-function starRecords-edf881d7ebd2 */
 /* @atlas-function focusableWorld */
