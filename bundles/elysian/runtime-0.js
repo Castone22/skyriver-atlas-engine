@@ -127,37 +127,17 @@ const illustrativeTypes={
 /* @atlas-function orbitalFact */
 /* @atlas-function worldRecord */
 /* @atlas-function bodyKey */
-/* @atlas-function stationHasOverview */
-const TORA_CLASS='Terranos Omnidirectional Reflector Array';
-const toraParts=[
- {title:'Axial mast',label:'MAST',x:329,y:95,lx:420,ly:70,note:'The upper tower narrows to a bright axial tip. Its internal equipment is unspecified in the class record.'},
- {title:'Annular disc',label:'ANNULUS',x:372,y:190,lx:435,ly:129,note:'The disc encircles the narrow neck between the axial mast and the hub. Its wide rim is visible edge-on in the class illustration.'},
- {title:'Reflector panels',label:'PANELS',x:195,y:174,lx:96,ly:159,note:'Three pairs of broad, segmented panels extend from the central structure. The array network screens Union systems from distant observation.'},
- {title:'Equatorial hub',label:'HUB',x:295,y:258,lx:121,ly:356,note:'The panel trusses meet at the cyan-banded hub. The class carries approximately 2,500 crew. The deck plan is undisclosed.'},
- {title:'Ventral spindle',label:'SPINDLE',x:342,y:377,lx:445,ly:408,note:'A stepped lower hull tapers to a second axial tip. The class power plant is classified and its position is unknown.'}
-];
 
-/* @atlas-function hardware */
-/* @atlas-function toraHubDetail */
-/* @atlas-function toraElevation */
-const triadParts=[
- {title:'Port hub',label:'PORT HUB',x:137,y:329,lx:36,ly:398,note:'One of the two outer ring-shaped hubs visible in the published illustration. “Port” is a schematic orientation label.'},
- {title:'Central hub',label:'CENTRAL HUB',x:331,y:215,lx:205,ly:66,note:'The largest hub in the illustration, with concentric decks, a tall spire cluster and a lower axial structure. Internal deck assignments are unspecified.'},
- {title:'Starboard hub',label:'STARBOARD HUB',x:538,y:179,lx:525,ly:61,note:'The second outer hub repeats the circular decks and central spire silhouette. “Starboard” is a schematic orientation label.'},
- {title:'Transit bridges',label:'BRIDGES',x:432,y:224,lx:520,ly:356,note:'Two illuminated structural bridges connect the three hubs. This schematic interprets them as transit connections without assigning undocumented routes or capacities.'},
- {title:'Docking rims',label:'DOCKING RIMS',x:342,y:310,lx:430,ly:430,note:'The article confirms that the Triad welcomes visiting ships and charges docking fees. Peripheral docking structures are visible in the illustration, but individual berth locations are not documented.'}
-];
+/* @atlas-function schematicOf */
 /* @atlas-function hasStationSchematic */
 /* @atlas-function currentStationParts */
-/* @atlas-function triadElevation */
-/* @atlas-function triadScreen */
 
 /* @atlas-function stationScreen */
 /* @atlas-function highlightPart */
 /* @atlas-function openStation */
 /* @atlas-function closeStation */
-/* @atlas-function bindToraName */
-/* @atlas-function bindToraControl */
+/* @atlas-function bindSchematicName */
+/* @atlas-function bindSchematicControl */
 
 /* @atlas-function cloakDecoration */
 /* @atlas-function cloakBadge */

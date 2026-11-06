@@ -1,5 +1,5 @@
 function bindSystemControls(){
- for(const el of document.querySelectorAll('[data-foundry-open]'))el.onclick=()=>openStation(el.dataset.foundryOpen);
+ for(const el of document.querySelectorAll('[data-schematic-open]'))el.onclick=()=>openStation(el.dataset.schematicOpen);
  if(stationOverview){
   $('leaveStation').onclick=closeStation;
   for(const el of document.querySelectorAll('[data-unit]'))el.onclick=()=>{if(el.dataset.unit!==selectedWorld)openStation(el.dataset.unit)};
@@ -11,8 +11,7 @@ function bindSystemControls(){
   highlightPart(__ATLAS__.flags.keepStationPart?stationPart:0);
   if(widgetMode)return;
  }
- if(!widgetMode)for(const el of document.querySelectorAll('.tora-register-link'))bindToraName(el,el.textContent);
- for(const el of document.querySelectorAll('[data-tora-open]'))el.onclick=()=>openStation(el.dataset.toraOpen);
+ if(!widgetMode)for(const el of document.querySelectorAll('.tora-register-link'))bindSchematicName(el,el.textContent);
 
  $('focusPlanet')?.addEventListener('click',()=>setPlanetFocus(selectedWorld));
  $('backToSystem')?.addEventListener('click',()=>setPlanetFocus(null));
@@ -20,13 +19,13 @@ function bindSystemControls(){
  $('inspectSystem')?.addEventListener('click',()=>{beginNavigation();planetFocus=null;selectedWorld=null;renderDetail();if(innerWidth<=700||embedMode)setDetailOpen(true);$('inspectSystem')?.focus({preventScroll:true});endNavigation()});
  $('systemZoomIn')?.addEventListener('click',()=>{systemZoom=Math.min(3,systemZoom*1.25);applySystemZoom()});$('systemZoomOut')?.addEventListener('click',()=>{systemZoom=Math.max(.75,systemZoom/1.25);applySystemZoom()});
  $('focusSystem')?.addEventListener('click',()=>setSystemFocus(true));$('backToRegion')?.addEventListener('click',()=>setSystemFocus(false));$('returnSystem')?.addEventListener('click',()=>setSystemFocus(false));
- document.querySelectorAll('[data-world]').forEach(b=>{if(b.getAttribute('data-tora')!==null)bindToraControl(b,b.dataset.world);else b.onclick=()=>chooseSystemWorld(b.dataset.world)});
+ document.querySelectorAll('[data-world]').forEach(b=>{if(b.getAttribute('data-tora')!==null)bindSchematicControl(b,b.dataset.world);else b.onclick=()=>chooseSystemWorld(b.dataset.world)});
  document.querySelectorAll('[data-station-filter]').forEach(b=>{
   const name=b.dataset.stationFilter;
   const toggle=()=>{if(stationFilters.has(name))stationFilters.delete(name);else stationFilters.add(name);renderDetail();$(b.id)?.focus({preventScroll:true})};
   if(name==='TORA'&&!planetFocus){
    const st=stationRecords(resolveSystem(selected)).find(item=>item.category==='TORA');
-   if(st){bindToraControl(b,st.name,toggle);b.onkeydown=null;return}
+   if(st){bindSchematicControl(b,st.name,toggle);b.onkeydown=null;return}
   }
   b.onclick=toggle;
  });

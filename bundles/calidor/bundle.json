@@ -34,8 +34,7 @@
     "captionSparse": "Every charted planet has a local satellite view.",
     "goToBlackHole": "◉  Go to Black Hole",
     "nationNoun": "Dominion",
-    "regionSystemLabel": "Dominion region system",
-    "schematicOpenLabel": "Open Foundry schematic ↗"
+    "regionSystemLabel": "Dominion region system"
   },
   "flags": {
     "companionStars": true,

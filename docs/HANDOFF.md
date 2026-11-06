@@ -44,6 +44,9 @@ npm run e2e            # browser tests alone: the tour plus screenshots
 - An atlas bundle needs only `bundle.json` and `atlas.json`. The engine supplies a default shell, style,
   runtime, slots, flags and policies for each kind it lists under `defaults` (today, `stellar`).
   `examples/minimal-atlas` is built that way and is part of the browser tests.
+- Station screens (TORA arrays, the Foundry, Circa's Triad) are one schematic view driven by a root
+  `schematics` array in `atlas.json` (`docs/converge/schematics.md`). Other features that exist several
+  times under different names are listed in `docs/converge/families.md`.
 - Groups that still have more than one file: `draw` (3), `renderIndex` (2), `regionSystemSummary` (2,
   atlas hooks), and the planet-title hooks `planetName`, `planetArticle`, `planetAliases` and
   `syncPlanetTitles`. The title sync exists three times (Elysian, UACS, IULR); decision 15 makes

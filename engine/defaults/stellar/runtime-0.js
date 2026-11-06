@@ -112,11 +112,18 @@ const illustrativeTypes={
 /* @atlas-function orbitalFact */
 /* @atlas-function worldRecord */
 /* @atlas-function bodyKey */
-/* @atlas-function stationHasOverview */
 
 
 
+/* @atlas-function schematicOf */
 /* @atlas-function hasStationSchematic */
+/* @atlas-function stationScreen */
+/* @atlas-function openStation */
+/* @atlas-function closeStation */
+/* @atlas-function currentStationParts */
+/* @atlas-function highlightPart */
+/* @atlas-function bindSchematicControl */
+/* @atlas-function bindSchematicName */
 
 /* @atlas-function cloakDecoration */
 /* @atlas-function cloakBadge */

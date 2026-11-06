@@ -446,7 +446,7 @@ station:assent:Ariadne Orbital Anchorage	2c3699c161119
 station:assent:Assent Jumpgate	4e75642bcf95b
 station:enclave:Vigil Orbital Anchorage	a61567a417436
 station:anathema:Exile Orbital Anchorage	e8b36dc0fb7d9
-station:calidor:Foundry	177f59e3ed6553
+station:calidor:Foundry	7de0cb81638f9
 station:hubris:H. Kimberley Observatory	139ebdd549b898
 station:edict:ISB Correctional Facility	1f227f0cf4f240
 station:anathema:Anathema Watch	161a7880a8d4ca
@@ -547,8 +547,8 @@ open-station:enclave:Vigil Orbital Anchorage	19f33398fe3cac
 close-station:enclave:Vigil Orbital Anchorage	19f33398fe3cac
 open-station:anathema:Exile Orbital Anchorage	130b091357a46c
 close-station:anathema:Exile Orbital Anchorage	130b091357a46c
-open-station:calidor:Foundry	12b0cae5a7bbe9
-close-station:calidor:Foundry	177f59e3ed6553
+open-station:calidor:Foundry	1b01c1738bcfde
+close-station:calidor:Foundry	7de0cb81638f9
 open-station:hubris:H. Kimberley Observatory	18cf34facedf01
 close-station:hubris:H. Kimberley Observatory	18cf34facedf01
 open-station:edict:ISB Correctional Facility	f00fb39741582

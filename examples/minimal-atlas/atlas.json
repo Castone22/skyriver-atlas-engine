@@ -96,7 +96,8 @@
         "visibility": "system",
         "system": "demo-star",
         "parent": "Demo Star III",
-        "name": "Demo Orbital"
+        "name": "Demo Orbital",
+        "schematic": "demo-structure"
       }
     ],
     "entities": [],
@@ -105,7 +106,49 @@
       "flag": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MCA1MCI+PHBhdGggZmlsbD0iIzBkMTcyNiIgZD0iTTAgMGg4MHY1MEgweiIvPjxjaXJjbGUgY3g9IjQwIiBjeT0iMjUiIHI9IjE0IiBmaWxsPSJub25lIiBzdHJva2U9IiM3OGNmZGYiIHN0cm9rZS13aWR0aD0iMiIvPjwvc3ZnPg=="
     },
     "objectImages": {},
-    "atlasExtent": [-100, -100, 1400, 1100]
+    "atlasExtent": [-100, -100, 1400, 1100],
+    "schematics": [
+      {
+        "key": "demo-structure",
+        "kicker": "STATION OVERVIEW",
+        "deck": "A demonstration structure",
+        "links": [
+          {
+            "link": "$station",
+            "label": "Go to Article",
+            "cls": "tora-article"
+          }
+        ],
+        "drawing": {
+          "svg": "<svg class=\"tora-plate\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 660 520\" role=\"group\" aria-label=\"Demonstration structure\"><g data-hardware=\"0\" data-part=\"0\" tabindex=\"0\" role=\"button\"><rect x=\"280\" y=\"60\" width=\"100\" height=\"160\" fill=\"#102c3c\" stroke=\"#71bccc\"/></g><g data-hardware=\"1\" data-part=\"1\" tabindex=\"0\" role=\"button\"><circle cx=\"330\" cy=\"320\" r=\"70\" fill=\"#1c4858\" stroke=\"#b5f2ef\"/></g></svg>"
+        },
+        "parts": [
+          {
+            "title": "Spine",
+            "label": "SPINE",
+            "x": 330,
+            "y": 140,
+            "lx": 430,
+            "ly": 100,
+            "note": "The long central member."
+          },
+          {
+            "title": "Hub",
+            "label": "HUB",
+            "x": 330,
+            "y": 320,
+            "lx": 430,
+            "ly": 340,
+            "note": "The round habitation hub."
+          }
+        ],
+        "specs": [
+          ["Length", "2 km"],
+          ["Status", "Demonstration"]
+        ],
+        "footnote": ["A made-up structure for testing the schematic view."]
+      }
+    ]
   },
   "constants": {},
   "documents": {},

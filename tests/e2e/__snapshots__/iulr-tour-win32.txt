@@ -6,8 +6,8 @@ region:ortaashveen	c763448e61bca
 overview:ortaashveen	1bcba1ee029fad
 region:varetiraak	1c4f038a9e5051
 overview:varetiraak	315c9a933342a
-system:avendon	13c15837a4788f
-station-overview:avendon	6ccb7bfbec17c
+system:avendon	16843090fe6771
+station-overview:avendon	13872ee0b1649d
 planet:avendon:Ouua I	158db14a5896f2
 planet:avendon:Ouua II	4493ca1786538
 planet:avendon:New Avendon	13ac16893d7573
@@ -16,8 +16,8 @@ planet:avendon:Ouua V	17279efca2cc0f
 planet:avendon:Graadun	192c265a369bde
 planet:avendon:Ouua VII	13d68935d4ac7b
 planet:avendon:Ouua VIII	16b0829e44c8dc
-system:kraunveld	5ddef66543c32
-station-overview:kraunveld	16b8b4aa1344d3
+system:kraunveld	1c001b0de311a8
+station-overview:kraunveld	875baba663a12
 planet:kraunveld:Kraunveld I	b74c51755ba1a
 planet:kraunveld:Kraunveld II	1c2c72f3e0a8b5
 planet:kraunveld:Vaaskel	2a5da5b92cffe
@@ -25,8 +25,8 @@ planet:kraunveld:Caedrel	1453460351e0b7
 planet:kraunveld:Kraunveld V	116da3d3b8a9fd
 planet:kraunveld:Morcant	d1b51e872c602
 planet:kraunveld:Kraunveld VII	22b021fecdec2
-system:delvabruk	20b3a8cde1b6
-station-overview:delvabruk	515b25f9b7193
+system:delvabruk	4770af4fee2b5
+station-overview:delvabruk	8a61d9c40bc03
 planet:delvabruk:Delvabruk I	1b573e5291455e
 planet:delvabruk:Delvabruk II	1de7444173de35
 planet:delvabruk:Briina	157a28854fa7e3
@@ -36,16 +36,16 @@ planet:delvabruk:Delvabruk VI	1af2f57c0a20e2
 planet:delvabruk:Koolasch	c788145e601f4
 planet:delvabruk:Delvabruk VIII	184c326a389a54
 planet:delvabruk:Delvabruk IX	107cd69fdd3ff9
-system:ildara	758f6e8a057e5
-station-overview:ildara	113673f807b44b
+system:ildara	109d935be50904
+station-overview:ildara	1c3bf047c54d26
 planet:ildara:Ildara I	e9143a135056
 planet:ildara:Virel	a08888872cdd1
 planet:ildara:Vestra	1bbd1960b708aa
 planet:ildara:Ildara IV	698f233b6301a
 planet:ildara:Oth	1a99d8c21b2d55
 planet:ildara:Ildara VI	105a7f7b187d84
-system:zhaur	1bc278b8761a0a
-station-overview:zhaur	1354c1090d676c
+system:zhaur	149480cd066a02
+station-overview:zhaur	1807446c937ee
 planet:zhaur:Zhaur I	adc0d81cfbd44
 planet:zhaur:Zhaur II	13f45c05a77990
 planet:zhaur:Ysh Zaħah	17a00b01752af3
@@ -54,23 +54,23 @@ planet:zhaur:Zhaur V	19c7a006db4360
 planet:zhaur:Thazhur	1244ec7b02079f
 planet:zhaur:Zhaur VII	13a192945bfcf9
 planet:zhaur:Zhaur VIII	11f7bf0e41db51
-system:sorellvaik	1450b41158c58e
-station-overview:sorellvaik	e1d99401a95b7
+system:sorellvaik	d9162fdf07c3e
+station-overview:sorellvaik	14db15c6c905e5
 planet:sorellvaik:Sorellvaik I	106cfd0fae95b7
 planet:sorellvaik:Draaja	11570055c17b38
 planet:sorellvaik:Sorellvaik III	cde0092b9d580
 planet:sorellvaik:Sorellvaik IV	13d1261e14044e
 planet:sorellvaik:Veluune	1616fc2d32f1a9
 planet:sorellvaik:Sorellvaik VI	20da5ac2e5a5f
-system:adraask	18f21e4b24fe58
-station-overview:adraask	1f889cb959dfc4
+system:adraask	1ce4ad1e68d03c
+station-overview:adraask	db35e3ce8490
 planet:adraask:Adraask I	a433a348472c2
 planet:adraask:Loovai	121e9c821c4c9e
 planet:adraask:Adraask III	1b4686137a055c
 planet:adraask:Vos	2dfad96f01f35
 planet:adraask:Adraask V	4e041f00e9733
-system:vaidanstaad	1109bcddeb1628
-station-overview:vaidanstaad	1b4ee902bc4400
+system:vaidanstaad	1b4706832995d2
+station-overview:vaidanstaad	15aee2d829a642
 planet:vaidanstaad:Vaidanstaad I	d7c423f144fe0
 planet:vaidanstaad:Vaidanstaad II	3aabf07d532e5
 planet:vaidanstaad:Erelva	15deee24ca11f5
@@ -79,8 +79,8 @@ planet:vaidanstaad:Vaidanstaad V	1cec2477cecfbc
 planet:vaidanstaad:Vaidanstaad VI	15aeba841db186
 planet:vaidanstaad:Krauss	18e004e6b40d83
 planet:vaidanstaad:Vaidanstaad VIII	990ef2a4932e4
-system:edraanvek	1c29fda8bd44fa
-station-overview:edraanvek	1069440e461ccd
+system:edraanvek	15d3e98d018acb
+station-overview:edraanvek	7210e121255be
 planet:edraanvek:Edraanvek I	3dc3d34f44d99
 planet:edraanvek:Edraanvek II	160afce570b2b6
 planet:edraanvek:Keerava	e645379ddfcbf
@@ -88,16 +88,16 @@ planet:edraanvek:Edraanvek IV	1731b9776c5282
 planet:edraanvek:Edraanvek V	3c658d31f76e6
 planet:edraanvek:Bront	211ee04417813
 planet:edraanvek:Edraanvek VII	3e88907cbc713
-system:zeldabruk	15bf1a549131d4
-station-overview:zeldabruk	b0b28b5273abe
+system:zeldabruk	1e97c2db67f13b
+station-overview:zeldabruk	1678fd5b3e9cc5
 planet:zeldabruk:Zeldabruk I	17acca0c341cdc
 planet:zeldabruk:Ireen	180f1ad4ccfc56
 planet:zeldabruk:Zeldabruk III	bb402e9d90efc
 planet:zeldabruk:Mardel	b607dcd40a58c
 planet:zeldabruk:Zeldabruk V	1450343fb797ee
 planet:zeldabruk:Zeldabruk VI	185f3ac863a8bb
-system:namaaris	1e123996e4abf3
-station-overview:namaaris	1fd3fd4ba3b6cf
+system:namaaris	13d648a64c00e3
+station-overview:namaaris	1d41dd34ca34a8
 planet:namaaris:Namaaris I	1cb5052b519b7f
 planet:namaaris:Namaaris II	ae96876b14cce
 planet:namaaris:Kresha	d7a391acc16ff
@@ -107,21 +107,21 @@ planet:namaaris:Namaaris VI	1acec2de34c67e
 planet:namaaris:Uld	1cd81339c5c881
 planet:namaaris:Namaaris VIII	1b829b685d1bfb
 planet:namaaris:Namaaris IX	11d53d08eee294
-system:odelhavn	1a233773675551
-station-overview:odelhavn	1d8e57de7afcde
+system:odelhavn	19f56c84d6bacb
+station-overview:odelhavn	1a09b9d8267f6c
 planet:odelhavn:Odelhavn I	1ac16f06a136f3
 planet:odelhavn:Savaal	a52b2c062ae1f
 planet:odelhavn:Odelhavn III	d952baf293216
 planet:odelhavn:Odelhavn IV	17813f3e89417a
 planet:odelhavn:Booren	4c125fffd9b61
-system:ruun	d625e1e4c560
-station-overview:ruun	c5789a3821d0b
+system:ruun	6d961c0ca4461
+station-overview:ruun	1daff559bc8720
 planet:ruun:Ruun I	165e5c49b760ce
 planet:ruun:Tervesh	af8ae358627ce
 planet:ruun:Ruun III	48f36c712783
 planet:ruun:Halden	a386664bada28
-system:peladaun	55077bc26187f
-station-overview:peladaun	7717399499ca1
+system:peladaun	1f71900286cc14
+station-overview:peladaun	a46346f631d48
 planet:peladaun:Peladaun I	1a5cd1b0f59ce9
 planet:peladaun:Peladaun II	1a66ce9c5972f1
 planet:peladaun:Maari	87cc59b8acc49
@@ -129,16 +129,16 @@ planet:peladaun:Jorvek	1c6d9f6c65cf67
 planet:peladaun:Peladaun V	1f73625fc5864e
 planet:peladaun:Daamur	13ab1203a31b4f
 planet:peladaun:Peladaun VII	1592dedb13c905
-system:iskarraas	1cfa60ffd9d689
-station-overview:iskarraas	2c542440fab05
+system:iskarraas	2513aef850829
+station-overview:iskarraas	127bef3f73ee58
 planet:iskarraas:Iskarraas I	47dfa7be46d13
 planet:iskarraas:Belke	5cebd1adcf290
 planet:iskarraas:Iskarraas III	16c87c6f1dc2da
 planet:iskarraas:Iskarraas IV	12f559f1a96e91
 planet:iskarraas:Aulden	1dfba385da7363
 planet:iskarraas:Iskarraas VI	98e05f344e466
-system:dovrendaal	1ce3db8ab81611
-station-overview:dovrendaal	17471a4f2f9c36
+system:dovrendaal	961d5525a7df
+station-overview:dovrendaal	13ad530fde6271
 planet:dovrendaal:Dovrendaal I	1f9683bedc3c61
 planet:dovrendaal:Dovrendaal II	1ef83d6a376e50
 planet:dovrendaal:Ceevara	1497145e325713
@@ -147,8 +147,8 @@ planet:dovrendaal:Dovrendaal V	12ee7c178b3533
 planet:dovrendaal:Eridan	467207dc68f46
 planet:dovrendaal:Dovrendaal VII	1bda16b5dae52
 planet:dovrendaal:Dovrendaal VIII	1ecee9e43f5696
-system:ortaashaad	1ff33e0e844e5b
-station-overview:ortaashaad	250fa54280356
+system:ortaashaad	213cca3a4eb40
+station-overview:ortaashaad	e1d97a2dd5851
 planet:ortaashaad:Ortaashaad I	16342ee75f4788
 planet:ortaashaad:Ortaashaad II	14156429473de9
 planet:ortaashaad:Praava	6d7db894c1296
@@ -157,16 +157,16 @@ planet:ortaashaad:Ortaashaad V	f32442f630aed
 planet:ortaashaad:Ortaashaad VI	bfea585aa4c04
 planet:ortaashaad:Naloth	9e3bf0cce7bdb
 planet:ortaashaad:Ortaashaad VIII	875618dd0b373
-system:saarbruk	d64b0857fef7c
-station-overview:saarbruk	1e55a28662f86
+system:saarbruk	6bd78a1a70a0e
+station-overview:saarbruk	8e9175a7f0252
 planet:saarbruk:Saarbruk I	10fdaaa2477c4c
 planet:saarbruk:Saarbruk II	51f9790f681c
 planet:saarbruk:Maalie	61b9af965cba8
 planet:saarbruk:Edessa	1f4623d3b0eff0
 planet:saarbruk:Saarbruk V	1f059ca043b016
 planet:saarbruk:Drauw	4268403f461df
-system:kalyrveen	17da34d35b54f4
-station-overview:kalyrveen	13bae794fc11e2
+system:kalyrveen	13e9c156ae449b
+station-overview:kalyrveen	1c6f8b2caa2a6c
 planet:kalyrveen:Kalyrveen I	1cff9a5e721dd2
 planet:kalyrveen:Kalyrveen II	72e9209cbb448
 planet:kalyrveen:Vooka	5c4e3783bf9a1
@@ -174,8 +174,8 @@ planet:kalyrveen:Eiden	7afb13e20b68c
 planet:kalyrveen:Kalyrveen V	6299600d20097
 planet:kalyrveen:Krauden	b83db776ec7a
 planet:kalyrveen:Kalyrveen VII	1f23706c2f8daa
-system:teradaun	17cb3a79f1189a
-station-overview:teradaun	1a11aa01ffa49a
+system:teradaun	1248637610ca7d
+station-overview:teradaun	136cecd7e9aebd
 planet:teradaun:Teradaun I	1aac2de6168033
 planet:teradaun:Teradaun II	17299acd758482
 planet:teradaun:Roova	14effcbbac1742
@@ -185,15 +185,15 @@ planet:teradaun:Teradaun VI	a191a7974d207
 planet:teradaun:Teradaun VII	ece5ca1d4156c
 planet:teradaun:Urraun	8c02116a31d83
 planet:teradaun:Teradaun IX	3b219ac48758d
-system:neretvaal	2cd7c6efb8ff6
-station-overview:neretvaal	1bfb965d7a14ad
+system:neretvaal	14316708b6335
+station-overview:neretvaal	20f6f403124d5
 planet:neretvaal:Neretvaal I	10c961c1af9f5f
 planet:neretvaal:Gaila	1a3cb03c111ba4
 planet:neretvaal:Neretvaal III	b4e551f6bb51b
 planet:neretvaal:Noew	4c844d088af3f
 planet:neretvaal:Neretvaal V	121445b88f1ed6
-system:vessarik	97305d2d4a228
-station-overview:vessarik	158d332d46950b
+system:vessarik	3deb8320cec99
+station-overview:vessarik	3429249c1205
 planet:vessarik:Vessarik I	159c73ac1872cf
 planet:vessarik:Vessarik II	1dd085c6e764cc
 planet:vessarik:Rinova	103f6c36947e5a
@@ -201,16 +201,16 @@ planet:vessarik:Ilun	14787e6ed7a1f2
 planet:vessarik:Vessarik V	ac47eb362088e
 planet:vessarik:Draamor	db87aecb25fbc
 planet:vessarik:Vessarik VII	1b8f0fd6b8e89c
-system:olundraal	1016584de25658
-station-overview:olundraal	1ad77f77011314
+system:olundraal	7f0db6b1dbfce
+station-overview:olundraal	b9be913d7ed87
 planet:olundraal:Olundraal I	1f1817933e5ddc
 planet:olundraal:Olundraal II	1b677fece95026
 planet:olundraal:Zevai	588ebee4b3c53
 planet:olundraal:Olundraal IV	a425a1b3ba404
 planet:olundraal:Hareth	16251fcc3f3bd1
 planet:olundraal:Olundraal VI	106561add1e47f
-system:mareshavn	1f6bd039d04156
-station-overview:mareshavn	1dfd07a5c487f
+system:mareshavn	116d6f651d1784
+station-overview:mareshavn	fae8789688af
 planet:mareshavn:Mareshavn I	adc4edb672b63
 planet:mareshavn:Mareshavn II	e46c491de7dab
 planet:mareshavn:Kellun	17c956ae89e6ef
@@ -219,8 +219,8 @@ planet:mareshavn:Mareshavn V	261008b37bed5
 planet:mareshavn:Selk	1132cf62b76f7d
 planet:mareshavn:Mareshavn VII	9efd6bc3f70a
 planet:mareshavn:Mareshavn VIII	17843a416034fd
-system:daatren	1e81bd6aa2288f
-station-overview:daatren	17942cb9c398ac
+system:daatren	3bb8c5a2a27b
+station-overview:daatren	1e702ba449645e
 planet:daatren:Daatren I	1daa802d38cfdb
 planet:daatren:Daatren II	ecff416bc4078
 planet:daatren:Feraash	b0ed8943f802e
@@ -228,14 +228,14 @@ planet:daatren:Daatren IV	1226a597337ba6
 planet:daatren:Rood	65aa4a668843
 planet:daatren:Daatren VI	1eea0bf2df626e
 planet:daatren:Daatren VII	10c340de4e0bc2
-system:esdarveen	1eb7e679eb00ab
-station-overview:esdarveen	1003bca1a1315a
+system:esdarveen	85be2a73fac97
+station-overview:esdarveen	f1dfba4e75102
 planet:esdarveen:Esdarveen I	1d465500a168e7
 planet:esdarveen:Ishava	1bc48688d1c206
 planet:esdarveen:Esdarveen III	e77a37393aee5
 planet:esdarveen:Korr	161173e62bab04
-system:zyravel	fb70c21bbde
-station-overview:zyravel	1830ea0b56178d
+system:zyravel	1ccc9d82486ee6
+station-overview:zyravel	64ba3909141dd
 planet:zyravel:Zyravel I	177fbb36b8b3dd
 planet:zyravel:Zyravel II	da13e8ad4634a
 planet:zyravel:Embrava	3ef69dbac533d
@@ -244,30 +244,30 @@ planet:zyravel:Zyravel V	69ff8804fe953
 planet:zyravel:Zyravel VI	c0d4182a961a0
 planet:zyravel:Tormaun	1a5f04afab168
 planet:zyravel:Zyravel VIII	c858880c5400b
-system:tessadaal	37e38546a2c7c
-station-overview:tessadaal	18f62fbf3177e4
+system:tessadaal	1b6be59a757a6e
+station-overview:tessadaal	25934cca724bf
 planet:tessadaal:Tessadaal I	171868acf21e96
 planet:tessadaal:Riesa	1c47b59801bea
 planet:tessadaal:Tessadaal III	30a82943ce116
 planet:tessadaal:Bellun	acea2ac3f57f6
 planet:tessadaal:Tessadaal V	dc16ef1143902
-system:hadresh	171599030123ec
-station-overview:hadresh	1d35b34904da34
+system:hadresh	2f6b0cf9e80fc
+station-overview:hadresh	e1593a5b94aa8
 planet:hadresh:Hadresh I	1737823fbe6015
 planet:hadresh:Hadresh II	13520f8af4e2c0
 planet:hadresh:Ovira	f9df3c84c1961
 planet:hadresh:Hadresh IV	ad09c94d9e4a9
 planet:hadresh:Olth	1eb980d1ef989
 planet:hadresh:Hadresh VI	1bc3aa099cdd54
-system:ossendaal	27b98c4ff57aa
-station-overview:ossendaal	14bbc79b1c0960
+system:ossendaal	1f257fa77283d7
+station-overview:ossendaal	367148fc45c4a
 planet:ossendaal:Ossendaal I	29701c64f4c36
 planet:ossendaal:Veesk	8a66cee7f18bd
 planet:ossendaal:Ossendaal III	1aaf09db46de11
 planet:ossendaal:Nenn	5a9a81002306e
 planet:ossendaal:Ossendaal V	492dd81eb66a
-system:varetiraak	1d1968775f0ff5
-station-overview:varetiraak	186f7cc6aa0cda
+system:varetiraak	1740a8c13684c8
+station-overview:varetiraak	e745066a164c8
 planet:varetiraak:Varetiraak I	aded0dfc60cd
 planet:varetiraak:Varetiraak II	17a33268715352
 planet:varetiraak:Torava	248cf1e57662e
@@ -276,16 +276,16 @@ planet:varetiraak:Varetiraak V	1f896a8351b8f
 planet:varetiraak:Varetiraak VI	5b4f4473ed327
 planet:varetiraak:Vekraun	1bd6472e2d1ee0
 planet:varetiraak:Varetiraak VIII	1e5029f0272ddf
-system:talvenstaad	3237a182ca799
-station-overview:talvenstaad	1d222279eb753b
+system:talvenstaad	1a4d93164e2829
+station-overview:talvenstaad	1487e9a112977a
 planet:talvenstaad:Talvenstaad I	1939df4aec426f
 planet:talvenstaad:Talvenstaad II	56dc3cebd6607
 planet:talvenstaad:Havira	18521689e11e01
 planet:talvenstaad:Talvenstaad IV	4119ab72c9819
 planet:talvenstaad:Istren	18069c273c24d8
 planet:talvenstaad:Talvenstaad VI	110f1203102fc
-system:kordabruk	12b1583aa180e3
-station-overview:kordabruk	1c6bd09341999
+system:kordabruk	dcc737a079711
+station-overview:kordabruk	19d32d8732983f
 planet:kordabruk:Kordabruk I	210eff2af7b3e
 planet:kordabruk:Kordabruk II	a86625ca626cf
 planet:kordabruk:Sevaari	1d858155bc3dd6
@@ -293,15 +293,15 @@ planet:kordabruk:Kordabruk IV	11c168b650b722
 planet:kordabruk:Kordabruk V	87d3dd0b3f3e9
 planet:kordabruk:Ysil	4ca71feb51948
 planet:kordabruk:Kordabruk VII	e906248fc00c6
-system:retharaas	1c3a8228207935
-station-overview:retharaas	152ae1aaeb88bd
+system:retharaas	fc4800fd23874
+station-overview:retharaas	1c6bad728d8977
 planet:retharaas:Retharaas I	14ff1474b14b3f
 planet:retharaas:Faera	146b751e534231
 planet:retharaas:Retharaas III	195372e807ff99
 planet:retharaas:Zorren	19e05d186aa742
 planet:retharaas:Retharaas V	7c85129f7752f
-system:velisharn	14707e99ffca85
-station-overview:velisharn	1c3f0df67e34a7
+system:velisharn	e8841f9c2aec1
+station-overview:velisharn	68f38d516667
 planet:velisharn:Velisharn I	5aa9522007bed
 planet:velisharn:Velisharn II	1e6ab96e10fb02
 planet:velisharn:Velisharn III	764b777f271de
@@ -310,29 +310,29 @@ planet:velisharn:Velisharn V	20d23a48586f3
 planet:velisharn:Orrel	44a4626c05c00
 planet:velisharn:Velisharn VII	1d93969c9b64ae
 planet:velisharn:Velisharn VIII	1f15e9d6c1fe0e
-system:odraask	1d0425a6ad7897
-station-overview:odraask	4a87afc82ae22
+system:odraask	146f725f80e455
+station-overview:odraask	151cd8bfd8ddb2
 planet:odraask:Odraask I	18df2e438e78c9
 planet:odraask:Koodai	e456a5973aa6f
 planet:odraask:Odraask III	481dcc2f75f57
 planet:odraask:Usk	2f93d63b39e9b
-system:nydrelvaal	17e513d5778aba
-station-overview:nydrelvaal	410cc544fe7b5
+system:nydrelvaal	1ae0b1d26f8ffb
+station-overview:nydrelvaal	1030fdb362d509
 planet:nydrelvaal:Nydrelvaal I	2b69c083363f8
 planet:nydrelvaal:Jaaval	2dd1a4027e61f
 planet:nydrelvaal:Nydrelvaal III	e399fc4042cf1
 planet:nydrelvaal:Nydrelvaal IV	168aa49629662f
 planet:nydrelvaal:Mazel	fdbe720a8af8
-system:karaad	1a121d39ed7ed1
-station-overview:karaad	8fc03dd37addc
+system:karaad	e28c8fcc534bb
+station-overview:karaad	895376028aeb2
 planet:karaad:Karaad I	f64ac4e4f41c9
 planet:karaad:Karaad II	1fc8b0db9898c0
 planet:karaad:Shavern	c943b74beb597
 planet:karaad:Karaad IV	1dec97e064f3e8
 planet:karaad:Adul	1c5cf8b2485a6e
 planet:karaad:Karaad VI	13b656c05ff015
-system:eshdaanvek	119415c147158c
-station-overview:eshdaanvek	1051fb52b34b65
+system:eshdaanvek	1e5449ba2d8bf5
+station-overview:eshdaanvek	156a5c6533867c
 planet:eshdaanvek:Eshdaanvek I	f711b6d27bc79
 planet:eshdaanvek:Eshdaanvek II	13ffbbadb6ccdd
 planet:eshdaanvek:Loorai	105b19fff5953b
@@ -340,1447 +340,1447 @@ planet:eshdaanvek:Eshdaanvek IV	1150b7f401db4c
 planet:eshdaanvek:Eshdaanvek V	156d12148f3a1
 planet:eshdaanvek:Drall	3397ab702f42d
 planet:eshdaanvek:Eshdaanvek VII	19ced0810a7848
-system:yrdana	1a24afc5ea061c
-station-overview:yrdana	996f5f3e7b994
+system:yrdana	12d363fdc79f6b
+station-overview:yrdana	464cae7b1c835
 planet:yrdana:Yrdana I	101b1eac9bab40
 planet:yrdana:Yrdana II	b57f48883f6b7
 planet:yrdana:Preshik	2fbb1f77936e6
 planet:yrdana:Yrdana IV	a82e67fd10dad
 planet:yrdana:Ulm	cbaa8c08d2c5f
-system:irdaal	1be7a89e79fa35
-station-overview:irdaal	b93323e367f3e
+system:irdaal	7bf1816601968
+station-overview:irdaal	11a4d7fc040bd3
 planet:irdaal:Irdaal I	124b8f0ec826fe
 planet:irdaal:Shaaluk	12704486e6b9e6
 planet:irdaal:Irdaal III	ef1670845fdb2
 planet:irdaal:Vohr	1d2870d8c19b36
-object:avendon:Ouua I Moon I	f3c87d711bca9
-object:avendon:Ouua II Moon I	143db4900755f2
-object:avendon:New Avendon I	19c636233ebf0c
-object:avendon:Keliss I	11753f55f45e39
-object:avendon:Keliss II	b6338284e8c43
-object:avendon:Keliss III	18088671277149
-object:avendon:Ouua V Moon I	7ba4bfa66a1a3
-object:avendon:Graadun I	157d97ed14b48f
-object:avendon:Graadun II	78927cb82f850
-object:avendon:Graadun III	1edb9e0ad58232
-object:avendon:Ouua VII Moon I	1d0672da2ebf61
-object:avendon:Ouua VIII Moon I	2bacd6e42405a
-object:kraunveld:Kraunveld I Moon I	e02dde8618625
-object:kraunveld:Kraunveld II Moon I	430b045bcce6
-object:kraunveld:Vaaskel I	1c84b7e168d140
-object:kraunveld:Vaaskel II	156f5b8f7bfc01
-object:kraunveld:Vaaskel III	1bc0585f530414
-object:kraunveld:Caedrel I	a1afcac810815
-object:kraunveld:Kraunveld V Moon I	45d61ff4cb9f0
-object:kraunveld:Kraunveld V Moon II	12570a7205abf8
-object:kraunveld:Morcant I	19dea6ded2afa3
-object:kraunveld:Morcant II	862061669309
-object:kraunveld:Kraunveld VII Moon I	172b40335ab68c
-object:kraunveld:Kraunveld VII Moon II	1073ab70bcfac6
-object:delvabruk:Delvabruk I Moon I	158baa27890a94
-object:delvabruk:Delvabruk II Moon I	150e206b341d0d
-object:delvabruk:Delvabruk II Moon II	4d3cd63819f2b
-object:delvabruk:Briina I	14ded3c47e9ed7
-object:delvabruk:Briina II	81182fd4af438
-object:delvabruk:Tavren I	15b58fe2e854e1
-object:delvabruk:Tavren II	1b03bbba55baa1
-object:delvabruk:Delvabruk V Moon I	7f62533f7e597
-object:delvabruk:Delvabruk V Moon II	2eb0882206014
-object:delvabruk:Delvabruk VI Moon I	10b4c5db61f456
-object:delvabruk:Koolasch I	86910c4ef688
-object:delvabruk:Koolasch II	172a72469dc01c
-object:delvabruk:Koolasch III	14f1b9bacee9fb
-object:delvabruk:Koolasch IV	f8df04bb37e91
-object:delvabruk:Koolasch V	cf8870fc22363
-object:delvabruk:Delvabruk VIII Moon I	40ffbcc657c7e
-object:delvabruk:Delvabruk IX Moon I	1a45744fb39d97
-object:ildara:Ildara I Moon I	1c3f34d97c7ca5
-object:ildara:Virel I	2edbbccdc1e8a
-object:ildara:Virel II	83ad963d5cd9f
-object:ildara:Vestra I	dfc33f433f2a5
-object:ildara:Ildara IV Moon I	f53312f33035e
-object:ildara:Ildara IV Moon II	ec64d759be87
-object:ildara:Oth I	1e25ada3e96efe
-object:ildara:Oth II	d237f0de82f13
-object:ildara:Ildara VI Moon I	c6682fae45b2e
-object:ildara:Ildara VI Moon II	db7b0c68267ea
-object:zhaur:Zhaur I Moon I	14b139846b2efe
-object:zhaur:Zhaur II Moon I	d1b123011c096
-object:zhaur:Zhaur II Moon II	3cc96571cfeb5
-object:zhaur:Ysh Zaħah I	18ab635c7084c4
-object:zhaur:Ysh Zaħah II	1bc31769c240ce
-object:zhaur:Ysh Mereth I	1f7d84b123979b
-object:zhaur:Ysh Mereth II	c1265d4ff4ed9
-object:zhaur:Zhaur V Moon I	40fe1b2512813
-object:zhaur:Thazhur I	cac8f4410d776
-object:zhaur:Thazhur II	2d2f9189d2ffb
-object:zhaur:Thazhur III	1cafaebb45f0aa
-object:zhaur:Zhaur VII Moon I	101cac5ef0118c
-object:zhaur:Zhaur VII Moon II	fa186019a2690
-object:zhaur:Zhaur VIII Moon I	196b7d3b3bc65b
-object:zhaur:Zhaur VIII Moon II	c4f239f6db561
-object:sorellvaik:Sorellvaik I Moon I	68f5d74467168
-object:sorellvaik:Sorellvaik I Moon II	877d76fc684b6
-object:sorellvaik:Draaja I	8ecb14ff59fa8
-object:sorellvaik:Sorellvaik III Moon I	199fb9cdd7bcda
-object:sorellvaik:Sorellvaik IV Moon I	783c4c7626801
-object:sorellvaik:Sorellvaik IV Moon II	3ae1d0a1b2e4
-object:sorellvaik:Veluune I	3f32fb108eabf
-object:sorellvaik:Veluune II	406f74a71b0cd
-object:sorellvaik:Veluune III	1d4c71e83a2d73
-object:sorellvaik:Veluune IV	1d4f7a5f296608
-object:sorellvaik:Veluune V	101c2d42a0c231
-object:sorellvaik:Sorellvaik VI Moon I	1f4b0221ebc3af
-object:adraask:Adraask I Moon I	1fb8301d7b4dca
-object:adraask:Loovai I	a204d52050fa4
-object:adraask:Loovai II	7325af5b9ef40
-object:adraask:Adraask III Moon I	9ad185bc47253
-object:adraask:Adraask III Moon II	c7102b05b6b67
-object:adraask:Vos I	1c3cab62321178
-object:adraask:Vos II	cd3d7718fc505
-object:adraask:Adraask V Moon I	dec619dad9c9e
-object:adraask:Adraask V Moon II	116dc4849bb2c1
-object:vaidanstaad:Vaidanstaad I Moon I	1944f0d1b1a7e1
-object:vaidanstaad:Vaidanstaad II Moon I	33e0b83942667
-object:vaidanstaad:Erelva I	39d4f20658b79
-object:vaidanstaad:Erelva II	1f46ec1a89573b
-object:vaidanstaad:Eless I	1cca1b83cb6cf
-object:vaidanstaad:Eless II	1820e6b2af805b
-object:vaidanstaad:Vaidanstaad V Moon I	1d753723c49a72
-object:vaidanstaad:Vaidanstaad V Moon II	154a5eb5df71c6
-object:vaidanstaad:Vaidanstaad VI Moon I	c924ed8f8ea45
-object:vaidanstaad:Krauss I	8337c602495f5
-object:vaidanstaad:Krauss II	112a08c9a211a8
-object:vaidanstaad:Krauss III	12ad70952baa09
-object:vaidanstaad:Vaidanstaad VIII Moon I	14c1f8d31bca73
-object:edraanvek:Edraanvek I Moon I	145eca1405b545
-object:edraanvek:Edraanvek II Moon I	16b8497a77dcc7
-object:edraanvek:Edraanvek II Moon II	1882e4d8814765
-object:edraanvek:Keerava I	1b50e64d81671e
-object:edraanvek:Keerava II	15fc0a898ad8c7
-object:edraanvek:Edraanvek IV Moon I	1b7cd2bc437628
-object:edraanvek:Edraanvek V Moon I	128b6908cbb604
-object:edraanvek:Bront I	2d47eaf94e4ff
-object:edraanvek:Bront II	147806e26b410a
-object:edraanvek:Bront III	1703d023a76600
-object:edraanvek:Bront IV	16e9710ab99c77
-object:edraanvek:Edraanvek VII Moon I	1a7e20fabb0fc5
-object:zeldabruk:Zeldabruk I Moon I	1f7d92c0f81800
-object:zeldabruk:Ireen I	1ce7671f761c87
-object:zeldabruk:Ireen II	17fc91db3a5a87
-object:zeldabruk:Ireen III	1f97fa321cbc6f
-object:zeldabruk:Zeldabruk III Moon I	736639c22c91b
-object:zeldabruk:Zeldabruk III Moon II	b768d8d7c3d2e
-object:zeldabruk:Mardel I	1a857a211d9581
-object:zeldabruk:Mardel II	1d9af409f02130
-object:zeldabruk:Mardel III	1b410325a08580
-object:zeldabruk:Zeldabruk V Moon I	4ae21d90ef398
-object:zeldabruk:Zeldabruk VI Moon I	1bea610ae03002
-object:namaaris:Namaaris I Moon I	120da78c9860a3
-object:namaaris:Namaaris II Moon I	b6db65c4624e9
-object:namaaris:Namaaris II Moon II	1df33039d228f1
-object:namaaris:Kresha I	1c780b54039995
-object:namaaris:Kresha II	1434dae5d4b595
-object:namaaris:Kresha III	59bce9574c42a
-object:namaaris:Ossen I	13657849741bb0
-object:namaaris:Ossen II	1cd9e7972b5211
-object:namaaris:Ossen III	b212353e2a472
-object:namaaris:Namaaris V Moon I	185a793e024dc2
-object:namaaris:Namaaris VI Moon I	155d54292894e1
-object:namaaris:Namaaris VI Moon II	15a36f6d733df8
-object:namaaris:Uld I	fbfe31b3eea93
-object:namaaris:Uld II	1d95f7d3cdb6a7
-object:namaaris:Uld III	c3300d9404e1e
-object:namaaris:Uld IV	10d3f251f15272
-object:namaaris:Namaaris VIII Moon I	58e51dbbf0c8b
-object:namaaris:Namaaris IX Moon I	36fc8b0303435
-object:odelhavn:Odelhavn I Moon I	caccc687c21fb
-object:odelhavn:Savaal I	e78dd22844ac9
-object:odelhavn:Savaal II	124275a1b34c7a
-object:odelhavn:Savaal III	11b8e3f590e265
-object:odelhavn:Odelhavn III Moon I	1bbe39a83ad047
-object:odelhavn:Odelhavn III Moon II	7943d4e0e9bec
-object:odelhavn:Odelhavn IV Moon I	17e86c3daf6c7
-object:odelhavn:Odelhavn IV Moon II	85d351f790cca
-object:odelhavn:Booren I	a6eac9985a224
-object:odelhavn:Booren II	bcb3d7cc2991f
-object:odelhavn:Booren III	c78fee5a4bec6
-object:odelhavn:Booren IV	1728eba740586c
-object:odelhavn:Booren V	ea0ee353c7b7c
-object:ruun:Ruun I Moon I	18ea85907eb05d
-object:ruun:Tervesh I	14d2c1d036607b
-object:ruun:Ruun III Moon I	1106eff7f98493
-object:ruun:Halden I	762fff5c34e9e
-object:ruun:Halden II	9dabccf2fe21a
-object:ruun:Halden III	4bb6f786b2139
-object:ruun:Halden IV	71114cded63da
-object:ruun:Halden V	1caa448b3e1beb
-object:peladaun:Peladaun I Moon I	8bc2a941cf476
-object:peladaun:Peladaun I Moon II	6b5a0dc0f1340
-object:peladaun:Peladaun II Moon I	18e6f43f1aeee1
-object:peladaun:Maari I	180396aa0dc146
-object:peladaun:Maari II	15f6c85724b679
-object:peladaun:Maari III	397deb3658144
-object:peladaun:Jorvek I	1c3aa48f908b7d
-object:peladaun:Jorvek II	117dd95396952a
-object:peladaun:Jorvek III	f1633b4f3eaed
-object:peladaun:Peladaun V Moon I	bc0fc787e8bae
-object:peladaun:Peladaun V Moon II	c06ef7263fbf7
-object:peladaun:Daamur I	bb737f198372e
-object:peladaun:Daamur II	c38c5f445fc98
-object:peladaun:Daamur III	40f97132a4d7b
-object:peladaun:Daamur IV	1b2af8918b1d4d
-object:peladaun:Peladaun VII Moon I	a44d4bccce999
-object:peladaun:Peladaun VII Moon II	424afa88b5d8c
-object:iskarraas:Iskarraas I Moon I	1d72502ab78fcf
-object:iskarraas:Iskarraas I Moon II	151c60d8b38ae9
-object:iskarraas:Belke I	10f9509f1bf8d
-object:iskarraas:Belke II	1c684e960d0829
-object:iskarraas:Belke III	19069b3ba40d1a
-object:iskarraas:Iskarraas III Moon I	19d0bc9da2ce44
-object:iskarraas:Iskarraas III Moon II	bfd4f764bc190
-object:iskarraas:Iskarraas IV Moon I	1cc0f42f4f27e
-object:iskarraas:Aulden I	1b6ebf89a08c02
-object:iskarraas:Aulden II	b8567d469b0a8
-object:iskarraas:Iskarraas VI Moon I	6aaaad099845f
-object:iskarraas:Iskarraas VI Moon II	15c589c764a14f
-object:dovrendaal:Dovrendaal I Moon I	172a807ce4565a
-object:dovrendaal:Dovrendaal II Moon I	7c2e638fe6b9f
-object:dovrendaal:Ceevara I	143d24e786b1ea
-object:dovrendaal:Ceevara II	fd20d5ffad165
-object:dovrendaal:Ceevara III	1002865eff12f9
-object:dovrendaal:Dovrendaal IV Moon I	467bdd9eae46d
-object:dovrendaal:Dovrendaal V Moon I	51e796615dc7c
-object:dovrendaal:Eridan I	1157ad3fbf644d
-object:dovrendaal:Eridan II	13231f42ec4c7e
-object:dovrendaal:Eridan III	1f30e284598950
-object:dovrendaal:Dovrendaal VII Moon I	a65920df05492
-object:dovrendaal:Dovrendaal VII Moon II	1b68f8a5cd3134
-object:dovrendaal:Dovrendaal VIII Moon I	d4c2bc99a673a
-object:ortaashaad:Ortaashaad I Moon I	2b8d52095eced
-object:ortaashaad:Ortaashaad I Moon II	a1fa11c10723b
-object:ortaashaad:Ortaashaad II Moon I	13539b5c1eb05
-object:ortaashaad:Praava I	f96c38cdbcfd7
-object:ortaashaad:Praava II	d4dd28604d2d1
-object:ortaashaad:Leishen I	f117c2ba7abef
-object:ortaashaad:Ortaashaad V Moon I	ac5c8bc9c7b82
-object:ortaashaad:Ortaashaad VI Moon I	800ecf7e19c0
-object:ortaashaad:Ortaashaad VI Moon II	1024709be816a5
-object:ortaashaad:Naloth I	14587801e35a8e
-object:ortaashaad:Naloth II	87f5c06b2fa4d
-object:ortaashaad:Naloth III	1e318b699ca8a1
-object:ortaashaad:Naloth IV	14a85c558daff6
-object:ortaashaad:Naloth V	1f699e93b5e853
-object:ortaashaad:Ortaashaad VIII Moon I	1b84117d7f05e3
-object:ortaashaad:Ortaashaad VIII Moon II	955c86a9b4337
-object:saarbruk:Saarbruk I Moon I	15b2497b44ec4a
-object:saarbruk:Saarbruk I Moon II	971d6dc0dc2fe
-object:saarbruk:Saarbruk II Moon I	1ddcc0a25e1d8e
-object:saarbruk:Maalie I	91eacc4475f4c
-object:saarbruk:Edessa I	579dca8a27438
-object:saarbruk:Saarbruk V Moon I	91ea71b0a3399
-object:saarbruk:Saarbruk V Moon II	10877e908ebeb
-object:saarbruk:Drauw I	1b27b0a6bd3ada
-object:saarbruk:Drauw II	1371a1722055a7
-object:saarbruk:Drauw III	de8884d9047cd
-object:saarbruk:Drauw IV	df137a490cb61
-object:saarbruk:Drauw V	9c5c7e7f00abd
-object:kalyrveen:Kalyrveen I Moon I	140610c5078e65
-object:kalyrveen:Kalyrveen II Moon I	1ef2bbd5e4a4e6
-object:kalyrveen:Vooka I	69359a8b9dae5
-object:kalyrveen:Vooka II	e68af6722ec21
-object:kalyrveen:Vooka III	1e7fc3d346ad55
-object:kalyrveen:Eiden I	4c0843ea2b771
-object:kalyrveen:Eiden II	1c17583d731ae9
-object:kalyrveen:Kalyrveen V Moon I	11516f13b32939
-object:kalyrveen:Krauden I	331dbf4e9614e
-object:kalyrveen:Krauden II	1536fa7471cee6
-object:kalyrveen:Krauden III	7b6a57fdcf26d
-object:kalyrveen:Kalyrveen VII Moon I	1f616cb6c1f513
-object:kalyrveen:Kalyrveen VII Moon II	693ab4b92e35e
-object:teradaun:Teradaun I Moon I	15c725221ec8f
-object:teradaun:Teradaun I Moon II	9b2d381fee12e
-object:teradaun:Teradaun II Moon I	4e9177e3328e0
-object:teradaun:Roova I	b4a415a9455da
-object:teradaun:Roova II	1e15ec8f7ecf91
-object:teradaun:Ambril I	5600fa4ac2119
-object:teradaun:Ambril II	194245f63cd0b
-object:teradaun:Ambril III	47ffd07e2e7e7
-object:teradaun:Teradaun V Moon I	103bdad462444f
-object:teradaun:Teradaun V Moon II	133d4cef366a71
-object:teradaun:Teradaun VI Moon I	63330655631a8
-object:teradaun:Teradaun VII Moon I	bd19700ef46e1
-object:teradaun:Urraun I	131d5b1b324e86
-object:teradaun:Urraun II	12298301b94823
-object:teradaun:Urraun III	6b1fd96a5acd7
-object:teradaun:Urraun IV	1201044ff5f0d3
-object:teradaun:Teradaun IX Moon I	66bed5260bf44
-object:teradaun:Teradaun IX Moon II	10d4acbc66b703
-object:neretvaal:Neretvaal I Moon I	4f5750d0b6d2a
-object:neretvaal:Neretvaal I Moon II	fa5f0e5cd48aa
-object:neretvaal:Gaila I	16362abdc0c840
-object:neretvaal:Neretvaal III Moon I	6885a815ce817
-object:neretvaal:Noew I	fceaa9d7821e2
-object:neretvaal:Noew II	1b54f2871ce93e
-object:neretvaal:Neretvaal V Moon I	9c8b085aa4b97
-object:vessarik:Vessarik I Moon I	56aeb55b6dc76
-object:vessarik:Vessarik II Moon I	18aba7e00bfc3d
-object:vessarik:Vessarik II Moon II	873994831ee69
-object:vessarik:Rinova I	101cb53ecb6abd
-object:vessarik:Rinova II	62994c34143f9
-object:vessarik:Rinova III	735b068c67a67
-object:vessarik:Ilun I	6fd67df941cb1
-object:vessarik:Ilun II	1f405eed39f37b
-object:vessarik:Ilun III	69726df3bc131
-object:vessarik:Vessarik V Moon I	98a39af1357ae
-object:vessarik:Draamor I	9902497cc026a
-object:vessarik:Draamor II	dc6b39d61ecc7
-object:vessarik:Vessarik VII Moon I	150d0c5987db92
-object:vessarik:Vessarik VII Moon II	bfed630ffc263
-object:olundraal:Olundraal I Moon I	1e827f65f640ad
-object:olundraal:Olundraal I Moon II	f61aa53d8e207
-object:olundraal:Olundraal II Moon I	ce1541d64dc44
-object:olundraal:Olundraal II Moon II	111d082cee00a6
-object:olundraal:Zevai I	1594df3bad8502
-object:olundraal:Zevai II	11cea71404230
-object:olundraal:Zevai III	1a9da753375686
-object:olundraal:Olundraal IV Moon I	1e6378600e3f67
-object:olundraal:Olundraal IV Moon II	8009aaf0d055
-object:olundraal:Hareth I	5a732636fc8ff
-object:olundraal:Hareth II	1a3a2e1c846240
-object:olundraal:Hareth III	cac7f8334b208
-object:olundraal:Hareth IV	b4bb3e55cddd4
-object:olundraal:Hareth V	62c43d3ae90be
-object:olundraal:Olundraal VI Moon I	1d47590d22c00d
-object:olundraal:Olundraal VI Moon II	7127a69dbec5b
-object:mareshavn:Mareshavn I Moon I	a589915568b7b
-object:mareshavn:Mareshavn I Moon II	69cd40f43e7aa
-object:mareshavn:Mareshavn II Moon I	d24e1bbf0da1c
-object:mareshavn:Mareshavn II Moon II	1e6d2fb1584478
-object:mareshavn:Kellun I	4beb7208f6b61
-object:mareshavn:Kellun II	137e0614a08a30
-object:mareshavn:Kellun III	9237fed612ddf
-object:mareshavn:Mareshavn IV Moon I	1e245488ac475f
-object:mareshavn:Mareshavn V Moon I	3416498c85394
-object:mareshavn:Selk I	200874fd721f7
-object:mareshavn:Selk II	1f9bea9915bbfb
-object:mareshavn:Mareshavn VII Moon I	1b6fc7da974b3d
-object:mareshavn:Mareshavn VII Moon II	adf77ef724961
-object:mareshavn:Mareshavn VIII Moon I	1110f037021d28
-object:mareshavn:Mareshavn VIII Moon II	140c8c18e463d1
-object:daatren:Daatren I Moon I	662cfd74e12b3
-object:daatren:Daatren II Moon I	17ee11b76d2243
-object:daatren:Feraash I	b7d8d6febdb0d
-object:daatren:Feraash II	5e7d553bc87dd
-object:daatren:Daatren IV Moon I	1e169a8abf6783
-object:daatren:Daatren IV Moon II	11c7a87332fab0
-object:daatren:Rood I	1fc47cdafcb7d1
-object:daatren:Rood II	7589cf07578b2
-object:daatren:Rood III	7615f529b9534
-object:daatren:Rood IV	3c19dbfdec233
-object:daatren:Daatren VI Moon I	1676ba5c87b9e3
-object:daatren:Daatren VI Moon II	117695899df552
-object:daatren:Daatren VII Moon I	1673f189d09978
-object:esdarveen:Esdarveen I Moon I	1e4cca82176e48
-object:esdarveen:Ishava I	102770a0094567
-object:esdarveen:Ishava II	804d32ebece76
-object:esdarveen:Esdarveen III Moon I	1c84514f5585d0
-object:esdarveen:Esdarveen III Moon II	14e680c147a278
-object:esdarveen:Korr I	dcaf506b6de12
-object:esdarveen:Korr II	f3d7effcf2ebe
-object:esdarveen:Korr III	2d3caa01db0ab
-object:esdarveen:Korr IV	15ff22d8d2e359
-object:esdarveen:Korr V	18708a96079c
-object:zyravel:Zyravel I Moon I	1c0e6e84d38854
-object:zyravel:Zyravel II Moon I	140bb8981fe9eb
-object:zyravel:Embrava I	e50820a2a91c4
-object:zyravel:Avessa I	37a33480fb1e3
-object:zyravel:Avessa II	173780dbb006fd
-object:zyravel:Zyravel V Moon I	1eed1238b4c2f9
-object:zyravel:Zyravel V Moon II	c68d84b902bed
-object:zyravel:Zyravel VI Moon I	10a08674ba1ae
-object:zyravel:Zyravel VI Moon II	1dcc052063c0f4
-object:zyravel:Tormaun I	183c6c0d6f1f69
-object:zyravel:Tormaun II	f4b3766c97ae2
-object:zyravel:Tormaun III	1f00dfffb4c4db
-object:zyravel:Tormaun IV	fd3b1844df282
-object:zyravel:Tormaun V	b2fc1331e82fc
-object:zyravel:Zyravel VIII Moon I	1f6afe2231c038
-object:tessadaal:Tessadaal I Moon I	9c2edfe80b27c
-object:tessadaal:Tessadaal I Moon II	14eb086f03d6df
-object:tessadaal:Riesa I	1564f5469e1cf9
-object:tessadaal:Riesa II	a314e3d30b2ec
-object:tessadaal:Tessadaal III Moon I	ddd9e38edde46
-object:tessadaal:Bellun I	4cbebc75ae28b
-object:tessadaal:Bellun II	18229031554354
-object:tessadaal:Tessadaal V Moon I	c83c58ad26fe8
-object:tessadaal:Tessadaal V Moon II	48927152cac48
-object:hadresh:Hadresh I Moon I	180ffde0475f82
-object:hadresh:Hadresh I Moon II	1ce3b16727b9cb
-object:hadresh:Hadresh II Moon I	7b0325dfac352
-object:hadresh:Hadresh II Moon II	bb4cbb1ce6ce
-object:hadresh:Ovira I	13584efce81ad8
-object:hadresh:Ovira II	166b5b8fa14219
-object:hadresh:Hadresh IV Moon I	1a59fa033009a1
-object:hadresh:Hadresh IV Moon II	7eaeff20ed502
-object:hadresh:Olth I	637514eb73988
-object:hadresh:Olth II	9548d2ca5008a
-object:hadresh:Olth III	1d8ce1ca43eb79
-object:hadresh:Olth IV	1b0cdd492f7cae
-object:hadresh:Olth V	728c7f89b2996
-object:hadresh:Hadresh VI Moon I	1af3b2cf4231e1
-object:hadresh:Hadresh VI Moon II	e9047e73ac10
-object:ossendaal:Ossendaal I Moon I	1b77f5d756cc12
-object:ossendaal:Ossendaal I Moon II	ca191ce39efc6
-object:ossendaal:Veesk I	140f9b387ed607
-object:ossendaal:Ossendaal III Moon I	66ca8fde49881
-object:ossendaal:Ossendaal III Moon II	6696fae281132
-object:ossendaal:Nenn I	dbb825b1c0993
-object:ossendaal:Nenn II	82a142166812f
-object:ossendaal:Nenn III	942f17c0f3643
-object:ossendaal:Nenn IV	1458b5783295b0
-object:ossendaal:Ossendaal V Moon I	756d6daeff06b
-object:ossendaal:Ossendaal V Moon II	1fd473e500a59d
-object:varetiraak:Varetiraak I Moon I	1ec09f04e0202f
-object:varetiraak:Varetiraak I Moon II	10afafcbbdc75c
-object:varetiraak:Varetiraak II Moon I	7a6122a92f728
-object:varetiraak:Torava I	12258ed09ee770
-object:varetiraak:Sordane I	1c1ae1426f670e
-object:varetiraak:Sordane II	1211562aace531
-object:varetiraak:Sordane III	16391e021d29ef
-object:varetiraak:Varetiraak V Moon I	18fc1d5ddf5827
-object:varetiraak:Varetiraak VI Moon I	8a75c9f64a8e0
-object:varetiraak:Varetiraak VI Moon II	8958c7dc01791
-object:varetiraak:Vekraun I	1e28c914f656f
-object:varetiraak:Vekraun II	a0a4cab6cd90b
-object:varetiraak:Vekraun III	1bff35ff005bd2
-object:varetiraak:Vekraun IV	1a4b055bea9dd2
-object:varetiraak:Varetiraak VIII Moon I	1f8cd805313f29
-object:varetiraak:Varetiraak VIII Moon II	14b46d4c647fa3
-object:talvenstaad:Talvenstaad I Moon I	d262baca47bab
-object:talvenstaad:Talvenstaad I Moon II	6592eab22d94d
-object:talvenstaad:Talvenstaad II Moon I	1d8e6fc69af420
-object:talvenstaad:Havira I	b1965b64ff2ec
-object:talvenstaad:Talvenstaad IV Moon I	13570260420c5c
-object:talvenstaad:Istren I	48ad4b8132e38
-object:talvenstaad:Istren II	575652b765db2
-object:talvenstaad:Talvenstaad VI Moon I	141c4d41b9c832
-object:talvenstaad:Talvenstaad VI Moon II	af214f94b282e
-object:kordabruk:Kordabruk I Moon I	1e61f70157b8b1
-object:kordabruk:Kordabruk I Moon II	bec72628dfd54
-object:kordabruk:Kordabruk II Moon I	fbf8714ecd47c
-object:kordabruk:Kordabruk II Moon II	5190d63c55486
-object:kordabruk:Sevaari I	167d66a00f21b1
-object:kordabruk:Sevaari II	8eed9b3ec638
-object:kordabruk:Sevaari III	15cf5f326d549c
-object:kordabruk:Kordabruk IV Moon I	1583edb70c99a6
-object:kordabruk:Kordabruk V Moon I	1517ffce6829cf
-object:kordabruk:Ysil I	168893c214f13c
-object:kordabruk:Ysil II	8023fb83a97c6
-object:kordabruk:Ysil III	1bc01dbf2c88fc
-object:kordabruk:Kordabruk VII Moon I	316b0bc6861b1
-object:retharaas:Retharaas I Moon I	1af513fcb869
-object:retharaas:Retharaas I Moon II	365fa8e86c5c
-object:retharaas:Faera I	181cf4177178e8
-object:retharaas:Faera II	104084cf67efa
-object:retharaas:Retharaas III Moon I	106e4187b6f59d
-object:retharaas:Retharaas III Moon II	13f517ffe0739
-object:retharaas:Zorren I	1c2069614ad63
-object:retharaas:Zorren II	d19bc82c5ea0c
-object:retharaas:Zorren III	1ee46d9a310209
-object:retharaas:Zorren IV	14b32135fb76db
-object:retharaas:Zorren V	7de9afd45be0
-object:retharaas:Retharaas V Moon I	958213f7ef27c
-object:retharaas:Retharaas V Moon II	a1bc6b752c077
-object:velisharn:Velisharn I Moon I	505ff26481ef5
-object:velisharn:Velisharn II Moon I	16fadec8de963
-object:velisharn:Velisharn III Moon I	b9721bbdcd0b2
-object:velisharn:Velisharn III Moon II	15fc50c4b37a83
-object:velisharn:Kiraave I	a47476dcaf19f
-object:velisharn:Velisharn V Moon I	4f7af1ce785f7
-object:velisharn:Orrel I	164d585efa0462
-object:velisharn:Orrel II	22d5bd3f0641d
-object:velisharn:Velisharn VII Moon I	198c751a18be43
-object:velisharn:Velisharn VIII Moon I	1eb379dfdd25a7
-object:velisharn:Velisharn VIII Moon II	15ac4461b88e88
-object:odraask:Odraask I Moon I	17f0ccafeff86
-object:odraask:Koodai I	1b040260b43865
-object:odraask:Odraask III Moon I	863298976ec6c
-object:odraask:Usk I	8b85229ebf238
-object:odraask:Usk II	11c9f7333ff47a
-object:odraask:Usk III	1d93ea5b5e6787
-object:odraask:Usk IV	1a6a8d72f43008
-object:nydrelvaal:Nydrelvaal I Moon I	9eb65e34e0c4a
-object:nydrelvaal:Nydrelvaal I Moon II	1c7b93a53430b4
-object:nydrelvaal:Jaaval I	ba0bba0696153
-object:nydrelvaal:Jaaval II	312d6fc0f4e3b
-object:nydrelvaal:Nydrelvaal III Moon I	1662f695548825
-object:nydrelvaal:Nydrelvaal IV Moon I	11bdfcf0c87393
-object:nydrelvaal:Mazel I	1251a7a27ca7e9
-object:nydrelvaal:Mazel II	60b9abb98c914
-object:nydrelvaal:Mazel III	1502661c3ba680
-object:nydrelvaal:Mazel IV	187fcbb8fa6f0e
-object:karaad:Karaad I Moon I	1f3ee9567ba410
-object:karaad:Karaad II Moon I	1607fa64fb0b57
-object:karaad:Karaad II Moon II	1b7a225803658d
-object:karaad:Shavern I	9d217cce3c690
-object:karaad:Karaad IV Moon I	1d9cd47a6e45cf
-object:karaad:Adul I	4898d75b27147
-object:karaad:Adul II	9069b678021ee
-object:karaad:Karaad VI Moon I	11c88054e1db17
-object:eshdaanvek:Eshdaanvek I Moon I	1c9d56695ed6e2
-object:eshdaanvek:Eshdaanvek I Moon II	e2b22cb13b8eb
-object:eshdaanvek:Eshdaanvek II Moon I	ae7be4014271f
-object:eshdaanvek:Loorai I	278bb3fad8951
-object:eshdaanvek:Loorai II	1d546a563f8f67
-object:eshdaanvek:Eshdaanvek IV Moon I	16c4936d381786
-object:eshdaanvek:Eshdaanvek V Moon I	956bb5ad9acba
-object:eshdaanvek:Drall I	204c1d6f42d0f
-object:eshdaanvek:Drall II	bf0d879949797
-object:eshdaanvek:Drall III	bcd2e675ff7d1
-object:eshdaanvek:Eshdaanvek VII Moon I	1619616ebd2391
-object:eshdaanvek:Eshdaanvek VII Moon II	75dc6bd9beaf4
-object:yrdana:Yrdana I Moon I	49a6bcd8141f0
-object:yrdana:Yrdana II Moon I	13b3f5b971a24f
-object:yrdana:Yrdana II Moon II	163e7153658e30
-object:yrdana:Preshik I	19d0e4a92de15c
-object:yrdana:Yrdana IV Moon I	4861fd6bd0a9f
-object:yrdana:Ulm I	1493311240eaf6
-object:yrdana:Ulm II	150d056b41751b
-object:yrdana:Ulm III	84ec7846c468b
-object:yrdana:Ulm IV	27377be9514be
-object:irdaal:Irdaal I Moon I	12eefbf2e31e7a
-object:irdaal:Irdaal I Moon II	6fbde86e07ab9
-object:irdaal:Shaaluk I	7740bb8fe65a5
-object:irdaal:Shaaluk II	ef132b9d07279
-object:irdaal:Shaaluk III	43ca1a0dbbd64
-object:irdaal:Irdaal III Moon I	1f1e0c4bb499d2
-object:irdaal:Vohr I	12c220d19da1b8
-object:irdaal:Vohr II	8beee1d5b49ad
-station:avendon:Ouua TORA-01	1d223d380d9937
-station:avendon:Ouua TORA-02	115f3b52b09372
-station:kraunveld:Kraunveld TORA-01	ddb06950f4f30
-station:kraunveld:Kraunveld TORA-02	b743616cccb3
-station:delvabruk:Delvabruk TORA-01	1680d9b8d85d60
-station:delvabruk:Delvabruk TORA-02	202aaa5fdcabd
-station:ildara:Ildara TORA-01	1d1e0c3a4facf9
-station:ildara:Ildara TORA-02	521c3c3fe6b65
-station:zhaur:Zhaur TORA-01	19565e5ca97861
-station:zhaur:Zhaur TORA-02	e8e49b5007628
-station:sorellvaik:Sorellvaik TORA-01	1f729023fa194
-station:adraask:Adraask TORA-01	1242a8c7b15891
-station:vaidanstaad:Vaidanstaad TORA-01	2a4ee9426ad11
-station:vaidanstaad:Vaidanstaad TORA-02	1292e0846d09fd
-station:edraanvek:Edraanvek TORA-01	35b00353a7762
-station:edraanvek:Edraanvek TORA-02	1532ef150bd607
-station:zeldabruk:Zeldabruk TORA-01	12440706271b82
-station:namaaris:Namaaris TORA-01	32751ecced450
-station:odelhavn:Odelhavn TORA-01	18fd0319034289
-station:ruun:Ruun TORA-01	185b203e897c91
-station:peladaun:Peladaun TORA-01	1e50cfed7d6940
-station:peladaun:Peladaun TORA-02	10b3f8cbee2523
-station:iskarraas:Iskarraas TORA-01	e5728a881e0f6
-station:dovrendaal:Dovrendaal TORA-01	10c77daac8cdbe
-station:ortaashaad:Ortaashaad TORA-01	19e9cd19a668ef
-station:ortaashaad:Ortaashaad TORA-02	4e8527b4ca718
-station:saarbruk:Saarbruk TORA-01	e485f2f99d234
-station:saarbruk:Saarbruk TORA-02	15c64f5bc3a3bd
-station:kalyrveen:Kalyrveen TORA-01	bb7143970df1f
-station:kalyrveen:Kalyrveen TORA-02	1c5288ba1c5aa6
-station:teradaun:Teradaun TORA-01	152514f07030d0
-station:teradaun:Teradaun TORA-02	11eefa07347db1
-station:neretvaal:Neretvaal TORA-01	dc8111855f783
-station:vessarik:Vessarik TORA-01	448af39d36f29
-station:olundraal:Olundraal TORA-01	7a011b85616a8
-station:mareshavn:Mareshavn TORA-01	49be72b831c56
-station:daatren:Daatren TORA-01	e88d684bcaf94
-station:esdarveen:Esdarveen TORA-01	75cf9252720b3
-station:zyravel:Zyravel TORA-01	1a693061fffffe
-station:zyravel:Zyravel TORA-02	151bd09a22c0aa
-station:tessadaal:Tessadaal TORA-01	14bdaa2257a3ca
-station:hadresh:Hadresh TORA-01	15e595c64097cb
-station:ossendaal:Ossendaal TORA-01	1e14b287f104f1
-station:varetiraak:Varetiraak TORA-01	8958ba16b499f
-station:varetiraak:Varetiraak TORA-02	f3d82fb528afd
-station:talvenstaad:Talvenstaad TORA-01	18ef8cb22abd00
-station:talvenstaad:Talvenstaad TORA-02	45b045c6c7587
-station:kordabruk:Kordabruk TORA-01	1fd2ae8740bf0d
-station:kordabruk:Kordabruk TORA-02	1eea081de312d2
-station:retharaas:Retharaas TORA-01	561620de5f954
-station:retharaas:Retharaas TORA-02	1ed2ab945c0c12
-station:velisharn:Velisharn TORA-01	17dad498161da0
-station:odraask:Odraask TORA-01	60fc3b1fb7360
-station:odraask:Odraask TORA-02	1d71a3852ab76a
-station:nydrelvaal:Nydrelvaal TORA-01	1ac17fc6d305d3
-station:karaad:Karaad TORA-01	cad953830293c
-station:eshdaanvek:Eshdaanvek TORA-01	1dc3bf21d929d9
-station:yrdana:Yrdana TORA-01	1dc97bc0323d9a
-station:irdaal:Irdaal TORA-01	1a84147faea8a2
-station:avendon:Ouua Works 01	1920e6256a24d6
-station:avendon:Ouua Watch 02	18954313411cf6
-station:avendon:Ouua Observatory 03	6fbb8fb9d6be4
-station:avendon:Ouua Watch 04	326bed43c5c61
-station:avendon:Ouua Habitat 06	5e73059eb1863
-station:avendon:Ouua Dock 07	1d4fb27b1b0dda
-station:avendon:Ouua Watch 08	cbe544774aee6
-station:avendon:Ouua Watch 09	1c8123b3600e9c
-station:avendon:Ouua Observatory 10	1f7bfb3f3b5fe7
-station:avendon:Ouua Battery 11	168958e62a41e0
-station:avendon:Ouua Works 13	14210a049b19bc
-station:avendon:Ouua Watch 15	167a8a3fb2cf06
-station:avendon:Ouua Habitat 17	42e9d2899dbae
-station:avendon:Ouua Habitat 19	16bedf1096f12b
-station:avendon:Ouua Works 25	12fc2139141ace
-station:avendon:Ouua Dock 26	eceee69a82134
-station:avendon:Ouua Works 30	aad0cab7d80aa
-station:avendon:Ouua Works 32	166b5241152533
-station:avendon:Ouua Works 36	107b5c0cde3cc8
-station:avendon:Ouua Works 37	13f9ec1472acd2
-station:avendon:Ouua Works 42	122e54be1fda9a
-station:avendon:Ouua Works 43	29c735c64b903
-station:kraunveld:Kraunveld Works 01	109dfc1eb9f8f0
-station:kraunveld:Kraunveld Watch 02	e73c81912ea7c
-station:kraunveld:Kraunveld Dock 03	9490f5051f5f
-station:kraunveld:Kraunveld Habitat 05	1179d922c3d494
-station:kraunveld:Kraunveld Works 06	13e0026b5c03aa
-station:kraunveld:Kraunveld Battery 10	cd1092e7a1a91
-station:kraunveld:Kraunveld Observatory 15	f1e0cfee2fdbc
-station:delvabruk:Delvabruk Dock 01	4c6a14e626419
-station:delvabruk:Delvabruk Watch 02	146308ab4d8e42
-station:delvabruk:Delvabruk Observatory 03	ee6f25a107479
-station:delvabruk:Delvabruk Habitat 05	73540d23c31ab
-station:delvabruk:Delvabruk Works 06	eaa6051cf2fcd
-station:delvabruk:Delvabruk Works 07	4d4913bfc5a4
-station:delvabruk:Delvabruk Battery 10	df906c70a16c3
-station:delvabruk:Delvabruk Habitat 11	1fc0a28f96f717
-station:delvabruk:Delvabruk Battery 12	e86fdf2e48047
-station:delvabruk:Delvabruk Habitat 17	129173da4c0ef3
-station:delvabruk:Delvabruk Works 18	760220dfde417
-station:delvabruk:Delvabruk Habitat 19	12f6dbe2f02113
-station:delvabruk:Delvabruk Habitat 31	151f1155452ee2
-station:ildara:Ildara Dock 01	f24b63669ae80
-station:ildara:Ildara Watch 02	112733400002b3
-station:ildara:Ildara Observatory 03	91a16c3defae6
-station:ildara:Ildara Observatory 04	10db05da9c510a
-station:ildara:Ildara Battery 06	462a1324a6fe9
-station:ildara:Ildara Habitat 07	88ef3f3b232d9
-station:ildara:Ildara Works 14	e41de349cbfaf
-station:ildara:Ildara Observatory 15	702be400ceeb6
-station:zhaur:Zhaur Habitat 01	178b596b6035e1
-station:zhaur:Zhaur Works 02	1893822ab3bd19
-station:zhaur:Zhaur Watch 03	a122dddbdde56
-station:zhaur:Zhaur Battery 05	11dcca58f67a7b
-station:zhaur:Zhaur Works 07	18d9c166fa3211
-station:zhaur:Zhaur Dock 09	65761aa3e9ba8
-station:zhaur:Zhaur Observatory 10	1a86ad9287c58a
-station:zhaur:Zhaur Battery 11	1b7379a9d86ee5
-station:zhaur:Zhaur Habitat 12	14be602cc56c2e
-station:zhaur:Zhaur Works 14	d7b6691d71e2d
-station:zhaur:Zhaur Works 19	1609c439df6e13
-station:zhaur:Zhaur Habitat 23	101042c378d09f
-station:zhaur:Zhaur Works 24	1b7865c358b7fe
-station:zhaur:Zhaur Habitat 25	1328e826283e0d
-station:sorellvaik:Sorellvaik Dock 01	4919fc07cf436
-station:sorellvaik:Sorellvaik Watch 02	f15415552af99
-station:sorellvaik:Sorellvaik Observatory 03	3e60ab64defcc
-station:sorellvaik:Sorellvaik Habitat 05	b2b4a2e6655b4
-station:sorellvaik:Sorellvaik Works 06	1970e1e1457387
-station:sorellvaik:Sorellvaik Works 07	c1d9784cb41ee
-station:sorellvaik:Sorellvaik Dock 14	15e0466b76a6a5
-station:adraask:Adraask Works 01	be6da12deba3e
-station:adraask:Adraask Watch 02	19bf6b0ec0a163
-station:adraask:Adraask Dock 03	1e3088b1adb14b
-station:adraask:Adraask Battery 04	e9f03d87eeec7
-station:adraask:Adraask Habitat 06	a43c8fa838535
-station:adraask:Adraask Dock 07	1a6ee603f37b84
-station:vaidanstaad:Vaidanstaad Dock 01	cfc712daf34fe
-station:vaidanstaad:Vaidanstaad Dock 02	fff6381525e14
-station:vaidanstaad:Vaidanstaad Watch 03	1f4b620f6e46c9
-station:vaidanstaad:Vaidanstaad Habitat 05	17cafdc8e224de
-station:vaidanstaad:Vaidanstaad Dock 07	1639757ba95a47
-station:vaidanstaad:Vaidanstaad Dock 09	3275e97cbc5a9
-station:vaidanstaad:Vaidanstaad Observatory 10	145516c134fa9
-station:vaidanstaad:Vaidanstaad Battery 12	1220492a901c65
-station:vaidanstaad:Vaidanstaad Dock 14	f212a6d17ebfd
-station:vaidanstaad:Vaidanstaad Works 19	8f0f374bb30a7
-station:edraanvek:Edraanvek Dock 01	5e29b8955f3c
-station:edraanvek:Edraanvek Works 02	11000608af210f
-station:edraanvek:Edraanvek Observatory 03	614e44ed049e7
-station:edraanvek:Edraanvek Battery 06	f6e71d34aee9
-station:edraanvek:Edraanvek Watch 09	7ee249a3d1b06
-station:edraanvek:Edraanvek Habitat 11	18a3fe119a7c89
-station:edraanvek:Edraanvek Works 12	a7f93d8a42937
-station:zeldabruk:Zeldabruk Habitat 01	2328205cb749d
-station:zeldabruk:Zeldabruk Works 02	496c96b1bd657
-station:zeldabruk:Zeldabruk Observatory 03	c22c52dcb9b2a
-station:zeldabruk:Zeldabruk Watch 04	18a4d88b769db7
-station:zeldabruk:Zeldabruk Dock 08	b66b6d7262833
-station:zeldabruk:Zeldabruk Dock 13	1cdb21a3e549cd
-station:namaaris:Namaaris Dock 01	ac1165edc6e91
-station:namaaris:Namaaris Watch 02	9177ba2726769
-station:namaaris:Namaaris Dock 03	523ce6885d10a
-station:namaaris:Namaaris Works 06	17c0a90c3ffecf
-station:namaaris:Namaaris Dock 08	1735cd72583e4a
-station:namaaris:Namaaris Habitat 11	1b4ba1bc682f4f
-station:namaaris:Namaaris Battery 12	d0205b079a419
-station:odelhavn:Odelhavn Works 01	6dc6d6cf0bbbd
-station:odelhavn:Odelhavn Watch 02	1689fbba5c6c8f
-station:odelhavn:Odelhavn Battery 06	24d142bfeb131
-station:odelhavn:Odelhavn Works 07	1492498439429f
-station:ruun:Ruun Works 01	122e4df3dd1c76
-station:ruun:Ruun Dock 02	4fb784697c0f3
-station:ruun:Ruun Habitat 06	b3ecbc380c9e
-station:peladaun:Peladaun Dock 01	10e46f109cecc1
-station:peladaun:Peladaun Works 02	1a425592412042
-station:peladaun:Peladaun Observatory 04	2e09f32637147
-station:peladaun:Peladaun Watch 10	1e511dcf47314
-station:peladaun:Peladaun Habitat 12	5b666189a3a68
-station:peladaun:Peladaun Habitat 13	10e13689e9bc03
-station:peladaun:Peladaun Battery 16	ae5bfcc74425b
-station:iskarraas:Iskarraas Dock 01	16b102002f22d0
-station:iskarraas:Iskarraas Works 02	71a4f57e317ab
-station:iskarraas:Iskarraas Observatory 05	138adccf2a85bb
-station:iskarraas:Iskarraas Habitat 07	10da2d146e36ce
-station:dovrendaal:Dovrendaal Works 01	91732bcfccf0
-station:dovrendaal:Dovrendaal Dock 03	198ac88c321ced
-station:dovrendaal:Dovrendaal Battery 04	71f3b66a2253d
-station:dovrendaal:Dovrendaal Watch 09	17375f005d4c8e
-station:dovrendaal:Dovrendaal Observatory 10	1e2fe55d10b151
-station:ortaashaad:Ortaashaad Dock 01	3fc6c334a8766
-station:ortaashaad:Ortaashaad Works 02	ee63d626eccd5
-station:ortaashaad:Ortaashaad Observatory 03	15c63b6d4618e6
-station:ortaashaad:Ortaashaad Habitat 05	10c8a43c51a740
-station:ortaashaad:Ortaashaad Works 06	1015500365342e
-station:ortaashaad:Ortaashaad Works 07	67177286eebcb
-station:ortaashaad:Ortaashaad Watch 09	8d24029f2d067
-station:ortaashaad:Ortaashaad Habitat 11	2fa4f0a51cb42
-station:ortaashaad:Ortaashaad Habitat 12	1b898d0aadedf9
-station:ortaashaad:Ortaashaad Battery 18	182c3ab167d816
-station:ortaashaad:Ortaashaad Habitat 24	4ec8551ba54b9
-station:ortaashaad:Ortaashaad Habitat 25	d04235d4285ea
-station:saarbruk:Saarbruk Works 01	7e84a7d583838
-station:saarbruk:Saarbruk Watch 02	1fb1137c9e2bc4
-station:saarbruk:Saarbruk Watch 03	1b8dd75606310b
-station:saarbruk:Saarbruk Observatory 04	1a69f7dc97560d
-station:saarbruk:Saarbruk Observatory 05	5cad35c5f3e9e
-station:saarbruk:Saarbruk Battery 06	a88fe2c96fadc
-station:saarbruk:Saarbruk Dock 07	74d6419926ffc
-station:saarbruk:Saarbruk Works 08	1753c85a1cecbd
-station:saarbruk:Saarbruk Observatory 21	e2d7b974c15d2
-station:kalyrveen:Kalyrveen Works 01	166b7950b31a28
-station:kalyrveen:Kalyrveen Works 02	e8cd6c9ba8108
-station:kalyrveen:Kalyrveen Dock 03	1011bb154285d4
-station:kalyrveen:Kalyrveen Observatory 05	47db15c6eeabb
-station:kalyrveen:Kalyrveen Habitat 07	17d7590cd97d3c
-station:kalyrveen:Kalyrveen Watch 08	1d2794c213444f
-station:kalyrveen:Kalyrveen Watch 09	a640aba2ed744
-station:kalyrveen:Kalyrveen Battery 10	1eb804e5ae2641
-station:teradaun:Teradaun Habitat 01	198ee24b215b90
-station:teradaun:Teradaun Watch 02	1dbb4705a9221
-station:teradaun:Teradaun Observatory 03	1ac03a79a61d4c
-station:teradaun:Teradaun Watch 10	1fd488439bedaf
-station:teradaun:Teradaun Battery 11	1e94e35d7625ca
-station:teradaun:Teradaun Habitat 12	1c7dea7a6c7a44
-station:teradaun:Teradaun Works 14	144c53ed8b8c7e
-station:neretvaal:Neretvaal Works 01	9b27a22d84e0c
-station:neretvaal:Neretvaal Works 02	b2f5b7207b59a
-station:neretvaal:Neretvaal Dock 03	110b8e8a7f6805
-station:vessarik:Vessarik Habitat 01	2492b27ce23c2
-station:vessarik:Vessarik Dock 02	13b08ec0cac4b0
-station:vessarik:Vessarik Observatory 03	1a01dfb663a0ac
-station:vessarik:Vessarik Battery 04	16923a55497b8a
-station:vessarik:Vessarik Works 08	190a7daf7f9a11
-station:vessarik:Vessarik Observatory 09	b9ffc1b4088b9
-station:vessarik:Vessarik Battery 10	1d04fadfabb87
-station:olundraal:Olundraal Dock 02	77442fcaec352
-station:olundraal:Olundraal Watch 03	101bd338e8d1d1
-station:olundraal:Olundraal Battery 04	7cb852d14a029
-station:olundraal:Olundraal Habitat 05	353c15eeee8fb
-station:olundraal:Olundraal Habitat 07	f93950ab6764e
-station:olundraal:Olundraal Works 08	1ab0305fe37b4
-station:mareshavn:Mareshavn Habitat 01	ae597215d582f
-station:mareshavn:Mareshavn Works 02	1537898d92b478
-station:mareshavn:Mareshavn Watch 04	1a5aa115573eaa
-station:mareshavn:Mareshavn Dock 09	4be630365cfb0
-station:mareshavn:Mareshavn Observatory 10	2bb00d500600b
-station:daatren:Daatren Works 01	1b33505304890b
-station:daatren:Daatren Watch 02	16c605b8f217bb
-station:daatren:Daatren Habitat 05	1e0fa6a95af81
-station:daatren:Daatren Observatory 09	19cca284213b4c
-station:daatren:Daatren Dock 13	a377675d5df0f
-station:esdarveen:Esdarveen Habitat 01	8e7aafefea640
-station:esdarveen:Esdarveen Watch 02	30f3dc81b0bc2
-station:esdarveen:Esdarveen Observatory 05	2970fcffedd4a
-station:esdarveen:Esdarveen Works 07	aee0a1170d3de
-station:zyravel:Zyravel Works 01	17f862858edea7
-station:zyravel:Zyravel Watch 02	e4564b25829ac
-station:zyravel:Zyravel Dock 03	102d8fdbe6a1d2
-station:zyravel:Zyravel Battery 10	2c0b910720c50
-station:zyravel:Zyravel Habitat 11	184b89e0069e0c
-station:tessadaal:Tessadaal Dock 01	12e92a9611a942
-station:tessadaal:Tessadaal Works 02	bb1854a815bc
-station:tessadaal:Tessadaal Habitat 06	1400d752176c46
-station:hadresh:Hadresh Works 01	1d85317660acd9
-station:hadresh:Hadresh Watch 02	bb6df3e5c0ce4
-station:hadresh:Hadresh Habitat 05	109c962a40d47a
-station:hadresh:Hadresh Dock 09	15ae72837185d3
-station:ossendaal:Ossendaal Habitat 01	1a0f659dde7837
-station:ossendaal:Ossendaal Works 02	1491a96e3ccb5
-station:ossendaal:Ossendaal Battery 06	1e834dedc60319
-station:varetiraak:Varetiraak Works 01	1c8d42948bbb4b
-station:varetiraak:Varetiraak Dock 03	d3890c7970e20
-station:varetiraak:Varetiraak Battery 04	100ecda4452f69
-station:varetiraak:Varetiraak Watch 08	73f7f85516145
-station:varetiraak:Varetiraak Watch 09	4fa2ae6c36a7a
-station:varetiraak:Varetiraak Watch 10	194677450ae39d
-station:varetiraak:Varetiraak Observatory 11	a8bac260f3f2c
-station:varetiraak:Varetiraak Dock 14	9cf4b7345dc3a
-station:varetiraak:Varetiraak Habitat 18	12309e8944644e
-station:talvenstaad:Talvenstaad Works 01	199814d5c59e0e
-station:talvenstaad:Talvenstaad Watch 03	1aeb3ec9a8d417
-station:talvenstaad:Talvenstaad Watch 04	7900bd12f8fae
-station:talvenstaad:Talvenstaad Habitat 05	6717365922058
-station:talvenstaad:Talvenstaad Dock 07	11ef08e84f5c02
-station:talvenstaad:Talvenstaad Watch 08	dcc7b3a4655bc
-station:kordabruk:Kordabruk Dock 01	159342678efe18
-station:kordabruk:Kordabruk Watch 02	1f9839072fd9df
-station:kordabruk:Kordabruk Battery 05	1881adfe67ac57
-station:kordabruk:Kordabruk Watch 08	13f1b01fb71664
-station:kordabruk:Kordabruk Watch 09	e849f0305eb8c
-station:retharaas:Retharaas Habitat 01	b1025474d244d
-station:retharaas:Retharaas Dock 02	c174b22fa47c7
-station:retharaas:Retharaas Battery 06	1584db6e6be5c2
-station:velisharn:Velisharn Dock 01	59d918888d860
-station:velisharn:Velisharn Dock 02	8307010402db3
-station:velisharn:Velisharn Watch 09	10bb01bd14d902
-station:velisharn:Velisharn Battery 10	b199d552bb8f7
-station:odraask:Odraask Works 01	5c6a2bc5d4bbc
-station:odraask:Odraask Dock 02	9b6e6d4982c86
-station:nydrelvaal:Nydrelvaal Works 01	e3e2b68eef414
-station:nydrelvaal:Nydrelvaal Watch 02	5b91a50b94c66
-station:karaad:Karaad Dock 01	184852a5d582a3
-station:karaad:Karaad Works 02	10d0b2dd2043bf
-station:karaad:Karaad Works 07	185ca48a3b4bd
-station:eshdaanvek:Eshdaanvek Dock 01	fc19790f7c3e8
-station:eshdaanvek:Eshdaanvek Watch 02	994f0a0f2a42a
-station:yrdana:Yrdana Habitat 01	1d7153ad7f7cb1
-station:irdaal:Irdaal Habitat 01	1265022920332a
+object:avendon:Ouua I Moon I	aa8d6c78f4c02
+object:avendon:Ouua II Moon I	cef6d37bc3027
+object:avendon:New Avendon I	d469937e8f2cb
+object:avendon:Keliss I	9b4d0f8a1a778
+object:avendon:Keliss II	16ecf920b8d740
+object:avendon:Keliss III	c31f3b094c392
+object:avendon:Ouua V Moon I	1ccc1eb31ebea4
+object:avendon:Graadun I	7f09eb2c730cf
+object:avendon:Graadun II	a72c5c34d59c0
+object:avendon:Graadun III	1d2e899f8b51e3
+object:avendon:Ouua VII Moon I	1ba2cbbbc09faf
+object:avendon:Ouua VIII Moon I	bfedfc489cc7d
+object:kraunveld:Kraunveld I Moon I	14d859f684c077
+object:kraunveld:Kraunveld II Moon I	14650a0fb4c4c9
+object:kraunveld:Vaaskel I	1c144b13d4615a
+object:kraunveld:Vaaskel II	18ae36f07df1d0
+object:kraunveld:Vaaskel III	1a27238b6c766b
+object:kraunveld:Caedrel I	1ca4123fe75ddb
+object:kraunveld:Kraunveld V Moon I	7ee0e3ef2bd72
+object:kraunveld:Kraunveld V Moon II	16dd09d6a902e1
+object:kraunveld:Morcant I	180f5f22f9509f
+object:kraunveld:Morcant II	11f4981515cd1c
+object:kraunveld:Kraunveld VII Moon I	1631fbe539b77b
+object:kraunveld:Kraunveld VII Moon II	ec1c813d0e3ad
+object:delvabruk:Delvabruk I Moon I	13570b40734e54
+object:delvabruk:Delvabruk II Moon I	19d804cf8602ab
+object:delvabruk:Delvabruk II Moon II	a1412e18ddb7d
+object:delvabruk:Briina I	1f6be1d9452812
+object:delvabruk:Briina II	7581048a07fa0
+object:delvabruk:Tavren I	199574abc8aa33
+object:delvabruk:Tavren II	18af068e19b61c
+object:delvabruk:Delvabruk V Moon I	ba4052e22616e
+object:delvabruk:Delvabruk V Moon II	1d821455cbf4ba
+object:delvabruk:Delvabruk VI Moon I	1b335141ad19e0
+object:delvabruk:Koolasch I	1dec5d64d3534b
+object:delvabruk:Koolasch II	c5e675b069d3d
+object:delvabruk:Koolasch III	b1470a94bdcb
+object:delvabruk:Koolasch IV	cbae5606797ec
+object:delvabruk:Koolasch V	4ca7556a217d7
+object:delvabruk:Delvabruk VIII Moon I	1fdbf3c8c2805c
+object:delvabruk:Delvabruk IX Moon I	1d142eda163682
+object:ildara:Ildara I Moon I	4586e3b5b0040
+object:ildara:Virel I	1e23cee1d6bb83
+object:ildara:Virel II	def45e82c7f22
+object:ildara:Vestra I	2ed198fb41c81
+object:ildara:Ildara IV Moon I	13b3ab3b537cd1
+object:ildara:Ildara IV Moon II	e7fc5690fbe28
+object:ildara:Oth I	197d0e32296c99
+object:ildara:Oth II	50c1c33d0044b
+object:ildara:Ildara VI Moon I	f3321c2ccd234
+object:ildara:Ildara VI Moon II	75395e7036186
+object:zhaur:Zhaur I Moon I	4fcb95eaddf5
+object:zhaur:Zhaur II Moon I	1d7c5003d0c627
+object:zhaur:Zhaur II Moon II	1c5f6d8426e3bd
+object:zhaur:Ysh Zaħah I	4b230047081a5
+object:zhaur:Ysh Zaħah II	17650e5b5839dd
+object:zhaur:Ysh Mereth I	be353ddf0dda8
+object:zhaur:Ysh Mereth II	8352a6f5350c1
+object:zhaur:Zhaur V Moon I	14a115b7320c9b
+object:zhaur:Thazhur I	a949dd11d1f8e
+object:zhaur:Thazhur II	1e2bffd8ba7995
+object:zhaur:Thazhur III	c0d10d66670d9
+object:zhaur:Zhaur VII Moon I	12121c916b94d8
+object:zhaur:Zhaur VII Moon II	125701d0532482
+object:zhaur:Zhaur VIII Moon I	5f7bfed48fe40
+object:zhaur:Zhaur VIII Moon II	7a27199233c72
+object:sorellvaik:Sorellvaik I Moon I	ca9e960b74e3d
+object:sorellvaik:Sorellvaik I Moon II	180d8656db0bf8
+object:sorellvaik:Draaja I	768f57005e8b4
+object:sorellvaik:Sorellvaik III Moon I	1f4f04be08dc87
+object:sorellvaik:Sorellvaik IV Moon I	1de5e1f8a49de8
+object:sorellvaik:Sorellvaik IV Moon II	1d2a4bb3360304
+object:sorellvaik:Veluune I	104a84ea9f89a1
+object:sorellvaik:Veluune II	76c949864b95a
+object:sorellvaik:Veluune III	2f328c83b8d1
+object:sorellvaik:Veluune IV	1564149fb3e729
+object:sorellvaik:Veluune V	18731104281633
+object:sorellvaik:Sorellvaik VI Moon I	b6ee6d22253e4
+object:adraask:Adraask I Moon I	5e29d59367c65
+object:adraask:Loovai I	13fe9ada682f62
+object:adraask:Loovai II	18be3d8769a0eb
+object:adraask:Adraask III Moon I	6c050f2de55cf
+object:adraask:Adraask III Moon II	44ef08d54de11
+object:adraask:Vos I	157125e6b3f2bc
+object:adraask:Vos II	2cb8bb47155aa
+object:adraask:Adraask V Moon I	140d1031e2d74b
+object:adraask:Adraask V Moon II	1b36aed402f5f0
+object:vaidanstaad:Vaidanstaad I Moon I	1c3c40bb9e2741
+object:vaidanstaad:Vaidanstaad II Moon I	148eebebb0346
+object:vaidanstaad:Erelva I	be1e3c27f4d6
+object:vaidanstaad:Erelva II	17d62cf4ba291c
+object:vaidanstaad:Eless I	12b7d487ddade9
+object:vaidanstaad:Eless II	1baf7583ed83e9
+object:vaidanstaad:Vaidanstaad V Moon I	648f20d290db8
+object:vaidanstaad:Vaidanstaad V Moon II	5152983e636a0
+object:vaidanstaad:Vaidanstaad VI Moon I	7cf2366079147
+object:vaidanstaad:Krauss I	d3ce762f5e4f5
+object:vaidanstaad:Krauss II	11f8319f50ce69
+object:vaidanstaad:Krauss III	1025eca2c023b3
+object:vaidanstaad:Vaidanstaad VIII Moon I	1750510dfb189e
+object:edraanvek:Edraanvek I Moon I	cde8e15a03697
+object:edraanvek:Edraanvek II Moon I	ce370df13bf56
+object:edraanvek:Edraanvek II Moon II	5e0770aa6dcba
+object:edraanvek:Keerava I	cfbc0663a7e4a
+object:edraanvek:Keerava II	1640e4a09c10a5
+object:edraanvek:Edraanvek IV Moon I	2f757f86c5668
+object:edraanvek:Edraanvek V Moon I	17bdf5b4a3c33f
+object:edraanvek:Bront I	b53630170ab53
+object:edraanvek:Bront II	18d9d9ae41e67
+object:edraanvek:Bront III	1eb4f5a4baa4b7
+object:edraanvek:Bront IV	162f5001960268
+object:edraanvek:Edraanvek VII Moon I	e52badeabd62
+object:zeldabruk:Zeldabruk I Moon I	107eba955c5ec3
+object:zeldabruk:Ireen I	1df6f67db27846
+object:zeldabruk:Ireen II	5a63232f0ec88
+object:zeldabruk:Ireen III	e111320e4b270
+object:zeldabruk:Zeldabruk III Moon I	d685672fa4dc
+object:zeldabruk:Zeldabruk III Moon II	d1d49d936b13c
+object:zeldabruk:Mardel I	1edf790e48d7f4
+object:zeldabruk:Mardel II	3d7722e3dfce8
+object:zeldabruk:Mardel III	14be9fd4653960
+object:zeldabruk:Zeldabruk V Moon I	11895a7b0e26f1
+object:zeldabruk:Zeldabruk VI Moon I	1f19c2b4cab9e
+object:namaaris:Namaaris I Moon I	a9e6f9c9c2b21
+object:namaaris:Namaaris II Moon I	46fecdfda8a7b
+object:namaaris:Namaaris II Moon II	1440dd884a9cfa
+object:namaaris:Kresha I	29cb3a2f12e76
+object:namaaris:Kresha II	18106a876a22c2
+object:namaaris:Kresha III	45939f4f821f3
+object:namaaris:Ossen I	5360d51c834cb
+object:namaaris:Ossen II	16a8d17c42bd6f
+object:namaaris:Ossen III	148896e71805df
+object:namaaris:Namaaris V Moon I	d00bc862a2aed
+object:namaaris:Namaaris VI Moon I	12756c55af2ffe
+object:namaaris:Namaaris VI Moon II	17df18fda2114b
+object:namaaris:Uld I	ba8d260737004
+object:namaaris:Uld II	1d95cc937c1dec
+object:namaaris:Uld III	27add65cdd2f5
+object:namaaris:Uld IV	10621ed8aa34e4
+object:namaaris:Namaaris VIII Moon I	464508e8e4e9c
+object:namaaris:Namaaris IX Moon I	1e566b6e0a97ec
+object:odelhavn:Odelhavn I Moon I	4851905e2eae2
+object:odelhavn:Savaal I	1977df66a29f7f
+object:odelhavn:Savaal II	18d99193fa2360
+object:odelhavn:Savaal III	f62793de8b69d
+object:odelhavn:Odelhavn III Moon I	164fed0e0ebffe
+object:odelhavn:Odelhavn III Moon II	166211d1181aa
+object:odelhavn:Odelhavn IV Moon I	e6bf23bc54fc5
+object:odelhavn:Odelhavn IV Moon II	14d51c3cfeba9b
+object:odelhavn:Booren I	15c5f6bb559a33
+object:odelhavn:Booren II	165c00c371ea3e
+object:odelhavn:Booren III	ee0af9bd744cf
+object:odelhavn:Booren IV	17d5f5543a680f
+object:odelhavn:Booren V	1fcc4f061fe1db
+object:ruun:Ruun I Moon I	11ea45c335993f
+object:ruun:Tervesh I	b22ea2da028f1
+object:ruun:Ruun III Moon I	1500b824c623a4
+object:ruun:Halden I	d42bcf6e2732c
+object:ruun:Halden II	9b987e52fe0f2
+object:ruun:Halden III	5c3dfc5ae498c
+object:ruun:Halden IV	b1469a46efa94
+object:ruun:Halden V	169f681c1f59ec
+object:peladaun:Peladaun I Moon I	14696f670ada0a
+object:peladaun:Peladaun I Moon II	187a4209ac7ea3
+object:peladaun:Peladaun II Moon I	19a0f3dac419cb
+object:peladaun:Maari I	1d583c8232739a
+object:peladaun:Maari II	c61bda51d0dfa
+object:peladaun:Maari III	178c9accf0353f
+object:peladaun:Jorvek I	17d0359ffa9185
+object:peladaun:Jorvek II	2b1234ced5604
+object:peladaun:Jorvek III	15025839049378
+object:peladaun:Peladaun V Moon I	1f1e8eec4ff10e
+object:peladaun:Peladaun V Moon II	cd38a6adbb889
+object:peladaun:Daamur I	1ef40e643fc703
+object:peladaun:Daamur II	19610d3b016813
+object:peladaun:Daamur III	8843c1e377536
+object:peladaun:Daamur IV	15a8349dcba296
+object:peladaun:Peladaun VII Moon I	1d47126aa4d31a
+object:peladaun:Peladaun VII Moon II	93f4e1d25aa5b
+object:iskarraas:Iskarraas I Moon I	1c6af1bacc76ba
+object:iskarraas:Iskarraas I Moon II	106ad0fa640e8
+object:iskarraas:Belke I	9f22843a422f5
+object:iskarraas:Belke II	2809d94d61a52
+object:iskarraas:Belke III	d5358def3f953
+object:iskarraas:Iskarraas III Moon I	88dba37eb6422
+object:iskarraas:Iskarraas III Moon II	106bebfd0fc04d
+object:iskarraas:Iskarraas IV Moon I	19e8fe53ede44f
+object:iskarraas:Aulden I	12a798051ed179
+object:iskarraas:Aulden II	17d60f021a039c
+object:iskarraas:Iskarraas VI Moon I	ca8bab150a10f
+object:iskarraas:Iskarraas VI Moon II	15f6f1176352da
+object:dovrendaal:Dovrendaal I Moon I	1c820c19267fd5
+object:dovrendaal:Dovrendaal II Moon I	1c6f4dbc51851f
+object:dovrendaal:Ceevara I	37d857dd562f
+object:dovrendaal:Ceevara II	acb091a10ab73
+object:dovrendaal:Ceevara III	4edf5270629cc
+object:dovrendaal:Dovrendaal IV Moon I	1026432b9a8cc4
+object:dovrendaal:Dovrendaal V Moon I	f3d1ca707e164
+object:dovrendaal:Eridan I	113b40a9937ed
+object:dovrendaal:Eridan II	1d9af9dc9e0c05
+object:dovrendaal:Eridan III	820d1b2215edf
+object:dovrendaal:Dovrendaal VII Moon I	7a14a37fa3a2e
+object:dovrendaal:Dovrendaal VII Moon II	1b6568de55d9d
+object:dovrendaal:Dovrendaal VIII Moon I	172ac6577c1990
+object:ortaashaad:Ortaashaad I Moon I	132a01c7377cea
+object:ortaashaad:Ortaashaad I Moon II	12adc09c397f68
+object:ortaashaad:Ortaashaad II Moon I	d0e8cd4be7219
+object:ortaashaad:Praava I	bbae595428610
+object:ortaashaad:Praava II	3e65bbe7cb604
+object:ortaashaad:Leishen I	7986a4ffbe7ed
+object:ortaashaad:Ortaashaad V Moon I	479092d07a106
+object:ortaashaad:Ortaashaad VI Moon I	1eeb50991819cf
+object:ortaashaad:Ortaashaad VI Moon II	1d442761522445
+object:ortaashaad:Naloth I	1b31b5bf8ee68f
+object:ortaashaad:Naloth II	d2ea84a599baf
+object:ortaashaad:Naloth III	d47f50017d17e
+object:ortaashaad:Naloth IV	10701f8bc6ddfd
+object:ortaashaad:Naloth V	1a84672c105cb6
+object:ortaashaad:Ortaashaad VIII Moon I	6401f36aab92f
+object:ortaashaad:Ortaashaad VIII Moon II	1ef0f232696664
+object:saarbruk:Saarbruk I Moon I	392424ecabbb6
+object:saarbruk:Saarbruk I Moon II	be0e2d11927f9
+object:saarbruk:Saarbruk II Moon I	ba0393ce7de53
+object:saarbruk:Maalie I	dac9435f75c5
+object:saarbruk:Edessa I	27b9f34a2fecb
+object:saarbruk:Saarbruk V Moon I	1e082cae06cd25
+object:saarbruk:Saarbruk V Moon II	7f29547cf7004
+object:saarbruk:Drauw I	1136d46a0aa2a6
+object:saarbruk:Drauw II	181f22db2dc35d
+object:saarbruk:Drauw III	182f7e98dcc4ec
+object:saarbruk:Drauw IV	1e35b40dcddc4b
+object:saarbruk:Drauw V	ade79e223c4e7
+object:kalyrveen:Kalyrveen I Moon I	784828d91d575
+object:kalyrveen:Kalyrveen II Moon I	188d6bae64cb54
+object:kalyrveen:Vooka I	a80ce4d1fb6eb
+object:kalyrveen:Vooka II	446e4d9b870d4
+object:kalyrveen:Vooka III	1e3202955d5987
+object:kalyrveen:Eiden I	7f3f4fb96a129
+object:kalyrveen:Eiden II	c9d4b9a98975b
+object:kalyrveen:Kalyrveen V Moon I	ddc23448c6fc0
+object:kalyrveen:Krauden I	17fe3474c05905
+object:kalyrveen:Krauden II	1d31af87127254
+object:kalyrveen:Krauden III	f92a77b23979b
+object:kalyrveen:Kalyrveen VII Moon I	11d551e06107ac
+object:kalyrveen:Kalyrveen VII Moon II	113d81e7f46776
+object:teradaun:Teradaun I Moon I	b9294d98e6319
+object:teradaun:Teradaun I Moon II	1f81020ff70d86
+object:teradaun:Teradaun II Moon I	1a5562e5cc2846
+object:teradaun:Roova I	85e559ec0b727
+object:teradaun:Roova II	1c2f6671aefb62
+object:teradaun:Ambril I	fcf6823b93334
+object:teradaun:Ambril II	39d6db5a49347
+object:teradaun:Ambril III	50c2a1b28890b
+object:teradaun:Teradaun V Moon I	1192a222a68ece
+object:teradaun:Teradaun V Moon II	18365c937a3635
+object:teradaun:Teradaun VI Moon I	7b519b97cac66
+object:teradaun:Teradaun VII Moon I	804c2b3cb3215
+object:teradaun:Urraun I	b60a2c4a72b1f
+object:teradaun:Urraun II	1bff72372a211a
+object:teradaun:Urraun III	a768edd8f743
+object:teradaun:Urraun IV	1f4209932df4f9
+object:teradaun:Teradaun IX Moon I	268b9eae83bf9
+object:teradaun:Teradaun IX Moon II	8413fc5e91ef3
+object:neretvaal:Neretvaal I Moon I	1f17c6e6c60070
+object:neretvaal:Neretvaal I Moon II	b01cc2823ba83
+object:neretvaal:Gaila I	13a548e25107eb
+object:neretvaal:Neretvaal III Moon I	19c8c0d64a0d22
+object:neretvaal:Noew I	1e06a4b1c711c5
+object:neretvaal:Noew II	65e5cf32a3e8c
+object:neretvaal:Neretvaal V Moon I	8be14eb5d655
+object:vessarik:Vessarik I Moon I	14f10667993b1f
+object:vessarik:Vessarik II Moon I	112cdaf7d20d3d
+object:vessarik:Vessarik II Moon II	3bd55e1ceb774
+object:vessarik:Rinova I	bde0a6a38bba4
+object:vessarik:Rinova II	1a081198910ac8
+object:vessarik:Rinova III	1c02a62de00298
+object:vessarik:Ilun I	73143101cfa3e
+object:vessarik:Ilun II	fd1440a29838d
+object:vessarik:Ilun III	14fc29df97a935
+object:vessarik:Vessarik V Moon I	c361c8dcc1989
+object:vessarik:Draamor I	d14d705d76d8c
+object:vessarik:Draamor II	1791cbf4ce4d8
+object:vessarik:Vessarik VII Moon I	bfd6d82c38a26
+object:vessarik:Vessarik VII Moon II	10118f3400a014
+object:olundraal:Olundraal I Moon I	12a374f384925e
+object:olundraal:Olundraal I Moon II	10e254045355d8
+object:olundraal:Olundraal II Moon I	db40986dafdf0
+object:olundraal:Olundraal II Moon II	108dbeeb9d73ef
+object:olundraal:Zevai I	154fb8535b61c9
+object:olundraal:Zevai II	918fb45ffaa12
+object:olundraal:Zevai III	88ad0572fc4ad
+object:olundraal:Olundraal IV Moon I	3db3719a904dc
+object:olundraal:Olundraal IV Moon II	1306286d68135e
+object:olundraal:Hareth I	1815c4c139a581
+object:olundraal:Hareth II	e7201a3bb32b9
+object:olundraal:Hareth III	124d6575591226
+object:olundraal:Hareth IV	ced9824f28b88
+object:olundraal:Hareth V	1c7251e6aabb2
+object:olundraal:Olundraal VI Moon I	d7e1676486562
+object:olundraal:Olundraal VI Moon II	c027162b30336
+object:mareshavn:Mareshavn I Moon I	b83a32a27da1b
+object:mareshavn:Mareshavn I Moon II	d45e4dec970b0
+object:mareshavn:Mareshavn II Moon I	17343b2097129c
+object:mareshavn:Mareshavn II Moon II	16cc445f95940e
+object:mareshavn:Kellun I	1d6b66caedb2cb
+object:mareshavn:Kellun II	18838bf22f39e1
+object:mareshavn:Kellun III	1de59a9470b74e
+object:mareshavn:Mareshavn IV Moon I	1da22f81a88c3a
+object:mareshavn:Mareshavn V Moon I	edb4fe84836bf
+object:mareshavn:Selk I	f491a278d8766
+object:mareshavn:Selk II	83247a4262bc
+object:mareshavn:Mareshavn VII Moon I	fa2aa6877a65f
+object:mareshavn:Mareshavn VII Moon II	5d13f9787fd01
+object:mareshavn:Mareshavn VIII Moon I	1f8ee9de54725b
+object:mareshavn:Mareshavn VIII Moon II	4341765ee946d
+object:daatren:Daatren I Moon I	1e36133410ab20
+object:daatren:Daatren II Moon I	e056ce8178cb
+object:daatren:Feraash I	f0f7f5192f020
+object:daatren:Feraash II	109159175ec8d1
+object:daatren:Daatren IV Moon I	a23007ea7450d
+object:daatren:Daatren IV Moon II	27504b39afba7
+object:daatren:Rood I	ff800fef3152a
+object:daatren:Rood II	64bc979161b93
+object:daatren:Rood III	1f6718e7f09ff0
+object:daatren:Rood IV	f30d193773943
+object:daatren:Daatren VI Moon I	1ca4e566cac2a1
+object:daatren:Daatren VI Moon II	1a2e27cc39a7c9
+object:daatren:Daatren VII Moon I	169a190f787eb9
+object:esdarveen:Esdarveen I Moon I	10d1e9be730f04
+object:esdarveen:Ishava I	f5fcd71ff16ea
+object:esdarveen:Ishava II	14d619e2c8c732
+object:esdarveen:Esdarveen III Moon I	15804e16951e61
+object:esdarveen:Esdarveen III Moon II	1b98a42c07b002
+object:esdarveen:Korr I	fec0684f58f5
+object:esdarveen:Korr II	2f4c4b7f6ca18
+object:esdarveen:Korr III	1c9f749dc5172d
+object:esdarveen:Korr IV	b6a642f99eb5e
+object:esdarveen:Korr V	14a31291b47ccd
+object:zyravel:Zyravel I Moon I	11277a8102f02d
+object:zyravel:Zyravel II Moon I	b033082ff5ef1
+object:zyravel:Embrava I	c396f2c929a88
+object:zyravel:Avessa I	1e6e2a03f7dce1
+object:zyravel:Avessa II	43baf95fe2ecf
+object:zyravel:Zyravel V Moon I	158af80f37507f
+object:zyravel:Zyravel V Moon II	1d39eace0af9f4
+object:zyravel:Zyravel VI Moon I	1b8c0c8585754c
+object:zyravel:Zyravel VI Moon II	1bd0ecc9e05d62
+object:zyravel:Tormaun I	15e92a50648602
+object:zyravel:Tormaun II	11df66047bbae0
+object:zyravel:Tormaun III	15934c7a9dc345
+object:zyravel:Tormaun IV	102a6eba6cfb23
+object:zyravel:Tormaun V	1d6d041ac69a93
+object:zyravel:Zyravel VIII Moon I	1baad851ec0fed
+object:tessadaal:Tessadaal I Moon I	10bc1dbe8332d4
+object:tessadaal:Tessadaal I Moon II	15755eb9e1bf62
+object:tessadaal:Riesa I	5f81dea30a258
+object:tessadaal:Riesa II	11abeee183d58f
+object:tessadaal:Tessadaal III Moon I	b0d035a364d9f
+object:tessadaal:Bellun I	1ca5c8b506c913
+object:tessadaal:Bellun II	e0fac710ebe45
+object:tessadaal:Tessadaal V Moon I	62972ef4551d7
+object:tessadaal:Tessadaal V Moon II	c570ffd2261cb
+object:hadresh:Hadresh I Moon I	1a064ee24e3c90
+object:hadresh:Hadresh I Moon II	104342b153d8ce
+object:hadresh:Hadresh II Moon I	4c4549cd709fb
+object:hadresh:Hadresh II Moon II	1434d8b7f0ce68
+object:hadresh:Ovira I	1c0780c2c0530f
+object:hadresh:Ovira II	18b2fb35b35941
+object:hadresh:Hadresh IV Moon I	3ed90a188fa86
+object:hadresh:Hadresh IV Moon II	1b90b05bda63b7
+object:hadresh:Olth I	b79c31ab95809
+object:hadresh:Olth II	92e510be5a799
+object:hadresh:Olth III	ccedd852bd228
+object:hadresh:Olth IV	25ffa35d00816
+object:hadresh:Olth V	ebd87bdf84585
+object:hadresh:Hadresh VI Moon I	1ffc4a4b162750
+object:hadresh:Hadresh VI Moon II	5d0ecb1ddc866
+object:ossendaal:Ossendaal I Moon I	6302b14b17def
+object:ossendaal:Ossendaal I Moon II	584fe81c4cf21
+object:ossendaal:Veesk I	95d4bd0d9a2c9
+object:ossendaal:Ossendaal III Moon I	1374a075d7dad0
+object:ossendaal:Ossendaal III Moon II	9590052195c33
+object:ossendaal:Nenn I	f382541b43ec4
+object:ossendaal:Nenn II	17be6a54ddf4b3
+object:ossendaal:Nenn III	1a2d73759f5cb7
+object:ossendaal:Nenn IV	10d5904c8d63c2
+object:ossendaal:Ossendaal V Moon I	19264e25a5a460
+object:ossendaal:Ossendaal V Moon II	1aab3755665b79
+object:varetiraak:Varetiraak I Moon I	104e0ccecf09e9
+object:varetiraak:Varetiraak I Moon II	5886938ecc072
+object:varetiraak:Varetiraak II Moon I	141b98f9238392
+object:varetiraak:Torava I	35badee220722
+object:varetiraak:Sordane I	27a69eaa9c9c2
+object:varetiraak:Sordane II	1636aac562e789
+object:varetiraak:Sordane III	17508affcbdc57
+object:varetiraak:Varetiraak V Moon I	196368019227ca
+object:varetiraak:Varetiraak VI Moon I	23615fc3e0fe0
+object:varetiraak:Varetiraak VI Moon II	451329238abf8
+object:varetiraak:Vekraun I	185c64c3475e14
+object:varetiraak:Vekraun II	3bc34606483a9
+object:varetiraak:Vekraun III	78b527720cd67
+object:varetiraak:Vekraun IV	1443b924ba6149
+object:varetiraak:Varetiraak VIII Moon I	6e2a5f0433a01
+object:varetiraak:Varetiraak VIII Moon II	9fb36792504a1
+object:talvenstaad:Talvenstaad I Moon I	4e641b8c25f7b
+object:talvenstaad:Talvenstaad I Moon II	102695f3888021
+object:talvenstaad:Talvenstaad II Moon I	3b4bb6e29bb1d
+object:talvenstaad:Havira I	1cf4fd64173871
+object:talvenstaad:Talvenstaad IV Moon I	1dcd0d069e4f16
+object:talvenstaad:Istren I	adc2379faaf99
+object:talvenstaad:Istren II	d86e3d25cc738
+object:talvenstaad:Talvenstaad VI Moon I	ad7412d93623d
+object:talvenstaad:Talvenstaad VI Moon II	9dbcd9c317c77
+object:kordabruk:Kordabruk I Moon I	1e02fcbaa1486a
+object:kordabruk:Kordabruk I Moon II	1a9a3e6f363d19
+object:kordabruk:Kordabruk II Moon I	181962f8af2c30
+object:kordabruk:Kordabruk II Moon II	1d21330ec61288
+object:kordabruk:Sevaari I	6350e49c711b6
+object:kordabruk:Sevaari II	197923a4acb14f
+object:kordabruk:Sevaari III	19fad1b75718b
+object:kordabruk:Kordabruk IV Moon I	418219506e0d
+object:kordabruk:Kordabruk V Moon I	ce0e60564b850
+object:kordabruk:Ysil I	118181c62e75e5
+object:kordabruk:Ysil II	1ce19e6d4e3b5
+object:kordabruk:Ysil III	1b71228853e1f9
+object:kordabruk:Kordabruk VII Moon I	4e7c94bc6de2a
+object:retharaas:Retharaas I Moon I	6579b449d2865
+object:retharaas:Retharaas I Moon II	186c108c6df06f
+object:retharaas:Faera I	2c2aee7ec030
+object:retharaas:Faera II	10942bfa7d4a90
+object:retharaas:Retharaas III Moon I	101ac08309d4bf
+object:retharaas:Retharaas III Moon II	1bf1cb81e491ec
+object:retharaas:Zorren I	7b29efd8bb3
+object:retharaas:Zorren II	9f544354243bb
+object:retharaas:Zorren III	e7e6ea03988f5
+object:retharaas:Zorren IV	51c5a08dbd13b
+object:retharaas:Zorren V	d3694ad794bdf
+object:retharaas:Retharaas V Moon I	2b3eddba38e98
+object:retharaas:Retharaas V Moon II	1c6ae93dae45c2
+object:velisharn:Velisharn I Moon I	9398456f74356
+object:velisharn:Velisharn II Moon I	1cad68654adaef
+object:velisharn:Velisharn III Moon I	11b2e6af565ada
+object:velisharn:Velisharn III Moon II	17e20ec8235d75
+object:velisharn:Kiraave I	91a0f0f4e8621
+object:velisharn:Velisharn V Moon I	15ff255d94f772
+object:velisharn:Orrel I	85129ba6ca2e0
+object:velisharn:Orrel II	100416e15a7425
+object:velisharn:Velisharn VII Moon I	17b6fde88dc4bf
+object:velisharn:Velisharn VIII Moon I	246e6b7ac03e2
+object:velisharn:Velisharn VIII Moon II	1165493ea1dde2
+object:odraask:Odraask I Moon I	f8798ec9b403b
+object:odraask:Koodai I	1cc6f4925a84cf
+object:odraask:Odraask III Moon I	188a62c7a810e2
+object:odraask:Usk I	183e855c18d67a
+object:odraask:Usk II	13afb73ff4f5f6
+object:odraask:Usk III	76bbca37d9ce
+object:odraask:Usk IV	181f2ff0510968
+object:nydrelvaal:Nydrelvaal I Moon I	98aa09d06fdac
+object:nydrelvaal:Nydrelvaal I Moon II	17c58106ec9178
+object:nydrelvaal:Jaaval I	716cb30463bfe
+object:nydrelvaal:Jaaval II	1309dd1c74fa4
+object:nydrelvaal:Nydrelvaal III Moon I	11df5139e5cbb6
+object:nydrelvaal:Nydrelvaal IV Moon I	49eb05be1abdd
+object:nydrelvaal:Mazel I	feb96591a27a3
+object:nydrelvaal:Mazel II	e6672dcc0a61a
+object:nydrelvaal:Mazel III	162525b7f2b518
+object:nydrelvaal:Mazel IV	f3461b3050830
+object:karaad:Karaad I Moon I	147e1b5b23688c
+object:karaad:Karaad II Moon I	11d73e74a6ef6a
+object:karaad:Karaad II Moon II	6c714366919f6
+object:karaad:Shavern I	ad98a5f3e5c07
+object:karaad:Karaad IV Moon I	188883e05ddcf7
+object:karaad:Adul I	138a8526a51770
+object:karaad:Adul II	1028bf60fe9173
+object:karaad:Karaad VI Moon I	1ea2a092860666
+object:eshdaanvek:Eshdaanvek I Moon I	1790eac1da59af
+object:eshdaanvek:Eshdaanvek I Moon II	a6ff3cdda97a1
+object:eshdaanvek:Eshdaanvek II Moon I	c972754d6eccf
+object:eshdaanvek:Loorai I	954b486fd250a
+object:eshdaanvek:Loorai II	12fe53981cf6b5
+object:eshdaanvek:Eshdaanvek IV Moon I	118e1f2834c703
+object:eshdaanvek:Eshdaanvek V Moon I	63ec486646eca
+object:eshdaanvek:Drall I	b9dea714bc74c
+object:eshdaanvek:Drall II	275ebf6b610dd
+object:eshdaanvek:Drall III	2df4af1ee28e5
+object:eshdaanvek:Eshdaanvek VII Moon I	660a424a5adb4
+object:eshdaanvek:Eshdaanvek VII Moon II	108937141a4485
+object:yrdana:Yrdana I Moon I	736569422ebda
+object:yrdana:Yrdana II Moon I	19a7415733953f
+object:yrdana:Yrdana II Moon II	fa36f50d6a095
+object:yrdana:Preshik I	3735c9dcc820d
+object:yrdana:Yrdana IV Moon I	198f8a000f4cc
+object:yrdana:Ulm I	1e6332b45e0c66
+object:yrdana:Ulm II	f04e036d73d20
+object:yrdana:Ulm III	aa0a9eb4e204f
+object:yrdana:Ulm IV	eaf8e265277ed
+object:irdaal:Irdaal I Moon I	1f76fde6728d86
+object:irdaal:Irdaal I Moon II	932c54b91a4e7
+object:irdaal:Shaaluk I	1ca9b169e6b283
+object:irdaal:Shaaluk II	17115048870e0d
+object:irdaal:Shaaluk III	15dafa4aca3bf
+object:irdaal:Irdaal III Moon I	161098c19ee850
+object:irdaal:Vohr I	4afb3a8b96f2e
+object:irdaal:Vohr II	f848ab09eb6b9
+station:avendon:Ouua TORA-01	1ecb37c5041221
+station:avendon:Ouua TORA-02	167bc64ff2ce54
+station:kraunveld:Kraunveld TORA-01	9267c829bef07
+station:kraunveld:Kraunveld TORA-02	1529f26f19f896
+station:delvabruk:Delvabruk TORA-01	4deb261a4fe57
+station:delvabruk:Delvabruk TORA-02	16517a293518d5
+station:ildara:Ildara TORA-01	7810c9a073dce
+station:ildara:Ildara TORA-02	360c9b149ee54
+station:zhaur:Zhaur TORA-01	f21c8c1c8f4a9
+station:zhaur:Zhaur TORA-02	170406d3e5394d
+station:sorellvaik:Sorellvaik TORA-01	1c9e17424ad5c3
+station:adraask:Adraask TORA-01	2f6438ab6d0c4
+station:vaidanstaad:Vaidanstaad TORA-01	e937047cc0a3a
+station:vaidanstaad:Vaidanstaad TORA-02	1241017d03261a
+station:edraanvek:Edraanvek TORA-01	f0ef76f9e0aee
+station:edraanvek:Edraanvek TORA-02	189fded530e588
+station:zeldabruk:Zeldabruk TORA-01	e99f16bd085bb
+station:namaaris:Namaaris TORA-01	ecd1029fc83d3
+station:odelhavn:Odelhavn TORA-01	e9bc1faa8acc4
+station:ruun:Ruun TORA-01	c37bf9269e17d
+station:peladaun:Peladaun TORA-01	176542392ace63
+station:peladaun:Peladaun TORA-02	92936a781d32e
+station:iskarraas:Iskarraas TORA-01	70dd6505ea279
+station:dovrendaal:Dovrendaal TORA-01	c1f7f7f8aa453
+station:ortaashaad:Ortaashaad TORA-01	1c326f3af4ff49
+station:ortaashaad:Ortaashaad TORA-02	14678e8cab4608
+station:saarbruk:Saarbruk TORA-01	1c50148d9c23dc
+station:saarbruk:Saarbruk TORA-02	14bf80aca67c0c
+station:kalyrveen:Kalyrveen TORA-01	143fb8bc7d6727
+station:kalyrveen:Kalyrveen TORA-02	ecbe3a3587717
+station:teradaun:Teradaun TORA-01	4729a6e4a6391
+station:teradaun:Teradaun TORA-02	c666851b43cfc
+station:neretvaal:Neretvaal TORA-01	1cb4ac8c6fb332
+station:vessarik:Vessarik TORA-01	18ef2373d3a0f3
+station:olundraal:Olundraal TORA-01	1a20ba679fe931
+station:mareshavn:Mareshavn TORA-01	1fe1b4bab97abc
+station:daatren:Daatren TORA-01	bddb0cb910bc8
+station:esdarveen:Esdarveen TORA-01	18ba971642fbd4
+station:zyravel:Zyravel TORA-01	806125ee782ef
+station:zyravel:Zyravel TORA-02	57d53847fdd07
+station:tessadaal:Tessadaal TORA-01	d2dcd22b19e52
+station:hadresh:Hadresh TORA-01	906250d98c104
+station:ossendaal:Ossendaal TORA-01	7f4d3ca431e26
+station:varetiraak:Varetiraak TORA-01	1e0742e07b3bab
+station:varetiraak:Varetiraak TORA-02	5b2dd33d1ffd4
+station:talvenstaad:Talvenstaad TORA-01	5d939cb81bb39
+station:talvenstaad:Talvenstaad TORA-02	b07caad8d5a04
+station:kordabruk:Kordabruk TORA-01	1779f2ef4f30e9
+station:kordabruk:Kordabruk TORA-02	d100bd316be1e
+station:retharaas:Retharaas TORA-01	17101d75911a7
+station:retharaas:Retharaas TORA-02	195029925f7d19
+station:velisharn:Velisharn TORA-01	18fd15dadfb3ae
+station:odraask:Odraask TORA-01	1ed3d80999a38b
+station:odraask:Odraask TORA-02	15c5be5139e448
+station:nydrelvaal:Nydrelvaal TORA-01	1568e0197d4dc1
+station:karaad:Karaad TORA-01	15124214788ab2
+station:eshdaanvek:Eshdaanvek TORA-01	574b37aa389bf
+station:yrdana:Yrdana TORA-01	cb0bffe9b3483
+station:irdaal:Irdaal TORA-01	124ff3ca75b6e2
+station:avendon:Ouua Works 01	ccc252c9f852c
+station:avendon:Ouua Watch 02	1cec55eff342f3
+station:avendon:Ouua Observatory 03	1a098f311d4db9
+station:avendon:Ouua Watch 04	123582e00cce00
+station:avendon:Ouua Habitat 06	1a8c9b32640f6f
+station:avendon:Ouua Dock 07	dfd7dcb527c28
+station:avendon:Ouua Watch 08	199c4b27d51759
+station:avendon:Ouua Watch 09	1f6d32c9bb67de
+station:avendon:Ouua Observatory 10	129a8e4c94fb9b
+station:avendon:Ouua Battery 11	10010c1b1e8d8a
+station:avendon:Ouua Works 13	10d69618490c45
+station:avendon:Ouua Watch 15	1a8a7f22b9e656
+station:avendon:Ouua Habitat 17	1c5107801e6add
+station:avendon:Ouua Habitat 19	16d7e0b4cc56ea
+station:avendon:Ouua Works 25	188a34b12adf17
+station:avendon:Ouua Dock 26	152ae6d4d14f1e
+station:avendon:Ouua Works 30	11a586b8866b3b
+station:avendon:Ouua Works 32	1fa9a7924519e3
+station:avendon:Ouua Works 36	1815593bc1e62d
+station:avendon:Ouua Works 37	4ac7705bbea92
+station:avendon:Ouua Works 42	6f1efac449cb1
+station:avendon:Ouua Works 43	1fe9bbc80260dd
+station:kraunveld:Kraunveld Works 01	1bd073daae6310
+station:kraunveld:Kraunveld Watch 02	319e146a74af7
+station:kraunveld:Kraunveld Dock 03	4e8a8d481645c
+station:kraunveld:Kraunveld Habitat 05	e18ca8780b4fa
+station:kraunveld:Kraunveld Works 06	1bc0106cc4a60
+station:kraunveld:Kraunveld Battery 10	889238110acdd
+station:kraunveld:Kraunveld Observatory 15	1106ff70bb3869
+station:delvabruk:Delvabruk Dock 01	14dec7955b65b2
+station:delvabruk:Delvabruk Watch 02	bd02136b94620
+station:delvabruk:Delvabruk Observatory 03	cbe3219e56883
+station:delvabruk:Delvabruk Habitat 05	1226aaa57a045c
+station:delvabruk:Delvabruk Works 06	1acfdae5695df0
+station:delvabruk:Delvabruk Works 07	1560cede4a9049
+station:delvabruk:Delvabruk Battery 10	bc68cf5a101ab
+station:delvabruk:Delvabruk Habitat 11	102eaef270043c
+station:delvabruk:Delvabruk Battery 12	ea4520b207088
+station:delvabruk:Delvabruk Habitat 17	115d5b3bdfccb5
+station:delvabruk:Delvabruk Works 18	1b35c1bee90eb4
+station:delvabruk:Delvabruk Habitat 19	469f65a8d3e5e
+station:delvabruk:Delvabruk Habitat 31	4564567459987
+station:ildara:Ildara Dock 01	18f888a1f9e5f0
+station:ildara:Ildara Watch 02	19cc1041185fa6
+station:ildara:Ildara Observatory 03	31b5b79c0a425
+station:ildara:Ildara Observatory 04	17a776240bb332
+station:ildara:Ildara Battery 06	17c4d5c2918277
+station:ildara:Ildara Habitat 07	8fc66fba61ed3
+station:ildara:Ildara Works 14	19d8a5d8ba0275
+station:ildara:Ildara Observatory 15	1bd1580bd85977
+station:zhaur:Zhaur Habitat 01	133f159c34c3a7
+station:zhaur:Zhaur Works 02	1e654d65b68714
+station:zhaur:Zhaur Watch 03	b639716b8c8b9
+station:zhaur:Zhaur Battery 05	1611c09911f8f1
+station:zhaur:Zhaur Works 07	7d07c6ad79524
+station:zhaur:Zhaur Dock 09	1fb022cdec9987
+station:zhaur:Zhaur Observatory 10	783702e6d71c6
+station:zhaur:Zhaur Battery 11	745cf6067de88
+station:zhaur:Zhaur Habitat 12	54dcdc980bb1d
+station:zhaur:Zhaur Works 14	1d97150bc6b41
+station:zhaur:Zhaur Works 19	141eff75a655f6
+station:zhaur:Zhaur Habitat 23	f7315b48ca38e
+station:zhaur:Zhaur Works 24	d95653143d6c2
+station:zhaur:Zhaur Habitat 25	e21faba038e17
+station:sorellvaik:Sorellvaik Dock 01	17854ae35b16d7
+station:sorellvaik:Sorellvaik Watch 02	72cb71720b2ed
+station:sorellvaik:Sorellvaik Observatory 03	1bf46a51d22074
+station:sorellvaik:Sorellvaik Habitat 05	2b8b808395d42
+station:sorellvaik:Sorellvaik Works 06	1c928a0df91e87
+station:sorellvaik:Sorellvaik Works 07	d79bdf8ddcd25
+station:sorellvaik:Sorellvaik Dock 14	1a34e45876f597
+station:adraask:Adraask Works 01	11fa58322719b9
+station:adraask:Adraask Watch 02	11701770cc781e
+station:adraask:Adraask Dock 03	1455e2f7967832
+station:adraask:Adraask Battery 04	10418aebe7902a
+station:adraask:Adraask Habitat 06	1c757c2d38fc7e
+station:adraask:Adraask Dock 07	de3c671976f19
+station:vaidanstaad:Vaidanstaad Dock 01	11f90d6ca6e5cb
+station:vaidanstaad:Vaidanstaad Dock 02	850fbcdac4abf
+station:vaidanstaad:Vaidanstaad Watch 03	4e5af3d4bf973
+station:vaidanstaad:Vaidanstaad Habitat 05	4493a8470d4fd
+station:vaidanstaad:Vaidanstaad Dock 07	d72f554961a0
+station:vaidanstaad:Vaidanstaad Dock 09	b3f321cb084b3
+station:vaidanstaad:Vaidanstaad Observatory 10	6d3ebd0f13334
+station:vaidanstaad:Vaidanstaad Battery 12	21d98d40d8b46
+station:vaidanstaad:Vaidanstaad Dock 14	121b4db1d2916
+station:vaidanstaad:Vaidanstaad Works 19	1e690443fbfc7e
+station:edraanvek:Edraanvek Dock 01	1babb5aac0a7aa
+station:edraanvek:Edraanvek Works 02	1cf7a7be226716
+station:edraanvek:Edraanvek Observatory 03	a520faf046f46
+station:edraanvek:Edraanvek Battery 06	165781ccfd1c9d
+station:edraanvek:Edraanvek Watch 09	1a0e2e90ac0863
+station:edraanvek:Edraanvek Habitat 11	6d974763096a0
+station:edraanvek:Edraanvek Works 12	494d7e6938bae
+station:zeldabruk:Zeldabruk Habitat 01	6bc0d3e7998fd
+station:zeldabruk:Zeldabruk Works 02	8d05892c65f9e
+station:zeldabruk:Zeldabruk Observatory 03	38e13774d5b56
+station:zeldabruk:Zeldabruk Watch 04	1379ad06c65ec8
+station:zeldabruk:Zeldabruk Dock 08	a253b0fda75b9
+station:zeldabruk:Zeldabruk Dock 13	b83993e1d563f
+station:namaaris:Namaaris Dock 01	a8f80ca45e510
+station:namaaris:Namaaris Watch 02	263704c781f28
+station:namaaris:Namaaris Dock 03	16a8143de5daf7
+station:namaaris:Namaaris Works 06	d8dbcfb0a56ef
+station:namaaris:Namaaris Dock 08	14554b3ce7364b
+station:namaaris:Namaaris Habitat 11	193a29ec6c6a29
+station:namaaris:Namaaris Battery 12	105bb73df4a714
+station:odelhavn:Odelhavn Works 01	12be94612342bb
+station:odelhavn:Odelhavn Watch 02	149bf46acc6fd5
+station:odelhavn:Odelhavn Battery 06	ed04e91a269ea
+station:odelhavn:Odelhavn Works 07	3104516898789
+station:ruun:Ruun Works 01	18485ba2017e5
+station:ruun:Ruun Dock 02	d6d436489396d
+station:ruun:Ruun Habitat 06	addf3d015613e
+station:peladaun:Peladaun Dock 01	b357e1a4549c3
+station:peladaun:Peladaun Works 02	26763bf259ce5
+station:peladaun:Peladaun Observatory 04	1eb97df7d749ac
+station:peladaun:Peladaun Watch 10	13d158235935f8
+station:peladaun:Peladaun Habitat 12	116c5688fbd8ed
+station:peladaun:Peladaun Habitat 13	1eb49744ee7b2e
+station:peladaun:Peladaun Battery 16	1c35f6fe8fe583
+station:iskarraas:Iskarraas Dock 01	18d43b710b78d2
+station:iskarraas:Iskarraas Works 02	ca91ab37e301
+station:iskarraas:Iskarraas Observatory 05	86dd3bf8948a
+station:iskarraas:Iskarraas Habitat 07	1ec46bfa5a3352
+station:dovrendaal:Dovrendaal Works 01	16af14cd4af5f8
+station:dovrendaal:Dovrendaal Dock 03	3868886558780
+station:dovrendaal:Dovrendaal Battery 04	a2cbb511a08b1
+station:dovrendaal:Dovrendaal Watch 09	f6203ba5feb1f
+station:dovrendaal:Dovrendaal Observatory 10	4a5a96268cb69
+station:ortaashaad:Ortaashaad Dock 01	1d4858ad76bdd
+station:ortaashaad:Ortaashaad Works 02	e68ed8860ba37
+station:ortaashaad:Ortaashaad Observatory 03	198830c324d9f3
+station:ortaashaad:Ortaashaad Habitat 05	122ea3ae05ff00
+station:ortaashaad:Ortaashaad Works 06	90a513b9eab64
+station:ortaashaad:Ortaashaad Works 07	11d27225749c16
+station:ortaashaad:Ortaashaad Watch 09	8be0ad8085856
+station:ortaashaad:Ortaashaad Habitat 11	1f28b24e2c8e5a
+station:ortaashaad:Ortaashaad Habitat 12	13bb05863166f9
+station:ortaashaad:Ortaashaad Battery 18	62828f8af160e
+station:ortaashaad:Ortaashaad Habitat 24	10eb26bd5c523d
+station:ortaashaad:Ortaashaad Habitat 25	7b5ba454489e6
+station:saarbruk:Saarbruk Works 01	1bfadfee321dcd
+station:saarbruk:Saarbruk Watch 02	1d7cc4a93f348
+station:saarbruk:Saarbruk Watch 03	86a392efe1bc5
+station:saarbruk:Saarbruk Observatory 04	6ba34e9363b2d
+station:saarbruk:Saarbruk Observatory 05	4155ac1470fa4
+station:saarbruk:Saarbruk Battery 06	fd69c078150de
+station:saarbruk:Saarbruk Dock 07	47438c465c075
+station:saarbruk:Saarbruk Works 08	11dbe40593ccf0
+station:saarbruk:Saarbruk Observatory 21	14b75b4f06de3d
+station:kalyrveen:Kalyrveen Works 01	c210d3891e5be
+station:kalyrveen:Kalyrveen Works 02	19bef56898cdec
+station:kalyrveen:Kalyrveen Dock 03	1527f0516744b8
+station:kalyrveen:Kalyrveen Observatory 05	1ca6b74ee9fefa
+station:kalyrveen:Kalyrveen Habitat 07	1102aaadce828d
+station:kalyrveen:Kalyrveen Watch 08	cb266968db59
+station:kalyrveen:Kalyrveen Watch 09	f72caa7211868
+station:kalyrveen:Kalyrveen Battery 10	c9bbd04e90e9b
+station:teradaun:Teradaun Habitat 01	1e9810ee442eff
+station:teradaun:Teradaun Watch 02	1398b76496e877
+station:teradaun:Teradaun Observatory 03	7a9380e3eb1de
+station:teradaun:Teradaun Watch 10	182c3247b5a50b
+station:teradaun:Teradaun Battery 11	191ba718d3b931
+station:teradaun:Teradaun Habitat 12	573c9c027166
+station:teradaun:Teradaun Works 14	1827e5d58dbcde
+station:neretvaal:Neretvaal Works 01	8cc70ddf63795
+station:neretvaal:Neretvaal Works 02	17d2e587d7b1f9
+station:neretvaal:Neretvaal Dock 03	da5ca77683652
+station:vessarik:Vessarik Habitat 01	1780a1adfc14d5
+station:vessarik:Vessarik Dock 02	1c272e4fc15318
+station:vessarik:Vessarik Observatory 03	18af41792842ac
+station:vessarik:Vessarik Battery 04	1e7faa64d025da
+station:vessarik:Vessarik Works 08	1e1615fd8e1594
+station:vessarik:Vessarik Observatory 09	8dc6a8d5091c8
+station:vessarik:Vessarik Battery 10	7ca35ef04f03
+station:olundraal:Olundraal Dock 02	1148af062e4d0c
+station:olundraal:Olundraal Watch 03	13a44fba19270b
+station:olundraal:Olundraal Battery 04	d43364bf213a5
+station:olundraal:Olundraal Habitat 05	1c0d6e1b360e88
+station:olundraal:Olundraal Habitat 07	94d0ce0e9708a
+station:olundraal:Olundraal Works 08	1b1155d81daf63
+station:mareshavn:Mareshavn Habitat 01	1aed30531edf20
+station:mareshavn:Mareshavn Works 02	cb8e961a24802
+station:mareshavn:Mareshavn Watch 04	105f73248f9b1d
+station:mareshavn:Mareshavn Dock 09	1d617c181cf733
+station:mareshavn:Mareshavn Observatory 10	37a07c646d8dd
+station:daatren:Daatren Works 01	924ede473e330
+station:daatren:Daatren Watch 02	1e438cc775032c
+station:daatren:Daatren Habitat 05	1f3cc36122ee9f
+station:daatren:Daatren Observatory 09	fc8cc44c58223
+station:daatren:Daatren Dock 13	1797ee9bf6c6dc
+station:esdarveen:Esdarveen Habitat 01	1b533773becd0
+station:esdarveen:Esdarveen Watch 02	1b3dc706fd7999
+station:esdarveen:Esdarveen Observatory 05	1062e39fe01389
+station:esdarveen:Esdarveen Works 07	4afbcd2b6fc67
+station:zyravel:Zyravel Works 01	c561469554ebd
+station:zyravel:Zyravel Watch 02	1e91715ab65f78
+station:zyravel:Zyravel Dock 03	e3750fb574912
+station:zyravel:Zyravel Battery 10	b047881d3e0c6
+station:zyravel:Zyravel Habitat 11	1eb8ab98a232bb
+station:tessadaal:Tessadaal Dock 01	2432656310287
+station:tessadaal:Tessadaal Works 02	b87577dafdc47
+station:tessadaal:Tessadaal Habitat 06	953ef6959e784
+station:hadresh:Hadresh Works 01	d84d8478c55b5
+station:hadresh:Hadresh Watch 02	999945f700883
+station:hadresh:Hadresh Habitat 05	b4d761b1b9d4d
+station:hadresh:Hadresh Dock 09	317d668c3de63
+station:ossendaal:Ossendaal Habitat 01	17d295df7e5e22
+station:ossendaal:Ossendaal Works 02	87f94eb2b0ee
+station:ossendaal:Ossendaal Battery 06	1ca30a3941f63c
+station:varetiraak:Varetiraak Works 01	b6c9f237402d8
+station:varetiraak:Varetiraak Dock 03	1510819e50a7b
+station:varetiraak:Varetiraak Battery 04	dda49a6bc64f3
+station:varetiraak:Varetiraak Watch 08	b0376b427f3b6
+station:varetiraak:Varetiraak Watch 09	b60ec4809b86c
+station:varetiraak:Varetiraak Watch 10	176a745cadaeb8
+station:varetiraak:Varetiraak Observatory 11	fecf983a9a190
+station:varetiraak:Varetiraak Dock 14	eea08f29df849
+station:varetiraak:Varetiraak Habitat 18	5ce3a0d262d39
+station:talvenstaad:Talvenstaad Works 01	127451ac7ebff
+station:talvenstaad:Talvenstaad Watch 03	1f9b753fdae09
+station:talvenstaad:Talvenstaad Watch 04	3be900d0b3f39
+station:talvenstaad:Talvenstaad Habitat 05	3e9ddd719fb1b
+station:talvenstaad:Talvenstaad Dock 07	c6e01c180b955
+station:talvenstaad:Talvenstaad Watch 08	11bbe9eda604c9
+station:kordabruk:Kordabruk Dock 01	d62adda18560
+station:kordabruk:Kordabruk Watch 02	1ccc9fc9ac9fd9
+station:kordabruk:Kordabruk Battery 05	7f54d45d9c3de
+station:kordabruk:Kordabruk Watch 08	102581a7452412
+station:kordabruk:Kordabruk Watch 09	1965efaa8d8a69
+station:retharaas:Retharaas Habitat 01	1fc942e8bc46fd
+station:retharaas:Retharaas Dock 02	c8ceeec264e93
+station:retharaas:Retharaas Battery 06	b5e2bc85f4bf9
+station:velisharn:Velisharn Dock 01	1c4c143cc474a2
+station:velisharn:Velisharn Dock 02	1a17e92373215f
+station:velisharn:Velisharn Watch 09	f0430f8c1947
+station:velisharn:Velisharn Battery 10	1874eaba078a36
+station:odraask:Odraask Works 01	98bcb237284ae
+station:odraask:Odraask Dock 02	1a5053e4b99916
+station:nydrelvaal:Nydrelvaal Works 01	24a3c44541110
+station:nydrelvaal:Nydrelvaal Watch 02	91187f5c7f28e
+station:karaad:Karaad Dock 01	1f256f13ec3915
+station:karaad:Karaad Works 02	c8e937b22970f
+station:karaad:Karaad Works 07	1adaa0b04e9627
+station:eshdaanvek:Eshdaanvek Dock 01	e780b668bfec9
+station:eshdaanvek:Eshdaanvek Watch 02	1d92b7a371a844
+station:yrdana:Yrdana Habitat 01	1d076450f97ec0
+station:irdaal:Irdaal Habitat 01	19d84912b1dcdf
 open-station:avendon:Ouua TORA-01	140693533a67e3
-close-station:avendon:Ouua TORA-01	1d223d380d9937
+close-station:avendon:Ouua TORA-01	1ecb37c5041221
 open-station:avendon:Ouua TORA-02	1da37133e4937b
-close-station:avendon:Ouua TORA-02	115f3b52b09372
+close-station:avendon:Ouua TORA-02	167bc64ff2ce54
 open-station:kraunveld:Kraunveld TORA-01	1e0b412552f5af
-close-station:kraunveld:Kraunveld TORA-01	ddb06950f4f30
+close-station:kraunveld:Kraunveld TORA-01	9267c829bef07
 open-station:kraunveld:Kraunveld TORA-02	b7c229660a37a
-close-station:kraunveld:Kraunveld TORA-02	b743616cccb3
+close-station:kraunveld:Kraunveld TORA-02	1529f26f19f896
 open-station:delvabruk:Delvabruk TORA-01	9338069493b5a
-close-station:delvabruk:Delvabruk TORA-01	1680d9b8d85d60
+close-station:delvabruk:Delvabruk TORA-01	4deb261a4fe57
 open-station:delvabruk:Delvabruk TORA-02	1843d69b30b61
-close-station:delvabruk:Delvabruk TORA-02	202aaa5fdcabd
+close-station:delvabruk:Delvabruk TORA-02	16517a293518d5
 open-station:ildara:Ildara TORA-01	4239268f4f837
-close-station:ildara:Ildara TORA-01	1d1e0c3a4facf9
+close-station:ildara:Ildara TORA-01	7810c9a073dce
 open-station:ildara:Ildara TORA-02	eb5e27c8f0548
-close-station:ildara:Ildara TORA-02	521c3c3fe6b65
+close-station:ildara:Ildara TORA-02	360c9b149ee54
 open-station:zhaur:Zhaur TORA-01	946be23410632
-close-station:zhaur:Zhaur TORA-01	19565e5ca97861
+close-station:zhaur:Zhaur TORA-01	f21c8c1c8f4a9
 open-station:zhaur:Zhaur TORA-02	88d697247ba69
-close-station:zhaur:Zhaur TORA-02	e8e49b5007628
+close-station:zhaur:Zhaur TORA-02	170406d3e5394d
 open-station:sorellvaik:Sorellvaik TORA-01	12b021a135bee6
-close-station:sorellvaik:Sorellvaik TORA-01	1f729023fa194
+close-station:sorellvaik:Sorellvaik TORA-01	1c9e17424ad5c3
 open-station:adraask:Adraask TORA-01	127f0489f01c5c
-close-station:adraask:Adraask TORA-01	1242a8c7b15891
+close-station:adraask:Adraask TORA-01	2f6438ab6d0c4
 open-station:vaidanstaad:Vaidanstaad TORA-01	7a1598f2ba366
-close-station:vaidanstaad:Vaidanstaad TORA-01	2a4ee9426ad11
+close-station:vaidanstaad:Vaidanstaad TORA-01	e937047cc0a3a
 open-station:vaidanstaad:Vaidanstaad TORA-02	eb88630c48cb3
-close-station:vaidanstaad:Vaidanstaad TORA-02	1292e0846d09fd
+close-station:vaidanstaad:Vaidanstaad TORA-02	1241017d03261a
 open-station:edraanvek:Edraanvek TORA-01	111d6144fbb75b
-close-station:edraanvek:Edraanvek TORA-01	35b00353a7762
+close-station:edraanvek:Edraanvek TORA-01	f0ef76f9e0aee
 open-station:edraanvek:Edraanvek TORA-02	1dcffc0794dd43
-close-station:edraanvek:Edraanvek TORA-02	1532ef150bd607
+close-station:edraanvek:Edraanvek TORA-02	189fded530e588
 open-station:zeldabruk:Zeldabruk TORA-01	1b160232e63b58
-close-station:zeldabruk:Zeldabruk TORA-01	12440706271b82
+close-station:zeldabruk:Zeldabruk TORA-01	e99f16bd085bb
 open-station:namaaris:Namaaris TORA-01	10892e66c65b5e
-close-station:namaaris:Namaaris TORA-01	32751ecced450
+close-station:namaaris:Namaaris TORA-01	ecd1029fc83d3
 open-station:odelhavn:Odelhavn TORA-01	a7075ac1a00f4
-close-station:odelhavn:Odelhavn TORA-01	18fd0319034289
+close-station:odelhavn:Odelhavn TORA-01	e9bc1faa8acc4
 open-station:ruun:Ruun TORA-01	4c4d5449e75aa
-close-station:ruun:Ruun TORA-01	185b203e897c91
+close-station:ruun:Ruun TORA-01	c37bf9269e17d
 open-station:peladaun:Peladaun TORA-01	6e8b206802a9b
-close-station:peladaun:Peladaun TORA-01	1e50cfed7d6940
+close-station:peladaun:Peladaun TORA-01	176542392ace63
 open-station:peladaun:Peladaun TORA-02	1208a4cd2472c4
-close-station:peladaun:Peladaun TORA-02	10b3f8cbee2523
+close-station:peladaun:Peladaun TORA-02	92936a781d32e
 open-station:iskarraas:Iskarraas TORA-01	1e687e44b3f671
-close-station:iskarraas:Iskarraas TORA-01	e5728a881e0f6
+close-station:iskarraas:Iskarraas TORA-01	70dd6505ea279
 open-station:dovrendaal:Dovrendaal TORA-01	80fc8314d4d44
-close-station:dovrendaal:Dovrendaal TORA-01	10c77daac8cdbe
+close-station:dovrendaal:Dovrendaal TORA-01	c1f7f7f8aa453
 open-station:ortaashaad:Ortaashaad TORA-01	49630e4962976
-close-station:ortaashaad:Ortaashaad TORA-01	19e9cd19a668ef
+close-station:ortaashaad:Ortaashaad TORA-01	1c326f3af4ff49
 open-station:ortaashaad:Ortaashaad TORA-02	1722f2afeabc20
-close-station:ortaashaad:Ortaashaad TORA-02	4e8527b4ca718
+close-station:ortaashaad:Ortaashaad TORA-02	14678e8cab4608
 open-station:saarbruk:Saarbruk TORA-01	10340c405dc573
-close-station:saarbruk:Saarbruk TORA-01	e485f2f99d234
+close-station:saarbruk:Saarbruk TORA-01	1c50148d9c23dc
 open-station:saarbruk:Saarbruk TORA-02	7315d0a432022
-close-station:saarbruk:Saarbruk TORA-02	15c64f5bc3a3bd
+close-station:saarbruk:Saarbruk TORA-02	14bf80aca67c0c
 open-station:kalyrveen:Kalyrveen TORA-01	db8c1109751e9
-close-station:kalyrveen:Kalyrveen TORA-01	bb7143970df1f
+close-station:kalyrveen:Kalyrveen TORA-01	143fb8bc7d6727
 open-station:kalyrveen:Kalyrveen TORA-02	8a2facfde3af6
-close-station:kalyrveen:Kalyrveen TORA-02	1c5288ba1c5aa6
+close-station:kalyrveen:Kalyrveen TORA-02	ecbe3a3587717
 open-station:teradaun:Teradaun TORA-01	18f6eccab05722
-close-station:teradaun:Teradaun TORA-01	152514f07030d0
+close-station:teradaun:Teradaun TORA-01	4729a6e4a6391
 open-station:teradaun:Teradaun TORA-02	4db0ecefdc0e2
-close-station:teradaun:Teradaun TORA-02	11eefa07347db1
+close-station:teradaun:Teradaun TORA-02	c666851b43cfc
 open-station:neretvaal:Neretvaal TORA-01	1c59827a61d8c4
-close-station:neretvaal:Neretvaal TORA-01	dc8111855f783
+close-station:neretvaal:Neretvaal TORA-01	1cb4ac8c6fb332
 open-station:vessarik:Vessarik TORA-01	2be37f7b612e7
-close-station:vessarik:Vessarik TORA-01	448af39d36f29
+close-station:vessarik:Vessarik TORA-01	18ef2373d3a0f3
 open-station:olundraal:Olundraal TORA-01	f487c5b82fcc3
-close-station:olundraal:Olundraal TORA-01	7a011b85616a8
+close-station:olundraal:Olundraal TORA-01	1a20ba679fe931
 open-station:mareshavn:Mareshavn TORA-01	1b741db5637706
-close-station:mareshavn:Mareshavn TORA-01	49be72b831c56
+close-station:mareshavn:Mareshavn TORA-01	1fe1b4bab97abc
 open-station:daatren:Daatren TORA-01	1fcb80ee0199d6
-close-station:daatren:Daatren TORA-01	e88d684bcaf94
+close-station:daatren:Daatren TORA-01	bddb0cb910bc8
 open-station:esdarveen:Esdarveen TORA-01	63bf28b1933e1
-close-station:esdarveen:Esdarveen TORA-01	75cf9252720b3
+close-station:esdarveen:Esdarveen TORA-01	18ba971642fbd4
 open-station:zyravel:Zyravel TORA-01	12d7b880bb0d61
-close-station:zyravel:Zyravel TORA-01	1a693061fffffe
+close-station:zyravel:Zyravel TORA-01	806125ee782ef
 open-station:zyravel:Zyravel TORA-02	e775a26dcce9d
-close-station:zyravel:Zyravel TORA-02	151bd09a22c0aa
+close-station:zyravel:Zyravel TORA-02	57d53847fdd07
 open-station:tessadaal:Tessadaal TORA-01	3ef538814aa8d
-close-station:tessadaal:Tessadaal TORA-01	14bdaa2257a3ca
+close-station:tessadaal:Tessadaal TORA-01	d2dcd22b19e52
 open-station:hadresh:Hadresh TORA-01	2d6db1811f237
-close-station:hadresh:Hadresh TORA-01	15e595c64097cb
+close-station:hadresh:Hadresh TORA-01	906250d98c104
 open-station:ossendaal:Ossendaal TORA-01	1c400125f28c27
-close-station:ossendaal:Ossendaal TORA-01	1e14b287f104f1
+close-station:ossendaal:Ossendaal TORA-01	7f4d3ca431e26
 open-station:varetiraak:Varetiraak TORA-01	1ae1cba3e3d241
-close-station:varetiraak:Varetiraak TORA-01	8958ba16b499f
+close-station:varetiraak:Varetiraak TORA-01	1e0742e07b3bab
 open-station:varetiraak:Varetiraak TORA-02	1f3a106107b932
-close-station:varetiraak:Varetiraak TORA-02	f3d82fb528afd
+close-station:varetiraak:Varetiraak TORA-02	5b2dd33d1ffd4
 open-station:talvenstaad:Talvenstaad TORA-01	147a3ab5c4f9de
-close-station:talvenstaad:Talvenstaad TORA-01	18ef8cb22abd00
+close-station:talvenstaad:Talvenstaad TORA-01	5d939cb81bb39
 open-station:talvenstaad:Talvenstaad TORA-02	141473fed9e0da
-close-station:talvenstaad:Talvenstaad TORA-02	45b045c6c7587
+close-station:talvenstaad:Talvenstaad TORA-02	b07caad8d5a04
 open-station:kordabruk:Kordabruk TORA-01	14ba5a79b65dd
-close-station:kordabruk:Kordabruk TORA-01	1fd2ae8740bf0d
+close-station:kordabruk:Kordabruk TORA-01	1779f2ef4f30e9
 open-station:kordabruk:Kordabruk TORA-02	145828845185a
-close-station:kordabruk:Kordabruk TORA-02	1eea081de312d2
+close-station:kordabruk:Kordabruk TORA-02	d100bd316be1e
 open-station:retharaas:Retharaas TORA-01	601dd4494e003
-close-station:retharaas:Retharaas TORA-01	561620de5f954
+close-station:retharaas:Retharaas TORA-01	17101d75911a7
 open-station:retharaas:Retharaas TORA-02	1756f039b2f63d
-close-station:retharaas:Retharaas TORA-02	1ed2ab945c0c12
+close-station:retharaas:Retharaas TORA-02	195029925f7d19
 open-station:velisharn:Velisharn TORA-01	122a44c088f9a2
-close-station:velisharn:Velisharn TORA-01	17dad498161da0
+close-station:velisharn:Velisharn TORA-01	18fd15dadfb3ae
 open-station:odraask:Odraask TORA-01	123ab7747aa4f1
-close-station:odraask:Odraask TORA-01	60fc3b1fb7360
+close-station:odraask:Odraask TORA-01	1ed3d80999a38b
 open-station:odraask:Odraask TORA-02	e4eb68f84d89c
-close-station:odraask:Odraask TORA-02	1d71a3852ab76a
+close-station:odraask:Odraask TORA-02	15c5be5139e448
 open-station:nydrelvaal:Nydrelvaal TORA-01	994b71cd474e2
-close-station:nydrelvaal:Nydrelvaal TORA-01	1ac17fc6d305d3
+close-station:nydrelvaal:Nydrelvaal TORA-01	1568e0197d4dc1
 open-station:karaad:Karaad TORA-01	54c6acbcae9e9
-close-station:karaad:Karaad TORA-01	cad953830293c
+close-station:karaad:Karaad TORA-01	15124214788ab2
 open-station:eshdaanvek:Eshdaanvek TORA-01	137f0560d7c866
-close-station:eshdaanvek:Eshdaanvek TORA-01	1dc3bf21d929d9
+close-station:eshdaanvek:Eshdaanvek TORA-01	574b37aa389bf
 open-station:yrdana:Yrdana TORA-01	1d97272936535e
-close-station:yrdana:Yrdana TORA-01	1dc97bc0323d9a
+close-station:yrdana:Yrdana TORA-01	cb0bffe9b3483
 open-station:irdaal:Irdaal TORA-01	18791ff8aa84a9
-close-station:irdaal:Irdaal TORA-01	1a84147faea8a2
-open-station:avendon:Ouua Works 01	13c15837a4788f
-close-station:avendon:Ouua Works 01	13c15837a4788f
-open-station:avendon:Ouua Watch 02	13c15837a4788f
-close-station:avendon:Ouua Watch 02	13c15837a4788f
-open-station:avendon:Ouua Observatory 03	13c15837a4788f
-close-station:avendon:Ouua Observatory 03	13c15837a4788f
-open-station:avendon:Ouua Watch 04	13c15837a4788f
-close-station:avendon:Ouua Watch 04	13c15837a4788f
-open-station:avendon:Ouua Habitat 06	13c15837a4788f
-close-station:avendon:Ouua Habitat 06	13c15837a4788f
-open-station:avendon:Ouua Dock 07	13c15837a4788f
-close-station:avendon:Ouua Dock 07	13c15837a4788f
-open-station:avendon:Ouua Watch 08	13c15837a4788f
-close-station:avendon:Ouua Watch 08	13c15837a4788f
-open-station:avendon:Ouua Watch 09	13c15837a4788f
-close-station:avendon:Ouua Watch 09	13c15837a4788f
-open-station:avendon:Ouua Observatory 10	13c15837a4788f
-close-station:avendon:Ouua Observatory 10	13c15837a4788f
-open-station:avendon:Ouua Battery 11	13c15837a4788f
-close-station:avendon:Ouua Battery 11	13c15837a4788f
-open-station:avendon:Ouua Works 13	13c15837a4788f
-close-station:avendon:Ouua Works 13	13c15837a4788f
-open-station:avendon:Ouua Watch 15	13c15837a4788f
-close-station:avendon:Ouua Watch 15	13c15837a4788f
-open-station:avendon:Ouua Habitat 17	13c15837a4788f
-close-station:avendon:Ouua Habitat 17	13c15837a4788f
-open-station:avendon:Ouua Habitat 19	13c15837a4788f
-close-station:avendon:Ouua Habitat 19	13c15837a4788f
-open-station:avendon:Ouua Works 25	13c15837a4788f
-close-station:avendon:Ouua Works 25	13c15837a4788f
-open-station:avendon:Ouua Dock 26	13c15837a4788f
-close-station:avendon:Ouua Dock 26	13c15837a4788f
-open-station:avendon:Ouua Works 30	13c15837a4788f
-close-station:avendon:Ouua Works 30	13c15837a4788f
-open-station:avendon:Ouua Works 32	13c15837a4788f
-close-station:avendon:Ouua Works 32	13c15837a4788f
-open-station:avendon:Ouua Works 36	13c15837a4788f
-close-station:avendon:Ouua Works 36	13c15837a4788f
-open-station:avendon:Ouua Works 37	13c15837a4788f
-close-station:avendon:Ouua Works 37	13c15837a4788f
-open-station:avendon:Ouua Works 42	13c15837a4788f
-close-station:avendon:Ouua Works 42	13c15837a4788f
-open-station:avendon:Ouua Works 43	13c15837a4788f
-close-station:avendon:Ouua Works 43	13c15837a4788f
-open-station:kraunveld:Kraunveld Works 01	5ddef66543c32
-close-station:kraunveld:Kraunveld Works 01	5ddef66543c32
-open-station:kraunveld:Kraunveld Watch 02	5ddef66543c32
-close-station:kraunveld:Kraunveld Watch 02	5ddef66543c32
-open-station:kraunveld:Kraunveld Dock 03	5ddef66543c32
-close-station:kraunveld:Kraunveld Dock 03	5ddef66543c32
-open-station:kraunveld:Kraunveld Habitat 05	5ddef66543c32
-close-station:kraunveld:Kraunveld Habitat 05	5ddef66543c32
-open-station:kraunveld:Kraunveld Works 06	5ddef66543c32
-close-station:kraunveld:Kraunveld Works 06	5ddef66543c32
-open-station:kraunveld:Kraunveld Battery 10	5ddef66543c32
-close-station:kraunveld:Kraunveld Battery 10	5ddef66543c32
-open-station:kraunveld:Kraunveld Observatory 15	5ddef66543c32
-close-station:kraunveld:Kraunveld Observatory 15	5ddef66543c32
-open-station:delvabruk:Delvabruk Dock 01	20b3a8cde1b6
-close-station:delvabruk:Delvabruk Dock 01	20b3a8cde1b6
-open-station:delvabruk:Delvabruk Watch 02	20b3a8cde1b6
-close-station:delvabruk:Delvabruk Watch 02	20b3a8cde1b6
-open-station:delvabruk:Delvabruk Observatory 03	20b3a8cde1b6
-close-station:delvabruk:Delvabruk Observatory 03	20b3a8cde1b6
-open-station:delvabruk:Delvabruk Habitat 05	20b3a8cde1b6
-close-station:delvabruk:Delvabruk Habitat 05	20b3a8cde1b6
-open-station:delvabruk:Delvabruk Works 06	20b3a8cde1b6
-close-station:delvabruk:Delvabruk Works 06	20b3a8cde1b6
-open-station:delvabruk:Delvabruk Works 07	20b3a8cde1b6
-close-station:delvabruk:Delvabruk Works 07	20b3a8cde1b6
-open-station:delvabruk:Delvabruk Battery 10	20b3a8cde1b6
-close-station:delvabruk:Delvabruk Battery 10	20b3a8cde1b6
-open-station:delvabruk:Delvabruk Habitat 11	20b3a8cde1b6
-close-station:delvabruk:Delvabruk Habitat 11	20b3a8cde1b6
-open-station:delvabruk:Delvabruk Battery 12	20b3a8cde1b6
-close-station:delvabruk:Delvabruk Battery 12	20b3a8cde1b6
-open-station:delvabruk:Delvabruk Habitat 17	20b3a8cde1b6
-close-station:delvabruk:Delvabruk Habitat 17	20b3a8cde1b6
-open-station:delvabruk:Delvabruk Works 18	20b3a8cde1b6
-close-station:delvabruk:Delvabruk Works 18	20b3a8cde1b6
-open-station:delvabruk:Delvabruk Habitat 19	20b3a8cde1b6
-close-station:delvabruk:Delvabruk Habitat 19	20b3a8cde1b6
-open-station:delvabruk:Delvabruk Habitat 31	20b3a8cde1b6
-close-station:delvabruk:Delvabruk Habitat 31	20b3a8cde1b6
-open-station:ildara:Ildara Dock 01	758f6e8a057e5
-close-station:ildara:Ildara Dock 01	758f6e8a057e5
-open-station:ildara:Ildara Watch 02	758f6e8a057e5
-close-station:ildara:Ildara Watch 02	758f6e8a057e5
-open-station:ildara:Ildara Observatory 03	758f6e8a057e5
-close-station:ildara:Ildara Observatory 03	758f6e8a057e5
-open-station:ildara:Ildara Observatory 04	758f6e8a057e5
-close-station:ildara:Ildara Observatory 04	758f6e8a057e5
-open-station:ildara:Ildara Battery 06	758f6e8a057e5
-close-station:ildara:Ildara Battery 06	758f6e8a057e5
-open-station:ildara:Ildara Habitat 07	758f6e8a057e5
-close-station:ildara:Ildara Habitat 07	758f6e8a057e5
-open-station:ildara:Ildara Works 14	758f6e8a057e5
-close-station:ildara:Ildara Works 14	758f6e8a057e5
-open-station:ildara:Ildara Observatory 15	758f6e8a057e5
-close-station:ildara:Ildara Observatory 15	758f6e8a057e5
-open-station:zhaur:Zhaur Habitat 01	1bc278b8761a0a
-close-station:zhaur:Zhaur Habitat 01	1bc278b8761a0a
-open-station:zhaur:Zhaur Works 02	1bc278b8761a0a
-close-station:zhaur:Zhaur Works 02	1bc278b8761a0a
-open-station:zhaur:Zhaur Watch 03	1bc278b8761a0a
-close-station:zhaur:Zhaur Watch 03	1bc278b8761a0a
-open-station:zhaur:Zhaur Battery 05	1bc278b8761a0a
-close-station:zhaur:Zhaur Battery 05	1bc278b8761a0a
-open-station:zhaur:Zhaur Works 07	1bc278b8761a0a
-close-station:zhaur:Zhaur Works 07	1bc278b8761a0a
-open-station:zhaur:Zhaur Dock 09	1bc278b8761a0a
-close-station:zhaur:Zhaur Dock 09	1bc278b8761a0a
-open-station:zhaur:Zhaur Observatory 10	1bc278b8761a0a
-close-station:zhaur:Zhaur Observatory 10	1bc278b8761a0a
-open-station:zhaur:Zhaur Battery 11	1bc278b8761a0a
-close-station:zhaur:Zhaur Battery 11	1bc278b8761a0a
-open-station:zhaur:Zhaur Habitat 12	1bc278b8761a0a
-close-station:zhaur:Zhaur Habitat 12	1bc278b8761a0a
-open-station:zhaur:Zhaur Works 14	1bc278b8761a0a
-close-station:zhaur:Zhaur Works 14	1bc278b8761a0a
-open-station:zhaur:Zhaur Works 19	1bc278b8761a0a
-close-station:zhaur:Zhaur Works 19	1bc278b8761a0a
-open-station:zhaur:Zhaur Habitat 23	1bc278b8761a0a
-close-station:zhaur:Zhaur Habitat 23	1bc278b8761a0a
-open-station:zhaur:Zhaur Works 24	1bc278b8761a0a
-close-station:zhaur:Zhaur Works 24	1bc278b8761a0a
-open-station:zhaur:Zhaur Habitat 25	1bc278b8761a0a
-close-station:zhaur:Zhaur Habitat 25	1bc278b8761a0a
-open-station:sorellvaik:Sorellvaik Dock 01	1450b41158c58e
-close-station:sorellvaik:Sorellvaik Dock 01	1450b41158c58e
-open-station:sorellvaik:Sorellvaik Watch 02	1450b41158c58e
-close-station:sorellvaik:Sorellvaik Watch 02	1450b41158c58e
-open-station:sorellvaik:Sorellvaik Observatory 03	1450b41158c58e
-close-station:sorellvaik:Sorellvaik Observatory 03	1450b41158c58e
-open-station:sorellvaik:Sorellvaik Habitat 05	1450b41158c58e
-close-station:sorellvaik:Sorellvaik Habitat 05	1450b41158c58e
-open-station:sorellvaik:Sorellvaik Works 06	1450b41158c58e
-close-station:sorellvaik:Sorellvaik Works 06	1450b41158c58e
-open-station:sorellvaik:Sorellvaik Works 07	1450b41158c58e
-close-station:sorellvaik:Sorellvaik Works 07	1450b41158c58e
-open-station:sorellvaik:Sorellvaik Dock 14	1450b41158c58e
-close-station:sorellvaik:Sorellvaik Dock 14	1450b41158c58e
-open-station:adraask:Adraask Works 01	18f21e4b24fe58
-close-station:adraask:Adraask Works 01	18f21e4b24fe58
-open-station:adraask:Adraask Watch 02	18f21e4b24fe58
-close-station:adraask:Adraask Watch 02	18f21e4b24fe58
-open-station:adraask:Adraask Dock 03	18f21e4b24fe58
-close-station:adraask:Adraask Dock 03	18f21e4b24fe58
-open-station:adraask:Adraask Battery 04	18f21e4b24fe58
-close-station:adraask:Adraask Battery 04	18f21e4b24fe58
-open-station:adraask:Adraask Habitat 06	18f21e4b24fe58
-close-station:adraask:Adraask Habitat 06	18f21e4b24fe58
-open-station:adraask:Adraask Dock 07	18f21e4b24fe58
-close-station:adraask:Adraask Dock 07	18f21e4b24fe58
-open-station:vaidanstaad:Vaidanstaad Dock 01	1109bcddeb1628
-close-station:vaidanstaad:Vaidanstaad Dock 01	1109bcddeb1628
-open-station:vaidanstaad:Vaidanstaad Dock 02	1109bcddeb1628
-close-station:vaidanstaad:Vaidanstaad Dock 02	1109bcddeb1628
-open-station:vaidanstaad:Vaidanstaad Watch 03	1109bcddeb1628
-close-station:vaidanstaad:Vaidanstaad Watch 03	1109bcddeb1628
-open-station:vaidanstaad:Vaidanstaad Habitat 05	1109bcddeb1628
-close-station:vaidanstaad:Vaidanstaad Habitat 05	1109bcddeb1628
-open-station:vaidanstaad:Vaidanstaad Dock 07	1109bcddeb1628
-close-station:vaidanstaad:Vaidanstaad Dock 07	1109bcddeb1628
-open-station:vaidanstaad:Vaidanstaad Dock 09	1109bcddeb1628
-close-station:vaidanstaad:Vaidanstaad Dock 09	1109bcddeb1628
-open-station:vaidanstaad:Vaidanstaad Observatory 10	1109bcddeb1628
-close-station:vaidanstaad:Vaidanstaad Observatory 10	1109bcddeb1628
-open-station:vaidanstaad:Vaidanstaad Battery 12	1109bcddeb1628
-close-station:vaidanstaad:Vaidanstaad Battery 12	1109bcddeb1628
-open-station:vaidanstaad:Vaidanstaad Dock 14	1109bcddeb1628
-close-station:vaidanstaad:Vaidanstaad Dock 14	1109bcddeb1628
-open-station:vaidanstaad:Vaidanstaad Works 19	1109bcddeb1628
-close-station:vaidanstaad:Vaidanstaad Works 19	1109bcddeb1628
-open-station:edraanvek:Edraanvek Dock 01	1c29fda8bd44fa
-close-station:edraanvek:Edraanvek Dock 01	1c29fda8bd44fa
-open-station:edraanvek:Edraanvek Works 02	1c29fda8bd44fa
-close-station:edraanvek:Edraanvek Works 02	1c29fda8bd44fa
-open-station:edraanvek:Edraanvek Observatory 03	1c29fda8bd44fa
-close-station:edraanvek:Edraanvek Observatory 03	1c29fda8bd44fa
-open-station:edraanvek:Edraanvek Battery 06	1c29fda8bd44fa
-close-station:edraanvek:Edraanvek Battery 06	1c29fda8bd44fa
-open-station:edraanvek:Edraanvek Watch 09	1c29fda8bd44fa
-close-station:edraanvek:Edraanvek Watch 09	1c29fda8bd44fa
-open-station:edraanvek:Edraanvek Habitat 11	1c29fda8bd44fa
-close-station:edraanvek:Edraanvek Habitat 11	1c29fda8bd44fa
-open-station:edraanvek:Edraanvek Works 12	1c29fda8bd44fa
-close-station:edraanvek:Edraanvek Works 12	1c29fda8bd44fa
-open-station:zeldabruk:Zeldabruk Habitat 01	15bf1a549131d4
-close-station:zeldabruk:Zeldabruk Habitat 01	15bf1a549131d4
-open-station:zeldabruk:Zeldabruk Works 02	15bf1a549131d4
-close-station:zeldabruk:Zeldabruk Works 02	15bf1a549131d4
-open-station:zeldabruk:Zeldabruk Observatory 03	15bf1a549131d4
-close-station:zeldabruk:Zeldabruk Observatory 03	15bf1a549131d4
-open-station:zeldabruk:Zeldabruk Watch 04	15bf1a549131d4
-close-station:zeldabruk:Zeldabruk Watch 04	15bf1a549131d4
-open-station:zeldabruk:Zeldabruk Dock 08	15bf1a549131d4
-close-station:zeldabruk:Zeldabruk Dock 08	15bf1a549131d4
-open-station:zeldabruk:Zeldabruk Dock 13	15bf1a549131d4
-close-station:zeldabruk:Zeldabruk Dock 13	15bf1a549131d4
-open-station:namaaris:Namaaris Dock 01	1e123996e4abf3
-close-station:namaaris:Namaaris Dock 01	1e123996e4abf3
-open-station:namaaris:Namaaris Watch 02	1e123996e4abf3
-close-station:namaaris:Namaaris Watch 02	1e123996e4abf3
-open-station:namaaris:Namaaris Dock 03	1e123996e4abf3
-close-station:namaaris:Namaaris Dock 03	1e123996e4abf3
-open-station:namaaris:Namaaris Works 06	1e123996e4abf3
-close-station:namaaris:Namaaris Works 06	1e123996e4abf3
-open-station:namaaris:Namaaris Dock 08	1e123996e4abf3
-close-station:namaaris:Namaaris Dock 08	1e123996e4abf3
-open-station:namaaris:Namaaris Habitat 11	1e123996e4abf3
-close-station:namaaris:Namaaris Habitat 11	1e123996e4abf3
-open-station:namaaris:Namaaris Battery 12	1e123996e4abf3
-close-station:namaaris:Namaaris Battery 12	1e123996e4abf3
-open-station:odelhavn:Odelhavn Works 01	1a233773675551
-close-station:odelhavn:Odelhavn Works 01	1a233773675551
-open-station:odelhavn:Odelhavn Watch 02	1a233773675551
-close-station:odelhavn:Odelhavn Watch 02	1a233773675551
-open-station:odelhavn:Odelhavn Battery 06	1a233773675551
-close-station:odelhavn:Odelhavn Battery 06	1a233773675551
-open-station:odelhavn:Odelhavn Works 07	1a233773675551
-close-station:odelhavn:Odelhavn Works 07	1a233773675551
-open-station:ruun:Ruun Works 01	d625e1e4c560
-close-station:ruun:Ruun Works 01	d625e1e4c560
-open-station:ruun:Ruun Dock 02	d625e1e4c560
-close-station:ruun:Ruun Dock 02	d625e1e4c560
-open-station:ruun:Ruun Habitat 06	d625e1e4c560
-close-station:ruun:Ruun Habitat 06	d625e1e4c560
-open-station:peladaun:Peladaun Dock 01	55077bc26187f
-close-station:peladaun:Peladaun Dock 01	55077bc26187f
-open-station:peladaun:Peladaun Works 02	55077bc26187f
-close-station:peladaun:Peladaun Works 02	55077bc26187f
-open-station:peladaun:Peladaun Observatory 04	55077bc26187f
-close-station:peladaun:Peladaun Observatory 04	55077bc26187f
-open-station:peladaun:Peladaun Watch 10	55077bc26187f
-close-station:peladaun:Peladaun Watch 10	55077bc26187f
-open-station:peladaun:Peladaun Habitat 12	55077bc26187f
-close-station:peladaun:Peladaun Habitat 12	55077bc26187f
-open-station:peladaun:Peladaun Habitat 13	55077bc26187f
-close-station:peladaun:Peladaun Habitat 13	55077bc26187f
-open-station:peladaun:Peladaun Battery 16	55077bc26187f
-close-station:peladaun:Peladaun Battery 16	55077bc26187f
-open-station:iskarraas:Iskarraas Dock 01	1cfa60ffd9d689
-close-station:iskarraas:Iskarraas Dock 01	1cfa60ffd9d689
-open-station:iskarraas:Iskarraas Works 02	1cfa60ffd9d689
-close-station:iskarraas:Iskarraas Works 02	1cfa60ffd9d689
-open-station:iskarraas:Iskarraas Observatory 05	1cfa60ffd9d689
-close-station:iskarraas:Iskarraas Observatory 05	1cfa60ffd9d689
-open-station:iskarraas:Iskarraas Habitat 07	1cfa60ffd9d689
-close-station:iskarraas:Iskarraas Habitat 07	1cfa60ffd9d689
-open-station:dovrendaal:Dovrendaal Works 01	1ce3db8ab81611
-close-station:dovrendaal:Dovrendaal Works 01	1ce3db8ab81611
-open-station:dovrendaal:Dovrendaal Dock 03	1ce3db8ab81611
-close-station:dovrendaal:Dovrendaal Dock 03	1ce3db8ab81611
-open-station:dovrendaal:Dovrendaal Battery 04	1ce3db8ab81611
-close-station:dovrendaal:Dovrendaal Battery 04	1ce3db8ab81611
-open-station:dovrendaal:Dovrendaal Watch 09	1ce3db8ab81611
-close-station:dovrendaal:Dovrendaal Watch 09	1ce3db8ab81611
-open-station:dovrendaal:Dovrendaal Observatory 10	1ce3db8ab81611
-close-station:dovrendaal:Dovrendaal Observatory 10	1ce3db8ab81611
-open-station:ortaashaad:Ortaashaad Dock 01	1ff33e0e844e5b
-close-station:ortaashaad:Ortaashaad Dock 01	1ff33e0e844e5b
-open-station:ortaashaad:Ortaashaad Works 02	1ff33e0e844e5b
-close-station:ortaashaad:Ortaashaad Works 02	1ff33e0e844e5b
-open-station:ortaashaad:Ortaashaad Observatory 03	1ff33e0e844e5b
-close-station:ortaashaad:Ortaashaad Observatory 03	1ff33e0e844e5b
-open-station:ortaashaad:Ortaashaad Habitat 05	1ff33e0e844e5b
-close-station:ortaashaad:Ortaashaad Habitat 05	1ff33e0e844e5b
-open-station:ortaashaad:Ortaashaad Works 06	1ff33e0e844e5b
-close-station:ortaashaad:Ortaashaad Works 06	1ff33e0e844e5b
-open-station:ortaashaad:Ortaashaad Works 07	1ff33e0e844e5b
-close-station:ortaashaad:Ortaashaad Works 07	1ff33e0e844e5b
-open-station:ortaashaad:Ortaashaad Watch 09	1ff33e0e844e5b
-close-station:ortaashaad:Ortaashaad Watch 09	1ff33e0e844e5b
-open-station:ortaashaad:Ortaashaad Habitat 11	1ff33e0e844e5b
-close-station:ortaashaad:Ortaashaad Habitat 11	1ff33e0e844e5b
-open-station:ortaashaad:Ortaashaad Habitat 12	1ff33e0e844e5b
-close-station:ortaashaad:Ortaashaad Habitat 12	1ff33e0e844e5b
-open-station:ortaashaad:Ortaashaad Battery 18	1ff33e0e844e5b
-close-station:ortaashaad:Ortaashaad Battery 18	1ff33e0e844e5b
-open-station:ortaashaad:Ortaashaad Habitat 24	1ff33e0e844e5b
-close-station:ortaashaad:Ortaashaad Habitat 24	1ff33e0e844e5b
-open-station:ortaashaad:Ortaashaad Habitat 25	1ff33e0e844e5b
-close-station:ortaashaad:Ortaashaad Habitat 25	1ff33e0e844e5b
-open-station:saarbruk:Saarbruk Works 01	d64b0857fef7c
-close-station:saarbruk:Saarbruk Works 01	d64b0857fef7c
-open-station:saarbruk:Saarbruk Watch 02	d64b0857fef7c
-close-station:saarbruk:Saarbruk Watch 02	d64b0857fef7c
-open-station:saarbruk:Saarbruk Watch 03	d64b0857fef7c
-close-station:saarbruk:Saarbruk Watch 03	d64b0857fef7c
-open-station:saarbruk:Saarbruk Observatory 04	d64b0857fef7c
-close-station:saarbruk:Saarbruk Observatory 04	d64b0857fef7c
-open-station:saarbruk:Saarbruk Observatory 05	d64b0857fef7c
-close-station:saarbruk:Saarbruk Observatory 05	d64b0857fef7c
-open-station:saarbruk:Saarbruk Battery 06	d64b0857fef7c
-close-station:saarbruk:Saarbruk Battery 06	d64b0857fef7c
-open-station:saarbruk:Saarbruk Dock 07	d64b0857fef7c
-close-station:saarbruk:Saarbruk Dock 07	d64b0857fef7c
-open-station:saarbruk:Saarbruk Works 08	d64b0857fef7c
-close-station:saarbruk:Saarbruk Works 08	d64b0857fef7c
-open-station:saarbruk:Saarbruk Observatory 21	d64b0857fef7c
-close-station:saarbruk:Saarbruk Observatory 21	d64b0857fef7c
-open-station:kalyrveen:Kalyrveen Works 01	17da34d35b54f4
-close-station:kalyrveen:Kalyrveen Works 01	17da34d35b54f4
-open-station:kalyrveen:Kalyrveen Works 02	17da34d35b54f4
-close-station:kalyrveen:Kalyrveen Works 02	17da34d35b54f4
-open-station:kalyrveen:Kalyrveen Dock 03	17da34d35b54f4
-close-station:kalyrveen:Kalyrveen Dock 03	17da34d35b54f4
-open-station:kalyrveen:Kalyrveen Observatory 05	17da34d35b54f4
-close-station:kalyrveen:Kalyrveen Observatory 05	17da34d35b54f4
-open-station:kalyrveen:Kalyrveen Habitat 07	17da34d35b54f4
-close-station:kalyrveen:Kalyrveen Habitat 07	17da34d35b54f4
-open-station:kalyrveen:Kalyrveen Watch 08	17da34d35b54f4
-close-station:kalyrveen:Kalyrveen Watch 08	17da34d35b54f4
-open-station:kalyrveen:Kalyrveen Watch 09	17da34d35b54f4
-close-station:kalyrveen:Kalyrveen Watch 09	17da34d35b54f4
-open-station:kalyrveen:Kalyrveen Battery 10	17da34d35b54f4
-close-station:kalyrveen:Kalyrveen Battery 10	17da34d35b54f4
-open-station:teradaun:Teradaun Habitat 01	17cb3a79f1189a
-close-station:teradaun:Teradaun Habitat 01	17cb3a79f1189a
-open-station:teradaun:Teradaun Watch 02	17cb3a79f1189a
-close-station:teradaun:Teradaun Watch 02	17cb3a79f1189a
-open-station:teradaun:Teradaun Observatory 03	17cb3a79f1189a
-close-station:teradaun:Teradaun Observatory 03	17cb3a79f1189a
-open-station:teradaun:Teradaun Watch 10	17cb3a79f1189a
-close-station:teradaun:Teradaun Watch 10	17cb3a79f1189a
-open-station:teradaun:Teradaun Battery 11	17cb3a79f1189a
-close-station:teradaun:Teradaun Battery 11	17cb3a79f1189a
-open-station:teradaun:Teradaun Habitat 12	17cb3a79f1189a
-close-station:teradaun:Teradaun Habitat 12	17cb3a79f1189a
-open-station:teradaun:Teradaun Works 14	17cb3a79f1189a
-close-station:teradaun:Teradaun Works 14	17cb3a79f1189a
-open-station:neretvaal:Neretvaal Works 01	2cd7c6efb8ff6
-close-station:neretvaal:Neretvaal Works 01	2cd7c6efb8ff6
-open-station:neretvaal:Neretvaal Works 02	2cd7c6efb8ff6
-close-station:neretvaal:Neretvaal Works 02	2cd7c6efb8ff6
-open-station:neretvaal:Neretvaal Dock 03	2cd7c6efb8ff6
-close-station:neretvaal:Neretvaal Dock 03	2cd7c6efb8ff6
-open-station:vessarik:Vessarik Habitat 01	97305d2d4a228
-close-station:vessarik:Vessarik Habitat 01	97305d2d4a228
-open-station:vessarik:Vessarik Dock 02	97305d2d4a228
-close-station:vessarik:Vessarik Dock 02	97305d2d4a228
-open-station:vessarik:Vessarik Observatory 03	97305d2d4a228
-close-station:vessarik:Vessarik Observatory 03	97305d2d4a228
-open-station:vessarik:Vessarik Battery 04	97305d2d4a228
-close-station:vessarik:Vessarik Battery 04	97305d2d4a228
-open-station:vessarik:Vessarik Works 08	97305d2d4a228
-close-station:vessarik:Vessarik Works 08	97305d2d4a228
-open-station:vessarik:Vessarik Observatory 09	97305d2d4a228
-close-station:vessarik:Vessarik Observatory 09	97305d2d4a228
-open-station:vessarik:Vessarik Battery 10	97305d2d4a228
-close-station:vessarik:Vessarik Battery 10	97305d2d4a228
-open-station:olundraal:Olundraal Dock 02	1016584de25658
-close-station:olundraal:Olundraal Dock 02	1016584de25658
-open-station:olundraal:Olundraal Watch 03	1016584de25658
-close-station:olundraal:Olundraal Watch 03	1016584de25658
-open-station:olundraal:Olundraal Battery 04	1016584de25658
-close-station:olundraal:Olundraal Battery 04	1016584de25658
-open-station:olundraal:Olundraal Habitat 05	1016584de25658
-close-station:olundraal:Olundraal Habitat 05	1016584de25658
-open-station:olundraal:Olundraal Habitat 07	1016584de25658
-close-station:olundraal:Olundraal Habitat 07	1016584de25658
-open-station:olundraal:Olundraal Works 08	1016584de25658
-close-station:olundraal:Olundraal Works 08	1016584de25658
-open-station:mareshavn:Mareshavn Habitat 01	1f6bd039d04156
-close-station:mareshavn:Mareshavn Habitat 01	1f6bd039d04156
-open-station:mareshavn:Mareshavn Works 02	1f6bd039d04156
-close-station:mareshavn:Mareshavn Works 02	1f6bd039d04156
-open-station:mareshavn:Mareshavn Watch 04	1f6bd039d04156
-close-station:mareshavn:Mareshavn Watch 04	1f6bd039d04156
-open-station:mareshavn:Mareshavn Dock 09	1f6bd039d04156
-close-station:mareshavn:Mareshavn Dock 09	1f6bd039d04156
-open-station:mareshavn:Mareshavn Observatory 10	1f6bd039d04156
-close-station:mareshavn:Mareshavn Observatory 10	1f6bd039d04156
-open-station:daatren:Daatren Works 01	1e81bd6aa2288f
-close-station:daatren:Daatren Works 01	1e81bd6aa2288f
-open-station:daatren:Daatren Watch 02	1e81bd6aa2288f
-close-station:daatren:Daatren Watch 02	1e81bd6aa2288f
-open-station:daatren:Daatren Habitat 05	1e81bd6aa2288f
-close-station:daatren:Daatren Habitat 05	1e81bd6aa2288f
-open-station:daatren:Daatren Observatory 09	1e81bd6aa2288f
-close-station:daatren:Daatren Observatory 09	1e81bd6aa2288f
-open-station:daatren:Daatren Dock 13	1e81bd6aa2288f
-close-station:daatren:Daatren Dock 13	1e81bd6aa2288f
-open-station:esdarveen:Esdarveen Habitat 01	1eb7e679eb00ab
-close-station:esdarveen:Esdarveen Habitat 01	1eb7e679eb00ab
-open-station:esdarveen:Esdarveen Watch 02	1eb7e679eb00ab
-close-station:esdarveen:Esdarveen Watch 02	1eb7e679eb00ab
-open-station:esdarveen:Esdarveen Observatory 05	1eb7e679eb00ab
-close-station:esdarveen:Esdarveen Observatory 05	1eb7e679eb00ab
-open-station:esdarveen:Esdarveen Works 07	1eb7e679eb00ab
-close-station:esdarveen:Esdarveen Works 07	1eb7e679eb00ab
-open-station:zyravel:Zyravel Works 01	fb70c21bbde
-close-station:zyravel:Zyravel Works 01	fb70c21bbde
-open-station:zyravel:Zyravel Watch 02	fb70c21bbde
-close-station:zyravel:Zyravel Watch 02	fb70c21bbde
-open-station:zyravel:Zyravel Dock 03	fb70c21bbde
-close-station:zyravel:Zyravel Dock 03	fb70c21bbde
-open-station:zyravel:Zyravel Battery 10	fb70c21bbde
-close-station:zyravel:Zyravel Battery 10	fb70c21bbde
-open-station:zyravel:Zyravel Habitat 11	fb70c21bbde
-close-station:zyravel:Zyravel Habitat 11	fb70c21bbde
-open-station:tessadaal:Tessadaal Dock 01	37e38546a2c7c
-close-station:tessadaal:Tessadaal Dock 01	37e38546a2c7c
-open-station:tessadaal:Tessadaal Works 02	37e38546a2c7c
-close-station:tessadaal:Tessadaal Works 02	37e38546a2c7c
-open-station:tessadaal:Tessadaal Habitat 06	37e38546a2c7c
-close-station:tessadaal:Tessadaal Habitat 06	37e38546a2c7c
-open-station:hadresh:Hadresh Works 01	171599030123ec
-close-station:hadresh:Hadresh Works 01	171599030123ec
-open-station:hadresh:Hadresh Watch 02	171599030123ec
-close-station:hadresh:Hadresh Watch 02	171599030123ec
-open-station:hadresh:Hadresh Habitat 05	171599030123ec
-close-station:hadresh:Hadresh Habitat 05	171599030123ec
-open-station:hadresh:Hadresh Dock 09	171599030123ec
-close-station:hadresh:Hadresh Dock 09	171599030123ec
-open-station:ossendaal:Ossendaal Habitat 01	27b98c4ff57aa
-close-station:ossendaal:Ossendaal Habitat 01	27b98c4ff57aa
-open-station:ossendaal:Ossendaal Works 02	27b98c4ff57aa
-close-station:ossendaal:Ossendaal Works 02	27b98c4ff57aa
-open-station:ossendaal:Ossendaal Battery 06	27b98c4ff57aa
-close-station:ossendaal:Ossendaal Battery 06	27b98c4ff57aa
-open-station:varetiraak:Varetiraak Works 01	1d1968775f0ff5
-close-station:varetiraak:Varetiraak Works 01	1d1968775f0ff5
-open-station:varetiraak:Varetiraak Dock 03	1d1968775f0ff5
-close-station:varetiraak:Varetiraak Dock 03	1d1968775f0ff5
-open-station:varetiraak:Varetiraak Battery 04	1d1968775f0ff5
-close-station:varetiraak:Varetiraak Battery 04	1d1968775f0ff5
-open-station:varetiraak:Varetiraak Watch 08	1d1968775f0ff5
-close-station:varetiraak:Varetiraak Watch 08	1d1968775f0ff5
-open-station:varetiraak:Varetiraak Watch 09	1d1968775f0ff5
-close-station:varetiraak:Varetiraak Watch 09	1d1968775f0ff5
-open-station:varetiraak:Varetiraak Watch 10	1d1968775f0ff5
-close-station:varetiraak:Varetiraak Watch 10	1d1968775f0ff5
-open-station:varetiraak:Varetiraak Observatory 11	1d1968775f0ff5
-close-station:varetiraak:Varetiraak Observatory 11	1d1968775f0ff5
-open-station:varetiraak:Varetiraak Dock 14	1d1968775f0ff5
-close-station:varetiraak:Varetiraak Dock 14	1d1968775f0ff5
-open-station:varetiraak:Varetiraak Habitat 18	1d1968775f0ff5
-close-station:varetiraak:Varetiraak Habitat 18	1d1968775f0ff5
-open-station:talvenstaad:Talvenstaad Works 01	3237a182ca799
-close-station:talvenstaad:Talvenstaad Works 01	3237a182ca799
-open-station:talvenstaad:Talvenstaad Watch 03	3237a182ca799
-close-station:talvenstaad:Talvenstaad Watch 03	3237a182ca799
-open-station:talvenstaad:Talvenstaad Watch 04	3237a182ca799
-close-station:talvenstaad:Talvenstaad Watch 04	3237a182ca799
-open-station:talvenstaad:Talvenstaad Habitat 05	3237a182ca799
-close-station:talvenstaad:Talvenstaad Habitat 05	3237a182ca799
-open-station:talvenstaad:Talvenstaad Dock 07	3237a182ca799
-close-station:talvenstaad:Talvenstaad Dock 07	3237a182ca799
-open-station:talvenstaad:Talvenstaad Watch 08	3237a182ca799
-close-station:talvenstaad:Talvenstaad Watch 08	3237a182ca799
-open-station:kordabruk:Kordabruk Dock 01	12b1583aa180e3
-close-station:kordabruk:Kordabruk Dock 01	12b1583aa180e3
-open-station:kordabruk:Kordabruk Watch 02	12b1583aa180e3
-close-station:kordabruk:Kordabruk Watch 02	12b1583aa180e3
-open-station:kordabruk:Kordabruk Battery 05	12b1583aa180e3
-close-station:kordabruk:Kordabruk Battery 05	12b1583aa180e3
-open-station:kordabruk:Kordabruk Watch 08	12b1583aa180e3
-close-station:kordabruk:Kordabruk Watch 08	12b1583aa180e3
-open-station:kordabruk:Kordabruk Watch 09	12b1583aa180e3
-close-station:kordabruk:Kordabruk Watch 09	12b1583aa180e3
-open-station:retharaas:Retharaas Habitat 01	1c3a8228207935
-close-station:retharaas:Retharaas Habitat 01	1c3a8228207935
-open-station:retharaas:Retharaas Dock 02	1c3a8228207935
-close-station:retharaas:Retharaas Dock 02	1c3a8228207935
-open-station:retharaas:Retharaas Battery 06	1c3a8228207935
-close-station:retharaas:Retharaas Battery 06	1c3a8228207935
-open-station:velisharn:Velisharn Dock 01	14707e99ffca85
-close-station:velisharn:Velisharn Dock 01	14707e99ffca85
-open-station:velisharn:Velisharn Dock 02	14707e99ffca85
-close-station:velisharn:Velisharn Dock 02	14707e99ffca85
-open-station:velisharn:Velisharn Watch 09	14707e99ffca85
-close-station:velisharn:Velisharn Watch 09	14707e99ffca85
-open-station:velisharn:Velisharn Battery 10	14707e99ffca85
-close-station:velisharn:Velisharn Battery 10	14707e99ffca85
-open-station:odraask:Odraask Works 01	1d0425a6ad7897
-close-station:odraask:Odraask Works 01	1d0425a6ad7897
-open-station:odraask:Odraask Dock 02	1d0425a6ad7897
-close-station:odraask:Odraask Dock 02	1d0425a6ad7897
-open-station:nydrelvaal:Nydrelvaal Works 01	17e513d5778aba
-close-station:nydrelvaal:Nydrelvaal Works 01	17e513d5778aba
-open-station:nydrelvaal:Nydrelvaal Watch 02	17e513d5778aba
-close-station:nydrelvaal:Nydrelvaal Watch 02	17e513d5778aba
-open-station:karaad:Karaad Dock 01	1a121d39ed7ed1
-close-station:karaad:Karaad Dock 01	1a121d39ed7ed1
-open-station:karaad:Karaad Works 02	1a121d39ed7ed1
-close-station:karaad:Karaad Works 02	1a121d39ed7ed1
-open-station:karaad:Karaad Works 07	1a121d39ed7ed1
-close-station:karaad:Karaad Works 07	1a121d39ed7ed1
-open-station:eshdaanvek:Eshdaanvek Dock 01	119415c147158c
-close-station:eshdaanvek:Eshdaanvek Dock 01	119415c147158c
-open-station:eshdaanvek:Eshdaanvek Watch 02	119415c147158c
-close-station:eshdaanvek:Eshdaanvek Watch 02	119415c147158c
-open-station:yrdana:Yrdana Habitat 01	1a24afc5ea061c
-close-station:yrdana:Yrdana Habitat 01	1a24afc5ea061c
-open-station:irdaal:Irdaal Habitat 01	1be7a89e79fa35
-close-station:irdaal:Irdaal Habitat 01	1be7a89e79fa35
+close-station:irdaal:Irdaal TORA-01	124ff3ca75b6e2
+open-station:avendon:Ouua Works 01	16843090fe6771
+close-station:avendon:Ouua Works 01	16843090fe6771
+open-station:avendon:Ouua Watch 02	16843090fe6771
+close-station:avendon:Ouua Watch 02	16843090fe6771
+open-station:avendon:Ouua Observatory 03	16843090fe6771
+close-station:avendon:Ouua Observatory 03	16843090fe6771
+open-station:avendon:Ouua Watch 04	16843090fe6771
+close-station:avendon:Ouua Watch 04	16843090fe6771
+open-station:avendon:Ouua Habitat 06	16843090fe6771
+close-station:avendon:Ouua Habitat 06	16843090fe6771
+open-station:avendon:Ouua Dock 07	16843090fe6771
+close-station:avendon:Ouua Dock 07	16843090fe6771
+open-station:avendon:Ouua Watch 08	16843090fe6771
+close-station:avendon:Ouua Watch 08	16843090fe6771
+open-station:avendon:Ouua Watch 09	16843090fe6771
+close-station:avendon:Ouua Watch 09	16843090fe6771
+open-station:avendon:Ouua Observatory 10	16843090fe6771
+close-station:avendon:Ouua Observatory 10	16843090fe6771
+open-station:avendon:Ouua Battery 11	16843090fe6771
+close-station:avendon:Ouua Battery 11	16843090fe6771
+open-station:avendon:Ouua Works 13	16843090fe6771
+close-station:avendon:Ouua Works 13	16843090fe6771
+open-station:avendon:Ouua Watch 15	16843090fe6771
+close-station:avendon:Ouua Watch 15	16843090fe6771
+open-station:avendon:Ouua Habitat 17	16843090fe6771
+close-station:avendon:Ouua Habitat 17	16843090fe6771
+open-station:avendon:Ouua Habitat 19	16843090fe6771
+close-station:avendon:Ouua Habitat 19	16843090fe6771
+open-station:avendon:Ouua Works 25	16843090fe6771
+close-station:avendon:Ouua Works 25	16843090fe6771
+open-station:avendon:Ouua Dock 26	16843090fe6771
+close-station:avendon:Ouua Dock 26	16843090fe6771
+open-station:avendon:Ouua Works 30	16843090fe6771
+close-station:avendon:Ouua Works 30	16843090fe6771
+open-station:avendon:Ouua Works 32	16843090fe6771
+close-station:avendon:Ouua Works 32	16843090fe6771
+open-station:avendon:Ouua Works 36	16843090fe6771
+close-station:avendon:Ouua Works 36	16843090fe6771
+open-station:avendon:Ouua Works 37	16843090fe6771
+close-station:avendon:Ouua Works 37	16843090fe6771
+open-station:avendon:Ouua Works 42	16843090fe6771
+close-station:avendon:Ouua Works 42	16843090fe6771
+open-station:avendon:Ouua Works 43	16843090fe6771
+close-station:avendon:Ouua Works 43	16843090fe6771
+open-station:kraunveld:Kraunveld Works 01	1c001b0de311a8
+close-station:kraunveld:Kraunveld Works 01	1c001b0de311a8
+open-station:kraunveld:Kraunveld Watch 02	1c001b0de311a8
+close-station:kraunveld:Kraunveld Watch 02	1c001b0de311a8
+open-station:kraunveld:Kraunveld Dock 03	1c001b0de311a8
+close-station:kraunveld:Kraunveld Dock 03	1c001b0de311a8
+open-station:kraunveld:Kraunveld Habitat 05	1c001b0de311a8
+close-station:kraunveld:Kraunveld Habitat 05	1c001b0de311a8
+open-station:kraunveld:Kraunveld Works 06	1c001b0de311a8
+close-station:kraunveld:Kraunveld Works 06	1c001b0de311a8
+open-station:kraunveld:Kraunveld Battery 10	1c001b0de311a8
+close-station:kraunveld:Kraunveld Battery 10	1c001b0de311a8
+open-station:kraunveld:Kraunveld Observatory 15	1c001b0de311a8
+close-station:kraunveld:Kraunveld Observatory 15	1c001b0de311a8
+open-station:delvabruk:Delvabruk Dock 01	4770af4fee2b5
+close-station:delvabruk:Delvabruk Dock 01	4770af4fee2b5
+open-station:delvabruk:Delvabruk Watch 02	4770af4fee2b5
+close-station:delvabruk:Delvabruk Watch 02	4770af4fee2b5
+open-station:delvabruk:Delvabruk Observatory 03	4770af4fee2b5
+close-station:delvabruk:Delvabruk Observatory 03	4770af4fee2b5
+open-station:delvabruk:Delvabruk Habitat 05	4770af4fee2b5
+close-station:delvabruk:Delvabruk Habitat 05	4770af4fee2b5
+open-station:delvabruk:Delvabruk Works 06	4770af4fee2b5
+close-station:delvabruk:Delvabruk Works 06	4770af4fee2b5
+open-station:delvabruk:Delvabruk Works 07	4770af4fee2b5
+close-station:delvabruk:Delvabruk Works 07	4770af4fee2b5
+open-station:delvabruk:Delvabruk Battery 10	4770af4fee2b5
+close-station:delvabruk:Delvabruk Battery 10	4770af4fee2b5
+open-station:delvabruk:Delvabruk Habitat 11	4770af4fee2b5
+close-station:delvabruk:Delvabruk Habitat 11	4770af4fee2b5
+open-station:delvabruk:Delvabruk Battery 12	4770af4fee2b5
+close-station:delvabruk:Delvabruk Battery 12	4770af4fee2b5
+open-station:delvabruk:Delvabruk Habitat 17	4770af4fee2b5
+close-station:delvabruk:Delvabruk Habitat 17	4770af4fee2b5
+open-station:delvabruk:Delvabruk Works 18	4770af4fee2b5
+close-station:delvabruk:Delvabruk Works 18	4770af4fee2b5
+open-station:delvabruk:Delvabruk Habitat 19	4770af4fee2b5
+close-station:delvabruk:Delvabruk Habitat 19	4770af4fee2b5
+open-station:delvabruk:Delvabruk Habitat 31	4770af4fee2b5
+close-station:delvabruk:Delvabruk Habitat 31	4770af4fee2b5
+open-station:ildara:Ildara Dock 01	109d935be50904
+close-station:ildara:Ildara Dock 01	109d935be50904
+open-station:ildara:Ildara Watch 02	109d935be50904
+close-station:ildara:Ildara Watch 02	109d935be50904
+open-station:ildara:Ildara Observatory 03	109d935be50904
+close-station:ildara:Ildara Observatory 03	109d935be50904
+open-station:ildara:Ildara Observatory 04	109d935be50904
+close-station:ildara:Ildara Observatory 04	109d935be50904
+open-station:ildara:Ildara Battery 06	109d935be50904
+close-station:ildara:Ildara Battery 06	109d935be50904
+open-station:ildara:Ildara Habitat 07	109d935be50904
+close-station:ildara:Ildara Habitat 07	109d935be50904
+open-station:ildara:Ildara Works 14	109d935be50904
+close-station:ildara:Ildara Works 14	109d935be50904
+open-station:ildara:Ildara Observatory 15	109d935be50904
+close-station:ildara:Ildara Observatory 15	109d935be50904
+open-station:zhaur:Zhaur Habitat 01	149480cd066a02
+close-station:zhaur:Zhaur Habitat 01	149480cd066a02
+open-station:zhaur:Zhaur Works 02	149480cd066a02
+close-station:zhaur:Zhaur Works 02	149480cd066a02
+open-station:zhaur:Zhaur Watch 03	149480cd066a02
+close-station:zhaur:Zhaur Watch 03	149480cd066a02
+open-station:zhaur:Zhaur Battery 05	149480cd066a02
+close-station:zhaur:Zhaur Battery 05	149480cd066a02
+open-station:zhaur:Zhaur Works 07	149480cd066a02
+close-station:zhaur:Zhaur Works 07	149480cd066a02
+open-station:zhaur:Zhaur Dock 09	149480cd066a02
+close-station:zhaur:Zhaur Dock 09	149480cd066a02
+open-station:zhaur:Zhaur Observatory 10	149480cd066a02
+close-station:zhaur:Zhaur Observatory 10	149480cd066a02
+open-station:zhaur:Zhaur Battery 11	149480cd066a02
+close-station:zhaur:Zhaur Battery 11	149480cd066a02
+open-station:zhaur:Zhaur Habitat 12	149480cd066a02
+close-station:zhaur:Zhaur Habitat 12	149480cd066a02
+open-station:zhaur:Zhaur Works 14	149480cd066a02
+close-station:zhaur:Zhaur Works 14	149480cd066a02
+open-station:zhaur:Zhaur Works 19	149480cd066a02
+close-station:zhaur:Zhaur Works 19	149480cd066a02
+open-station:zhaur:Zhaur Habitat 23	149480cd066a02
+close-station:zhaur:Zhaur Habitat 23	149480cd066a02
+open-station:zhaur:Zhaur Works 24	149480cd066a02
+close-station:zhaur:Zhaur Works 24	149480cd066a02
+open-station:zhaur:Zhaur Habitat 25	149480cd066a02
+close-station:zhaur:Zhaur Habitat 25	149480cd066a02
+open-station:sorellvaik:Sorellvaik Dock 01	d9162fdf07c3e
+close-station:sorellvaik:Sorellvaik Dock 01	d9162fdf07c3e
+open-station:sorellvaik:Sorellvaik Watch 02	d9162fdf07c3e
+close-station:sorellvaik:Sorellvaik Watch 02	d9162fdf07c3e
+open-station:sorellvaik:Sorellvaik Observatory 03	d9162fdf07c3e
+close-station:sorellvaik:Sorellvaik Observatory 03	d9162fdf07c3e
+open-station:sorellvaik:Sorellvaik Habitat 05	d9162fdf07c3e
+close-station:sorellvaik:Sorellvaik Habitat 05	d9162fdf07c3e
+open-station:sorellvaik:Sorellvaik Works 06	d9162fdf07c3e
+close-station:sorellvaik:Sorellvaik Works 06	d9162fdf07c3e
+open-station:sorellvaik:Sorellvaik Works 07	d9162fdf07c3e
+close-station:sorellvaik:Sorellvaik Works 07	d9162fdf07c3e
+open-station:sorellvaik:Sorellvaik Dock 14	d9162fdf07c3e
+close-station:sorellvaik:Sorellvaik Dock 14	d9162fdf07c3e
+open-station:adraask:Adraask Works 01	1ce4ad1e68d03c
+close-station:adraask:Adraask Works 01	1ce4ad1e68d03c
+open-station:adraask:Adraask Watch 02	1ce4ad1e68d03c
+close-station:adraask:Adraask Watch 02	1ce4ad1e68d03c
+open-station:adraask:Adraask Dock 03	1ce4ad1e68d03c
+close-station:adraask:Adraask Dock 03	1ce4ad1e68d03c
+open-station:adraask:Adraask Battery 04	1ce4ad1e68d03c
+close-station:adraask:Adraask Battery 04	1ce4ad1e68d03c
+open-station:adraask:Adraask Habitat 06	1ce4ad1e68d03c
+close-station:adraask:Adraask Habitat 06	1ce4ad1e68d03c
+open-station:adraask:Adraask Dock 07	1ce4ad1e68d03c
+close-station:adraask:Adraask Dock 07	1ce4ad1e68d03c
+open-station:vaidanstaad:Vaidanstaad Dock 01	1b4706832995d2
+close-station:vaidanstaad:Vaidanstaad Dock 01	1b4706832995d2
+open-station:vaidanstaad:Vaidanstaad Dock 02	1b4706832995d2
+close-station:vaidanstaad:Vaidanstaad Dock 02	1b4706832995d2
+open-station:vaidanstaad:Vaidanstaad Watch 03	1b4706832995d2
+close-station:vaidanstaad:Vaidanstaad Watch 03	1b4706832995d2
+open-station:vaidanstaad:Vaidanstaad Habitat 05	1b4706832995d2
+close-station:vaidanstaad:Vaidanstaad Habitat 05	1b4706832995d2
+open-station:vaidanstaad:Vaidanstaad Dock 07	1b4706832995d2
+close-station:vaidanstaad:Vaidanstaad Dock 07	1b4706832995d2
+open-station:vaidanstaad:Vaidanstaad Dock 09	1b4706832995d2
+close-station:vaidanstaad:Vaidanstaad Dock 09	1b4706832995d2
+open-station:vaidanstaad:Vaidanstaad Observatory 10	1b4706832995d2
+close-station:vaidanstaad:Vaidanstaad Observatory 10	1b4706832995d2
+open-station:vaidanstaad:Vaidanstaad Battery 12	1b4706832995d2
+close-station:vaidanstaad:Vaidanstaad Battery 12	1b4706832995d2
+open-station:vaidanstaad:Vaidanstaad Dock 14	1b4706832995d2
+close-station:vaidanstaad:Vaidanstaad Dock 14	1b4706832995d2
+open-station:vaidanstaad:Vaidanstaad Works 19	1b4706832995d2
+close-station:vaidanstaad:Vaidanstaad Works 19	1b4706832995d2
+open-station:edraanvek:Edraanvek Dock 01	15d3e98d018acb
+close-station:edraanvek:Edraanvek Dock 01	15d3e98d018acb
+open-station:edraanvek:Edraanvek Works 02	15d3e98d018acb
+close-station:edraanvek:Edraanvek Works 02	15d3e98d018acb
+open-station:edraanvek:Edraanvek Observatory 03	15d3e98d018acb
+close-station:edraanvek:Edraanvek Observatory 03	15d3e98d018acb
+open-station:edraanvek:Edraanvek Battery 06	15d3e98d018acb
+close-station:edraanvek:Edraanvek Battery 06	15d3e98d018acb
+open-station:edraanvek:Edraanvek Watch 09	15d3e98d018acb
+close-station:edraanvek:Edraanvek Watch 09	15d3e98d018acb
+open-station:edraanvek:Edraanvek Habitat 11	15d3e98d018acb
+close-station:edraanvek:Edraanvek Habitat 11	15d3e98d018acb
+open-station:edraanvek:Edraanvek Works 12	15d3e98d018acb
+close-station:edraanvek:Edraanvek Works 12	15d3e98d018acb
+open-station:zeldabruk:Zeldabruk Habitat 01	1e97c2db67f13b
+close-station:zeldabruk:Zeldabruk Habitat 01	1e97c2db67f13b
+open-station:zeldabruk:Zeldabruk Works 02	1e97c2db67f13b
+close-station:zeldabruk:Zeldabruk Works 02	1e97c2db67f13b
+open-station:zeldabruk:Zeldabruk Observatory 03	1e97c2db67f13b
+close-station:zeldabruk:Zeldabruk Observatory 03	1e97c2db67f13b
+open-station:zeldabruk:Zeldabruk Watch 04	1e97c2db67f13b
+close-station:zeldabruk:Zeldabruk Watch 04	1e97c2db67f13b
+open-station:zeldabruk:Zeldabruk Dock 08	1e97c2db67f13b
+close-station:zeldabruk:Zeldabruk Dock 08	1e97c2db67f13b
+open-station:zeldabruk:Zeldabruk Dock 13	1e97c2db67f13b
+close-station:zeldabruk:Zeldabruk Dock 13	1e97c2db67f13b
+open-station:namaaris:Namaaris Dock 01	13d648a64c00e3
+close-station:namaaris:Namaaris Dock 01	13d648a64c00e3
+open-station:namaaris:Namaaris Watch 02	13d648a64c00e3
+close-station:namaaris:Namaaris Watch 02	13d648a64c00e3
+open-station:namaaris:Namaaris Dock 03	13d648a64c00e3
+close-station:namaaris:Namaaris Dock 03	13d648a64c00e3
+open-station:namaaris:Namaaris Works 06	13d648a64c00e3
+close-station:namaaris:Namaaris Works 06	13d648a64c00e3
+open-station:namaaris:Namaaris Dock 08	13d648a64c00e3
+close-station:namaaris:Namaaris Dock 08	13d648a64c00e3
+open-station:namaaris:Namaaris Habitat 11	13d648a64c00e3
+close-station:namaaris:Namaaris Habitat 11	13d648a64c00e3
+open-station:namaaris:Namaaris Battery 12	13d648a64c00e3
+close-station:namaaris:Namaaris Battery 12	13d648a64c00e3
+open-station:odelhavn:Odelhavn Works 01	19f56c84d6bacb
+close-station:odelhavn:Odelhavn Works 01	19f56c84d6bacb
+open-station:odelhavn:Odelhavn Watch 02	19f56c84d6bacb
+close-station:odelhavn:Odelhavn Watch 02	19f56c84d6bacb
+open-station:odelhavn:Odelhavn Battery 06	19f56c84d6bacb
+close-station:odelhavn:Odelhavn Battery 06	19f56c84d6bacb
+open-station:odelhavn:Odelhavn Works 07	19f56c84d6bacb
+close-station:odelhavn:Odelhavn Works 07	19f56c84d6bacb
+open-station:ruun:Ruun Works 01	6d961c0ca4461
+close-station:ruun:Ruun Works 01	6d961c0ca4461
+open-station:ruun:Ruun Dock 02	6d961c0ca4461
+close-station:ruun:Ruun Dock 02	6d961c0ca4461
+open-station:ruun:Ruun Habitat 06	6d961c0ca4461
+close-station:ruun:Ruun Habitat 06	6d961c0ca4461
+open-station:peladaun:Peladaun Dock 01	1f71900286cc14
+close-station:peladaun:Peladaun Dock 01	1f71900286cc14
+open-station:peladaun:Peladaun Works 02	1f71900286cc14
+close-station:peladaun:Peladaun Works 02	1f71900286cc14
+open-station:peladaun:Peladaun Observatory 04	1f71900286cc14
+close-station:peladaun:Peladaun Observatory 04	1f71900286cc14
+open-station:peladaun:Peladaun Watch 10	1f71900286cc14
+close-station:peladaun:Peladaun Watch 10	1f71900286cc14
+open-station:peladaun:Peladaun Habitat 12	1f71900286cc14
+close-station:peladaun:Peladaun Habitat 12	1f71900286cc14
+open-station:peladaun:Peladaun Habitat 13	1f71900286cc14
+close-station:peladaun:Peladaun Habitat 13	1f71900286cc14
+open-station:peladaun:Peladaun Battery 16	1f71900286cc14
+close-station:peladaun:Peladaun Battery 16	1f71900286cc14
+open-station:iskarraas:Iskarraas Dock 01	2513aef850829
+close-station:iskarraas:Iskarraas Dock 01	2513aef850829
+open-station:iskarraas:Iskarraas Works 02	2513aef850829
+close-station:iskarraas:Iskarraas Works 02	2513aef850829
+open-station:iskarraas:Iskarraas Observatory 05	2513aef850829
+close-station:iskarraas:Iskarraas Observatory 05	2513aef850829
+open-station:iskarraas:Iskarraas Habitat 07	2513aef850829
+close-station:iskarraas:Iskarraas Habitat 07	2513aef850829
+open-station:dovrendaal:Dovrendaal Works 01	961d5525a7df
+close-station:dovrendaal:Dovrendaal Works 01	961d5525a7df
+open-station:dovrendaal:Dovrendaal Dock 03	961d5525a7df
+close-station:dovrendaal:Dovrendaal Dock 03	961d5525a7df
+open-station:dovrendaal:Dovrendaal Battery 04	961d5525a7df
+close-station:dovrendaal:Dovrendaal Battery 04	961d5525a7df
+open-station:dovrendaal:Dovrendaal Watch 09	961d5525a7df
+close-station:dovrendaal:Dovrendaal Watch 09	961d5525a7df
+open-station:dovrendaal:Dovrendaal Observatory 10	961d5525a7df
+close-station:dovrendaal:Dovrendaal Observatory 10	961d5525a7df
+open-station:ortaashaad:Ortaashaad Dock 01	213cca3a4eb40
+close-station:ortaashaad:Ortaashaad Dock 01	213cca3a4eb40
+open-station:ortaashaad:Ortaashaad Works 02	213cca3a4eb40
+close-station:ortaashaad:Ortaashaad Works 02	213cca3a4eb40
+open-station:ortaashaad:Ortaashaad Observatory 03	213cca3a4eb40
+close-station:ortaashaad:Ortaashaad Observatory 03	213cca3a4eb40
+open-station:ortaashaad:Ortaashaad Habitat 05	213cca3a4eb40
+close-station:ortaashaad:Ortaashaad Habitat 05	213cca3a4eb40
+open-station:ortaashaad:Ortaashaad Works 06	213cca3a4eb40
+close-station:ortaashaad:Ortaashaad Works 06	213cca3a4eb40
+open-station:ortaashaad:Ortaashaad Works 07	213cca3a4eb40
+close-station:ortaashaad:Ortaashaad Works 07	213cca3a4eb40
+open-station:ortaashaad:Ortaashaad Watch 09	213cca3a4eb40
+close-station:ortaashaad:Ortaashaad Watch 09	213cca3a4eb40
+open-station:ortaashaad:Ortaashaad Habitat 11	213cca3a4eb40
+close-station:ortaashaad:Ortaashaad Habitat 11	213cca3a4eb40
+open-station:ortaashaad:Ortaashaad Habitat 12	213cca3a4eb40
+close-station:ortaashaad:Ortaashaad Habitat 12	213cca3a4eb40
+open-station:ortaashaad:Ortaashaad Battery 18	213cca3a4eb40
+close-station:ortaashaad:Ortaashaad Battery 18	213cca3a4eb40
+open-station:ortaashaad:Ortaashaad Habitat 24	213cca3a4eb40
+close-station:ortaashaad:Ortaashaad Habitat 24	213cca3a4eb40
+open-station:ortaashaad:Ortaashaad Habitat 25	213cca3a4eb40
+close-station:ortaashaad:Ortaashaad Habitat 25	213cca3a4eb40
+open-station:saarbruk:Saarbruk Works 01	6bd78a1a70a0e
+close-station:saarbruk:Saarbruk Works 01	6bd78a1a70a0e
+open-station:saarbruk:Saarbruk Watch 02	6bd78a1a70a0e
+close-station:saarbruk:Saarbruk Watch 02	6bd78a1a70a0e
+open-station:saarbruk:Saarbruk Watch 03	6bd78a1a70a0e
+close-station:saarbruk:Saarbruk Watch 03	6bd78a1a70a0e
+open-station:saarbruk:Saarbruk Observatory 04	6bd78a1a70a0e
+close-station:saarbruk:Saarbruk Observatory 04	6bd78a1a70a0e
+open-station:saarbruk:Saarbruk Observatory 05	6bd78a1a70a0e
+close-station:saarbruk:Saarbruk Observatory 05	6bd78a1a70a0e
+open-station:saarbruk:Saarbruk Battery 06	6bd78a1a70a0e
+close-station:saarbruk:Saarbruk Battery 06	6bd78a1a70a0e
+open-station:saarbruk:Saarbruk Dock 07	6bd78a1a70a0e
+close-station:saarbruk:Saarbruk Dock 07	6bd78a1a70a0e
+open-station:saarbruk:Saarbruk Works 08	6bd78a1a70a0e
+close-station:saarbruk:Saarbruk Works 08	6bd78a1a70a0e
+open-station:saarbruk:Saarbruk Observatory 21	6bd78a1a70a0e
+close-station:saarbruk:Saarbruk Observatory 21	6bd78a1a70a0e
+open-station:kalyrveen:Kalyrveen Works 01	13e9c156ae449b
+close-station:kalyrveen:Kalyrveen Works 01	13e9c156ae449b
+open-station:kalyrveen:Kalyrveen Works 02	13e9c156ae449b
+close-station:kalyrveen:Kalyrveen Works 02	13e9c156ae449b
+open-station:kalyrveen:Kalyrveen Dock 03	13e9c156ae449b
+close-station:kalyrveen:Kalyrveen Dock 03	13e9c156ae449b
+open-station:kalyrveen:Kalyrveen Observatory 05	13e9c156ae449b
+close-station:kalyrveen:Kalyrveen Observatory 05	13e9c156ae449b
+open-station:kalyrveen:Kalyrveen Habitat 07	13e9c156ae449b
+close-station:kalyrveen:Kalyrveen Habitat 07	13e9c156ae449b
+open-station:kalyrveen:Kalyrveen Watch 08	13e9c156ae449b
+close-station:kalyrveen:Kalyrveen Watch 08	13e9c156ae449b
+open-station:kalyrveen:Kalyrveen Watch 09	13e9c156ae449b
+close-station:kalyrveen:Kalyrveen Watch 09	13e9c156ae449b
+open-station:kalyrveen:Kalyrveen Battery 10	13e9c156ae449b
+close-station:kalyrveen:Kalyrveen Battery 10	13e9c156ae449b
+open-station:teradaun:Teradaun Habitat 01	1248637610ca7d
+close-station:teradaun:Teradaun Habitat 01	1248637610ca7d
+open-station:teradaun:Teradaun Watch 02	1248637610ca7d
+close-station:teradaun:Teradaun Watch 02	1248637610ca7d
+open-station:teradaun:Teradaun Observatory 03	1248637610ca7d
+close-station:teradaun:Teradaun Observatory 03	1248637610ca7d
+open-station:teradaun:Teradaun Watch 10	1248637610ca7d
+close-station:teradaun:Teradaun Watch 10	1248637610ca7d
+open-station:teradaun:Teradaun Battery 11	1248637610ca7d
+close-station:teradaun:Teradaun Battery 11	1248637610ca7d
+open-station:teradaun:Teradaun Habitat 12	1248637610ca7d
+close-station:teradaun:Teradaun Habitat 12	1248637610ca7d
+open-station:teradaun:Teradaun Works 14	1248637610ca7d
+close-station:teradaun:Teradaun Works 14	1248637610ca7d
+open-station:neretvaal:Neretvaal Works 01	14316708b6335
+close-station:neretvaal:Neretvaal Works 01	14316708b6335
+open-station:neretvaal:Neretvaal Works 02	14316708b6335
+close-station:neretvaal:Neretvaal Works 02	14316708b6335
+open-station:neretvaal:Neretvaal Dock 03	14316708b6335
+close-station:neretvaal:Neretvaal Dock 03	14316708b6335
+open-station:vessarik:Vessarik Habitat 01	3deb8320cec99
+close-station:vessarik:Vessarik Habitat 01	3deb8320cec99
+open-station:vessarik:Vessarik Dock 02	3deb8320cec99
+close-station:vessarik:Vessarik Dock 02	3deb8320cec99
+open-station:vessarik:Vessarik Observatory 03	3deb8320cec99
+close-station:vessarik:Vessarik Observatory 03	3deb8320cec99
+open-station:vessarik:Vessarik Battery 04	3deb8320cec99
+close-station:vessarik:Vessarik Battery 04	3deb8320cec99
+open-station:vessarik:Vessarik Works 08	3deb8320cec99
+close-station:vessarik:Vessarik Works 08	3deb8320cec99
+open-station:vessarik:Vessarik Observatory 09	3deb8320cec99
+close-station:vessarik:Vessarik Observatory 09	3deb8320cec99
+open-station:vessarik:Vessarik Battery 10	3deb8320cec99
+close-station:vessarik:Vessarik Battery 10	3deb8320cec99
+open-station:olundraal:Olundraal Dock 02	7f0db6b1dbfce
+close-station:olundraal:Olundraal Dock 02	7f0db6b1dbfce
+open-station:olundraal:Olundraal Watch 03	7f0db6b1dbfce
+close-station:olundraal:Olundraal Watch 03	7f0db6b1dbfce
+open-station:olundraal:Olundraal Battery 04	7f0db6b1dbfce
+close-station:olundraal:Olundraal Battery 04	7f0db6b1dbfce
+open-station:olundraal:Olundraal Habitat 05	7f0db6b1dbfce
+close-station:olundraal:Olundraal Habitat 05	7f0db6b1dbfce
+open-station:olundraal:Olundraal Habitat 07	7f0db6b1dbfce
+close-station:olundraal:Olundraal Habitat 07	7f0db6b1dbfce
+open-station:olundraal:Olundraal Works 08	7f0db6b1dbfce
+close-station:olundraal:Olundraal Works 08	7f0db6b1dbfce
+open-station:mareshavn:Mareshavn Habitat 01	116d6f651d1784
+close-station:mareshavn:Mareshavn Habitat 01	116d6f651d1784
+open-station:mareshavn:Mareshavn Works 02	116d6f651d1784
+close-station:mareshavn:Mareshavn Works 02	116d6f651d1784
+open-station:mareshavn:Mareshavn Watch 04	116d6f651d1784
+close-station:mareshavn:Mareshavn Watch 04	116d6f651d1784
+open-station:mareshavn:Mareshavn Dock 09	116d6f651d1784
+close-station:mareshavn:Mareshavn Dock 09	116d6f651d1784
+open-station:mareshavn:Mareshavn Observatory 10	116d6f651d1784
+close-station:mareshavn:Mareshavn Observatory 10	116d6f651d1784
+open-station:daatren:Daatren Works 01	3bb8c5a2a27b
+close-station:daatren:Daatren Works 01	3bb8c5a2a27b
+open-station:daatren:Daatren Watch 02	3bb8c5a2a27b
+close-station:daatren:Daatren Watch 02	3bb8c5a2a27b
+open-station:daatren:Daatren Habitat 05	3bb8c5a2a27b
+close-station:daatren:Daatren Habitat 05	3bb8c5a2a27b
+open-station:daatren:Daatren Observatory 09	3bb8c5a2a27b
+close-station:daatren:Daatren Observatory 09	3bb8c5a2a27b
+open-station:daatren:Daatren Dock 13	3bb8c5a2a27b
+close-station:daatren:Daatren Dock 13	3bb8c5a2a27b
+open-station:esdarveen:Esdarveen Habitat 01	85be2a73fac97
+close-station:esdarveen:Esdarveen Habitat 01	85be2a73fac97
+open-station:esdarveen:Esdarveen Watch 02	85be2a73fac97
+close-station:esdarveen:Esdarveen Watch 02	85be2a73fac97
+open-station:esdarveen:Esdarveen Observatory 05	85be2a73fac97
+close-station:esdarveen:Esdarveen Observatory 05	85be2a73fac97
+open-station:esdarveen:Esdarveen Works 07	85be2a73fac97
+close-station:esdarveen:Esdarveen Works 07	85be2a73fac97
+open-station:zyravel:Zyravel Works 01	1ccc9d82486ee6
+close-station:zyravel:Zyravel Works 01	1ccc9d82486ee6
+open-station:zyravel:Zyravel Watch 02	1ccc9d82486ee6
+close-station:zyravel:Zyravel Watch 02	1ccc9d82486ee6
+open-station:zyravel:Zyravel Dock 03	1ccc9d82486ee6
+close-station:zyravel:Zyravel Dock 03	1ccc9d82486ee6
+open-station:zyravel:Zyravel Battery 10	1ccc9d82486ee6
+close-station:zyravel:Zyravel Battery 10	1ccc9d82486ee6
+open-station:zyravel:Zyravel Habitat 11	1ccc9d82486ee6
+close-station:zyravel:Zyravel Habitat 11	1ccc9d82486ee6
+open-station:tessadaal:Tessadaal Dock 01	1b6be59a757a6e
+close-station:tessadaal:Tessadaal Dock 01	1b6be59a757a6e
+open-station:tessadaal:Tessadaal Works 02	1b6be59a757a6e
+close-station:tessadaal:Tessadaal Works 02	1b6be59a757a6e
+open-station:tessadaal:Tessadaal Habitat 06	1b6be59a757a6e
+close-station:tessadaal:Tessadaal Habitat 06	1b6be59a757a6e
+open-station:hadresh:Hadresh Works 01	2f6b0cf9e80fc
+close-station:hadresh:Hadresh Works 01	2f6b0cf9e80fc
+open-station:hadresh:Hadresh Watch 02	2f6b0cf9e80fc
+close-station:hadresh:Hadresh Watch 02	2f6b0cf9e80fc
+open-station:hadresh:Hadresh Habitat 05	2f6b0cf9e80fc
+close-station:hadresh:Hadresh Habitat 05	2f6b0cf9e80fc
+open-station:hadresh:Hadresh Dock 09	2f6b0cf9e80fc
+close-station:hadresh:Hadresh Dock 09	2f6b0cf9e80fc
+open-station:ossendaal:Ossendaal Habitat 01	1f257fa77283d7
+close-station:ossendaal:Ossendaal Habitat 01	1f257fa77283d7
+open-station:ossendaal:Ossendaal Works 02	1f257fa77283d7
+close-station:ossendaal:Ossendaal Works 02	1f257fa77283d7
+open-station:ossendaal:Ossendaal Battery 06	1f257fa77283d7
+close-station:ossendaal:Ossendaal Battery 06	1f257fa77283d7
+open-station:varetiraak:Varetiraak Works 01	1740a8c13684c8
+close-station:varetiraak:Varetiraak Works 01	1740a8c13684c8
+open-station:varetiraak:Varetiraak Dock 03	1740a8c13684c8
+close-station:varetiraak:Varetiraak Dock 03	1740a8c13684c8
+open-station:varetiraak:Varetiraak Battery 04	1740a8c13684c8
+close-station:varetiraak:Varetiraak Battery 04	1740a8c13684c8
+open-station:varetiraak:Varetiraak Watch 08	1740a8c13684c8
+close-station:varetiraak:Varetiraak Watch 08	1740a8c13684c8
+open-station:varetiraak:Varetiraak Watch 09	1740a8c13684c8
+close-station:varetiraak:Varetiraak Watch 09	1740a8c13684c8
+open-station:varetiraak:Varetiraak Watch 10	1740a8c13684c8
+close-station:varetiraak:Varetiraak Watch 10	1740a8c13684c8
+open-station:varetiraak:Varetiraak Observatory 11	1740a8c13684c8
+close-station:varetiraak:Varetiraak Observatory 11	1740a8c13684c8
+open-station:varetiraak:Varetiraak Dock 14	1740a8c13684c8
+close-station:varetiraak:Varetiraak Dock 14	1740a8c13684c8
+open-station:varetiraak:Varetiraak Habitat 18	1740a8c13684c8
+close-station:varetiraak:Varetiraak Habitat 18	1740a8c13684c8
+open-station:talvenstaad:Talvenstaad Works 01	1a4d93164e2829
+close-station:talvenstaad:Talvenstaad Works 01	1a4d93164e2829
+open-station:talvenstaad:Talvenstaad Watch 03	1a4d93164e2829
+close-station:talvenstaad:Talvenstaad Watch 03	1a4d93164e2829
+open-station:talvenstaad:Talvenstaad Watch 04	1a4d93164e2829
+close-station:talvenstaad:Talvenstaad Watch 04	1a4d93164e2829
+open-station:talvenstaad:Talvenstaad Habitat 05	1a4d93164e2829
+close-station:talvenstaad:Talvenstaad Habitat 05	1a4d93164e2829
+open-station:talvenstaad:Talvenstaad Dock 07	1a4d93164e2829
+close-station:talvenstaad:Talvenstaad Dock 07	1a4d93164e2829
+open-station:talvenstaad:Talvenstaad Watch 08	1a4d93164e2829
+close-station:talvenstaad:Talvenstaad Watch 08	1a4d93164e2829
+open-station:kordabruk:Kordabruk Dock 01	dcc737a079711
+close-station:kordabruk:Kordabruk Dock 01	dcc737a079711
+open-station:kordabruk:Kordabruk Watch 02	dcc737a079711
+close-station:kordabruk:Kordabruk Watch 02	dcc737a079711
+open-station:kordabruk:Kordabruk Battery 05	dcc737a079711
+close-station:kordabruk:Kordabruk Battery 05	dcc737a079711
+open-station:kordabruk:Kordabruk Watch 08	dcc737a079711
+close-station:kordabruk:Kordabruk Watch 08	dcc737a079711
+open-station:kordabruk:Kordabruk Watch 09	dcc737a079711
+close-station:kordabruk:Kordabruk Watch 09	dcc737a079711
+open-station:retharaas:Retharaas Habitat 01	fc4800fd23874
+close-station:retharaas:Retharaas Habitat 01	fc4800fd23874
+open-station:retharaas:Retharaas Dock 02	fc4800fd23874
+close-station:retharaas:Retharaas Dock 02	fc4800fd23874
+open-station:retharaas:Retharaas Battery 06	fc4800fd23874
+close-station:retharaas:Retharaas Battery 06	fc4800fd23874
+open-station:velisharn:Velisharn Dock 01	e8841f9c2aec1
+close-station:velisharn:Velisharn Dock 01	e8841f9c2aec1
+open-station:velisharn:Velisharn Dock 02	e8841f9c2aec1
+close-station:velisharn:Velisharn Dock 02	e8841f9c2aec1
+open-station:velisharn:Velisharn Watch 09	e8841f9c2aec1
+close-station:velisharn:Velisharn Watch 09	e8841f9c2aec1
+open-station:velisharn:Velisharn Battery 10	e8841f9c2aec1
+close-station:velisharn:Velisharn Battery 10	e8841f9c2aec1
+open-station:odraask:Odraask Works 01	146f725f80e455
+close-station:odraask:Odraask Works 01	146f725f80e455
+open-station:odraask:Odraask Dock 02	146f725f80e455
+close-station:odraask:Odraask Dock 02	146f725f80e455
+open-station:nydrelvaal:Nydrelvaal Works 01	1ae0b1d26f8ffb
+close-station:nydrelvaal:Nydrelvaal Works 01	1ae0b1d26f8ffb
+open-station:nydrelvaal:Nydrelvaal Watch 02	1ae0b1d26f8ffb
+close-station:nydrelvaal:Nydrelvaal Watch 02	1ae0b1d26f8ffb
+open-station:karaad:Karaad Dock 01	e28c8fcc534bb
+close-station:karaad:Karaad Dock 01	e28c8fcc534bb
+open-station:karaad:Karaad Works 02	e28c8fcc534bb
+close-station:karaad:Karaad Works 02	e28c8fcc534bb
+open-station:karaad:Karaad Works 07	e28c8fcc534bb
+close-station:karaad:Karaad Works 07	e28c8fcc534bb
+open-station:eshdaanvek:Eshdaanvek Dock 01	1e5449ba2d8bf5
+close-station:eshdaanvek:Eshdaanvek Dock 01	1e5449ba2d8bf5
+open-station:eshdaanvek:Eshdaanvek Watch 02	1e5449ba2d8bf5
+close-station:eshdaanvek:Eshdaanvek Watch 02	1e5449ba2d8bf5
+open-station:yrdana:Yrdana Habitat 01	12d363fdc79f6b
+close-station:yrdana:Yrdana Habitat 01	12d363fdc79f6b
+open-station:irdaal:Irdaal Habitat 01	7bf1816601968
+close-station:irdaal:Irdaal Habitat 01	7bf1816601968
 ui:reset	1fc72d6bd4864f
 ui:search:	1fc72d6bd4864f
 ui:search:zzz-no-such-thing	ec7d6c15b90a
@@ -1847,6 +1847,6 @@ ui:key:ArrowUp	a1ed76642f3c3
 ui:key:ArrowLeft	b9301a328e69f
 ui:key:ArrowDown	125c94d14f97d5
 ui:key:ArrowRight	4923407100227
-ui:zoom-in-system	ac64b869cb5de
-ui:key-in-system:+	4ae344bc13912
-ui:key-in-system:0	774874f8b5318
+ui:zoom-in-system	19531e7b4fc5f6
+ui:key-in-system:+	e60ac48cfe1e8
+ui:key-in-system:0	1eaf621063fa00

@@ -1,4 +1,4 @@
-function bindToraName(el,name){
+function bindSchematicName(el,name){
  const address=el.getAttribute('href');
  el.setAttribute('title','Click for the Codex article · double-click for Station Overview');
  el.onclick=e=>{

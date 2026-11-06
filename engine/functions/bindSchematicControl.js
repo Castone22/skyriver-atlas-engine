@@ -1,4 +1,4 @@
-function bindToraControl(el,name,single=()=>chooseSystemWorld(name)){
+function bindSchematicControl(el,name,single=()=>chooseSystemWorld(name)){
  el.setAttribute('title','Double-click for Station Overview');
  el.onclick=e=>{
   if(e.target.closest('a'))return;

@@ -45,6 +45,7 @@ async function dump(dir) {
       .replace(/ transform="translate\([^"]*\)"/g, '')
       .replace(/file:\/\/[^"?]*\//g, '')
       .replace(/Checking Codex…|No Codex infobox · atlas record/g, 'STATUS')
+      .replace(/>\s+</g, '><')
       .replace(/></g, '>\n<');
   });
   await page.close();

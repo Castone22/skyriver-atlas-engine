@@ -118,6 +118,26 @@
     ],
     "bytes": 699
   },
+  "bindSchematicControl": {
+    "name": "bindSchematicControl",
+    "profiles": [
+      "calidor",
+      "elysian",
+      "iulr",
+      "uacs"
+    ],
+    "bytes": 694
+  },
+  "bindSchematicName": {
+    "name": "bindSchematicName",
+    "profiles": [
+      "calidor",
+      "elysian",
+      "iulr",
+      "uacs"
+    ],
+    "bytes": 779
+  },
   "bindSystemControls": {
     "name": "bindSystemControls",
     "profiles": [
@@ -127,27 +147,7 @@
       "kadaym",
       "uacs"
     ],
-    "bytes": 2991
-  },
-  "bindToraControl": {
-    "name": "bindToraControl",
-    "profiles": [
-      "calidor",
-      "elysian",
-      "iulr",
-      "uacs"
-    ],
-    "bytes": 689
-  },
-  "bindToraName": {
-    "name": "bindToraName",
-    "profiles": [
-      "calidor",
-      "elysian",
-      "iulr",
-      "uacs"
-    ],
-    "bytes": 774
+    "bytes": 2898
   },
   "blackHoleGlyph": {
     "name": "blackHoleGlyph",
@@ -180,7 +180,7 @@
       "kadaym",
       "uacs"
     ],
-    "bytes": 1453
+    "bytes": 1461
   },
   "buildNotes": {
     "name": "buildNotes",
@@ -227,7 +227,7 @@
       "kadaym",
       "uacs"
     ],
-    "bytes": 1034
+    "bytes": 1039
   },
   "classificationTerms": {
     "name": "classificationTerms",
@@ -270,7 +270,7 @@
       "iulr",
       "uacs"
     ],
-    "bytes": 330
+    "bytes": 293
   },
   "constrain": {
     "name": "constrain",
@@ -305,7 +305,7 @@
       "iulr",
       "uacs"
     ],
-    "bytes": 182
+    "bytes": 113
   },
   "deadStarGlyph": {
     "name": "deadStarGlyph",
@@ -583,13 +583,6 @@
     ],
     "bytes": 253
   },
-  "foundryElevation": {
-    "name": "foundryElevation",
-    "profiles": [
-      "calidor"
-    ],
-    "bytes": 5703
-  },
   "foundryGlyph": {
     "name": "foundryGlyph",
     "profiles": [
@@ -603,13 +596,6 @@
       "calidor"
     ],
     "bytes": 386
-  },
-  "foundryScreen": {
-    "name": "foundryScreen",
-    "profiles": [
-      "calidor"
-    ],
-    "bytes": 1713
   },
   "galaxy": {
     "name": "galaxy",
@@ -636,16 +622,6 @@
     ],
     "bytes": 620
   },
-  "hardware": {
-    "name": "hardware",
-    "profiles": [
-      "calidor",
-      "elysian",
-      "iulr",
-      "uacs"
-    ],
-    "bytes": 81
-  },
   "hasOrbitChart": {
     "name": "hasOrbitChart",
     "profiles": [
@@ -663,9 +639,10 @@
       "calidor",
       "elysian",
       "iulr",
+      "kadaym",
       "uacs"
     ],
-    "bytes": 114
+    "bytes": 63
   },
   "highlightPart": {
     "name": "highlightPart",
@@ -675,7 +652,7 @@
       "iulr",
       "uacs"
     ],
-    "bytes": 638
+    "bytes": 619
   },
   "highlightRegion": {
     "name": "highlightRegion",
@@ -886,7 +863,7 @@
       "kadaym",
       "uacs"
     ],
-    "bytes": 13251
+    "bytes": 13281
   },
   "nearestRotation": {
     "name": "nearestRotation",
@@ -1298,7 +1275,7 @@
       "kadaym",
       "uacs"
     ],
-    "bytes": 6606
+    "bytes": 6507
   },
   "renderIndex": {
     "name": "renderIndex",
@@ -1510,6 +1487,17 @@
     ],
     "bytes": 3896
   },
+  "schematicOf": {
+    "name": "schematicOf",
+    "profiles": [
+      "calidor",
+      "elysian",
+      "iulr",
+      "kadaym",
+      "uacs"
+    ],
+    "bytes": 97
+  },
   "searchObject": {
     "name": "searchObject",
     "profiles": [
@@ -1701,17 +1689,6 @@
     ],
     "bytes": 850
   },
-  "stationHasOverview": {
-    "name": "stationHasOverview",
-    "profiles": [
-      "calidor",
-      "elysian",
-      "iulr",
-      "kadaym",
-      "uacs"
-    ],
-    "bytes": 81
-  },
   "stationRecords": {
     "name": "stationRecords",
     "profiles": [
@@ -1731,7 +1708,7 @@
       "iulr",
       "uacs"
     ],
-    "bytes": 1648
+    "bytes": 1898
   },
   "status": {
     "name": "status",
@@ -1880,7 +1857,7 @@
       "kadaym",
       "uacs"
     ],
-    "bytes": 6804
+    "bytes": 6790
   },
   "textSVG": {
     "name": "textSVG",
@@ -1931,40 +1908,6 @@
       "mahanzk"
     ],
     "bytes": 102
-  },
-  "toraElevation": {
-    "name": "toraElevation",
-    "profiles": [
-      "calidor",
-      "elysian",
-      "iulr",
-      "uacs"
-    ],
-    "bytes": 5483
-  },
-  "toraHubDetail": {
-    "name": "toraHubDetail",
-    "profiles": [
-      "calidor",
-      "elysian",
-      "iulr",
-      "uacs"
-    ],
-    "bytes": 668
-  },
-  "triadElevation": {
-    "name": "triadElevation",
-    "profiles": [
-      "elysian"
-    ],
-    "bytes": 4109
-  },
-  "triadScreen": {
-    "name": "triadScreen",
-    "profiles": [
-      "elysian"
-    ],
-    "bytes": 1427
   },
   "triggerPlanetTitleCheck": {
     "name": "triggerPlanetTitleCheck",

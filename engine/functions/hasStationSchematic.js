@@ -1,1 +1,1 @@
-function hasStationSchematic(st){return st?.category==='TORA'||st?.schematic==='triad'||st?.schematic==='foundry'}
+function hasStationSchematic(b){return Boolean(schematicOf(b))}

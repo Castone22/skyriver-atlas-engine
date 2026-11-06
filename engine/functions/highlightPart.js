@@ -2,7 +2,7 @@ function highlightPart(index){
  stationPart=index;
  const part=currentStationParts()[index];if(!part)return;
  document.querySelectorAll('[data-part]').forEach(el=>el.setAttribute('aria-pressed',String(Number(el.dataset.part)===index)));
- const amber=worldRecord(resolveSystem(selected),selectedWorld)?.schematic==='foundry'?'url(#foundryAmber)':'url(#toraAmber)';
+ const amber=schematicOf(worldRecord(resolveSystem(selected),selectedWorld))?.highlight||'url(#toraAmber)';
  for(const el of document.querySelectorAll('[data-hardware]')){
   if(Number(el.dataset.hardware)===index)el.setAttribute('filter',amber);
   else el.removeAttribute('filter');

@@ -652,92 +652,32 @@ function orbitalFact(w,s){
 function worldRecord(s,name){name=resolveObjectName(s,name);const entity=entityRecords(s).find(b=>b.name===name);if(entity)return entity;const moon=moonRecords(s).find(b=>b.name===name);if(moon)return moon;const star=starRecords(s).find(b=>b.name===name);if(star)return star;const station=stationRecords(s).find(b=>b.name===name);if(station)return station;if(!name||!s.worlds.includes(name))return null;return DATA.worlds[name]||{tag:siteType(name)==='World'?'Charted world':'Charted site',description:`${name} is named on the ${DATA.regions[s.region]?.name||'Codex'} chart${s.region?' in the '+s.name+' system':''}. Further physical and orbital details are not specified in the records used for this atlas.`,source:name,links:[]};}
 
 function bodyKey(b){const nm=__ATLAS__.flags.inspectLabelsUseTitles?planetName(b.name):b.name;if(b.type==='Entity')return `<div class="orbit-key entity-key ${selectedWorld===b.name?'selected':''}" style="--body-color:${b.tint}"><button data-world="${esc(b.name)}" aria-label="Inspect ${esc(nm)}">✧</button><div class="object-key-name">${link(b.name)}<small>${esc(b.tag)} · slow stellar orbit</small></div></div>`;const station=b.type==='Station',label=station?b.code:b.type==='Moon'?'M':b.layoutSlot||'◇';
- return `<div class="orbit-key ${!['World','Moon'].includes(b.type)?'site ':''}${selectedWorld===b.name?'selected':''}" style="--body-color:${b.tint}"><button data-world="${esc(b.name)}" ${stationHasOverview(b)?'data-tora=""':''} aria-label="Inspect ${esc(nm)}">${label}</button><div class="object-key-name">${link(b.name,b.name,stationHasOverview(b)?'tora-register-link':'')}${station?`<small>${esc(b.categoryUnspecified?'Other · category unknown':b.category)} · ${esc(b.status||'operational')}</small>`:''}${stationHasOverview(b)?`<button class="tora-link" data-tora-open="${esc(b.name)}">Station overview ↗</button>`:''}</div>${!station?`<small>${b.type==='Moon'?'moon of '+link(b.parent):b.slot?'orbit '+String(b.slot).padStart(2,'0'):b.type==='World'?(__ATLAS__.flags.worldKeySchematicOrbit?'schematic orbit '+(b.layoutSlot||b.diagramSlot||'unspecified'):'orbit unspecified'):b.type==='Colony'?'colony':'site'}</small>`:''}</div>`;
+ return `<div class="orbit-key ${!['World','Moon'].includes(b.type)?'site ':''}${selectedWorld===b.name?'selected':''}" style="--body-color:${b.tint}"><button data-world="${esc(b.name)}" ${hasStationSchematic(b)?'data-tora=""':''} aria-label="Inspect ${esc(nm)}">${label}</button><div class="object-key-name">${link(b.name,b.name,hasStationSchematic(b)?'tora-register-link':'')}${station?`<small>${esc(b.categoryUnspecified?'Other · category unknown':b.category)} · ${esc(b.status||'operational')}</small>`:''}${hasStationSchematic(b)?`<button class="tora-link" data-schematic-open="${esc(b.name)}">Station overview ↗</button>`:''}</div>${!station?`<small>${b.type==='Moon'?'moon of '+link(b.parent):b.slot?'orbit '+String(b.slot).padStart(2,'0'):b.type==='World'?(__ATLAS__.flags.worldKeySchematicOrbit?'schematic orbit '+(b.layoutSlot||b.diagramSlot||'unspecified'):'orbit unspecified'):b.type==='Colony'?'colony':'site'}</small>`:''}</div>`;
 }
 
-function stationHasOverview(b){return b.category==='TORA'||b.schematic==='triad'}
-
-const TORA_CLASS='Terranos Omnidirectional Reflector Array';
-const toraParts=[
- {title:'Axial mast',label:'MAST',x:329,y:95,lx:420,ly:70,note:'The upper tower narrows to a bright axial tip. Its internal equipment is unspecified in the class record.'},
- {title:'Annular disc',label:'ANNULUS',x:372,y:190,lx:435,ly:129,note:'The disc encircles the narrow neck between the axial mast and the hub. Its wide rim is visible edge-on in the class illustration.'},
- {title:'Reflector panels',label:'PANELS',x:195,y:174,lx:96,ly:159,note:'Three pairs of broad, segmented panels extend from the central structure. The array network screens Union systems from distant observation.'},
- {title:'Equatorial hub',label:'HUB',x:295,y:258,lx:121,ly:356,note:'The panel trusses meet at the cyan-banded hub. The class carries approximately 2,500 crew. The deck plan is undisclosed.'},
- {title:'Ventral spindle',label:'SPINDLE',x:342,y:377,lx:445,ly:408,note:'A stepped lower hull tapers to a second axial tip. The class power plant is classified and its position is unknown.'}
-];
-
-function hardware(part,markup){return `<g data-hardware="${part}">${markup}</g>`}
-
-function toraHubDetail(){
- const modules=[[-40,276,9,20],[-29,294,10,28],[-15,276,6,15],[25,272,12,25],[44,281,6,18],[33,308,6,13],[12,326,5,26],[-9,381,4,22],[-9,117,3,21],[13,142,5,16]];
- return modules.map(([offset,y,w,h])=>{
-  const x=330+offset;
-  return hardware(y<190?0:y>=294?4:3,`<g stroke="#5792a2" stroke-width=".8"><path d="M${x} ${y}l4 -3h${w}v${h}l-4 3h${-w}Z" fill="#11303e"/><path d="M${x} ${y}h${w}v${h}M${x+w} ${y}l4 -3" fill="none"/><path d="M${x+2} ${y+4}h${w*.48}" stroke="#9ef7ff" stroke-width="1.6"/></g>`);
- }).join('')+hardware(3,`<path d="M282 256 Q330 282 378 256" fill="none" stroke="#76f1ff" stroke-width="2" filter="url(#toraGlow)"/>`);
-}
-
-function toraElevation(){
- // Fore and aft panel pairs have different projected lengths and pitches.
- const panels=[[-27,.98,1],[4,1,.85],[24,.9,.79]];
- const wing=(angle,length,depth)=>`<g transform="rotate(${angle}) scale(${length} ${depth})">
-  <path d="M28 -6 L85 -11 197 -15 211 -9 202 0 137 5 74 9 28 6Z" fill="#102c3c" stroke="#71bccc"/>
-  <path d="M63 -5 L94 -16 182 -23 215 -16 198 -5 107 2 74 5Z" fill="#1c4858" stroke="#b5f2ef"/>
-  <path d="M65 7L80 12 139 7 194 5 203 -1 M84 6L96 -16 M118 1L129 -19 M149 -1L159 -21 M181 -4L191 -21 M199 -6L208 -18" fill="none" stroke="#65a7b8"/>
-  <path d="M38 -9L78 -15 88 -10 44 -3Z M45 8L80 6 84 10 48 14Z" fill="#24404b" stroke="#528fa1"/>
-  <path d="M77 6l14 -1 M136 2l10 -1 M194 -6l10 -1" stroke="#90ffff" stroke-width="3" filter="url(#toraGlow)"/></g>`;
- const pair=(args)=>[1,-1].map(f=>`<g transform="translate(330 254) scale(${f} 1)">${wing(...args)}</g>`).join('');
- function band(y,rx,ry,thickness,edge,face){
-  return `<g stroke="${edge}" stroke-width="1"><path d="M${330-rx} ${y}a${rx} ${ry} 0 1 0 ${2*rx} 0v${thickness}a${rx} ${ry} 0 0 1 ${-2*rx} 0Z" fill="${face}"/><ellipse cx="330" cy="${y}" rx="${rx}" ry="${ry}" fill="${face}"/></g>`;
- }
- const spindle=(profile)=>profile.slice(1).map(([y2,r2],i)=>{
-  const [y1,r1]=profile[i];
-  const xs=[-1,-.66,-.22,.32,.73,1],fills=['#123343','#1b4959','#285e6c','#183e50','#0f2839'];
-  return fills.map((fill,j)=>`<path d="M${330+r1*xs[j]} ${y1}L${330+r1*xs[j+1]} ${y1} ${330+r2*xs[j+1]} ${y2} ${330+r2*xs[j]} ${y2}Z" fill="${fill}" stroke="#69a5b2" stroke-width=".72"/>`).join('');
- }).join('');
- const lower=spindle([[269,49],[288,43],[299,42],[304,47],[313,45],[323,32],[337,27],[353,23],[360,26],[369,22],[402,17],[428,13],[448,7],[469,4],[489,1]]);
- const upper=spindle([[35,1],[59,3],[67,6],[88,8],[93,11],[119,14],[128,19],[146,21],[152,25],[166,22],[171,30],[178,29],[184,16],[189,15]]);
- const seams=[[-1,18,333,408],[1,24,307,376],[-1,32,296,359],[1,37,283,326],[-1,9,363,450],[1,9,87,129]].map(([dir,w,y,end])=>hardware(y<190?0:4,`<path d="M${330+dir*w} ${y}v${end-y}l${-dir*3} 4v${-(end-y)/2}" fill="#193e50" stroke="#71b9cd" stroke-width="1.4"/>`)).join('');
- const machine=[
-  hardware(2,pair(panels[0])+pair(panels[1])),
-  hardware(4,lower),seams,
-  hardware(4,band(302,44,10,6,'#5796a8','#102f3c')),
-  hardware(3,band(279,47,13,7,'#78bac7','#163d4c')),
-  hardware(2,pair(panels[2])),
-  hardware(3,spindle([[196,18],[216,20],[224,29],[234,36],[245,44],[260,48],[273,42]])+band(252,54,14,7,'#65d7e7','#103f52')+band(257,51,13,2,'#90f8ff','#12617a')),
-  toraHubDetail(),hardware(3,band(231,35,8,5,'#78c0cf','#163b4c')),
-  hardware(0,upper+band(173,31,7,3,'#7dc3d3','#163849')),
-  hardware(1,band(192,59,12,3,'#a4e4ef','#1d4756')+`<ellipse cx="330" cy="192" rx="59" ry="12" fill="none" stroke="#93edfa" stroke-width="2.8" filter="url(#toraGlow)"/><ellipse cx="330" cy="192" rx="21" ry="5" fill="#285e6c" stroke="#a7e6ef"/>`),
-  hardware(0,'<path d="M330 31V54" stroke="#96faff" stroke-width="2"/>'),
-  hardware(4,'<path d="M330 472v20" stroke="#96faff" stroke-width="2"/>')
- ].join('');
- const marks=toraParts.map((p,i)=>{
-  const sign=p.lx>330?1:-1;
-  return `<g class="tora-mark" data-part="${i}" role="button" tabindex="0" aria-label="Inspect ${esc(p.title)}" aria-pressed="false"><title>${esc(p.title)}</title><path d="M${p.x} ${p.y} L${p.lx-sign*15} ${p.ly} H${p.lx+sign*8}" fill="none"/><circle cx="${p.x}" cy="${p.y}" r="6.5" fill="#09212c"/><circle cx="${p.x}" cy="${p.y}" r="3.4" fill="currentColor"/><circle cx="${p.x}" cy="${p.y}" r="18" fill="#ffffff" fill-opacity="0" stroke="none" pointer-events="all"/><text x="${p.lx+sign*13}" y="${p.ly+4}" text-anchor="${sign===1?'start':'end'}">0${i+1} / ${p.label}</text></g>`;
- }).join('');
- return `<svg class="tora-plate" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 520" role="group" aria-label="Holographic elevation of the Terranos array with five component markers"><defs><pattern id="toraGrid" width="22" height="22" patternUnits="userSpaceOnUse"><path d="M22 0H0V22" fill="none" stroke="#325566" stroke-width=".5"/></pattern><radialGradient id="toraBackdrop"><stop stop-color="#133443"/><stop offset="1" stop-color="#08131e"/></radialGradient><filter id="toraAmber" filterUnits="userSpaceOnUse" x="0" y="0" width="660" height="520" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="0 1.35 0 0 .06  0 .82 0 0 .01  0 .30 0 0 0  0 0 0 1 0"/></filter><filter id="toraGlow" x="-60%" y="-100%" width="220%" height="300%"><feGaussianBlur stdDeviation="2"/><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
- <rect width="660" height="520" fill="url(#toraBackdrop)"/><rect width="660" height="520" fill="url(#toraGrid)" opacity=".45"/><g fill="none" stroke="#345464" stroke-width=".65"><path d="M330 19V502 M47 254H613" stroke-dasharray="3 7"/><ellipse cx="330" cy="256" rx="224" ry="48" stroke-dasharray="5 8"/><path d="M40 35h-8v454h8 M620 35h8v454h-8"/></g>
- <g class="tora-build">${machine}</g><g class="tora-scan" pointer-events="none"><path d="M102 484H558" stroke="#a1f6ff" opacity=".7"/></g><g class="tora-marks">${marks}</g>
- <g fill="#88aab7" font-family="monospace" font-size="9" letter-spacing="1.3"><text x="22" y="19">FIG. 01 / ARRAY ELEVATION</text><text x="638" y="19" text-anchor="end">CLASS PLATE · 134 CE</text><text x="22" y="508">EXTERNAL GEOMETRY</text><text x="638" y="508" text-anchor="end">SCHEMATIC / NTS</text></g></svg>`;
-}
 
 function stationScreen(s,st){
- if(st?.schematic==='foundry')return foundryScreen(s);
- if(st?.schematic==='triad')return triadScreen(s,st);
- const units=stationRecords(s).filter(unit=>unit.category==='TORA');
- const switcher=`<nav class="tora-units" aria-label="Reflector arrays in this system">${units.map((unit,i)=>`<button data-unit="${esc(unit.name)}" aria-pressed="${unit.name===st.name}">Array 0${i+1}</button>`).join('')}${link(TORA_CLASS,'Go to Article','tora-article')}</nav>`;
-
- return `<section class="station-screen"><div class="tora-nav"><button id="leaveStation" class="back-region">← Return to system</button><button id="rebuildStation" class="orbit-toggle">↻ Replay build</button></div><div class="tora-kicker">STATION OVERVIEW <span>/</span> ${systemLink(s,s.name.toUpperCase())}</div><h2>${link(st.name)}</h2><p class="tora-deck">Terranos Omnidirectional Reflector Array</p>${switcher}
- ${toraElevation()}
- <div class="tora-instrument"><div class="tora-tags">${toraParts.map((p,i)=>`<button data-part="${i}" aria-pressed="false"><small>0${i+1}</small> ${esc(p.title)}</button>`).join('')}</div><div id="partReadout" aria-live="polite"></div></div>
- <div class="tora-specs">${[['Height','4.35 km'],['Width','1.2 km'],['Crew per unit','≈2,500'],['Power plant','Classified']].map(([k,n])=>`<div><small>${k}</small><b>${n}</b></div>`).join('')}</div>
- <p class="tora-foot">Shielding · RAMAGAUS Deflection Membrane and Wide-Scope Bubble Field. Component labels interpret the published exterior illustration. ${link(TORA_CLASS,'Class record ↗')} · ${link('File:TerranosTall.png','Reference illustration ↗')}</p></section>`;
+ const sc=schematicOf(st);if(!sc)return '';
+ // Text in a schematic is a string, or a link { link, label?, cls? }; "$station" means this station.
+ const text=p=>typeof p==='string'?esc(p):link(p.link==='$station'?st.name:p.link,p.label||p.link,p.cls||'');
+ const run=list=>(list||[]).map(text).join('');
+ const units=sc.units?stationRecords(s).filter(u=>u.schematic===sc.key):[];
+ const label=sc.units?.aria||sc.navLabel;
+ const nav=`<nav class="tora-units"${label?` aria-label="${esc(label)}"`:''}>${units.map((u,i)=>`<button data-unit="${esc(u.name)}" aria-pressed="${u.name===st.name}">${esc(sc.units.noun)} 0${i+1}</button>`).join('')}${run(sc.links)}</nav>`;
+ // A drawing is markup in the data, or the name of a function the atlas defines: fn(station, system).
+ const draw=sc.drawing?.function?(typeof window[sc.drawing.function]==='function'?window[sc.drawing.function](st,s):''):sc.drawing?.svg||'';
+ return `<section class="station-screen${sc.screenClass?' '+esc(sc.screenClass):''}"><div class="tora-nav"><button id="leaveStation" class="back-region">← Return to system</button><button id="rebuildStation" class="orbit-toggle">↻ Replay build</button></div><div class="tora-kicker">${esc(sc.kicker||'STATION OVERVIEW')} <span>/</span> ${systemLink(s,s.name.toUpperCase())}</div><h2>${link(st.name)}</h2><p class="tora-deck">${esc(sc.deck||'')}</p>${nav}
+ ${draw}
+ <div class="tora-instrument"><div class="tora-tags">${(sc.parts||[]).map((p,i)=>`<button data-part="${i}" aria-pressed="false"><small>0${i+1}</small> ${esc(p.title)}</button>`).join('')}</div><div id="partReadout" aria-live="polite"></div></div>
+ <div class="tora-specs">${(sc.specs||[]).map(([k,v])=>`<div><small>${esc(k)}</small><b>${text(v)}</b></div>`).join('')}</div>${sc.lore?`<p class="foundry-lore">${run(sc.lore)}</p>`:''}
+ <p class="tora-foot">${run(sc.footnote)}</p></section>`;
 }
 
 function highlightPart(index){
  stationPart=index;
  const part=currentStationParts()[index];if(!part)return;
  document.querySelectorAll('[data-part]').forEach(el=>el.setAttribute('aria-pressed',String(Number(el.dataset.part)===index)));
- const amber=worldRecord(resolveSystem(selected),selectedWorld)?.schematic==='foundry'?'url(#foundryAmber)':'url(#toraAmber)';
+ const amber=schematicOf(worldRecord(resolveSystem(selected),selectedWorld))?.highlight||'url(#toraAmber)';
  for(const el of document.querySelectorAll('[data-hardware]')){
   if(Number(el.dataset.hardware)===index)el.setAttribute('filter',amber);
   else el.removeAttribute('filter');
@@ -745,7 +685,7 @@ function highlightPart(index){
  $('partReadout').innerHTML=`<b>0${index+1} / ${esc(part.title)}</b><p>${esc(part.note)}</p>`;
 }
 
-function currentStationParts(){const st=worldRecord(resolveSystem(selected),selectedWorld);return st?.schematic==='foundry'?foundryParts:st?.schematic==='triad'?triadParts:toraParts}
+function currentStationParts(){return schematicOf(worldRecord(resolveSystem(selected),selectedWorld))?.parts||[]}
 
 function openStation(name){
  const s=resolveSystem(selected),st=s&&stationRecords(s).find(b=>hasStationSchematic(b)&&b.name===name);
@@ -755,14 +695,16 @@ function openStation(name){
  renderDetail();$('systemFocus').scrollTop=0;setDetailOpen(false);$('leaveStation')?.focus({preventScroll:true});endNavigation();
 }
 
-function hasStationSchematic(st){return st?.category==='TORA'||st?.schematic==='triad'||st?.schematic==='foundry'}
+function schematicOf(b){return b?.schematic&&DATA.schematics?.find(x=>x.key===b.schematic)||null}
+
+function hasStationSchematic(b){return Boolean(schematicOf(b))}
 
 function closeStation(){
  beginNavigation();stationOverview=false;renderDetail();$('systemFocus').scrollTop=0;
- const target=Array.from(document.querySelectorAll('[data-tora-open], [data-foundry-open]')).find(el=>(el.dataset.toraOpen||el.dataset.foundryOpen)===selectedWorld);target?.focus({preventScroll:true});endNavigation();
+ const target=Array.from(document.querySelectorAll('[data-schematic-open]')).find(el=>el.dataset.schematicOpen===selectedWorld);target?.focus({preventScroll:true});endNavigation();
 }
 
-function bindToraName(el,name){
+function bindSchematicName(el,name){
  const address=el.getAttribute('href');
  el.setAttribute('title','Click for the Codex article · double-click for Station Overview');
  el.onclick=e=>{
@@ -781,7 +723,7 @@ function bindToraName(el,name){
  };
 }
 
-function bindToraControl(el,name,single=()=>chooseSystemWorld(name)){
+function bindSchematicControl(el,name,single=()=>chooseSystemWorld(name)){
  el.setAttribute('title','Double-click for Station Overview');
  el.onclick=e=>{
   if(e.target.closest('a'))return;
@@ -821,7 +763,7 @@ function systemView(s,expanded=false){if(!hasOrbitChart(s))return '';if(expanded
  return `<section class="system-view ${expanded?'expanded-system':''}" aria-label="${esc(s.name)} solar system">
  <div class="system-view-head">${expanded?`<div class="focus-title"><button id="backToRegion" class="back-region">← Return to ${s.unplottedSystem?'chart':'region'}</button><div class="eyebrow">SYSTEM EXPLORER</div><h2>${systemLink(s)}</h2>${tierMarkup(s)}${typeof cloakBadge==='function'?cloakBadge(s):''}<p>${family?family+' system · ':''}${s.unplottedSystem?'1 catalogued planet · coordinates classified':flags.familySystemSummary?(s.sparseOrbits?orbits.length+' surviving world orbits':layout.total+' planetary orbits'):orbits.length+' planetary orbits'}${entities.length?' · '+entities.length+' Silent macroform':''}${flags.facilityCountSummary?` · ${s.otherStationCount} orbital facilities · ${s.toraCount} distant arrays`:` · ${(flags.summaryCountsAllMoons?moonRecords(s):moons).length} major moon${(flags.summaryCountsAllMoons?moonRecords(s):moons).length===1?'':'s'} · ${stations.length} station${stations.length===1?'':'s'}`}${s.chartNote?' · '+s.chartNote:''}</p></div>`:`<span class="eyebrow">${esc(s.name)+' · '+(family?family.toLowerCase()+' system':'system view')}</span>`}<div class="system-actions">${pause}${expanded?'<button id="beltToggle" class="orbit-toggle" '+(flags.derivedBelts||s.beltSlot?'':'disabled title="No belt shown in this system"')+' aria-pressed="'+(flags.derivedBelts?showBelts:Boolean(s.beltSlot&&showBelts))+'">Belts</button><button id="systemZoomIn" class="orbit-toggle system-zoom" aria-label="Zoom in system diagram">+</button><button id="systemZoomOut" class="orbit-toggle system-zoom" aria-label="Zoom out system diagram">−</button><button id="focusFullscreen" class="orbit-toggle" aria-label="Toggle fullscreen">⛶</button>':''}</div></div>
  ${!expanded?'<button id="focusSystem" class="focus-system">⛶ &nbsp; Focus system <span>Expand into main chart →</span></button>':''}${filter}${expanded?'<p class="focus-hint">Select a symbol to inspect it. Double-click a planet to explore its orbit. Names open the Codex.</p>':''}
- ${s.silentPresence?'<p class="silent-status" role="status">Silent activity detected · signal interference</p>':''}<div class="focus-visual">${typeof cloakDecoration==='function'?cloakDecoration(s):''}${silentDecoration(s)}<svg id="orbitDiagram" class="orbit-diagram" viewBox="${expanded?'0 0 760 580':'0 0 320 258'}" role="group" aria-label="Schematic system view of ${esc(s.name)}; select a star, world or station symbol to inspect it"></svg>${expanded&&typeof foundryCorner==='function'&&stationRecords(s).some(b=>b.schematic==='foundry')?foundryCorner(stationRecords(s).find(b=>b.schematic==='foundry').name):''}</div>
+ ${s.silentPresence?'<p class="silent-status" role="status">Silent activity detected · signal interference</p>':''}<div class="focus-visual">${typeof cloakDecoration==='function'?cloakDecoration(s):''}${silentDecoration(s)}<svg id="orbitDiagram" class="orbit-diagram" viewBox="${expanded?'0 0 760 580':'0 0 320 258'}" role="group" aria-label="Schematic system view of ${esc(s.name)}; select a star, world or station symbol to inspect it"></svg>${(()=>{const c=expanded&&stationRecords(s).find(b=>typeof window[schematicOf(b)?.corner]==='function');return c?window[schematicOf(c).corner](c.name):''})()}</div>
  <div class="stellar-register" aria-label="Codex articles">${starRecords(s).map(star=>link(star.name,(star.blackHole?'✦  Go to Star':'✦  Go to Star')+(s.primaries?.length>1?' · '+star.name:''),'stellar-action')).join('')}${link(systemArticleTitle(s),'◎  Go to System','stellar-action')}</div>${expanded?notableSitesMarkup(s):''}<div class="system-center"><button id="inspectSystem" class="orbit-toggle" aria-label="Inspect ${esc(s.name)} system dossier">System dossier</button></div>${order}
  ${entities.length?`<div class="orbit-site-heading">SILENT MACROFORMS</div><div class="orbit-labels">${entities.map(bodyKey).join('')}</div>`:''}<div class="system-catalog"><div><div class="orbit-site-heading">MAJOR WORLDS &amp; MOONS</div>${named}${sites.length?`<div class="orbit-site-heading">ASSOCIATED SITES · ORBIT UNSPECIFIED</div><div class="orbit-labels">${sites.map(bodyKey).join('')}</div>`:''}</div><div><div class="orbit-site-heading">STATIONS <span>${shown.length} / ${stations.length}</span></div><div class="orbit-labels">${shown.map(bodyKey).join('')||'<p class="orbit-empty">'+(stations.length?'All station categories are hidden.':'No stations catalogued here.')+'</p>'}</div></div></div>
  ${layout.total?'<div class="orbit-sample-key"><span>Chart-named world</span><span>Proposed catalogue planet</span><span>Station symbols: S1, S2…</span></div>':''}<p class="orbit-caption">${s.sparseOrbits?'All planets in this atlas’s first-pass register are selectable.':'Dim planets and asteroid belts illustrate gaps in the catalogue.'} Sizes, distances, inclinations and speeds are schematic. ${planets.some(b=>DATA.worlds[b.name]?.extendedSatelliteChart)?'Focus the planet to explore its stations and natural satellites.':'Station symbols match the register below.'}${planets.some(b=>!b.confirmed)?' * Orbit is a proposed diagram placement.':''} Sites with unknown host orbits appear in a separate row.</p></section>`;
@@ -1086,15 +1028,15 @@ function mountSystem(s){if(planetFocus&&systemFocused){mountPlanet(s);return}con
    b.element=g;return}
   const g=objectTarget(b.name,{...(__ATLAS__.flags.systemBodyRenderOpacity?{opacity:b.renderOpacity??1}:{}),class:'orbit-body'+(selectedWorld===b.name?' selected':''),tabindex:0,role:'button','data-orbit-name':b.name,'data-layout-slot':b.layoutSlot||(entity?'entity':station?'station':'moon'),'aria-label':`Inspect ${planetName(b.name)}${entity?', Silent macroform in a slow stellar orbit':station?', '+b.category+' station':moon?', moon of '+b.parent:b.slot?', orbital position '+b.slot:', schematic orbit '+b.layoutSlot}`},chart);
   svg('title',{},g).textContent=planetName(b.name)+(station?' · '+b.category:'');svg('circle',{r:(station?9:moon?11:15)*scale,fill:'transparent'},g);svg('circle',{r:(moon?8:station?11:11)*scale,fill:'none',stroke:b.tint,'stroke-width':1,class:'body-focus'},g);
-  if(entity)nefandumGlyph(g,expanded?1.2:.65);else if(station&&b.schematic==='foundry'&&typeof foundryGlyph==='function')foundryGlyph(g,expanded?1.4:.9);else if(station)stationGlyph(g,b.tint,b.category,expanded?1:.7,b.ruined);else if(DATA.worlds[b.name]?.solarAnalogue){solarPlanetGlyph(g,b.name,(b.size||6.5)*scale)}else{const bodySize=moon?3.5:(b.size||6.5);svg('circle',{r:bodySize*scale,fill:b.tint},g);if(__ATLAS__.flags.stormBands&&b.appearance==='storm-bands')svg('path',{d:'M-.86-.32Q0-.08 .92-.28M-.9 .2Q0 .41 .92 .22',transform:'scale('+bodySize*scale+')',fill:'none',stroke:'#f3e7d4','stroke-width':.16,opacity:.48},g);if(b.appearance==='ringed')svg('ellipse',{rx:bodySize*1.8*scale,ry:bodySize*.5*scale,transform:'rotate(-24)',fill:'none',stroke:b.tint,'stroke-width':1,opacity:.7},g);if(b.appearance==='scarred')svg('path',{d:'M-2-3L1-1-1 2 2 4',transform:`scale(${scale*.6})`,stroke:'#452e39','stroke-width':1,fill:'none'},g);svg('path',{d:'M0-7 A7 7 0 0 1 0 7 A4 7 0 0 0 0-7',transform:`scale(${bodySize/7*scale})`,fill:'#0b1420',opacity:'.5'},g)}
+  if(entity)nefandumGlyph(g,expanded?1.2:.65);else if(station&&typeof window[schematicOf(b)?.glyph]==='function')window[schematicOf(b).glyph](g,expanded?1.4:.9);else if(station)stationGlyph(g,b.tint,b.category,expanded?1:.7,b.ruined);else if(DATA.worlds[b.name]?.solarAnalogue){solarPlanetGlyph(g,b.name,(b.size||6.5)*scale)}else{const bodySize=moon?3.5:(b.size||6.5);svg('circle',{r:bodySize*scale,fill:b.tint},g);if(__ATLAS__.flags.stormBands&&b.appearance==='storm-bands')svg('path',{d:'M-.86-.32Q0-.08 .92-.28M-.9 .2Q0 .41 .92 .22',transform:'scale('+bodySize*scale+')',fill:'none',stroke:'#f3e7d4','stroke-width':.16,opacity:.48},g);if(b.appearance==='ringed')svg('ellipse',{rx:bodySize*1.8*scale,ry:bodySize*.5*scale,transform:'rotate(-24)',fill:'none',stroke:b.tint,'stroke-width':1,opacity:.7},g);if(b.appearance==='scarred')svg('path',{d:'M-2-3L1-1-1 2 2 4',transform:`scale(${scale*.6})`,stroke:'#452e39','stroke-width':1,fill:'none'},g);svg('path',{d:'M0-7 A7 7 0 0 1 0 7 A4 7 0 0 0 0-7',transform:`scale(${bodySize/7*scale})`,fill:'#0b1420',opacity:'.5'},g)}
   textSVG(entity?'':station?b.code:moon?(expanded?'':'M'):String(b.layoutSlot)+(b.confirmed?'':'*'),{x:(moon?8:10)*scale,y:(moon?-7:-9)*scale,class:'body-number'},g);
   if(expanded&&!(__ATLAS__.flags.dimmedBodiesAreFiller&&b.renderOpacity<1)&&(!station||stations.length===1))b.label=svgLink(b.name,b.name,{x:0,y:(entity?43:moon?19:25),class:'focus-body-label','text-anchor':'middle'},g).querySelector('text');
-  if(stationHasOverview(b)&&!widgetMode)bindToraControl(g,b.name);else bindOrbitalSelection(g,b.name,b.type==='World');b.element=g;
+  if(hasStationSchematic(b)&&!widgetMode)bindSchematicControl(g,b.name);else bindOrbitalSelection(g,b.name,b.type==='World');b.element=g;
  });
  // Named planets paint above stations so a crossing orbit cannot intercept the planet's click.
  for(const b of movers)if(b.type==='World'&&!b.synthetic)chart.appendChild(b.element);
  const unlocated=[...visibleStations.filter(b=>!b.parent&&!b.lane),...sites];
- if(unlocated.length){const y=expanded?530:230;textSVG(expanded?'HOST ORBIT UNSPECIFIED':'HOST ORBIT UNSPECIFIED',{x:expanded?30:12,y:y-17,class:('orbit-number ').trim()},chart);unlocated.forEach((b,i)=>{const x=(expanded?52:30)+i*(expanded?220:130),g=objectTarget(b.name,{transform:`translate(${x} ${y})`,class:'orbit-body'+(selectedWorld===b.name?' selected':''),tabindex:0,role:'button','data-unlocated-name':b.name,'aria-label':'Inspect '+b.name+'; host orbit unspecified'},chart);svg('rect',{x:-14,y:-13,width:30,height:27,fill:'transparent'},g);svg('circle',{r:12,fill:'none',stroke:b.tint,class:'body-focus'},g);if(b.type==='Station')stationGlyph(g,b.tint,b.category,.9,b.ruined);else svg('rect',{x:-5,y:-5,width:10,height:10,fill:'none',stroke:b.tint},g);const nameLink=svgLink(b.name,expanded?b.name:(b.code||'Colony '+(i+1)),{x:15,y:4,class:('focus-body-label ').trim()},g);if(stationHasOverview(b)&&!widgetMode){if(typeof bindToraName==='function')bindToraName(nameLink,b.name);bindToraControl(g,b.name)}else bindOrbitalSelection(g,b.name)})}
+ if(unlocated.length){const y=expanded?530:230;textSVG(expanded?'HOST ORBIT UNSPECIFIED':'HOST ORBIT UNSPECIFIED',{x:expanded?30:12,y:y-17,class:('orbit-number ').trim()},chart);unlocated.forEach((b,i)=>{const x=(expanded?52:30)+i*(expanded?220:130),g=objectTarget(b.name,{transform:`translate(${x} ${y})`,class:'orbit-body'+(selectedWorld===b.name?' selected':''),tabindex:0,role:'button','data-unlocated-name':b.name,'aria-label':'Inspect '+b.name+'; host orbit unspecified'},chart);svg('rect',{x:-14,y:-13,width:30,height:27,fill:'transparent'},g);svg('circle',{r:12,fill:'none',stroke:b.tint,class:'body-focus'},g);if(b.type==='Station')stationGlyph(g,b.tint,b.category,.9,b.ruined);else svg('rect',{x:-5,y:-5,width:10,height:10,fill:'none',stroke:b.tint},g);const nameLink=svgLink(b.name,expanded?b.name:(b.code||'Colony '+(i+1)),{x:15,y:4,class:('focus-body-label ').trim()},g);if(hasStationSchematic(b)&&!widgetMode){if(typeof bindSchematicName==='function')bindSchematicName(nameLink,b.name);bindSchematicControl(g,b.name)}else bindOrbitalSelection(g,b.name)})}
  function paint(){
   const phase=orbitClock*2*Math.PI/28;
   if(triple){
@@ -1132,7 +1074,7 @@ function syncSystemFocus(s){if(!hasOrbitChart(s))systemFocused=false;const panel
 function applySystemZoom(){const chart=$('orbitDiagram');if(!chart||!systemFocused)return;const w=760/systemZoom,h=580/systemZoom;chart.setAttribute('viewBox',`${380-w/2} ${290-h/2} ${w} ${h}`)}
 
 function bindSystemControls(){
- for(const el of document.querySelectorAll('[data-foundry-open]'))el.onclick=()=>openStation(el.dataset.foundryOpen);
+ for(const el of document.querySelectorAll('[data-schematic-open]'))el.onclick=()=>openStation(el.dataset.schematicOpen);
  if(stationOverview){
   $('leaveStation').onclick=closeStation;
   for(const el of document.querySelectorAll('[data-unit]'))el.onclick=()=>{if(el.dataset.unit!==selectedWorld)openStation(el.dataset.unit)};
@@ -1144,8 +1086,7 @@ function bindSystemControls(){
   highlightPart(__ATLAS__.flags.keepStationPart?stationPart:0);
   if(widgetMode)return;
  }
- if(!widgetMode)for(const el of document.querySelectorAll('.tora-register-link'))bindToraName(el,el.textContent);
- for(const el of document.querySelectorAll('[data-tora-open]'))el.onclick=()=>openStation(el.dataset.toraOpen);
+ if(!widgetMode)for(const el of document.querySelectorAll('.tora-register-link'))bindSchematicName(el,el.textContent);
 
  $('focusPlanet')?.addEventListener('click',()=>setPlanetFocus(selectedWorld));
  $('backToSystem')?.addEventListener('click',()=>setPlanetFocus(null));
@@ -1153,13 +1094,13 @@ function bindSystemControls(){
  $('inspectSystem')?.addEventListener('click',()=>{beginNavigation();planetFocus=null;selectedWorld=null;renderDetail();if(innerWidth<=700||embedMode)setDetailOpen(true);$('inspectSystem')?.focus({preventScroll:true});endNavigation()});
  $('systemZoomIn')?.addEventListener('click',()=>{systemZoom=Math.min(3,systemZoom*1.25);applySystemZoom()});$('systemZoomOut')?.addEventListener('click',()=>{systemZoom=Math.max(.75,systemZoom/1.25);applySystemZoom()});
  $('focusSystem')?.addEventListener('click',()=>setSystemFocus(true));$('backToRegion')?.addEventListener('click',()=>setSystemFocus(false));$('returnSystem')?.addEventListener('click',()=>setSystemFocus(false));
- document.querySelectorAll('[data-world]').forEach(b=>{if(b.getAttribute('data-tora')!==null)bindToraControl(b,b.dataset.world);else b.onclick=()=>chooseSystemWorld(b.dataset.world)});
+ document.querySelectorAll('[data-world]').forEach(b=>{if(b.getAttribute('data-tora')!==null)bindSchematicControl(b,b.dataset.world);else b.onclick=()=>chooseSystemWorld(b.dataset.world)});
  document.querySelectorAll('[data-station-filter]').forEach(b=>{
   const name=b.dataset.stationFilter;
   const toggle=()=>{if(stationFilters.has(name))stationFilters.delete(name);else stationFilters.add(name);renderDetail();$(b.id)?.focus({preventScroll:true})};
   if(name==='TORA'&&!planetFocus){
    const st=stationRecords(resolveSystem(selected)).find(item=>item.category==='TORA');
-   if(st){bindToraControl(b,st.name,toggle);b.onkeydown=null;return}
+   if(st){bindSchematicControl(b,st.name,toggle);b.onkeydown=null;return}
   }
   b.onclick=toggle;
  });
@@ -1167,7 +1108,7 @@ function bindSystemControls(){
  $('focusFullscreen')?.addEventListener('click',()=>$('fullscreen').click());
 }
 
-function chooseSystemWorld(name){if(widgetMode)return;const system=resolveSystem(selected);if(system&&stationRecords(system).some(b=>b.schematic==='foundry'&&b.name===name)){openStation(name);return;}name=resolveObjectName(resolveSystem(selected),name);if(!name)return;beginNavigation();stationOverview=false;const scroll=$('detail').scrollTop;if(planetFocus&&!new Set([planetFocus,...localBodies(resolveSystem(selected),planetFocus).moons.map(b=>b.name),...localBodies(resolveSystem(selected),planetFocus).stations.map(b=>b.name)]).has(name))planetFocus=null;selectedWorld=name;const localHost=localChartParent(resolveSystem(selected),name);if(localHost&&!planetFocus){setPlanetFocus(localHost);selectedWorld=name;}renderDetail();$('detail').scrollTop=scroll;if(innerWidth<=700||embedMode)setDetailOpen(true);const target=(innerWidth<=700||embedMode)?$('detail').querySelector('.detail-close'):Array.from(document.querySelectorAll('[data-world]')).find(b=>b.dataset.world===name);target?.focus({preventScroll:true});endNavigation();}
+function chooseSystemWorld(name){if(widgetMode)return;const system=resolveSystem(selected);if(system&&stationRecords(system).some(b=>schematicOf(b)?.openOnChoose&&b.name===name)){openStation(name);return;}name=resolveObjectName(resolveSystem(selected),name);if(!name)return;beginNavigation();stationOverview=false;const scroll=$('detail').scrollTop;if(planetFocus&&!new Set([planetFocus,...localBodies(resolveSystem(selected),planetFocus).moons.map(b=>b.name),...localBodies(resolveSystem(selected),planetFocus).stations.map(b=>b.name)]).has(name))planetFocus=null;selectedWorld=name;const localHost=localChartParent(resolveSystem(selected),name);if(localHost&&!planetFocus){setPlanetFocus(localHost);selectedWorld=name;}renderDetail();$('detail').scrollTop=scroll;if(innerWidth<=700||embedMode)setDetailOpen(true);const target=(innerWidth<=700||embedMode)?$('detail').querySelector('.detail-close'):Array.from(document.querySelectorAll('[data-world]')).find(b=>b.dataset.world===name);target?.focus({preventScroll:true});endNavigation();}
 
 function toggleAtlasMotion(focusId){const scroll=$('detail').scrollTop;orbitPaused=!orbitPaused;renderDetail();$('detail').scrollTop=scroll;$(focusId)?.focus({preventScroll:true})}
 
@@ -1391,7 +1332,7 @@ function renderDetail(){stopImageRefresh();
 
  const w=worldRecord(s,selectedWorld),display=w?selectedWorld:hasOrbitChart(s)?systemArticleTitle(s):s.name;
  const status=w?(w.tag||w.bodyType||w.type||'Object'):s.centralBodyType==='silent-darkened'?'Dead system · Silent-darkened star':s.centralBodyType==='black-hole'?'Black hole system':EXOTIC_TYPES[s.centralBodyType]?EXOTIC_TYPES[s.centralBodyType]+' system':s.kind==='classified'?'Classified location':s.kind==='hazard'?'Hazard register':s.kind==='uncertain'?'Unresolved chart marker':s.kind==='context'?'Neighboring system':s.kind==='neutral'?'Independent / CONCORD':s.region?'Alliance system':'Unplotted holding';
- $('detail').innerHTML=`<div class="detail-top"><span class="eyebrow">Location dossier</span><button class="detail-close" aria-label="Close dossier">×</button></div>${hasOrbitChart(s)?(systemFocused?'<div class="focused-dossier">System explorer is open in the main chart.<button id="returnSystem">← Return to '+(s.unplottedSystem?'chart':'region view')+'</button></div>':(typeof regionSystemSummary==='function'?regionSystemSummary(s):systemView(s))):`<div class="no-hero"><div class="orb"></div></div>${s.silentPresence?'<p class="silent-status" role="status">Silent activity detected · signal interference</p>':''}`}<div class="detail-content">${referenceImage(w||systemArticleRecord(s),display)}<div class="type" id="dossierType" data-atlas-type="${esc(status.toUpperCase())}">${esc(status.toUpperCase())}</div><h2>${link(display)}</h2>${(w||s).nickname?`<p class="nickname">${esc((w||s).nickname)}</p>`:''}<div class="system-subtitle">${s.region?`${systemLink(s)} / ${link(DATA.regions[s.region].name)}`:(s.unplottedSystem?systemLink(s)+' / ':'')+'POSITION '+(s.kind==='classified'?'CLASSIFIED':'UNSPECIFIED')}</div>${tierMarkup(s)}${typeof cloakBadge==='function'?cloakBadge(s):''}<div id="bodyFacts">${bodyFacts(s,w,liveImages.get(currentImageTitle(w||systemArticleRecord(s),display)))}</div>${focusableWorld(s,selectedWorld)?`<button id="focusPlanet" class="focus-world">◎ &nbsp; ${planetFocus===selectedWorld?'Viewing local orbit':'Focus planet & satellites'}</button>`:''}${w?.schematic==='foundry'&&!stationOverview?`<button class="focus-world" data-foundry-open="${esc(w.name)}">Open station schematic ↗</button>`:''}${w?.category==='TORA'&&!stationOverview?`<button class="focus-world" data-tora-open="${esc(w.name)}">Open station overview ↗</button>`:''}<p class="description">${esc(w?w.description:s.description)}</p>${!systemFocused?notableSitesMarkup(s):''}${s.worlds.length&&!hasOrbitChart(s)?`<h3>Associated sites</h3>${s.worlds.map(n=>`<div class="world-chip ${selectedWorld===n?'active':''}">${link(n)}<button data-world="${esc(n)}" aria-label="View ${esc(n)} dossier">VIEW</button></div>`).join('')}`:''}${(w?.links||s.links||[]).length?`<h3>Related locations & records</h3><div class="link-pills">${(w?.links||s.links).map(n=>link(n)).join('')}</div>`:''}<a ${typeof applyPlanetTitles==='function'&&DATA.worlds[display]?'data-planet-link="'+esc(display)+'"':''} href="${url(display)}" target="_blank" rel="noopener" class="codex-button">Open ${typeof planetNameMarkup==='function'?planetNameMarkup(display):esc(planetName(display))} in Codex ↗</a>${(s.notes||[]).map(n=>`<div class="note">${esc(n)}</div>`).join('')}<div class="source-line">${'Source: '+(w?.sourceNote?esc(w.sourceNote)+' · ':'')}${w?.sourceSection?`<a href="${esc(url(w.source)+'#'+encodeURIComponent(w.sourceSection))}" target="_blank" rel="noopener">${esc(w.source)} · station register</a>`:link(w?w.source:s.source)}${s.region&&s.source!==(w?.source)?'<br>Chart / context: '+link(s.source):''}<br>${s.unplottedSystem?'Coordinates withheld. Regional assignment unknown.':s.centralBodyType==='black-hole'||s.schematicPosition?'System position is schematic.':s.region&&(DATA.regions[s.region]?.chartPositions??DATA.regions[s.region]?.file)?'System position follows the regional chart.':s.kind==='classified'?'Coordinates deliberately withheld.':s.region?'No measured coordinates available.':'No map coordinates assigned.'}</div></div>`;
+ $('detail').innerHTML=`<div class="detail-top"><span class="eyebrow">Location dossier</span><button class="detail-close" aria-label="Close dossier">×</button></div>${hasOrbitChart(s)?(systemFocused?'<div class="focused-dossier">System explorer is open in the main chart.<button id="returnSystem">← Return to '+(s.unplottedSystem?'chart':'region view')+'</button></div>':(typeof regionSystemSummary==='function'?regionSystemSummary(s):systemView(s))):`<div class="no-hero"><div class="orb"></div></div>${s.silentPresence?'<p class="silent-status" role="status">Silent activity detected · signal interference</p>':''}`}<div class="detail-content">${referenceImage(w||systemArticleRecord(s),display)}<div class="type" id="dossierType" data-atlas-type="${esc(status.toUpperCase())}">${esc(status.toUpperCase())}</div><h2>${link(display)}</h2>${(w||s).nickname?`<p class="nickname">${esc((w||s).nickname)}</p>`:''}<div class="system-subtitle">${s.region?`${systemLink(s)} / ${link(DATA.regions[s.region].name)}`:(s.unplottedSystem?systemLink(s)+' / ':'')+'POSITION '+(s.kind==='classified'?'CLASSIFIED':'UNSPECIFIED')}</div>${tierMarkup(s)}${typeof cloakBadge==='function'?cloakBadge(s):''}<div id="bodyFacts">${bodyFacts(s,w,liveImages.get(currentImageTitle(w||systemArticleRecord(s),display)))}</div>${focusableWorld(s,selectedWorld)?`<button id="focusPlanet" class="focus-world">◎ &nbsp; ${planetFocus===selectedWorld?'Viewing local orbit':'Focus planet & satellites'}</button>`:''}${w&&hasStationSchematic(w)&&!stationOverview?`<button class="focus-world" data-schematic-open="${esc(w.name)}">${esc(schematicOf(w).openLabel||'Open station overview ↗')}</button>`:''}<p class="description">${esc(w?w.description:s.description)}</p>${!systemFocused?notableSitesMarkup(s):''}${s.worlds.length&&!hasOrbitChart(s)?`<h3>Associated sites</h3>${s.worlds.map(n=>`<div class="world-chip ${selectedWorld===n?'active':''}">${link(n)}<button data-world="${esc(n)}" aria-label="View ${esc(n)} dossier">VIEW</button></div>`).join('')}`:''}${(w?.links||s.links||[]).length?`<h3>Related locations & records</h3><div class="link-pills">${(w?.links||s.links).map(n=>link(n)).join('')}</div>`:''}<a ${typeof applyPlanetTitles==='function'&&DATA.worlds[display]?'data-planet-link="'+esc(display)+'"':''} href="${url(display)}" target="_blank" rel="noopener" class="codex-button">Open ${typeof planetNameMarkup==='function'?planetNameMarkup(display):esc(planetName(display))} in Codex ↗</a>${(s.notes||[]).map(n=>`<div class="note">${esc(n)}</div>`).join('')}<div class="source-line">${'Source: '+(w?.sourceNote?esc(w.sourceNote)+' · ':'')}${w?.sourceSection?`<a href="${esc(url(w.source)+'#'+encodeURIComponent(w.sourceSection))}" target="_blank" rel="noopener">${esc(w.source)} · station register</a>`:link(w?w.source:s.source)}${s.region&&s.source!==(w?.source)?'<br>Chart / context: '+link(s.source):''}<br>${s.unplottedSystem?'Coordinates withheld. Regional assignment unknown.':s.centralBodyType==='black-hole'||s.schematicPosition?'System position is schematic.':s.region&&(DATA.regions[s.region]?.chartPositions??DATA.regions[s.region]?.file)?'System position follows the regional chart.':s.kind==='classified'?'Coordinates deliberately withheld.':s.region?'No measured coordinates available.':'No map coordinates assigned.'}</div></div>`;
  bindDetail();bindSystemControls();mountSystem(s);applySystemZoom();$('systemFocus').scrollTop=focusScroll;if(typeof applyPlanetTitles==='function')applyPlanetTitles();refreshVisibleImage();
 }
 

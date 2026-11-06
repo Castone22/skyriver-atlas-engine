@@ -312,14 +312,14 @@ planet:vije:Vije V	16de77066212dc
 planet:vije:Vije VI	16f93be96fb856
 planet:vije:Vije VII	a5f24343aaaf
 planet:vije:Chorus	1cbef6f2bb2750
-system:columa	87f92dc41729
-station-overview:columa	87f92dc41729
+system:columa	162af16a714891
+station-overview:columa	162af16a714891
 planet:columa:Columa I	1ab03b404f21aa
 planet:columa:Columa II	63498e6957558
 planet:columa:Columa III	1629fc527c6dde
 planet:columa:Columa IV	1e61d39acd32b4
 planet:columa:Columa V	c99fd2093b8d0
-planet:columa:Circa’s Triad	87f92dc41729
+planet:columa:Circa’s Triad	162af16a714891
 system:lykko	185363bdbb3f63
 station-overview:lykko	185363bdbb3f63
 planet:lykko:Lykko I	8ff20dfc9db2a
@@ -1252,7 +1252,7 @@ station:forge:Port Woden	18d0f215167928
 station:sevore:Motherlode Station	1b81b41c38ef84
 station:viric:VEC Shipyards	16f3a260ba2919
 station:kaldana:Salem Cross Station	18b4314958a249
-station:columa:Circa’s Triad	115843dc1006be
+station:columa:Circa’s Triad	d35c76e932955
 station:havl:Shryke Jumpgate	73006884706b1
 station:montressor:Montressor Station	12dd2fcfd52c7d
 station:varro:Varro Transit Anchorage	271824364d6dd
@@ -1302,8 +1302,8 @@ open-station:viric:VEC Shipyards	664d3d71990b1
 close-station:viric:VEC Shipyards	664d3d71990b1
 open-station:kaldana:Salem Cross Station	1f4851ec1d1bd4
 close-station:kaldana:Salem Cross Station	1f4851ec1d1bd4
-open-station:columa:Circa’s Triad	18c16a3a2ef101
-close-station:columa:Circa’s Triad	115843dc1006be
+open-station:columa:Circa’s Triad	9f29920610b13
+close-station:columa:Circa’s Triad	d35c76e932955
 open-station:havl:Shryke Jumpgate	1c0b284460f475
 close-station:havl:Shryke Jumpgate	1c0b284460f475
 open-station:montressor:Montressor Station	1f4000e5922e4

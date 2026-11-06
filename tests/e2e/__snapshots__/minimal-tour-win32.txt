@@ -2,15 +2,15 @@ start	14cb2ca336b40f
 all	14cb2ca336b40f
 region:demo-reach	379ab9a7e83b6
 overview:demo-reach	db6b3aa35e772
-system:demo-star	22f485cfcdf50
-station-overview:demo-star	22f485cfcdf50
-planet:demo-star:Demo Star III	1606289d876362
+system:demo-star	bdeaf48282b5d
+station-overview:demo-star	bdeaf48282b5d
+planet:demo-star:Demo Star III	1d7fb880bd7021
 system:demo-pulsar	afe17bf377a25
 station-overview:demo-pulsar	afe17bf377a25
-object:demo-star:Demo Moon	1a832cde801437
-station:demo-star:Demo Orbital	131ef24f1950b6
-open-station:demo-star:Demo Orbital	22f485cfcdf50
-close-station:demo-star:Demo Orbital	22f485cfcdf50
+object:demo-star:Demo Moon	14aa84db790c58
+station:demo-star:Demo Orbital	c4ed96f58cb6b
+open-station:demo-star:Demo Orbital	3323c24ca316e
+close-station:demo-star:Demo Orbital	c4ed96f58cb6b
 ui:reset	141f1d6136d7fc
 ui:search:	141f1d6136d7fc
 ui:search:zzz-no-such-thing	1d8c71034bce85
@@ -57,6 +57,6 @@ ui:key:ArrowUp	1bbbc3c1bd7aa4
 ui:key:ArrowLeft	436557f6be221
 ui:key:ArrowDown	1fec7c13cf3add
 ui:key:ArrowRight	1b461159901c1d
-ui:zoom-in-system	81f3b59524533
-ui:key-in-system:+	136482fb76bf04
-ui:key-in-system:0	1de5fa9098870f
+ui:zoom-in-system	32bcc9103b9e6
+ui:key-in-system:+	103c4c9f36443e
+ui:key-in-system:0	db270afec60e4

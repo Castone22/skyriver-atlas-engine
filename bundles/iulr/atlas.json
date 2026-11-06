@@ -9592,7 +9592,8 @@
         "orbitalZone": "outer-system",
         "aliases": [
           "Avendon TORA-01"
-        ]
+        ],
+        "schematic": "reflector-array"
       },
       {
         "id": "avendon-tora-02",
@@ -9610,7 +9611,8 @@
         "orbitalZone": "outer-system",
         "aliases": [
           "Avendon TORA-02"
-        ]
+        ],
+        "schematic": "reflector-array"
       },
       {
         "id": "kraunveld-tora-01",
@@ -9625,7 +9627,8 @@
         "status": "Operational",
         "parent": null,
         "description": "A Terranos Omnidirectional Reflector Array serving the Kraunveld system. This chart places the array beyond the planetary orbital field. Its exact stellar orbit is unresolved.",
-        "orbitalZone": "outer-system"
+        "orbitalZone": "outer-system",
+        "schematic": "reflector-array"
       },
       {
         "id": "kraunveld-tora-02",
@@ -9640,7 +9643,8 @@
         "status": "Operational",
         "parent": null,
         "description": "A Terranos Omnidirectional Reflector Array serving the Kraunveld system. This chart places the array beyond the planetary orbital field. Its exact stellar orbit is unresolved.",
-        "orbitalZone": "outer-system"
+        "orbitalZone": "outer-system",
+        "schematic": "reflector-array"
       },
       {
         "id": "delvabruk-tora-01",
@@ -9655,7 +9659,8 @@
         "status": "Operational",
         "parent": null,
         "description": "A Terranos Omnidirectional Reflector Array serving the Delvabruk system. This chart places the array beyond the planetary orbital field. Its exact stellar orbit is unresolved.",
-        "orbitalZone": "outer-system"
+        "orbitalZone": "outer-system",
+        "schematic": "reflector-array"
       },
       {
         "id": "delvabruk-tora-02",
@@ -9670,7 +9675,8 @@
         "status": "Operational",
         "parent": null,
         "description": "A Terranos Omnidirectional Reflector Array serving the Delvabruk system. This chart places the array beyond the planetary orbital field. Its exact stellar orbit is unresolved.",
-        "orbitalZone": "outer-system"
+        "orbitalZone": "outer-system",
+        "schematic": "reflector-array"
       },
       {
         "id": "ildara-tora-01",
@@ -9685,7 +9691,8 @@
         "status": "Operational",
         "parent": null,
         "description": "A Terranos Omnidirectional Reflector Array serving the Ildara system. This chart places the array beyond the planetary orbital field. Its exact stellar orbit is unresolved.",
-        "orbitalZone": "outer-system"
+        "orbitalZone": "outer-system",
+        "schematic": "reflector-array"
       },
       {
         "id": "ildara-tora-02",
@@ -9700,7 +9707,8 @@
         "status": "Operational",
         "parent": null,
         "description": "A Terranos Omnidirectional Reflector Array serving the Ildara system. This chart places the array beyond the planetary orbital field. Its exact stellar orbit is unresolved.",
-        "orbitalZone": "outer-system"
+        "orbitalZone": "outer-system",
+        "schematic": "reflector-array"
       },
       {
         "id": "zhaur-tora-01",
@@ -9715,7 +9723,8 @@
         "status": "Operational",
         "parent": null,
         "description": "A Terranos Omnidirectional Reflector Array serving the Zhaur system. This chart places the array beyond the planetary orbital field. Its exact stellar orbit is unresolved.",
-        "orbitalZone": "outer-system"
+        "orbitalZone": "outer-system",
+        "schematic": "reflector-array"
       },
       {
         "id": "zhaur-tora-02",
@@ -9730,7 +9739,8 @@
         "status": "Operational",
         "parent": null,
         "description": "A Terranos Omnidirectional Reflector Array serving the Zhaur system. This chart places the array beyond the planetary orbital field. Its exact stellar orbit is unresolved.",
-        "orbitalZone": "outer-system"
+        "orbitalZone": "outer-system",
+        "schematic": "reflector-array"
       },
       {
         "id": "sorellvaik-tora-01",
@@ -9745,7 +9755,8 @@
         "status": "Operational",
         "parent": null,
         "description": "A Terranos Omnidirectional Reflector Array serving the Sorellvaik system. This chart places the array beyond the planetary orbital field. Its exact stellar orbit is unresolved.",
-        "orbitalZone": "outer-system"
+        "orbitalZone": "outer-system",
+        "schematic": "reflector-array"
       },
       {
         "id": "adraask-tora-01",
@@ -9760,7 +9771,8 @@
         "status": "Operational",
         "parent": null,
         "description": "A Terranos Omnidirectional Reflector Array serving the Adraask system. This chart places the array beyond the planetary orbital field. Its exact stellar orbit is unresolved.",
-        "orbitalZone": "outer-system"
+        "orbitalZone": "outer-system",
+        "schematic": "reflector-array"
       },
       {
         "id": "vaidanstaad-tora-01",
@@ -9775,7 +9787,8 @@
         "status": "Operational",
         "parent": null,
         "description": "A Terranos Omnidirectional Reflector Array serving the Vaidanstaad system. This chart places the array beyond the planetary orbital field. Its exact stellar orbit is unresolved.",
-        "orbitalZone": "outer-system"
+        "orbitalZone": "outer-system",
+        "schematic": "reflector-array"
       },
       {
         "id": "vaidanstaad-tora-02",
@@ -9790,7 +9803,8 @@
         "status": "Operational",
         "parent": null,
         "description": "A Terranos Omnidirectional Reflector Array serving the Vaidanstaad system. This chart places the array beyond the planetary orbital field. Its exact stellar orbit is unresolved.",
-        "orbitalZone": "outer-system"
+        "orbitalZone": "outer-system",
+        "schematic": "reflector-array"
       },
       {
         "id": "edraanvek-tora-01",
@@ -9805,7 +9819,8 @@
         "status": "Operational",
         "parent": null,
         "description": "A Terranos Omnidirectional Reflector Array serving the Edraanvek system. This chart places the array beyond the planetary orbital field. Its exact stellar orbit is unresolved.",
-        "orbitalZone": "outer-system"
+        "orbitalZone": "outer-system",
+        "schematic": "reflector-array"
       },
       {
         "id": "edraanvek-tora-02",
@@ -9820,7 +9835,8 @@
         "status": "Operational",
         "parent": null,
         "description": "A Terranos Omnidirectional Reflector Array serving the Edraanvek system. This chart places the array beyond the planetary orbital field. Its exact stellar orbit is unresolved.",
-        "orbitalZone": "outer-system"
+        "orbitalZone": "outer-system",
+        "schematic": "reflector-array"
       },
       {
         "id": "zeldabruk-tora-01",
@@ -9835,7 +9851,8 @@
         "status": "Operational",
         "parent": null,
         "description": "A Terranos Omnidirectional Reflector Array serving the Zeldabruk system. This chart places the array beyond the planetary orbital field. Its exact stellar orbit is unresolved.",
-        "orbitalZone": "outer-system"
+        "orbitalZone": "outer-system",
+        "schematic": "reflector-array"
       },
       {
         "id": "namaaris-tora-01",
@@ -9850,7 +9867,8 @@
         "status": "Operational",
         "parent": null,
         "description": "A Terranos Omnidirectional Reflector Array serving the Namaaris system. This chart places the array beyond the planetary orbital field. Its exact stellar orbit is unresolved.",
-        "orbitalZone": "outer-system"
+        "orbitalZone": "outer-system",
+        "schematic": "reflector-array"
       },
       {
         "id": "odelhavn-tora-01",
@@ -9865,7 +9883,8 @@
         "status": "Operational",
         "parent": null,
         "description": "A Terranos Omnidirectional Reflector Array serving the Odelhavn system. This chart places the array beyond the planetary orbital field. Its exact stellar orbit is unresolved.",
-        "orbitalZone": "outer-system"
+        "orbitalZone": "outer-system",
+        "schematic": "reflector-array"
       },
       {
         "id": "ruun-tora-01",
@@ -9880,7 +9899,8 @@
         "status": "Operational",
         "parent": null,
         "description": "A Terranos Omnidirectional Reflector Array serving the Ruun system. This chart places the array beyond the planetary orbital field. Its exact stellar orbit is unresolved.",
-        "orbitalZone": "outer-system"
+        "orbitalZone": "outer-system",
+        "schematic": "reflector-array"
       },
       {
         "id": "peladaun-tora-01",
@@ -9895,7 +9915,8 @@
         "status": "Operational",
         "parent": null,
         "description": "A Terranos Omnidirectional Reflector Array serving the Peladaun system. This chart places the array beyond the planetary orbital field. Its exact stellar orbit is unresolved.",
-        "orbitalZone": "outer-system"
+        "orbitalZone": "outer-system",
+        "schematic": "reflector-array"
       },
       {
         "id": "peladaun-tora-02",
@@ -9910,7 +9931,8 @@
         "status": "Operational",
         "parent": null,
         "description": "A Terranos Omnidirectional Reflector Array serving the Peladaun system. This chart places the array beyond the planetary orbital field. Its exact stellar orbit is unresolved.",
-        "orbitalZone": "outer-system"
+        "orbitalZone": "outer-system",
+        "schematic": "reflector-array"
       },
       {
         "id": "iskarraas-tora-01",
@@ -9925,7 +9947,8 @@
         "status": "Operational",
         "parent": null,
         "description": "A Terranos Omnidirectional Reflector Array serving the Iskarraas system. This chart places the array beyond the planetary orbital field. Its exact stellar orbit is unresolved.",
-        "orbitalZone": "outer-system"
+        "orbitalZone": "outer-system",
+        "schematic": "reflector-array"
       },
       {
         "id": "dovrendaal-tora-01",
@@ -9940,7 +9963,8 @@
         "status": "Operational",
         "parent": null,
         "description": "A Terranos Omnidirectional Reflector Array serving the Dovrendaal system. This chart places the array beyond the planetary orbital field. Its exact stellar orbit is unresolved.",
-        "orbitalZone": "outer-system"
+        "orbitalZone": "outer-system",
+        "schematic": "reflector-array"
       },
       {
         "id": "ortaashaad-tora-01",
@@ -9955,7 +9979,8 @@
         "status": "Operational",
         "parent": null,
         "description": "A Terranos Omnidirectional Reflector Array serving the Ortaashaad system. This chart places the array beyond the planetary orbital field. Its exact stellar orbit is unresolved.",
-        "orbitalZone": "outer-system"
+        "orbitalZone": "outer-system",
+        "schematic": "reflector-array"
       },
       {
         "id": "ortaashaad-tora-02",
@@ -9970,7 +9995,8 @@
         "status": "Operational",
         "parent": null,
         "description": "A Terranos Omnidirectional Reflector Array serving the Ortaashaad system. This chart places the array beyond the planetary orbital field. Its exact stellar orbit is unresolved.",
-        "orbitalZone": "outer-system"
+        "orbitalZone": "outer-system",
+        "schematic": "reflector-array"
       },
       {
         "id": "saarbruk-tora-01",
@@ -9985,7 +10011,8 @@
         "status": "Operational",
         "parent": null,
         "description": "A Terranos Omnidirectional Reflector Array serving the Saarbruk system. This chart places the array beyond the planetary orbital field. Its exact stellar orbit is unresolved.",
-        "orbitalZone": "outer-system"
+        "orbitalZone": "outer-system",
+        "schematic": "reflector-array"
       },
       {
         "id": "saarbruk-tora-02",
@@ -10000,7 +10027,8 @@
         "status": "Operational",
         "parent": null,
         "description": "A Terranos Omnidirectional Reflector Array serving the Saarbruk system. This chart places the array beyond the planetary orbital field. Its exact stellar orbit is unresolved.",
-        "orbitalZone": "outer-system"
+        "orbitalZone": "outer-system",
+        "schematic": "reflector-array"
       },
       {
         "id": "kalyrveen-tora-01",
@@ -10015,7 +10043,8 @@
         "status": "Operational",
         "parent": null,
         "description": "A Terranos Omnidirectional Reflector Array serving the Kalyrveen system. This chart places the array beyond the planetary orbital field. Its exact stellar orbit is unresolved.",
-        "orbitalZone": "outer-system"
+        "orbitalZone": "outer-system",
+        "schematic": "reflector-array"
       },
       {
         "id": "kalyrveen-tora-02",
@@ -10030,7 +10059,8 @@
         "status": "Operational",
         "parent": null,
         "description": "A Terranos Omnidirectional Reflector Array serving the Kalyrveen system. This chart places the array beyond the planetary orbital field. Its exact stellar orbit is unresolved.",
-        "orbitalZone": "outer-system"
+        "orbitalZone": "outer-system",
+        "schematic": "reflector-array"
       },
       {
         "id": "teradaun-tora-01",
@@ -10045,7 +10075,8 @@
         "status": "Operational",
         "parent": null,
         "description": "A Terranos Omnidirectional Reflector Array serving the Teradaun system. This chart places the array beyond the planetary orbital field. Its exact stellar orbit is unresolved.",
-        "orbitalZone": "outer-system"
+        "orbitalZone": "outer-system",
+        "schematic": "reflector-array"
       },
       {
         "id": "teradaun-tora-02",
@@ -10060,7 +10091,8 @@
         "status": "Operational",
         "parent": null,
         "description": "A Terranos Omnidirectional Reflector Array serving the Teradaun system. This chart places the array beyond the planetary orbital field. Its exact stellar orbit is unresolved.",
-        "orbitalZone": "outer-system"
+        "orbitalZone": "outer-system",
+        "schematic": "reflector-array"
       },
       {
         "id": "neretvaal-tora-01",
@@ -10075,7 +10107,8 @@
         "status": "Operational",
         "parent": null,
         "description": "A Terranos Omnidirectional Reflector Array serving the Neretvaal system. This chart places the array beyond the planetary orbital field. Its exact stellar orbit is unresolved.",
-        "orbitalZone": "outer-system"
+        "orbitalZone": "outer-system",
+        "schematic": "reflector-array"
       },
       {
         "id": "vessarik-tora-01",
@@ -10090,7 +10123,8 @@
         "status": "Operational",
         "parent": null,
         "description": "A Terranos Omnidirectional Reflector Array serving the Vessarik system. This chart places the array beyond the planetary orbital field. Its exact stellar orbit is unresolved.",
-        "orbitalZone": "outer-system"
+        "orbitalZone": "outer-system",
+        "schematic": "reflector-array"
       },
       {
         "id": "olundraal-tora-01",
@@ -10105,7 +10139,8 @@
         "status": "Operational",
         "parent": null,
         "description": "A Terranos Omnidirectional Reflector Array serving the Olundraal system. This chart places the array beyond the planetary orbital field. Its exact stellar orbit is unresolved.",
-        "orbitalZone": "outer-system"
+        "orbitalZone": "outer-system",
+        "schematic": "reflector-array"
       },
       {
         "id": "mareshavn-tora-01",
@@ -10120,7 +10155,8 @@
         "status": "Operational",
         "parent": null,
         "description": "A Terranos Omnidirectional Reflector Array serving the Mareshavn system. This chart places the array beyond the planetary orbital field. Its exact stellar orbit is unresolved.",
-        "orbitalZone": "outer-system"
+        "orbitalZone": "outer-system",
+        "schematic": "reflector-array"
       },
       {
         "id": "daatren-tora-01",
@@ -10135,7 +10171,8 @@
         "status": "Operational",
         "parent": null,
         "description": "A Terranos Omnidirectional Reflector Array serving the Daatren system. This chart places the array beyond the planetary orbital field. Its exact stellar orbit is unresolved.",
-        "orbitalZone": "outer-system"
+        "orbitalZone": "outer-system",
+        "schematic": "reflector-array"
       },
       {
         "id": "esdarveen-tora-01",
@@ -10150,7 +10187,8 @@
         "status": "Operational",
         "parent": null,
         "description": "A Terranos Omnidirectional Reflector Array serving the Esdarveen system. This chart places the array beyond the planetary orbital field. Its exact stellar orbit is unresolved.",
-        "orbitalZone": "outer-system"
+        "orbitalZone": "outer-system",
+        "schematic": "reflector-array"
       },
       {
         "id": "zyravel-tora-01",
@@ -10165,7 +10203,8 @@
         "status": "Operational",
         "parent": null,
         "description": "A Terranos Omnidirectional Reflector Array serving the Zyravel system. This chart places the array beyond the planetary orbital field. Its exact stellar orbit is unresolved.",
-        "orbitalZone": "outer-system"
+        "orbitalZone": "outer-system",
+        "schematic": "reflector-array"
       },
       {
         "id": "zyravel-tora-02",
@@ -10180,7 +10219,8 @@
         "status": "Operational",
         "parent": null,
         "description": "A Terranos Omnidirectional Reflector Array serving the Zyravel system. This chart places the array beyond the planetary orbital field. Its exact stellar orbit is unresolved.",
-        "orbitalZone": "outer-system"
+        "orbitalZone": "outer-system",
+        "schematic": "reflector-array"
       },
       {
         "id": "tessadaal-tora-01",
@@ -10195,7 +10235,8 @@
         "status": "Operational",
         "parent": null,
         "description": "A Terranos Omnidirectional Reflector Array serving the Tessadaal system. This chart places the array beyond the planetary orbital field. Its exact stellar orbit is unresolved.",
-        "orbitalZone": "outer-system"
+        "orbitalZone": "outer-system",
+        "schematic": "reflector-array"
       },
       {
         "id": "hadresh-tora-01",
@@ -10210,7 +10251,8 @@
         "status": "Operational",
         "parent": null,
         "description": "A Terranos Omnidirectional Reflector Array serving the Hadresh system. This chart places the array beyond the planetary orbital field. Its exact stellar orbit is unresolved.",
-        "orbitalZone": "outer-system"
+        "orbitalZone": "outer-system",
+        "schematic": "reflector-array"
       },
       {
         "id": "ossendaal-tora-01",
@@ -10225,7 +10267,8 @@
         "status": "Operational",
         "parent": null,
         "description": "A Terranos Omnidirectional Reflector Array serving the Ossendaal system. This chart places the array beyond the planetary orbital field. Its exact stellar orbit is unresolved.",
-        "orbitalZone": "outer-system"
+        "orbitalZone": "outer-system",
+        "schematic": "reflector-array"
       },
       {
         "id": "varetiraak-tora-01",
@@ -10240,7 +10283,8 @@
         "status": "Operational",
         "parent": null,
         "description": "A Terranos Omnidirectional Reflector Array serving the Varetiraak system. This chart places the array beyond the planetary orbital field. Its exact stellar orbit is unresolved.",
-        "orbitalZone": "outer-system"
+        "orbitalZone": "outer-system",
+        "schematic": "reflector-array"
       },
       {
         "id": "varetiraak-tora-02",
@@ -10255,7 +10299,8 @@
         "status": "Operational",
         "parent": null,
         "description": "A Terranos Omnidirectional Reflector Array serving the Varetiraak system. This chart places the array beyond the planetary orbital field. Its exact stellar orbit is unresolved.",
-        "orbitalZone": "outer-system"
+        "orbitalZone": "outer-system",
+        "schematic": "reflector-array"
       },
       {
         "id": "talvenstaad-tora-01",
@@ -10270,7 +10315,8 @@
         "status": "Operational",
         "parent": null,
         "description": "A Terranos Omnidirectional Reflector Array serving the Talvenstaad system. This chart places the array beyond the planetary orbital field. Its exact stellar orbit is unresolved.",
-        "orbitalZone": "outer-system"
+        "orbitalZone": "outer-system",
+        "schematic": "reflector-array"
       },
       {
         "id": "talvenstaad-tora-02",
@@ -10285,7 +10331,8 @@
         "status": "Operational",
         "parent": null,
         "description": "A Terranos Omnidirectional Reflector Array serving the Talvenstaad system. This chart places the array beyond the planetary orbital field. Its exact stellar orbit is unresolved.",
-        "orbitalZone": "outer-system"
+        "orbitalZone": "outer-system",
+        "schematic": "reflector-array"
       },
       {
         "id": "kordabruk-tora-01",
@@ -10300,7 +10347,8 @@
         "status": "Operational",
         "parent": null,
         "description": "A Terranos Omnidirectional Reflector Array serving the Kordabruk system. This chart places the array beyond the planetary orbital field. Its exact stellar orbit is unresolved.",
-        "orbitalZone": "outer-system"
+        "orbitalZone": "outer-system",
+        "schematic": "reflector-array"
       },
       {
         "id": "kordabruk-tora-02",
@@ -10315,7 +10363,8 @@
         "status": "Operational",
         "parent": null,
         "description": "A Terranos Omnidirectional Reflector Array serving the Kordabruk system. This chart places the array beyond the planetary orbital field. Its exact stellar orbit is unresolved.",
-        "orbitalZone": "outer-system"
+        "orbitalZone": "outer-system",
+        "schematic": "reflector-array"
       },
       {
         "id": "retharaas-tora-01",
@@ -10330,7 +10379,8 @@
         "status": "Operational",
         "parent": null,
         "description": "A Terranos Omnidirectional Reflector Array serving the Retharaas system. This chart places the array beyond the planetary orbital field. Its exact stellar orbit is unresolved.",
-        "orbitalZone": "outer-system"
+        "orbitalZone": "outer-system",
+        "schematic": "reflector-array"
       },
       {
         "id": "retharaas-tora-02",
@@ -10345,7 +10395,8 @@
         "status": "Operational",
         "parent": null,
         "description": "A Terranos Omnidirectional Reflector Array serving the Retharaas system. This chart places the array beyond the planetary orbital field. Its exact stellar orbit is unresolved.",
-        "orbitalZone": "outer-system"
+        "orbitalZone": "outer-system",
+        "schematic": "reflector-array"
       },
       {
         "id": "velisharn-tora-01",
@@ -10360,7 +10411,8 @@
         "status": "Operational",
         "parent": null,
         "description": "A Terranos Omnidirectional Reflector Array serving the Velisharn system. This chart places the array beyond the planetary orbital field. Its exact stellar orbit is unresolved.",
-        "orbitalZone": "outer-system"
+        "orbitalZone": "outer-system",
+        "schematic": "reflector-array"
       },
       {
         "id": "odraask-tora-01",
@@ -10375,7 +10427,8 @@
         "status": "Operational",
         "parent": null,
         "description": "A Terranos Omnidirectional Reflector Array serving the Odraask system. This chart places the array beyond the planetary orbital field. Its exact stellar orbit is unresolved.",
-        "orbitalZone": "outer-system"
+        "orbitalZone": "outer-system",
+        "schematic": "reflector-array"
       },
       {
         "id": "odraask-tora-02",
@@ -10390,7 +10443,8 @@
         "status": "Operational",
         "parent": null,
         "description": "A Terranos Omnidirectional Reflector Array serving the Odraask system. This chart places the array beyond the planetary orbital field. Its exact stellar orbit is unresolved.",
-        "orbitalZone": "outer-system"
+        "orbitalZone": "outer-system",
+        "schematic": "reflector-array"
       },
       {
         "id": "nydrelvaal-tora-01",
@@ -10405,7 +10459,8 @@
         "status": "Operational",
         "parent": null,
         "description": "A Terranos Omnidirectional Reflector Array serving the Nydrelvaal system. This chart places the array beyond the planetary orbital field. Its exact stellar orbit is unresolved.",
-        "orbitalZone": "outer-system"
+        "orbitalZone": "outer-system",
+        "schematic": "reflector-array"
       },
       {
         "id": "karaad-tora-01",
@@ -10420,7 +10475,8 @@
         "status": "Operational",
         "parent": null,
         "description": "A Terranos Omnidirectional Reflector Array serving the Karaad system. This chart places the array beyond the planetary orbital field. Its exact stellar orbit is unresolved.",
-        "orbitalZone": "outer-system"
+        "orbitalZone": "outer-system",
+        "schematic": "reflector-array"
       },
       {
         "id": "eshdaanvek-tora-01",
@@ -10435,7 +10491,8 @@
         "status": "Operational",
         "parent": null,
         "description": "A Terranos Omnidirectional Reflector Array serving the Eshdaanvek system. This chart places the array beyond the planetary orbital field. Its exact stellar orbit is unresolved.",
-        "orbitalZone": "outer-system"
+        "orbitalZone": "outer-system",
+        "schematic": "reflector-array"
       },
       {
         "id": "yrdana-tora-01",
@@ -10450,7 +10507,8 @@
         "status": "Operational",
         "parent": null,
         "description": "A Terranos Omnidirectional Reflector Array serving the Yrdana system. This chart places the array beyond the planetary orbital field. Its exact stellar orbit is unresolved.",
-        "orbitalZone": "outer-system"
+        "orbitalZone": "outer-system",
+        "schematic": "reflector-array"
       },
       {
         "id": "irdaal-tora-01",
@@ -10465,7 +10523,8 @@
         "status": "Operational",
         "parent": null,
         "description": "A Terranos Omnidirectional Reflector Array serving the Irdaal system. This chart places the array beyond the planetary orbital field. Its exact stellar orbit is unresolved.",
-        "orbitalZone": "outer-system"
+        "orbitalZone": "outer-system",
+        "schematic": "reflector-array"
       },
       {
         "id": "avendon-facility-01",
@@ -24116,7 +24175,105 @@
     "objectImages": {},
     "assets": {
       "flag": "atlas-asset:e0580460f2cb4a3c18a68fecc78a9fda84237c8fb36bfaa4fdc8ed127200f588"
-    }
+    },
+    "schematics": [
+      {
+        "key": "reflector-array",
+        "kicker": "STATION OVERVIEW",
+        "deck": "Terranos Omnidirectional Reflector Array",
+        "units": {
+          "noun": "Array",
+          "aria": "Reflector arrays in this system"
+        },
+        "links": [
+          {
+            "link": "Terranos Omnidirectional Reflector Array",
+            "label": "Go to Article",
+            "cls": "tora-article"
+          }
+        ],
+        "drawing": {
+          "svg": "<svg class=\"tora-plate\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 660 520\" role=\"group\" aria-label=\"Holographic elevation of the Terranos array with five component markers\"><defs><pattern id=\"toraGrid\" width=\"22\" height=\"22\" patternUnits=\"userSpaceOnUse\"><path d=\"M22 0H0V22\" fill=\"none\" stroke=\"#325566\" stroke-width=\".5\"/></pattern><radialGradient id=\"toraBackdrop\"><stop stop-color=\"#133443\"/><stop offset=\"1\" stop-color=\"#08131e\"/></radialGradient><filter id=\"toraAmber\" filterUnits=\"userSpaceOnUse\" x=\"0\" y=\"0\" width=\"660\" height=\"520\" color-interpolation-filters=\"sRGB\"><feColorMatrix type=\"matrix\" values=\"0 1.35 0 0 .06  0 .82 0 0 .01  0 .30 0 0 0  0 0 0 1 0\"/></filter><filter id=\"toraGlow\" x=\"-60%\" y=\"-100%\" width=\"220%\" height=\"300%\"><feGaussianBlur stdDeviation=\"2\"/><feMerge><feMergeNode/><feMergeNode in=\"SourceGraphic\"/></feMerge></filter></defs>\n <rect width=\"660\" height=\"520\" fill=\"url(#toraBackdrop)\"/><rect width=\"660\" height=\"520\" fill=\"url(#toraGrid)\" opacity=\".45\"/><g fill=\"none\" stroke=\"#345464\" stroke-width=\".65\"><path d=\"M330 19V502 M47 254H613\" stroke-dasharray=\"3 7\"/><ellipse cx=\"330\" cy=\"256\" rx=\"224\" ry=\"48\" stroke-dasharray=\"5 8\"/><path d=\"M40 35h-8v454h8 M620 35h8v454h-8\"/></g>\n <g class=\"tora-build\"><g data-hardware=\"2\"><g transform=\"translate(330 254) scale(1 1)\"><g transform=\"rotate(-27) scale(0.98 1)\">\n  <path d=\"M28 -6 L85 -11 197 -15 211 -9 202 0 137 5 74 9 28 6Z\" fill=\"#102c3c\" stroke=\"#71bccc\"/>\n  <path d=\"M63 -5 L94 -16 182 -23 215 -16 198 -5 107 2 74 5Z\" fill=\"#1c4858\" stroke=\"#b5f2ef\"/>\n  <path d=\"M65 7L80 12 139 7 194 5 203 -1 M84 6L96 -16 M118 1L129 -19 M149 -1L159 -21 M181 -4L191 -21 M199 -6L208 -18\" fill=\"none\" stroke=\"#65a7b8\"/>\n  <path d=\"M38 -9L78 -15 88 -10 44 -3Z M45 8L80 6 84 10 48 14Z\" fill=\"#24404b\" stroke=\"#528fa1\"/>\n  <path d=\"M77 6l14 -1 M136 2l10 -1 M194 -6l10 -1\" stroke=\"#90ffff\" stroke-width=\"3\" filter=\"url(#toraGlow)\"/></g></g><g transform=\"translate(330 254) scale(-1 1)\"><g transform=\"rotate(-27) scale(0.98 1)\">\n  <path d=\"M28 -6 L85 -11 197 -15 211 -9 202 0 137 5 74 9 28 6Z\" fill=\"#102c3c\" stroke=\"#71bccc\"/>\n  <path d=\"M63 -5 L94 -16 182 -23 215 -16 198 -5 107 2 74 5Z\" fill=\"#1c4858\" stroke=\"#b5f2ef\"/>\n  <path d=\"M65 7L80 12 139 7 194 5 203 -1 M84 6L96 -16 M118 1L129 -19 M149 -1L159 -21 M181 -4L191 -21 M199 -6L208 -18\" fill=\"none\" stroke=\"#65a7b8\"/>\n  <path d=\"M38 -9L78 -15 88 -10 44 -3Z M45 8L80 6 84 10 48 14Z\" fill=\"#24404b\" stroke=\"#528fa1\"/>\n  <path d=\"M77 6l14 -1 M136 2l10 -1 M194 -6l10 -1\" stroke=\"#90ffff\" stroke-width=\"3\" filter=\"url(#toraGlow)\"/></g></g><g transform=\"translate(330 254) scale(1 1)\"><g transform=\"rotate(4) scale(1 0.85)\">\n  <path d=\"M28 -6 L85 -11 197 -15 211 -9 202 0 137 5 74 9 28 6Z\" fill=\"#102c3c\" stroke=\"#71bccc\"/>\n  <path d=\"M63 -5 L94 -16 182 -23 215 -16 198 -5 107 2 74 5Z\" fill=\"#1c4858\" stroke=\"#b5f2ef\"/>\n  <path d=\"M65 7L80 12 139 7 194 5 203 -1 M84 6L96 -16 M118 1L129 -19 M149 -1L159 -21 M181 -4L191 -21 M199 -6L208 -18\" fill=\"none\" stroke=\"#65a7b8\"/>\n  <path d=\"M38 -9L78 -15 88 -10 44 -3Z M45 8L80 6 84 10 48 14Z\" fill=\"#24404b\" stroke=\"#528fa1\"/>\n  <path d=\"M77 6l14 -1 M136 2l10 -1 M194 -6l10 -1\" stroke=\"#90ffff\" stroke-width=\"3\" filter=\"url(#toraGlow)\"/></g></g><g transform=\"translate(330 254) scale(-1 1)\"><g transform=\"rotate(4) scale(1 0.85)\">\n  <path d=\"M28 -6 L85 -11 197 -15 211 -9 202 0 137 5 74 9 28 6Z\" fill=\"#102c3c\" stroke=\"#71bccc\"/>\n  <path d=\"M63 -5 L94 -16 182 -23 215 -16 198 -5 107 2 74 5Z\" fill=\"#1c4858\" stroke=\"#b5f2ef\"/>\n  <path d=\"M65 7L80 12 139 7 194 5 203 -1 M84 6L96 -16 M118 1L129 -19 M149 -1L159 -21 M181 -4L191 -21 M199 -6L208 -18\" fill=\"none\" stroke=\"#65a7b8\"/>\n  <path d=\"M38 -9L78 -15 88 -10 44 -3Z M45 8L80 6 84 10 48 14Z\" fill=\"#24404b\" stroke=\"#528fa1\"/>\n  <path d=\"M77 6l14 -1 M136 2l10 -1 M194 -6l10 -1\" stroke=\"#90ffff\" stroke-width=\"3\" filter=\"url(#toraGlow)\"/></g></g></g><g data-hardware=\"4\"><path d=\"M281 269L297.65999999999997 269 301.62 288 287 288Z\" fill=\"#123343\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M297.65999999999997 269L319.22 269 320.54 288 301.62 288Z\" fill=\"#1b4959\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M319.22 269L345.68 269 343.76 288 320.54 288Z\" fill=\"#285e6c\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M345.68 269L365.77 269 361.39 288 343.76 288Z\" fill=\"#183e50\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M365.77 269L379 269 373 288 361.39 288Z\" fill=\"#0f2839\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M287 288L301.62 288 302.28 299 288 299Z\" fill=\"#123343\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M301.62 288L320.54 288 320.76 299 302.28 299Z\" fill=\"#1b4959\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M320.54 288L343.76 288 343.44 299 320.76 299Z\" fill=\"#285e6c\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M343.76 288L361.39 288 360.66 299 343.44 299Z\" fill=\"#183e50\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M361.39 288L373 288 372 299 360.66 299Z\" fill=\"#0f2839\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M288 299L302.28 299 298.98 304 283 304Z\" fill=\"#123343\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M302.28 299L320.76 299 319.66 304 298.98 304Z\" fill=\"#1b4959\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M320.76 299L343.44 299 345.04 304 319.66 304Z\" fill=\"#285e6c\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M343.44 299L360.66 299 364.31 304 345.04 304Z\" fill=\"#183e50\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M360.66 299L372 299 377 304 364.31 304Z\" fill=\"#0f2839\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M283 304L298.98 304 300.3 313 285 313Z\" fill=\"#123343\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M298.98 304L319.66 304 320.1 313 300.3 313Z\" fill=\"#1b4959\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M319.66 304L345.04 304 344.4 313 320.1 313Z\" fill=\"#285e6c\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M345.04 304L364.31 304 362.85 313 344.4 313Z\" fill=\"#183e50\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M364.31 304L377 304 375 313 362.85 313Z\" fill=\"#0f2839\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M285 313L300.3 313 308.88 323 298 323Z\" fill=\"#123343\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M300.3 313L320.1 313 322.96 323 308.88 323Z\" fill=\"#1b4959\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M320.1 313L344.4 313 340.24 323 322.96 323Z\" fill=\"#285e6c\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M344.4 313L362.85 313 353.36 323 340.24 323Z\" fill=\"#183e50\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M362.85 313L375 313 362 323 353.36 323Z\" fill=\"#0f2839\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M298 323L308.88 323 312.18 337 303 337Z\" fill=\"#123343\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M308.88 323L322.96 323 324.06 337 312.18 337Z\" fill=\"#1b4959\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M322.96 323L340.24 323 338.64 337 324.06 337Z\" fill=\"#285e6c\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M340.24 323L353.36 323 349.71 337 338.64 337Z\" fill=\"#183e50\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M353.36 323L362 323 357 337 349.71 337Z\" fill=\"#0f2839\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M303 337L312.18 337 314.82 353 307 353Z\" fill=\"#123343\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M312.18 337L324.06 337 324.94 353 314.82 353Z\" fill=\"#1b4959\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M324.06 337L338.64 337 337.36 353 324.94 353Z\" fill=\"#285e6c\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M338.64 337L349.71 337 346.79 353 337.36 353Z\" fill=\"#183e50\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M349.71 337L357 337 353 353 346.79 353Z\" fill=\"#0f2839\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M307 353L314.82 353 312.84 360 304 360Z\" fill=\"#123343\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M314.82 353L324.94 353 324.28 360 312.84 360Z\" fill=\"#1b4959\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M324.94 353L337.36 353 338.32 360 324.28 360Z\" fill=\"#285e6c\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M337.36 353L346.79 353 348.98 360 338.32 360Z\" fill=\"#183e50\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M346.79 353L353 353 356 360 348.98 360Z\" fill=\"#0f2839\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M304 360L312.84 360 315.48 369 308 369Z\" fill=\"#123343\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M312.84 360L324.28 360 325.16 369 315.48 369Z\" fill=\"#1b4959\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M324.28 360L338.32 360 337.04 369 325.16 369Z\" fill=\"#285e6c\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M338.32 360L348.98 360 346.06 369 337.04 369Z\" fill=\"#183e50\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M348.98 360L356 360 352 369 346.06 369Z\" fill=\"#0f2839\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M308 369L315.48 369 318.78 402 313 402Z\" fill=\"#123343\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M315.48 369L325.16 369 326.26 402 318.78 402Z\" fill=\"#1b4959\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M325.16 369L337.04 369 335.44 402 326.26 402Z\" fill=\"#285e6c\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M337.04 369L346.06 369 342.41 402 335.44 402Z\" fill=\"#183e50\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M346.06 369L352 369 347 402 342.41 402Z\" fill=\"#0f2839\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M313 402L318.78 402 321.42 428 317 428Z\" fill=\"#123343\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M318.78 402L326.26 402 327.14 428 321.42 428Z\" fill=\"#1b4959\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M326.26 402L335.44 402 334.16 428 327.14 428Z\" fill=\"#285e6c\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M335.44 402L342.41 402 339.49 428 334.16 428Z\" fill=\"#183e50\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M342.41 402L347 402 343 428 339.49 428Z\" fill=\"#0f2839\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M317 428L321.42 428 325.38 448 323 448Z\" fill=\"#123343\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M321.42 428L327.14 428 328.46 448 325.38 448Z\" fill=\"#1b4959\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M327.14 428L334.16 428 332.24 448 328.46 448Z\" fill=\"#285e6c\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M334.16 428L339.49 428 335.11 448 332.24 448Z\" fill=\"#183e50\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M339.49 428L343 428 337 448 335.11 448Z\" fill=\"#0f2839\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M323 448L325.38 448 327.36 469 326 469Z\" fill=\"#123343\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M325.38 448L328.46 448 329.12 469 327.36 469Z\" fill=\"#1b4959\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M328.46 448L332.24 448 331.28 469 329.12 469Z\" fill=\"#285e6c\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M332.24 448L335.11 448 332.92 469 331.28 469Z\" fill=\"#183e50\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M335.11 448L337 448 334 469 332.92 469Z\" fill=\"#0f2839\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M326 469L327.36 469 329.34 489 329 489Z\" fill=\"#123343\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M327.36 469L329.12 469 329.78 489 329.34 489Z\" fill=\"#1b4959\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M329.12 469L331.28 469 330.32 489 329.78 489Z\" fill=\"#285e6c\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M331.28 469L332.92 469 330.73 489 330.32 489Z\" fill=\"#183e50\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M332.92 469L334 469 331 489 330.73 489Z\" fill=\"#0f2839\" stroke=\"#69a5b2\" stroke-width=\".72\"/></g><g data-hardware=\"4\"><path d=\"M312 333v75l3 4v-37.5\" fill=\"#193e50\" stroke=\"#71b9cd\" stroke-width=\"1.4\"/></g><g data-hardware=\"4\"><path d=\"M354 307v69l-3 4v-34.5\" fill=\"#193e50\" stroke=\"#71b9cd\" stroke-width=\"1.4\"/></g><g data-hardware=\"4\"><path d=\"M298 296v63l3 4v-31.5\" fill=\"#193e50\" stroke=\"#71b9cd\" stroke-width=\"1.4\"/></g><g data-hardware=\"4\"><path d=\"M367 283v43l-3 4v-21.5\" fill=\"#193e50\" stroke=\"#71b9cd\" stroke-width=\"1.4\"/></g><g data-hardware=\"4\"><path d=\"M321 363v87l3 4v-43.5\" fill=\"#193e50\" stroke=\"#71b9cd\" stroke-width=\"1.4\"/></g><g data-hardware=\"0\"><path d=\"M339 87v42l-3 4v-21\" fill=\"#193e50\" stroke=\"#71b9cd\" stroke-width=\"1.4\"/></g><g data-hardware=\"4\"><g stroke=\"#5796a8\" stroke-width=\"1\"><path d=\"M286 302a44 10 0 1 0 88 0v6a44 10 0 0 1 -88 0Z\" fill=\"#102f3c\"/><ellipse cx=\"330\" cy=\"302\" rx=\"44\" ry=\"10\" fill=\"#102f3c\"/></g></g><g data-hardware=\"3\"><g stroke=\"#78bac7\" stroke-width=\"1\"><path d=\"M283 279a47 13 0 1 0 94 0v7a47 13 0 0 1 -94 0Z\" fill=\"#163d4c\"/><ellipse cx=\"330\" cy=\"279\" rx=\"47\" ry=\"13\" fill=\"#163d4c\"/></g></g><g data-hardware=\"2\"><g transform=\"translate(330 254) scale(1 1)\"><g transform=\"rotate(24) scale(0.9 0.79)\">\n  <path d=\"M28 -6 L85 -11 197 -15 211 -9 202 0 137 5 74 9 28 6Z\" fill=\"#102c3c\" stroke=\"#71bccc\"/>\n  <path d=\"M63 -5 L94 -16 182 -23 215 -16 198 -5 107 2 74 5Z\" fill=\"#1c4858\" stroke=\"#b5f2ef\"/>\n  <path d=\"M65 7L80 12 139 7 194 5 203 -1 M84 6L96 -16 M118 1L129 -19 M149 -1L159 -21 M181 -4L191 -21 M199 -6L208 -18\" fill=\"none\" stroke=\"#65a7b8\"/>\n  <path d=\"M38 -9L78 -15 88 -10 44 -3Z M45 8L80 6 84 10 48 14Z\" fill=\"#24404b\" stroke=\"#528fa1\"/>\n  <path d=\"M77 6l14 -1 M136 2l10 -1 M194 -6l10 -1\" stroke=\"#90ffff\" stroke-width=\"3\" filter=\"url(#toraGlow)\"/></g></g><g transform=\"translate(330 254) scale(-1 1)\"><g transform=\"rotate(24) scale(0.9 0.79)\">\n  <path d=\"M28 -6 L85 -11 197 -15 211 -9 202 0 137 5 74 9 28 6Z\" fill=\"#102c3c\" stroke=\"#71bccc\"/>\n  <path d=\"M63 -5 L94 -16 182 -23 215 -16 198 -5 107 2 74 5Z\" fill=\"#1c4858\" stroke=\"#b5f2ef\"/>\n  <path d=\"M65 7L80 12 139 7 194 5 203 -1 M84 6L96 -16 M118 1L129 -19 M149 -1L159 -21 M181 -4L191 -21 M199 -6L208 -18\" fill=\"none\" stroke=\"#65a7b8\"/>\n  <path d=\"M38 -9L78 -15 88 -10 44 -3Z M45 8L80 6 84 10 48 14Z\" fill=\"#24404b\" stroke=\"#528fa1\"/>\n  <path d=\"M77 6l14 -1 M136 2l10 -1 M194 -6l10 -1\" stroke=\"#90ffff\" stroke-width=\"3\" filter=\"url(#toraGlow)\"/></g></g></g><g data-hardware=\"3\"><path d=\"M312 196L318.12 196 316.8 216 310 216Z\" fill=\"#123343\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M318.12 196L326.04 196 325.6 216 316.8 216Z\" fill=\"#1b4959\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M326.04 196L335.76 196 336.4 216 325.6 216Z\" fill=\"#285e6c\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M335.76 196L343.14 196 344.6 216 336.4 216Z\" fill=\"#183e50\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M343.14 196L348 196 350 216 344.6 216Z\" fill=\"#0f2839\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M310 216L316.8 216 310.86 224 301 224Z\" fill=\"#123343\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M316.8 216L325.6 216 323.62 224 310.86 224Z\" fill=\"#1b4959\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M325.6 216L336.4 216 339.28 224 323.62 224Z\" fill=\"#285e6c\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M336.4 216L344.6 216 351.17 224 339.28 224Z\" fill=\"#183e50\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M344.6 216L350 216 359 224 351.17 224Z\" fill=\"#0f2839\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M301 224L310.86 224 306.24 234 294 234Z\" fill=\"#123343\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M310.86 224L323.62 224 322.08 234 306.24 234Z\" fill=\"#1b4959\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M323.62 224L339.28 224 341.52 234 322.08 234Z\" fill=\"#285e6c\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M339.28 224L351.17 224 356.28 234 341.52 234Z\" fill=\"#183e50\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M351.17 224L359 224 366 234 356.28 234Z\" fill=\"#0f2839\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M294 234L306.24 234 300.96 245 286 245Z\" fill=\"#123343\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M306.24 234L322.08 234 320.32 245 300.96 245Z\" fill=\"#1b4959\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M322.08 234L341.52 234 344.08 245 320.32 245Z\" fill=\"#285e6c\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M341.52 234L356.28 234 362.12 245 344.08 245Z\" fill=\"#183e50\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M356.28 234L366 234 374 245 362.12 245Z\" fill=\"#0f2839\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M286 245L300.96 245 298.32 260 282 260Z\" fill=\"#123343\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M300.96 245L320.32 245 319.44 260 298.32 260Z\" fill=\"#1b4959\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M320.32 245L344.08 245 345.36 260 319.44 260Z\" fill=\"#285e6c\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M344.08 245L362.12 245 365.04 260 345.36 260Z\" fill=\"#183e50\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M362.12 245L374 245 378 260 365.04 260Z\" fill=\"#0f2839\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M282 260L298.32 260 302.28 273 288 273Z\" fill=\"#123343\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M298.32 260L319.44 260 320.76 273 302.28 273Z\" fill=\"#1b4959\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M319.44 260L345.36 260 343.44 273 320.76 273Z\" fill=\"#285e6c\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M345.36 260L365.04 260 360.66 273 343.44 273Z\" fill=\"#183e50\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M365.04 260L378 260 372 273 360.66 273Z\" fill=\"#0f2839\" stroke=\"#69a5b2\" stroke-width=\".72\"/><g stroke=\"#65d7e7\" stroke-width=\"1\"><path d=\"M276 252a54 14 0 1 0 108 0v7a54 14 0 0 1 -108 0Z\" fill=\"#103f52\"/><ellipse cx=\"330\" cy=\"252\" rx=\"54\" ry=\"14\" fill=\"#103f52\"/></g><g stroke=\"#90f8ff\" stroke-width=\"1\"><path d=\"M279 257a51 13 0 1 0 102 0v2a51 13 0 0 1 -102 0Z\" fill=\"#12617a\"/><ellipse cx=\"330\" cy=\"257\" rx=\"51\" ry=\"13\" fill=\"#12617a\"/></g></g><g data-hardware=\"3\"><g stroke=\"#5792a2\" stroke-width=\".8\"><path d=\"M290 276l4 -3h9v20l-4 3h-9Z\" fill=\"#11303e\"/><path d=\"M290 276h9v20M299 276l4 -3\" fill=\"none\"/><path d=\"M292 280h4.32\" stroke=\"#9ef7ff\" stroke-width=\"1.6\"/></g></g><g data-hardware=\"4\"><g stroke=\"#5792a2\" stroke-width=\".8\"><path d=\"M301 294l4 -3h10v28l-4 3h-10Z\" fill=\"#11303e\"/><path d=\"M301 294h10v28M311 294l4 -3\" fill=\"none\"/><path d=\"M303 298h4.8\" stroke=\"#9ef7ff\" stroke-width=\"1.6\"/></g></g><g data-hardware=\"3\"><g stroke=\"#5792a2\" stroke-width=\".8\"><path d=\"M315 276l4 -3h6v15l-4 3h-6Z\" fill=\"#11303e\"/><path d=\"M315 276h6v15M321 276l4 -3\" fill=\"none\"/><path d=\"M317 280h2.88\" stroke=\"#9ef7ff\" stroke-width=\"1.6\"/></g></g><g data-hardware=\"3\"><g stroke=\"#5792a2\" stroke-width=\".8\"><path d=\"M355 272l4 -3h12v25l-4 3h-12Z\" fill=\"#11303e\"/><path d=\"M355 272h12v25M367 272l4 -3\" fill=\"none\"/><path d=\"M357 276h5.76\" stroke=\"#9ef7ff\" stroke-width=\"1.6\"/></g></g><g data-hardware=\"3\"><g stroke=\"#5792a2\" stroke-width=\".8\"><path d=\"M374 281l4 -3h6v18l-4 3h-6Z\" fill=\"#11303e\"/><path d=\"M374 281h6v18M380 281l4 -3\" fill=\"none\"/><path d=\"M376 285h2.88\" stroke=\"#9ef7ff\" stroke-width=\"1.6\"/></g></g><g data-hardware=\"4\"><g stroke=\"#5792a2\" stroke-width=\".8\"><path d=\"M363 308l4 -3h6v13l-4 3h-6Z\" fill=\"#11303e\"/><path d=\"M363 308h6v13M369 308l4 -3\" fill=\"none\"/><path d=\"M365 312h2.88\" stroke=\"#9ef7ff\" stroke-width=\"1.6\"/></g></g><g data-hardware=\"4\"><g stroke=\"#5792a2\" stroke-width=\".8\"><path d=\"M342 326l4 -3h5v26l-4 3h-5Z\" fill=\"#11303e\"/><path d=\"M342 326h5v26M347 326l4 -3\" fill=\"none\"/><path d=\"M344 330h2.4\" stroke=\"#9ef7ff\" stroke-width=\"1.6\"/></g></g><g data-hardware=\"4\"><g stroke=\"#5792a2\" stroke-width=\".8\"><path d=\"M321 381l4 -3h4v22l-4 3h-4Z\" fill=\"#11303e\"/><path d=\"M321 381h4v22M325 381l4 -3\" fill=\"none\"/><path d=\"M323 385h1.92\" stroke=\"#9ef7ff\" stroke-width=\"1.6\"/></g></g><g data-hardware=\"0\"><g stroke=\"#5792a2\" stroke-width=\".8\"><path d=\"M321 117l4 -3h3v21l-4 3h-3Z\" fill=\"#11303e\"/><path d=\"M321 117h3v21M324 117l4 -3\" fill=\"none\"/><path d=\"M323 121h1.44\" stroke=\"#9ef7ff\" stroke-width=\"1.6\"/></g></g><g data-hardware=\"0\"><g stroke=\"#5792a2\" stroke-width=\".8\"><path d=\"M343 142l4 -3h5v16l-4 3h-5Z\" fill=\"#11303e\"/><path d=\"M343 142h5v16M348 142l4 -3\" fill=\"none\"/><path d=\"M345 146h2.4\" stroke=\"#9ef7ff\" stroke-width=\"1.6\"/></g></g><g data-hardware=\"3\"><path d=\"M282 256 Q330 282 378 256\" fill=\"none\" stroke=\"#76f1ff\" stroke-width=\"2\" filter=\"url(#toraGlow)\"/></g><g data-hardware=\"3\"><g stroke=\"#78c0cf\" stroke-width=\"1\"><path d=\"M295 231a35 8 0 1 0 70 0v5a35 8 0 0 1 -70 0Z\" fill=\"#163b4c\"/><ellipse cx=\"330\" cy=\"231\" rx=\"35\" ry=\"8\" fill=\"#163b4c\"/></g></g><g data-hardware=\"0\"><path d=\"M329 35L329.34 35 328.02 59 327 59Z\" fill=\"#123343\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M329.34 35L329.78 35 329.34 59 328.02 59Z\" fill=\"#1b4959\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M329.78 35L330.32 35 330.96 59 329.34 59Z\" fill=\"#285e6c\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M330.32 35L330.73 35 332.19 59 330.96 59Z\" fill=\"#183e50\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M330.73 35L331 35 333 59 332.19 59Z\" fill=\"#0f2839\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M327 59L328.02 59 326.04 67 324 67Z\" fill=\"#123343\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M328.02 59L329.34 59 328.68 67 326.04 67Z\" fill=\"#1b4959\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M329.34 59L330.96 59 331.92 67 328.68 67Z\" fill=\"#285e6c\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M330.96 59L332.19 59 334.38 67 331.92 67Z\" fill=\"#183e50\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M332.19 59L333 59 336 67 334.38 67Z\" fill=\"#0f2839\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M324 67L326.04 67 324.72 88 322 88Z\" fill=\"#123343\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M326.04 67L328.68 67 328.24 88 324.72 88Z\" fill=\"#1b4959\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M328.68 67L331.92 67 332.56 88 328.24 88Z\" fill=\"#285e6c\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M331.92 67L334.38 67 335.84 88 332.56 88Z\" fill=\"#183e50\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M334.38 67L336 67 338 88 335.84 88Z\" fill=\"#0f2839\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M322 88L324.72 88 322.74 93 319 93Z\" fill=\"#123343\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M324.72 88L328.24 88 327.58 93 322.74 93Z\" fill=\"#1b4959\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M328.24 88L332.56 88 333.52 93 327.58 93Z\" fill=\"#285e6c\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M332.56 88L335.84 88 338.03 93 333.52 93Z\" fill=\"#183e50\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M335.84 88L338 88 341 93 338.03 93Z\" fill=\"#0f2839\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M319 93L322.74 93 320.76 119 316 119Z\" fill=\"#123343\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M322.74 93L327.58 93 326.92 119 320.76 119Z\" fill=\"#1b4959\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M327.58 93L333.52 93 334.48 119 326.92 119Z\" fill=\"#285e6c\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M333.52 93L338.03 93 340.22 119 334.48 119Z\" fill=\"#183e50\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M338.03 93L341 93 344 119 340.22 119Z\" fill=\"#0f2839\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M316 119L320.76 119 317.46 128 311 128Z\" fill=\"#123343\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M320.76 119L326.92 119 325.82 128 317.46 128Z\" fill=\"#1b4959\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M326.92 119L334.48 119 336.08 128 325.82 128Z\" fill=\"#285e6c\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M334.48 119L340.22 119 343.87 128 336.08 128Z\" fill=\"#183e50\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M340.22 119L344 119 349 128 343.87 128Z\" fill=\"#0f2839\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M311 128L317.46 128 316.14 146 309 146Z\" fill=\"#123343\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M317.46 128L325.82 128 325.38 146 316.14 146Z\" fill=\"#1b4959\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M325.82 128L336.08 128 336.72 146 325.38 146Z\" fill=\"#285e6c\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M336.08 128L343.87 128 345.33 146 336.72 146Z\" fill=\"#183e50\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M343.87 128L349 128 351 146 345.33 146Z\" fill=\"#0f2839\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M309 146L316.14 146 313.5 152 305 152Z\" fill=\"#123343\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M316.14 146L325.38 146 324.5 152 313.5 152Z\" fill=\"#1b4959\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M325.38 146L336.72 146 338 152 324.5 152Z\" fill=\"#285e6c\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M336.72 146L345.33 146 348.25 152 338 152Z\" fill=\"#183e50\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M345.33 146L351 146 355 152 348.25 152Z\" fill=\"#0f2839\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M305 152L313.5 152 315.48 166 308 166Z\" fill=\"#123343\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M313.5 152L324.5 152 325.16 166 315.48 166Z\" fill=\"#1b4959\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M324.5 152L338 152 337.04 166 325.16 166Z\" fill=\"#285e6c\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M338 152L348.25 152 346.06 166 337.04 166Z\" fill=\"#183e50\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M348.25 152L355 152 352 166 346.06 166Z\" fill=\"#0f2839\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M308 166L315.48 166 310.2 171 300 171Z\" fill=\"#123343\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M315.48 166L325.16 166 323.4 171 310.2 171Z\" fill=\"#1b4959\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M325.16 166L337.04 166 339.6 171 323.4 171Z\" fill=\"#285e6c\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M337.04 166L346.06 166 351.9 171 339.6 171Z\" fill=\"#183e50\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M346.06 166L352 166 360 171 351.9 171Z\" fill=\"#0f2839\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M300 171L310.2 171 310.86 178 301 178Z\" fill=\"#123343\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M310.2 171L323.4 171 323.62 178 310.86 178Z\" fill=\"#1b4959\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M323.4 171L339.6 171 339.28 178 323.62 178Z\" fill=\"#285e6c\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M339.6 171L351.9 171 351.17 178 339.28 178Z\" fill=\"#183e50\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M351.9 171L360 171 359 178 351.17 178Z\" fill=\"#0f2839\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M301 178L310.86 178 319.44 184 314 184Z\" fill=\"#123343\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M310.86 178L323.62 178 326.48 184 319.44 184Z\" fill=\"#1b4959\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M323.62 178L339.28 178 335.12 184 326.48 184Z\" fill=\"#285e6c\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M339.28 178L351.17 178 341.68 184 335.12 184Z\" fill=\"#183e50\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M351.17 178L359 178 346 184 341.68 184Z\" fill=\"#0f2839\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M314 184L319.44 184 320.1 189 315 189Z\" fill=\"#123343\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M319.44 184L326.48 184 326.7 189 320.1 189Z\" fill=\"#1b4959\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M326.48 184L335.12 184 334.8 189 326.7 189Z\" fill=\"#285e6c\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M335.12 184L341.68 184 340.95 189 334.8 189Z\" fill=\"#183e50\" stroke=\"#69a5b2\" stroke-width=\".72\"/><path d=\"M341.68 184L346 184 345 189 340.95 189Z\" fill=\"#0f2839\" stroke=\"#69a5b2\" stroke-width=\".72\"/><g stroke=\"#7dc3d3\" stroke-width=\"1\"><path d=\"M299 173a31 7 0 1 0 62 0v3a31 7 0 0 1 -62 0Z\" fill=\"#163849\"/><ellipse cx=\"330\" cy=\"173\" rx=\"31\" ry=\"7\" fill=\"#163849\"/></g></g><g data-hardware=\"1\"><g stroke=\"#a4e4ef\" stroke-width=\"1\"><path d=\"M271 192a59 12 0 1 0 118 0v3a59 12 0 0 1 -118 0Z\" fill=\"#1d4756\"/><ellipse cx=\"330\" cy=\"192\" rx=\"59\" ry=\"12\" fill=\"#1d4756\"/></g><ellipse cx=\"330\" cy=\"192\" rx=\"59\" ry=\"12\" fill=\"none\" stroke=\"#93edfa\" stroke-width=\"2.8\" filter=\"url(#toraGlow)\"/><ellipse cx=\"330\" cy=\"192\" rx=\"21\" ry=\"5\" fill=\"#285e6c\" stroke=\"#a7e6ef\"/></g><g data-hardware=\"0\"><path d=\"M330 31V54\" stroke=\"#96faff\" stroke-width=\"2\"/></g><g data-hardware=\"4\"><path d=\"M330 472v20\" stroke=\"#96faff\" stroke-width=\"2\"/></g></g><g class=\"tora-scan\" pointer-events=\"none\"><path d=\"M102 484H558\" stroke=\"#a1f6ff\" opacity=\".7\"/></g><g class=\"tora-marks\"><g class=\"tora-mark\" data-part=\"0\" role=\"button\" tabindex=\"0\" aria-label=\"Inspect Axial mast\" aria-pressed=\"false\"><title>Axial mast</title><path d=\"M329 95 L405 70 H428\" fill=\"none\"/><circle cx=\"329\" cy=\"95\" r=\"6.5\" fill=\"#09212c\"/><circle cx=\"329\" cy=\"95\" r=\"3.4\" fill=\"currentColor\"/><circle cx=\"329\" cy=\"95\" r=\"18\" fill=\"#ffffff\" fill-opacity=\"0\" stroke=\"none\" pointer-events=\"all\"/><text x=\"433\" y=\"74\" text-anchor=\"start\">01 / MAST</text></g><g class=\"tora-mark\" data-part=\"1\" role=\"button\" tabindex=\"0\" aria-label=\"Inspect Annular disc\" aria-pressed=\"false\"><title>Annular disc</title><path d=\"M372 190 L420 129 H443\" fill=\"none\"/><circle cx=\"372\" cy=\"190\" r=\"6.5\" fill=\"#09212c\"/><circle cx=\"372\" cy=\"190\" r=\"3.4\" fill=\"currentColor\"/><circle cx=\"372\" cy=\"190\" r=\"18\" fill=\"#ffffff\" fill-opacity=\"0\" stroke=\"none\" pointer-events=\"all\"/><text x=\"448\" y=\"133\" text-anchor=\"start\">02 / ANNULUS</text></g><g class=\"tora-mark\" data-part=\"2\" role=\"button\" tabindex=\"0\" aria-label=\"Inspect Reflector panels\" aria-pressed=\"false\"><title>Reflector panels</title><path d=\"M195 174 L111 159 H88\" fill=\"none\"/><circle cx=\"195\" cy=\"174\" r=\"6.5\" fill=\"#09212c\"/><circle cx=\"195\" cy=\"174\" r=\"3.4\" fill=\"currentColor\"/><circle cx=\"195\" cy=\"174\" r=\"18\" fill=\"#ffffff\" fill-opacity=\"0\" stroke=\"none\" pointer-events=\"all\"/><text x=\"83\" y=\"163\" text-anchor=\"end\">03 / PANELS</text></g><g class=\"tora-mark\" data-part=\"3\" role=\"button\" tabindex=\"0\" aria-label=\"Inspect Equatorial hub\" aria-pressed=\"false\"><title>Equatorial hub</title><path d=\"M295 258 L136 356 H113\" fill=\"none\"/><circle cx=\"295\" cy=\"258\" r=\"6.5\" fill=\"#09212c\"/><circle cx=\"295\" cy=\"258\" r=\"3.4\" fill=\"currentColor\"/><circle cx=\"295\" cy=\"258\" r=\"18\" fill=\"#ffffff\" fill-opacity=\"0\" stroke=\"none\" pointer-events=\"all\"/><text x=\"108\" y=\"360\" text-anchor=\"end\">04 / HUB</text></g><g class=\"tora-mark\" data-part=\"4\" role=\"button\" tabindex=\"0\" aria-label=\"Inspect Ventral spindle\" aria-pressed=\"false\"><title>Ventral spindle</title><path d=\"M342 377 L430 408 H453\" fill=\"none\"/><circle cx=\"342\" cy=\"377\" r=\"6.5\" fill=\"#09212c\"/><circle cx=\"342\" cy=\"377\" r=\"3.4\" fill=\"currentColor\"/><circle cx=\"342\" cy=\"377\" r=\"18\" fill=\"#ffffff\" fill-opacity=\"0\" stroke=\"none\" pointer-events=\"all\"/><text x=\"458\" y=\"412\" text-anchor=\"start\">05 / SPINDLE</text></g></g>\n <g fill=\"#88aab7\" font-family=\"monospace\" font-size=\"9\" letter-spacing=\"1.3\"><text x=\"22\" y=\"19\">FIG. 01 / ARRAY ELEVATION</text><text x=\"638\" y=\"19\" text-anchor=\"end\">CLASS PLATE · 134 CE</text><text x=\"22\" y=\"508\">EXTERNAL GEOMETRY</text><text x=\"638\" y=\"508\" text-anchor=\"end\">SCHEMATIC / NTS</text></g></svg>"
+        },
+        "parts": [
+          {
+            "title": "Axial mast",
+            "label": "MAST",
+            "x": 329,
+            "y": 95,
+            "lx": 420,
+            "ly": 70,
+            "note": "The upper tower narrows to a bright axial tip. Its internal equipment is unspecified in the class record."
+          },
+          {
+            "title": "Annular disc",
+            "label": "ANNULUS",
+            "x": 372,
+            "y": 190,
+            "lx": 435,
+            "ly": 129,
+            "note": "The disc encircles the narrow neck between the axial mast and the hub. Its wide rim is visible edge-on in the class illustration."
+          },
+          {
+            "title": "Reflector panels",
+            "label": "PANELS",
+            "x": 195,
+            "y": 174,
+            "lx": 96,
+            "ly": 159,
+            "note": "Three pairs of broad, segmented panels extend from the central structure. The array network screens Union systems from distant observation."
+          },
+          {
+            "title": "Equatorial hub",
+            "label": "HUB",
+            "x": 295,
+            "y": 258,
+            "lx": 121,
+            "ly": 356,
+            "note": "The panel trusses meet at the cyan-banded hub. The class carries approximately 2,500 crew. The deck plan is undisclosed."
+          },
+          {
+            "title": "Ventral spindle",
+            "label": "SPINDLE",
+            "x": 342,
+            "y": 377,
+            "lx": 445,
+            "ly": 408,
+            "note": "A stepped lower hull tapers to a second axial tip. The class power plant is classified and its position is unknown."
+          }
+        ],
+        "specs": [
+          [
+            "Height",
+            "4.35 km"
+          ],
+          [
+            "Width",
+            "1.2 km"
+          ],
+          [
+            "Crew per unit",
+            "≈2,500"
+          ],
+          [
+            "Power plant",
+            "Classified"
+          ]
+        ],
+        "footnote": [
+          "Shielding · RAMAGAUS Deflection Membrane and Wide-Scope Bubble Field. Component labels interpret the published exterior illustration. ",
+          {
+            "link": "Terranos Omnidirectional Reflector Array",
+            "label": "Class record ↗"
+          },
+          " · ",
+          {
+            "link": "File:TerranosTall.png",
+            "label": "Reference illustration ↗"
+          }
+        ]
+      }
+    ]
   },
   "constants": {},
   "documents": {},

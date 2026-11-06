@@ -7074,7 +7074,125 @@
     ],
     "cartography": {
       "geometry": "Reference-map positions; proposed contiguous chart regions."
-    }
+    },
+    "schematics": [
+      {
+        "key": "foundry",
+        "kicker": "MEGASTRUCTURE SCHEMATIC",
+        "deck": "Ancient Vy’Tiir stellar forge",
+        "screenClass": "foundry-screen",
+        "navLabel": "Foundry source articles",
+        "links": [
+          {
+            "link": "Dominion of Calidor",
+            "label": "Codex source ↗"
+          },
+          {
+            "link": "Foundry",
+            "label": "Go to Article",
+            "cls": "tora-article"
+          }
+        ],
+        "drawing": {
+          "svg": "<svg class=\"tora-plate foundry-plate\" viewBox=\"0 0 660 620\" xmlns=\"http://www.w3.org/2000/svg\" role=\"group\" aria-label=\"Interactive Foundry schematic: crown spire, annular chamber, swept vanes, rings and pylons, central forge spine and stellar interface\"><defs><pattern id=\"foundryGrid\" width=\"22\" height=\"22\" patternUnits=\"userSpaceOnUse\"><path d=\"M22 0H0V22\" fill=\"none\" stroke=\"#325566\" stroke-width=\".5\"/></pattern><linearGradient id=\"foundryMetal\"><stop stop-color=\"#17303f\"/><stop offset=\".45\" stop-color=\"#486778\"/><stop offset=\".55\" stop-color=\"#abc4ce\"/><stop offset=\".68\" stop-color=\"#294b5e\"/><stop offset=\"1\" stop-color=\"#142c3b\"/></linearGradient><linearGradient id=\"foundrySun\" x2=\"0\" y2=\"1\"><stop stop-color=\"#9b6c35\" stop-opacity=\".4\"/><stop offset=\"1\" stop-color=\"#131b23\" stop-opacity=\".1\"/></linearGradient><filter id=\"foundryGlow\"><feGaussianBlur stdDeviation=\"2\"/><feMerge><feMergeNode/><feMergeNode in=\"SourceGraphic\"/></feMerge></filter><filter id=\"foundryAmber\" x=\"-30%\" y=\"-30%\" width=\"160%\" height=\"160%\"><feColorMatrix type=\"matrix\" values=\"0 1.35 0 0 .06 0 .82 0 0 .01 0 .30 0 0 0 0 0 0 1 0\"/></filter></defs><rect width=\"660\" height=\"620\" fill=\"#091722\"/><rect width=\"660\" height=\"620\" fill=\"url(#foundryGrid)\" opacity=\".45\"/><g fill=\"none\" stroke=\"#43606d\" stroke-width=\".65\" opacity=\".6\"><path d=\"M330 15V610M30 332H630\" stroke-dasharray=\"3 7\"/><path d=\"M42 26H34V594H42M618 26H626V594H618\"/></g><text x=\"55\" y=\"43\" fill=\"#7a9ca9\" font-family=\"monospace\" font-size=\"9\" letter-spacing=\"2\">EXTERIOR ELEVATION</text><text x=\"605\" y=\"43\" text-anchor=\"end\" fill=\"#7a9ca9\" font-family=\"monospace\" font-size=\"9\">NOT TO SCALE</text><g class=\"tora-build\"><g data-hardware=\"0\"><path d=\"M330 26L326 88L306 132L315 156H345L354 132L334 88Z\" fill=\"url(#foundryMetal)\" stroke=\"#c2e8ed\"/><path d=\"M330 68V113M319 124L330 105L341 124L337 143H323Z\" fill=\"#102c3b\" stroke=\"#80dcf1\"/><path d=\"M330 117V138\" stroke=\"#b0f1ff\" stroke-width=\"3\" filter=\"url(#foundryGlow)\"/></g><g data-hardware=\"2\"><path d=\"M218 123 C214 187 205 227 218 272 C233 319 284 393 323 447 C296 365 256 305 244 262 C230 221 222 162 218 123Z\" fill=\"url(#foundryMetal)\" stroke=\"#a7dce6\" stroke-width=\"1.5\"/><path d=\"M219 159Q215 237 239 280L314 422M226 235L248 286L304 384\" fill=\"none\" stroke=\"#74d6ea\"/><path d=\"M218 272Q259 334 323 447L277 351Z\" fill=\"#243c4b\" stroke=\"#bb9d69\"/><g transform=\"translate(660 0) scale(-1 1)\"><path d=\"M218 123 C214 187 205 227 218 272 C233 319 284 393 323 447 C296 365 256 305 244 262 C230 221 222 162 218 123Z\" fill=\"url(#foundryMetal)\" stroke=\"#a7dce6\" stroke-width=\"1.5\"/><path d=\"M219 159Q215 237 239 280L314 422M226 235L248 286L304 384\" fill=\"none\" stroke=\"#74d6ea\"/><path d=\"M218 272Q259 334 323 447L277 351Z\" fill=\"#243c4b\" stroke=\"#bb9d69\"/></g></g><g data-hardware=\"4\"><path d=\"M305 144L295 206L306 274L300 344L316 415L330 464L344 415L360 344L354 274L365 206L355 144L345 214L341 303L330 329L319 303L315 214Z\" fill=\"url(#foundryMetal)\" stroke=\"#afced6\" stroke-width=\"1.3\"/><path d=\"M330 192V455M318 217L323 299L310 345L330 437L350 345L337 299L342 217\" fill=\"none\" stroke=\"#78d7ed\"/><path d=\"M330 282L316 321L330 350L344 321Z\" fill=\"#0e2434\" stroke=\"#e0c18c\" stroke-width=\"2\"/><ellipse cx=\"330\" cy=\"321\" rx=\"6\" ry=\"12\" fill=\"#7ddaf5\" filter=\"url(#foundryGlow)\"/><path d=\"M314 350L320 404L330 446L340 404L346 350\" fill=\"none\" stroke=\"#e4c28b\"/><path d=\"M326 367L330 386L334 367M324 393L330 413L336 393\" fill=\"none\" stroke=\"#c2eaf3\"/></g><g data-hardware=\"1\"><circle cx=\"330\" cy=\"170\" r=\"33\" fill=\"#091a28\" stroke=\"#a5dce7\" stroke-width=\"5\"/><circle cx=\"330\" cy=\"170\" r=\"26\" fill=\"none\" stroke=\"#486f84\" stroke-dasharray=\"22 4\"/><path d=\"M330 137V203M297 170H363\" stroke=\"#85c1d6\" opacity=\".7\"/><circle cx=\"330\" cy=\"170\" r=\"11\" fill=\"#245d79\" stroke=\"#adf0ff\"/><circle cx=\"330\" cy=\"170\" r=\"6\" fill=\"#b9f7ff\" filter=\"url(#foundryGlow)\"/></g><g data-hardware=\"3\"><ellipse cx=\"330\" cy=\"332\" rx=\"153\" ry=\"16\" fill=\"none\" stroke=\"#bd9a61\" stroke-width=\"1.5\"/><ellipse cx=\"330\" cy=\"332\" rx=\"146\" ry=\"12\" fill=\"none\" stroke=\"#7fb9cb\" stroke-dasharray=\"44 6\"/><ellipse cx=\"330\" cy=\"304\" rx=\"73\" ry=\"12\" fill=\"none\" stroke=\"#ddbd85\" transform=\"rotate(-8 330 304)\"/><path d=\"M236 284L231 325L236 374L241 325Z\" fill=\"#21404f\" stroke=\"#b0dce3\"/><circle cx=\"236\" cy=\"329\" r=\"2.4\" fill=\"#a5efff\" filter=\"url(#foundryGlow)\"/><path d=\"M424 284L419 325L424 374L429 325Z\" fill=\"#21404f\" stroke=\"#b0dce3\"/><circle cx=\"424\" cy=\"329\" r=\"2.4\" fill=\"#a5efff\" filter=\"url(#foundryGlow)\"/><path d=\"M269 318.5L264 343L269 375.5L274 343Z\" fill=\"#21404f\" stroke=\"#b0dce3\"/><circle cx=\"269\" cy=\"347\" r=\"2.4\" fill=\"#a5efff\" filter=\"url(#foundryGlow)\"/><path d=\"M391 318.5L386 343L391 375.5L396 343Z\" fill=\"#21404f\" stroke=\"#b0dce3\"/><circle cx=\"391\" cy=\"347\" r=\"2.4\" fill=\"#a5efff\" filter=\"url(#foundryGlow)\"/></g><g data-hardware=\"5\"><path d=\"M323 441C300 471 342 499 309 551M337 441C358 479 315 506 352 553M330 451C323 489 344 516 330 552M318 460Q290 516 285 559M343 465Q366 516 377 561\" fill=\"none\" stroke=\"#e9b570\" stroke-width=\"1.3\"/><path d=\"M325 464Q310 509 322 548M336 468Q348 507 340 550\" fill=\"none\" stroke=\"#8ad7e8\" stroke-dasharray=\"7 5\"/><ellipse cx=\"330\" cy=\"451\" rx=\"18\" ry=\"5\" fill=\"none\" stroke=\"#b6e8ef\"/><path d=\"M104 606Q330 493 556 606\" fill=\"url(#foundrySun)\" stroke=\"#d5aa67\" stroke-width=\"2\"/><path d=\"M155 600Q171 560 202 575M290 556Q310 527 333 551M397 563Q429 539 442 577\" fill=\"none\" stroke=\"#c39757\"/><text x=\"330\" y=\"591\" text-anchor=\"middle\" fill=\"#e7c488\" font-size=\"9\" font-family=\"monospace\" letter-spacing=\"2\">CALIDOR A / STELLAR LIMB</text></g></g><g class=\"tora-scan\" pointer-events=\"none\"><path d=\"M102 484H558\" stroke=\"#a1f6ff\" opacity=\".7\"/></g><g class=\"tora-marks\"><g class=\"tora-mark\" data-part=\"0\" role=\"button\" tabindex=\"0\" aria-label=\"Inspect Crown spire\" aria-pressed=\"false\"><title>Crown spire</title><path d=\"M330 96L418 84H436\" fill=\"none\"/><circle cx=\"330\" cy=\"96\" r=\"3\" fill=\"currentColor\"/><circle cx=\"330\" cy=\"96\" r=\"16\" fill=\"transparent\" stroke=\"none\"/><text x=\"440\" y=\"88\" text-anchor=\"start\">01 / CROWN SPIRE</text></g><g class=\"tora-mark\" data-part=\"1\" role=\"button\" tabindex=\"0\" aria-label=\"Inspect Annular chamber\" aria-pressed=\"false\"><title>Annular chamber</title><path d=\"M330 170L207 150H189\" fill=\"none\"/><circle cx=\"330\" cy=\"170\" r=\"3\" fill=\"currentColor\"/><circle cx=\"330\" cy=\"170\" r=\"16\" fill=\"transparent\" stroke=\"none\"/><text x=\"185\" y=\"154\" text-anchor=\"end\">02 / ANNULAR CHAMBER</text></g><g class=\"tora-mark\" data-part=\"2\" role=\"button\" tabindex=\"0\" aria-label=\"Inspect Swept outer vanes\" aria-pressed=\"false\"><title>Swept outer vanes</title><path d=\"M238 250L142 250H124\" fill=\"none\"/><circle cx=\"238\" cy=\"250\" r=\"3\" fill=\"currentColor\"/><circle cx=\"238\" cy=\"250\" r=\"16\" fill=\"transparent\" stroke=\"none\"/><text x=\"120\" y=\"254\" text-anchor=\"end\">03 / OUTER VANES</text></g><g class=\"tora-mark\" data-part=\"3\" role=\"button\" tabindex=\"0\" aria-label=\"Inspect Equatorial rings &amp; pylons\" aria-pressed=\"false\"><title>Equatorial rings &amp; pylons</title><path d=\"M439 332L463 305H481\" fill=\"none\"/><circle cx=\"439\" cy=\"332\" r=\"3\" fill=\"currentColor\"/><circle cx=\"439\" cy=\"332\" r=\"16\" fill=\"transparent\" stroke=\"none\"/><text x=\"485\" y=\"309\" text-anchor=\"start\">04 / RINGS / PYLONS</text></g><g class=\"tora-mark\" data-part=\"4\" role=\"button\" tabindex=\"0\" aria-label=\"Inspect Central forge spine\" aria-pressed=\"false\"><title>Central forge spine</title><path d=\"M330 387L458 418H476\" fill=\"none\"/><circle cx=\"330\" cy=\"387\" r=\"3\" fill=\"currentColor\"/><circle cx=\"330\" cy=\"387\" r=\"16\" fill=\"transparent\" stroke=\"none\"/><text x=\"480\" y=\"422\" text-anchor=\"start\">05 / FORGE SPINE</text></g><g class=\"tora-mark\" data-part=\"5\" role=\"button\" tabindex=\"0\" aria-label=\"Inspect Stellar interface\" aria-pressed=\"false\"><title>Stellar interface</title><path d=\"M331 491L192 500H174\" fill=\"none\"/><circle cx=\"331\" cy=\"491\" r=\"3\" fill=\"currentColor\"/><circle cx=\"331\" cy=\"491\" r=\"16\" fill=\"transparent\" stroke=\"none\"/><text x=\"170\" y=\"504\" text-anchor=\"end\">06 / STELLAR INTERFACE</text></g></g></svg>"
+        },
+        "parts": [
+          {
+            "title": "Crown spire",
+            "label": "CROWN SPIRE",
+            "x": 330,
+            "y": 96,
+            "lx": 430,
+            "ly": 84,
+            "note": "The upper needle and its inset luminous chamber follow the supplied Foundry illustration. This is a descriptive exterior label; the chamber’s function is not established in the Codex."
+          },
+          {
+            "title": "Annular chamber",
+            "label": "ANNULAR CHAMBER",
+            "x": 330,
+            "y": 170,
+            "lx": 195,
+            "ly": 150,
+            "note": "A luminous core is suspended within the open circular chamber near the summit. The diagram preserves this distinctive feature without assigning an undocumented reactor type."
+          },
+          {
+            "title": "Swept outer vanes",
+            "label": "OUTER VANES",
+            "x": 238,
+            "y": 250,
+            "lx": 130,
+            "ly": 250,
+            "note": "Two long, inward-curving vanes rise on either side of the central structure. Their outline follows the reference image; their engineering purpose remains unknown."
+          },
+          {
+            "title": "Equatorial rings & pylons",
+            "label": "RINGS / PYLONS",
+            "x": 439,
+            "y": 332,
+            "lx": 475,
+            "ly": 305,
+            "note": "Thin horizontal rings surround the lower structure, accompanied by narrow detached pylons. These are exterior features visible in the illustration, not a verified docking or defensive system."
+          },
+          {
+            "title": "Central forge spine",
+            "label": "FORGE SPINE",
+            "x": 330,
+            "y": 387,
+            "lx": 470,
+            "ly": 418,
+            "note": "The ancient Vy’Tiir megastructure supplies the Calidor system with extraordinary energy. The national article also describes a military-production role whose use would cripple the civilian economy. The exact internal mechanisms are not documented."
+          },
+          {
+            "title": "Stellar interface",
+            "label": "STELLAR INTERFACE",
+            "x": 331,
+            "y": 491,
+            "lx": 180,
+            "ly": 500,
+            "note": "The illustration shows bright streams linking the lower tip to the stellar surface. The Codex locates the Foundry in orbit around Calidor’s sun. The flow paths shown here are visual interpretations, not measured field geometry."
+          }
+        ],
+        "specs": [
+          [
+            "Builders",
+            "Vy’Tiir"
+          ],
+          [
+            "Location",
+            "Calidor stellar orbit"
+          ],
+          [
+            "Role",
+            "Energy / stellar forge"
+          ],
+          [
+            "Dimensions",
+            "Not documented"
+          ]
+        ],
+        "lore": [
+          "An ancient structure discovered by Calidor’s settlers, the Foundry sustains the capital system’s prosperity. The ",
+          {
+            "link": "Dominion of Calidor",
+            "label": "national record"
+          },
+          " describes its output as near-limitless while also emphasizing finite capacity: diverting it to military production would cripple the civilian economy."
+        ],
+        "footnote": [
+          "Exterior geometry follows the supplied illustration. Component names are descriptive interpretations, not a documented internal plan. A dedicated ",
+          {
+            "link": "Foundry",
+            "label": "Foundry article"
+          },
+          " was not available when this schematic was prepared."
+        ],
+        "highlight": "url(#foundryAmber)",
+        "openLabel": "Open Foundry schematic ↗",
+        "openOnChoose": true,
+        "glyph": "foundryGlyph",
+        "corner": "foundryCorner"
+      }
+    ]
   },
   "constants": {},
   "documents": {},
