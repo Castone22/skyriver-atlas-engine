@@ -1,11 +1,11 @@
 function routeURL(){
  const flags=__ATLAS__.flags,address=new URL(location.href);
  if(flags.widgetKeepsAddress&&widgetMode&&!systemFocused)return address;
- ['region','system','planet','object','focus',...(flags.regionHighlight?['highlight']:['chart']),...(flags.stationRoute==='station'?['station']:[])].forEach(key=>address.searchParams.delete(key));
+ ['region','system','planet','object','focus',...(flags.highlightRouteParam?['highlight']:['chart']),...(flags.stationRoute==='station'?['station']:[])].forEach(key=>address.searchParams.delete(key));
  const record=resolveSystem(selected);
- if(flags.regionHighlight&&highlightedRegion)address.searchParams.set('highlight',highlightedRegion);
+ if(flags.highlightRouteParam&&highlightedRegion)address.searchParams.set('highlight',highlightedRegion);
  if(!record?.unplottedSystem)address.searchParams.set('region',view);
- if(!flags.regionHighlight&&overviewMode&&(view!=='all'||record))address.searchParams.set('chart',flags.overviewChart);
+ if(!flags.highlightRouteParam&&overviewMode&&(view!=='all'||record))address.searchParams.set('chart',flags.overviewChart);
  if(record){address.searchParams.set('system',record.slug||record.id);address.searchParams.set('object',selectedWorld||'');if(!systemFocused)address.searchParams.set('focus','region');}
  if(flags.stationRoute==='focus'&&stationOverview&&systemFocused)address.searchParams.set('focus','station');
  if(systemFocused&&planetFocus)address.searchParams.set('planet',planetFocus);

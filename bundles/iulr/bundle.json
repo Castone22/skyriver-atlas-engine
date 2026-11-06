@@ -36,16 +36,23 @@
     "overviewSubtitle": ""
   },
   "flags": {
+    "addressRegionWins": true,
     "architectureFacts": true,
     "bodyRenderOpacity": true,
     "bordersToggleClass": true,
     "closeSidebarOnSelect": true,
     "emptyDossierFactsFallBack": true,
     "fallbackRegion": "avendonraik",
+    "focusRegionIgnoresRegion": true,
     "goldenAngleMoonPhase": true,
+    "hashIgnoredWithRegion": true,
+    "highlightRouteParam": true,
+    "highlightedRegionState": true,
     "linkTitleSync": "worlds",
     "minimapRegionPaths": true,
     "minimapViewBox": "0 0 2850 2570",
+    "noLocalChartFallback": true,
+    "noOverviewRoute": true,
     "planetArticleTitles": true,
     "regionHighlight": true,
     "searchSystemFields": [
@@ -54,6 +61,7 @@
       "description"
     ],
     "selectFirstWorld": true,
+    "selectKeepsRegion": true,
     "stationLinksUseArticleTitle": true,
     "stationRoute": "focus",
     "systemRecordArticleTitle": true,
