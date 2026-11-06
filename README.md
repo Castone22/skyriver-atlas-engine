@@ -1,24 +1,66 @@
 # Skyriver Atlas Framework
 
-A working JavaScript DSL, JSON catalogue format, shared renderer source, and build pipeline extracted from the latest retrieved Kadaym, Elysian, UACS, IULR, Calidor, Grand, and Mahanzk atlases.
+A JavaScript DSL, JSON catalogue format, shared page engine and build pipeline for the Skyriver
+atlases (Kadaym, Elysian, UACS, IULR, Calidor, Grand and Mahanzk). Each atlas is a small **bundle**
+of data and page parts; the shared **engine** supplies the code. A build produces self-contained HTML
+in `dist/`, and the same bundles can be assembled in the browser by a loader (for the AtlasEmbed wiki
+extension).
 
-See docs/HANDOFF.md for the current state and how to run the checks.
-
-Map authors edit `bundles/` (and `maps/`). Renderer developers edit `engine/`. Builds produce portable, self-contained HTML in `dist/` for the existing Codex embedding workflow. Generated HTML contains the final bundle by design; it is no longer the source of truth.
+New here? Read `docs/HANDOFF.md` first, then `AGENTS.md` for the rules for changing things.
 
 ## Run it
 
-Requires Node.js 22 or newer. Building and the core tests use only Node's standard library. The DOM tests, browser tests, migration tools and formatter need `npm install`; `npm run test:all` runs the core and DOM suites, and `npm run format:check` verifies formatting.
+Node.js 22 or newer. Building needs nothing installed; tests and tools need `npm install`.
 
 ```sh
-node tools/build.mjs
-node --test tests/*.test.mjs
-node tools/serve.mjs
+npm install
+npm run build          # writes dist/*.html; open dist/index.html or run `npm run serve`
+npm run check          # build + unit tests + DOM tests + quick golden tours (about 4 minutes)
+npm run check:full     # the same with the full golden tours (about 10 minutes, memory hungry)
 ```
 
-Open `http://127.0.0.1:8080/`. Alternatively, open an individual file in `dist/` directly. Online article refreshes still depend on Codex availability and browser cross-origin rules.
+`dist/` is already built, so you can open the atlases without running anything. Live article refreshes
+depend on the Codex wiki being reachable and on browser cross-origin rules.
 
-The package includes rebuilt HTML, so you can inspect the atlases before running a build. Existing published atlases have not been overwritten or deployed.
+## Layout
+
+| Location            | Responsibility                                                                                                                                     |
+| ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `bundles/<id>/`     | One atlas: `bundle.json` (manifest, flags, slots), `atlas.json` (catalogue, geometry), shell, CSS, runtime                                         |
+| `engine/`           | The engine bundle: `bundle.json`, shared page functions (`functions/`), the flag registry (`flags.json`)                                           |
+| `src/`              | The DSL (`atlas.mjs`), the pure compiler (`compile-core.mjs`), its Node host (`compiler.mjs`), the bundle model, the template engine and the store |
+| `maps/*.atlas.mjs`  | Authoring entry points that build a bundle's definition                                                                                            |
+| `assets/`           | Deduplicated images, addressed by SHA-256                                                                                                          |
+| `loader/`, `tools/` | The browser loader and the build, check and refactoring tools                                                                                      |
+| `tests/`            | Unit and DOM tests, and `golden/`: a hash of the rendered page for every step of a tour of each atlas                                              |
+| `dist/`             | Generated HTML; rebuild after source edits                                                                                                         |
+| `docs/`             | Design and procedure docs; `docs/history/` holds the original extraction records                                                                   |
+
+The compiler links shared function files into each atlas's page at build time. It does not use browser
+`eval` or fetch source code. Nothing in `src/compile-core.mjs` touches Node APIs, so the same compiler
+runs in a browser.
+
+## How an atlas differs from another
+
+Atlases share one set of functions. Behaviour that only some atlases want is **configuration**, not
+copied code:
+
+- **Flags** (`engine/flags.json` lists them all; `bundle.json` `flags` turns them on per atlas) switch
+  capabilities such as region highlighting or station schematics. Every flag is off unless an atlas
+  turns it on, so an atlas only gets what it had before.
+- **Policies** in `atlas.json` hold numbers (label thresholds, zoom, legend colours).
+- **Slots** in `bundle.json` hold per-atlas wording and file names, used as `{{name|filter}}` in shells and
+  functions.
+- **Data** holds content: aliases, kickers, descriptions. Code never names a particular system.
+- **Hooks**: a small function an atlas defines under an agreed name (for example how it resolves a planet's
+  display title), which the shared functions call.
+
+`docs/CONVERGING.md` is the procedure for merging function variants this way, and `docs/converge/` has
+the notes for each function and the maintainers' decisions.
+
+Several engines can be stored side by side (for example a stellar engine and a surface-map engine). An
+engine has an `id`, a `version` and the `kinds` of atlas it renders; an atlas declares its `kind` and an
+`engine` version range, and the compiler refuses an incompatible pair. See `docs/BUNDLES.md`.
 
 ## Define an atlas
 
@@ -44,31 +86,16 @@ export default Atlas.stellar({
   .build();
 ```
 
-These are demonstration names, not additions to Skyriver canon. Save this module as `maps/my-atlas.atlas.mjs`, then run:
+These are demonstration names, not additions to Skyriver canon. `renderer` names the bundle whose shell,
+styles, runtime and defaults the atlas uses. Save the module as `maps/my-atlas.atlas.mjs`, then run:
 
 ```sh
 node tools/build.mjs maps/my-atlas.atlas.mjs dist
 ```
 
-Callbacks run only while authoring. The result is plain JSON: no renderer functions, closures, DOM nodes, or executable strings are stored. Missing region geometry receives a simple beveled outline around its systems; supply an explicit `outline` for designed, contiguous borders.
-
-## What is separated
-
-| Location                   | Responsibility                                                                                             |
-| -------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `src/atlas.mjs`            | Fluent DSL, JSON validation, relationships, article URLs                                                   |
-| `src/compiler.mjs`         | Renderer linking, asset embedding, portable HTML output                                                    |
-| `src/store.mjs`            | JSON persistence with revisions and atomic replacement                                                     |
-| `maps/*.atlas.mjs`         | Authoring entry points                                                                                     |
-| `bundles/<id>/`            | One atlas bundle: `bundle.json`, `atlas.json` (catalogue, geometry, notes), shell, CSS and runtime scripts |
-| `assets/`                  | Deduplicated images, addressed by SHA-256                                                                  |
-| `engine/functions/`        | Shared source functions and explicitly retained behavioral variants                                        |
-| `engine/bundle.json`       | Engine bundle manifest (version, supported kinds)                                                          |
-| `engine/capabilities.json` | Preserved capabilities and supported feature settings                                                      |
-| `dist/`                    | Generated HTML; rebuild after source edits                                                                 |
-| `docs/`                    | Design docs. `docs/history/` holds the original extraction records                                         |
-
-The renderer linker resolves shared function references at build time. It does not use browser `eval`, fetch source code, or require a server-side renderer. This preserves the lexical dependencies of the original renderers while making a shared-function fix propagate to every profile that uses it.
+Callbacks run only while authoring. The result is plain JSON: no renderer functions, closures, DOM
+nodes or executable strings are stored. Missing region geometry receives a simple beveled outline
+around its systems; supply an explicit `outline` for designed, contiguous borders.
 
 ## Store and reload
 
@@ -86,27 +113,16 @@ const edited = Atlas.fromJSON(loaded.definition)
 await store.save(edited, { expectedRevision: saved.revision });
 ```
 
-The storage directory is your choice. Omit `expectedRevision` only when deliberately allowing replacement of the latest local revision. A concurrent writer causes an error; failed writes do not replace the previous JSON. A process crash can leave a `.lock` file; confirm no writer is active before removing that lock.
+The storage directory is your choice. Omit `expectedRevision` only when deliberately allowing
+replacement of the latest local revision. A concurrent writer causes an error; failed writes do not
+replace the previous JSON. A process crash can leave a `.lock` file; confirm no writer is active before
+removing it.
 
-`JSON.stringify(definition)` and `Atlas.fromJSON(json)` also work without the file store. In a built stellar atlas, `window.AtlasFramework.exportJSON()` exports an authored catalogue snapshot, and `navigate({system:'virezk', planet:'Mahanzk'})` uses the existing navigation behavior.
+`JSON.stringify(definition)` and `Atlas.fromJSON(json)` also work without the file store. In a built
+stellar atlas, `window.AtlasFramework.exportJSON()` exports an authored catalogue snapshot, and
+`navigate({system:'virezk', planet:'Mahanzk'})` uses the existing navigation behaviour.
 
-## Features and renderer profiles
-
-The specialized renderers remain explicit because they differ in behavior, not merely branding. They share matching implementations; a variant is retained when changing it could alter an existing atlas.
-
-| Profile   | Distinctive retained behavior                                                                             |
-| --------- | --------------------------------------------------------------------------------------------------------- |
-| `kadaym`  | Federation overview, native label thresholds, classified holdings and Silent entities                     |
-| `elysian` | Live planet article titles, Circa’s Triad and TORA schematics                                             |
-| `uacs`    | Live planet article titles and Solar System analogue glyphs                                               |
-| `iulr`    | Live planet article titles, cloak effects, TORA arrays, register data and independent region highlighting |
-| `calidor` | Foundry and TORA schematics                                                                               |
-| `grand`   | Galaxy discovery/search, current child snapshots, Drayson/Kevak priority                                  |
-| `mahanzk` | Globe/cloud descent, surface geography, terrain and place selection                                       |
-
-This is a shared-source framework with compatibility profiles, not a claim that every specialized feature is already interchangeable between all profiles. Page-ID-backed planet title updates are retained in Elysian, UACS and IULR v9. The other profiles preserve their actual source behavior. Read `docs/ARCHITECTURE.md` before changing a variant's contract.
-
-Configurable stellar features:
+## Stellar features
 
 ```js
 .feature('index', { collapsed: true })
@@ -117,40 +133,55 @@ Configurable stellar features:
 })
 ```
 
-Each pair is `[system-name percent, planet-sublabel percent]`. Smaller viewports scale thresholds to available space. Kadaym retains its native threshold implementation and rejects a custom `labels` feature instead of silently ignoring it. Unknown feature switches also fail. Moons, stations, exotics and Silent status are driven by records rather than boolean switches.
+Each pair is `[system-name percent, planet-sublabel percent]`. Smaller viewports scale thresholds to
+available space. Kadaym keeps its native thresholds and rejects a custom `labels` feature instead of
+silently ignoring it (a bundle `capabilities` entry). Unknown feature switches also fail. Moons,
+stations, exotics and Silent status are driven by records, not switches.
 
 ## Assets and other map types
 
-Import a local image with `node tools/asset.mjs image.png`. It prints an `atlas-asset:…` reference for `.asset('flag', reference)` or `.texture(reference)`. Builds embed the bytes. Data URLs and external URLs also remain supported; use the asset importer when offline portability matters.
+Import a local image with `node tools/asset.mjs image.png`. It prints an `atlas-asset:…` reference for
+`.asset('flag', reference)` or `.texture(reference)`. Builds embed the bytes; the browser loader serves
+them by URL instead. Data URLs and external URLs also work.
 
-`Atlas.geographic()` supports `.place(id, props)`, `.texture(uri)`, and `.terrain({boundaries, palette, contours, labelOffsets})`. The Mahanzk renderer uses a 2048 × 1078 cartographic coordinate system. Its default terrain and globe texture are inherited unless replaced. Geographic places have a stable `key` and a renderer ordinal `id`; an explicit `articleTitle` controls their Codex link.
+`Atlas.geographic()` supports `.place(id, props)`, `.texture(uri)` and
+`.terrain({boundaries, palette, contours, labelOffsets})`. The Mahanzk renderer uses a 2048 × 1078
+cartographic coordinate system; its default terrain and globe texture are inherited unless replaced.
+Geographic places have a stable `key` and a renderer ordinal `id`; an explicit `articleTitle` controls
+their Codex link.
 
-`Atlas.galaxy()` supports `.empire(id, {name, article, position, color, map})`, `.background(uri)`, and `.zone(props)`. `map` names a stellar catalogue under `data/`, or the caller may pass compiled dependencies to `compile()`. Grand Atlas builds generate child snapshots and search indexes from the current stellar catalogues. Its original affiliation baseline remains separate so a later affiliation transfer can still override the default Drayson/Kevak rule.
+`Atlas.galaxy()` supports `.empire(id, {name, article, position, color, map})`, `.background(uri)` and
+`.zone(props)`. `map` names a stellar bundle under `bundles/`, or the caller may pass compiled
+dependencies to `compile()`. Grand Atlas builds generate child snapshots and search indexes from the
+current stellar catalogues. Its original affiliation baseline stays separate so a later affiliation
+transfer can still override the default Drayson/Kevak rule.
 
-All location names retain matching or intended Skyriver Codex article destinations, including pages that do not yet exist. Existing reference-page/section links remain intact.
+All location names keep matching or intended Skyriver Codex article destinations, including pages that
+do not exist yet.
+
+## The wiki side
+
+`loader/` and `tools/build-loader.mjs` produce one HTML document that fetches an engine and an atlas
+bundle over HTTP and builds the atlas in the browser, inside the existing AtlasEmbed sandbox. Its
+contract is `docs/TRANSPORTS.md`; what the MediaWiki extension must provide is
+`docs/EXTENSION-BRIEF.md`.
 
 ## Verification and limits
 
-Core tests cover DSL relationships, JSON round trips, validation, revision conflicts, catalogue counts, script escaping and generated builds. DOM tests cover navigation in all five migrated stellar atlases plus a newly authored DSL atlas, Triad/Foundry/TORA schematics, article page-ID moves, geographic place selection, and Grand Atlas search, regenerated snapshots and priority rules.
+`npm run check` builds everything and runs the unit tests (DSL, bundles, flags, templates, transport,
+purity of the compiler core, widget mode), the DOM tests for all stellar atlases plus an authored DSL
+atlas, and the golden tours. A tour drives every region, system, planet, satellite and station through
+`AtlasFramework.navigate`, opens station screens, and uses the page's own controls (search, scope,
+filters, zoom, panels, keys); the recorded hash of the rendered page after each step is the contract
+for behaviour. `npm run golden:update` rewrites those hashes, which should only follow a change you
+intend and have read the diff of.
 
-Run optional integration tests after installing development dependencies:
+What this does not cover: CSS and visual layout (the tours compare structure and text under mocked
+geometry), saved history state and hash routes, and live Codex API refresh. Check those by hand, or with
+`npm run test:browser` after `npx playwright install chromium`. Four unresolved Kadaym references
+exist in the source catalogue; they are reported in `dist/build-report.json` and described in
+`docs/history/MIGRATION.md`, and are preserved rather than invented. New DSL maps use strict validation
+by default.
 
-```sh
-npm install
-npm run test:dom
-npm run test:iulr-dom
-npx playwright install chromium
-npm run test:browser
-```
-
-DOM tests passed with mocked canvas and SVG geometry. They are not visual rendering tests. Chromium could not launch in the execution environment, and its separate browser could not reach the local preview. Visual browser verification and live Codex API refresh testing remain outstanding. The live Codex page was unavailable during this run; the retrieved atlas files are the implementation source of truth.
-
-Four unresolved Kadaym references already exist in the source catalogue. They are reported in `dist/build-report.json` and documented in `docs/MIGRATION.md`; migration preserves them rather than inventing replacements. New DSL maps use strict validation by default.
-
-## IULR v9 integration update
-
-The IULR renderer now includes the standalone v9 planet-name synchronization. It keeps original planet names until an article is discovered, then displays its canonical title. Cached page IDs follow later moves without redirects. Returning to the tab, reconnecting, the Refresh data button and visible-tab polling refresh titles. Offline use keeps cached titles or original names. Catalogue keys and navigation remain stable.
-
-Both `dist/iulr-atlas.html` and Grand Atlas's embedded IULR snapshot were rebuilt. The other six atlas definitions and the five unrelated built atlases are unchanged. No live deployment or wiki edit was made.
-
-The update passed the core and synchronization tests, the full-atlas DOM scenarios and the focused IULR DOM scenarios (`npm run check` now runs these plus the golden tours; see `docs/HANDOFF.md`). Grand's IULR snapshot is byte-identical to the rebuilt IULR HTML. See `docs/IULR-V9-UPDATE.md` for test scope and limitations. Visual browser and live Codex API/CORS verification remain unverified.
+The history of the original extraction, including the IULR v9 title-synchronisation update, is in
+`docs/history/`.
