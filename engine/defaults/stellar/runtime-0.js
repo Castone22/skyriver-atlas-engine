@@ -4,7 +4,8 @@ const $=id=>document.getElementById(id),NS='http://www.w3.org/2000/svg';
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const canonicalTitle=name=>{const n=normalizedName(name);const record=[...allRecords,...Object.entries(DATA.worlds).map(([name,r])=>({name,...r})),...(DATA.stations||[]),...(DATA.satellites||[]),...(DATA.entities||[])].find(r=>[r.name,...(r.aliases||[])].some(v=>normalizedName(v)===n));return record?.articleTitle||record?.name||name};
 const titles={};
-const worldColors={};
+// Display colours for named worlds that have no tint of their own.
+const worldColors={'Mahanzk':'#90bcd2','Zelenzk':'#c4a5d9','Helkana':'#91c4a1','Vardis Prime':'#c9a08b','Rakazk':'#c78e74','Zekozha':'#9bcdda','Qerzhek':'#b7c9e2','Prathia':'#9ec2a7'};
 const referenceTargets=new Map([...(DATA.stations||[]),...(DATA.satellites||[])].filter(r=>r.referencePage).map(r=>[r.name,r]));
 /* @atlas-function url */
 const link=(name,label=name,cls='')=>`<a class="${cls}" href="${url(name)}" target="_blank" rel="noopener">${esc(label)}</a>`;
