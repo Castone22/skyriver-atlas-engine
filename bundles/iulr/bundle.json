@@ -33,7 +33,14 @@
     "localMoonNoun": "moon",
     "overviewOptionLabel": "",
     "overviewTitle": "",
-    "overviewSubtitle": ""
+    "overviewSubtitle": "",
+    "starNotePair": "The registered planets orbit the inner AB pair.",
+    "unlocatedHeading": "OUTER-SYSTEM TORA ARRAYS · BEYOND CHART SCALE",
+    "unlocatedHeadingCompact": "TORA ARRAYS · OFF SCALE",
+    "unlocatedHeadingClass": "tora-register-title",
+    "unlocatedNameClass": "tora-register-name",
+    "unlocatedAria": "outer-system array beyond chart scale",
+    "unlocatedNoun": "TORA"
   },
   "flags": {
     "addressRegionWins": true,
@@ -66,6 +73,12 @@
     "stationRoute": "focus",
     "titledPlanetInspectLabel": true,
     "visibilityResetsLabels": true,
-    "widgetKeepsAddress": true
+    "widgetKeepsAddress": true,
+    "perSystemLabels": true,
+    "hideExtendedHostStations": true,
+    "stormBands": true,
+    "dimmedBodiesAreFiller": true,
+    "systemBodyRenderOpacity": true,
+    "flatStarFill": true
   }
 }

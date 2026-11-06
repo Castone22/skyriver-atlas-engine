@@ -112,7 +112,7 @@ const illustrativeTypes={
 /* @atlas-function orbitalFact */
 /* @atlas-function worldRecord */
 /* @atlas-function bodyKey */
-/* @atlas-function stationHasOverview-tora */
+/* @atlas-function stationHasOverview */
 
 const foundryParts=[
  {title:'Crown spire',label:'CROWN SPIRE',x:330,y:96,lx:430,ly:84,note:'The upper needle and its inset luminous chamber follow the supplied Foundry illustration. This is a descriptive exterior label; the chamber’s function is not established in the Codex.'},
@@ -177,7 +177,7 @@ const STATION_SILHOUETTES={
 let planetClickTimer;
 /* @atlas-function bindOrbitalSelection */
 /* @atlas-function drawBelt */
-/* @atlas-function mountSystem-d80d9c15a5ef */
+/* @atlas-function mountSystem */
 /* @atlas-function setSystemFocus */
 
 /* @atlas-function syncSystemFocus */

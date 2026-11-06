@@ -49,6 +49,7 @@
     "solarIllustrativeGuard": true,
     "solarLanesFromAllStations": true,
     "straightenImageTitleQuotes": true,
-    "widgetKeepsAddress": true
+    "widgetKeepsAddress": true,
+    "hideExtendedHostStations": true
   }
 }

@@ -7,5 +7,28 @@
     "stellar",
     "geographic",
     "galaxy"
-  ]
+  ],
+  "defaults": {
+    "stellar": {
+      "slots": {
+        "starTagCentral": "Central star",
+        "starTagBinary": "Binary primary star",
+        "starTagTrinaryInner": "Trinary inner-pair star",
+        "starTagTrinaryOuter": "Trinary outer companion",
+        "starTagBlackHole": "Black hole",
+        "starTagBlackHoleCompanion": "Binary primary star",
+        "starTagClassPrimary": "primary star",
+        "starTagClassOuter": "distant companion",
+        "starNoteSingle": "The registered planets orbit this star.",
+        "starNotePair": "The registered planets orbit the inner pair.",
+        "starNoteOuter": "It lies outside the planetary system of the inner pair.",
+        "unlocatedHeading": "HOST ORBIT UNSPECIFIED",
+        "unlocatedHeadingCompact": "HOST ORBIT UNSPECIFIED",
+        "unlocatedHeadingClass": "",
+        "unlocatedNameClass": "",
+        "unlocatedAria": "host orbit unspecified",
+        "unlocatedNoun": "Colony"
+      }
+    }
+  }
 }

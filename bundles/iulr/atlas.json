@@ -24157,6 +24157,30 @@
       "categories": [
         "TORA"
       ]
+    },
+    "labels": {
+      "levels": {
+        "overview": {
+          "active": [
+            120,
+            150
+          ],
+          "neighbor": [
+            150,
+            220
+          ]
+        },
+        "regional": {
+          "active": [
+            70,
+            90
+          ],
+          "neighbor": [
+            90,
+            135
+          ]
+        }
+      }
     }
   }
 }

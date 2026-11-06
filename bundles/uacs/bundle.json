@@ -29,7 +29,11 @@
     "localCaptionNote": "Only recorded host relationships are shown",
     "localEmptyNote": "No moons or hosted stations are catalogued for this world.",
     "localMoonNoun": "natural satellite",
-    "overviewOptionLabel": "Overview · "
+    "overviewOptionLabel": "Overview · ",
+    "starTagTrinaryOuter": "Outer stellar companion",
+    "starTagTrinaryInner": "Inner binary component",
+    "starTagBinary": "Binary component",
+    "starTagBlackHoleCompanion": "Blue-white stellar companion"
   },
   "flags": {
     "emptyDossierFactsFallBack": true,
@@ -44,6 +48,9 @@
     "titledLocalOrbitLabels": true,
     "titledPlanetInspectLabel": true,
     "visibilityResetsLabels": true,
-    "widgetKeepsAddress": true
+    "widgetKeepsAddress": true,
+    "starRecordsFromSystem": true,
+    "systemBodyRenderOpacity": true,
+    "flatStarFill": true
   }
 }

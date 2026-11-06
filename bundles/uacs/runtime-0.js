@@ -112,7 +112,7 @@ const stationFilters=new Set(Object.keys(STATION_TYPES));
 const siteType=name=>/station|triad|jumpgate/i.test(name)?'Station / structure':/colony/i.test(name)?'Colony':'World';
 /* @atlas-function stationRecords */
 /* @atlas-function entityRecords */
-/* @atlas-function starRecords-2ae8652d7987 */
+/* @atlas-function starRecords */
 /* @atlas-function focusableWorld */
 /* @atlas-function localChartParent */
 /* @atlas-function localBodies */
@@ -129,7 +129,7 @@ const illustrativeTypes={
 /* @atlas-function orbitalFact */
 /* @atlas-function worldRecord */
 /* @atlas-function bodyKey */
-/* @atlas-function stationHasOverview-tora */
+/* @atlas-function stationHasOverview */
 const TORA_CLASS='Terranos Omnidirectional Reflector Array';
 const toraParts=[
  {title:'Axial mast',label:'MAST',x:329,y:95,lx:420,ly:70,note:'The upper tower narrows to a bright axial tip. Its internal equipment is unspecified in the class record.'},
@@ -182,7 +182,7 @@ const STATION_SILHOUETTES={
 let planetClickTimer;
 /* @atlas-function bindOrbitalSelection */
 /* @atlas-function drawBelt */
-/* @atlas-function mountSystem-a3742fa457e9 */
+/* @atlas-function mountSystem */
 /* @atlas-function setSystemFocus */
 
 /* @atlas-function syncSystemFocus */

@@ -30950,6 +30950,25 @@
       "featuredSystem": "Sol",
       "worldListField": "mapWorlds",
       "worldListGatesLabel": false
+    },
+    "blackBinary": {
+      "radius": [
+        130,
+        65
+      ],
+      "span": [
+        180,
+        73
+      ],
+      "guide": [
+        46,
+        32.2
+      ],
+      "mover": [
+        0,
+        46
+      ],
+      "glyph": 1.8
     }
   }
 }

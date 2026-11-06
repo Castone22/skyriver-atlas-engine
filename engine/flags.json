@@ -27,6 +27,10 @@
     "description": "A system with no beltSlot shows a belt when it has more than two orbits; with a beltSlot, a belt shows when the slot is greater than 0. Without the flag a belt shows only when beltSlot is set.",
     "default": false
   },
+  "dimmedBodiesAreFiller": {
+    "description": "Bodies with renderOpacity below 1 get the filler orbit track and no label on the system chart.",
+    "default": false
+  },
   "elsewhereStations": {
     "description": "The local-orbit view lists the system's 'register' stations under an 'Elsewhere in the system' heading (and keeps the blank line the layout reserves for it).",
     "default": false
@@ -42,6 +46,10 @@
   "fallbackRegion": {
     "description": "Region shown when an address names no region and no system.",
     "default": "all"
+  },
+  "flatStarFill": {
+    "description": "The first star of a system on the system chart is filled with its own tint instead of the shared sun gradient.",
+    "default": false
   },
   "focusRegionIgnoresRegion": {
     "description": "On a focus=region route the region named in the address is ignored and the system's own region is used.",
@@ -59,12 +67,16 @@
     "description": "Station categories left out of the local-orbit station filter bar (planetView).",
     "default": []
   },
-  "highlightRouteParam": {
-    "description": "The address records the highlighted region as highlight=<region> and never writes chart=, instead of the overview chart parameter.",
+  "hideExtendedHostStations": {
+    "description": "The system chart leaves out stations whose host planet has extendedSatelliteChart; they appear on that planet's own chart.",
     "default": false
   },
   "highlightedRegionState": {
     "description": "The saved history state and the remembered camera store highlightedRegion instead of the overview flag.",
+    "default": false
+  },
+  "highlightRouteParam": {
+    "description": "The address records the highlighted region as highlight=<region> and never writes chart=, instead of the overview chart parameter.",
     "default": false
   },
   "indexWorldLinks": {
@@ -110,6 +122,10 @@
   "overviewStateKey": {
     "description": "Name of the saved-state field that records the overview flag (route history and the camera memory).",
     "default": "overviewMode"
+  },
+  "perSystemLabels": {
+    "description": "System labels are shown per system against the highlighted region, using policies.labels.levels as [name, planet] pairs for active and neighbouring regions.",
+    "default": false
   },
   "planetArticleTitles": {
     "description": "Planet links use the article title kept in sync with the Codex (planetArticleName) when the planet has one.",
@@ -167,6 +183,10 @@
     "description": "The system diagram lists only moons that are visible at system level or inhabited, taken from the moon records, instead of every moon body.",
     "default": false
   },
+  "starRecordsFromSystem": {
+    "description": "A star's record is built from the system's primaries alone, with its description (unless the system has primaryDescriptions) and source taken from the system record, instead of copying the system or the star's image record.",
+    "default": false
+  },
   "starTooltips": {
     "description": "Each star carries a tooltip describing its stellar architecture and planet count.",
     "default": false
@@ -178,6 +198,10 @@
   "stationRoute": {
     "description": "How the station overview appears in the address: station (station=1), focus (focus=station) or empty for no station overview route.",
     "default": ""
+  },
+  "stormBands": {
+    "description": "Planets with appearance storm-bands are drawn with cloud bands on the system chart.",
+    "default": false
   },
   "straightenImageTitleQuotes": {
     "description": "Curly apostrophes in the article title used for live images are replaced by straight ones.",

@@ -7145,6 +7145,25 @@
       "featuredSystem": "Calidor",
       "worldListField": null,
       "worldListGatesLabel": false
+    },
+    "blackBinary": {
+      "radius": [
+        135,
+        65
+      ],
+      "span": [
+        175,
+        73
+      ],
+      "guide": [
+        55,
+        38.5
+      ],
+      "mover": [
+        5,
+        55
+      ],
+      "glyph": 1.2
     }
   }
 }

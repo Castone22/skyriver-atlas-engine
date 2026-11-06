@@ -104,9 +104,8 @@ const ATLAS_BOUNDS=[40,60,2790,2490];
 /* @atlas-function zoomPercent */
 // At least these displayed percentages. Short or narrow charts need more zoom
 // to give each label the same readable space as a full-size chart.
-const LABEL_ZOOM={overview:{active:[120,150],neighbor:[150,220]},regional:{active:[70,90],neighbor:[90,135]}};
-/* @atlas-function labelThresholds-e09969274c09 */
-/* @atlas-function scaleLabels-5982cc7d7bb0 */
+/* @atlas-function labelThresholds */
+/* @atlas-function scaleLabels */
 /* @atlas-function applyView */
 /* @atlas-function fitBounds */
 /* @atlas-function setView */
@@ -140,7 +139,7 @@ const stationFilters=new Set(Object.keys(STATION_TYPES));
 const siteType=name=>/station|triad|jumpgate/i.test(name)?'Station / structure':/colony/i.test(name)?'Colony':'World';
 /* @atlas-function stationRecords */
 /* @atlas-function entityRecords */
-/* @atlas-function starRecords-edf881d7ebd2 */
+/* @atlas-function starRecords */
 /* @atlas-function focusableWorld */
 /* @atlas-function localChartParent */
 /* @atlas-function localBodies */
@@ -157,7 +156,7 @@ const illustrativeTypes={
 /* @atlas-function orbitalFact */
 /* @atlas-function worldRecord */
 /* @atlas-function bodyKey */
-/* @atlas-function stationHasOverview-tora */
+/* @atlas-function stationHasOverview */
 const TORA_CLASS='Terranos Omnidirectional Reflector Array';
 const toraParts=[
  {title:'Axial mast',label:'MAST',x:329,y:95,lx:420,ly:70,note:'The upper tower narrows to a bright axial tip. Its internal equipment is unspecified in the class record.'},
@@ -207,7 +206,7 @@ const STATION_SILHOUETTES={
 let planetClickTimer;
 /* @atlas-function bindOrbitalSelection */
 /* @atlas-function drawBelt */
-/* @atlas-function mountSystem-368a20b29dd5 */
+/* @atlas-function mountSystem */
 /* @atlas-function setSystemFocus */
 
 /* @atlas-function syncSystemFocus */

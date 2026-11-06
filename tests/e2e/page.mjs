@@ -26,6 +26,9 @@ export async function openAtlas(page, id, query = '') {
     // The orbit diagram animates with requestAnimationFrame; frozen, every run draws the same frame.
     window.requestAnimationFrame = () => 0;
     window.cancelAnimationFrame = () => {};
+    // The page reads the Codex for live infobox text. A blocked request fails after a real delay,
+    // which would make the page text depend on timing; fail it at once instead.
+    window.fetch = () => Promise.reject(new TypeError('offline'));
     Math.random = () => (seed = (seed * 1664525 + 1013904223) % 4294967296) / 4294967296;
   });
   await page.goto(`/${id}-atlas.html${query}`);

@@ -10,23 +10,23 @@ region:outer	1ba61c2ff769d7
 overview:outer	15a3c50dc16f45
 region:aster	581cd76ee3d6e
 overview:aster	1f0a49326d933
-system:adrea	ec5a807c02de9
-station-overview:adrea	ec5a807c02de9
+system:adrea	1c2aec4812f9ba
+station-overview:adrea	1c2aec4812f9ba
 planet:adrea:New Olympia	1be6d36e541c05
 planet:adrea:Florence	43a632ec1210e
 planet:adrea:Adrea I	f42bac6948a21
 planet:adrea:Adrea II	102e55aacf1609
 planet:adrea:Adrea V	33a3c85a88abf
-system:athrys	231ec118133a3
-station-overview:athrys	231ec118133a3
+system:athrys	dde06bf18e8cc
+station-overview:athrys	dde06bf18e8cc
 planet:athrys:Clyse	1c2cdeb79e664a
 planet:athrys:Athrys I	1bed8a27c646d5
 planet:athrys:Athrys II	a52dbeff5d340
 planet:athrys:Athrys IV	1d6f1b370ca234
 planet:athrys:Athrys V	16b11608e1b241
 planet:athrys:Athrys VI	15d4da46e9f31c
-system:sutherland	1c4300b8829d4d
-station-overview:sutherland	1c4300b8829d4d
+system:sutherland	2c40a6903c383
+station-overview:sutherland	2c40a6903c383
 planet:sutherland:Haas	17e3729ba16dc
 planet:sutherland:Sutherland I	87866cc1ce386
 planet:sutherland:Sutherland II	1a2d0c89206e16
@@ -34,8 +34,8 @@ planet:sutherland:Sutherland IV	15c0519d9e700b
 planet:sutherland:Sutherland V	176e828c886845
 planet:sutherland:Sutherland VI	16ae238375cf76
 planet:sutherland:Sutherland VII	1409535d634269
-system:viery	d973128b94003
-station-overview:viery	d973128b94003
+system:viery	4031653318e28
+station-overview:viery	4031653318e28
 planet:viery:Mir	1ff1a870fd271f
 planet:viery:Ivanoff	17d2d8cf056b0e
 planet:viery:Viery I	144734149c3927
@@ -44,23 +44,23 @@ planet:viery:Viery V	bb5b0fb79ad94
 planet:viery:Viery VI	1114c5ce3fc0ba
 planet:viery:Viery VII	8ef237693b17d
 planet:viery:Viery VIII	6bdcaf526c38f
-system:weiss-212	84bfec4ff8a9c
-station-overview:weiss-212	84bfec4ff8a9c
+system:weiss-212	15c6fbdba2f235
+station-overview:weiss-212	15c6fbdba2f235
 planet:weiss-212:Ferox	53eb2e85cd7b2
 planet:weiss-212:Weiss 212 I	1d82f0a1c770d1
 planet:weiss-212:Weiss 212 II	108aec83415c5c
 planet:weiss-212:Weiss 212 IV	17a64250f804ef
 planet:weiss-212:Weiss 212 V	e50239879e6cd
-system:johanssen	1555b7ce71fa07
-station-overview:johanssen	1555b7ce71fa07
+system:johanssen	1acd3281b25662
+station-overview:johanssen	1acd3281b25662
 planet:johanssen:Noxon	aec58d9a5906f
 planet:johanssen:Morcate	1cc0bab477900e
 planet:johanssen:Johanssen I	2543e6c579dce
 planet:johanssen:Johanssen II	79c0b0d1fa8ed
 planet:johanssen:Johanssen V	d43a30de28b11
 planet:johanssen:Johanssen VI	17835d906cf708
-system:acrius	fc65c00e2af9c
-station-overview:acrius	fc65c00e2af9c
+system:acrius	5113c48c99b1f
+station-overview:acrius	5113c48c99b1f
 planet:acrius:Foundation	d28c9391b1884
 planet:acrius:Tributa	19fe3bcb6d8555
 planet:acrius:Acrius I	4d7290493277c
@@ -68,8 +68,8 @@ planet:acrius:Acrius II	b697233b583a
 planet:acrius:Acrius V	736838291333d
 planet:acrius:Acrius VI	10d21c5d722dfc
 planet:acrius:Acrius VII	e8516d48b8e0b
-system:haldor	169c10bb56d138
-station-overview:haldor	169c10bb56d138
+system:haldor	1e08aa602c67fc
+station-overview:haldor	1e08aa602c67fc
 planet:haldor:Havencrest	1501a33fb7e901
 planet:haldor:Haldor I	4ae42ec6d90a6
 planet:haldor:Haldor II	d292bb0d83659
@@ -78,21 +78,21 @@ planet:haldor:Haldor V	1f34ef487be4c4
 planet:haldor:Haldor VI	bf733ebf8bbd9
 planet:haldor:Haldor VII	82cf8384cb900
 planet:haldor:Haldor VIII	3aeb2a490e7a1
-system:constantine	1b1f1020102b49
-station-overview:constantine	1b1f1020102b49
+system:constantine	15dd81e6ee584e
+station-overview:constantine	15dd81e6ee584e
 planet:constantine:Saratoga	1f4d4244e30770
 planet:constantine:Constantine I	156ac27d098eb5
 planet:constantine:Constantine II	15da7a7dd997f3
 planet:constantine:Constantine IV	51f72d6a3e2d2
 planet:constantine:Constantine V	1c2de98a0fe03d
-system:dsc-346	b5fb20184d519
-station-overview:dsc-346	b5fb20184d519
+system:dsc-346	1208a91dd5d365
+station-overview:dsc-346	1208a91dd5d365
 planet:dsc-346:DSC 346 I	143a5a210d7ab9
 planet:dsc-346:DSC 346 II	d21877062f3df
 planet:dsc-346:DSC 346 III	1c6c7819363b1b
 planet:dsc-346:DSC 346 IV	93c361e573809
-system:koch	17a7e9097bfaf3
-station-overview:koch	17a7e9097bfaf3
+system:koch	16d6a5aeaf34f1
+station-overview:koch	16d6a5aeaf34f1
 planet:koch:Prospect	f0cf06f332bc6
 planet:koch:Koch I	115da73d074c1f
 planet:koch:Koch II	34b43c06c9c08
@@ -100,8 +100,8 @@ planet:koch:Koch IV	16b0517d1e502e
 planet:koch:Koch V	63ab8aaef9b80
 planet:koch:Koch VI	3506aa067535d
 planet:koch:Koch VII	158aeedc1259b5
-system:carver	11a6f5d8a53cba
-station-overview:carver	11a6f5d8a53cba
+system:carver	97905fae48b6e
+station-overview:carver	97905fae48b6e
 planet:carver:Carver V	1d569531644a21
 planet:carver:Carver I	b044f9a43c595
 planet:carver:Carver II	1dc2f2a873f638
@@ -110,23 +110,23 @@ planet:carver:Carver IV	14ad3e33bc5dbf
 planet:carver:Carver VI	1d581986de3826
 planet:carver:Carver VII	170df069381e7
 planet:carver:Carver VIII	1262034745f2e9
-system:bharask	5dd03ce0884ae
-station-overview:bharask	5dd03ce0884ae
+system:bharask	7650c91c54499
+station-overview:bharask	7650c91c54499
 planet:bharask:Vonako	1afe1fc2854cdd
 planet:bharask:Bharask I	188d82baa0ccef
 planet:bharask:Bharask II	40eaa165ee07b
 planet:bharask:Bharask IV	17b801b7d67c6b
 planet:bharask:Bharask V	ffaf4711daeb6
-system:blake-s-star	d71f9c599a9c2
-station-overview:blake-s-star	d71f9c599a9c2
+system:blake-s-star	6546cc00e4780
+station-overview:blake-s-star	6546cc00e4780
 planet:blake-s-star:Phoenix	1c53694f67ce59
 planet:blake-s-star:Belleza	124abcf70f3fd8
 planet:blake-s-star:Blake's Star I	119d8ff2bea064
 planet:blake-s-star:Blake's Star II	ab7a9865106f6
 planet:blake-s-star:Blake's Star V	15ed0245db128a
 planet:blake-s-star:Blake's Star VI	5a58890aec606
-system:weiss-287	b2666c2510933
-station-overview:weiss-287	b2666c2510933
+system:weiss-287	114da52476f913
+station-overview:weiss-287	114da52476f913
 planet:weiss-287:New Dresden	1f79bcbdb9fc6a
 planet:weiss-287:Weiss 287 I	126e30cff397a8
 planet:weiss-287:Weiss 287 II	21358bd906a9c
@@ -134,8 +134,8 @@ planet:weiss-287:Weiss 287 IV	153eff2474d0d6
 planet:weiss-287:Weiss 287 V	1ff330eaf4b768
 planet:weiss-287:Weiss 287 VI	19229f92da9c4e
 planet:weiss-287:Weiss 287 VII	1f9fc61edb690a
-system:sol	eb04aeaf0363e
-station-overview:sol	cbb1eee67421b
+system:sol	11d023691380a2
+station-overview:sol	18be09a4740996
 planet:sol:Eden	16a32edc46015
 planet:sol:Arcadia	6dbf7dd9f8ef6
 planet:sol:Sol I	12c819002055d8
@@ -144,23 +144,23 @@ planet:sol:Sol IV	570dac91aa22c
 planet:sol:Sol VI	1181c624ccab18
 planet:sol:Sol VII	188502b11db87c
 planet:sol:Sol VIII	189fdf6f7d62b1
-system:freki	159a563446c046
-station-overview:freki	159a563446c046
+system:freki	23bc449e34fcf
+station-overview:freki	23bc449e34fcf
 planet:freki:Freki IV	983afe43b1354
 planet:freki:Freki I	9b282c41883eb
 planet:freki:Freki II	1dc3588bab77f8
 planet:freki:Freki III	2a8bc0b21f7aa
 planet:freki:Freki V	64e6cdb192637
-system:cassius	185b3bb48e61e4
-station-overview:cassius	185b3bb48e61e4
+system:cassius	19c56181de4f0c
+station-overview:cassius	19c56181de4f0c
 planet:cassius:Kronos	10366ce08af927
 planet:cassius:Cassius I	331a141b88df4
 planet:cassius:Cassius II	1f9d346128ae8e
 planet:cassius:Cassius IV	d2cd7a8b88ead
 planet:cassius:Cassius V	84b30fe53c712
 planet:cassius:Cassius VI	1194f5aaa79b58
-system:heimdall	194a6852773bf8
-station-overview:heimdall	194a6852773bf8
+system:heimdall	173e8cfb576dd4
+station-overview:heimdall	173e8cfb576dd4
 planet:heimdall:Jotunheim	d57ae4c6e6b5b
 planet:heimdall:Heimdall I	72ca8e0c0d49d
 planet:heimdall:Heimdall II	1682ce4d59243a
@@ -168,8 +168,8 @@ planet:heimdall:Heimdall III	6c4db650fb08a
 planet:heimdall:Heimdall V	9850d79d350bb
 planet:heimdall:Heimdall VI	14521d2cc8b43
 planet:heimdall:Heimdall VII	1186b156832510
-system:tessera	4ee13118ec8dc
-station-overview:tessera	4ee13118ec8dc
+system:tessera	11243a6289e7d9
+station-overview:tessera	11243a6289e7d9
 planet:tessera:New Soris	1174f3f05a4693
 planet:tessera:Tessera I	fa9c9a2dd3873
 planet:tessera:Tessera II	1efc34e90dadea
@@ -178,23 +178,23 @@ planet:tessera:Tessera V	176f214bc5985e
 planet:tessera:Tessera VI	1d8f7225c5b029
 planet:tessera:Tessera VII	18649979b4f9f9
 planet:tessera:Tessera VIII	1f7bac3aa772d4
-system:hargrove	8d1cf3fa3e407
-station-overview:hargrove	8d1cf3fa3e407
+system:hargrove	1c892cd59e97a9
+station-overview:hargrove	1c892cd59e97a9
 planet:hargrove:Oros	a010d88fb4c53
 planet:hargrove:Hargrove I	378003e4900ce
 planet:hargrove:Hargrove II	1858176dd94c27
 planet:hargrove:Hargrove IV	173e7e6acfb878
 planet:hargrove:Hargrove V	1dfb268baf14dd
-system:torrin	2e97e19d2b790
-station-overview:torrin	2e97e19d2b790
+system:torrin	b209249c19103
+station-overview:torrin	b209249c19103
 planet:torrin:Emberfall	1e04b8d0a794af
 planet:torrin:Torrin I	10e1ab01b33860
 planet:torrin:Torrin II	8f05a54b219b6
 planet:torrin:Torrin IV	ef878d30af98e
 planet:torrin:Torrin V	c2e8e76f1abea
 planet:torrin:Torrin VI	aac2737b3d68
-system:morrigan	572de4c61b5db
-station-overview:morrigan	572de4c61b5db
+system:morrigan	1999a0b203c82
+station-overview:morrigan	1999a0b203c82
 planet:morrigan:Fairmeadow	4d64c9219094d
 planet:morrigan:Morrigan I	7249c0e9805ef
 planet:morrigan:Morrigan II	1968d9e9078476
@@ -202,8 +202,8 @@ planet:morrigan:Morrigan IV	47d88e64cb4c4
 planet:morrigan:Morrigan V	3010885e7790
 planet:morrigan:Morrigan VI	4877d3dd5a336
 planet:morrigan:Morrigan VII	1feafabe180cfc
-system:tenebrae	183a73a057b9bb
-station-overview:tenebrae	183a73a057b9bb
+system:tenebrae	541c0f178e5de
+station-overview:tenebrae	541c0f178e5de
 planet:tenebrae:Tenebrae IV	1623929d6652f9
 planet:tenebrae:Tenebrae I	611195dea5056
 planet:tenebrae:Tenebrae II	1a021626581eeb
@@ -212,23 +212,23 @@ planet:tenebrae:Tenebrae V	f5a49b643b73b
 planet:tenebrae:Tenebrae VI	11ea4dab36132e
 planet:tenebrae:Tenebrae VII	1271713252067e
 planet:tenebrae:Tenebrae VIII	198dce8a760c12
-system:aldwick	124cd606403a9d
-station-overview:aldwick	124cd606403a9d
+system:aldwick	15fff34b15376e
+station-overview:aldwick	15fff34b15376e
 planet:aldwick:Aldwick III	92e36e0fadb37
 planet:aldwick:Aldwick I	16371551ac25e0
 planet:aldwick:Aldwick II	17d55a4dace74b
 planet:aldwick:Aldwick IV	170de24f787943
 planet:aldwick:Aldwick V	16dbde403bbbff
-system:kestrel	2c1bd10e49ce2
-station-overview:kestrel	2c1bd10e49ce2
+system:kestrel	1bfe1e598c746b
+station-overview:kestrel	1bfe1e598c746b
 planet:kestrel:Windward	9aa341aeff558
 planet:kestrel:Kestrel I	695b1949b89d1
 planet:kestrel:Kestrel II	1dabe3893a54ec
 planet:kestrel:Kestrel IV	362496de28096
 planet:kestrel:Kestrel V	cd4487a326474
 planet:kestrel:Kestrel VI	46e3ddf6520cd
-system:wexley	96ce020e18b1a
-station-overview:wexley	96ce020e18b1a
+system:wexley	ea4cb317ab3d
+station-overview:wexley	ea4cb317ab3d
 planet:wexley:Fairhaven	d5398e9097799
 planet:wexley:Wexley I	1e49837b095e88
 planet:wexley:Wexley II	10a8a4da4df61d
@@ -236,8 +236,8 @@ planet:wexley:Wexley IV	a6330972d2aac
 planet:wexley:Wexley V	1cb49d5ab62a29
 planet:wexley:Wexley VI	14ec8c0456a0d4
 planet:wexley:Wexley VII	111f123cd9a44
-system:lyndon	c405fcae6ef98
-station-overview:lyndon	c405fcae6ef98
+system:lyndon	343ee4475e0e2
+station-overview:lyndon	343ee4475e0e2
 planet:lyndon:Greenbank	ad366729f6b9
 planet:lyndon:Lyndon I	18345b092de505
 planet:lyndon:Lyndon II	18af6da3ba184b
@@ -246,23 +246,23 @@ planet:lyndon:Lyndon V	138fdfef31176b
 planet:lyndon:Lyndon VI	14def705ab7aef
 planet:lyndon:Lyndon VII	197c34a3884c6
 planet:lyndon:Lyndon VIII	e8cf7518837d0
-system:vesper	14e4e696c99308
-station-overview:vesper	14e4e696c99308
+system:vesper	cdd160b57c083
+station-overview:vesper	cdd160b57c083
 planet:vesper:Evenfall	6db18307665a6
 planet:vesper:Vesper I	1b64f4c00e7162
 planet:vesper:Vesper II	b9838f3e22551
 planet:vesper:Vesper IV	12f9da17a7cc19
 planet:vesper:Vesper V	1eb903e148355e
-system:weiss-304	21a198dffabd
-station-overview:weiss-304	21a198dffabd
+system:weiss-304	203c84cdd5802
+station-overview:weiss-304	203c84cdd5802
 planet:weiss-304:Weiss 304 I	cfc71cf199af9
 planet:weiss-304:Weiss 304 II	100d9daf9ec28b
 planet:weiss-304:Weiss 304 III	d8257f7139af0
 planet:weiss-304:Weiss 304 IV	eb96436831380
 planet:weiss-304:Weiss 304 V	10979a37e67f59
 planet:weiss-304:Weiss 304 VI	1db8fee97da50e
-system:rosen	2ea469f170522
-station-overview:rosen	2ea469f170522
+system:rosen	130281cfb4790a
+station-overview:rosen	130281cfb4790a
 planet:rosen:Rosewater	8440c705e62f6
 planet:rosen:Rosen I	15f7899b7ee711
 planet:rosen:Rosen II	11cd9f18f141a2
@@ -270,8 +270,8 @@ planet:rosen:Rosen IV	1dda9a9e64fb9f
 planet:rosen:Rosen V	11ace564ef634b
 planet:rosen:Rosen VI	cf7c0ec73a0d8
 planet:rosen:Rosen VII	1a17adce7911f0
-system:ashcombe	178667def8706d
-station-overview:ashcombe	178667def8706d
+system:ashcombe	87e22aba85ed8
+station-overview:ashcombe	87e22aba85ed8
 planet:ashcombe:Ashcombe IV	bfcd72b74f942
 planet:ashcombe:Ashcombe I	295703ff1b65b
 planet:ashcombe:Ashcombe II	1e122d234c4554
@@ -280,23 +280,23 @@ planet:ashcombe:Ashcombe V	abaf5fea53d5b
 planet:ashcombe:Ashcombe VI	a54bd25155e1a
 planet:ashcombe:Ashcombe VII	1116fe749c547f
 planet:ashcombe:Ashcombe VIII	16be714b2338d3
-system:tyndall	a097bfdf0a758
-station-overview:tyndall	a097bfdf0a758
+system:tyndall	378d53bab56f0
+station-overview:tyndall	378d53bab56f0
 planet:tyndall:Farsight	1d81e940e599b0
 planet:tyndall:Tyndall I	1804929c8eb0d8
 planet:tyndall:Tyndall II	15f31cde5650b4
 planet:tyndall:Tyndall IV	16d62ceee67c71
 planet:tyndall:Tyndall V	59d9f118951cd
-system:dunstan	7f7c6a3e9c184
-station-overview:dunstan	7f7c6a3e9c184
+system:dunstan	170cb5a6c44ec9
+station-overview:dunstan	170cb5a6c44ec9
 planet:dunstan:Dunstan III	16477547afd991
 planet:dunstan:Dunstan I	1cb797a10225a2
 planet:dunstan:Dunstan II	5fad1089b16c7
 planet:dunstan:Dunstan IV	1ecf94936262c7
 planet:dunstan:Dunstan V	1d37ebf95df0a7
 planet:dunstan:Dunstan VI	d0e5acce52c9
-system:corvin	ec644ceab2394
-station-overview:corvin	ec644ceab2394
+system:corvin	3ac229c445eb0
+station-overview:corvin	3ac229c445eb0
 planet:corvin:Corvin III	1c1665db9a18b7
 planet:corvin:Corvin I	c9d7826c9d411
 planet:corvin:Corvin II	79162b85490b0
@@ -304,8 +304,8 @@ planet:corvin:Corvin IV	e27a01956356b
 planet:corvin:Corvin V	3eafee5d50f2e
 planet:corvin:Corvin VI	16234218b6f756
 planet:corvin:Corvin VII	edd317a6a4020
-system:weiss-319	1e54d277b48e6b
-station-overview:weiss-319	1e54d277b48e6b
+system:weiss-319	26b0863fad1c4
+station-overview:weiss-319	26b0863fad1c4
 planet:weiss-319:Weiss 319 I	15303a99954f46
 planet:weiss-319:Weiss 319 II	bd6688541eef2
 planet:weiss-319:Weiss 319 III	1811a12ac4940a
@@ -314,23 +314,23 @@ planet:weiss-319:Weiss 319 V	1c327efe40eacb
 planet:weiss-319:Weiss 319 VI	11cf465222b579
 planet:weiss-319:Weiss 319 VII	16575655768a7b
 planet:weiss-319:Weiss 319 VIII	f685aac78ee7b
-system:aster	526a13ad354e9
-station-overview:aster	526a13ad354e9
+system:aster	1e9350de12a58c
+station-overview:aster	1e9350de12a58c
 planet:aster:Hearth	7150146458f9a
 planet:aster:Aster I	5e31cce7f1516
 planet:aster:Aster II	1c68200d7b4e9a
 planet:aster:Aster IV	c82931d5e33e6
 planet:aster:Aster V	380a08fe93236
-system:hollis	12bf9dd7764050
-station-overview:hollis	12bf9dd7764050
+system:hollis	1d13b1d02ec77b
+station-overview:hollis	1d13b1d02ec77b
 planet:hollis:Dunmere	b06b88345fd7
 planet:hollis:Hollis I	faca115bd3618
 planet:hollis:Hollis II	1e849355048996
 planet:hollis:Hollis IV	ba89de4654fc0
 planet:hollis:Hollis V	2e175f109db53
 planet:hollis:Hollis VI	11fb37f7e01626
-system:kepler-81	b122b4cafdd6a
-station-overview:kepler-81	b122b4cafdd6a
+system:kepler-81	1c0e87adf349fb
+station-overview:kepler-81	1c0e87adf349fb
 planet:kepler-81:Kepler 81 I	13fd3248f599fa
 planet:kepler-81:Kepler 81 II	13d74fb3216949
 planet:kepler-81:Kepler 81 III	1cf61df04f6dd2
@@ -338,8 +338,8 @@ planet:kepler-81:Kepler 81 IV	14558c12db2be
 planet:kepler-81:Kepler 81 V	8681c9ccf51bc
 planet:kepler-81:Kepler 81 VI	bf6546b62b476
 planet:kepler-81:Kepler 81 VII	150597a455d5ff
-system:redwick	e172a7188514f
-station-overview:redwick	e172a7188514f
+system:redwick	116d156f166d6
+station-overview:redwick	116d156f166d6
 planet:redwick:Redwick III	1aff5a89af77ad
 planet:redwick:Redwick I	2e1fb29668b7e
 planet:redwick:Redwick II	1bc9a438341895
@@ -348,15 +348,15 @@ planet:redwick:Redwick V	1dfbacb459faef
 planet:redwick:Redwick VI	1cb7fe28be6abe
 planet:redwick:Redwick VII	1ee0240fbb171b
 planet:redwick:Redwick VIII	1e0a970686057d
-system:briar	10ab043aed02d7
-station-overview:briar	10ab043aed02d7
+system:briar	640c72193a3d8
+station-overview:briar	640c72193a3d8
 planet:briar:Bellhaven	19a04b09e691bd
 planet:briar:Briar I	155261a6c6daa8
 planet:briar:Briar II	1b2563688ecbf0
 planet:briar:Briar IV	197ebf6a89edef
 planet:briar:Briar V	11457e1fea5e08
-system:elara	1caf471dfc02d5
-station-overview:elara	1caf471dfc02d5
+system:elara	182a752fa608
+station-overview:elara	182a752fa608
 planet:elara:Elara III	164a900bbd6564
 planet:elara:Elara I	58037dfacac1e
 planet:elara:Elara II	1d4b681929587
@@ -735,7 +735,7 @@ object:sol:Sol I Moon 2	15197438c9b021
 object:sol:Sol II Moon 1	41b4ea4815578
 object:sol:Sol II Moon 2	1f8dd453651481
 object:sol:Sol II Moon 3	afce838657f1b
-object:sol:Karic	aa53fe09a73d5
+object:sol:Karic	15ed8d5158afea
 object:sol:Sol IV Moon 1	1cc4969b83616
 object:sol:Sol IV Moon 2	1ad86a5a17d930
 object:sol:Arcadia Moon 1	e5edde5ca892
@@ -835,7 +835,7 @@ object:heimdall:Heimdall II Moon 1	e8c3800d58303
 object:heimdall:Heimdall II Moon 2	e7957081eb2bb
 object:heimdall:Heimdall II Moon 3	1aa8d3fa46a403
 object:heimdall:Heimdall III Moon 1	db153b69aa4dc
-object:heimdall:Varagandr	d850a39402624
+object:heimdall:Varagandr	168daa0652c26a
 object:heimdall:Jotunheim Moon 2	1d3c12e902f360
 object:heimdall:Jotunheim Moon 3	16796965047c76
 object:heimdall:Jotunheim Moon 4	19713e90df5c16
@@ -1597,7 +1597,7 @@ station:haldor:Haldor VI Anchorage	72a3acacbc5c8
 station:constantine:Saratoga Anchorage	346a20aba626f
 station:constantine:Saratoga Survey Platform	e70f104ffe41c
 station:dsc-346:DSC 346 II Anchorage	17f0b7d4c8cd1e
-station:dsc-346:V. Sokolov Observatory	8274b4601b5b2
+station:dsc-346:V. Sokolov Observatory	208d600193c60
 station:koch:Prospect Anchorage	6bce682d5c4bc
 station:koch:Prospect Survey Platform	12c129c264dd9d
 station:koch:Koch V Anchorage	13a7b876af6ba2
@@ -1687,250 +1687,250 @@ station:briar:Bellhaven Survey Platform	188cbd6372ec9
 station:elara:Elara III Anchorage	12fd0b40ac7b79
 station:elara:Elara III Survey Platform	44d5620bf34ff
 station:elara:Elara IV Anchorage	284f789d26f46
-open-station:adrea:New Olympia Anchorage	ec5a807c02de9
-close-station:adrea:New Olympia Anchorage	ec5a807c02de9
-open-station:adrea:New Olympia Survey Platform	ec5a807c02de9
-close-station:adrea:New Olympia Survey Platform	ec5a807c02de9
-open-station:adrea:Florence Anchorage	ec5a807c02de9
-close-station:adrea:Florence Anchorage	ec5a807c02de9
-open-station:adrea:Florence Survey Platform	ec5a807c02de9
-close-station:adrea:Florence Survey Platform	ec5a807c02de9
-open-station:athrys:Clyse Anchorage	231ec118133a3
-close-station:athrys:Clyse Anchorage	231ec118133a3
-open-station:athrys:Clyse Survey Platform	231ec118133a3
-close-station:athrys:Clyse Survey Platform	231ec118133a3
-open-station:athrys:Athrys IV Anchorage	231ec118133a3
-close-station:athrys:Athrys IV Anchorage	231ec118133a3
-open-station:sutherland:Haas Anchorage	1c4300b8829d4d
-close-station:sutherland:Haas Anchorage	1c4300b8829d4d
-open-station:sutherland:Haas Survey Platform	1c4300b8829d4d
-close-station:sutherland:Haas Survey Platform	1c4300b8829d4d
-open-station:sutherland:Sutherland V Anchorage	1c4300b8829d4d
-close-station:sutherland:Sutherland V Anchorage	1c4300b8829d4d
-open-station:viery:Mir Anchorage	d973128b94003
-close-station:viery:Mir Anchorage	d973128b94003
-open-station:viery:Mir Survey Platform	d973128b94003
-close-station:viery:Mir Survey Platform	d973128b94003
-open-station:viery:Ivanoff Anchorage	d973128b94003
-close-station:viery:Ivanoff Anchorage	d973128b94003
-open-station:viery:Ivanoff Survey Platform	d973128b94003
-close-station:viery:Ivanoff Survey Platform	d973128b94003
-open-station:viery:Viery VI Anchorage	d973128b94003
-close-station:viery:Viery VI Anchorage	d973128b94003
-open-station:weiss-212:Ferox Anchorage	84bfec4ff8a9c
-close-station:weiss-212:Ferox Anchorage	84bfec4ff8a9c
-open-station:weiss-212:Ferox Survey Platform	84bfec4ff8a9c
-close-station:weiss-212:Ferox Survey Platform	84bfec4ff8a9c
-open-station:johanssen:Noxon Anchorage	1555b7ce71fa07
-close-station:johanssen:Noxon Anchorage	1555b7ce71fa07
-open-station:johanssen:Noxon Survey Platform	1555b7ce71fa07
-close-station:johanssen:Noxon Survey Platform	1555b7ce71fa07
-open-station:johanssen:Morcate Anchorage	1555b7ce71fa07
-close-station:johanssen:Morcate Anchorage	1555b7ce71fa07
-open-station:johanssen:Morcate Survey Platform	1555b7ce71fa07
-close-station:johanssen:Morcate Survey Platform	1555b7ce71fa07
-open-station:acrius:Foundation Anchorage	fc65c00e2af9c
-close-station:acrius:Foundation Anchorage	fc65c00e2af9c
-open-station:acrius:Foundation Survey Platform	fc65c00e2af9c
-close-station:acrius:Foundation Survey Platform	fc65c00e2af9c
-open-station:acrius:Tributa Anchorage	fc65c00e2af9c
-close-station:acrius:Tributa Anchorage	fc65c00e2af9c
-open-station:acrius:Tributa Survey Platform	fc65c00e2af9c
-close-station:acrius:Tributa Survey Platform	fc65c00e2af9c
-open-station:acrius:Acrius V Anchorage	fc65c00e2af9c
-close-station:acrius:Acrius V Anchorage	fc65c00e2af9c
-open-station:haldor:Havencrest Anchorage	169c10bb56d138
-close-station:haldor:Havencrest Anchorage	169c10bb56d138
-open-station:haldor:Havencrest Survey Platform	169c10bb56d138
-close-station:haldor:Havencrest Survey Platform	169c10bb56d138
-open-station:haldor:Haldor VI Anchorage	169c10bb56d138
-close-station:haldor:Haldor VI Anchorage	169c10bb56d138
-open-station:constantine:Saratoga Anchorage	1b1f1020102b49
-close-station:constantine:Saratoga Anchorage	1b1f1020102b49
-open-station:constantine:Saratoga Survey Platform	1b1f1020102b49
-close-station:constantine:Saratoga Survey Platform	1b1f1020102b49
-open-station:dsc-346:DSC 346 II Anchorage	b5fb20184d519
-close-station:dsc-346:DSC 346 II Anchorage	b5fb20184d519
-open-station:dsc-346:V. Sokolov Observatory	b5fb20184d519
-close-station:dsc-346:V. Sokolov Observatory	b5fb20184d519
-open-station:koch:Prospect Anchorage	17a7e9097bfaf3
-close-station:koch:Prospect Anchorage	17a7e9097bfaf3
-open-station:koch:Prospect Survey Platform	17a7e9097bfaf3
-close-station:koch:Prospect Survey Platform	17a7e9097bfaf3
-open-station:koch:Koch V Anchorage	17a7e9097bfaf3
-close-station:koch:Koch V Anchorage	17a7e9097bfaf3
-open-station:carver:Carver V Anchorage	11a6f5d8a53cba
-close-station:carver:Carver V Anchorage	11a6f5d8a53cba
-open-station:carver:Carver V Survey Platform	11a6f5d8a53cba
-close-station:carver:Carver V Survey Platform	11a6f5d8a53cba
-open-station:carver:Carver VI Anchorage	11a6f5d8a53cba
-close-station:carver:Carver VI Anchorage	11a6f5d8a53cba
-open-station:carver:Carver Defense Platform	11a6f5d8a53cba
-close-station:carver:Carver Defense Platform	11a6f5d8a53cba
-open-station:bharask:Vonako Anchorage	5dd03ce0884ae
-close-station:bharask:Vonako Anchorage	5dd03ce0884ae
-open-station:bharask:Vonako Survey Platform	5dd03ce0884ae
-close-station:bharask:Vonako Survey Platform	5dd03ce0884ae
-open-station:blake-s-star:Phoenix Anchorage	d71f9c599a9c2
-close-station:blake-s-star:Phoenix Anchorage	d71f9c599a9c2
-open-station:blake-s-star:Phoenix Survey Platform	d71f9c599a9c2
-close-station:blake-s-star:Phoenix Survey Platform	d71f9c599a9c2
-open-station:blake-s-star:Belleza Anchorage	d71f9c599a9c2
-close-station:blake-s-star:Belleza Anchorage	d71f9c599a9c2
-open-station:blake-s-star:Belleza Survey Platform	d71f9c599a9c2
-close-station:blake-s-star:Belleza Survey Platform	d71f9c599a9c2
-open-station:weiss-287:Carson Station	b2666c2510933
-close-station:weiss-287:Carson Station	b2666c2510933
-open-station:weiss-287:New Dresden Survey Platform	b2666c2510933
-close-station:weiss-287:New Dresden Survey Platform	b2666c2510933
-open-station:weiss-287:Weiss 287 V Anchorage	b2666c2510933
-close-station:weiss-287:Weiss 287 V Anchorage	b2666c2510933
-open-station:sol:Visegrad Orbital	19d59f6e54576e
-close-station:sol:Visegrad Orbital	30419f841a687
-open-station:sol:Eden Survey Platform	c6fdbdf877bdc
-close-station:sol:Eden Survey Platform	46f505ce8a26b
-open-station:sol:Arcadia Anchorage	1951ce677bd9b3
-close-station:sol:Arcadia Anchorage	b2ab6f416ddd7
-open-station:sol:Arcadia Survey Platform	72ae4fa208967
-close-station:sol:Arcadia Survey Platform	1a33c9d9d1fcbb
-open-station:sol:Sol VI Anchorage	c75a3af323124
-close-station:sol:Sol VI Anchorage	138f79946fc825
-open-station:sol:Sol Defense Platform	6ff3107739e3
-close-station:sol:Sol Defense Platform	1654b7f4f6d9b5
-open-station:freki:Freki III Anchorage	159a563446c046
-close-station:freki:Freki III Anchorage	159a563446c046
-open-station:freki:Freki IV Anchorage	159a563446c046
-close-station:freki:Freki IV Anchorage	159a563446c046
-open-station:freki:Freki IV Survey Platform	159a563446c046
-close-station:freki:Freki IV Survey Platform	159a563446c046
-open-station:cassius:Kronos Anchorage	185b3bb48e61e4
-close-station:cassius:Kronos Anchorage	185b3bb48e61e4
-open-station:cassius:Kronos Survey Platform	185b3bb48e61e4
-close-station:cassius:Kronos Survey Platform	185b3bb48e61e4
-open-station:cassius:Cassius IV Anchorage	185b3bb48e61e4
-close-station:cassius:Cassius IV Anchorage	185b3bb48e61e4
-open-station:heimdall:Jotunheim Anchorage	194a6852773bf8
-close-station:heimdall:Jotunheim Anchorage	194a6852773bf8
-open-station:heimdall:Jotunheim Survey Platform	194a6852773bf8
-close-station:heimdall:Jotunheim Survey Platform	194a6852773bf8
-open-station:heimdall:Heimdall V Anchorage	194a6852773bf8
-close-station:heimdall:Heimdall V Anchorage	194a6852773bf8
-open-station:heimdall:Heimdall Defense Platform	194a6852773bf8
-close-station:heimdall:Heimdall Defense Platform	194a6852773bf8
-open-station:tessera:New Soris Anchorage	4ee13118ec8dc
-close-station:tessera:New Soris Anchorage	4ee13118ec8dc
-open-station:tessera:New Soris Survey Platform	4ee13118ec8dc
-close-station:tessera:New Soris Survey Platform	4ee13118ec8dc
-open-station:tessera:Tessera VI Anchorage	4ee13118ec8dc
-close-station:tessera:Tessera VI Anchorage	4ee13118ec8dc
-open-station:hargrove:Oros Anchorage	8d1cf3fa3e407
-close-station:hargrove:Oros Anchorage	8d1cf3fa3e407
-open-station:hargrove:Oros Survey Platform	8d1cf3fa3e407
-close-station:hargrove:Oros Survey Platform	8d1cf3fa3e407
-open-station:torrin:Emberfall Anchorage	2e97e19d2b790
-close-station:torrin:Emberfall Anchorage	2e97e19d2b790
-open-station:torrin:Emberfall Survey Platform	2e97e19d2b790
-close-station:torrin:Emberfall Survey Platform	2e97e19d2b790
-open-station:torrin:Torrin IV Anchorage	2e97e19d2b790
-close-station:torrin:Torrin IV Anchorage	2e97e19d2b790
-open-station:morrigan:Fairmeadow Anchorage	572de4c61b5db
-close-station:morrigan:Fairmeadow Anchorage	572de4c61b5db
-open-station:morrigan:Fairmeadow Survey Platform	572de4c61b5db
-close-station:morrigan:Fairmeadow Survey Platform	572de4c61b5db
-open-station:morrigan:Morrigan V Anchorage	572de4c61b5db
-close-station:morrigan:Morrigan V Anchorage	572de4c61b5db
-open-station:tenebrae:Tenebrae IV Anchorage	183a73a057b9bb
-close-station:tenebrae:Tenebrae IV Anchorage	183a73a057b9bb
-open-station:tenebrae:Tenebrae IV Survey Platform	183a73a057b9bb
-close-station:tenebrae:Tenebrae IV Survey Platform	183a73a057b9bb
-open-station:tenebrae:Tenebrae VI Anchorage	183a73a057b9bb
-close-station:tenebrae:Tenebrae VI Anchorage	183a73a057b9bb
-open-station:aldwick:Aldwick III Anchorage	124cd606403a9d
-close-station:aldwick:Aldwick III Anchorage	124cd606403a9d
-open-station:aldwick:Aldwick III Survey Platform	124cd606403a9d
-close-station:aldwick:Aldwick III Survey Platform	124cd606403a9d
-open-station:kestrel:Windward Anchorage	2c1bd10e49ce2
-close-station:kestrel:Windward Anchorage	2c1bd10e49ce2
-open-station:kestrel:Windward Survey Platform	2c1bd10e49ce2
-close-station:kestrel:Windward Survey Platform	2c1bd10e49ce2
-open-station:kestrel:Kestrel IV Anchorage	2c1bd10e49ce2
-close-station:kestrel:Kestrel IV Anchorage	2c1bd10e49ce2
-open-station:wexley:Fairhaven Anchorage	96ce020e18b1a
-close-station:wexley:Fairhaven Anchorage	96ce020e18b1a
-open-station:wexley:Fairhaven Survey Platform	96ce020e18b1a
-close-station:wexley:Fairhaven Survey Platform	96ce020e18b1a
-open-station:wexley:Wexley V Anchorage	96ce020e18b1a
-close-station:wexley:Wexley V Anchorage	96ce020e18b1a
-open-station:lyndon:Greenbank Anchorage	c405fcae6ef98
-close-station:lyndon:Greenbank Anchorage	c405fcae6ef98
-open-station:lyndon:Greenbank Survey Platform	c405fcae6ef98
-close-station:lyndon:Greenbank Survey Platform	c405fcae6ef98
-open-station:lyndon:Lyndon VI Anchorage	c405fcae6ef98
-close-station:lyndon:Lyndon VI Anchorage	c405fcae6ef98
-open-station:vesper:Evenfall Anchorage	14e4e696c99308
-close-station:vesper:Evenfall Anchorage	14e4e696c99308
-open-station:vesper:Evenfall Survey Platform	14e4e696c99308
-close-station:vesper:Evenfall Survey Platform	14e4e696c99308
-open-station:weiss-304:Weiss 304 IV Anchorage	21a198dffabd
-close-station:weiss-304:Weiss 304 IV Anchorage	21a198dffabd
-open-station:rosen:Rosewater Anchorage	2ea469f170522
-close-station:rosen:Rosewater Anchorage	2ea469f170522
-open-station:rosen:Rosewater Survey Platform	2ea469f170522
-close-station:rosen:Rosewater Survey Platform	2ea469f170522
-open-station:rosen:Rosen V Anchorage	2ea469f170522
-close-station:rosen:Rosen V Anchorage	2ea469f170522
-open-station:ashcombe:Ashcombe IV Anchorage	178667def8706d
-close-station:ashcombe:Ashcombe IV Anchorage	178667def8706d
-open-station:ashcombe:Ashcombe IV Survey Platform	178667def8706d
-close-station:ashcombe:Ashcombe IV Survey Platform	178667def8706d
-open-station:ashcombe:Ashcombe VI Anchorage	178667def8706d
-close-station:ashcombe:Ashcombe VI Anchorage	178667def8706d
-open-station:tyndall:Farsight Anchorage	a097bfdf0a758
-close-station:tyndall:Farsight Anchorage	a097bfdf0a758
-open-station:tyndall:Farsight Survey Platform	a097bfdf0a758
-close-station:tyndall:Farsight Survey Platform	a097bfdf0a758
-open-station:dunstan:Dunstan III Anchorage	7f7c6a3e9c184
-close-station:dunstan:Dunstan III Anchorage	7f7c6a3e9c184
-open-station:dunstan:Dunstan III Survey Platform	7f7c6a3e9c184
-close-station:dunstan:Dunstan III Survey Platform	7f7c6a3e9c184
-open-station:dunstan:Dunstan IV Anchorage	7f7c6a3e9c184
-close-station:dunstan:Dunstan IV Anchorage	7f7c6a3e9c184
-open-station:corvin:Corvin III Anchorage	ec644ceab2394
-close-station:corvin:Corvin III Anchorage	ec644ceab2394
-open-station:corvin:Corvin III Survey Platform	ec644ceab2394
-close-station:corvin:Corvin III Survey Platform	ec644ceab2394
-open-station:corvin:Corvin V Anchorage	ec644ceab2394
-close-station:corvin:Corvin V Anchorage	ec644ceab2394
-open-station:weiss-319:Weiss 319 VI Anchorage	1e54d277b48e6b
-close-station:weiss-319:Weiss 319 VI Anchorage	1e54d277b48e6b
-open-station:aster:Hearth Anchorage	526a13ad354e9
-close-station:aster:Hearth Anchorage	526a13ad354e9
-open-station:aster:Hearth Survey Platform	526a13ad354e9
-close-station:aster:Hearth Survey Platform	526a13ad354e9
-open-station:hollis:Dunmere Anchorage	12bf9dd7764050
-close-station:hollis:Dunmere Anchorage	12bf9dd7764050
-open-station:hollis:Dunmere Survey Platform	12bf9dd7764050
-close-station:hollis:Dunmere Survey Platform	12bf9dd7764050
-open-station:hollis:Hollis IV Anchorage	12bf9dd7764050
-close-station:hollis:Hollis IV Anchorage	12bf9dd7764050
-open-station:kepler-81:Kepler 81 V Anchorage	b122b4cafdd6a
-close-station:kepler-81:Kepler 81 V Anchorage	b122b4cafdd6a
-open-station:redwick:Redwick III Anchorage	e172a7188514f
-close-station:redwick:Redwick III Anchorage	e172a7188514f
-open-station:redwick:Redwick III Survey Platform	e172a7188514f
-close-station:redwick:Redwick III Survey Platform	e172a7188514f
-open-station:redwick:Redwick VI Anchorage	e172a7188514f
-close-station:redwick:Redwick VI Anchorage	e172a7188514f
-open-station:briar:Bellhaven Anchorage	10ab043aed02d7
-close-station:briar:Bellhaven Anchorage	10ab043aed02d7
-open-station:briar:Bellhaven Survey Platform	10ab043aed02d7
-close-station:briar:Bellhaven Survey Platform	10ab043aed02d7
-open-station:elara:Elara III Anchorage	1caf471dfc02d5
-close-station:elara:Elara III Anchorage	1caf471dfc02d5
-open-station:elara:Elara III Survey Platform	1caf471dfc02d5
-close-station:elara:Elara III Survey Platform	1caf471dfc02d5
-open-station:elara:Elara IV Anchorage	1caf471dfc02d5
-close-station:elara:Elara IV Anchorage	1caf471dfc02d5
+open-station:adrea:New Olympia Anchorage	1c2aec4812f9ba
+close-station:adrea:New Olympia Anchorage	1c2aec4812f9ba
+open-station:adrea:New Olympia Survey Platform	1c2aec4812f9ba
+close-station:adrea:New Olympia Survey Platform	1c2aec4812f9ba
+open-station:adrea:Florence Anchorage	1c2aec4812f9ba
+close-station:adrea:Florence Anchorage	1c2aec4812f9ba
+open-station:adrea:Florence Survey Platform	1c2aec4812f9ba
+close-station:adrea:Florence Survey Platform	1c2aec4812f9ba
+open-station:athrys:Clyse Anchorage	dde06bf18e8cc
+close-station:athrys:Clyse Anchorage	dde06bf18e8cc
+open-station:athrys:Clyse Survey Platform	dde06bf18e8cc
+close-station:athrys:Clyse Survey Platform	dde06bf18e8cc
+open-station:athrys:Athrys IV Anchorage	dde06bf18e8cc
+close-station:athrys:Athrys IV Anchorage	dde06bf18e8cc
+open-station:sutherland:Haas Anchorage	2c40a6903c383
+close-station:sutherland:Haas Anchorage	2c40a6903c383
+open-station:sutherland:Haas Survey Platform	2c40a6903c383
+close-station:sutherland:Haas Survey Platform	2c40a6903c383
+open-station:sutherland:Sutherland V Anchorage	2c40a6903c383
+close-station:sutherland:Sutherland V Anchorage	2c40a6903c383
+open-station:viery:Mir Anchorage	4031653318e28
+close-station:viery:Mir Anchorage	4031653318e28
+open-station:viery:Mir Survey Platform	4031653318e28
+close-station:viery:Mir Survey Platform	4031653318e28
+open-station:viery:Ivanoff Anchorage	4031653318e28
+close-station:viery:Ivanoff Anchorage	4031653318e28
+open-station:viery:Ivanoff Survey Platform	4031653318e28
+close-station:viery:Ivanoff Survey Platform	4031653318e28
+open-station:viery:Viery VI Anchorage	4031653318e28
+close-station:viery:Viery VI Anchorage	4031653318e28
+open-station:weiss-212:Ferox Anchorage	15c6fbdba2f235
+close-station:weiss-212:Ferox Anchorage	15c6fbdba2f235
+open-station:weiss-212:Ferox Survey Platform	15c6fbdba2f235
+close-station:weiss-212:Ferox Survey Platform	15c6fbdba2f235
+open-station:johanssen:Noxon Anchorage	1acd3281b25662
+close-station:johanssen:Noxon Anchorage	1acd3281b25662
+open-station:johanssen:Noxon Survey Platform	1acd3281b25662
+close-station:johanssen:Noxon Survey Platform	1acd3281b25662
+open-station:johanssen:Morcate Anchorage	1acd3281b25662
+close-station:johanssen:Morcate Anchorage	1acd3281b25662
+open-station:johanssen:Morcate Survey Platform	1acd3281b25662
+close-station:johanssen:Morcate Survey Platform	1acd3281b25662
+open-station:acrius:Foundation Anchorage	5113c48c99b1f
+close-station:acrius:Foundation Anchorage	5113c48c99b1f
+open-station:acrius:Foundation Survey Platform	5113c48c99b1f
+close-station:acrius:Foundation Survey Platform	5113c48c99b1f
+open-station:acrius:Tributa Anchorage	5113c48c99b1f
+close-station:acrius:Tributa Anchorage	5113c48c99b1f
+open-station:acrius:Tributa Survey Platform	5113c48c99b1f
+close-station:acrius:Tributa Survey Platform	5113c48c99b1f
+open-station:acrius:Acrius V Anchorage	5113c48c99b1f
+close-station:acrius:Acrius V Anchorage	5113c48c99b1f
+open-station:haldor:Havencrest Anchorage	1e08aa602c67fc
+close-station:haldor:Havencrest Anchorage	1e08aa602c67fc
+open-station:haldor:Havencrest Survey Platform	1e08aa602c67fc
+close-station:haldor:Havencrest Survey Platform	1e08aa602c67fc
+open-station:haldor:Haldor VI Anchorage	1e08aa602c67fc
+close-station:haldor:Haldor VI Anchorage	1e08aa602c67fc
+open-station:constantine:Saratoga Anchorage	15dd81e6ee584e
+close-station:constantine:Saratoga Anchorage	15dd81e6ee584e
+open-station:constantine:Saratoga Survey Platform	15dd81e6ee584e
+close-station:constantine:Saratoga Survey Platform	15dd81e6ee584e
+open-station:dsc-346:DSC 346 II Anchorage	1208a91dd5d365
+close-station:dsc-346:DSC 346 II Anchorage	1208a91dd5d365
+open-station:dsc-346:V. Sokolov Observatory	1208a91dd5d365
+close-station:dsc-346:V. Sokolov Observatory	1208a91dd5d365
+open-station:koch:Prospect Anchorage	16d6a5aeaf34f1
+close-station:koch:Prospect Anchorage	16d6a5aeaf34f1
+open-station:koch:Prospect Survey Platform	16d6a5aeaf34f1
+close-station:koch:Prospect Survey Platform	16d6a5aeaf34f1
+open-station:koch:Koch V Anchorage	16d6a5aeaf34f1
+close-station:koch:Koch V Anchorage	16d6a5aeaf34f1
+open-station:carver:Carver V Anchorage	97905fae48b6e
+close-station:carver:Carver V Anchorage	97905fae48b6e
+open-station:carver:Carver V Survey Platform	97905fae48b6e
+close-station:carver:Carver V Survey Platform	97905fae48b6e
+open-station:carver:Carver VI Anchorage	97905fae48b6e
+close-station:carver:Carver VI Anchorage	97905fae48b6e
+open-station:carver:Carver Defense Platform	97905fae48b6e
+close-station:carver:Carver Defense Platform	97905fae48b6e
+open-station:bharask:Vonako Anchorage	7650c91c54499
+close-station:bharask:Vonako Anchorage	7650c91c54499
+open-station:bharask:Vonako Survey Platform	7650c91c54499
+close-station:bharask:Vonako Survey Platform	7650c91c54499
+open-station:blake-s-star:Phoenix Anchorage	6546cc00e4780
+close-station:blake-s-star:Phoenix Anchorage	6546cc00e4780
+open-station:blake-s-star:Phoenix Survey Platform	6546cc00e4780
+close-station:blake-s-star:Phoenix Survey Platform	6546cc00e4780
+open-station:blake-s-star:Belleza Anchorage	6546cc00e4780
+close-station:blake-s-star:Belleza Anchorage	6546cc00e4780
+open-station:blake-s-star:Belleza Survey Platform	6546cc00e4780
+close-station:blake-s-star:Belleza Survey Platform	6546cc00e4780
+open-station:weiss-287:Carson Station	114da52476f913
+close-station:weiss-287:Carson Station	114da52476f913
+open-station:weiss-287:New Dresden Survey Platform	114da52476f913
+close-station:weiss-287:New Dresden Survey Platform	114da52476f913
+open-station:weiss-287:Weiss 287 V Anchorage	114da52476f913
+close-station:weiss-287:Weiss 287 V Anchorage	114da52476f913
+open-station:sol:Visegrad Orbital	b843ec9717a5b
+close-station:sol:Visegrad Orbital	3fcb1ed54dcbc
+open-station:sol:Eden Survey Platform	b47e86ebf1a83
+close-station:sol:Eden Survey Platform	1d294b46b8cbdf
+open-station:sol:Arcadia Anchorage	fe01961c586dc
+close-station:sol:Arcadia Anchorage	112b2efbb41869
+open-station:sol:Arcadia Survey Platform	186ff876ae6cf3
+close-station:sol:Arcadia Survey Platform	cf85d3e9d0751
+open-station:sol:Sol VI Anchorage	31a714ddf8d0f
+close-station:sol:Sol VI Anchorage	edb2d8c5fec85
+open-station:sol:Sol Defense Platform	e6b3240cdee2
+close-station:sol:Sol Defense Platform	9ef14beca2877
+open-station:freki:Freki III Anchorage	23bc449e34fcf
+close-station:freki:Freki III Anchorage	23bc449e34fcf
+open-station:freki:Freki IV Anchorage	23bc449e34fcf
+close-station:freki:Freki IV Anchorage	23bc449e34fcf
+open-station:freki:Freki IV Survey Platform	23bc449e34fcf
+close-station:freki:Freki IV Survey Platform	23bc449e34fcf
+open-station:cassius:Kronos Anchorage	19c56181de4f0c
+close-station:cassius:Kronos Anchorage	19c56181de4f0c
+open-station:cassius:Kronos Survey Platform	19c56181de4f0c
+close-station:cassius:Kronos Survey Platform	19c56181de4f0c
+open-station:cassius:Cassius IV Anchorage	19c56181de4f0c
+close-station:cassius:Cassius IV Anchorage	19c56181de4f0c
+open-station:heimdall:Jotunheim Anchorage	173e8cfb576dd4
+close-station:heimdall:Jotunheim Anchorage	173e8cfb576dd4
+open-station:heimdall:Jotunheim Survey Platform	173e8cfb576dd4
+close-station:heimdall:Jotunheim Survey Platform	173e8cfb576dd4
+open-station:heimdall:Heimdall V Anchorage	173e8cfb576dd4
+close-station:heimdall:Heimdall V Anchorage	173e8cfb576dd4
+open-station:heimdall:Heimdall Defense Platform	173e8cfb576dd4
+close-station:heimdall:Heimdall Defense Platform	173e8cfb576dd4
+open-station:tessera:New Soris Anchorage	11243a6289e7d9
+close-station:tessera:New Soris Anchorage	11243a6289e7d9
+open-station:tessera:New Soris Survey Platform	11243a6289e7d9
+close-station:tessera:New Soris Survey Platform	11243a6289e7d9
+open-station:tessera:Tessera VI Anchorage	11243a6289e7d9
+close-station:tessera:Tessera VI Anchorage	11243a6289e7d9
+open-station:hargrove:Oros Anchorage	1c892cd59e97a9
+close-station:hargrove:Oros Anchorage	1c892cd59e97a9
+open-station:hargrove:Oros Survey Platform	1c892cd59e97a9
+close-station:hargrove:Oros Survey Platform	1c892cd59e97a9
+open-station:torrin:Emberfall Anchorage	b209249c19103
+close-station:torrin:Emberfall Anchorage	b209249c19103
+open-station:torrin:Emberfall Survey Platform	b209249c19103
+close-station:torrin:Emberfall Survey Platform	b209249c19103
+open-station:torrin:Torrin IV Anchorage	b209249c19103
+close-station:torrin:Torrin IV Anchorage	b209249c19103
+open-station:morrigan:Fairmeadow Anchorage	1999a0b203c82
+close-station:morrigan:Fairmeadow Anchorage	1999a0b203c82
+open-station:morrigan:Fairmeadow Survey Platform	1999a0b203c82
+close-station:morrigan:Fairmeadow Survey Platform	1999a0b203c82
+open-station:morrigan:Morrigan V Anchorage	1999a0b203c82
+close-station:morrigan:Morrigan V Anchorage	1999a0b203c82
+open-station:tenebrae:Tenebrae IV Anchorage	541c0f178e5de
+close-station:tenebrae:Tenebrae IV Anchorage	541c0f178e5de
+open-station:tenebrae:Tenebrae IV Survey Platform	541c0f178e5de
+close-station:tenebrae:Tenebrae IV Survey Platform	541c0f178e5de
+open-station:tenebrae:Tenebrae VI Anchorage	541c0f178e5de
+close-station:tenebrae:Tenebrae VI Anchorage	541c0f178e5de
+open-station:aldwick:Aldwick III Anchorage	15fff34b15376e
+close-station:aldwick:Aldwick III Anchorage	15fff34b15376e
+open-station:aldwick:Aldwick III Survey Platform	15fff34b15376e
+close-station:aldwick:Aldwick III Survey Platform	15fff34b15376e
+open-station:kestrel:Windward Anchorage	1bfe1e598c746b
+close-station:kestrel:Windward Anchorage	1bfe1e598c746b
+open-station:kestrel:Windward Survey Platform	1bfe1e598c746b
+close-station:kestrel:Windward Survey Platform	1bfe1e598c746b
+open-station:kestrel:Kestrel IV Anchorage	1bfe1e598c746b
+close-station:kestrel:Kestrel IV Anchorage	1bfe1e598c746b
+open-station:wexley:Fairhaven Anchorage	ea4cb317ab3d
+close-station:wexley:Fairhaven Anchorage	ea4cb317ab3d
+open-station:wexley:Fairhaven Survey Platform	ea4cb317ab3d
+close-station:wexley:Fairhaven Survey Platform	ea4cb317ab3d
+open-station:wexley:Wexley V Anchorage	ea4cb317ab3d
+close-station:wexley:Wexley V Anchorage	ea4cb317ab3d
+open-station:lyndon:Greenbank Anchorage	343ee4475e0e2
+close-station:lyndon:Greenbank Anchorage	343ee4475e0e2
+open-station:lyndon:Greenbank Survey Platform	343ee4475e0e2
+close-station:lyndon:Greenbank Survey Platform	343ee4475e0e2
+open-station:lyndon:Lyndon VI Anchorage	343ee4475e0e2
+close-station:lyndon:Lyndon VI Anchorage	343ee4475e0e2
+open-station:vesper:Evenfall Anchorage	cdd160b57c083
+close-station:vesper:Evenfall Anchorage	cdd160b57c083
+open-station:vesper:Evenfall Survey Platform	cdd160b57c083
+close-station:vesper:Evenfall Survey Platform	cdd160b57c083
+open-station:weiss-304:Weiss 304 IV Anchorage	203c84cdd5802
+close-station:weiss-304:Weiss 304 IV Anchorage	203c84cdd5802
+open-station:rosen:Rosewater Anchorage	130281cfb4790a
+close-station:rosen:Rosewater Anchorage	130281cfb4790a
+open-station:rosen:Rosewater Survey Platform	130281cfb4790a
+close-station:rosen:Rosewater Survey Platform	130281cfb4790a
+open-station:rosen:Rosen V Anchorage	130281cfb4790a
+close-station:rosen:Rosen V Anchorage	130281cfb4790a
+open-station:ashcombe:Ashcombe IV Anchorage	87e22aba85ed8
+close-station:ashcombe:Ashcombe IV Anchorage	87e22aba85ed8
+open-station:ashcombe:Ashcombe IV Survey Platform	87e22aba85ed8
+close-station:ashcombe:Ashcombe IV Survey Platform	87e22aba85ed8
+open-station:ashcombe:Ashcombe VI Anchorage	87e22aba85ed8
+close-station:ashcombe:Ashcombe VI Anchorage	87e22aba85ed8
+open-station:tyndall:Farsight Anchorage	378d53bab56f0
+close-station:tyndall:Farsight Anchorage	378d53bab56f0
+open-station:tyndall:Farsight Survey Platform	378d53bab56f0
+close-station:tyndall:Farsight Survey Platform	378d53bab56f0
+open-station:dunstan:Dunstan III Anchorage	170cb5a6c44ec9
+close-station:dunstan:Dunstan III Anchorage	170cb5a6c44ec9
+open-station:dunstan:Dunstan III Survey Platform	170cb5a6c44ec9
+close-station:dunstan:Dunstan III Survey Platform	170cb5a6c44ec9
+open-station:dunstan:Dunstan IV Anchorage	170cb5a6c44ec9
+close-station:dunstan:Dunstan IV Anchorage	170cb5a6c44ec9
+open-station:corvin:Corvin III Anchorage	3ac229c445eb0
+close-station:corvin:Corvin III Anchorage	3ac229c445eb0
+open-station:corvin:Corvin III Survey Platform	3ac229c445eb0
+close-station:corvin:Corvin III Survey Platform	3ac229c445eb0
+open-station:corvin:Corvin V Anchorage	3ac229c445eb0
+close-station:corvin:Corvin V Anchorage	3ac229c445eb0
+open-station:weiss-319:Weiss 319 VI Anchorage	26b0863fad1c4
+close-station:weiss-319:Weiss 319 VI Anchorage	26b0863fad1c4
+open-station:aster:Hearth Anchorage	1e9350de12a58c
+close-station:aster:Hearth Anchorage	1e9350de12a58c
+open-station:aster:Hearth Survey Platform	1e9350de12a58c
+close-station:aster:Hearth Survey Platform	1e9350de12a58c
+open-station:hollis:Dunmere Anchorage	1d13b1d02ec77b
+close-station:hollis:Dunmere Anchorage	1d13b1d02ec77b
+open-station:hollis:Dunmere Survey Platform	1d13b1d02ec77b
+close-station:hollis:Dunmere Survey Platform	1d13b1d02ec77b
+open-station:hollis:Hollis IV Anchorage	1d13b1d02ec77b
+close-station:hollis:Hollis IV Anchorage	1d13b1d02ec77b
+open-station:kepler-81:Kepler 81 V Anchorage	1c0e87adf349fb
+close-station:kepler-81:Kepler 81 V Anchorage	1c0e87adf349fb
+open-station:redwick:Redwick III Anchorage	116d156f166d6
+close-station:redwick:Redwick III Anchorage	116d156f166d6
+open-station:redwick:Redwick III Survey Platform	116d156f166d6
+close-station:redwick:Redwick III Survey Platform	116d156f166d6
+open-station:redwick:Redwick VI Anchorage	116d156f166d6
+close-station:redwick:Redwick VI Anchorage	116d156f166d6
+open-station:briar:Bellhaven Anchorage	640c72193a3d8
+close-station:briar:Bellhaven Anchorage	640c72193a3d8
+open-station:briar:Bellhaven Survey Platform	640c72193a3d8
+close-station:briar:Bellhaven Survey Platform	640c72193a3d8
+open-station:elara:Elara III Anchorage	182a752fa608
+close-station:elara:Elara III Anchorage	182a752fa608
+open-station:elara:Elara III Survey Platform	182a752fa608
+close-station:elara:Elara III Survey Platform	182a752fa608
+open-station:elara:Elara IV Anchorage	182a752fa608
+close-station:elara:Elara IV Anchorage	182a752fa608
 ui:reset	15b5b41fd7f74a
 ui:search:	15b5b41fd7f74a
 ui:search:zzz-no-such-thing	1de8517d4e0e22
@@ -1997,6 +1997,6 @@ ui:key:ArrowUp	1da6e5ff49b9b3
 ui:key:ArrowLeft	1c37d44cb8594b
 ui:key:ArrowDown	33ef5bf386a84
 ui:key:ArrowRight	f6b9d537473e0
-ui:zoom-in-system	e9ebffb660062
-ui:key-in-system:+	1772321e4e859b
+ui:zoom-in-system	1d84f7abfe4684
+ui:key-in-system:+	a8635098d3026
 ui:key-in-system:0	82364b80d45ee
