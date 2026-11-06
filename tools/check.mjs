@@ -1,24 +1,17 @@
 #!/usr/bin/env node
 // One command that answers "did this change break anything?".
 //
-//   node tools/check.mjs                 build, unit tests, DOM tests, quick golden tours
-//   node tools/check.mjs --full          the same with the full golden tours (slow: ~10 minutes)
-//   node tools/check.mjs --atlas a,b     limit the golden tours to these atlases
+//   node tools/check.mjs                 build, unit tests, DOM tests
 //   node tools/check.mjs --e2e           also run the browser tests (Playwright; about 7 minutes)
-//   node tools/check.mjs --jobs 1        golden tours at a time (default 2; each uses a lot of memory)
 //
 // Exit code 0 only if every step passes.
-import { spawn, spawnSync } from 'node:child_process';
+import { spawnSync } from 'node:child_process';
 import { readdirSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const args = process.argv.slice(2);
-const opt = (n) => (args.includes('--' + n) ? args[args.indexOf('--' + n) + 1] : null);
-const full = args.includes('--full');
-const atlases = (opt('atlas') ?? 'elysian,uacs,kadaym,iulr,calidor').split(',');
-const jobs = Number(opt('jobs') ?? 2);
 const e2e = args.includes('--e2e');
 const results = [];
 
@@ -49,30 +42,6 @@ run('DOM tests', node, ['tests/dom.cjs'], { pass: (o) => (o.match(/^PASS/gm) || 
 run('IULR DOM tests', node, ['tests/iulr-dom.cjs'], {
   pass: (o) => (o.match(/^PASS/gm) || []).length >= 10
 });
-
-// Golden tours: a few at a time, each in its own process.
-const queue = [...atlases];
-async function worker() {
-  while (queue.length) {
-    const id = queue.shift();
-    const started = Date.now();
-    const cmdArgs = ['tests/golden.cjs', ...(full ? [] : ['--quick']), id];
-    const out = await new Promise((resolve) => {
-      let buf = '';
-      const child = spawn(node, cmdArgs, { cwd: root });
-      child.stdout.on('data', (d) => (buf += d));
-      child.stderr.on('data', (d) => (buf += d));
-      child.on('close', (code) => resolve({ code, buf }));
-    });
-    const secs = ((Date.now() - started) / 1000).toFixed(0);
-    record(
-      `golden ${full ? 'full' : 'quick'} ${id}`,
-      out.code === 0,
-      out.code === 0 ? `${secs}s` : out.buf.trim().split('\n').slice(0, 3).join(' | ').slice(0, 300)
-    );
-  }
-}
-await Promise.all(Array.from({ length: jobs }, worker));
 
 if (e2e)
   run('browser tests', node, [path.join(root, 'node_modules/@playwright/test/cli.js'), 'test']);

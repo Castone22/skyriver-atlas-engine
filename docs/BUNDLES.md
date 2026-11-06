@@ -282,8 +282,8 @@ This supersedes the step-by-step status sections above, whose function and flag 
 - Function files: 378 originally, 244 now. 48 capability flags are registered in `engine/flags.json`,
   each off by default and set per atlas in `bundle.json`. 14 function groups still have more than one
   variant (list in `docs/HANDOFF.md`).
-- The contract for behaviour is `tests/golden/`: a tour of every region, system, planet, satellite and
-  station, plus the page's own controls. `npm run check` runs it in quick mode; a change is finished
-  only when `npm run check:full` passes.
+- The contract for behaviour is `tests/e2e/`: a tour of every region, system, planet, satellite and
+  station, plus the page's own controls, and screenshots. A change is finished only when
+  `npm run check:full` passes.
 - Still open: the maintainer decisions marked pending in `docs/converge/DECISIONS.md`, the remaining
   shell wording as slots with an engine-default shell, and the extension side.

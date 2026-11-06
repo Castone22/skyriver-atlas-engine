@@ -26,11 +26,8 @@
     "update-iulr": "node tools/migration/update-iulr-v9.cjs",
     "build:loader": "node tools/build-loader.mjs",
     "manifest": "node tools/bundle-manifest.mjs",
-    "test:golden": "node tests/golden.cjs",
-    "golden:update": "node tests/golden.cjs --update",
-    "dedup-lab": "node tools/dedup-lab.mjs",
     "check": "node tools/check.mjs",
-    "check:full": "node tools/check.mjs --full",
+    "check:full": "node tools/check.mjs --e2e",
     "index-functions": "node tools/index-functions.mjs",
     "e2e": "playwright test",
     "e2e:update": "playwright test --update-snapshots"

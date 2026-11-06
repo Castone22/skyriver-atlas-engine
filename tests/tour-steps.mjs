@@ -1,8 +1,7 @@
-// The steps of the atlas tour, as plain data. Shared by the jsdom golden tours (tests/golden.cjs)
-// and the Playwright browser tours (tests/e2e). Nothing here touches a page.
+// The steps of the atlas tour, as plain data. Used by the Playwright browser tours (tests/e2e). Nothing here touches a page.
 //
 // A step is { key, route?, act?, always? }.
-//   key     names the step in the golden files
+//   key     names the step in the baseline
 //   route   passed to AtlasFramework.navigate(route) first; null means "do nothing" (the page as loaded)
 //   act     a control to operate afterwards (see below)
 //   always  kept in quick mode

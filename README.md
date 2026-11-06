@@ -10,17 +10,16 @@ Start with `docs/HANDOFF.md`. Rules for changing the code are in `AGENTS.md`.
 
 Node.js 22 or newer. Run `npm install` once.
 
-| Command                 | Action                                                   |
-| ----------------------- | -------------------------------------------------------- |
-| `npm run build`         | Write `dist/*.html`                                      |
-| `npm run serve`         | Serve `dist/` at `http://127.0.0.1:8080/`                |
-| `npm run check`         | Build, unit tests, DOM tests, quick golden tours (4 min) |
-| `npm run check:full`    | Build, unit tests, DOM tests, full golden tours (10 min) |
-| `npm run e2e`           | Browser tests in Chromium (Playwright), about 7 minutes  |
-| `npm run e2e:update`    | Rewrite the browser-test baselines and screenshots       |
-| `npm run golden:update` | Rewrite the jsdom golden hashes                          |
-| `npm run build:loader`  | Build the browser loader, `build/loader.html`            |
-| `npm run format`        | Format with Prettier                                     |
+| Command                | Action                                                  |
+| ---------------------- | ------------------------------------------------------- |
+| `npm run build`        | Write `dist/*.html`                                     |
+| `npm run serve`        | Serve `dist/` at `http://127.0.0.1:8080/`               |
+| `npm run check`        | Build, unit tests, DOM tests                            |
+| `npm run check:full`   | The same plus the browser tests (about 7 minutes)       |
+| `npm run e2e`          | Browser tests in Chromium (Playwright), about 7 minutes |
+| `npm run e2e:update`   | Rewrite the browser-test baselines and screenshots      |
+| `npm run build:loader` | Build the browser loader, `build/loader.html`           |
+| `npm run format`       | Format with Prettier                                    |
 
 ## Layout
 
@@ -32,8 +31,8 @@ Node.js 22 or newer. Run `npm install` once.
 | `maps/`         | Authoring entry points, one per atlas                                    |
 | `assets/`       | Images named by SHA-256                                                  |
 | `loader/`       | Browser loader page                                                      |
-| `tools/`        | Build, check, golden-tour, function-index and refactoring tools          |
-| `tests/`        | Unit tests, DOM tests, golden tours                                      |
+| `tools/`        | Build, check, function-index and refactoring tools                       |
+| `tests/`        | Unit tests, DOM tests, browser tests                                     |
 | `dist/`         | Generated HTML                                                           |
 | `docs/`         | Design and procedure docs; `docs/history/` holds the original extraction |
 
@@ -152,14 +151,11 @@ and renders the atlas in the browser, inside the AtlasEmbed sandbox. The contrac
 - **Unit tests** (`tests/*.test.mjs`): DSL, bundles, flags, templates, transport, compiler core, widget mode.
 - **DOM tests** (`tests/dom.cjs`, `tests/iulr-dom.cjs`): navigation, schematics, search and the IULR
   title synchronisation in jsdom.
-- **Golden tours** (`tests/golden.cjs`): every region, system, planet, satellite and station, the
-  station screens, and the page controls. Each step is hashed and compared with `tests/golden/`.
-  `quick` samples one step in ten; `full` runs all.
 - **Browser tests** (`tests/e2e`, `npm run e2e`): Playwright in Chromium, after `npx playwright install chromium`.
-  `tour.spec.mjs` runs the same tour as the golden tours with real layout and compares a hash of the page
-  after each step. `screens.spec.mjs` compares screenshots of the overview, a region, a system and a
-  planet of each atlas, which covers CSS and layout. Baselines are in `tests/e2e/__snapshots__/`.
-  The step list is shared with the golden tours (`tests/tour-steps.mjs`).
+  `tour.spec.mjs` visits every region, system, planet, satellite and station, the station screens and the
+  page controls, and compares a hash of the page after each step with a baseline. `screens.spec.mjs`
+  compares screenshots of the overview, a region, a system and a planet of each atlas, which covers CSS and
+  layout. Baselines are in `tests/e2e/__snapshots__/`. The step list is `tests/tour-steps.mjs`.
 
 Checked by hand: saved history state, hash routes, live Codex refresh.
 

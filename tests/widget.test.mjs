@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { createRequire } from 'node:module';
 
-// Widget mode (?view=widget) embeds one region, system or planet. The golden tours do not drive it,
+// Widget mode (?view=widget) embeds one region, system or planet. The browser tours do not drive it,
 // so its rules are tested here against the built pages in dist/.
 const require = createRequire(import.meta.url);
 const { open } = require('./dom.cjs');

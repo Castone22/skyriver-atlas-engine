@@ -7,7 +7,6 @@ MANIFEST.sha256
 bundles/
 .claude/
 build/
-tests/golden/
 test-results/
 playwright-report/
 tests/e2e/__snapshots__/
