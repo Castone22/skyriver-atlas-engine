@@ -1941,6 +1941,7 @@
         "description": "An ancient Vy’Tiir stellar megastructure orbiting the capital system’s sun. Its energy sustains Calidor; wartime diversion threatens the civilian economy.",
         "status": "Operational",
         "displayMode": "corner",
+        "schematic": "foundry",
         "sourceNote": "Dominion of Calidor · Foundry passages",
         "orbitalFact": {
           "label": "STELLAR MEGASTRUCTURE",

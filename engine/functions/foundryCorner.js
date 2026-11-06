@@ -1,1 +1,1 @@
-function foundryCorner(){return `<button class="foundry-launch" data-foundry-open="Foundry" aria-label="Open Foundry schematic">${foundryIcon()}<span><strong>FOUNDRY ↗</strong><small>Stellar megastructure · off scale</small></span></button>`}
+function foundryCorner(name){return `<button class="foundry-launch" data-foundry-open="${esc(name)}"aria-label="Open Foundry schematic">${foundryIcon()}<span><strong>FOUNDRY ↗</strong><small>Stellar megastructure · off scale</small></span></button>`}
