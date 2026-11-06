@@ -38,12 +38,17 @@ npm run e2e            # browser tests alone: the tour plus screenshots
 
 - The seven atlases are bundles; the compiler core takes everything environmental from a host and
   runs in a browser. A loader page and HTTP transport exist (`loader/`, `src/bundle-http.mjs`).
-- Function variants went from 378 files to 244. 48 capability flags; each is off by default and
-  turned on only in the atlas that had the feature, so every atlas renders as before.
-- 14 function groups still have more than one variant: `mountSystem`, `systemView`, `renderDetail`,
-  `draw`, `scaleLabels`, `labelThresholds`, `renderIndex`, `starRecords`, `zoom`, and the per-atlas
-  title hooks (`planetName`, `planetArticle`, `planetAliases`, `syncPlanetTitles`, `stationHasOverview`).
-  Details are in `docs/converge/<name>.md`.
+- Function variants went from 378 files to 228. 64 capability flags; each is off by default and
+  turned on only in the atlas that had the feature. Wording that differed by atlas is a slot, with its
+  default in `engine/bundle.json`.
+- An atlas bundle needs only `bundle.json` and `atlas.json`. The engine supplies a default shell, style,
+  runtime, slots, flags and policies for each kind it lists under `defaults` (today, `stellar`).
+  `examples/minimal-atlas` is built that way and is part of the browser tests.
+- Groups that still have more than one file: `draw` (3), `renderIndex` (2), `regionSystemSummary` (2,
+  atlas hooks), and the planet-title hooks `planetName`, `planetArticle`, `planetAliases` and
+  `syncPlanetTitles`. The title sync exists three times (Elysian, UACS, IULR); decision 15 makes
+  Elysian's the one, which changes live behaviour that the tests cannot see. `zoom` has a second file
+  that belongs to the surface-map renderer.
 
 ## Things to know
 
@@ -52,5 +57,6 @@ npm run e2e            # browser tests alone: the tour plus screenshots
   (`?view=widget`) is covered by `tests/widget.test.mjs`.
 - `npm run e2e:update` rewrites the baselines. Only use it for a change you intend, after reading which
   steps changed.
-- Not done: the maintainer decisions in `docs/converge/DECISIONS.md` marked as pending; moving the
-  remaining shell wording into slots and an engine-default shell; the PHP extension side.
+- Not done: one title-sync implementation (decision 15); default shell, style and runtime for the
+  `geographic` and `galaxy` kinds; splitting the surface-map renderer into its own engine; the PHP
+  extension side.

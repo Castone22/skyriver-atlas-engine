@@ -2,18 +2,25 @@
 import { readdir, readFile, writeFile, mkdir } from 'node:fs/promises';
 import { pathToFileURL, fileURLToPath } from 'node:url';
 import path from 'node:path';
-import { compile } from '../src/compiler.mjs';
+import { stat } from 'node:fs/promises';
+import { compile, createNodeHost } from '../src/compiler.mjs';
+import { loadDirectory } from '../src/bundle-fs.mjs';
 import { gallery } from './gallery.mjs';
 const root = fileURLToPath(new URL('../', import.meta.url));
 const args = process.argv.slice(2),
   input = args[0],
   out = path.resolve(args[1] || path.join(root, 'dist'));
-const files = input
-  ? [path.resolve(input)]
-  : (await readdir(path.join(root, 'maps')))
-      .filter((n) => n.endsWith('.atlas.mjs'))
-      .sort()
-      .map((n) => path.join(root, 'maps', n));
+// A directory argument is an atlas bundle (bundle.json + atlas.json), built with the engine's defaults.
+const bundleDir = input && (await stat(input)).isDirectory() ? path.resolve(input) : null;
+const datapack = bundleDir ? await loadDirectory(bundleDir, { expectType: 'atlas' }) : null;
+const files = bundleDir
+  ? [path.join(bundleDir, datapack.manifest.atlas ?? 'atlas.json')]
+  : input
+    ? [path.resolve(input)]
+    : (await readdir(path.join(root, 'maps')))
+        .filter((n) => n.endsWith('.atlas.mjs'))
+        .sort()
+        .map((n) => path.join(root, 'maps', n));
 const loadDefinition = async (file) =>
   file.endsWith('.json')
     ? JSON.parse(await readFile(file, 'utf8'))
@@ -29,7 +36,10 @@ const dependencies = {},
 await mkdir(out, { recursive: true });
 for (const { definition } of entries) {
   kinds[definition.id] = definition.kind;
-  const result = await compile(definition, { dependencies });
+  const host = datapack
+    ? createNodeHost({ bundles: { [datapack.manifest.id]: datapack } })
+    : undefined;
+  const result = await compile(definition, { dependencies, ...(host ? { host } : {}) });
   dependencies[definition.id] = result;
   const name = definition.id + '-atlas.html';
   await writeFile(path.join(out, name), result.html);

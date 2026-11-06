@@ -1,11 +1,18 @@
 // Helpers for driving a built atlas in a real browser deterministically.
 import { readFile } from 'node:fs/promises';
 
-export const ATLASES = ['calidor', 'elysian', 'iulr', 'kadaym', 'uacs'];
+// `minimal` is examples/minimal-atlas: a bundle of bundle.json and atlas.json only, built with the
+// engine's default shell, style and runtime.
+export const ATLASES = ['calidor', 'elysian', 'iulr', 'kadaym', 'uacs', 'minimal'];
+const SOURCES = { minimal: '../../examples/minimal-atlas/atlas.json' };
 
 export const atlasData = async (id) =>
-  JSON.parse(await readFile(new URL(`../../bundles/${id}/atlas.json`, import.meta.url), 'utf8'))
-    .data;
+  JSON.parse(
+    await readFile(
+      new URL(SOURCES[id] ?? `../../bundles/${id}/atlas.json`, import.meta.url),
+      'utf8'
+    )
+  ).data;
 
 const FIXED_TIME = new Date('2023-11-14T22:13:20Z');
 

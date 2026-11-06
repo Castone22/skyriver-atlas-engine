@@ -45,7 +45,10 @@ function profileOf(bundle, engine) {
     shell: part('shell', own.shell),
     styles: list('styles', own.styles),
     scripts,
-    slots: fallback?.slots ?? {}
+    slots: fallback?.slots ?? {},
+    // Flags and policies the engine assumes for an atlas that runs on its default runtime.
+    assumed:
+      scripts[0]?.from === engine ? { flags: fallback?.flags, policies: fallback?.policies } : {}
   };
 }
 async function linkRuntime(source, slots, host) {
@@ -114,12 +117,13 @@ function stellarHooks(d, profile) {
  * functions read them as `__ATLAS__.flags.name`. A name that is not in the registry is an error,
  * so a typo cannot silently disable a feature.
  */
-async function resolveFlags(definition, base, host) {
+async function resolveFlags(definition, base, host, assumed = {}) {
   const engine = await host.engine();
   const registry = engine.has('flags.json') ? await engine.json('flags.json') : {};
   const flags = {};
   for (const [name, spec] of Object.entries(registry)) flags[name] = spec.default;
   for (const [where, source] of [
+    ['the engine defaults', assumed],
     [`bundle '${base.manifest.id}'`, base.manifest.flags],
     ['the definition', definition.flags]
   ])
@@ -154,8 +158,10 @@ export async function compileCore(definition, host, { strict = false, dependenci
   // The renderer bundle's own atlas.json supplies defaults. All inherited values become explicit
   // in exported JSON.
   const defaults = await base.json(profile.atlas);
-  if (defaults?.policies) d.policies = { ...defaults.policies, ...d.policies };
-  if (d.kind === 'stellar') d.flags = await resolveFlags(definition, base, host);
+  if (defaults?.policies || profile.assumed.policies)
+    d.policies = { ...profile.assumed.policies, ...defaults?.policies, ...d.policies };
+  if (d.kind === 'stellar')
+    d.flags = await resolveFlags(definition, base, host, profile.assumed.flags);
   // Geographic/galaxy profiles provide default scene assets.
   if (d.kind !== 'stellar') d.constants = { ...defaults?.constants, ...d.constants };
   if (d.kind === 'galaxy') {
@@ -166,7 +172,9 @@ export async function compileCore(definition, host, { strict = false, dependenci
     if (seed.length && !host.gzipBase64)
       throw new Error('This host cannot gzip child snapshots, which a galaxy atlas needs');
     const searchModule = host.loadSearch
-      ? await host.loadSearch(await linkRuntime(await profile.scripts[0].from.text(profile.scripts[0].path), {}, host))
+      ? await host.loadSearch(
+          await linkRuntime(await profile.scripts[0].from.text(profile.scripts[0].path), {}, host)
+        )
       : null;
     for (const entry of seed) {
       let child = dependencies[entry.id] || dependencies[entry.id.replace(/-stellar-atlas$/, '')];
@@ -206,7 +214,11 @@ export async function compileCore(definition, host, { strict = false, dependenci
     profile.id + '/' + profile.shell.path
   );
   for (let i = 0; i < profile.styles.length; i++)
-    html = replace(html, `@@STYLE:${i}@@`, await profile.styles[i].from.text(profile.styles[i].path));
+    html = replace(
+      html,
+      `@@STYLE:${i}@@`,
+      await profile.styles[i].from.text(profile.styles[i].path)
+    );
   for (const [key, value] of Object.entries(d.documents))
     html = replace(html, `@@DOCUMENT:${key}@@`, safeJSON(value));
   // Fresh stellar shells use current catalogue choices rather than baked-in dropdown entries.

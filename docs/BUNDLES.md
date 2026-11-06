@@ -69,12 +69,12 @@ assets/<sha256>.<ext>  optional   binary assets embedded in the bundle
 
 ```
 bundle.json            required   manifest
-kinds/<kind>/shell.html     default shell per atlas kind (stellar, geographic, galaxy)
-kinds/<kind>/style.css      default style
-kinds/<kind>/runtime/*.js   ordered runtime scripts with @atlas-function markers
-functions/*.js         shared function library (named variants allowed)
+defaults/<kind>/shell.html     default shell for atlases of that kind (stellar today)
+defaults/<kind>/style-0.css    default style
+defaults/<kind>/runtime-0.js   default runtime, with @atlas-function markers
+functions/*.js         shared function library
 capabilities.json      hook points and what each kind supports
-schema/atlas.schema.json
+flags.json             registry of capability flags
 ```
 
 ```json
@@ -86,7 +86,33 @@ schema/atlas.schema.json
 }
 ```
 
-The engine bundle contains the compiler's data inputs, not atlas content. Today's seven `engine/profiles/<atlas>/` directories become, over time, one default renderer per kind plus the overrides that live in each atlas bundle.
+The engine bundle contains the compiler's data inputs, not atlas content.
+
+### Default parts
+
+An atlas bundle needs `bundle.json` and `atlas.json`. For each part it does not supply (`shell`, `styles`,
+`runtime`), the compiler uses the engine's default for the atlas's kind, part by part. The engine lists
+them in `bundle.json`:
+
+```json
+"defaults": {
+  "stellar": {
+    "parts": { "shell": "defaults/stellar/shell.html", "styles": ["defaults/stellar/style-0.css"], "runtime": ["defaults/stellar/runtime-0.js"] },
+    "slots": { "nationNoun": "Atlas", "indexHint": "Try a name, a region or a planet." },
+    "flags": { "regionLabelStyle": "ink-title" },
+    "policies": { "labels": {}, "zoom": {} }
+  }
+}
+```
+
+- `slots` are defaults under the bundle's own `slots`.
+- `flags` and `policies` apply only to an atlas that uses the default runtime, under the bundle's own.
+- A kind with no entry under `defaults` needs the bundle to supply every part; the compiler says which is
+  missing. Only `stellar` has defaults.
+- The default runtime defines the atlas hooks (`regionOverview`, `planetName` and the others in
+  `docs/converge/`) in their neutral form. A bundle's own runtime defines them itself.
+
+`node tools/build.mjs <bundle directory> [out]` builds a bundle directory.
 
 ## Resolution rules
 
@@ -279,11 +305,11 @@ This supersedes the step-by-step status sections above, whose function and flag 
 - Steps 1 to 5 of the migration plan are done: the seven atlases are bundles, the compiler core is pure,
   the HTTP transport and loader exist (`docs/TRANSPORTS.md`), and function variants have been converged
   (`docs/CONVERGING.md`).
-- Function files: 378 originally, 244 now. 48 capability flags are registered in `engine/flags.json`,
-  each off by default and set per atlas in `bundle.json`. 14 function groups still have more than one
-  variant (list in `docs/HANDOFF.md`).
+- Function files: 378 originally, 228 now. 64 capability flags are registered in `engine/flags.json`,
+  each off by default and set per atlas in `bundle.json`. Groups that still have more than one file are
+  listed in `docs/HANDOFF.md`.
 - The contract for behaviour is `tests/e2e/`: a tour of every region, system, planet, satellite and
   station, plus the page's own controls, and screenshots. A change is finished only when
   `npm run check:full` passes.
-- Still open: the maintainer decisions marked pending in `docs/converge/DECISIONS.md`, the remaining
-  shell wording as slots with an engine-default shell, and the extension side.
+- Still open: one title-sync implementation, defaults for the `geographic` and `galaxy` kinds, and the
+  extension side.

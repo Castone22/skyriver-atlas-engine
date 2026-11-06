@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "id": "minimal",
+  "kind": "stellar",
+  "renderer": "minimal",
+  "meta": {
+    "title": "Minimal Atlas · Stellar Atlas",
+    "article": "Demonstration Atlas"
+  },
+  "data": {
+    "systems": [
+      {
+        "source": "Atlas Framework Demonstration",
+        "name": "Demo Star",
+        "kind": "federation",
+        "worlds": ["Demo Star III"],
+        "notes": [],
+        "description": "",
+        "major": false,
+        "x": 390,
+        "y": 420,
+        "primaries": ["Demo Star"],
+        "affiliation": "Atlas Framework Demonstration",
+        "region": "demo-reach",
+        "id": "demo-star"
+      },
+      {
+        "source": "Atlas Framework Demonstration",
+        "name": "Demo Pulsar",
+        "kind": "hazard",
+        "worlds": [],
+        "notes": [],
+        "description": "",
+        "major": false,
+        "x": 730,
+        "y": 620,
+        "centralBodyType": "pulsar",
+        "region": "demo-reach",
+        "id": "demo-pulsar"
+      }
+    ],
+    "regions": {
+      "demo-reach": {
+        "name": "Demonstration Reach",
+        "subtitle": "",
+        "description": "An example region defined entirely by data.",
+        "color": "#78cfdf",
+        "bounds": [0, 0, 1000, 900],
+        "outline": [
+          [0, 0],
+          [600, 0],
+          [1000, 220],
+          [880, 850],
+          [300, 900],
+          [0, 600]
+        ],
+        "labelAnchor": [450, 450],
+        "labelPosition": [450, 450]
+      }
+    },
+    "worlds": {
+      "Demo Star III": {
+        "source": "Atlas Framework Demonstration",
+        "description": "Stable catalogue key; its article title may change.",
+        "links": [],
+        "articleTitle": "Demo Star III",
+        "bodyType": "World",
+        "orbitalPosition": 3,
+        "tag": "Example world",
+        "tint": "#8bbbd2",
+        "renderOpacity": 1
+      }
+    },
+    "satellites": [
+      {
+        "source": "Atlas Framework Demonstration",
+        "description": "",
+        "links": [],
+        "articleTitle": "Demo Moon",
+        "bodyType": "Moon",
+        "visibility": "system",
+        "inhabited": true,
+        "system": "demo-star",
+        "parent": "Demo Star III",
+        "name": "Demo Moon"
+      }
+    ],
+    "stations": [
+      {
+        "source": "Atlas Framework Demonstration",
+        "description": "",
+        "links": [],
+        "articleTitle": "Demo Orbital",
+        "category": "Habitation",
+        "major": true,
+        "visibility": "system",
+        "system": "demo-star",
+        "parent": "Demo Star III",
+        "name": "Demo Orbital"
+      }
+    ],
+    "entities": [],
+    "unplaced": [],
+    "assets": {
+      "flag": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MCA1MCI+PHBhdGggZmlsbD0iIzBkMTcyNiIgZD0iTTAgMGg4MHY1MEgweiIvPjxjaXJjbGUgY3g9IjQwIiBjeT0iMjUiIHI9IjE0IiBmaWxsPSJub25lIiBzdHJva2U9IiM3OGNmZGYiIHN0cm9rZS13aWR0aD0iMiIvPjwvc3ZnPg=="
+    },
+    "objectImages": {},
+    "atlasExtent": [-100, -100, 1400, 1100]
+  },
+  "constants": {},
+  "documents": {},
+  "presentation": {
+    "version": "Atlas DSL v1",
+    "notesHTML": "<p>A noncanonical demonstration of the JavaScript atlas DSL.</p>"
+  }
+}

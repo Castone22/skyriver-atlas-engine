@@ -25,8 +25,9 @@ Node.js 22 or newer. Run `npm install` once.
 
 | Path            | Contents                                                                 |
 | --------------- | ------------------------------------------------------------------------ |
-| `bundles/<id>/` | One atlas: `bundle.json`, `atlas.json`, shell, CSS, runtime script       |
-| `engine/`       | Engine manifest, shared page functions, flag registry (`flags.json`)     |
+| `bundles/<id>/` | One atlas: `bundle.json`, `atlas.json`, optionally shell, CSS, runtime   |
+| `engine/`       | Engine manifest, shared page functions, flag registry, default parts     |
+| `examples/`     | `minimal-atlas/` (two files, default parts) and a DSL example            |
 | `src/`          | DSL, compiler core, Node host, bundle model, template engine, store      |
 | `maps/`         | Authoring entry points, one per atlas                                    |
 | `assets/`       | Images named by SHA-256                                                  |
@@ -45,6 +46,10 @@ The atlases share one set of functions. Each difference is configuration:
 - **Slots**: wording and file names, in `bundle.json`, written `{{name|filter}}` in shells and functions.
 - **Data**: aliases, kickers, descriptions and other content, in `atlas.json`.
 - **Hooks**: functions an atlas defines under an agreed name, called by the shared functions.
+
+An atlas bundle needs only `bundle.json` and `atlas.json`. A shell, style or runtime it leaves out comes
+from the engine's defaults for its kind (`defaults` in `engine/bundle.json`; `stellar` today), and so do
+default slots. Build a bundle directory with `node tools/build.mjs <dir>`.
 
 `docs/CONVERGING.md` is the procedure for merging function variants. `docs/converge/` holds the notes
 per function and the maintainer decisions.

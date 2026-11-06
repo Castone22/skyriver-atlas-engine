@@ -113,7 +113,8 @@ export function validateManifest(manifest, files) {
       for (const name of ['styles', 'runtime'])
         for (const p of parts[name] ?? []) need(p, `defaults.${kind}.${name}`);
       for (const [name, value] of Object.entries(spec?.slots ?? {}))
-        if (typeof value !== 'string') errors.push(`defaults.${kind}.slots.${name} must be a string`);
+        if (typeof value !== 'string')
+          errors.push(`defaults.${kind}.slots.${name} must be a string`);
     }
   }
   if (manifest.type === 'atlas') {

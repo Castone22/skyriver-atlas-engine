@@ -44,6 +44,13 @@ async function runtimeFiles() {
       /^runtime-\d+\.js$/.test(x)
     ))
       out.push({ id, file: path.join(root, 'bundles', id, f) });
+  // The engine's own default runtimes link functions too.
+  const defaults = path.join(root, 'engine', 'defaults');
+  for (const kind of await readdir(defaults).catch(() => []))
+    for (const f of (await readdir(path.join(defaults, kind))).filter((x) =>
+      /^runtime-d+.js$/.test(x)
+    ))
+      out.push({ id: 'default-' + kind, file: path.join(defaults, kind, f) });
   return out;
 }
 

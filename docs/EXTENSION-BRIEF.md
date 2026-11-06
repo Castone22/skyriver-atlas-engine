@@ -26,6 +26,10 @@ An engine's `bundle.json` gives its `id` (which kind of engine it is), `version`
 atlas kinds it can render: `stellar`, `geographic`, `galaxy`). A datapack's `bundle.json` gives its
 `kind` and an `engine` version range such as `^1.0.0`.
 
+A datapack needs only `bundle.json` and `atlas.json`. Any shell, style or runtime it does not include is
+provided by the chosen engine (the engine's `bundle.json` lists its `defaults` per kind). A kind with no
+engine default needs a datapack that includes every part; the compiler's error says which is missing.
+
 - When choosing an engine for a datapack, offer only compatible engines: one whose `kinds` includes the
   datapack's `kind` and whose `version` satisfies the datapack's `engine` range. Refuse incompatible
   choices with a clear message. (The browser also checks and shows an error, but catch it earlier.)
