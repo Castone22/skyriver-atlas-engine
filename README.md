@@ -1,66 +1,58 @@
 # Skyriver Atlas Framework
 
-A JavaScript DSL, JSON catalogue format, shared page engine and build pipeline for the Skyriver
-atlases (Kadaym, Elysian, UACS, IULR, Calidor, Grand and Mahanzk). Each atlas is a small **bundle**
-of data and page parts; the shared **engine** supplies the code. A build produces self-contained HTML
-in `dist/`, and the same bundles can be assembled in the browser by a loader (for the AtlasEmbed wiki
-extension).
+Data-driven atlases for the Skyriver Codex. Each atlas is a bundle of data and page parts. A shared
+engine supplies the code. A build writes self-contained HTML to `dist/`. A browser loader assembles the
+same bundles for the AtlasEmbed wiki extension.
 
-New here? Read `docs/HANDOFF.md` first, then `AGENTS.md` for the rules for changing things.
+Start with `docs/HANDOFF.md`. Rules for changing the code are in `AGENTS.md`.
 
-## Run it
+## Commands
 
-Node.js 22 or newer. Building needs nothing installed; tests and tools need `npm install`.
+Node.js 22 or newer. Run `npm install` once.
 
-```sh
-npm install
-npm run build          # writes dist/*.html; open dist/index.html or run `npm run serve`
-npm run check          # build + unit tests + DOM tests + quick golden tours (about 4 minutes)
-npm run check:full     # the same with the full golden tours (about 10 minutes, memory hungry)
-```
-
-`dist/` is already built, so you can open the atlases without running anything. Live article refreshes
-depend on the Codex wiki being reachable and on browser cross-origin rules.
+| Command                 | Action                                                   |
+| ----------------------- | -------------------------------------------------------- |
+| `npm run build`         | Write `dist/*.html`                                      |
+| `npm run serve`         | Serve `dist/` at `http://127.0.0.1:8080/`                |
+| `npm run check`         | Build, unit tests, DOM tests, quick golden tours (4 min) |
+| `npm run check:full`    | Build, unit tests, DOM tests, full golden tours (10 min) |
+| `npm run golden:update` | Rewrite the golden hashes                                |
+| `npm run build:loader`  | Build the browser loader, `build/loader.html`            |
+| `npm run format`        | Format with Prettier                                     |
 
 ## Layout
 
-| Location            | Responsibility                                                                                                                                     |
-| ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `bundles/<id>/`     | One atlas: `bundle.json` (manifest, flags, slots), `atlas.json` (catalogue, geometry), shell, CSS, runtime                                         |
-| `engine/`           | The engine bundle: `bundle.json`, shared page functions (`functions/`), the flag registry (`flags.json`)                                           |
-| `src/`              | The DSL (`atlas.mjs`), the pure compiler (`compile-core.mjs`), its Node host (`compiler.mjs`), the bundle model, the template engine and the store |
-| `maps/*.atlas.mjs`  | Authoring entry points that build a bundle's definition                                                                                            |
-| `assets/`           | Deduplicated images, addressed by SHA-256                                                                                                          |
-| `loader/`, `tools/` | The browser loader and the build, check and refactoring tools                                                                                      |
-| `tests/`            | Unit and DOM tests, and `golden/`: a hash of the rendered page for every step of a tour of each atlas                                              |
-| `dist/`             | Generated HTML; rebuild after source edits                                                                                                         |
-| `docs/`             | Design and procedure docs; `docs/history/` holds the original extraction records                                                                   |
+| Path            | Contents                                                                 |
+| --------------- | ------------------------------------------------------------------------ |
+| `bundles/<id>/` | One atlas: `bundle.json`, `atlas.json`, shell, CSS, runtime script       |
+| `engine/`       | Engine manifest, shared page functions, flag registry (`flags.json`)     |
+| `src/`          | DSL, compiler core, Node host, bundle model, template engine, store      |
+| `maps/`         | Authoring entry points, one per atlas                                    |
+| `assets/`       | Images named by SHA-256                                                  |
+| `loader/`       | Browser loader page                                                      |
+| `tools/`        | Build, check, golden-tour, function-index and refactoring tools          |
+| `tests/`        | Unit tests, DOM tests, golden tours                                      |
+| `dist/`         | Generated HTML                                                           |
+| `docs/`         | Design and procedure docs; `docs/history/` holds the original extraction |
 
-The compiler links shared function files into each atlas's page at build time. It does not use browser
-`eval` or fetch source code. Nothing in `src/compile-core.mjs` touches Node APIs, so the same compiler
-runs in a browser.
+## Per-atlas differences
 
-## How an atlas differs from another
+The atlases share one set of functions. Each difference is configuration:
 
-Atlases share one set of functions. Behaviour that only some atlases want is **configuration**, not
-copied code:
+- **Flags**: capabilities, listed in `engine/flags.json`, enabled per atlas in `bundle.json`.
+- **Policies**: numbers such as label thresholds, zoom and legend colours, in `atlas.json`.
+- **Slots**: wording and file names, in `bundle.json`, written `{{name|filter}}` in shells and functions.
+- **Data**: aliases, kickers, descriptions and other content, in `atlas.json`.
+- **Hooks**: functions an atlas defines under an agreed name, called by the shared functions.
 
-- **Flags** (`engine/flags.json` lists them all; `bundle.json` `flags` turns them on per atlas) switch
-  capabilities such as region highlighting or station schematics. Every flag is off unless an atlas
-  turns it on, so an atlas only gets what it had before.
-- **Policies** in `atlas.json` hold numbers (label thresholds, zoom, legend colours).
-- **Slots** in `bundle.json` hold per-atlas wording and file names, used as `{{name|filter}}` in shells and
-  functions.
-- **Data** holds content: aliases, kickers, descriptions. Code never names a particular system.
-- **Hooks**: a small function an atlas defines under an agreed name (for example how it resolves a planet's
-  display title), which the shared functions call.
+`docs/CONVERGING.md` is the procedure for merging function variants. `docs/converge/` holds the notes
+per function and the maintainer decisions.
 
-`docs/CONVERGING.md` is the procedure for merging function variants this way, and `docs/converge/` has
-the notes for each function and the maintainers' decisions.
+## Engines
 
-Several engines can be stored side by side (for example a stellar engine and a surface-map engine). An
-engine has an `id`, a `version` and the `kinds` of atlas it renders; an atlas declares its `kind` and an
-`engine` version range, and the compiler refuses an incompatible pair. See `docs/BUNDLES.md`.
+An engine bundle has an `id`, a `version` and the `kinds` of atlas it renders (`stellar`, `geographic`,
+`galaxy`). An atlas bundle has a `kind` and an `engine` version range. The compiler checks both.
+Several engines can be stored side by side. See `docs/BUNDLES.md`.
 
 ## Define an atlas
 
@@ -86,16 +78,15 @@ export default Atlas.stellar({
   .build();
 ```
 
-These are demonstration names, not additions to Skyriver canon. `renderer` names the bundle whose shell,
-styles, runtime and defaults the atlas uses. Save the module as `maps/my-atlas.atlas.mjs`, then run:
+`renderer` names the bundle that supplies the shell, styles, runtime and defaults. Save the module as
+`maps/my-atlas.atlas.mjs` and build it:
 
 ```sh
 node tools/build.mjs maps/my-atlas.atlas.mjs dist
 ```
 
-Callbacks run only while authoring. The result is plain JSON: no renderer functions, closures, DOM
-nodes or executable strings are stored. Missing region geometry receives a simple beveled outline
-around its systems; supply an explicit `outline` for designed, contiguous borders.
+The callbacks run while authoring. The result is plain JSON. A region without an `outline` gets a
+beveled outline around its systems.
 
 ## Store and reload
 
@@ -113,14 +104,13 @@ const edited = Atlas.fromJSON(loaded.definition)
 await store.save(edited, { expectedRevision: saved.revision });
 ```
 
-The storage directory is your choice. Omit `expectedRevision` only when deliberately allowing
-replacement of the latest local revision. A concurrent writer causes an error; failed writes do not
-replace the previous JSON. A process crash can leave a `.lock` file; confirm no writer is active before
-removing it.
+The store writes JSON files with a revision number, takes a lock, and replaces files atomically. A stale
+`expectedRevision` raises an error. A crash can leave a `.lock` file to remove by hand.
 
-`JSON.stringify(definition)` and `Atlas.fromJSON(json)` also work without the file store. In a built
-stellar atlas, `window.AtlasFramework.exportJSON()` exports an authored catalogue snapshot, and
-`navigate({system:'virezk', planet:'Mahanzk'})` uses the existing navigation behaviour.
+A built stellar atlas exposes `window.AtlasFramework`:
+
+- `exportJSON()` returns the catalogue.
+- `navigate({ system: 'virezk', planet: 'Mahanzk' })` moves to a location.
 
 ## Stellar features
 
@@ -133,55 +123,39 @@ stellar atlas, `window.AtlasFramework.exportJSON()` exports an authored catalogu
 })
 ```
 
-Each pair is `[system-name percent, planet-sublabel percent]`. Smaller viewports scale thresholds to
-available space. Kadaym keeps its native thresholds and rejects a custom `labels` feature instead of
-silently ignoring it (a bundle `capabilities` entry). Unknown feature switches also fail. Moons,
-stations, exotics and Silent status are driven by records, not switches.
+Each pair is `[system-name percent, planet-sublabel percent]`, scaled to the viewport. Kadaym uses its own
+thresholds (a bundle `capabilities` entry). Moons, stations, exotics and Silent status come from records.
 
-## Assets and other map types
+## Assets and map types
 
-Import a local image with `node tools/asset.mjs image.png`. It prints an `atlas-asset:…` reference for
-`.asset('flag', reference)` or `.texture(reference)`. Builds embed the bytes; the browser loader serves
-them by URL instead. Data URLs and external URLs also work.
+- `node tools/asset.mjs image.png` imports an image and prints its `atlas-asset:…` reference, for
+  `.asset('flag', reference)` or `.texture(reference)`. Builds embed the bytes; the loader serves them by URL.
+- `Atlas.geographic()` takes `.place(id, props)`, `.texture(uri)` and
+  `.terrain({boundaries, palette, contours, labelOffsets})`. The Mahanzk renderer uses a 2048 × 1078
+  coordinate system. Places have a stable `key`, a renderer ordinal `id` and an optional `articleTitle`.
+- `Atlas.galaxy()` takes `.empire(id, {name, article, position, color, map})`, `.background(uri)` and
+  `.zone(props)`. `map` names a stellar bundle in `bundles/`. Grand builds child snapshots and search
+  indexes from those bundles and keeps its affiliation baseline separate.
 
-`Atlas.geographic()` supports `.place(id, props)`, `.texture(uri)` and
-`.terrain({boundaries, palette, contours, labelOffsets})`. The Mahanzk renderer uses a 2048 × 1078
-cartographic coordinate system; its default terrain and globe texture are inherited unless replaced.
-Geographic places have a stable `key` and a renderer ordinal `id`; an explicit `articleTitle` controls
-their Codex link.
+Location names link to Skyriver Codex articles, including pages not yet written.
 
-`Atlas.galaxy()` supports `.empire(id, {name, article, position, color, map})`, `.background(uri)` and
-`.zone(props)`. `map` names a stellar bundle under `bundles/`, or the caller may pass compiled
-dependencies to `compile()`. Grand Atlas builds generate child snapshots and search indexes from the
-current stellar catalogues. Its original affiliation baseline stays separate so a later affiliation
-transfer can still override the default Drayson/Kevak rule.
+## Wiki loader
 
-All location names keep matching or intended Skyriver Codex article destinations, including pages that
-do not exist yet.
+`tools/build-loader.mjs` builds one HTML document that fetches an engine and an atlas bundle over HTTP
+and renders the atlas in the browser, inside the AtlasEmbed sandbox. The contract is
+`docs/TRANSPORTS.md`. The extension requirements are `docs/EXTENSION-BRIEF.md`.
 
-## The wiki side
+## Tests
 
-`loader/` and `tools/build-loader.mjs` produce one HTML document that fetches an engine and an atlas
-bundle over HTTP and builds the atlas in the browser, inside the existing AtlasEmbed sandbox. Its
-contract is `docs/TRANSPORTS.md`; what the MediaWiki extension must provide is
-`docs/EXTENSION-BRIEF.md`.
+- **Unit tests** (`tests/*.test.mjs`): DSL, bundles, flags, templates, transport, compiler core, widget mode.
+- **DOM tests** (`tests/dom.cjs`, `tests/iulr-dom.cjs`): navigation, schematics, search and the IULR
+  title synchronisation in jsdom.
+- **Golden tours** (`tests/golden.cjs`): every region, system, planet, satellite and station, the
+  station screens, and the page controls. Each step is hashed and compared with `tests/golden/`.
+  `quick` samples one step in ten; `full` runs all.
+- **Browser test** (`npm run test:browser`): Chromium via Playwright, after `npx playwright install chromium`.
 
-## Verification and limits
+Checked by hand: CSS and layout, saved history state, hash routes, live Codex refresh.
 
-`npm run check` builds everything and runs the unit tests (DSL, bundles, flags, templates, transport,
-purity of the compiler core, widget mode), the DOM tests for all stellar atlases plus an authored DSL
-atlas, and the golden tours. A tour drives every region, system, planet, satellite and station through
-`AtlasFramework.navigate`, opens station screens, and uses the page's own controls (search, scope,
-filters, zoom, panels, keys); the recorded hash of the rendered page after each step is the contract
-for behaviour. `npm run golden:update` rewrites those hashes, which should only follow a change you
-intend and have read the diff of.
-
-What this does not cover: CSS and visual layout (the tours compare structure and text under mocked
-geometry), saved history state and hash routes, and live Codex API refresh. Check those by hand, or with
-`npm run test:browser` after `npx playwright install chromium`. Four unresolved Kadaym references
-exist in the source catalogue; they are reported in `dist/build-report.json` and described in
-`docs/history/MIGRATION.md`, and are preserved rather than invented. New DSL maps use strict validation
-by default.
-
-The history of the original extraction, including the IULR v9 title-synchronisation update, is in
-`docs/history/`.
+`dist/build-report.json` lists four unresolved Kadaym references from the source catalogue
+(`docs/history/MIGRATION.md`). New DSL maps use strict validation.
