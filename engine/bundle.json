@@ -1,6 +1,7 @@
 {
   "bundleVersion": 1,
   "type": "engine",
+  "id": "atlas-engine",
   "version": "1.0.0",
   "kinds": [
     "stellar",

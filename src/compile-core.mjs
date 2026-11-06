@@ -125,6 +125,11 @@ export async function compileCore(definition, host, { strict = false, dependenci
     throw new Error(
       `Bundle '${profile.id}' needs engine ${range}; this is engine ${engineVersion}`
     );
+  const engineKinds = (await host.engine()).manifest.kinds;
+  if (!engineKinds.includes(profile.kind))
+    throw new Error(
+      `Engine ${(await host.engine()).manifest.id ?? ''} ${engineVersion} does not support ${profile.kind} atlases (it supports ${engineKinds.join(', ')})`
+    );
   // The renderer bundle's own atlas.json supplies defaults. All inherited values become explicit
   // in exported JSON.
   const defaults = await base.json(profile.atlas);

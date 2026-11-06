@@ -210,7 +210,7 @@ AtlasEmbed today stores one self-contained HTML file per slug outside the file r
 - **Everything stays sandboxed.** Bundle code, including atlas-supplied `functions/*.js`, runs inside the opaque-origin iframe, so even an atlas bundle that carries code cannot reach wiki session state. This is the real protection; editor trust is a second layer.
 - **Sandboxed documents fetch cross-origin.** Without `allow-same-origin` the loader's origin is `null`, so bundle files must be served with `Access-Control-Allow-Origin: *` (they are public static files, no credentials). Test this early, including any `import()` or module loading, which also needs CORS.
 - **Storage shape.** One directory per engine version (stored once, shared by every atlas) and one per atlas slug, each with `bundle.json` listing files and sha256. Engine bundles are large and identical across atlases, so browser caching is a major win over today's 1 to 8 MB per standalone file. The `atlasembed_file` table gains a type column (`html` or `bundle`) and an engine reference.
-- **Revisions and caching.** Today re-uploading a slug overwrites it with no history, and `Special:AtlasEmbed/<slug>` is served with `Cache-Control: private, max-age=3600` and no cache busting. Bundles must not inherit that. Serve every file named in a manifest at an immutable, content-addressed URL (the sha256 is the cache key), and serve only `bundle.json` and the loader page with a short or revalidating cache. Keep engine versions immutable on disk, with the "current engine" setting as a pointer, so a bad engine release can be rolled back by moving the pointer.
+- **Revisions and caching.** Today re-uploading a slug overwrites it with no history, and `Special:AtlasEmbed/<slug>` is served with `Cache-Control: private, max-age=3600` and no cache busting. Bundles must not inherit that. Serve every file named in a manifest at an immutable, content-addressed URL (the sha256 is the cache key), and serve only `bundle.json` and the loader page with a short or revalidating cache. Keep engine releases immutable once stored, with each atlas choosing which stored engine it uses, so a bad engine release can be rolled back by pointing the atlases at the previous one.
 - **Grand.** Child atlases are **live references to child slugs** on the same host, not embedded snapshots. The galaxy atlas lists child ids in `dependencies.children`. Grand's loader fetches each child's bundle by slug, compiles it in the browser, and hands the resulting HTML to the existing `adaptHTML` path, which loads it into a sandboxed `srcdoc` iframe. It does **not** point an iframe `src` at the child slug: `adaptHTML` has to rewrite the child document first (token bridge, in-memory storage shim, shared-chart policy, `<base target>`), and that is impossible for a document the parent did not build. Each child keeps its own isolated runtime. The standalone export may still embed snapshots, as today.
 
 ## Sandbox constraints
@@ -227,9 +227,19 @@ AtlasEmbed serves documents with `Content-Security-Policy: sandbox allow-scripts
 
 ## Engine versioning
 
-The wiki has a single **current engine** setting; every bundle slug renders with it. An atlas's `engine` range is checked at load time and fails with a clear message if the current engine does not satisfy it. Per-atlas pinning is deferred; the manifest's range keeps it possible later.
+Several engines can be stored side by side. An engine bundle has an `id` (for example a stellar
+engine and, later, a surface-map engine), a `version` and the `kinds` of atlas it can render. An
+atlas bundle declares its `kind` and an `engine` version range. **Which stored engine an atlas uses
+is chosen when the atlas is uploaded or configured**, and can be changed later; that choice is how an
+atlas is moved to a new engine release or pinned to an old one.
 
-Because one engine serves every atlas, **backward compatibility is a standing requirement** for engine changes. See `AGENTS.md`.
+An engine is compatible with an atlas when its `kinds` include the atlas's `kind` and its `version`
+satisfies the atlas's `engine` range. The compiler enforces both and fails with a clear message. A
+galaxy atlas renders its child atlases with its own engine, so that engine must support the children's
+kinds as well.
+
+Because several atlases can share one engine, **backward compatibility is a standing requirement** for
+engine changes. See `AGENTS.md`.
 
 ## Open questions
 

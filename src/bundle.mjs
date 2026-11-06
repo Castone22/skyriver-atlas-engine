@@ -100,6 +100,9 @@ export function validateManifest(manifest, files) {
   if (manifest.type === 'engine') {
     if (!Array.isArray(manifest.kinds) || !manifest.kinds.every((k) => KINDS.includes(k)))
       errors.push('engine kinds must be a list of known kinds');
+    // An engine's id tells engines apart (for example a stellar engine and a surface-map engine).
+    if (manifest.id !== undefined && !ID.test(manifest.id))
+      errors.push(`Invalid engine id '${manifest.id}'`);
   }
   if (manifest.type === 'atlas') {
     if (!ID.test(manifest.id ?? '')) errors.push(`Invalid id '${manifest.id}'`);

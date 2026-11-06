@@ -94,3 +94,11 @@ test('missing or malformed bundle.json is a clear error', async () => {
   await assert.rejects(openBundle(Bundle.fromMap({})), /bundle\.json is missing/);
   await assert.rejects(openBundle(Bundle.fromMap({ 'bundle.json': '{' })), /not valid JSON/);
 });
+
+test('an engine id is optional but must be a valid id', async () => {
+  const engine = (m) => Bundle.fromMap({ 'bundle.json': JSON.stringify(m) });
+  const ok = { bundleVersion: 1, type: 'engine', version: '1.0.0', kinds: ['stellar'] };
+  assert.equal((await openBundle(engine({ ...ok, id: 'surface-map' }))).manifest.id, 'surface-map');
+  assert.equal((await openBundle(engine(ok))).manifest.id, undefined);
+  await assert.rejects(openBundle(engine({ ...ok, id: 'Bad Id' })), /Invalid engine id/);
+});
