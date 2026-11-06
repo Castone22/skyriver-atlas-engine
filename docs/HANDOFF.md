@@ -32,6 +32,7 @@ Run at most two golden tours at once (`--jobs 2`); each is a jsdom page and they
 1. `AGENTS.md`: the rules, including backward compatibility and how to converge function variants.
 2. `docs/BUNDLES.md` and `docs/TRANSPORTS.md`: the engine/atlas bundle design and the AtlasEmbed side.
 3. `docs/converge/DECISIONS.md`: answers to the open questions, and which are not yet implemented.
+4. `docs/EXTENSION-BRIEF.md`: what the AtlasEmbed MediaWiki extension must change to serve bundles (self-contained; hand it to whoever works on the extension).
 
 ## Where it stands
 

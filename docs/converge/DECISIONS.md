@@ -1,7 +1,7 @@
 # Decisions on open questions
 
-Answers from the maintainer to the questions the convergence work raised. **Decisions 3, 4, 6 and 10 are implemented (see "Status"
-below); the others are not yet.** Each one changes what an atlas renders, so each needs the golden files for the
+Answers from the maintainer to the questions the convergence work raised. **Decisions 1, 3, 4, 6, 10, 12 and 13 are implemented (see
+"Status" below); 2 and 11 are not yet.** Each one changes what an atlas renders, so each needs the golden files for the
 affected steps regenerated and reviewed (`npm run golden:update`, then read the diff) before it is
 committed. Do the work in small commits, one decision each, and finish with `npm run check:full`.
 
@@ -30,7 +30,9 @@ committed. Do the work in small commits, one decision each, and finish with `npm
 | 6 | Done (`3ebf592`) for IULR: short labels in every layout (265 planet views changed, IULR goldens regenerated). UACS keeps `extendedChartMoonThreshold: 10`: its `extendedSatelliteChart` data flag is set on all 269 of its worlds and only 37 have more than 10 moons, so the flag cannot drive the layout there. |
 | 10 | Done (`c11ea4f`): `widgetKeepsAddress` is on for IULR, so every atlas leaves the address alone in widget mode. |
 | 1 | Done: Kadaym's empty-search hint now names the United Federation of Kadaym; the Forge references in Calidor and UACS were already removed when that content moved into data. One golden step changed (`ui:search:zzz-no-such-thing`). Kadaym's `affiliationLink` "Elysian Collective" is genuine lore and stays. |
-| 2, 8, 11, 12, 13 | Pending. 2 changes the link on nearly every system in four atlases (regenerate and review the affected goldens); 11 adds a widget-mode error state; 12 splits `regionHighlight` into separate flags; 13 moves the Foundry into station data. 5, 7 and 9 need no change. |
+| 12 | Done: `regionHighlight` now means only that the page tracks a highlighted region; eight behaviour-named flags (`hashIgnoredWithRegion`, `noOverviewRoute`, `addressRegionWins`, `focusRegionIgnoresRegion`, `noLocalChartFallback`, `highlightRouteParam`, `highlightedRegionState`, `selectKeepsRegion`) carry the rest, all on for IULR only. No golden step changed. Notes: `docs/converge/regionHighlight.md`. |
+| 13 | Done: the Foundry is `"schematic": "foundry"` in Calidor's station data and code tests that field. A few display-copy and attribute-name mentions of the name remain on purpose (`docs/converge/foundry.md`). No golden step changed. |
+| 2, 8, 11 | Pending. 2 changes the link on nearly every system in four atlases (regenerate and review the affected goldens); 8 needs no work beyond keeping the flags; 11 adds a widget-mode error state and the outline pressed-state, which the tours do not drive, so it needs its own tests. 5, 7 and 9 need no change. |
 
 ## Explanations given with the decisions
 
