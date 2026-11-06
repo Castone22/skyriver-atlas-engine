@@ -1,17 +1,14 @@
 {
-  "acceptPlanetPage": {
-    "name": "acceptPlanetPage",
-    "profiles": [
-      "uacs"
-    ],
-    "bytes": 299
-  },
   "acceptPlanetTitleBatch": {
     "name": "acceptPlanetTitleBatch",
     "profiles": [
-      "elysian"
+      "calidor",
+      "elysian",
+      "iulr",
+      "kadaym",
+      "uacs"
     ],
-    "bytes": 681
+    "bytes": 688
   },
   "adaptHTML": {
     "name": "adaptHTML",
@@ -44,13 +41,6 @@
       "grand"
     ],
     "bytes": 311
-  },
-  "applyPlanetTitles": {
-    "name": "applyPlanetTitles",
-    "profiles": [
-      "elysian"
-    ],
-    "bytes": 985
   },
   "applySystemZoom": {
     "name": "applySystemZoom",
@@ -105,7 +95,7 @@
       "kadaym",
       "uacs"
     ],
-    "bytes": 434
+    "bytes": 427
   },
   "bindOrbitalSelection": {
     "name": "bindOrbitalSelection",
@@ -149,6 +139,17 @@
     ],
     "bytes": 2898
   },
+  "bindWidgetQuery": {
+    "name": "bindWidgetQuery",
+    "profiles": [
+      "calidor",
+      "elysian",
+      "iulr",
+      "kadaym",
+      "uacs"
+    ],
+    "bytes": 86
+  },
   "blackHoleGlyph": {
     "name": "blackHoleGlyph",
     "profiles": [
@@ -180,7 +181,7 @@
       "kadaym",
       "uacs"
     ],
-    "bytes": 1461
+    "bytes": 1415
   },
   "buildNotes": {
     "name": "buildNotes",
@@ -210,6 +211,17 @@
       "grand"
     ],
     "bytes": 56
+  },
+  "canonicalTitle": {
+    "name": "canonicalTitle",
+    "profiles": [
+      "calidor",
+      "elysian",
+      "iulr",
+      "kadaym",
+      "uacs"
+    ],
+    "bytes": 1142
   },
   "choose": {
     "name": "choose",
@@ -279,6 +291,17 @@
     ],
     "bytes": 137
   },
+  "copyWidgetQuery": {
+    "name": "copyWidgetQuery",
+    "profiles": [
+      "calidor",
+      "elysian",
+      "iulr",
+      "kadaym",
+      "uacs"
+    ],
+    "bytes": 591
+  },
   "crossRealm": {
     "name": "crossRealm",
     "profiles": [
@@ -295,7 +318,7 @@
       "kadaym",
       "uacs"
     ],
-    "bytes": 222
+    "bytes": 111
   },
   "currentStationParts": {
     "name": "currentStationParts",
@@ -681,7 +704,7 @@
       "kadaym",
       "uacs"
     ],
-    "bytes": 856
+    "bytes": 836
   },
   "imageMarkup": {
     "name": "imageMarkup",
@@ -763,6 +786,17 @@
     ],
     "bytes": 821
   },
+  "link": {
+    "name": "link",
+    "profiles": [
+      "calidor",
+      "elysian",
+      "iulr",
+      "kadaym",
+      "uacs"
+    ],
+    "bytes": 164
+  },
   "list": {
     "name": "list",
     "profiles": [
@@ -779,7 +813,7 @@
       "kadaym",
       "uacs"
     ],
-    "bytes": 1936
+    "bytes": 1903
   },
   "loadSource": {
     "name": "loadSource",
@@ -852,7 +886,7 @@
       "kadaym",
       "uacs"
     ],
-    "bytes": 5972
+    "bytes": 5919
   },
   "mountSystem": {
     "name": "mountSystem",
@@ -990,13 +1024,6 @@
     ],
     "bytes": 149
   },
-  "persistPlanetTitleCache": {
-    "name": "persistPlanetTitleCache",
-    "profiles": [
-      "iulr"
-    ],
-    "bytes": 311
-  },
   "persistRoute": {
     "name": "persistRoute",
     "profiles": [
@@ -1018,133 +1045,57 @@
   "planetAliases": {
     "name": "planetAliases",
     "profiles": [
-      "uacs"
-    ],
-    "bytes": 111
-  },
-  "planetAliases-none": {
-    "name": "planetAliases",
-    "profiles": [
       "calidor",
       "elysian",
       "iulr",
-      "kadaym"
+      "kadaym",
+      "uacs"
     ],
-    "bytes": 39
+    "bytes": 219
   },
   "planetArticle": {
     "name": "planetArticle",
     "profiles": [
+      "calidor",
+      "elysian",
+      "iulr",
+      "kadaym",
       "uacs"
     ],
-    "bytes": 92
-  },
-  "planetArticle-none": {
-    "name": "planetArticle",
-    "profiles": [
-      "calidor",
-      "kadaym"
-    ],
-    "bytes": 41
-  },
-  "planetArticle-resolved": {
-    "name": "planetArticle",
-    "profiles": [
-      "iulr"
-    ],
-    "bytes": 83
-  },
-  "planetArticle-synced": {
-    "name": "planetArticle",
-    "profiles": [
-      "elysian"
-    ],
-    "bytes": 100
-  },
-  "planetArticleName": {
-    "name": "planetArticleName",
-    "profiles": [
-      "iulr"
-    ],
-    "bytes": 93
+    "bytes": 190
   },
   "planetKey": {
     "name": "planetKey",
     "profiles": [
-      "elysian"
-    ],
-    "bytes": 274
-  },
-  "planetName-27a93d2d3c84": {
-    "name": "planetName",
-    "profiles": [
-      "iulr"
-    ],
-    "bytes": 70
-  },
-  "planetName-2cc548f30373": {
-    "name": "planetName",
-    "profiles": [
-      "elysian"
-    ],
-    "bytes": 98
-  },
-  "planetName-b16b654e272b": {
-    "name": "planetName",
-    "profiles": [
+      "calidor",
+      "elysian",
+      "iulr",
+      "kadaym",
       "uacs"
     ],
-    "bytes": 70
+    "bytes": 703
   },
-  "planetName-identity": {
+  "planetName": {
     "name": "planetName",
     "profiles": [
       "calidor",
-      "kadaym"
+      "elysian",
+      "iulr",
+      "kadaym",
+      "uacs"
     ],
-    "bytes": 38
+    "bytes": 220
   },
   "planetNameMarkup": {
     "name": "planetNameMarkup",
     "profiles": [
-      "elysian"
-    ],
-    "bytes": 140
-  },
-  "planetNamesFromQuery": {
-    "name": "planetNamesFromQuery",
-    "profiles": [
-      "iulr"
-    ],
-    "bytes": 843
-  },
-  "planetPageExists": {
-    "name": "planetPageExists",
-    "profiles": [
+      "calidor",
+      "elysian",
+      "iulr",
+      "kadaym",
       "uacs"
     ],
-    "bytes": 177
-  },
-  "planetQueryChunks": {
-    "name": "planetQueryChunks",
-    "profiles": [
-      "iulr"
-    ],
-    "bytes": 133
-  },
-  "planetTitleAPI": {
-    "name": "planetTitleAPI",
-    "profiles": [
-      "uacs"
-    ],
-    "bytes": 748
-  },
-  "planetTitleRecord": {
-    "name": "planetTitleRecord",
-    "profiles": [
-      "uacs"
-    ],
-    "bytes": 141
+    "bytes": 61
   },
   "planetView": {
     "name": "planetView",
@@ -1155,14 +1106,7 @@
       "kadaym",
       "uacs"
     ],
-    "bytes": 3700
-  },
-  "planetWikiQuery": {
-    "name": "planetWikiQuery",
-    "profiles": [
-      "iulr"
-    ],
-    "bytes": 936
+    "bytes": 3612
   },
   "point": {
     "name": "point",
@@ -1213,6 +1157,10 @@
   "refreshPlanetTitleUI": {
     "name": "refreshPlanetTitleUI",
     "profiles": [
+      "calidor",
+      "elysian",
+      "iulr",
+      "kadaym",
       "uacs"
     ],
     "bytes": 525
@@ -1266,9 +1214,13 @@
   "rememberPlanetArticle": {
     "name": "rememberPlanetArticle",
     "profiles": [
-      "elysian"
+      "calidor",
+      "elysian",
+      "iulr",
+      "kadaym",
+      "uacs"
     ],
-    "bytes": 409
+    "bytes": 1170
   },
   "render": {
     "name": "render",
@@ -1286,7 +1238,7 @@
       "kadaym",
       "uacs"
     ],
-    "bytes": 6507
+    "bytes": 7158
   },
   "renderIndex": {
     "name": "renderIndex",
@@ -1297,7 +1249,7 @@
       "kadaym",
       "uacs"
     ],
-    "bytes": 2218
+    "bytes": 1997
   },
   "renderIndex-21d0753ef74d": {
     "name": "renderIndex",
@@ -1408,19 +1360,16 @@
     ],
     "bytes": 218
   },
-  "resolvedPlanetPage": {
-    "name": "resolvedPlanetPage",
-    "profiles": [
-      "uacs"
-    ],
-    "bytes": 580
-  },
   "restorePlanetArticles": {
     "name": "restorePlanetArticles",
     "profiles": [
-      "elysian"
+      "calidor",
+      "elysian",
+      "iulr",
+      "kadaym",
+      "uacs"
     ],
-    "bytes": 194
+    "bytes": 406
   },
   "restoreRoute": {
     "name": "restoreRoute",
@@ -1471,21 +1420,18 @@
       "kadaym",
       "uacs"
     ],
-    "bytes": 260
+    "bytes": 240
   },
   "savePlanetArticles": {
     "name": "savePlanetArticles",
     "profiles": [
-      "elysian"
-    ],
-    "bytes": 114
-  },
-  "savePlanetTitles": {
-    "name": "savePlanetTitles",
-    "profiles": [
+      "calidor",
+      "elysian",
+      "iulr",
+      "kadaym",
       "uacs"
     ],
-    "bytes": 162
+    "bytes": 145
   },
   "scaleLabels": {
     "name": "scaleLabels",
@@ -1685,9 +1631,13 @@
   "startPlanetTitleSync": {
     "name": "startPlanetTitleSync",
     "profiles": [
+      "calidor",
+      "elysian",
+      "iulr",
+      "kadaym",
       "uacs"
     ],
-    "bytes": 309
+    "bytes": 412
   },
   "stationGlyph": {
     "name": "stationGlyph",
@@ -1770,28 +1720,18 @@
       "kadaym",
       "uacs"
     ],
-    "bytes": 622
+    "bytes": 321
   },
-  "syncPlanetArticleTitles": {
-    "name": "syncPlanetArticleTitles",
-    "profiles": [
-      "iulr"
-    ],
-    "bytes": 2257
-  },
-  "syncPlanetTitles-0658b9888707": {
+  "syncPlanetTitles": {
     "name": "syncPlanetTitles",
     "profiles": [
+      "calidor",
+      "elysian",
+      "iulr",
+      "kadaym",
       "uacs"
     ],
-    "bytes": 1108
-  },
-  "syncPlanetTitles-9dcb91258d04": {
-    "name": "syncPlanetTitles",
-    "profiles": [
-      "elysian"
-    ],
-    "bytes": 1840
+    "bytes": 2155
   },
   "syncSystemFocus": {
     "name": "syncSystemFocus",
@@ -1879,7 +1819,7 @@
       "kadaym",
       "uacs"
     ],
-    "bytes": 159
+    "bytes": 115
   },
   "tierMarkup": {
     "name": "tierMarkup",
@@ -1897,6 +1837,7 @@
     "profiles": [
       "calidor",
       "elysian",
+      "iulr",
       "kadaym",
       "uacs"
     ],
@@ -1919,13 +1860,6 @@
       "mahanzk"
     ],
     "bytes": 102
-  },
-  "triggerPlanetTitleCheck": {
-    "name": "triggerPlanetTitleCheck",
-    "profiles": [
-      "iulr"
-    ],
-    "bytes": 85
   },
   "unpack": {
     "name": "unpack",
@@ -1979,7 +1913,7 @@
       "kadaym",
       "uacs"
     ],
-    "bytes": 843
+    "bytes": 556
   },
   "validateHTML": {
     "name": "validateHTML",
@@ -1988,12 +1922,16 @@
     ],
     "bytes": 211
   },
-  "wikiTitleKey": {
-    "name": "wikiTitleKey",
+  "widgetQuery": {
+    "name": "widgetQuery",
     "profiles": [
-      "iulr"
+      "calidor",
+      "elysian",
+      "iulr",
+      "kadaym",
+      "uacs"
     ],
-    "bytes": 91
+    "bytes": 571
   },
   "worldRecord": {
     "name": "worldRecord",

@@ -1,1 +1,1 @@
-function safeImageURL(value){const address=new URL(value,'https://skyrivercodex.lzridgecodes.net/');if(!['http:','https:'].includes(address.protocol)||address.username||address.password)throw Error('Invalid image URL');address.protocol='https:';return address}
+function safeImageURL(value){const address=new URL(value,'{{wikiBase|jsstr}}/');if(!['http:','https:'].includes(address.protocol)||address.username||address.password)throw Error('Invalid image URL');address.protocol='https:';return address}

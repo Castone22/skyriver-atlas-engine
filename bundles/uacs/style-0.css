@@ -92,3 +92,6 @@ body.embed:not(.widget) .app{height:calc(100dvh - 44px)}
 .identity .eyebrow{max-width:360px;line-height:1.5}.flag{object-fit:contain}.toolbar .detail-panel-toggle{margin-left:auto}.system-catalog .orbit-labels{max-height:420px;overflow:auto;scrollbar-width:thin}.region-entry{margin:16px 20px}.region-entry p{font:11px var(--mono);color:var(--muted);line-height:1.7}.region-entry .focus-system{margin:0}.map-stage .region-title{letter-spacing:2px}.map-stage .region-ink{pointer-events:none}
 body.embed:not(.widget)>.toolbar>.index-panel-toggle,body.embed:not(.widget)>.toolbar>.detail-panel-toggle{display:block}
 @media(max-width:700px){.identity .eyebrow{max-width:230px;font-size:8px}.identity h1{font-size:18px}.header-right{display:none}}
+body.widget.region-widget .map-area>.map-tools{display:flex!important}
+body.widget.region-widget .map-tools button:not(#zoomIn):not(#zoomOut):not(#fit){display:none}
+body.widget #copyWidget{display:none}

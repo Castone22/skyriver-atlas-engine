@@ -87,21 +87,9 @@
     "description": "The address records the highlighted region as highlight=<region> and never writes chart=, instead of the overview chart parameter.",
     "default": false
   },
-  "indexWorldLinks": {
-    "description": "The index lists a system's worlds (its overviewWorlds when present) as article links instead of plain text.",
-    "default": false
-  },
-  "inspectLabelsUseTitles": {
-    "description": "Inspect buttons in the system key are labelled with the synced planet title instead of the catalogue name.",
-    "default": false
-  },
   "keepStationPart": {
     "description": "A station screen that is drawn again keeps the highlighted part instead of resetting to the first part.",
     "default": false
-  },
-  "linkTitleSync": {
-    "description": "Link text shows a planet's synced title: off, worlds (only when the name is a catalogued world) or all (whenever the label equals the name).",
-    "default": "off"
   },
   "minimapRegionPaths": {
     "description": "The minimap draws each region as a path built from outlines relative to the region bounds, instead of an absolute polygon or rectangle.",
@@ -119,10 +107,6 @@
     "description": "The chart parameter is not read for routing: a region in the address opens its regional chart, never the overview chart.",
     "default": false
   },
-  "normalizeTitleApostrophes": {
-    "description": "Article links turn curly apostrophes in a title into straight ones before building the URL.",
-    "default": false
-  },
   "overviewChart": {
     "description": "Value of the chart address parameter that selects the overview chart (overview, or federation for Kadaym).",
     "default": "overview"
@@ -133,22 +117,6 @@
   },
   "perSystemLabels": {
     "description": "System labels are shown per system against the highlighted region, using policies.labels.levels as [name, planet] pairs for active and neighbouring regions.",
-    "default": false
-  },
-  "planetArticleTitles": {
-    "description": "Planet links use the article title kept in sync with the Codex (planetArticleName) when the planet has one.",
-    "default": false
-  },
-  "planetArticleTracking": {
-    "description": "Live article lookups use, and update, the tracked wiki page id of a planet (synced article titles).",
-    "default": false
-  },
-  "planetLinkAttributes": {
-    "description": "Links to planets carry data-planet-link and data-planet-title attributes so the page can find and retitle them.",
-    "default": false
-  },
-  "planetPageLinks": {
-    "description": "Planet links go to the Codex page by page id (curid) once the id is known from title synchronisation.",
     "default": false
   },
   "regionHighlight": {
@@ -215,28 +183,12 @@
     "description": "Planets with appearance storm-bands are drawn with cloud bands on the system chart.",
     "default": false
   },
-  "straightenImageTitleQuotes": {
-    "description": "Curly apostrophes in the article title used for live images are replaced by straight ones.",
-    "default": false
-  },
   "summaryCountsAllMoons": {
     "description": "The system chart's summary line counts every moon record, not only the moons drawn on the chart.",
     "default": false
   },
-  "svgTextSyncedTitles": {
-    "description": "SVG text passes through planetName() so a planet's synced article title is shown instead of its catalogue name.",
-    "default": false
-  },
   "systemBodyRenderOpacity": {
     "description": "Bodies in the system chart carry an opacity attribute taken from their renderOpacity (default 1).",
-    "default": false
-  },
-  "titledLocalOrbitLabels": {
-    "description": "The local-orbit accessible labels use the synchronised planet title (planetName) instead of the catalogue name.",
-    "default": false
-  },
-  "titledPlanetInspectLabel": {
-    "description": "The central body of the local planet chart is labelled 'Inspect <synchronised title>' (planetName) instead of the catalogue name.",
     "default": false
   },
   "visibilityResetsLabels": {

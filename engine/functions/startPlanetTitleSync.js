@@ -1,6 +1,7 @@
+// Restore the titles saved from earlier visits, then keep them current.
 function startPlanetTitleSync(){
- syncPlanetTitles(true);
+ restorePlanetArticles();
  addEventListener('focus',()=>syncPlanetTitles(true));addEventListener('online',()=>syncPlanetTitles(true));
- document.addEventListener('visibilitychange',()=>{if(!document.hidden)syncPlanetTitles(true)});
- setInterval(()=>syncPlanetTitles(),60000);
+ document.addEventListener('visibilitychange',()=>{if(document.hidden)clearTimeout(syncPlanetTitles.state?.timer);else syncPlanetTitles(true)});
+ syncPlanetTitles(true);
 }

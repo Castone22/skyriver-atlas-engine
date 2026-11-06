@@ -43,11 +43,6 @@
     "regionSystemLabel": "Collective region system"
   },
   "flags": {
-    "indexWorldLinks": true,
-    "linkTitleSync": "all",
-    "planetArticleTracking": true,
-    "planetLinkAttributes": true,
-    "planetPageLinks": true,
     "selectFirstWorld": true,
     "stationRoute": "station",
     "systemBodyRenderOpacity": true,

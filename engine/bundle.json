@@ -57,7 +57,8 @@
         "localCaptionNote": "Only recorded host relationships are shown",
         "localEmptyNote": "No moons or hosted stations are catalogued for this world.",
         "localMoonNoun": "natural satellite",
-        "overviewOptionLabel": "Overview · "
+        "overviewOptionLabel": "Overview · ",
+        "wikiBase": "https://skyrivercodex.lzridgecodes.net"
       },
       "parts": {
         "shell": "defaults/stellar/shell.html",

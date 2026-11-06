@@ -88,3 +88,6 @@ body.embed:not(.widget) .app{height:calc(100dvh - 44px)}
 .node-label.hide-world-names .world-names{display:none}
 @media(prefers-reduced-motion:reduce){.node-label{transition:none}}
 .region-ink{font:600 14px var(--mono);letter-spacing:1.7px;opacity:.25}
+body.widget.region-widget .map-area>.map-tools{display:flex!important}
+body.widget.region-widget .map-tools button:not(#zoomIn):not(#zoomOut):not(#fit){display:none}
+body.widget #copyWidget{display:none}

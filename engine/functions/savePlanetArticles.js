@@ -1,1 +1,1 @@
-function savePlanetArticles(){try{localStorage.setItem(PLANET_TITLE_CACHE,JSON.stringify(planetArticles))}catch{}}
+function savePlanetArticles(){try{localStorage.setItem('atlas-planet-articles-v1:'+__ATLAS__.id,JSON.stringify(DATA.planetArticles||{}))}catch{}}

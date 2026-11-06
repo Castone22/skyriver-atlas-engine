@@ -124,3 +124,6 @@ body.widget.region-widget .map-bottom .hint{display:none}
 
 #atlasVersion{white-space:nowrap}
 @media(max-width:700px){footer>span:first-child{display:none}.app{min-height:0}}
+body.widget.region-widget .map-area>.map-tools{display:flex!important}
+body.widget.region-widget .map-tools button:not(#zoomIn):not(#zoomOut):not(#fit){display:none}
+body.widget #copyWidget{display:none}

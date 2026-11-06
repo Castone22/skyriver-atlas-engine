@@ -4,7 +4,7 @@ function mountPlanet(s){
  const extended=__ATLAS__.flags.extendedChartMoonThreshold?localBodies(s,planetFocus).moons.length>__ATLAS__.flags.extendedChartMoonThreshold:Boolean(DATA.worlds[planetFocus]?.extendedSatelliteChart);
  for(let i=0;i<86;i++)svg('circle',{cx:(i*97+13)%760,cy:(i*53+7)%580,r:i%4===0?.8:.45,fill:'#acbfd8',opacity:.14+i%3*.07},chart);
  svg('path',{d:`M22 ${cy}H738M${cx} 24V548`,stroke:'#64758b','stroke-width':.5,opacity:.12},chart);
- const center=objectTarget(root.name,{...(__ATLAS__.flags.bodyRenderOpacity?{opacity:root.renderOpacity??1}:{}),class:'orbit-body'+(selectedWorld===root.name?' selected':''),transform:`translate(${cx} ${cy})`,tabindex:0,role:'button','data-local-center':root.name,'aria-label':'Inspect '+(__ATLAS__.flags.titledPlanetInspectLabel?planetName(root.name):root.name)},chart);
+ const center=objectTarget(root.name,{...(__ATLAS__.flags.bodyRenderOpacity?{opacity:root.renderOpacity??1}:{}),class:'orbit-body'+(selectedWorld===root.name?' selected':''),transform:`translate(${cx} ${cy})`,tabindex:0,role:'button','data-local-center':root.name,'aria-label':'Inspect '+planetName(root.name)},chart);
  svg('circle',{r:root.appearance==='great-blink'?80:52,fill:'transparent'},center);svg('circle',{r:49,fill:'none',stroke:root.tint,'stroke-width':1,class:'body-focus'},center);
  if(DATA.worlds[root.name]?.solarAnalogue){solarPlanetGlyph(center,root.name,32)}else{
  if(root.appearance==='great-blink'){

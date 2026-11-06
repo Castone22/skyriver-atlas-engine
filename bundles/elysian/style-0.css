@@ -105,3 +105,6 @@ body.embed:not(.widget)>.toolbar{display:flex!important;height:48px;gap:8px;padd
 }
 
 .station-widget{width:100%;height:100%;overflow:auto}.station-widget .station-screen{padding:12px}.station-widget .tora-nav,.station-widget .tora-kicker,.station-widget .tora-specs,.station-widget .tora-foot,.station-widget .tora-deck{display:none}.station-widget .station-screen h2{font-size:18px}.station-widget .tora-plate{min-height:0;max-height:none}.station-widget .tora-article{font-size:10px}.triad-plate{background:#09141e}.tora-specs b{overflow-wrap:anywhere}.station-screen{user-select:none}
+body.widget.region-widget .map-area>.map-tools{display:flex!important}
+body.widget.region-widget .map-tools button:not(#zoomIn):not(#zoomOut):not(#fit){display:none}
+body.widget #copyWidget{display:none}

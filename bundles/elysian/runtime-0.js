@@ -2,11 +2,25 @@
 const DATA = __ATLAS__.data;
 const $=id=>document.getElementById(id),NS='http://www.w3.org/2000/svg';
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const titles={'Ferryman’s Rest':"Ferryman's Rest",'Circa’s Triad':"Circa's Triad",'Ysh Kha’lah':"Ysh Kha'lah",'Da’zha':"Da'zha"};
-const canonicalTitle=name=>{const key=planetKey(name);if(key&&planetArticles[key]?.title)return planetArticles[key].title;const n=normalizedName(name);const record=[...allRecords,...Object.entries(DATA.worlds).map(([name,r])=>({name,...r})),...(DATA.stations||[]),...(DATA.satellites||[]),...(DATA.entities||[])].find(r=>[r.name,...(r.aliases||[])].some(v=>normalizedName(v)===n));return record?.articleTitle||record?.name||name};
 const referenceTargets=new Map([...(DATA.stations||[]),...(DATA.satellites||[])].filter(r=>r.referencePage).map(r=>[r.name,r]));
+/* @atlas-function planetKey */
+/* @atlas-function planetName */
+/* @atlas-function planetArticle */
+/* @atlas-function planetAliases */
+/* @atlas-function planetNameMarkup */
+/* @atlas-function canonicalTitle */
+/* @atlas-function link */
+/* @atlas-function rememberPlanetArticle */
+/* @atlas-function restorePlanetArticles */
+/* @atlas-function savePlanetArticles */
+/* @atlas-function acceptPlanetTitleBatch */
+/* @atlas-function syncPlanetTitles */
+/* @atlas-function startPlanetTitleSync */
+/* @atlas-function refreshPlanetTitleUI */
+/* @atlas-function widgetQuery */
+/* @atlas-function copyWidgetQuery */
+/* @atlas-function bindWidgetQuery */
 /* @atlas-function url */
-const link=(name,label=name,cls='')=>{const key=planetKey(name);return `<a class="${cls}" ${key?'data-planet-link="'+esc(key)+'" '+(label===name?'data-planet-title="'+esc(key)+'"':''):''} href="${url(name)}" target="_blank" rel="noopener">${esc(label===name?planetName(name):label)}</a>`};
 /* @atlas-function systemNameTitle */
 /* @atlas-function hasOrbitChart */
 /* @atlas-function systemArticleTitle */
@@ -31,22 +45,7 @@ const MARKER_DOSSIER_DELAY=600;
 /* @atlas-function deferMarkerDossier */
 
 const normalizedName=value=>String(value||'').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]/g,'');
-// Planet catalogue keys remain stable for saved routes and parent relationships.
-// Article page IDs survive MediaWiki moves, even after an old redirect is removed.
-const planetArticles=DATA.planetArticles||(DATA.planetArticles={});
-const PLANET_TITLE_CACHE='elysian-atlas-planet-articles-v1';
-/* @atlas-function planetKey */
-/* @atlas-function planetName-2cc548f30373 */
-/* @atlas-function planetNameMarkup */
-/* @atlas-function rememberPlanetArticle */
-/* @atlas-function savePlanetArticles */
-/* @atlas-function restorePlanetArticles */
-/* @atlas-function applyPlanetTitles */
-/* @atlas-function acceptPlanetTitleBatch */
-let planetTitleRequest=null,planetTitleTimer=0,planetTitlesChecked=0;
-/* @atlas-function syncPlanetTitles-9dcb91258d04 */
 
-restorePlanetArticles();
 /* @atlas-function resolveRegion */
 /* @atlas-function matchesRecord */
 /* @atlas-function resolveSystem */
@@ -88,7 +87,6 @@ addEventListener('hashchange',()=>{if(location.href!==lastRestoredURL)restoreRou
 /* @atlas-function affiliationMarkup */
 /* @atlas-function searchRecords */
 /* @atlas-function classificationTerms */
-/* @atlas-function planetAliases-none */
 /* @atlas-function searchTerms */
 /* @atlas-function searchObject */
 /* @atlas-function noteworthyBodies */
@@ -200,7 +198,6 @@ const dossierFields=[
 /* @atlas-function safeImageURL */
 /* @atlas-function imageAPI */
 /* @atlas-function currentImageTitle */
-/* @atlas-function planetArticle-synced */
 /* @atlas-function loadLiveImage */
 /* @atlas-function embeddedImageMarkup */
 /* @atlas-function imageMarkup */
@@ -239,5 +236,4 @@ map.addEventListener('keydown',e=>{if(e.target!==map)return;const f=.12;if(['+',
 document.addEventListener('keydown',e=>{if(!widgetMode&&e.key==='Escape'&&!$('notes').open){const returning=stationOverview||planetFocus||systemFocused;if(stationOverview){closeStation()}else if(planetFocus){setPlanetFocus(null)}else if(systemFocused){setSystemFocus(false)}$('filters').classList.add('hidden');$('filterBtn').setAttribute('aria-expanded','false');if(!returning)setIndexOpen(false);setDetailOpen(false)}});
 let resizeTimer;/* @atlas-function resizeChart */
 addEventListener('resize',resizeChart);
-$('systemFocus').innerHTML='';$('systemFocus').classList.add('hidden');$('mapArea').classList.remove('system-focused');$('flag').src=DATA.assets.flag;$('flagLink').href=$('federationLink').href=url('{{brand|jsstr}}');$('filters').classList.add('hidden');$('toast').classList.add('hidden');$('filterBtn').setAttribute('aria-expanded','false');document.querySelectorAll('[data-scope]').forEach(b=>b.classList.toggle('active',b.dataset.scope==='region'));document.body.classList.toggle('embed',embedMode);document.body.classList.toggle('widget',widgetMode);setIndexOpen(false);buildNotes();draw();restoreRoute();routeReady=true;persistRoute();applyPlanetTitles();syncPlanetTitles();
-addEventListener('focus',()=>syncPlanetTitles(true));addEventListener('online',()=>syncPlanetTitles(true));document.addEventListener('visibilitychange',()=>{if(document.hidden)clearTimeout(planetTitleTimer);else syncPlanetTitles(true)});
+$('systemFocus').innerHTML='';$('systemFocus').classList.add('hidden');$('mapArea').classList.remove('system-focused');$('flag').src=DATA.assets.flag;$('flagLink').href=$('federationLink').href=url('{{brand|jsstr}}');$('filters').classList.add('hidden');$('toast').classList.add('hidden');$('filterBtn').setAttribute('aria-expanded','false');document.querySelectorAll('[data-scope]').forEach(b=>b.classList.toggle('active',b.dataset.scope==='region'));document.body.classList.toggle('embed',embedMode);document.body.classList.toggle('widget',widgetMode);setIndexOpen(false);startPlanetTitleSync();bindWidgetQuery();buildNotes();draw();restoreRoute();routeReady=true;persistRoute();

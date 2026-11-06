@@ -4,9 +4,9 @@ async function loadLiveImage(title,force=false){
  const request=(async()=>{
   let facts=saved?.facts;
   try{
-   const key=__ATLAS__.flags.planetArticleTracking?planetKey(title):null,identity=key&&planetArticles[key];
+   const key=planetKey(title),identity=key&&DATA.planetArticles?.[key];
    const page=await imageAPI({...identity?.pageid?{pageids:String(identity.pageid)}:{titles:title},prop:'revisions',rvprop:'ids|content',rvslots:'main'});
-   if(key&&rememberPlanetArticle(key,page)){savePlanetArticles();applyPlanetTitles()}
+   if(key&&rememberPlanetArticle(key,page)){savePlanetArticles();refreshPlanetTitleUI()}
    let asset={articleTitle:title,image:null,imageSource:{articleTitle:title,articleUrl:url(page.title||title)}};
    if(page.missing)facts=null;
    if(!page.missing){const revision=page.revisions?.[0],content=revision?.slots?.main?.content;if(typeof content!=='string')throw Error('Missing article content');const box=leadInfobox(content);facts=dossierFacts(box);const file=fileFromInfobox(box);
