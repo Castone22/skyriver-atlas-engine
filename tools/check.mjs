@@ -4,6 +4,7 @@
 //   node tools/check.mjs                 build, unit tests, DOM tests, quick golden tours
 //   node tools/check.mjs --full          the same with the full golden tours (slow: ~10 minutes)
 //   node tools/check.mjs --atlas a,b     limit the golden tours to these atlases
+//   node tools/check.mjs --e2e           also run the browser tests (Playwright; about 7 minutes)
 //   node tools/check.mjs --jobs 1        golden tours at a time (default 2; each uses a lot of memory)
 //
 // Exit code 0 only if every step passes.
@@ -18,6 +19,7 @@ const opt = (n) => (args.includes('--' + n) ? args[args.indexOf('--' + n) + 1] :
 const full = args.includes('--full');
 const atlases = (opt('atlas') ?? 'elysian,uacs,kadaym,iulr,calidor').split(',');
 const jobs = Number(opt('jobs') ?? 2);
+const e2e = args.includes('--e2e');
 const results = [];
 
 function record(name, ok, detail = '') {
@@ -71,6 +73,9 @@ async function worker() {
   }
 }
 await Promise.all(Array.from({ length: jobs }, worker));
+
+if (e2e)
+  run('browser tests', node, [path.join(root, 'node_modules/@playwright/test/cli.js'), 'test']);
 
 const failed = results.filter((r) => !r.ok);
 console.log(`\n${results.length - failed.length}/${results.length} checks passed`);

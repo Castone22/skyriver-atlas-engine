@@ -1,0 +1,2002 @@
+start	48d1455cd5057
+all	48d1455cd5057
+region:western	292ce1e32b15d
+overview:western	7239334189b3f
+region:sol	10b772ea6d2581
+overview:sol	13d096a7c2b5da
+region:acheron	17078e6b4ca20f
+overview:acheron	9c46831e19bff
+region:outer	1ba61c2ff769d7
+overview:outer	15a3c50dc16f45
+region:aster	581cd76ee3d6e
+overview:aster	1f0a49326d933
+system:adrea	ec5a807c02de9
+station-overview:adrea	ec5a807c02de9
+planet:adrea:New Olympia	1be6d36e541c05
+planet:adrea:Florence	43a632ec1210e
+planet:adrea:Adrea I	f42bac6948a21
+planet:adrea:Adrea II	102e55aacf1609
+planet:adrea:Adrea V	33a3c85a88abf
+system:athrys	231ec118133a3
+station-overview:athrys	231ec118133a3
+planet:athrys:Clyse	1c2cdeb79e664a
+planet:athrys:Athrys I	1bed8a27c646d5
+planet:athrys:Athrys II	a52dbeff5d340
+planet:athrys:Athrys IV	1d6f1b370ca234
+planet:athrys:Athrys V	16b11608e1b241
+planet:athrys:Athrys VI	15d4da46e9f31c
+system:sutherland	1c4300b8829d4d
+station-overview:sutherland	1c4300b8829d4d
+planet:sutherland:Haas	17e3729ba16dc
+planet:sutherland:Sutherland I	87866cc1ce386
+planet:sutherland:Sutherland II	1a2d0c89206e16
+planet:sutherland:Sutherland IV	15c0519d9e700b
+planet:sutherland:Sutherland V	176e828c886845
+planet:sutherland:Sutherland VI	16ae238375cf76
+planet:sutherland:Sutherland VII	1409535d634269
+system:viery	d973128b94003
+station-overview:viery	d973128b94003
+planet:viery:Mir	1ff1a870fd271f
+planet:viery:Ivanoff	17d2d8cf056b0e
+planet:viery:Viery I	144734149c3927
+planet:viery:Viery II	253b7f73d75ec
+planet:viery:Viery V	bb5b0fb79ad94
+planet:viery:Viery VI	1114c5ce3fc0ba
+planet:viery:Viery VII	8ef237693b17d
+planet:viery:Viery VIII	6bdcaf526c38f
+system:weiss-212	84bfec4ff8a9c
+station-overview:weiss-212	84bfec4ff8a9c
+planet:weiss-212:Ferox	53eb2e85cd7b2
+planet:weiss-212:Weiss 212 I	1d82f0a1c770d1
+planet:weiss-212:Weiss 212 II	108aec83415c5c
+planet:weiss-212:Weiss 212 IV	17a64250f804ef
+planet:weiss-212:Weiss 212 V	e50239879e6cd
+system:johanssen	1555b7ce71fa07
+station-overview:johanssen	1555b7ce71fa07
+planet:johanssen:Noxon	aec58d9a5906f
+planet:johanssen:Morcate	1cc0bab477900e
+planet:johanssen:Johanssen I	2543e6c579dce
+planet:johanssen:Johanssen II	79c0b0d1fa8ed
+planet:johanssen:Johanssen V	d43a30de28b11
+planet:johanssen:Johanssen VI	17835d906cf708
+system:acrius	fc65c00e2af9c
+station-overview:acrius	fc65c00e2af9c
+planet:acrius:Foundation	d28c9391b1884
+planet:acrius:Tributa	19fe3bcb6d8555
+planet:acrius:Acrius I	4d7290493277c
+planet:acrius:Acrius II	b697233b583a
+planet:acrius:Acrius V	736838291333d
+planet:acrius:Acrius VI	10d21c5d722dfc
+planet:acrius:Acrius VII	e8516d48b8e0b
+system:haldor	169c10bb56d138
+station-overview:haldor	169c10bb56d138
+planet:haldor:Havencrest	1501a33fb7e901
+planet:haldor:Haldor I	4ae42ec6d90a6
+planet:haldor:Haldor II	d292bb0d83659
+planet:haldor:Haldor IV	1b12b69f0b1560
+planet:haldor:Haldor V	1f34ef487be4c4
+planet:haldor:Haldor VI	bf733ebf8bbd9
+planet:haldor:Haldor VII	82cf8384cb900
+planet:haldor:Haldor VIII	3aeb2a490e7a1
+system:constantine	1b1f1020102b49
+station-overview:constantine	1b1f1020102b49
+planet:constantine:Saratoga	1f4d4244e30770
+planet:constantine:Constantine I	156ac27d098eb5
+planet:constantine:Constantine II	15da7a7dd997f3
+planet:constantine:Constantine IV	51f72d6a3e2d2
+planet:constantine:Constantine V	1c2de98a0fe03d
+system:dsc-346	b5fb20184d519
+station-overview:dsc-346	b5fb20184d519
+planet:dsc-346:DSC 346 I	143a5a210d7ab9
+planet:dsc-346:DSC 346 II	d21877062f3df
+planet:dsc-346:DSC 346 III	1c6c7819363b1b
+planet:dsc-346:DSC 346 IV	93c361e573809
+system:koch	17a7e9097bfaf3
+station-overview:koch	17a7e9097bfaf3
+planet:koch:Prospect	f0cf06f332bc6
+planet:koch:Koch I	115da73d074c1f
+planet:koch:Koch II	34b43c06c9c08
+planet:koch:Koch IV	16b0517d1e502e
+planet:koch:Koch V	63ab8aaef9b80
+planet:koch:Koch VI	3506aa067535d
+planet:koch:Koch VII	158aeedc1259b5
+system:carver	11a6f5d8a53cba
+station-overview:carver	11a6f5d8a53cba
+planet:carver:Carver V	1d569531644a21
+planet:carver:Carver I	b044f9a43c595
+planet:carver:Carver II	1dc2f2a873f638
+planet:carver:Carver III	55ceab6142b51
+planet:carver:Carver IV	14ad3e33bc5dbf
+planet:carver:Carver VI	1d581986de3826
+planet:carver:Carver VII	170df069381e7
+planet:carver:Carver VIII	1262034745f2e9
+system:bharask	5dd03ce0884ae
+station-overview:bharask	5dd03ce0884ae
+planet:bharask:Vonako	1afe1fc2854cdd
+planet:bharask:Bharask I	188d82baa0ccef
+planet:bharask:Bharask II	40eaa165ee07b
+planet:bharask:Bharask IV	17b801b7d67c6b
+planet:bharask:Bharask V	ffaf4711daeb6
+system:blake-s-star	d71f9c599a9c2
+station-overview:blake-s-star	d71f9c599a9c2
+planet:blake-s-star:Phoenix	1c53694f67ce59
+planet:blake-s-star:Belleza	124abcf70f3fd8
+planet:blake-s-star:Blake's Star I	119d8ff2bea064
+planet:blake-s-star:Blake's Star II	ab7a9865106f6
+planet:blake-s-star:Blake's Star V	15ed0245db128a
+planet:blake-s-star:Blake's Star VI	5a58890aec606
+system:weiss-287	b2666c2510933
+station-overview:weiss-287	b2666c2510933
+planet:weiss-287:New Dresden	1f79bcbdb9fc6a
+planet:weiss-287:Weiss 287 I	126e30cff397a8
+planet:weiss-287:Weiss 287 II	21358bd906a9c
+planet:weiss-287:Weiss 287 IV	153eff2474d0d6
+planet:weiss-287:Weiss 287 V	1ff330eaf4b768
+planet:weiss-287:Weiss 287 VI	19229f92da9c4e
+planet:weiss-287:Weiss 287 VII	1f9fc61edb690a
+system:sol	eb04aeaf0363e
+station-overview:sol	cbb1eee67421b
+planet:sol:Eden	16a32edc46015
+planet:sol:Arcadia	6dbf7dd9f8ef6
+planet:sol:Sol I	12c819002055d8
+planet:sol:Sol II	39329d16fdf4c
+planet:sol:Sol IV	570dac91aa22c
+planet:sol:Sol VI	1181c624ccab18
+planet:sol:Sol VII	188502b11db87c
+planet:sol:Sol VIII	189fdf6f7d62b1
+system:freki	159a563446c046
+station-overview:freki	159a563446c046
+planet:freki:Freki IV	983afe43b1354
+planet:freki:Freki I	9b282c41883eb
+planet:freki:Freki II	1dc3588bab77f8
+planet:freki:Freki III	2a8bc0b21f7aa
+planet:freki:Freki V	64e6cdb192637
+system:cassius	185b3bb48e61e4
+station-overview:cassius	185b3bb48e61e4
+planet:cassius:Kronos	10366ce08af927
+planet:cassius:Cassius I	331a141b88df4
+planet:cassius:Cassius II	1f9d346128ae8e
+planet:cassius:Cassius IV	d2cd7a8b88ead
+planet:cassius:Cassius V	84b30fe53c712
+planet:cassius:Cassius VI	1194f5aaa79b58
+system:heimdall	194a6852773bf8
+station-overview:heimdall	194a6852773bf8
+planet:heimdall:Jotunheim	d57ae4c6e6b5b
+planet:heimdall:Heimdall I	72ca8e0c0d49d
+planet:heimdall:Heimdall II	1682ce4d59243a
+planet:heimdall:Heimdall III	6c4db650fb08a
+planet:heimdall:Heimdall V	9850d79d350bb
+planet:heimdall:Heimdall VI	14521d2cc8b43
+planet:heimdall:Heimdall VII	1186b156832510
+system:tessera	4ee13118ec8dc
+station-overview:tessera	4ee13118ec8dc
+planet:tessera:New Soris	1174f3f05a4693
+planet:tessera:Tessera I	fa9c9a2dd3873
+planet:tessera:Tessera II	1efc34e90dadea
+planet:tessera:Tessera IV	1af3bc15439c4d
+planet:tessera:Tessera V	176f214bc5985e
+planet:tessera:Tessera VI	1d8f7225c5b029
+planet:tessera:Tessera VII	18649979b4f9f9
+planet:tessera:Tessera VIII	1f7bac3aa772d4
+system:hargrove	8d1cf3fa3e407
+station-overview:hargrove	8d1cf3fa3e407
+planet:hargrove:Oros	a010d88fb4c53
+planet:hargrove:Hargrove I	378003e4900ce
+planet:hargrove:Hargrove II	1858176dd94c27
+planet:hargrove:Hargrove IV	173e7e6acfb878
+planet:hargrove:Hargrove V	1dfb268baf14dd
+system:torrin	2e97e19d2b790
+station-overview:torrin	2e97e19d2b790
+planet:torrin:Emberfall	1e04b8d0a794af
+planet:torrin:Torrin I	10e1ab01b33860
+planet:torrin:Torrin II	8f05a54b219b6
+planet:torrin:Torrin IV	ef878d30af98e
+planet:torrin:Torrin V	c2e8e76f1abea
+planet:torrin:Torrin VI	aac2737b3d68
+system:morrigan	572de4c61b5db
+station-overview:morrigan	572de4c61b5db
+planet:morrigan:Fairmeadow	4d64c9219094d
+planet:morrigan:Morrigan I	7249c0e9805ef
+planet:morrigan:Morrigan II	1968d9e9078476
+planet:morrigan:Morrigan IV	47d88e64cb4c4
+planet:morrigan:Morrigan V	3010885e7790
+planet:morrigan:Morrigan VI	4877d3dd5a336
+planet:morrigan:Morrigan VII	1feafabe180cfc
+system:tenebrae	183a73a057b9bb
+station-overview:tenebrae	183a73a057b9bb
+planet:tenebrae:Tenebrae IV	1623929d6652f9
+planet:tenebrae:Tenebrae I	611195dea5056
+planet:tenebrae:Tenebrae II	1a021626581eeb
+planet:tenebrae:Tenebrae III	13304c10dd7576
+planet:tenebrae:Tenebrae V	f5a49b643b73b
+planet:tenebrae:Tenebrae VI	11ea4dab36132e
+planet:tenebrae:Tenebrae VII	1271713252067e
+planet:tenebrae:Tenebrae VIII	198dce8a760c12
+system:aldwick	124cd606403a9d
+station-overview:aldwick	124cd606403a9d
+planet:aldwick:Aldwick III	92e36e0fadb37
+planet:aldwick:Aldwick I	16371551ac25e0
+planet:aldwick:Aldwick II	17d55a4dace74b
+planet:aldwick:Aldwick IV	170de24f787943
+planet:aldwick:Aldwick V	16dbde403bbbff
+system:kestrel	2c1bd10e49ce2
+station-overview:kestrel	2c1bd10e49ce2
+planet:kestrel:Windward	9aa341aeff558
+planet:kestrel:Kestrel I	695b1949b89d1
+planet:kestrel:Kestrel II	1dabe3893a54ec
+planet:kestrel:Kestrel IV	362496de28096
+planet:kestrel:Kestrel V	cd4487a326474
+planet:kestrel:Kestrel VI	46e3ddf6520cd
+system:wexley	96ce020e18b1a
+station-overview:wexley	96ce020e18b1a
+planet:wexley:Fairhaven	d5398e9097799
+planet:wexley:Wexley I	1e49837b095e88
+planet:wexley:Wexley II	10a8a4da4df61d
+planet:wexley:Wexley IV	a6330972d2aac
+planet:wexley:Wexley V	1cb49d5ab62a29
+planet:wexley:Wexley VI	14ec8c0456a0d4
+planet:wexley:Wexley VII	111f123cd9a44
+system:lyndon	c405fcae6ef98
+station-overview:lyndon	c405fcae6ef98
+planet:lyndon:Greenbank	ad366729f6b9
+planet:lyndon:Lyndon I	18345b092de505
+planet:lyndon:Lyndon II	18af6da3ba184b
+planet:lyndon:Lyndon IV	12fd135fa08a99
+planet:lyndon:Lyndon V	138fdfef31176b
+planet:lyndon:Lyndon VI	14def705ab7aef
+planet:lyndon:Lyndon VII	197c34a3884c6
+planet:lyndon:Lyndon VIII	e8cf7518837d0
+system:vesper	14e4e696c99308
+station-overview:vesper	14e4e696c99308
+planet:vesper:Evenfall	6db18307665a6
+planet:vesper:Vesper I	1b64f4c00e7162
+planet:vesper:Vesper II	b9838f3e22551
+planet:vesper:Vesper IV	12f9da17a7cc19
+planet:vesper:Vesper V	1eb903e148355e
+system:weiss-304	21a198dffabd
+station-overview:weiss-304	21a198dffabd
+planet:weiss-304:Weiss 304 I	cfc71cf199af9
+planet:weiss-304:Weiss 304 II	100d9daf9ec28b
+planet:weiss-304:Weiss 304 III	d8257f7139af0
+planet:weiss-304:Weiss 304 IV	eb96436831380
+planet:weiss-304:Weiss 304 V	10979a37e67f59
+planet:weiss-304:Weiss 304 VI	1db8fee97da50e
+system:rosen	2ea469f170522
+station-overview:rosen	2ea469f170522
+planet:rosen:Rosewater	8440c705e62f6
+planet:rosen:Rosen I	15f7899b7ee711
+planet:rosen:Rosen II	11cd9f18f141a2
+planet:rosen:Rosen IV	1dda9a9e64fb9f
+planet:rosen:Rosen V	11ace564ef634b
+planet:rosen:Rosen VI	cf7c0ec73a0d8
+planet:rosen:Rosen VII	1a17adce7911f0
+system:ashcombe	178667def8706d
+station-overview:ashcombe	178667def8706d
+planet:ashcombe:Ashcombe IV	bfcd72b74f942
+planet:ashcombe:Ashcombe I	295703ff1b65b
+planet:ashcombe:Ashcombe II	1e122d234c4554
+planet:ashcombe:Ashcombe III	19c7b5fc5b4981
+planet:ashcombe:Ashcombe V	abaf5fea53d5b
+planet:ashcombe:Ashcombe VI	a54bd25155e1a
+planet:ashcombe:Ashcombe VII	1116fe749c547f
+planet:ashcombe:Ashcombe VIII	16be714b2338d3
+system:tyndall	a097bfdf0a758
+station-overview:tyndall	a097bfdf0a758
+planet:tyndall:Farsight	1d81e940e599b0
+planet:tyndall:Tyndall I	1804929c8eb0d8
+planet:tyndall:Tyndall II	15f31cde5650b4
+planet:tyndall:Tyndall IV	16d62ceee67c71
+planet:tyndall:Tyndall V	59d9f118951cd
+system:dunstan	7f7c6a3e9c184
+station-overview:dunstan	7f7c6a3e9c184
+planet:dunstan:Dunstan III	16477547afd991
+planet:dunstan:Dunstan I	1cb797a10225a2
+planet:dunstan:Dunstan II	5fad1089b16c7
+planet:dunstan:Dunstan IV	1ecf94936262c7
+planet:dunstan:Dunstan V	1d37ebf95df0a7
+planet:dunstan:Dunstan VI	d0e5acce52c9
+system:corvin	ec644ceab2394
+station-overview:corvin	ec644ceab2394
+planet:corvin:Corvin III	1c1665db9a18b7
+planet:corvin:Corvin I	c9d7826c9d411
+planet:corvin:Corvin II	79162b85490b0
+planet:corvin:Corvin IV	e27a01956356b
+planet:corvin:Corvin V	3eafee5d50f2e
+planet:corvin:Corvin VI	16234218b6f756
+planet:corvin:Corvin VII	edd317a6a4020
+system:weiss-319	1e54d277b48e6b
+station-overview:weiss-319	1e54d277b48e6b
+planet:weiss-319:Weiss 319 I	15303a99954f46
+planet:weiss-319:Weiss 319 II	bd6688541eef2
+planet:weiss-319:Weiss 319 III	1811a12ac4940a
+planet:weiss-319:Weiss 319 IV	11e6fa2d81e3ee
+planet:weiss-319:Weiss 319 V	1c327efe40eacb
+planet:weiss-319:Weiss 319 VI	11cf465222b579
+planet:weiss-319:Weiss 319 VII	16575655768a7b
+planet:weiss-319:Weiss 319 VIII	f685aac78ee7b
+system:aster	526a13ad354e9
+station-overview:aster	526a13ad354e9
+planet:aster:Hearth	7150146458f9a
+planet:aster:Aster I	5e31cce7f1516
+planet:aster:Aster II	1c68200d7b4e9a
+planet:aster:Aster IV	c82931d5e33e6
+planet:aster:Aster V	380a08fe93236
+system:hollis	12bf9dd7764050
+station-overview:hollis	12bf9dd7764050
+planet:hollis:Dunmere	b06b88345fd7
+planet:hollis:Hollis I	faca115bd3618
+planet:hollis:Hollis II	1e849355048996
+planet:hollis:Hollis IV	ba89de4654fc0
+planet:hollis:Hollis V	2e175f109db53
+planet:hollis:Hollis VI	11fb37f7e01626
+system:kepler-81	b122b4cafdd6a
+station-overview:kepler-81	b122b4cafdd6a
+planet:kepler-81:Kepler 81 I	13fd3248f599fa
+planet:kepler-81:Kepler 81 II	13d74fb3216949
+planet:kepler-81:Kepler 81 III	1cf61df04f6dd2
+planet:kepler-81:Kepler 81 IV	14558c12db2be
+planet:kepler-81:Kepler 81 V	8681c9ccf51bc
+planet:kepler-81:Kepler 81 VI	bf6546b62b476
+planet:kepler-81:Kepler 81 VII	150597a455d5ff
+system:redwick	e172a7188514f
+station-overview:redwick	e172a7188514f
+planet:redwick:Redwick III	1aff5a89af77ad
+planet:redwick:Redwick I	2e1fb29668b7e
+planet:redwick:Redwick II	1bc9a438341895
+planet:redwick:Redwick IV	1cb5f3c4dca32e
+planet:redwick:Redwick V	1dfbacb459faef
+planet:redwick:Redwick VI	1cb7fe28be6abe
+planet:redwick:Redwick VII	1ee0240fbb171b
+planet:redwick:Redwick VIII	1e0a970686057d
+system:briar	10ab043aed02d7
+station-overview:briar	10ab043aed02d7
+planet:briar:Bellhaven	19a04b09e691bd
+planet:briar:Briar I	155261a6c6daa8
+planet:briar:Briar II	1b2563688ecbf0
+planet:briar:Briar IV	197ebf6a89edef
+planet:briar:Briar V	11457e1fea5e08
+system:elara	1caf471dfc02d5
+station-overview:elara	1caf471dfc02d5
+planet:elara:Elara III	164a900bbd6564
+planet:elara:Elara I	58037dfacac1e
+planet:elara:Elara II	1d4b681929587
+planet:elara:Elara IV	16be26ba84e269
+planet:elara:Elara V	1a54a6d72343bf
+planet:elara:Elara VI	3b13dc21482cc
+object:adrea:Adrea I Moon 1	1e3dd86df96c8b
+object:adrea:Adrea I Moon 2	f93c11ce9f9c7
+object:adrea:Adrea II Moon 1	b9c03e9081205
+object:adrea:Adrea II Moon 2	a639e163aba29
+object:adrea:Adrea II Moon 3	1ce6d9142cc752
+object:adrea:New Olympia Moon 1	eb57387d65711
+object:adrea:Florence Moon 1	1ede6075eaa6ba
+object:adrea:Florence Moon 2	1b897f7968719a
+object:adrea:Adrea V Moon 1	e88d2ff94336
+object:adrea:Adrea V Moon 2	c2359ffa0a0e9
+object:adrea:Adrea V Moon 3	1aaf2949cb96d9
+object:athrys:Athrys I Moon 1	13864ca3c5d025
+object:athrys:Athrys I Moon 2	16babe42a3fe38
+object:athrys:Athrys I Moon 3	a896b8712eb3f
+object:athrys:Athrys II Moon 1	1ee8d801aa5938
+object:athrys:Clyse Moon 1	197d6bf4de33e3
+object:athrys:Clyse Moon 2	2c277f21bd746
+object:athrys:Athrys IV Moon 1	61bba52758a9e
+object:athrys:Athrys IV Moon 2	193f9e9ecb6460
+object:athrys:Athrys IV Moon 3	c6316e6212553
+object:athrys:Athrys IV Moon 4	15f6e92bf3a4f6
+object:athrys:Athrys IV Moon 5	f2b86936d87f7
+object:athrys:Athrys IV Moon 6	1cc6c7285d3b79
+object:athrys:Athrys IV Moon 7	1be4fb0b59f9cd
+object:athrys:Athrys IV Moon 8	10f89473b34236
+object:athrys:Athrys IV Moon 9	59eaf8bac995e
+object:athrys:Athrys IV Moon 10	da7c802d4aea8
+object:athrys:Athrys IV Moon 11	347f001447523
+object:athrys:Athrys IV Moon 12	f04854220a611
+object:athrys:Athrys V Moon 1	14f752cc9cff4c
+object:athrys:Athrys V Moon 2	7cfdc848ff52a
+object:athrys:Athrys V Moon 3	5016e33baeca8
+object:athrys:Athrys V Moon 4	310040a56e14d
+object:athrys:Athrys V Moon 5	ca33ae04b3afd
+object:athrys:Athrys V Moon 6	5bdf44b183f6c
+object:athrys:Athrys V Moon 7	1b6109c45d14a6
+object:athrys:Athrys V Moon 8	d2604c699686f
+object:athrys:Athrys V Moon 9	3dcd682d5c46e
+object:athrys:Athrys V Moon 10	38dd697661ab6
+object:athrys:Athrys V Moon 11	17819089af1bfb
+object:athrys:Athrys V Moon 12	dd49764b9d46b
+object:athrys:Athrys V Moon 13	4d07faf7ec039
+object:athrys:Athrys VI Moon 1	10cf6021d9aa6f
+object:athrys:Athrys VI Moon 2	284f52dc513c
+object:sutherland:Sutherland I Moon 1	19cb4453e3c6bb
+object:sutherland:Sutherland II Moon 1	1074734defde96
+object:sutherland:Sutherland II Moon 2	1b9a2bbbe4baef
+object:sutherland:Haas Moon 1	1315b831e735b5
+object:sutherland:Haas Moon 2	4ea54050421ef
+object:sutherland:Haas Moon 3	1688b728dcc070
+object:sutherland:Sutherland IV Moon 1	1ed31f1513b551
+object:sutherland:Sutherland V Moon 1	eeac10725ba18
+object:sutherland:Sutherland V Moon 2	181d4c7ed7b58d
+object:sutherland:Sutherland V Moon 3	a6a8ce60398fb
+object:sutherland:Sutherland V Moon 4	1da4a4d139cae2
+object:sutherland:Sutherland V Moon 5	1c1ee30e4ce2b5
+object:sutherland:Sutherland V Moon 6	5e46d5c2d2f97
+object:sutherland:Sutherland V Moon 7	1898919a6757f8
+object:sutherland:Sutherland V Moon 8	14d362962d9363
+object:sutherland:Sutherland V Moon 9	b41aa6f295c07
+object:sutherland:Sutherland V Moon 10	5e81cda879f78
+object:sutherland:Sutherland V Moon 11	189c03b2096a41
+object:sutherland:Sutherland V Moon 12	42a883f8f89ce
+object:sutherland:Sutherland V Moon 13	1c3e11da179e2b
+object:sutherland:Sutherland V Moon 14	148079c2be15e5
+object:sutherland:Sutherland VI Moon 1	1b94e13c36f5f9
+object:sutherland:Sutherland VI Moon 2	e1459ac5b1fd9
+object:sutherland:Sutherland VI Moon 3	1c1a123c854a91
+object:sutherland:Sutherland VI Moon 4	47afc595ce326
+object:sutherland:Sutherland VI Moon 5	5c9c230b06832
+object:sutherland:Sutherland VI Moon 6	134c8b7488055c
+object:sutherland:Sutherland VI Moon 7	27326e5cd921a
+object:sutherland:Sutherland VII Moon 1	1492dc19dc593a
+object:viery:Viery I Moon 1	6b4b178dc7a42
+object:viery:Viery I Moon 2	c82d7af1f754b
+object:viery:Viery II Moon 1	4ffbeb397693
+object:viery:Viery II Moon 2	12c488a0f59981
+object:viery:Viery II Moon 3	1317c5929fd8ff
+object:viery:Mir Moon 1	15ce73385de457
+object:viery:Ivanoff Moon 1	133e351d783330
+object:viery:Ivanoff Moon 2	1842a702071ba5
+object:viery:Viery V Moon 1	1ba84389ee1ddd
+object:viery:Viery V Moon 2	14a7759b2c229e
+object:viery:Viery V Moon 3	7faa5d746cbc2
+object:viery:Viery VI Moon 1	af64fd99626c8
+object:viery:Viery VI Moon 2	11494c5b9118f0
+object:viery:Viery VI Moon 3	118d26d5b3abd4
+object:viery:Viery VI Moon 4	54cdfb3f38e10
+object:viery:Viery VI Moon 5	1843c4b254b873
+object:viery:Viery VI Moon 6	e9c02dc3e01b4
+object:viery:Viery VI Moon 7	135c996d43c640
+object:viery:Viery VI Moon 8	19524291fa9cd4
+object:viery:Viery VII Moon 1	4c61e531fc29f
+object:viery:Viery VII Moon 2	185349a08561d4
+object:viery:Viery VII Moon 3	1f7ce92d0729a4
+object:viery:Viery VII Moon 4	33bf7c4b1a014
+object:viery:Viery VII Moon 5	15c4c7fa03b704
+object:viery:Viery VII Moon 6	15e908c2b7261c
+object:viery:Viery VII Moon 7	f015b19a1b94c
+object:viery:Viery VII Moon 8	1a1380811a132a
+object:viery:Viery VII Moon 9	183ebea8c17c5d
+object:viery:Viery VIII Moon 1	16a02fc49a72e1
+object:viery:Viery VIII Moon 2	d21a0ca389815
+object:viery:Viery VIII Moon 3	557820d99cf47
+object:weiss-212:Weiss 212 I Moon 1	2d0037308d8c2
+object:weiss-212:Weiss 212 I Moon 2	76588b74d5604
+object:weiss-212:Weiss 212 I Moon 3	4d6c42c0768c7
+object:weiss-212:Weiss 212 II Moon 1	23a12bb7764a9
+object:weiss-212:Ferox Moon 1	3b484ffc7313e
+object:weiss-212:Ferox Moon 2	157ab8a643f17
+object:weiss-212:Weiss 212 IV Moon 1	177dd9a937773a
+object:weiss-212:Weiss 212 IV Moon 2	66d1f4a8aa4bc
+object:weiss-212:Weiss 212 IV Moon 3	421cc87b1f09
+object:weiss-212:Weiss 212 IV Moon 4	66cb984953680
+object:weiss-212:Weiss 212 IV Moon 5	90c098e6953ce
+object:weiss-212:Weiss 212 IV Moon 6	591a92893a31
+object:weiss-212:Weiss 212 IV Moon 7	4e0cee5343aea
+object:weiss-212:Weiss 212 V Moon 1	4ac7efd907cb6
+object:johanssen:Johanssen I Moon 1	e83bce6cdcd32
+object:johanssen:Johanssen II Moon 1	95f7464e62fa2
+object:johanssen:Johanssen II Moon 2	c28b635cefeb9
+object:johanssen:Noxon Moon 1	e30f1c3edcd4b
+object:johanssen:Noxon Moon 2	13fe135a291143
+object:johanssen:Noxon Moon 3	faf80f41c0b57
+object:johanssen:Morcate Moon 1	1287eca6af0be7
+object:johanssen:Johanssen V Moon 1	165ea4f98ae6b1
+object:johanssen:Johanssen V Moon 2	9bcb4349a9a0c
+object:johanssen:Johanssen V Moon 3	f73cb5f58be41
+object:johanssen:Johanssen V Moon 4	13adb97011abd7
+object:johanssen:Johanssen V Moon 5	1609a53db46dc1
+object:johanssen:Johanssen V Moon 6	d6e57eee54b25
+object:johanssen:Johanssen V Moon 7	114d13f944c45e
+object:johanssen:Johanssen V Moon 8	84fbf2c9da2f
+object:johanssen:Johanssen V Moon 9	cf5c7dc2df209
+object:johanssen:Johanssen VI Moon 1	18e59c09c11759
+object:johanssen:Johanssen VI Moon 2	6420887b3e362
+object:johanssen:Johanssen VI Moon 3	b294aeee428d5
+object:acrius:Acrius I Moon 1	188ca5faee81a9
+object:acrius:Acrius I Moon 2	1e8851d2fbccd8
+object:acrius:Acrius II Moon 1	1b0e9ff68d2d38
+object:acrius:Acrius II Moon 2	8d383aae6c02a
+object:acrius:Acrius II Moon 3	1c746d42e73faa
+object:acrius:Foundation Moon 1	1c5a70fe437ea8
+object:acrius:Tributa Moon 1	657120b21d90f
+object:acrius:Tributa Moon 2	1386b0a934342c
+object:acrius:Acrius V Moon 1	fbf9639c286bb
+object:acrius:Acrius V Moon 2	1034f0d2227e40
+object:acrius:Acrius V Moon 3	1d1190ce16fec9
+object:acrius:Acrius V Moon 4	3c7c30bb9a4b6
+object:acrius:Acrius V Moon 5	1a6af2a8ac5a8
+object:acrius:Acrius V Moon 6	87d37ca5ddbfd
+object:acrius:Acrius V Moon 7	1a68194317f7cb
+object:acrius:Acrius V Moon 8	111ab5a8f88164
+object:acrius:Acrius V Moon 9	58419d2814100
+object:acrius:Acrius V Moon 10	ed68b2e53228a
+object:acrius:Acrius VI Moon 1	101551ded00b45
+object:acrius:Acrius VI Moon 2	166c521fa5832d
+object:acrius:Acrius VI Moon 3	4ffcc94aeacc8
+object:acrius:Acrius VI Moon 4	14814261c3ff3d
+object:acrius:Acrius VI Moon 5	13d09df5729600
+object:acrius:Acrius VI Moon 6	1f5366163db6cb
+object:acrius:Acrius VI Moon 7	5fb1006277883
+object:acrius:Acrius VI Moon 8	14a159f0d6f3c0
+object:acrius:Acrius VI Moon 9	1eea1a843758db
+object:acrius:Acrius VI Moon 10	10920b75badcb1
+object:acrius:Acrius VI Moon 11	116441b15aa817
+object:acrius:Acrius VII Moon 1	14b8bc67ddc009
+object:acrius:Acrius VII Moon 2	19e796895c300c
+object:haldor:Haldor I Moon 1	14ab4efbc077e6
+object:haldor:Haldor I Moon 2	8b8aa97b8a2b1
+object:haldor:Haldor I Moon 3	17c5128ab9769d
+object:haldor:Haldor II Moon 1	e01baadfffa6b
+object:haldor:Havencrest Moon 1	1baf9429ca05d7
+object:haldor:Havencrest Moon 2	53c85d400a71
+object:haldor:Haldor IV Moon 1	f013aa0083e9f
+object:haldor:Haldor IV Moon 2	10b51468a27a35
+object:haldor:Haldor IV Moon 3	11a30c9190d1aa
+object:haldor:Haldor V Moon 1	12318370febe05
+object:haldor:Haldor VI Moon 1	12570743aafac7
+object:haldor:Haldor VI Moon 2	526643091bcfb
+object:haldor:Haldor VI Moon 3	1f9d3b241d89be
+object:haldor:Haldor VI Moon 4	4d9d0491cf2be
+object:haldor:Haldor VI Moon 5	10b47fadb9db48
+object:haldor:Haldor VI Moon 6	16796bda482d51
+object:haldor:Haldor VI Moon 7	105d39981d8554
+object:haldor:Haldor VI Moon 8	ef318c3ca9336
+object:haldor:Haldor VI Moon 9	157b6f74877b55
+object:haldor:Haldor VI Moon 10	9768b88130a6f
+object:haldor:Haldor VI Moon 11	88275b97c60a4
+object:haldor:Haldor VI Moon 12	91ddd2a094983
+object:haldor:Haldor VII Moon 1	8b79eca00c25d
+object:haldor:Haldor VII Moon 2	1c8cc8423ad8c9
+object:haldor:Haldor VII Moon 3	1107e66c6a881a
+object:haldor:Haldor VII Moon 4	57305fa855125
+object:haldor:Haldor VII Moon 5	c66cf867ae9a7
+object:haldor:Haldor VII Moon 6	53a2acf30e48e
+object:haldor:Haldor VII Moon 7	1de26931be45c1
+object:haldor:Haldor VII Moon 8	e652f9c315a58
+object:haldor:Haldor VII Moon 9	7a9b144d27c85
+object:haldor:Haldor VII Moon 10	107f5180b4a3a2
+object:haldor:Haldor VII Moon 11	127b32eaf64919
+object:haldor:Haldor VII Moon 12	1f381b1bb9b3c2
+object:haldor:Haldor VII Moon 13	138f2cc323825e
+object:haldor:Haldor VIII Moon 1	eb5a3ad3238fd
+object:constantine:Constantine I Moon 1	ca43d118500d0
+object:constantine:Constantine II Moon 1	11a479a3cc7bd3
+object:constantine:Constantine II Moon 2	fe5a35639fad0
+object:constantine:Saratoga Moon 1	126d609c58cf28
+object:constantine:Saratoga Moon 2	10e2802c0d61fb
+object:constantine:Saratoga Moon 3	ce48aed3e79ab
+object:constantine:Constantine IV Moon 1	a38d9a1d396b3
+object:constantine:Constantine IV Moon 2	4d964973642c
+object:constantine:Constantine IV Moon 3	45584e3119311
+object:constantine:Constantine IV Moon 4	1d21561c4567fc
+object:constantine:Constantine IV Moon 5	a5e06c9200724
+object:constantine:Constantine IV Moon 6	12bb14ce0c610e
+object:constantine:Constantine IV Moon 7	1137d4e41a2440
+object:constantine:Constantine IV Moon 8	188526de3a9ce6
+object:constantine:Constantine IV Moon 9	ee1e39123b393
+object:constantine:Constantine IV Moon 10	199889e46fc8cf
+object:constantine:Constantine IV Moon 11	e21f6a8a5925a
+object:constantine:Constantine V Moon 1	8bb73de04b4e7
+object:constantine:Constantine V Moon 2	1f9773839c8a60
+object:dsc-346:DSC 346 I Moon 1	10c024bb3b6cd7
+object:dsc-346:DSC 346 I Moon 2	13f9680f0b6ddd
+object:dsc-346:DSC 346 II Moon 1	1e2bf73d8709d6
+object:dsc-346:DSC 346 II Moon 2	15ef55ca3edc54
+object:dsc-346:DSC 346 II Moon 3	122913ab08d251
+object:dsc-346:DSC 346 III Moon 1	e33da301e3c83
+object:dsc-346:DSC 346 III Moon 2	66e273dd1835f
+object:dsc-346:DSC 346 III Moon 3	24c83f89b15f8
+object:dsc-346:DSC 346 III Moon 4	a849cc2bb5540
+object:dsc-346:DSC 346 III Moon 5	6e4b960930175
+object:dsc-346:DSC 346 III Moon 6	89afbf883d92a
+object:dsc-346:DSC 346 III Moon 7	900694f40f4d1
+object:dsc-346:DSC 346 III Moon 8	139d5eb065f960
+object:dsc-346:DSC 346 III Moon 9	1ddb5592769a90
+object:dsc-346:DSC 346 III Moon 10	5f989fe58fe37
+object:dsc-346:DSC 346 III Moon 11	1cc2506368ecec
+object:dsc-346:DSC 346 IV Moon 1	c4ebe3cb09ae8
+object:dsc-346:DSC 346 IV Moon 2	12154bfc48eaf7
+object:koch:Koch I Moon 1	15ea1b64dd4c52
+object:koch:Koch I Moon 2	4dddbf62d89f4
+object:koch:Koch I Moon 3	47520924bb68b
+object:koch:Koch II Moon 1	1d0d1050642929
+object:koch:Prospect Moon 1	2e25401007a31
+object:koch:Prospect Moon 2	183c74bff3125a
+object:koch:Koch IV Moon 1	49da651ea6da8
+object:koch:Koch IV Moon 2	a6b9715bebb1e
+object:koch:Koch IV Moon 3	fd79c9191469d
+object:koch:Koch V Moon 1	15036910d5a8df
+object:koch:Koch V Moon 2	643ac2b256fa5
+object:koch:Koch V Moon 3	ad714a6ed5e2a
+object:koch:Koch V Moon 4	4d7ec8ed80183
+object:koch:Koch V Moon 5	b01b666b48
+object:koch:Koch V Moon 6	190ca23882b753
+object:koch:Koch V Moon 7	f2092ca64fea0
+object:koch:Koch V Moon 8	196381ac21ba7a
+object:koch:Koch V Moon 9	916701398848b
+object:koch:Koch V Moon 10	84dca570f4c33
+object:koch:Koch V Moon 11	193214779757d2
+object:koch:Koch V Moon 12	d3b3abb6c2efd
+object:koch:Koch V Moon 13	85587a6d19508
+object:koch:Koch V Moon 14	a8b30ebe0bf11
+object:koch:Koch VI Moon 1	cba920efed1a5
+object:koch:Koch VI Moon 2	1c184914673600
+object:koch:Koch VI Moon 3	1cded5e328db21
+object:koch:Koch VI Moon 4	15ae133e63dcc7
+object:koch:Koch VI Moon 5	d84b657426c97
+object:koch:Koch VI Moon 6	7e89603050abf
+object:koch:Koch VI Moon 7	3bc64898367c3
+object:koch:Koch VII Moon 1	1ce3d19dcf1942
+object:koch:Koch VII Moon 2	12428afa532141
+object:koch:Koch VII Moon 3	3b782435653d0
+object:carver:Carver I Moon 1	1bff4c8a562060
+object:carver:Carver II Moon 1	80d999d23d7e1
+object:carver:Carver II Moon 2	1678e11f8f72ad
+object:carver:Carver III Moon 1	85eba85a2780b
+object:carver:Carver III Moon 2	1acba7d2b0f2a1
+object:carver:Carver III Moon 3	fb9ed1a6bebdb
+object:carver:Carver IV Moon 1	1ae8d3b80c12b
+object:carver:Carver V Moon 1	c5ffd805dfc24
+object:carver:Carver V Moon 2	4e2b3e422bba7
+object:carver:Carver VI Moon 1	1ccbafd4451aaf
+object:carver:Carver VI Moon 2	18babc504d5cb4
+object:carver:Carver VI Moon 3	9b1b809166082
+object:carver:Carver VI Moon 4	1b0b40c8c68af2
+object:carver:Carver VI Moon 5	1c692fa37defde
+object:carver:Carver VI Moon 6	1b53ccdbbcea38
+object:carver:Carver VI Moon 7	bc4df72953530
+object:carver:Carver VI Moon 8	1b7662fab12643
+object:carver:Carver VII Moon 1	3ae8933187c86
+object:carver:Carver VII Moon 2	74623fd6be669
+object:carver:Carver VII Moon 3	351faec326ae7
+object:carver:Carver VII Moon 4	654ba4cc26219
+object:carver:Carver VII Moon 5	19344efda9ffa2
+object:carver:Carver VII Moon 6	1e45c0c64f111e
+object:carver:Carver VII Moon 7	17d47296a10b0f
+object:carver:Carver VII Moon 8	14178e8644e0a3
+object:carver:Carver VII Moon 9	c40f4715d01ef
+object:carver:Carver VIII Moon 1	c427e68330d28
+object:carver:Carver VIII Moon 2	1f34a294200b8d
+object:bharask:Bharask I Moon 1	1449a97eeb97bb
+object:bharask:Bharask I Moon 2	124842d5dea60d
+object:bharask:Bharask II Moon 1	19b0d70454005f
+object:bharask:Bharask II Moon 2	25a9218d223d2
+object:bharask:Bharask II Moon 3	11247a73cd26c4
+object:bharask:Vonako Moon 1	1c26e7673a50d8
+object:bharask:Bharask IV Moon 1	18d38fb3e0d05
+object:bharask:Bharask IV Moon 2	17d184f8d86384
+object:bharask:Bharask IV Moon 3	1160cf3b693a15
+object:bharask:Bharask IV Moon 4	17aa1adaea1cbb
+object:bharask:Bharask IV Moon 5	134d49d861ebe8
+object:bharask:Bharask IV Moon 6	1145454c603722
+object:bharask:Bharask IV Moon 7	1206d0e79f9973
+object:bharask:Bharask V Moon 1	19ff97bceacce3
+object:bharask:Bharask V Moon 2	7e2429ab93e90
+object:bharask:Bharask V Moon 3	18923d87ecc2bd
+object:blake-s-star:Blake's Star I Moon 1	1310d9e8f8617
+object:blake-s-star:Blake's Star I Moon 2	1f9b15fb5fa72f
+object:blake-s-star:Blake's Star I Moon 3	c58ba8565a348
+object:blake-s-star:Blake's Star II Moon 1	1df12e589e9ddc
+object:blake-s-star:Phoenix Moon 1	1e89f53b6ed14b
+object:blake-s-star:Phoenix Moon 2	19a34bf972d62b
+object:blake-s-star:Belleza Moon 1	f7c2967545e7b
+object:blake-s-star:Belleza Moon 2	95fdda5ed1944
+object:blake-s-star:Belleza Moon 3	1d01fabb9cd259
+object:blake-s-star:Blake's Star V Moon 1	3023a0e31cb2
+object:blake-s-star:Blake's Star V Moon 2	10db347bfb39c7
+object:blake-s-star:Blake's Star V Moon 3	1361deab3c28f6
+object:blake-s-star:Blake's Star V Moon 4	1323f38d93a0ee
+object:blake-s-star:Blake's Star V Moon 5	983a7916e257b
+object:blake-s-star:Blake's Star V Moon 6	e9ad3973f3d5c
+object:blake-s-star:Blake's Star V Moon 7	14acaa9839898f
+object:blake-s-star:Blake's Star V Moon 8	11f2554f812b9b
+object:blake-s-star:Blake's Star V Moon 9	169bf187d2a8d5
+object:blake-s-star:Blake's Star VI Moon 1	3b7e38db30f5e
+object:blake-s-star:Blake's Star VI Moon 2	128a89f72e3c6a
+object:weiss-287:Weiss 287 I Moon 1	1dad0ea44d7bdf
+object:weiss-287:Weiss 287 II Moon 1	dfbcb205f6294
+object:weiss-287:Weiss 287 II Moon 2	33944a684af6d
+object:weiss-287:New Dresden Moon 1	1182311d5bd612
+object:weiss-287:New Dresden Moon 2	241e98faf959f
+object:weiss-287:New Dresden Moon 3	1de37382f796ac
+object:weiss-287:Weiss 287 IV Moon 1	13f92975cadd3d
+object:weiss-287:Weiss 287 V Moon 1	88e3672f893dd
+object:weiss-287:Weiss 287 V Moon 2	1b9b4fb580911
+object:weiss-287:Weiss 287 V Moon 3	b4788b2203727
+object:weiss-287:Weiss 287 V Moon 4	1f4bf2edd6b96e
+object:weiss-287:Weiss 287 V Moon 5	17d9d6290e9ff5
+object:weiss-287:Weiss 287 V Moon 6	495be77b8a537
+object:weiss-287:Weiss 287 V Moon 7	1b260df34e8747
+object:weiss-287:Weiss 287 V Moon 8	6a3a7de7f939b
+object:weiss-287:Weiss 287 V Moon 9	d5e68ebf70e71
+object:weiss-287:Weiss 287 V Moon 10	1eeb04287ec0f2
+object:weiss-287:Weiss 287 VI Moon 1	4294a7ec73b67
+object:weiss-287:Weiss 287 VI Moon 2	14d1352c69e374
+object:weiss-287:Weiss 287 VI Moon 3	1a5d747bdd6252
+object:weiss-287:Weiss 287 VI Moon 4	119caf04f0ff4d
+object:weiss-287:Weiss 287 VI Moon 5	637503d00c9bd
+object:weiss-287:Weiss 287 VI Moon 6	17aba900a0771b
+object:weiss-287:Weiss 287 VI Moon 7	93a5264566280
+object:weiss-287:Weiss 287 VI Moon 8	13f430715409fe
+object:weiss-287:Weiss 287 VI Moon 9	2ed17b2309dc3
+object:weiss-287:Weiss 287 VI Moon 10	e971da769f912
+object:weiss-287:Weiss 287 VI Moon 11	1f457ccecb5860
+object:weiss-287:Weiss 287 VII Moon 1	4f5848bc310
+object:sol:Sol I Moon 1	90bd3ac15ba27
+object:sol:Sol I Moon 2	15197438c9b021
+object:sol:Sol II Moon 1	41b4ea4815578
+object:sol:Sol II Moon 2	1f8dd453651481
+object:sol:Sol II Moon 3	afce838657f1b
+object:sol:Karic	aa53fe09a73d5
+object:sol:Sol IV Moon 1	1cc4969b83616
+object:sol:Sol IV Moon 2	1ad86a5a17d930
+object:sol:Arcadia Moon 1	e5edde5ca892
+object:sol:Arcadia Moon 2	81b20d32b9059
+object:sol:Arcadia Moon 3	fe6adbffa73cd
+object:sol:Arcadia Moon 4	167deccd63a97d
+object:sol:Arcadia Moon 5	c06bf4bf5bce5
+object:sol:Arcadia Moon 6	de2dd12e44828
+object:sol:Arcadia Moon 7	24624d78b01f6
+object:sol:Arcadia Moon 8	1ae12e7ba4d4ec
+object:sol:Arcadia Moon 9	9cd3bf4bd799a
+object:sol:Arcadia Moon 10	30b87d831a0f1
+object:sol:Arcadia Moon 11	17d2e99a7ec195
+object:sol:Sol VI Moon 1	15e5f98e3237a6
+object:sol:Sol VI Moon 2	1f363ebe4109a4
+object:sol:Sol VI Moon 3	10659d5c4bd9dc
+object:sol:Sol VI Moon 4	d850e6ab5bada
+object:sol:Sol VI Moon 5	113d5ed808d03
+object:sol:Sol VI Moon 6	1c53a6f68bfb53
+object:sol:Sol VI Moon 7	beb51628f6fad
+object:sol:Sol VI Moon 8	15397ef561e216
+object:sol:Sol VI Moon 9	85968a17f6662
+object:sol:Sol VI Moon 10	18c1b28bb07616
+object:sol:Sol VI Moon 11	15e3ef9885041
+object:sol:Sol VI Moon 12	13594bd12b9cc1
+object:sol:Sol VII Moon 1	373aafa9abd26
+object:sol:Sol VII Moon 2	119343c6c4b800
+object:sol:Sol VII Moon 3	17d7b37ede8edd
+object:sol:Sol VII Moon 4	163e7260e93fda
+object:sol:Sol VII Moon 5	acddbf098bd90
+object:sol:Sol VII Moon 6	1d9a80bcdb3357
+object:sol:Sol VII Moon 7	10cace1fc212f5
+object:sol:Sol VII Moon 8	8414fd2089b4c
+object:sol:Sol VII Moon 9	1fadb8b0d9e160
+object:sol:Sol VII Moon 10	1e3f40640a592b
+object:sol:Sol VII Moon 11	18acaea81b9146
+object:sol:Sol VII Moon 12	6f62885ed759
+object:sol:Sol VII Moon 13	168662ab27d199
+object:sol:Sol VIII Moon 1	a4b4a37f92389
+object:sol:Sol VIII Moon 2	1cafb17aee8a9
+object:sol:Sol VIII Moon 3	d5c1d30bced6d
+object:freki:Freki I Moon 1	137bc2c74354a0
+object:freki:Freki I Moon 2	952092ea00283
+object:freki:Freki I Moon 3	5234785a98b69
+object:freki:Freki II Moon 1	3d608c7ca3b5e
+object:freki:Freki III Moon 1	d9f3918f69d99
+object:freki:Freki III Moon 2	eaac9ce761731
+object:freki:Freki III Moon 3	1713ffcb8a2312
+object:freki:Freki III Moon 4	1b97f52c19390d
+object:freki:Freki III Moon 5	57081bfff5d60
+object:freki:Freki III Moon 6	1063e1d895eeaf
+object:freki:Freki III Moon 7	130528aa9e901d
+object:freki:Freki III Moon 8	181b45ab1e4fb
+object:freki:Freki III Moon 9	12281410926086
+object:freki:Freki III Moon 10	cb74cd19b839
+object:freki:Freki IV Moon 1	bf9927b64705b
+object:freki:Freki IV Moon 2	ecb2eea211138
+object:freki:Freki IV Moon 3	7519d56624256
+object:freki:Freki V Moon 1	138075592a706c
+object:cassius:Cassius I Moon 1	1cd581e1f5e5cd
+object:cassius:Cassius II Moon 1	1aca47c711d38f
+object:cassius:Cassius II Moon 2	ad426710fd6d3
+object:cassius:Kronos Moon 1	c16a8fc3f906b
+object:cassius:Kronos Moon 2	b49b9625e786c
+object:cassius:Kronos Moon 3	3357c1f085c96
+object:cassius:Cassius IV Moon 1	75b656b6b7b4e
+object:cassius:Cassius IV Moon 2	146dd40383099b
+object:cassius:Cassius IV Moon 3	17e09926a652ef
+object:cassius:Cassius IV Moon 4	196f18bc55e704
+object:cassius:Cassius IV Moon 5	159f8d3f39d80a
+object:cassius:Cassius IV Moon 6	c662e2878ca55
+object:cassius:Cassius IV Moon 7	53a41af3c3bb9
+object:cassius:Cassius IV Moon 8	1b748f16236c90
+object:cassius:Cassius IV Moon 9	de38419a0a15b
+object:cassius:Cassius IV Moon 10	177470a630a339
+object:cassius:Cassius IV Moon 11	1f3a380bdd0373
+object:cassius:Cassius IV Moon 12	86f3dc19eaeb2
+object:cassius:Cassius V Moon 1	433cb1e7e410b
+object:cassius:Cassius V Moon 2	140e558721f63c
+object:cassius:Cassius V Moon 3	19e16358509064
+object:cassius:Cassius V Moon 4	ded9483619cd0
+object:cassius:Cassius V Moon 5	50eba8863ce96
+object:cassius:Cassius V Moon 6	d8799f77b511a
+object:cassius:Cassius V Moon 7	9f7e1bbdc0c47
+object:cassius:Cassius V Moon 8	1353f51f810e39
+object:cassius:Cassius V Moon 9	1c301a3b3c0090
+object:cassius:Cassius V Moon 10	10666554970b9e
+object:cassius:Cassius V Moon 11	cf16685a6d301
+object:cassius:Cassius V Moon 12	1539e83ea9a801
+object:cassius:Cassius V Moon 13	6e8119d44cfec
+object:cassius:Cassius VI Moon 1	1dc6436396d81f
+object:cassius:Cassius VI Moon 2	1d8383f8e245d4
+object:cassius:Cassius VI Moon 3	c50594a9c8674
+object:heimdall:Heimdall I Moon 1	2b1bf9c44b2da
+object:heimdall:Heimdall I Moon 2	d0425f1476f67
+object:heimdall:Heimdall II Moon 1	e8c3800d58303
+object:heimdall:Heimdall II Moon 2	e7957081eb2bb
+object:heimdall:Heimdall II Moon 3	1aa8d3fa46a403
+object:heimdall:Heimdall III Moon 1	db153b69aa4dc
+object:heimdall:Varagandr	d850a39402624
+object:heimdall:Jotunheim Moon 2	1d3c12e902f360
+object:heimdall:Jotunheim Moon 3	16796965047c76
+object:heimdall:Jotunheim Moon 4	19713e90df5c16
+object:heimdall:Jotunheim Moon 5	1a22a3cfdc0d20
+object:heimdall:Jotunheim Moon 6	13adc79ae67aaf
+object:heimdall:Jotunheim Moon 7	a1e05ff8deafe
+object:heimdall:Jotunheim Moon 8	1a0bed7ec0cf4b
+object:heimdall:Jotunheim Moon 9	1739f706320ccb
+object:heimdall:Jotunheim Moon 10	9f5766de91f22
+object:heimdall:Jotunheim Moon 11	c321636b17757
+object:heimdall:Jotunheim Moon 12	ada0bb6d2a969
+object:heimdall:Jotunheim Moon 13	80fd4b06a8eec
+object:heimdall:Jotunheim Moon 14	19f24b7369f82f
+object:heimdall:Jotunheim Moon 15	164fbda41182c
+object:heimdall:Jotunheim Moon 16	1b7b2c0061d9d7
+object:heimdall:Jotunheim Moon 17	1a0b7c984be351
+object:heimdall:Jotunheim Moon 18	1aa61981b7c9e8
+object:heimdall:Jotunheim Moon 19	10175513ad8a4e
+object:heimdall:Jotunheim Moon 20	1060ec19eb6fd3
+object:heimdall:Jotunheim Moon 21	16a26ebd070cd8
+object:heimdall:Jotunheim Moon 22	1b6d2c36d7d102
+object:heimdall:Jotunheim Moon 23	c71087d449807
+object:heimdall:Jotunheim Moon 24	1d9468123ef772
+object:heimdall:Jotunheim Moon 25	13134c001bbeb9
+object:heimdall:Jotunheim Moon 26	59e11a3f6efaf
+object:heimdall:Jotunheim Moon 27	1f13d6895e49a7
+object:heimdall:Jotunheim Moon 28	d9390cea320d3
+object:heimdall:Jotunheim Moon 29	3bd4974780e96
+object:heimdall:Jotunheim Moon 30	858310b6ab80a
+object:heimdall:Jotunheim Moon 31	159d14943247ba
+object:heimdall:Jotunheim Moon 32	1e5ebeec6f2857
+object:heimdall:Jotunheim Moon 33	1c88b3fc4d9da7
+object:heimdall:Jotunheim Moon 34	a211a7d1893a6
+object:heimdall:Jotunheim Moon 35	24788a84cf86
+object:heimdall:Jotunheim Moon 36	459567aa082e7
+object:heimdall:Jotunheim Moon 37	124ee5e56d2bf8
+object:heimdall:Jotunheim Moon 38	62c9ae542b636
+object:heimdall:Jotunheim Moon 39	16abb405a7306a
+object:heimdall:Jotunheim Moon 40	cc8925618058
+object:heimdall:Jotunheim Moon 41	4b56c8ea76681
+object:heimdall:Jotunheim Moon 42	30a1d52e6a387
+object:heimdall:Jotunheim Moon 43	3a0f10056a249
+object:heimdall:Jotunheim Moon 44	182d2909dc65b5
+object:heimdall:Jotunheim Moon 45	11abba68565f2f
+object:heimdall:Jotunheim Moon 46	17aaf74b127cb5
+object:heimdall:Jotunheim Moon 47	14ee08ff56ae5d
+object:heimdall:Jotunheim Moon 48	5245f9f48dcbf
+object:heimdall:Jotunheim Moon 49	63fc642c43a5
+object:heimdall:Jotunheim Moon 50	91d4c831d58d2
+object:heimdall:Jotunheim Moon 51	246baafd17f23
+object:heimdall:Jotunheim Moon 52	914e284ba26ee
+object:heimdall:Jotunheim Moon 53	1e6e4234861419
+object:heimdall:Jotunheim Moon 54	67cd2ec6ac8b8
+object:heimdall:Jotunheim Moon 55	a7fda0e99f1c9
+object:heimdall:Jotunheim Moon 56	1dbe7aff103342
+object:heimdall:Jotunheim Moon 57	f67ab266845cf
+object:heimdall:Jotunheim Moon 58	1548ea98e7134
+object:heimdall:Jotunheim Moon 59	ee30b23cf059
+object:heimdall:Jotunheim Moon 60	1b5800aae29731
+object:heimdall:Jotunheim Moon 61	17864159649985
+object:heimdall:Jotunheim Moon 62	1f5f92ea264c6e
+object:heimdall:Jotunheim Moon 63	1830297da0b0ea
+object:heimdall:Jotunheim Moon 64	422b3833e96b5
+object:heimdall:Jotunheim Moon 65	120bc7285491ee
+object:heimdall:Jotunheim Moon 66	5910e54ca0bab
+object:heimdall:Jotunheim Moon 67	690ebc1143dda
+object:heimdall:Jotunheim Moon 68	bc7d1781f09c1
+object:heimdall:Jotunheim Moon 69	a835d53967817
+object:heimdall:Jotunheim Moon 70	a15c72bb5f737
+object:heimdall:Jotunheim Moon 71	103410f94e889e
+object:heimdall:Jotunheim Moon 72	108e488cbdf543
+object:heimdall:Jotunheim Moon 73	9daefd42a3fa3
+object:heimdall:Jotunheim Moon 74	4197c9688068f
+object:heimdall:Jotunheim Moon 75	1396e792b4d678
+object:heimdall:Jotunheim Moon 76	fb8c01451417f
+object:heimdall:Jotunheim Moon 77	133b050fa04df3
+object:heimdall:Jotunheim Moon 78	1ea70124306a34
+object:heimdall:Heimdall V Moon 1	1544f4c4a34e49
+object:heimdall:Heimdall V Moon 2	1222ff0ce3869e
+object:heimdall:Heimdall V Moon 3	1f60cc20364451
+object:heimdall:Heimdall V Moon 4	df82e049f376a
+object:heimdall:Heimdall V Moon 5	109659f659a8ec
+object:heimdall:Heimdall V Moon 6	1731cfcb1b0811
+object:heimdall:Heimdall V Moon 7	19a0475f8a3e24
+object:heimdall:Heimdall V Moon 8	841f56111fae8
+object:heimdall:Heimdall V Moon 9	810b23a161b94
+object:heimdall:Heimdall V Moon 10	9cc252a3f7fd7
+object:heimdall:Heimdall V Moon 11	d2192162057a1
+object:heimdall:Heimdall V Moon 12	1c1da783c12f23
+object:heimdall:Heimdall V Moon 13	21d29b3bf9250
+object:heimdall:Heimdall V Moon 14	1cdcc921bfe311
+object:heimdall:Heimdall VI Moon 1	1a78752566185f
+object:heimdall:Heimdall VI Moon 2	23c89bbdb5990
+object:heimdall:Heimdall VI Moon 3	e9463e31fccf6
+object:heimdall:Heimdall VI Moon 4	15b7a4624c6e85
+object:heimdall:Heimdall VI Moon 5	1bd0d3191760da
+object:heimdall:Heimdall VI Moon 6	1f6f32957a6bec
+object:heimdall:Heimdall VI Moon 7	78ae1c778c516
+object:heimdall:Heimdall VII Moon 1	a0507d71afd76
+object:heimdall:Heimdall VII Moon 2	1c8bd6049bddd7
+object:tessera:Tessera I Moon 1	1b2d66e565d50c
+object:tessera:Tessera I Moon 2	f2f3a309ba411
+object:tessera:Tessera I Moon 3	f56d1d96dbee5
+object:tessera:Tessera II Moon 1	4939088b9fd7c
+object:tessera:New Soris Moon 1	a485cd973b1ea
+object:tessera:New Soris Moon 2	9aee4d7cb0e60
+object:tessera:Tessera IV Moon 1	f88d750f8a28a
+object:tessera:Tessera IV Moon 2	1cc9344fc69be9
+object:tessera:Tessera IV Moon 3	23c48d0da907f
+object:tessera:Tessera V Moon 1	8903f2bd4874e
+object:tessera:Tessera VI Moon 1	b13452f206e81
+object:tessera:Tessera VI Moon 2	a1a363e835153
+object:tessera:Tessera VI Moon 3	b79a63fa08852
+object:tessera:Tessera VI Moon 4	14996264d82f77
+object:tessera:Tessera VI Moon 5	f73107805d20c
+object:tessera:Tessera VI Moon 6	9b5daf51a122a
+object:tessera:Tessera VI Moon 7	77b54af831849
+object:tessera:Tessera VI Moon 8	e1d658be709ca
+object:tessera:Tessera VII Moon 1	a7e67ed1aa4b2
+object:tessera:Tessera VII Moon 2	1421269f11c4b8
+object:tessera:Tessera VII Moon 3	36ac9963f456f
+object:tessera:Tessera VII Moon 4	834b2fe312df4
+object:tessera:Tessera VII Moon 5	189941f10a91cf
+object:tessera:Tessera VII Moon 6	271d110375007
+object:tessera:Tessera VII Moon 7	158b1885216d64
+object:tessera:Tessera VII Moon 8	d6749c08b6f0e
+object:tessera:Tessera VII Moon 9	1408152fa4513f
+object:tessera:Tessera VIII Moon 1	749ecc4093ae3
+object:hargrove:Hargrove I Moon 1	b4729dbfb6423
+object:hargrove:Hargrove II Moon 1	378cea20e9775
+object:hargrove:Hargrove II Moon 2	f8d6daa700a59
+object:hargrove:Oros Moon 1	13c63af8f6628e
+object:hargrove:Oros Moon 2	1907443348698c
+object:hargrove:Oros Moon 3	9c4d0505a444e
+object:hargrove:Hargrove IV Moon 1	1636f1410d8be6
+object:hargrove:Hargrove IV Moon 2	13ad591d6d951d
+object:hargrove:Hargrove IV Moon 3	169d46242bd584
+object:hargrove:Hargrove IV Moon 4	1a0a4167f6eff6
+object:hargrove:Hargrove IV Moon 5	1fde82ccca8828
+object:hargrove:Hargrove IV Moon 6	86295c0b28214
+object:hargrove:Hargrove IV Moon 7	11901413c0bb12
+object:hargrove:Hargrove V Moon 1	1cfedb7f375f16
+object:hargrove:Hargrove V Moon 2	fcc008f6fe79d
+object:torrin:Torrin I Moon 1	df1a9e76bf8df
+object:torrin:Torrin I Moon 2	40ce04c57a82b
+object:torrin:Torrin II Moon 1	17948deabdf2df
+object:torrin:Torrin II Moon 2	1e38be6ced3ffa
+object:torrin:Torrin II Moon 3	1742a0fcb87099
+object:torrin:Emberfall Moon 1	3d908967a6d90
+object:torrin:Torrin IV Moon 1	1a494ea8fb7ee6
+object:torrin:Torrin IV Moon 2	1a1da24746ee60
+object:torrin:Torrin IV Moon 3	88493943e01d1
+object:torrin:Torrin IV Moon 4	12ffeb06441784
+object:torrin:Torrin IV Moon 5	1c69cd3049a759
+object:torrin:Torrin IV Moon 6	1cf930e9ea34a2
+object:torrin:Torrin IV Moon 7	fa35cd5d82583
+object:torrin:Torrin IV Moon 8	12dcb3bc31fb06
+object:torrin:Torrin V Moon 1	8c636f2b5f123
+object:torrin:Torrin V Moon 2	1456d4a1aaad7b
+object:torrin:Torrin V Moon 3	1a1dfbdeecb84e
+object:torrin:Torrin V Moon 4	194b79a8e18f29
+object:torrin:Torrin V Moon 5	21f458f4d4339
+object:torrin:Torrin V Moon 6	1773177cde737d
+object:torrin:Torrin V Moon 7	139129971c80e2
+object:torrin:Torrin V Moon 8	3aa026d8ba2f
+object:torrin:Torrin V Moon 9	20c6190704be1
+object:torrin:Torrin VI Moon 1	1018d58b497c79
+object:morrigan:Morrigan I Moon 1	1977781daba7ae
+object:morrigan:Morrigan I Moon 2	427083a05d076
+object:morrigan:Morrigan I Moon 3	1140f96c80c5f0
+object:morrigan:Morrigan II Moon 1	1a65e0cfef6f42
+object:morrigan:Fairmeadow Moon 1	f5a35d056eceb
+object:morrigan:Fairmeadow Moon 2	164738608f477c
+object:morrigan:Morrigan IV Moon 1	11375cb0a536f6
+object:morrigan:Morrigan IV Moon 2	175bbec93d6cfb
+object:morrigan:Morrigan IV Moon 3	1090fe46af49f4
+object:morrigan:Morrigan V Moon 1	1c9a219f9be64c
+object:morrigan:Morrigan V Moon 2	86e0c4cf8247c
+object:morrigan:Morrigan V Moon 3	179a4ed76bac4e
+object:morrigan:Morrigan V Moon 4	1ec4f24cd7d4c9
+object:morrigan:Morrigan V Moon 5	1f58d8c3e674b4
+object:morrigan:Morrigan V Moon 6	74ffd92b9b9ec
+object:morrigan:Morrigan V Moon 7	2b0d9984dcd60
+object:morrigan:Morrigan V Moon 8	f466cfd0147f5
+object:morrigan:Morrigan V Moon 9	1da2c19f4288ef
+object:morrigan:Morrigan V Moon 10	10ef9b2382c39d
+object:morrigan:Morrigan VI Moon 1	1d05d52733154c
+object:morrigan:Morrigan VI Moon 2	e7ac0969b7eb8
+object:morrigan:Morrigan VI Moon 3	15d82c4fe8c86b
+object:morrigan:Morrigan VI Moon 4	4f85757a66cd9
+object:morrigan:Morrigan VI Moon 5	13bcf3e32a6bc1
+object:morrigan:Morrigan VI Moon 6	13d0953b03fce
+object:morrigan:Morrigan VI Moon 7	102edd1c1237e5
+object:morrigan:Morrigan VI Moon 8	6d93b205ff9c
+object:morrigan:Morrigan VI Moon 9	48fa91665773d
+object:morrigan:Morrigan VI Moon 10	1bbf421327dbd9
+object:morrigan:Morrigan VI Moon 11	1b7c390c9a3195
+object:morrigan:Morrigan VII Moon 1	11e1e3b65b0843
+object:morrigan:Morrigan VII Moon 2	7d2339a15d7eb
+object:morrigan:Morrigan VII Moon 3	1ef0861720e9c9
+object:tenebrae:Tenebrae I Moon 1	1aa5610786591
+object:tenebrae:Tenebrae II Moon 1	712a848746c7
+object:tenebrae:Tenebrae II Moon 2	abddd418de50a
+object:tenebrae:Tenebrae III Moon 1	94386c4f2983d
+object:tenebrae:Tenebrae III Moon 2	ac88ca7dae3c9
+object:tenebrae:Tenebrae III Moon 3	f24695049ff07
+object:tenebrae:Tenebrae IV Moon 1	f474f2da9ce7b
+object:tenebrae:Tenebrae V Moon 1	c17f2b62aae62
+object:tenebrae:Tenebrae V Moon 2	f45fd3bc7fdbe
+object:tenebrae:Tenebrae VI Moon 1	f753539f666cf
+object:tenebrae:Tenebrae VI Moon 2	f5a807bd7d443
+object:tenebrae:Tenebrae VI Moon 3	e5721dba0895c
+object:tenebrae:Tenebrae VI Moon 4	1ae3f3310f696a
+object:tenebrae:Tenebrae VI Moon 5	1dabc7aa8946e7
+object:tenebrae:Tenebrae VI Moon 6	16105f95bb2b92
+object:tenebrae:Tenebrae VI Moon 7	d1bd2cd95db15
+object:tenebrae:Tenebrae VI Moon 8	fe27b155ac357
+object:tenebrae:Tenebrae VI Moon 9	1c9ed5082967e0
+object:tenebrae:Tenebrae VI Moon 10	1a5df3438067f3
+object:tenebrae:Tenebrae VI Moon 11	1b5965db4c94ee
+object:tenebrae:Tenebrae VI Moon 12	1b2f0b8c4bfa6e
+object:tenebrae:Tenebrae VII Moon 1	1ea8fdc59fcb0e
+object:tenebrae:Tenebrae VII Moon 2	1a2437b3650b7
+object:tenebrae:Tenebrae VII Moon 3	4573c243f5ddc
+object:tenebrae:Tenebrae VII Moon 4	4450f2697a58d
+object:tenebrae:Tenebrae VII Moon 5	f826fbdf2c97b
+object:tenebrae:Tenebrae VII Moon 6	60f53292fe48c
+object:tenebrae:Tenebrae VII Moon 7	a9ce60385ad91
+object:tenebrae:Tenebrae VII Moon 8	14fbe75d73327c
+object:tenebrae:Tenebrae VII Moon 9	11063b8fe0a2b2
+object:tenebrae:Tenebrae VII Moon 10	2e57bcc3a8739
+object:tenebrae:Tenebrae VII Moon 11	1505deac31a061
+object:tenebrae:Tenebrae VII Moon 12	1e19967c20462e
+object:tenebrae:Tenebrae VII Moon 13	c0918c6f47586
+object:tenebrae:Tenebrae VIII Moon 1	60a77032f2daf
+object:tenebrae:Tenebrae VIII Moon 2	17b49bb6c41c4b
+object:aldwick:Aldwick I Moon 1	13ea7cd84beaa5
+object:aldwick:Aldwick I Moon 2	86e204830c1a7
+object:aldwick:Aldwick II Moon 1	4e7f517347843
+object:aldwick:Aldwick II Moon 2	1483170f0dd8cf
+object:aldwick:Aldwick II Moon 3	46045ad6565a4
+object:aldwick:Aldwick III Moon 1	374633725fcc0
+object:aldwick:Aldwick IV Moon 1	167bfa4e40098f
+object:aldwick:Aldwick IV Moon 2	93f95bc564972
+object:aldwick:Aldwick IV Moon 3	12b95035f1117b
+object:aldwick:Aldwick IV Moon 4	97d23ff86c9bc
+object:aldwick:Aldwick IV Moon 5	b4f2bacf72d52
+object:aldwick:Aldwick IV Moon 6	1f168f95444d4c
+object:aldwick:Aldwick IV Moon 7	139dce82a4c187
+object:aldwick:Aldwick IV Moon 8	1a160eb639c3c7
+object:aldwick:Aldwick IV Moon 9	1db0becd298c5b
+object:aldwick:Aldwick IV Moon 10	171f610ec828db
+object:aldwick:Aldwick IV Moon 11	14d383e0c0057a
+object:aldwick:Aldwick V Moon 1	a4c8f79dd0272
+object:aldwick:Aldwick V Moon 2	322f1889834f2
+object:aldwick:Aldwick V Moon 3	1d85150ebf9b14
+object:kestrel:Kestrel I Moon 1	a2cb8a3588ac9
+object:kestrel:Kestrel I Moon 2	ed62252a0a027
+object:kestrel:Kestrel I Moon 3	17d809e828bc12
+object:kestrel:Kestrel II Moon 1	b94848469bf02
+object:kestrel:Windward Moon 1	12e0f28f8f9e14
+object:kestrel:Windward Moon 2	193fa461f3e22c
+object:kestrel:Kestrel IV Moon 1	1d33428622458a
+object:kestrel:Kestrel IV Moon 2	1165910b0b97a3
+object:kestrel:Kestrel IV Moon 3	1276f1bf897133
+object:kestrel:Kestrel IV Moon 4	131dcb1e5794ed
+object:kestrel:Kestrel IV Moon 5	1667e309ba15e8
+object:kestrel:Kestrel IV Moon 6	6487492e7263
+object:kestrel:Kestrel IV Moon 7	11c086dab0f7e6
+object:kestrel:Kestrel IV Moon 8	1cf737e62c1cdf
+object:kestrel:Kestrel IV Moon 9	1d76cedb8219b7
+object:kestrel:Kestrel IV Moon 10	16965aefaa7850
+object:kestrel:Kestrel IV Moon 11	e19f4abc55c71
+object:kestrel:Kestrel IV Moon 12	196b9f14ac8987
+object:kestrel:Kestrel V Moon 1	1af33806ad1ca7
+object:kestrel:Kestrel V Moon 2	a8390a640ae1c
+object:kestrel:Kestrel V Moon 3	5bb4b8a5f8dd8
+object:kestrel:Kestrel V Moon 4	1b5d839481540f
+object:kestrel:Kestrel V Moon 5	6e46f46bf62e
+object:kestrel:Kestrel V Moon 6	86689a9b088ab
+object:kestrel:Kestrel V Moon 7	13f1967a8298e6
+object:kestrel:Kestrel V Moon 8	17951202018f0f
+object:kestrel:Kestrel V Moon 9	16ddfeeaf4fcdd
+object:kestrel:Kestrel V Moon 10	3d9297743a256
+object:kestrel:Kestrel V Moon 11	1f74196dce043a
+object:kestrel:Kestrel V Moon 12	ca169820bf5ff
+object:kestrel:Kestrel V Moon 13	1ed1759aff7a0
+object:kestrel:Kestrel VI Moon 1	1a2d667a58293a
+object:kestrel:Kestrel VI Moon 2	7aa4df75a9586
+object:wexley:Wexley I Moon 1	b778542b891cb
+object:wexley:Wexley II Moon 1	11fd8ac8a4b67e
+object:wexley:Wexley II Moon 2	6df2a060448e
+object:wexley:Fairhaven Moon 1	5ebf9736fcbdf
+object:wexley:Fairhaven Moon 2	2656031789787
+object:wexley:Fairhaven Moon 3	1ee744bfba0c1a
+object:wexley:Wexley IV Moon 1	25683be58b867
+object:wexley:Wexley V Moon 1	1a2e0ae24ad6f5
+object:wexley:Wexley V Moon 2	1ddd0203b91d92
+object:wexley:Wexley V Moon 3	96e743d0c69a7
+object:wexley:Wexley V Moon 4	5c0b58e36fe60
+object:wexley:Wexley V Moon 5	1e67c056526d58
+object:wexley:Wexley V Moon 6	133311a315cd8
+object:wexley:Wexley V Moon 7	1aa1ba7135e65c
+object:wexley:Wexley V Moon 8	48a789945fb0d
+object:wexley:Wexley V Moon 9	b2224657419ad
+object:wexley:Wexley V Moon 10	1b6380f21d17
+object:wexley:Wexley V Moon 11	346020a9a7fc
+object:wexley:Wexley V Moon 12	10748011a69454
+object:wexley:Wexley V Moon 13	7cfcbba778cf4
+object:wexley:Wexley V Moon 14	14ccfbb83d6f52
+object:wexley:Wexley VI Moon 1	4f722b3d4de69
+object:wexley:Wexley VI Moon 2	ec65673a61cf6
+object:wexley:Wexley VI Moon 3	194770fc7b3769
+object:wexley:Wexley VI Moon 4	c5412e9248654
+object:wexley:Wexley VI Moon 5	dd2738a69f0db
+object:wexley:Wexley VI Moon 6	61805186b260b
+object:wexley:Wexley VI Moon 7	1e8e598c1e07d4
+object:wexley:Wexley VII Moon 1	1493e7a4666917
+object:lyndon:Lyndon I Moon 1	1659a9bc26676f
+object:lyndon:Lyndon I Moon 2	138c779e086d67
+object:lyndon:Lyndon II Moon 1	1da2a5d860a42b
+object:lyndon:Lyndon II Moon 2	1536e7ce987a1a
+object:lyndon:Lyndon II Moon 3	ab431f48eb78
+object:lyndon:Greenbank Moon 1	bcf5ad10c5864
+object:lyndon:Lyndon IV Moon 1	aa3619f283a14
+object:lyndon:Lyndon IV Moon 2	90acf8b915a38
+object:lyndon:Lyndon V Moon 1	1d22c9ef879e78
+object:lyndon:Lyndon V Moon 2	16abcaf716ea7
+object:lyndon:Lyndon V Moon 3	1fa2d40d821f42
+object:lyndon:Lyndon VI Moon 1	fb0529453fe55
+object:lyndon:Lyndon VI Moon 2	1e2dd8bd90af79
+object:lyndon:Lyndon VI Moon 3	ede716baf6f3a
+object:lyndon:Lyndon VI Moon 4	86e885c3bf54a
+object:lyndon:Lyndon VI Moon 5	19449f3a654b8a
+object:lyndon:Lyndon VI Moon 6	67035b69d5fa8
+object:lyndon:Lyndon VI Moon 7	230fbd477d200
+object:lyndon:Lyndon VI Moon 8	168e8ee86e8404
+object:lyndon:Lyndon VII Moon 1	153af3340ad9df
+object:lyndon:Lyndon VII Moon 2	9d05ef4f0cbe2
+object:lyndon:Lyndon VII Moon 3	6df087dc3ed36
+object:lyndon:Lyndon VII Moon 4	13655ab303b8ad
+object:lyndon:Lyndon VII Moon 5	12df33d331ccfa
+object:lyndon:Lyndon VII Moon 6	1387c3c16a5e16
+object:lyndon:Lyndon VII Moon 7	161cdceab0300c
+object:lyndon:Lyndon VII Moon 8	1697e0cabd8c04
+object:lyndon:Lyndon VII Moon 9	1bc487a86441b2
+object:lyndon:Lyndon VIII Moon 1	444391cf978a1
+object:lyndon:Lyndon VIII Moon 2	19b1bd7fdcce54
+object:lyndon:Lyndon VIII Moon 3	d2ba0ef89b30f
+object:vesper:Vesper I Moon 1	be702a7f5263b
+object:vesper:Vesper I Moon 2	c2a6334388082
+object:vesper:Vesper I Moon 3	1a71e203297cd5
+object:vesper:Vesper II Moon 1	1672efa7cdf1c3
+object:vesper:Evenfall Moon 1	1f845309aec1a6
+object:vesper:Evenfall Moon 2	1f590b237567d1
+object:vesper:Vesper IV Moon 1	121c1d480b166a
+object:vesper:Vesper IV Moon 2	1e214b1b8ee46a
+object:vesper:Vesper IV Moon 3	510923e40eb8
+object:vesper:Vesper IV Moon 4	19919e0ac0bfef
+object:vesper:Vesper IV Moon 5	2f3eaf3deae44
+object:vesper:Vesper IV Moon 6	a45a7ff7d9439
+object:vesper:Vesper IV Moon 7	14b33c17663584
+object:vesper:Vesper V Moon 1	1b502c9f3ec9f9
+object:weiss-304:Weiss 304 I Moon 1	a6a647bf3273a
+object:weiss-304:Weiss 304 II Moon 1	cbc161c68315d
+object:weiss-304:Weiss 304 II Moon 2	1135a64b8584c
+object:weiss-304:Weiss 304 III Moon 1	1515db9ed9df19
+object:weiss-304:Weiss 304 III Moon 2	19e0280d9c35fc
+object:weiss-304:Weiss 304 III Moon 3	15741adca36eb
+object:weiss-304:Weiss 304 IV Moon 1	1d7e1df7b1e123
+object:weiss-304:Weiss 304 IV Moon 2	f46b616d0be26
+object:weiss-304:Weiss 304 IV Moon 3	b6c807f8287de
+object:weiss-304:Weiss 304 IV Moon 4	172464d946cfa8
+object:weiss-304:Weiss 304 IV Moon 5	1727049a25ab06
+object:weiss-304:Weiss 304 IV Moon 6	17637b786bb49b
+object:weiss-304:Weiss 304 IV Moon 7	11a39bbbe1772f
+object:weiss-304:Weiss 304 IV Moon 8	cb98ba9677f08
+object:weiss-304:Weiss 304 V Moon 1	fbf9f8ded65e9
+object:weiss-304:Weiss 304 V Moon 2	15ad0764c56f90
+object:weiss-304:Weiss 304 V Moon 3	4229e678a957f
+object:weiss-304:Weiss 304 V Moon 4	5e802dd057719
+object:weiss-304:Weiss 304 V Moon 5	af864932ee770
+object:weiss-304:Weiss 304 V Moon 6	3ec3b41aad99d
+object:weiss-304:Weiss 304 V Moon 7	5723bac5dabe9
+object:weiss-304:Weiss 304 V Moon 8	16153a1afda74d
+object:weiss-304:Weiss 304 V Moon 9	ee9f07fa80a20
+object:weiss-304:Weiss 304 VI Moon 1	b7a9f493ffdf6
+object:weiss-304:Weiss 304 VI Moon 2	1a3a6c855ddc07
+object:weiss-304:Weiss 304 VI Moon 3	83ccf18fb49ab
+object:rosen:Rosen I Moon 1	17b02ca49eae7d
+object:rosen:Rosen I Moon 2	b80f4a572b5f3
+object:rosen:Rosen II Moon 1	7e4299d981100
+object:rosen:Rosen II Moon 2	1feec8e246939b
+object:rosen:Rosen II Moon 3	2c6a46fd731ae
+object:rosen:Rosewater Moon 1	a46b9c960f22c
+object:rosen:Rosen IV Moon 1	198f997aa17cea
+object:rosen:Rosen IV Moon 2	16de5c0416c0a6
+object:rosen:Rosen V Moon 1	85681462104f0
+object:rosen:Rosen V Moon 2	1de8c9521a84fb
+object:rosen:Rosen V Moon 3	cd9af779622a4
+object:rosen:Rosen V Moon 4	1124e199f5e2b0
+object:rosen:Rosen V Moon 5	430149dede6e2
+object:rosen:Rosen V Moon 6	70154d267079
+object:rosen:Rosen V Moon 7	1bdacee6194ebf
+object:rosen:Rosen V Moon 8	b7afd0897e55e
+object:rosen:Rosen V Moon 9	ab081ed83b691
+object:rosen:Rosen V Moon 10	123fb415206aae
+object:rosen:Rosen VI Moon 1	103c4fcfaa15fd
+object:rosen:Rosen VI Moon 2	15ccf4dc632733
+object:rosen:Rosen VI Moon 3	175a2bf1b3f6ec
+object:rosen:Rosen VI Moon 4	1b6d6f9f95e8b0
+object:rosen:Rosen VI Moon 5	144d0082655801
+object:rosen:Rosen VI Moon 6	15640580d40d69
+object:rosen:Rosen VI Moon 7	134e922bdf4cf4
+object:rosen:Rosen VI Moon 8	f997f2fc8fab8
+object:rosen:Rosen VI Moon 9	1888758f5fcf3b
+object:rosen:Rosen VI Moon 10	ef1fc0db7bb3c
+object:rosen:Rosen VI Moon 11	14cab2c173db57
+object:rosen:Rosen VII Moon 1	1fbf18ba87e66
+object:rosen:Rosen VII Moon 2	13dd97602d7323
+object:ashcombe:Ashcombe I Moon 1	177240137cc4e5
+object:ashcombe:Ashcombe I Moon 2	12b2731542fe46
+object:ashcombe:Ashcombe I Moon 3	1e115c67003f8b
+object:ashcombe:Ashcombe II Moon 1	16fa1887f48421
+object:ashcombe:Ashcombe III Moon 1	1c8547e548bc25
+object:ashcombe:Ashcombe III Moon 2	1c0515b70357f4
+object:ashcombe:Ashcombe IV Moon 1	bc20042d46d9a
+object:ashcombe:Ashcombe IV Moon 2	11302bdbbc08c0
+object:ashcombe:Ashcombe IV Moon 3	663796f17b05d
+object:ashcombe:Ashcombe V Moon 1	28e62b44a7371
+object:ashcombe:Ashcombe VI Moon 1	5dcf73d931e3c
+object:ashcombe:Ashcombe VI Moon 2	1e48b0319ad5fe
+object:ashcombe:Ashcombe VI Moon 3	10eb0806db8f95
+object:ashcombe:Ashcombe VI Moon 4	d7b19bfe0a3d1
+object:ashcombe:Ashcombe VI Moon 5	128dd0e40d416f
+object:ashcombe:Ashcombe VI Moon 6	1ff5f7e75aab1c
+object:ashcombe:Ashcombe VI Moon 7	1db8a0e9c62194
+object:ashcombe:Ashcombe VI Moon 8	13c8bd0c3d7061
+object:ashcombe:Ashcombe VI Moon 9	63db4b1ba62d8
+object:ashcombe:Ashcombe VI Moon 10	19a86cec63e112
+object:ashcombe:Ashcombe VI Moon 11	1c6d07e8f41b53
+object:ashcombe:Ashcombe VI Moon 12	1af20cf7e2ee21
+object:ashcombe:Ashcombe VII Moon 1	69f3530c08a0e
+object:ashcombe:Ashcombe VII Moon 2	9f4c04db0ab4d
+object:ashcombe:Ashcombe VII Moon 3	1028a420da9a91
+object:ashcombe:Ashcombe VII Moon 4	17526fc813fc95
+object:ashcombe:Ashcombe VII Moon 5	7074bf51ad0f4
+object:ashcombe:Ashcombe VII Moon 6	111a5918b6389c
+object:ashcombe:Ashcombe VII Moon 7	b33e8c47eb06d
+object:ashcombe:Ashcombe VII Moon 8	13476a3c775085
+object:ashcombe:Ashcombe VII Moon 9	1f3e42300f67dc
+object:ashcombe:Ashcombe VII Moon 10	6911d862ca602
+object:ashcombe:Ashcombe VII Moon 11	1624deec3099a
+object:ashcombe:Ashcombe VII Moon 12	e85e5a2ffbd53
+object:ashcombe:Ashcombe VII Moon 13	19daf4eebc9b5b
+object:ashcombe:Ashcombe VIII Moon 1	1e5470c2ef801
+object:tyndall:Tyndall I Moon 1	c7da681cba0c5
+object:tyndall:Tyndall II Moon 1	db5eaec1583fa
+object:tyndall:Tyndall II Moon 2	11effb498c0686
+object:tyndall:Farsight Moon 1	8182a631c0628
+object:tyndall:Farsight Moon 2	160c0fb4a69038
+object:tyndall:Farsight Moon 3	1b3788ef537297
+object:tyndall:Tyndall IV Moon 1	2c75c1db9264d
+object:tyndall:Tyndall IV Moon 2	c3deecb83cf7d
+object:tyndall:Tyndall IV Moon 3	db8d5e0b05dc7
+object:tyndall:Tyndall IV Moon 4	1669866acc9264
+object:tyndall:Tyndall IV Moon 5	14b2bd0cce722c
+object:tyndall:Tyndall IV Moon 6	42e323e116ba5
+object:tyndall:Tyndall IV Moon 7	11addd3c8d880b
+object:tyndall:Tyndall IV Moon 8	1d086d577d69bf
+object:tyndall:Tyndall IV Moon 9	38294f74608dd
+object:tyndall:Tyndall IV Moon 10	1eea9eb911dafb
+object:tyndall:Tyndall IV Moon 11	b460209e1989
+object:tyndall:Tyndall V Moon 1	51446d69bf56c
+object:tyndall:Tyndall V Moon 2	1b65d4cb12e378
+object:dunstan:Dunstan I Moon 1	1c2e122cd4148b
+object:dunstan:Dunstan I Moon 2	93cb17200bfe3
+object:dunstan:Dunstan II Moon 1	18f433fc101367
+object:dunstan:Dunstan II Moon 2	1c2b0fa2cbc277
+object:dunstan:Dunstan II Moon 3	6b3f54adf1b7b
+object:dunstan:Dunstan III Moon 1	13de495cc9553b
+object:dunstan:Dunstan IV Moon 1	11233aba37fe14
+object:dunstan:Dunstan IV Moon 2	90e5e0e977c8
+object:dunstan:Dunstan IV Moon 3	e6057e6489188
+object:dunstan:Dunstan IV Moon 4	1ec9904acc45d3
+object:dunstan:Dunstan IV Moon 5	18fd6ee249eed4
+object:dunstan:Dunstan IV Moon 6	c478eca68ac39
+object:dunstan:Dunstan IV Moon 7	1d368337c82ebf
+object:dunstan:Dunstan IV Moon 8	95f6b53017c4e
+object:dunstan:Dunstan IV Moon 9	1605b5ba3093d1
+object:dunstan:Dunstan IV Moon 10	ba6f1e7735303
+object:dunstan:Dunstan IV Moon 11	74dddc50ff0da
+object:dunstan:Dunstan IV Moon 12	5da99d88d2d84
+object:dunstan:Dunstan V Moon 1	2b96e1bb737f3
+object:dunstan:Dunstan V Moon 2	fc0dcf1df1856
+object:dunstan:Dunstan V Moon 3	188b902591acab
+object:dunstan:Dunstan V Moon 4	1f253fce84a326
+object:dunstan:Dunstan V Moon 5	bfe42858ad56e
+object:dunstan:Dunstan V Moon 6	223963ea69318
+object:dunstan:Dunstan V Moon 7	901628fd78f41
+object:dunstan:Dunstan V Moon 8	1d7359e83955b9
+object:dunstan:Dunstan V Moon 9	181f7223ec10f
+object:dunstan:Dunstan V Moon 10	19bde3015fd353
+object:dunstan:Dunstan V Moon 11	14e138e31acb6b
+object:dunstan:Dunstan V Moon 12	b0a9339e5de20
+object:dunstan:Dunstan V Moon 13	1178f7c0c9b9bc
+object:dunstan:Dunstan VI Moon 1	13629413be57df
+object:corvin:Corvin I Moon 1	16ff5cefccbb0
+object:corvin:Corvin I Moon 2	13bf3b15e823a7
+object:corvin:Corvin I Moon 3	8f4359e1fc188
+object:corvin:Corvin II Moon 1	159e71fd88e111
+object:corvin:Corvin III Moon 1	436bec012e0cf
+object:corvin:Corvin III Moon 2	1f727db43bc5ae
+object:corvin:Corvin IV Moon 1	1b4e1e81fb6ce
+object:corvin:Corvin IV Moon 2	10befe51dcbb5f
+object:corvin:Corvin IV Moon 3	49bbae3efdce1
+object:corvin:Corvin V Moon 1	1e6016aca22ecb
+object:corvin:Corvin V Moon 2	153c83f20b0da3
+object:corvin:Corvin V Moon 3	1788247b77d721
+object:corvin:Corvin V Moon 4	52e257d79df67
+object:corvin:Corvin V Moon 5	23bffae8c8767
+object:corvin:Corvin V Moon 6	161a414e23e576
+object:corvin:Corvin V Moon 7	69fbe29822284
+object:corvin:Corvin V Moon 8	955c28988e2be
+object:corvin:Corvin V Moon 9	14cb5f31c5d84a
+object:corvin:Corvin V Moon 10	5b3471424b0ba
+object:corvin:Corvin V Moon 11	8ae02423e3d52
+object:corvin:Corvin V Moon 12	1e2ed0419adcfc
+object:corvin:Corvin V Moon 13	179a2f565a0031
+object:corvin:Corvin V Moon 14	1fc9b63d03079e
+object:corvin:Corvin VI Moon 1	4ca098c3f21ce
+object:corvin:Corvin VI Moon 2	15e2d831ab7f53
+object:corvin:Corvin VI Moon 3	cadfb94818c8f
+object:corvin:Corvin VI Moon 4	129117de177f00
+object:corvin:Corvin VI Moon 5	ac43b94c6289e
+object:corvin:Corvin VI Moon 6	c36a3e6752a29
+object:corvin:Corvin VI Moon 7	14f58ad1554af3
+object:corvin:Corvin VII Moon 1	1f9ee3a82a6243
+object:corvin:Corvin VII Moon 2	1871303f6f1589
+object:corvin:Corvin VII Moon 3	a1c65ef8f0374
+object:weiss-319:Weiss 319 I Moon 1	2bd3df18c494
+object:weiss-319:Weiss 319 II Moon 1	c84a6b1d24afb
+object:weiss-319:Weiss 319 II Moon 2	1a28a0ae521483
+object:weiss-319:Weiss 319 III Moon 1	1b4131a38db595
+object:weiss-319:Weiss 319 III Moon 2	1644f2c6f09791
+object:weiss-319:Weiss 319 III Moon 3	f16fda2de3b66
+object:weiss-319:Weiss 319 IV Moon 1	a80ec4e3cf0da
+object:weiss-319:Weiss 319 V Moon 1	e694a545d20a4
+object:weiss-319:Weiss 319 V Moon 2	3e6fbaacfbfe
+object:weiss-319:Weiss 319 VI Moon 1	8429956e0bfa7
+object:weiss-319:Weiss 319 VI Moon 2	14d4e8afee7265
+object:weiss-319:Weiss 319 VI Moon 3	74d25fff85391
+object:weiss-319:Weiss 319 VI Moon 4	f41477b9e1129
+object:weiss-319:Weiss 319 VI Moon 5	a25c2d4521889
+object:weiss-319:Weiss 319 VI Moon 6	16b86da3cbc0b3
+object:weiss-319:Weiss 319 VI Moon 7	ea3192422aea2
+object:weiss-319:Weiss 319 VI Moon 8	ff81d8676ef73
+object:weiss-319:Weiss 319 VII Moon 1	1ddd8ac0d7bc93
+object:weiss-319:Weiss 319 VII Moon 2	ae57f6af683e3
+object:weiss-319:Weiss 319 VII Moon 3	456f9d377c1fb
+object:weiss-319:Weiss 319 VII Moon 4	136f97bbe16260
+object:weiss-319:Weiss 319 VII Moon 5	1dda986fb865c8
+object:weiss-319:Weiss 319 VII Moon 6	14d7776c2fbb33
+object:weiss-319:Weiss 319 VII Moon 7	174b55a5500b92
+object:weiss-319:Weiss 319 VII Moon 8	14b93e01ce35ae
+object:weiss-319:Weiss 319 VII Moon 9	8f0fc4cbfd7cd
+object:weiss-319:Weiss 319 VIII Moon 1	7e98df0638317
+object:weiss-319:Weiss 319 VIII Moon 2	1f8021fe5f0584
+object:aster:Aster I Moon 1	198694da207de
+object:aster:Aster I Moon 2	1cf05ed35425f8
+object:aster:Aster II Moon 1	71b3e09a3eb22
+object:aster:Aster II Moon 2	1fe3edb575f070
+object:aster:Aster II Moon 3	1f0a49181dab14
+object:aster:Hearth Moon 1	120670e173b45c
+object:aster:Aster IV Moon 1	136b284ee3ccd9
+object:aster:Aster IV Moon 2	107f23fa89bd58
+object:aster:Aster IV Moon 3	bbffd80102abe
+object:aster:Aster IV Moon 4	cc12b3326ea44
+object:aster:Aster IV Moon 5	cd4a47d22b38d
+object:aster:Aster IV Moon 6	19b32a70584444
+object:aster:Aster IV Moon 7	154f58227f22a6
+object:aster:Aster V Moon 1	8da4202398c8a
+object:aster:Aster V Moon 2	82e76026d74eb
+object:aster:Aster V Moon 3	fef78af88c4a1
+object:hollis:Hollis I Moon 1	1e43d2281256aa
+object:hollis:Hollis I Moon 2	e1d96f8cc645f
+object:hollis:Hollis I Moon 3	7d37ee308bf3c
+object:hollis:Hollis II Moon 1	1cbdf13221c3fe
+object:hollis:Dunmere Moon 1	15efccffb5a7d2
+object:hollis:Dunmere Moon 2	9e6e27d4e6c90
+object:hollis:Hollis IV Moon 1	ccae609898da7
+object:hollis:Hollis IV Moon 2	1b5cc9dfcf06ed
+object:hollis:Hollis IV Moon 3	84f9abbc0fa4
+object:hollis:Hollis IV Moon 4	2c6b8fbb27236
+object:hollis:Hollis IV Moon 5	11573c5156762c
+object:hollis:Hollis IV Moon 6	3c24e352ebabf
+object:hollis:Hollis IV Moon 7	20ba509edd3b6
+object:hollis:Hollis IV Moon 8	1da8a67c936689
+object:hollis:Hollis V Moon 1	1dfeed96925dd4
+object:hollis:Hollis V Moon 2	cc6c7ed2ca31a
+object:hollis:Hollis V Moon 3	1753e362290ad9
+object:hollis:Hollis V Moon 4	15d249f8a8208
+object:hollis:Hollis V Moon 5	bc6598e700c56
+object:hollis:Hollis V Moon 6	1ffd8d2350defd
+object:hollis:Hollis V Moon 7	11fd1dab4dd933
+object:hollis:Hollis V Moon 8	523c82414df23
+object:hollis:Hollis V Moon 9	15602841729596
+object:hollis:Hollis VI Moon 1	1fc7270704cfdd
+object:hollis:Hollis VI Moon 2	2995d0396b53a
+object:kepler-81:Kepler 81 I Moon 1	1edb96f8394b98
+object:kepler-81:Kepler 81 II Moon 1	1690d49700c163
+object:kepler-81:Kepler 81 II Moon 2	6fb63deba6e2d
+object:kepler-81:Kepler 81 III Moon 1	1fe0438b0e453
+object:kepler-81:Kepler 81 III Moon 2	745a1fe7df373
+object:kepler-81:Kepler 81 III Moon 3	148a7fb2f1c39a
+object:kepler-81:Kepler 81 IV Moon 1	191d191b4b2962
+object:kepler-81:Kepler 81 V Moon 1	9270da739074b
+object:kepler-81:Kepler 81 V Moon 2	48c576b60e04a
+object:kepler-81:Kepler 81 V Moon 3	154f4c3bb73954
+object:kepler-81:Kepler 81 V Moon 4	1d88dd6adc6c78
+object:kepler-81:Kepler 81 V Moon 5	6c7aa4cc11941
+object:kepler-81:Kepler 81 V Moon 6	d667ec077c275
+object:kepler-81:Kepler 81 V Moon 7	118995e4cdec0b
+object:kepler-81:Kepler 81 V Moon 8	20f11d39bdb8d
+object:kepler-81:Kepler 81 V Moon 9	1b2df99fb00911
+object:kepler-81:Kepler 81 V Moon 10	4fc53975ea644
+object:kepler-81:Kepler 81 VI Moon 1	114ce41f9828d0
+object:kepler-81:Kepler 81 VI Moon 2	1fb1a804866ed1
+object:kepler-81:Kepler 81 VI Moon 3	1a02e9a0f51347
+object:kepler-81:Kepler 81 VI Moon 4	199b7020c9c6ec
+object:kepler-81:Kepler 81 VI Moon 5	72c88296c6188
+object:kepler-81:Kepler 81 VI Moon 6	9bc08df352120
+object:kepler-81:Kepler 81 VI Moon 7	cb36e39c137
+object:kepler-81:Kepler 81 VI Moon 8	141223456b3af2
+object:kepler-81:Kepler 81 VI Moon 9	7b23c93715f8c
+object:kepler-81:Kepler 81 VI Moon 10	184514ecdf2b26
+object:kepler-81:Kepler 81 VI Moon 11	1a4ec6d6e93392
+object:kepler-81:Kepler 81 VII Moon 1	11dc0179e25a9
+object:redwick:Redwick I Moon 1	2b6c0c113a2c1
+object:redwick:Redwick I Moon 2	838c4c02827f4
+object:redwick:Redwick II Moon 1	17db968892cc3c
+object:redwick:Redwick II Moon 2	b23d8a00d0395
+object:redwick:Redwick II Moon 3	311197f97da84
+object:redwick:Redwick III Moon 1	19bf228dde8e2c
+object:redwick:Redwick IV Moon 1	1eb1f15d82a61e
+object:redwick:Redwick IV Moon 2	19763bbc5d0ac2
+object:redwick:Redwick V Moon 1	10f844c26f7e5f
+object:redwick:Redwick V Moon 2	17e1648df0f28a
+object:redwick:Redwick V Moon 3	eb0621f71bef4
+object:redwick:Redwick VI Moon 1	7a7df3adf2bd6
+object:redwick:Redwick VI Moon 2	14c61bfc5c0929
+object:redwick:Redwick VI Moon 3	10f8315e300aca
+object:redwick:Redwick VI Moon 4	13146cea3d419c
+object:redwick:Redwick VI Moon 5	1f41fe52a85ce
+object:redwick:Redwick VI Moon 6	c0d7239fbf02a
+object:redwick:Redwick VI Moon 7	1847fb9587bce
+object:redwick:Redwick VI Moon 8	7d3465f7622d0
+object:redwick:Redwick VI Moon 9	161a34dff5ff7b
+object:redwick:Redwick VI Moon 10	b9006af3a178e
+object:redwick:Redwick VI Moon 11	8e60308b41650
+object:redwick:Redwick VI Moon 12	ab24c114bbd2f
+object:redwick:Redwick VII Moon 1	1f5a20bdfc698
+object:redwick:Redwick VII Moon 2	1684958a8b9625
+object:redwick:Redwick VII Moon 3	5348432aa157f
+object:redwick:Redwick VII Moon 4	a2bfe11debf35
+object:redwick:Redwick VII Moon 5	d909f9c159350
+object:redwick:Redwick VII Moon 6	195965d29e794c
+object:redwick:Redwick VII Moon 7	8b814b54da4e6
+object:redwick:Redwick VII Moon 8	cae1f5ed4f620
+object:redwick:Redwick VII Moon 9	5455c87a0a42e
+object:redwick:Redwick VII Moon 10	8248df4211657
+object:redwick:Redwick VII Moon 11	1ccd578c0eb049
+object:redwick:Redwick VII Moon 12	7766468a279f7
+object:redwick:Redwick VII Moon 13	1374acaecf4763
+object:redwick:Redwick VIII Moon 1	72dfc78aa8b77
+object:redwick:Redwick VIII Moon 2	19d5cc0146dce4
+object:redwick:Redwick VIII Moon 3	2595d7a8d423f
+object:briar:Briar I Moon 1	711926c96b1e
+object:briar:Briar I Moon 2	b47ad65f7bdf0
+object:briar:Briar I Moon 3	5a1e8753ae1f9
+object:briar:Briar II Moon 1	6b8d11d7225cb
+object:briar:Bellhaven Moon 1	c02cc03ca83ff
+object:briar:Bellhaven Moon 2	12c230744438aa
+object:briar:Briar IV Moon 1	add6bd4cae702
+object:briar:Briar IV Moon 2	518af630193f7
+object:briar:Briar IV Moon 3	e9fc696d27d5e
+object:briar:Briar IV Moon 4	2f512810736ce
+object:briar:Briar IV Moon 5	e0dc73582b6e0
+object:briar:Briar IV Moon 6	5f2aa6d1289bf
+object:briar:Briar IV Moon 7	cf89f5b8ec26a
+object:briar:Briar IV Moon 8	42fad8669e8a0
+object:briar:Briar IV Moon 9	1b853b8486661a
+object:briar:Briar IV Moon 10	1eddf95ae4d33
+object:briar:Briar IV Moon 11	11c6b2ace89a02
+object:briar:Briar V Moon 1	3fcd0666a3eba
+object:elara:Elara I Moon 1	5a1ceb29e6ab2
+object:elara:Elara II Moon 1	1fee42c052fb05
+object:elara:Elara II Moon 2	16c7adbc991bac
+object:elara:Elara III Moon 1	2e48476ae91e
+object:elara:Elara III Moon 2	1efbbb6c0dad0a
+object:elara:Elara III Moon 3	1d76721cfb02f
+object:elara:Elara IV Moon 1	fd1cc92f44b50
+object:elara:Elara IV Moon 2	1e4153646aa818
+object:elara:Elara IV Moon 3	10b9a4c2623a77
+object:elara:Elara IV Moon 4	1a79099412d456
+object:elara:Elara IV Moon 5	5d709458d3051
+object:elara:Elara IV Moon 6	ca7cbbb37194d
+object:elara:Elara IV Moon 7	fcdf9fbd34f81
+object:elara:Elara IV Moon 8	1bebe8c44860b8
+object:elara:Elara IV Moon 9	1e0d7fa7187637
+object:elara:Elara IV Moon 10	217f6c3d710a8
+object:elara:Elara IV Moon 11	13b23d279003ff
+object:elara:Elara IV Moon 12	7596dfa8056a8
+object:elara:Elara V Moon 1	7a77e8634ab53
+object:elara:Elara V Moon 2	690caa733c2c5
+object:elara:Elara V Moon 3	1fdb63270652f
+object:elara:Elara V Moon 4	9016964a8ccce
+object:elara:Elara V Moon 5	dd9f6bf947370
+object:elara:Elara V Moon 6	142af77715511f
+object:elara:Elara V Moon 7	16402d7626d404
+object:elara:Elara V Moon 8	11608932d3d149
+object:elara:Elara V Moon 9	36404c58c4e1f
+object:elara:Elara V Moon 10	c81807650a737
+object:elara:Elara V Moon 11	15bbb820c8cf40
+object:elara:Elara V Moon 12	a64e6a7ff04f7
+object:elara:Elara V Moon 13	2449b47c7f50c
+object:elara:Elara VI Moon 1	1ed04c63afeba4
+object:elara:Elara VI Moon 2	1569caf49758d1
+object:elara:Elara VI Moon 3	11aedf989f2128
+station:adrea:New Olympia Anchorage	84d321d2d45ee
+station:adrea:New Olympia Survey Platform	18bf1327e07d57
+station:adrea:Florence Anchorage	dcba85e9ffd76
+station:adrea:Florence Survey Platform	1fd3fc8c44ea0
+station:athrys:Clyse Anchorage	fc739f056add1
+station:athrys:Clyse Survey Platform	22782037a6f6c
+station:athrys:Athrys IV Anchorage	108e9e8fbcb428
+station:sutherland:Haas Anchorage	1eddec79557fa2
+station:sutherland:Haas Survey Platform	58bd71fb021a5
+station:sutherland:Sutherland V Anchorage	5d3aadd574748
+station:viery:Mir Anchorage	146e43ff99d429
+station:viery:Mir Survey Platform	447881fed9e37
+station:viery:Ivanoff Anchorage	127fc85c5c5dce
+station:viery:Ivanoff Survey Platform	66bd48e8d4df
+station:viery:Viery VI Anchorage	afe114f1da50a
+station:weiss-212:Ferox Anchorage	197df373eec509
+station:weiss-212:Ferox Survey Platform	1116c9cb5fd4c9
+station:johanssen:Noxon Anchorage	1d769c89033ebc
+station:johanssen:Noxon Survey Platform	490bc13ee4b7
+station:johanssen:Morcate Anchorage	176c85c61bba5b
+station:johanssen:Morcate Survey Platform	1e419c1004e010
+station:acrius:Foundation Anchorage	d2953194a35f6
+station:acrius:Foundation Survey Platform	b7b16a6ad3507
+station:acrius:Tributa Anchorage	1935f053c7b741
+station:acrius:Tributa Survey Platform	e1442693c6cb3
+station:acrius:Acrius V Anchorage	c5de4d61d79bf
+station:haldor:Havencrest Anchorage	101c9cc52b9c3e
+station:haldor:Havencrest Survey Platform	4f493aaacdd97
+station:haldor:Haldor VI Anchorage	72a3acacbc5c8
+station:constantine:Saratoga Anchorage	346a20aba626f
+station:constantine:Saratoga Survey Platform	e70f104ffe41c
+station:dsc-346:DSC 346 II Anchorage	17f0b7d4c8cd1e
+station:dsc-346:V. Sokolov Observatory	8274b4601b5b2
+station:koch:Prospect Anchorage	6bce682d5c4bc
+station:koch:Prospect Survey Platform	12c129c264dd9d
+station:koch:Koch V Anchorage	13a7b876af6ba2
+station:carver:Carver V Anchorage	26d139a925893
+station:carver:Carver V Survey Platform	1ddd14b479a303
+station:carver:Carver VI Anchorage	299398ee32a2b
+station:carver:Carver Defense Platform	7079e5f0ef6c6
+station:bharask:Vonako Anchorage	1ca191ebbb221a
+station:bharask:Vonako Survey Platform	1fc2e899831c62
+station:blake-s-star:Phoenix Anchorage	12189412c5d7e
+station:blake-s-star:Phoenix Survey Platform	49f6851214431
+station:blake-s-star:Belleza Anchorage	4f5fa9c972be4
+station:blake-s-star:Belleza Survey Platform	1203295c360e48
+station:weiss-287:Carson Station	1a551f0b6be983
+station:weiss-287:New Dresden Survey Platform	3d6291fa102f2
+station:weiss-287:Weiss 287 V Anchorage	df53ba1fdeaf2
+station:sol:Visegrad Orbital	1b1dd43cc0992d
+station:sol:Eden Survey Platform	e59d7ab5965a4
+station:sol:Arcadia Anchorage	a6d6607ee197d
+station:sol:Arcadia Survey Platform	2ea2edee17946
+station:sol:Sol VI Anchorage	6ad3cde8498f4
+station:sol:Sol Defense Platform	1f38f2caac8942
+station:freki:Freki III Anchorage	682df7611535
+station:freki:Freki IV Anchorage	78b4fdc04b31a
+station:freki:Freki IV Survey Platform	baae94c7220cc
+station:cassius:Kronos Anchorage	1a78c7723440e0
+station:cassius:Kronos Survey Platform	36a6554d7df62
+station:cassius:Cassius IV Anchorage	565cf2105834b
+station:heimdall:Jotunheim Anchorage	15cdc888f80c87
+station:heimdall:Jotunheim Survey Platform	5da8a77f91dd1
+station:heimdall:Heimdall V Anchorage	1469bea94b9f27
+station:heimdall:Heimdall Defense Platform	1bdfb5bd5e098f
+station:tessera:New Soris Anchorage	166b944d25e87a
+station:tessera:New Soris Survey Platform	f4a6f472ab40a
+station:tessera:Tessera VI Anchorage	1ec07057d0c2c6
+station:hargrove:Oros Anchorage	13110957a54ae3
+station:hargrove:Oros Survey Platform	1b64e4c9366f7d
+station:torrin:Emberfall Anchorage	86232e0091e09
+station:torrin:Emberfall Survey Platform	1964399837c70b
+station:torrin:Torrin IV Anchorage	8106f3c79dad7
+station:morrigan:Fairmeadow Anchorage	1290baa60f004a
+station:morrigan:Fairmeadow Survey Platform	ab70e1df64c6f
+station:morrigan:Morrigan V Anchorage	bd25628a00dc8
+station:tenebrae:Tenebrae IV Anchorage	ed29c557435b2
+station:tenebrae:Tenebrae IV Survey Platform	20d3246001018
+station:tenebrae:Tenebrae VI Anchorage	10a97697d6d4c3
+station:aldwick:Aldwick III Anchorage	1f7481faf8d6da
+station:aldwick:Aldwick III Survey Platform	1da90224205054
+station:kestrel:Windward Anchorage	130b7d75e7fa0d
+station:kestrel:Windward Survey Platform	1ba01e0c9df080
+station:kestrel:Kestrel IV Anchorage	725ebd6d0bbb1
+station:wexley:Fairhaven Anchorage	36724d3826380
+station:wexley:Fairhaven Survey Platform	ec34a81ec7b9f
+station:wexley:Wexley V Anchorage	1adf6a036052f2
+station:lyndon:Greenbank Anchorage	f94cb7e427457
+station:lyndon:Greenbank Survey Platform	150f0fe31aa0fe
+station:lyndon:Lyndon VI Anchorage	1d5d76c555405e
+station:vesper:Evenfall Anchorage	a683751d7f2ac
+station:vesper:Evenfall Survey Platform	11981a2270166
+station:weiss-304:Weiss 304 IV Anchorage	b569384b5debb
+station:rosen:Rosewater Anchorage	c5d12406131db
+station:rosen:Rosewater Survey Platform	1cb6ef10f7e50b
+station:rosen:Rosen V Anchorage	9d08f62294c0b
+station:ashcombe:Ashcombe IV Anchorage	13bccecd0956ab
+station:ashcombe:Ashcombe IV Survey Platform	16f43ccfffdf70
+station:ashcombe:Ashcombe VI Anchorage	8fe3bbfc6ac65
+station:tyndall:Farsight Anchorage	9b76100c75af0
+station:tyndall:Farsight Survey Platform	145ac2d29cfa94
+station:dunstan:Dunstan III Anchorage	1d5ecd25f77614
+station:dunstan:Dunstan III Survey Platform	1caa438be5fd08
+station:dunstan:Dunstan IV Anchorage	d5ce7681acaf5
+station:corvin:Corvin III Anchorage	18d2bdcf61a315
+station:corvin:Corvin III Survey Platform	aa751059ec837
+station:corvin:Corvin V Anchorage	891470a92701a
+station:weiss-319:Weiss 319 VI Anchorage	1ec7cfe137c1a6
+station:aster:Hearth Anchorage	126878e1a54883
+station:aster:Hearth Survey Platform	1f0a8f11b0f08c
+station:hollis:Dunmere Anchorage	1c7e11cc0e51a0
+station:hollis:Dunmere Survey Platform	1f4339b87ebb47
+station:hollis:Hollis IV Anchorage	1891634a12360c
+station:kepler-81:Kepler 81 V Anchorage	1c4e63d39c9156
+station:redwick:Redwick III Anchorage	13fc01b9061cdb
+station:redwick:Redwick III Survey Platform	ae37d02950f63
+station:redwick:Redwick VI Anchorage	1259e43032d3ff
+station:briar:Bellhaven Anchorage	ac6c947e7302a
+station:briar:Bellhaven Survey Platform	188cbd6372ec9
+station:elara:Elara III Anchorage	12fd0b40ac7b79
+station:elara:Elara III Survey Platform	44d5620bf34ff
+station:elara:Elara IV Anchorage	284f789d26f46
+open-station:adrea:New Olympia Anchorage	ec5a807c02de9
+close-station:adrea:New Olympia Anchorage	ec5a807c02de9
+open-station:adrea:New Olympia Survey Platform	ec5a807c02de9
+close-station:adrea:New Olympia Survey Platform	ec5a807c02de9
+open-station:adrea:Florence Anchorage	ec5a807c02de9
+close-station:adrea:Florence Anchorage	ec5a807c02de9
+open-station:adrea:Florence Survey Platform	ec5a807c02de9
+close-station:adrea:Florence Survey Platform	ec5a807c02de9
+open-station:athrys:Clyse Anchorage	231ec118133a3
+close-station:athrys:Clyse Anchorage	231ec118133a3
+open-station:athrys:Clyse Survey Platform	231ec118133a3
+close-station:athrys:Clyse Survey Platform	231ec118133a3
+open-station:athrys:Athrys IV Anchorage	231ec118133a3
+close-station:athrys:Athrys IV Anchorage	231ec118133a3
+open-station:sutherland:Haas Anchorage	1c4300b8829d4d
+close-station:sutherland:Haas Anchorage	1c4300b8829d4d
+open-station:sutherland:Haas Survey Platform	1c4300b8829d4d
+close-station:sutherland:Haas Survey Platform	1c4300b8829d4d
+open-station:sutherland:Sutherland V Anchorage	1c4300b8829d4d
+close-station:sutherland:Sutherland V Anchorage	1c4300b8829d4d
+open-station:viery:Mir Anchorage	d973128b94003
+close-station:viery:Mir Anchorage	d973128b94003
+open-station:viery:Mir Survey Platform	d973128b94003
+close-station:viery:Mir Survey Platform	d973128b94003
+open-station:viery:Ivanoff Anchorage	d973128b94003
+close-station:viery:Ivanoff Anchorage	d973128b94003
+open-station:viery:Ivanoff Survey Platform	d973128b94003
+close-station:viery:Ivanoff Survey Platform	d973128b94003
+open-station:viery:Viery VI Anchorage	d973128b94003
+close-station:viery:Viery VI Anchorage	d973128b94003
+open-station:weiss-212:Ferox Anchorage	84bfec4ff8a9c
+close-station:weiss-212:Ferox Anchorage	84bfec4ff8a9c
+open-station:weiss-212:Ferox Survey Platform	84bfec4ff8a9c
+close-station:weiss-212:Ferox Survey Platform	84bfec4ff8a9c
+open-station:johanssen:Noxon Anchorage	1555b7ce71fa07
+close-station:johanssen:Noxon Anchorage	1555b7ce71fa07
+open-station:johanssen:Noxon Survey Platform	1555b7ce71fa07
+close-station:johanssen:Noxon Survey Platform	1555b7ce71fa07
+open-station:johanssen:Morcate Anchorage	1555b7ce71fa07
+close-station:johanssen:Morcate Anchorage	1555b7ce71fa07
+open-station:johanssen:Morcate Survey Platform	1555b7ce71fa07
+close-station:johanssen:Morcate Survey Platform	1555b7ce71fa07
+open-station:acrius:Foundation Anchorage	fc65c00e2af9c
+close-station:acrius:Foundation Anchorage	fc65c00e2af9c
+open-station:acrius:Foundation Survey Platform	fc65c00e2af9c
+close-station:acrius:Foundation Survey Platform	fc65c00e2af9c
+open-station:acrius:Tributa Anchorage	fc65c00e2af9c
+close-station:acrius:Tributa Anchorage	fc65c00e2af9c
+open-station:acrius:Tributa Survey Platform	fc65c00e2af9c
+close-station:acrius:Tributa Survey Platform	fc65c00e2af9c
+open-station:acrius:Acrius V Anchorage	fc65c00e2af9c
+close-station:acrius:Acrius V Anchorage	fc65c00e2af9c
+open-station:haldor:Havencrest Anchorage	169c10bb56d138
+close-station:haldor:Havencrest Anchorage	169c10bb56d138
+open-station:haldor:Havencrest Survey Platform	169c10bb56d138
+close-station:haldor:Havencrest Survey Platform	169c10bb56d138
+open-station:haldor:Haldor VI Anchorage	169c10bb56d138
+close-station:haldor:Haldor VI Anchorage	169c10bb56d138
+open-station:constantine:Saratoga Anchorage	1b1f1020102b49
+close-station:constantine:Saratoga Anchorage	1b1f1020102b49
+open-station:constantine:Saratoga Survey Platform	1b1f1020102b49
+close-station:constantine:Saratoga Survey Platform	1b1f1020102b49
+open-station:dsc-346:DSC 346 II Anchorage	b5fb20184d519
+close-station:dsc-346:DSC 346 II Anchorage	b5fb20184d519
+open-station:dsc-346:V. Sokolov Observatory	b5fb20184d519
+close-station:dsc-346:V. Sokolov Observatory	b5fb20184d519
+open-station:koch:Prospect Anchorage	17a7e9097bfaf3
+close-station:koch:Prospect Anchorage	17a7e9097bfaf3
+open-station:koch:Prospect Survey Platform	17a7e9097bfaf3
+close-station:koch:Prospect Survey Platform	17a7e9097bfaf3
+open-station:koch:Koch V Anchorage	17a7e9097bfaf3
+close-station:koch:Koch V Anchorage	17a7e9097bfaf3
+open-station:carver:Carver V Anchorage	11a6f5d8a53cba
+close-station:carver:Carver V Anchorage	11a6f5d8a53cba
+open-station:carver:Carver V Survey Platform	11a6f5d8a53cba
+close-station:carver:Carver V Survey Platform	11a6f5d8a53cba
+open-station:carver:Carver VI Anchorage	11a6f5d8a53cba
+close-station:carver:Carver VI Anchorage	11a6f5d8a53cba
+open-station:carver:Carver Defense Platform	11a6f5d8a53cba
+close-station:carver:Carver Defense Platform	11a6f5d8a53cba
+open-station:bharask:Vonako Anchorage	5dd03ce0884ae
+close-station:bharask:Vonako Anchorage	5dd03ce0884ae
+open-station:bharask:Vonako Survey Platform	5dd03ce0884ae
+close-station:bharask:Vonako Survey Platform	5dd03ce0884ae
+open-station:blake-s-star:Phoenix Anchorage	d71f9c599a9c2
+close-station:blake-s-star:Phoenix Anchorage	d71f9c599a9c2
+open-station:blake-s-star:Phoenix Survey Platform	d71f9c599a9c2
+close-station:blake-s-star:Phoenix Survey Platform	d71f9c599a9c2
+open-station:blake-s-star:Belleza Anchorage	d71f9c599a9c2
+close-station:blake-s-star:Belleza Anchorage	d71f9c599a9c2
+open-station:blake-s-star:Belleza Survey Platform	d71f9c599a9c2
+close-station:blake-s-star:Belleza Survey Platform	d71f9c599a9c2
+open-station:weiss-287:Carson Station	b2666c2510933
+close-station:weiss-287:Carson Station	b2666c2510933
+open-station:weiss-287:New Dresden Survey Platform	b2666c2510933
+close-station:weiss-287:New Dresden Survey Platform	b2666c2510933
+open-station:weiss-287:Weiss 287 V Anchorage	b2666c2510933
+close-station:weiss-287:Weiss 287 V Anchorage	b2666c2510933
+open-station:sol:Visegrad Orbital	19d59f6e54576e
+close-station:sol:Visegrad Orbital	30419f841a687
+open-station:sol:Eden Survey Platform	c6fdbdf877bdc
+close-station:sol:Eden Survey Platform	46f505ce8a26b
+open-station:sol:Arcadia Anchorage	1951ce677bd9b3
+close-station:sol:Arcadia Anchorage	b2ab6f416ddd7
+open-station:sol:Arcadia Survey Platform	72ae4fa208967
+close-station:sol:Arcadia Survey Platform	1a33c9d9d1fcbb
+open-station:sol:Sol VI Anchorage	c75a3af323124
+close-station:sol:Sol VI Anchorage	138f79946fc825
+open-station:sol:Sol Defense Platform	6ff3107739e3
+close-station:sol:Sol Defense Platform	1654b7f4f6d9b5
+open-station:freki:Freki III Anchorage	159a563446c046
+close-station:freki:Freki III Anchorage	159a563446c046
+open-station:freki:Freki IV Anchorage	159a563446c046
+close-station:freki:Freki IV Anchorage	159a563446c046
+open-station:freki:Freki IV Survey Platform	159a563446c046
+close-station:freki:Freki IV Survey Platform	159a563446c046
+open-station:cassius:Kronos Anchorage	185b3bb48e61e4
+close-station:cassius:Kronos Anchorage	185b3bb48e61e4
+open-station:cassius:Kronos Survey Platform	185b3bb48e61e4
+close-station:cassius:Kronos Survey Platform	185b3bb48e61e4
+open-station:cassius:Cassius IV Anchorage	185b3bb48e61e4
+close-station:cassius:Cassius IV Anchorage	185b3bb48e61e4
+open-station:heimdall:Jotunheim Anchorage	194a6852773bf8
+close-station:heimdall:Jotunheim Anchorage	194a6852773bf8
+open-station:heimdall:Jotunheim Survey Platform	194a6852773bf8
+close-station:heimdall:Jotunheim Survey Platform	194a6852773bf8
+open-station:heimdall:Heimdall V Anchorage	194a6852773bf8
+close-station:heimdall:Heimdall V Anchorage	194a6852773bf8
+open-station:heimdall:Heimdall Defense Platform	194a6852773bf8
+close-station:heimdall:Heimdall Defense Platform	194a6852773bf8
+open-station:tessera:New Soris Anchorage	4ee13118ec8dc
+close-station:tessera:New Soris Anchorage	4ee13118ec8dc
+open-station:tessera:New Soris Survey Platform	4ee13118ec8dc
+close-station:tessera:New Soris Survey Platform	4ee13118ec8dc
+open-station:tessera:Tessera VI Anchorage	4ee13118ec8dc
+close-station:tessera:Tessera VI Anchorage	4ee13118ec8dc
+open-station:hargrove:Oros Anchorage	8d1cf3fa3e407
+close-station:hargrove:Oros Anchorage	8d1cf3fa3e407
+open-station:hargrove:Oros Survey Platform	8d1cf3fa3e407
+close-station:hargrove:Oros Survey Platform	8d1cf3fa3e407
+open-station:torrin:Emberfall Anchorage	2e97e19d2b790
+close-station:torrin:Emberfall Anchorage	2e97e19d2b790
+open-station:torrin:Emberfall Survey Platform	2e97e19d2b790
+close-station:torrin:Emberfall Survey Platform	2e97e19d2b790
+open-station:torrin:Torrin IV Anchorage	2e97e19d2b790
+close-station:torrin:Torrin IV Anchorage	2e97e19d2b790
+open-station:morrigan:Fairmeadow Anchorage	572de4c61b5db
+close-station:morrigan:Fairmeadow Anchorage	572de4c61b5db
+open-station:morrigan:Fairmeadow Survey Platform	572de4c61b5db
+close-station:morrigan:Fairmeadow Survey Platform	572de4c61b5db
+open-station:morrigan:Morrigan V Anchorage	572de4c61b5db
+close-station:morrigan:Morrigan V Anchorage	572de4c61b5db
+open-station:tenebrae:Tenebrae IV Anchorage	183a73a057b9bb
+close-station:tenebrae:Tenebrae IV Anchorage	183a73a057b9bb
+open-station:tenebrae:Tenebrae IV Survey Platform	183a73a057b9bb
+close-station:tenebrae:Tenebrae IV Survey Platform	183a73a057b9bb
+open-station:tenebrae:Tenebrae VI Anchorage	183a73a057b9bb
+close-station:tenebrae:Tenebrae VI Anchorage	183a73a057b9bb
+open-station:aldwick:Aldwick III Anchorage	124cd606403a9d
+close-station:aldwick:Aldwick III Anchorage	124cd606403a9d
+open-station:aldwick:Aldwick III Survey Platform	124cd606403a9d
+close-station:aldwick:Aldwick III Survey Platform	124cd606403a9d
+open-station:kestrel:Windward Anchorage	2c1bd10e49ce2
+close-station:kestrel:Windward Anchorage	2c1bd10e49ce2
+open-station:kestrel:Windward Survey Platform	2c1bd10e49ce2
+close-station:kestrel:Windward Survey Platform	2c1bd10e49ce2
+open-station:kestrel:Kestrel IV Anchorage	2c1bd10e49ce2
+close-station:kestrel:Kestrel IV Anchorage	2c1bd10e49ce2
+open-station:wexley:Fairhaven Anchorage	96ce020e18b1a
+close-station:wexley:Fairhaven Anchorage	96ce020e18b1a
+open-station:wexley:Fairhaven Survey Platform	96ce020e18b1a
+close-station:wexley:Fairhaven Survey Platform	96ce020e18b1a
+open-station:wexley:Wexley V Anchorage	96ce020e18b1a
+close-station:wexley:Wexley V Anchorage	96ce020e18b1a
+open-station:lyndon:Greenbank Anchorage	c405fcae6ef98
+close-station:lyndon:Greenbank Anchorage	c405fcae6ef98
+open-station:lyndon:Greenbank Survey Platform	c405fcae6ef98
+close-station:lyndon:Greenbank Survey Platform	c405fcae6ef98
+open-station:lyndon:Lyndon VI Anchorage	c405fcae6ef98
+close-station:lyndon:Lyndon VI Anchorage	c405fcae6ef98
+open-station:vesper:Evenfall Anchorage	14e4e696c99308
+close-station:vesper:Evenfall Anchorage	14e4e696c99308
+open-station:vesper:Evenfall Survey Platform	14e4e696c99308
+close-station:vesper:Evenfall Survey Platform	14e4e696c99308
+open-station:weiss-304:Weiss 304 IV Anchorage	21a198dffabd
+close-station:weiss-304:Weiss 304 IV Anchorage	21a198dffabd
+open-station:rosen:Rosewater Anchorage	2ea469f170522
+close-station:rosen:Rosewater Anchorage	2ea469f170522
+open-station:rosen:Rosewater Survey Platform	2ea469f170522
+close-station:rosen:Rosewater Survey Platform	2ea469f170522
+open-station:rosen:Rosen V Anchorage	2ea469f170522
+close-station:rosen:Rosen V Anchorage	2ea469f170522
+open-station:ashcombe:Ashcombe IV Anchorage	178667def8706d
+close-station:ashcombe:Ashcombe IV Anchorage	178667def8706d
+open-station:ashcombe:Ashcombe IV Survey Platform	178667def8706d
+close-station:ashcombe:Ashcombe IV Survey Platform	178667def8706d
+open-station:ashcombe:Ashcombe VI Anchorage	178667def8706d
+close-station:ashcombe:Ashcombe VI Anchorage	178667def8706d
+open-station:tyndall:Farsight Anchorage	a097bfdf0a758
+close-station:tyndall:Farsight Anchorage	a097bfdf0a758
+open-station:tyndall:Farsight Survey Platform	a097bfdf0a758
+close-station:tyndall:Farsight Survey Platform	a097bfdf0a758
+open-station:dunstan:Dunstan III Anchorage	7f7c6a3e9c184
+close-station:dunstan:Dunstan III Anchorage	7f7c6a3e9c184
+open-station:dunstan:Dunstan III Survey Platform	7f7c6a3e9c184
+close-station:dunstan:Dunstan III Survey Platform	7f7c6a3e9c184
+open-station:dunstan:Dunstan IV Anchorage	7f7c6a3e9c184
+close-station:dunstan:Dunstan IV Anchorage	7f7c6a3e9c184
+open-station:corvin:Corvin III Anchorage	ec644ceab2394
+close-station:corvin:Corvin III Anchorage	ec644ceab2394
+open-station:corvin:Corvin III Survey Platform	ec644ceab2394
+close-station:corvin:Corvin III Survey Platform	ec644ceab2394
+open-station:corvin:Corvin V Anchorage	ec644ceab2394
+close-station:corvin:Corvin V Anchorage	ec644ceab2394
+open-station:weiss-319:Weiss 319 VI Anchorage	1e54d277b48e6b
+close-station:weiss-319:Weiss 319 VI Anchorage	1e54d277b48e6b
+open-station:aster:Hearth Anchorage	526a13ad354e9
+close-station:aster:Hearth Anchorage	526a13ad354e9
+open-station:aster:Hearth Survey Platform	526a13ad354e9
+close-station:aster:Hearth Survey Platform	526a13ad354e9
+open-station:hollis:Dunmere Anchorage	12bf9dd7764050
+close-station:hollis:Dunmere Anchorage	12bf9dd7764050
+open-station:hollis:Dunmere Survey Platform	12bf9dd7764050
+close-station:hollis:Dunmere Survey Platform	12bf9dd7764050
+open-station:hollis:Hollis IV Anchorage	12bf9dd7764050
+close-station:hollis:Hollis IV Anchorage	12bf9dd7764050
+open-station:kepler-81:Kepler 81 V Anchorage	b122b4cafdd6a
+close-station:kepler-81:Kepler 81 V Anchorage	b122b4cafdd6a
+open-station:redwick:Redwick III Anchorage	e172a7188514f
+close-station:redwick:Redwick III Anchorage	e172a7188514f
+open-station:redwick:Redwick III Survey Platform	e172a7188514f
+close-station:redwick:Redwick III Survey Platform	e172a7188514f
+open-station:redwick:Redwick VI Anchorage	e172a7188514f
+close-station:redwick:Redwick VI Anchorage	e172a7188514f
+open-station:briar:Bellhaven Anchorage	10ab043aed02d7
+close-station:briar:Bellhaven Anchorage	10ab043aed02d7
+open-station:briar:Bellhaven Survey Platform	10ab043aed02d7
+close-station:briar:Bellhaven Survey Platform	10ab043aed02d7
+open-station:elara:Elara III Anchorage	1caf471dfc02d5
+close-station:elara:Elara III Anchorage	1caf471dfc02d5
+open-station:elara:Elara III Survey Platform	1caf471dfc02d5
+close-station:elara:Elara III Survey Platform	1caf471dfc02d5
+open-station:elara:Elara IV Anchorage	1caf471dfc02d5
+close-station:elara:Elara IV Anchorage	1caf471dfc02d5
+ui:reset	15b5b41fd7f74a
+ui:search:	15b5b41fd7f74a
+ui:search:zzz-no-such-thing	1de8517d4e0e22
+ui:search:station	61d29d21928ba
+ui:search:federation	de8d99169f9ba
+ui:search:silent	1de8517d4e0e22
+ui:search:moon	6ad53fe9fa265
+ui:search:Adrea	6327368d265b3
+ui:search:Weiss 212	d76b78eff17d8
+ui:search:Constantine	1688c4a8b399c6
+ui:search:Bharask	17f122a2973d3e
+ui:search:Freki	31701a93ec683
+ui:search:Hargrove	1b81d52f343b4
+ui:search:Aldwick	17c39181453de3
+ui:search:Vesper	108a380777b830
+ui:search:Tyndall	316e7f668f013
+ui:search:Aster	e8299b150336c
+ui:search:Briar	942759ea35e74
+ui:search:Adrea I	6327368d265b3
+ui:search:Viery VIII	1d933ea12e4459
+ui:search:Haldor VII	17c983633784ed
+ui:search:Carver VIII	1048cfc097cd53
+ui:search:Sol VII	694f3dd3dd1b
+ui:search:Tessera VI	14fc2a6fefc608
+ui:search:Tenebrae V	132ced5d500402
+ui:search:Lyndon IV	f56302cb9632a
+ui:search:Ashcombe III	101599ffb6f677
+ui:search:Weiss 319 II	182bb20d8ddf6c
+ui:search:Redwick I	192226fb6b965a
+ui:search:clear	15b5b41fd7f74a
+ui:scope:0	15b5b41fd7f74a
+ui:scope:1	d48b9ae11c90e
+ui:scope:2	b88a5bdb5c50f
+ui:scope:3	b88a5bdb5c50f
+ui:filter:0:off	18d6f378b5bcd2
+ui:filter:0:on	b88a5bdb5c50f
+ui:filter:1:off	b88a5bdb5c50f
+ui:filter:1:on	b88a5bdb5c50f
+ui:filter:2:off	b88a5bdb5c50f
+ui:filter:2:on	b88a5bdb5c50f
+ui:filter:3:off	b88a5bdb5c50f
+ui:filter:3:on	b88a5bdb5c50f
+ui:filter:4:off	b88a5bdb5c50f
+ui:filter:4:on	b88a5bdb5c50f
+ui:filter:5:off	b88a5bdb5c50f
+ui:filter:5:on	b88a5bdb5c50f
+ui:button:zoomIn:46	19e15323d307c0
+ui:button:zoomIn:47	5d118e04345c3
+ui:button:zoomOut:48	19e15323d307c0
+ui:button:fit:49	b88a5bdb5c50f
+ui:button:indexToggle:50	1f5875633d605e
+ui:button:indexToggle:51	b88a5bdb5c50f
+ui:button:toggleDetailPanel:52	1e06bb147c1516
+ui:button:toggleDetailPanel:53	b88a5bdb5c50f
+ui:button:filterBtn:54	a1d775f01a4c
+ui:button:filterBtn:55	b88a5bdb5c50f
+ui:button:footerNotes:56	180cfb489b3c81
+ui:button:closeNotes:57	b88a5bdb5c50f
+ui:button:download:58	b88a5bdb5c50f
+ui:key:+	19e15323d307c0
+ui:key:-	b88a5bdb5c50f
+ui:key:0	b88a5bdb5c50f
+ui:key:ArrowUp	1da6e5ff49b9b3
+ui:key:ArrowLeft	1c37d44cb8594b
+ui:key:ArrowDown	33ef5bf386a84
+ui:key:ArrowRight	f6b9d537473e0
+ui:zoom-in-system	e9ebffb660062
+ui:key-in-system:+	1772321e4e859b
+ui:key-in-system:0	82364b80d45ee

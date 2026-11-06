@@ -16,7 +16,9 @@ Node.js 22 or newer. Run `npm install` once.
 | `npm run serve`         | Serve `dist/` at `http://127.0.0.1:8080/`                |
 | `npm run check`         | Build, unit tests, DOM tests, quick golden tours (4 min) |
 | `npm run check:full`    | Build, unit tests, DOM tests, full golden tours (10 min) |
-| `npm run golden:update` | Rewrite the golden hashes                                |
+| `npm run e2e`           | Browser tests in Chromium (Playwright), about 7 minutes  |
+| `npm run e2e:update`    | Rewrite the browser-test baselines and screenshots       |
+| `npm run golden:update` | Rewrite the jsdom golden hashes                          |
 | `npm run build:loader`  | Build the browser loader, `build/loader.html`            |
 | `npm run format`        | Format with Prettier                                     |
 
@@ -153,9 +155,13 @@ and renders the atlas in the browser, inside the AtlasEmbed sandbox. The contrac
 - **Golden tours** (`tests/golden.cjs`): every region, system, planet, satellite and station, the
   station screens, and the page controls. Each step is hashed and compared with `tests/golden/`.
   `quick` samples one step in ten; `full` runs all.
-- **Browser test** (`npm run test:browser`): Chromium via Playwright, after `npx playwright install chromium`.
+- **Browser tests** (`tests/e2e`, `npm run e2e`): Playwright in Chromium, after `npx playwright install chromium`.
+  `tour.spec.mjs` runs the same tour as the golden tours with real layout and compares a hash of the page
+  after each step. `screens.spec.mjs` compares screenshots of the overview, a region, a system and a
+  planet of each atlas, which covers CSS and layout. Baselines are in `tests/e2e/__snapshots__/`.
+  The step list is shared with the golden tours (`tests/tour-steps.mjs`).
 
-Checked by hand: CSS and layout, saved history state, hash routes, live Codex refresh.
+Checked by hand: saved history state, hash routes, live Codex refresh.
 
 `dist/build-report.json` lists four unresolved Kadaym references from the source catalogue
 (`docs/history/MIGRATION.md`). New DSL maps use strict validation.

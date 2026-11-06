@@ -11,6 +11,7 @@ npm install            # dev dependencies (jsdom, playwright, babel, prettier)
 npm run build          # writes dist/*.html (open dist/index.html, or `npm run serve`)
 npm run check          # build + unit + DOM tests + quick golden tours (about 4 minutes)
 npm run check:full     # the same with the full golden tours (about 10 minutes, uses a lot of memory)
+npm run e2e            # browser tests in Chromium: the tour plus screenshots (about 7 minutes)
 ```
 
 Run at most two golden tours at once (`--jobs 2`); each is a jsdom page and they are heavy.
@@ -49,7 +50,8 @@ Run at most two golden tours at once (`--jobs 2`); each is a jsdom page and they
 
 - A converged function is finished only when the **full** golden tours pass. The quick tours sample
   about one step in ten and have missed a regression before.
-- The tours check structure and text, not CSS, and they do not drive widget mode (`?view=widget`),
+- The golden tours check structure and text under mocked geometry. The Playwright tests (`npm run e2e`) run
+  the same tour in a real browser and compare screenshots, so they also cover CSS and layout. Neither checks CSS beyond that, and they do not drive widget mode (`?view=widget`),
   saved history state or hash routes. Check those by hand.
 - `npm run golden:update` rewrites the golden files. Only use it for a change you intend, after
   reading which steps changed.
