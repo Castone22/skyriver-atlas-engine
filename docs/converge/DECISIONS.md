@@ -1,7 +1,7 @@
 # Decisions on open questions
 
-Answers from the maintainer to the questions the convergence work raised. **None of these is
-implemented yet.** Each one changes what an atlas renders, so each needs the golden files for the
+Answers from the maintainer to the questions the convergence work raised. **Decisions 3, 4, 6 and 10 are implemented (see "Status"
+below); the others are not yet.** Each one changes what an atlas renders, so each needs the golden files for the
 affected steps regenerated and reviewed (`npm run golden:update`, then read the diff) before it is
 committed. Do the work in small commits, one decision each, and finish with `npm run check:full`.
 
@@ -20,6 +20,16 @@ committed. Do the work in small commits, one decision each, and finish with `npm
 | 11 | Widget mode without a query; outline pressed-state in widget mode | Widget mode should show an error when no query is passed. Outline pressed-state should be supported in widget mode for every atlas. | `widgetOutlineState` on for all; new error state |
 | 12 | `regionHighlight` bundles several routing quirks | Split them into separate flags. | `regionHighlight` |
 | 13 | Foundry identified by name in code; Grand search entries | Fine. Grand does not display Forge directly; that is a copy-paste artifact. Move the Foundry into station data. | station data (`schematic`) |
+
+## Status
+
+| # | State |
+| --- | --- |
+| 3 | Done (`c11ea4f`): `emptyDossierFactsFallBack` is on for all five atlases. |
+| 4 | Done (`9b14fef`): DSC 346's star descriptions are `primaryDescriptions` in UACS data; the full UACS tour is unchanged. |
+| 6 | Done (`3ebf592`) for IULR: short labels in every layout (265 planet views changed, IULR goldens regenerated). UACS keeps `extendedChartMoonThreshold: 10`: its `extendedSatelliteChart` data flag is set on all 269 of its worlds and only 37 have more than 10 moons, so the flag cannot drive the layout there. |
+| 10 | Done (`c11ea4f`): `widgetKeepsAddress` is on for IULR, so every atlas leaves the address alone in widget mode. |
+| 1, 2, 8, 11, 12, 13 | Pending. 1 and 2 change visible text or links (regenerate the affected goldens); 11 adds a widget-mode error state; 12 splits `regionHighlight` into separate flags; 13 moves the Foundry into station data. 5, 7 and 9 need no change. |
 
 ## Explanations given with the decisions
 

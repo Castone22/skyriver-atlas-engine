@@ -113,8 +113,8 @@ The existing `Cache-Control: private, max-age=3600` with no cache busting is wro
 
 ### Request count
 
-Files are fetched one by one. A Kadaym atlas needs about 108 function files plus its own five or
-so; the Grand atlas needs about 33 plus the same again for each of its five children. Under HTTP/2
+Files are fetched one by one. A stellar atlas needs 117 to 139 function files (Kadaym the fewest, UACS, Elysian and IULR the
+most) plus its own five or so; the Grand atlas needs about 33 plus the same again for each of its five children. Under HTTP/2
 or HTTP/3 this is fine, and with immutable caching repeat visits cost nothing. If it proves too
 slow on a cold cache, the next step is for the extension to serve a pre-concatenated pack of an
 engine's functions; the transport interface (`{ files, read }`) does not need to change for that.
