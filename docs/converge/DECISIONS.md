@@ -29,7 +29,8 @@ committed. Do the work in small commits, one decision each, and finish with `npm
 | 4 | Done (`9b14fef`): DSC 346's star descriptions are `primaryDescriptions` in UACS data; the full UACS tour is unchanged. |
 | 6 | Done (`3ebf592`) for IULR: short labels in every layout (265 planet views changed, IULR goldens regenerated). UACS keeps `extendedChartMoonThreshold: 10`: its `extendedSatelliteChart` data flag is set on all 269 of its worlds and only 37 have more than 10 moons, so the flag cannot drive the layout there. |
 | 10 | Done (`c11ea4f`): `widgetKeepsAddress` is on for IULR, so every atlas leaves the address alone in widget mode. |
-| 1, 2, 8, 11, 12, 13 | Pending. 1 and 2 change visible text or links (regenerate the affected goldens); 11 adds a widget-mode error state; 12 splits `regionHighlight` into separate flags; 13 moves the Foundry into station data. 5, 7 and 9 need no change. |
+| 1 | Done: Kadaym's empty-search hint now names the United Federation of Kadaym; the Forge references in Calidor and UACS were already removed when that content moved into data. One golden step changed (`ui:search:zzz-no-such-thing`). Kadaym's `affiliationLink` "Elysian Collective" is genuine lore and stays. |
+| 2, 8, 11, 12, 13 | Pending. 2 changes the link on nearly every system in four atlases (regenerate and review the affected goldens); 11 adds a widget-mode error state; 12 splits `regionHighlight` into separate flags; 13 moves the Foundry into station data. 5, 7 and 9 need no change. |
 
 ## Explanations given with the decisions
 
