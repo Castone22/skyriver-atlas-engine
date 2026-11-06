@@ -1,5 +1,5 @@
 function bindSystemControls(){
- for(const el of document.querySelectorAll('[data-foundry-open]'))el.onclick=()=>openStation('Foundry');
+ for(const el of document.querySelectorAll('[data-foundry-open]'))el.onclick=()=>openStation(el.dataset.foundryOpen);
  if(stationOverview){
   $('leaveStation').onclick=closeStation;
   for(const el of document.querySelectorAll('[data-unit]'))el.onclick=()=>{if(el.dataset.unit!==selectedWorld)openStation(el.dataset.unit)};

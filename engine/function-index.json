@@ -127,7 +127,7 @@
       "kadaym",
       "uacs"
     ],
-    "bytes": 2978
+    "bytes": 2991
   },
   "bindToraControl": {
     "name": "bindToraControl",
@@ -227,7 +227,7 @@
       "kadaym",
       "uacs"
     ],
-    "bytes": 935
+    "bytes": 1034
   },
   "classificationTerms": {
     "name": "classificationTerms",
@@ -305,7 +305,7 @@
       "iulr",
       "uacs"
     ],
-    "bytes": 170
+    "bytes": 182
   },
   "deadStarGlyph": {
     "name": "deadStarGlyph",
@@ -581,7 +581,7 @@
     "profiles": [
       "calidor"
     ],
-    "bytes": 245
+    "bytes": 253
   },
   "foundryElevation": {
     "name": "foundryElevation",
@@ -665,7 +665,7 @@
       "iulr",
       "uacs"
     ],
-    "bytes": 109
+    "bytes": 114
   },
   "highlightPart": {
     "name": "highlightPart",
@@ -675,7 +675,7 @@
       "iulr",
       "uacs"
     ],
-    "bytes": 570
+    "bytes": 638
   },
   "highlightRegion": {
     "name": "highlightRegion",
@@ -902,7 +902,7 @@
     "profiles": [
       "calidor"
     ],
-    "bytes": 11888
+    "bytes": 11893
   },
   "mountSystem-shared": {
     "name": "mountSystem",
@@ -1346,7 +1346,7 @@
     "profiles": [
       "calidor"
     ],
-    "bytes": 7133
+    "bytes": 7145
   },
   "renderIndex": {
     "name": "renderIndex",
@@ -1803,7 +1803,7 @@
       "iulr",
       "uacs"
     ],
-    "bytes": 1643
+    "bytes": 1648
   },
   "status": {
     "name": "status",
@@ -1976,7 +1976,7 @@
     "profiles": [
       "calidor"
     ],
-    "bytes": 6164
+    "bytes": 6224
   },
   "textSVG": {
     "name": "textSVG",
