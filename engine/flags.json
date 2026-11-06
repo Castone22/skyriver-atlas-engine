@@ -1,4 +1,8 @@
 {
+  "addressRegionWins": {
+    "description": "On an address route the region named in the address is used before the region of the system it names, instead of after it.",
+    "default": false
+  },
   "architectureFacts": {
     "description": "The dossier lists a system's stellar architecture and station counts, and a planet's designation, orbital host and moon inventory.",
     "default": false
@@ -39,13 +43,29 @@
     "description": "Region shown when an address names no region and no system.",
     "default": "all"
   },
+  "focusRegionIgnoresRegion": {
+    "description": "On a focus=region route the region named in the address is ignored and the system's own region is used.",
+    "default": false
+  },
   "goldenAngleMoonPhase": {
     "description": "Moons on the local planet chart always start a golden-angle step apart (2.39996 radians), not only in the extended layout (default step 2.1).",
+    "default": false
+  },
+  "hashIgnoredWithRegion": {
+    "description": "The URL hash is ignored when the address names an explicit region (and no system or planet).",
     "default": false
   },
   "hiddenStationFilters": {
     "description": "Station categories left out of the local-orbit station filter bar (planetView).",
     "default": []
+  },
+  "highlightRouteParam": {
+    "description": "The address records the highlighted region as highlight=<region> and never writes chart=, instead of the overview chart parameter.",
+    "default": false
+  },
+  "highlightedRegionState": {
+    "description": "The saved history state and the remembered camera store highlightedRegion instead of the overview flag.",
+    "default": false
   },
   "indexWorldLinks": {
     "description": "The index lists a system's worlds (its overviewWorlds when present) as article links instead of plain text.",
@@ -70,6 +90,14 @@
   "minimapViewBox": {
     "description": "Fixed viewBox for the minimap, for atlases with no atlasExtent; null uses the atlas extent.",
     "default": null
+  },
+  "noLocalChartFallback": {
+    "description": "An exact system and planet route does not fall back to the local chart parent of the planet.",
+    "default": false
+  },
+  "noOverviewRoute": {
+    "description": "The chart parameter is not read for routing: a region in the address opens its regional chart, never the overview chart.",
+    "default": false
   },
   "normalizeTitleApostrophes": {
     "description": "Article links turn curly apostrophes in a title into straight ones before building the URL.",
@@ -113,6 +141,10 @@
   },
   "selectFirstWorld": {
     "description": "Selecting a system without naming an object also selects its first catalogued world.",
+    "default": false
+  },
+  "selectKeepsRegion": {
+    "description": "Selecting or opening a system keeps the chart on the region the user chose instead of switching to the system's region.",
     "default": false
   },
   "shortLabelsOnlyWhenExtended": {

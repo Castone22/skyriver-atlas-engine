@@ -1491,7 +1491,7 @@
       "kadaym",
       "uacs"
     ],
-    "bytes": 4361
+    "bytes": 4525
   },
   "rotationUI": {
     "name": "rotationUI",
@@ -1509,7 +1509,7 @@
       "kadaym",
       "uacs"
     ],
-    "bytes": 466
+    "bytes": 473
   },
   "routeURL": {
     "name": "routeURL",
@@ -1520,7 +1520,7 @@
       "kadaym",
       "uacs"
     ],
-    "bytes": 1462
+    "bytes": 1474
   },
   "safeImageURL": {
     "name": "safeImageURL",
@@ -1606,7 +1606,7 @@
       "kadaym",
       "uacs"
     ],
-    "bytes": 1376
+    "bytes": 1385
   },
   "setDetailOpen": {
     "name": "setDetailOpen",
@@ -1655,7 +1655,7 @@
       "kadaym",
       "uacs"
     ],
-    "bytes": 1086
+    "bytes": 1126
   },
   "setView": {
     "name": "setView",
