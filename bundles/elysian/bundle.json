@@ -42,7 +42,6 @@
     "systemBodyRenderOpacity": true,
     "visibilityResetsLabels": true,
     "widgetKeepsAddress": true,
-    "widgetOutlineState": true,
     "widgetStationOverview": true,
     "worldKeySchematicOrbit": true,
     "emptyDossierFactsFallBack": true

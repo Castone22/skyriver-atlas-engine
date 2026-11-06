@@ -191,10 +191,6 @@
     "description": "Bodies in the system chart carry an opacity attribute taken from their renderOpacity (default 1).",
     "default": false
   },
-  "systemRecordArticleTitle": {
-    "description": "A charted system's own articleTitle is used as its article title instead of the generated '<name> System'.",
-    "default": false
-  },
   "titledLocalOrbitLabels": {
     "description": "The local-orbit accessible labels use the synchronised planet title (planetName) instead of the catalogue name.",
     "default": false
@@ -209,10 +205,6 @@
   },
   "widgetKeepsAddress": {
     "description": "In widget mode with no system open the address bar is left untouched instead of being rewritten with the current view.",
-    "default": false
-  },
-  "widgetOutlineState": {
-    "description": "Region outlines on the chart get their pressed state set even in widget mode.",
     "default": false
   },
   "widgetStationOverview": {

@@ -44,7 +44,6 @@
     "titledLocalOrbitLabels": true,
     "titledPlanetInspectLabel": true,
     "visibilityResetsLabels": true,
-    "widgetKeepsAddress": true,
-    "widgetOutlineState": true
+    "widgetKeepsAddress": true
   }
 }

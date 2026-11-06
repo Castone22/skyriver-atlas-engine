@@ -39,6 +39,7 @@
     "closeSidebarOnSelect": true,
     "derivedBelts": true,
     "elsewhereStations": true,
+    "emptyDossierFactsFallBack": true,
     "fallbackRegion": "makor",
     "normalizeTitleApostrophes": true,
     "overviewChart": "federation",
@@ -48,7 +49,6 @@
     "solarIllustrativeGuard": true,
     "solarLanesFromAllStations": true,
     "straightenImageTitleQuotes": true,
-    "widgetKeepsAddress": true,
-    "emptyDossierFactsFallBack": true
+    "widgetKeepsAddress": true
   }
 }

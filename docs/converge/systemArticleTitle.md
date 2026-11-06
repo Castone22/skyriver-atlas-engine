@@ -16,3 +16,11 @@ instead of the generated title.
   `articleTitle: <name>`? If those `articleTitle` values are the star article and the system article
   is `<name> System`, the current behaviour is right and the flag is the right shape. If they were
   meant to be used, turn the flag on there (it would change link targets).
+
+## Update (decision 2)
+
+The flag `systemRecordArticleTitle` is gone. A charted system's article is `<name> System` unless its
+`articleTitle` was set on purpose, meaning it differs from the name ignoring apostrophe style
+(`Ouua System`, `Kraunveld system`, or `X (system)`), in which case it is used as written. Four
+atlases carry an `articleTitle` that is just the name; that is treated as unset. Kadaym's stored system
+images are keyed `<name> System`, which confirms the default. No atlas output changed.

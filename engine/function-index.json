@@ -1606,7 +1606,7 @@
       "kadaym",
       "uacs"
     ],
-    "bytes": 1385
+    "bytes": 1398
   },
   "setDetailOpen": {
     "name": "setDetailOpen",
@@ -1666,7 +1666,7 @@
       "kadaym",
       "uacs"
     ],
-    "bytes": 2241
+    "bytes": 2190
   },
   "showRealm": {
     "name": "showRealm",
@@ -1908,7 +1908,7 @@
       "kadaym",
       "uacs"
     ],
-    "bytes": 168
+    "bytes": 403
   },
   "systemBodies": {
     "name": "systemBodies",

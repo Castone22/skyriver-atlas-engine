@@ -64,7 +64,6 @@
     "selectKeepsRegion": true,
     "stationLinksUseArticleTitle": true,
     "stationRoute": "focus",
-    "systemRecordArticleTitle": true,
     "titledPlanetInspectLabel": true,
     "visibilityResetsLabels": true,
     "widgetKeepsAddress": true

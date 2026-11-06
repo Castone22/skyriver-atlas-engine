@@ -32,7 +32,8 @@ committed. Do the work in small commits, one decision each, and finish with `npm
 | 1 | Done: Kadaym's empty-search hint now names the United Federation of Kadaym; the Forge references in Calidor and UACS were already removed when that content moved into data. One golden step changed (`ui:search:zzz-no-such-thing`). Kadaym's `affiliationLink` "Elysian Collective" is genuine lore and stays. |
 | 12 | Done: `regionHighlight` now means only that the page tracks a highlighted region; eight behaviour-named flags (`hashIgnoredWithRegion`, `noOverviewRoute`, `addressRegionWins`, `focusRegionIgnoresRegion`, `noLocalChartFallback`, `highlightRouteParam`, `highlightedRegionState`, `selectKeepsRegion`) carry the rest, all on for IULR only. No golden step changed. Notes: `docs/converge/regionHighlight.md`. |
 | 13 | Done: the Foundry is `"schematic": "foundry"` in Calidor's station data and code tests that field. A few display-copy and attribute-name mentions of the name remain on purpose (`docs/converge/foundry.md`). No golden step changed. |
-| 2, 8, 11 | Pending. 2 changes the link on nearly every system in four atlases (regenerate and review the affected goldens); 8 needs no work beyond keeping the flags; 11 adds a widget-mode error state and the outline pressed-state, which the tours do not drive, so it needs its own tests. 5, 7 and 9 need no change. |
+| 2 | Done: the default stays `<name> System` (confirmed against the wiki and Kadaym's stored images). An `articleTitle` that differs from the name, ignoring apostrophe style, is used as written; the `systemRecordArticleTitle` flag was removed. No atlas output changed. |
+| 8, 11 | Pending. 8 needs no work beyond keeping the flags; 11 adds a widget-mode error state and the outline pressed-state, which the tours do not drive, so it needs its own tests. 5, 7 and 9 need no change. |
 
 ## Explanations given with the decisions
 

@@ -20,7 +20,7 @@ function setView(key,keepSelection=false,keepCamera=false,overview=keepCamera?ov
  $('mapKicker').textContent=r?(r.mapKicker??(overview?'{{overviewTitle|jsstr}} / REGION HIGHLIGHTED':'REGIONAL CHART / '+r.subtitle.toUpperCase())):'{{overviewTitle|jsstr}}';
  $('mapSubtitle').textContent=r?(r.mapSubtitle??r.subtitle+' · '+DATA.systems.filter(s=>s.region===key).length+' charted systems'):'{{overviewSubtitle|jsstr}}';
  renderMapLegend(key);
- if(__ATLAS__.flags.widgetOutlineState||!widgetMode)document.querySelectorAll('[data-region-outline]').forEach(area=>area.setAttribute('aria-pressed',String(area.dataset.regionOutline===key)));
+ document.querySelectorAll('[data-region-outline]').forEach(area=>area.setAttribute('aria-pressed',String(area.dataset.regionOutline===key)));
  if(keepCamera)applyView();else fitBounds(r&&!overview?r.bounds:DATA.atlasExtent);
  if(!keepSelection){selected=null;selectedWorld=null;updateSelection();renderDetail()}
  renderIndex();endNavigation();
