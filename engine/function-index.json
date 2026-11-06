@@ -169,7 +169,7 @@
       "kadaym",
       "uacs"
     ],
-    "bytes": 1513
+    "bytes": 1511
   },
   "bodyKey": {
     "name": "bodyKey",
@@ -365,14 +365,14 @@
       "elysian",
       "uacs"
     ],
-    "bytes": 6487
+    "bytes": 6421
   },
   "draw-ab708dae8498": {
     "name": "draw",
     "profiles": [
       "iulr"
     ],
-    "bytes": 5247
+    "bytes": 5277
   },
   "draw-b185cff73a7a": {
     "name": "draw",
@@ -908,6 +908,17 @@
     ],
     "bytes": 964
   },
+  "noteworthyBodies": {
+    "name": "noteworthyBodies",
+    "profiles": [
+      "calidor",
+      "elysian",
+      "iulr",
+      "kadaym",
+      "uacs"
+    ],
+    "bytes": 415
+  },
   "notify": {
     "name": "notify",
     "profiles": [
@@ -1286,7 +1297,7 @@
       "kadaym",
       "uacs"
     ],
-    "bytes": 2126
+    "bytes": 2218
   },
   "renderIndex-21d0753ef74d": {
     "name": "renderIndex",
@@ -1957,7 +1968,7 @@
       "kadaym",
       "uacs"
     ],
-    "bytes": 806
+    "bytes": 797
   },
   "url": {
     "name": "url",

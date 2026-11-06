@@ -6,8 +6,8 @@ region:lendor	69cf3abdc8c59
 overview:lendor	69cf3abdc8c59
 region:narthezk	1847410b201da0
 overview:narthezk	1847410b201da0
-region:frontier	1cf1004cd6a70a
-overview:frontier	1cf1004cd6a70a
+region:frontier	987bd9c97c931
+overview:frontier	987bd9c97c931
 region:valteo	1f67761270bf2f
 overview:valteo	1f67761270bf2f
 region:tserazk-makai	19a5f0dc3c05e4
@@ -18,8 +18,8 @@ region:ildovahr	1fe7b4751d6b14
 overview:ildovahr	1fe7b4751d6b14
 region:krevach	1e975a8c21ddd8
 overview:krevach	1e975a8c21ddd8
-region:daurovna	95d156ba34987
-overview:daurovna	95d156ba34987
+region:daurovna	1682dbea91efc9
+overview:daurovna	1682dbea91efc9
 region:velkharn	1bb3b357c833f3
 overview:velkharn	1bb3b357c833f3
 region:orravai	1579f7b40d4e8b
@@ -160,63 +160,63 @@ station-overview:yx-3041	1d52b263158b8
 system:haktur	1fd57d7d88def1
 station-overview:haktur	112ca2bb351c21
 planet:haktur:Ysh Kha’lah	1ef6eacbeda3c6
-system:kaldana	14fe83f7246cac
-station-overview:kaldana	1de3526f7e0b66
-planet:kaldana:Kaldana III	10797f0a580a3b
-planet:kaldana:Salem Cross Station	14fe83f7246cac
-system:jesha	11fd07637f69b7
-station-overview:jesha	382c7957fdcb
-system:vije	12856e9ab1675d
-station-overview:vije	163422374ce582
-planet:vije:Chorus	16b5700f0e9b64
-system:columa	109b85358f736e
-station-overview:columa	12c5041ab81b
-planet:columa:Circa’s Triad	109b85358f736e
-system:lykko	1fe66d7b89e2e9
-station-overview:lykko	14eb26310370d3
-system:amolon	1463312f1884f5
-station-overview:amolon	16d52c41d8b025
-system:bekral	1e047908e16fe7
-station-overview:bekral	1e80bec4261b17
-system:kevak	9a0d1bd6b32e
-station-overview:kevak	e8da701b3ad8d
-planet:kevak:Prathia	8b5753fa36e08
-system:drayson	fae12b958e4b9
-station-overview:drayson	1adbc4130612b8
-planet:drayson:Keyhaul Trench	15e3064d8439c9
-system:portus	7a274068bb403
-station-overview:portus	197ab073ff1f82
-system:marius	bd04bcaeee885
-station-overview:marius	1c96afe8ee4bd4
-system:selone	83dadd9896be9
-station-overview:selone	108f0c76225f17
-system:querial	1edb285c92e171
-station-overview:querial	4f007132ca122
-planet:querial:Corianna	137786ce5fec15
-system:victus	174c58bff9c379
-station-overview:victus	12021b3ed932b
-planet:victus:Malvora	5dc5212733305
-system:havl	f677e7163c3fd
-station-overview:havl	d3ed89b2fbdad
-planet:havl:Shryke Jumpgate	f677e7163c3fd
-system:excelsior	d9f7ef84333b8
-station-overview:excelsior	16a36bc951dd2d
-system:talus	53fbbb5966423
-station-overview:talus	123600ee43abf2
-planet:talus:Ivory Vale	523328d156c23
-system:ikson	2a0fb82295711
-station-overview:ikson	f2175fc979acc
-system:rapsin	f1227adb1431c
-station-overview:rapsin	1a9e9fb328a728
-system:valmaris	6bde8865151a3
-station-overview:valmaris	15e35fe3b7c9ec
-system:maxis	1f3e0a0765dd6e
-station-overview:maxis	1304c05fac0fec
-system:odravek	174539fa16a96f
-station-overview:odravek	ee6a318df6ac2
-system:montressor	192b77ce3ff681
-station-overview:montressor	46fab23fcb4c4
-planet:montressor:Montressor Station	192b77ce3ff681
+system:kaldana	13bed1d1a33d4e
+station-overview:kaldana	5d37ceca46021
+planet:kaldana:Kaldana III	27ec34b762ebd
+planet:kaldana:Salem Cross Station	13bed1d1a33d4e
+system:jesha	1d5a7d28f6ddb7
+station-overview:jesha	36cdd40129754
+system:vije	6a3e25c580510
+station-overview:vije	1343479d32cd34
+planet:vije:Chorus	1aa74f2bc4c519
+system:columa	15271044306518
+station-overview:columa	87d0fd28c4843
+planet:columa:Circa’s Triad	15271044306518
+system:lykko	14d5517612fe4a
+station-overview:lykko	5289c5846a44d
+system:amolon	1d7d8f95e6b309
+station-overview:amolon	14db6fb32d1f2a
+system:bekral	112ef55976d726
+station-overview:bekral	1225aca917967d
+system:kevak	83ab769d4464f
+station-overview:kevak	2326a7b1ec72c
+planet:kevak:Prathia	1394354f385e7b
+system:drayson	18cd6011d283c4
+station-overview:drayson	8b5730bee4f28
+planet:drayson:Keyhaul Trench	34d455ad9a471
+system:portus	285364d50a0dd
+station-overview:portus	dcf11f4dfeb08
+system:marius	2f5941a29d726
+station-overview:marius	1c15255fed3a5e
+system:selone	1f75c76b90fec6
+station-overview:selone	89d670dcb71d2
+system:querial	1838b14d7d3efa
+station-overview:querial	105e12eda33dc3
+planet:querial:Corianna	6166a14486a74
+system:victus	1162dad64b2d6e
+station-overview:victus	148741f0dfd30b
+planet:victus:Malvora	1a38261ef5611a
+system:havl	1373a8848f3ca0
+station-overview:havl	adc1e57cd5b53
+planet:havl:Shryke Jumpgate	1373a8848f3ca0
+system:excelsior	1ec05c097cfb75
+station-overview:excelsior	112a4a6ad61d7a
+system:talus	8552f73a9fdca
+station-overview:talus	1087ad6aad8001
+planet:talus:Ivory Vale	f9fb2494c11a1
+system:ikson	1301428f5125b3
+station-overview:ikson	25c00347703e2
+system:rapsin	56c5befc4fcf
+station-overview:rapsin	fac1684e0404f
+system:valmaris	13525a05c5b824
+station-overview:valmaris	1744884ca36477
+system:maxis	10c086aa347167
+station-overview:maxis	1c48b284db63c8
+system:odravek	bf2dadf9932a6
+station-overview:odravek	143d0e34f1a4b6
+system:montressor	12e93afea2604b
+station-overview:montressor	be74b96e5247b
+planet:montressor:Montressor Station	12e93afea2604b
 system:varkesh-abyss	1f8fe8d9121c3a
 station-overview:varkesh-abyss	b56d5d726dda0
 planet:varkesh-abyss:Varkhuz	1b13b2e83e6b26
@@ -227,11 +227,11 @@ station-overview:narthezk-maw	13c4ab35092cca
 planet:narthezk-maw:Narvokh	1253e1bac0418d
 planet:narthezk-maw:Thezkar	1c2af1e235410e
 planet:narthezk-maw:Ulzheim	598b4c7dfbc16
-system:hinterland-null	24fe984c3f7d9
-station-overview:hinterland-null	94562db52089d
-planet:hinterland-null:Vezhrak	12fa5676d7b61d
-planet:hinterland-null:Khorveth	c338fba534a0c
-planet:hinterland-null:Zarnovek	153107ef55b00
+system:hinterland-null	16c5388c3bdb21
+station-overview:hinterland-null	a8da014aff648
+planet:hinterland-null:Vezhrak	a4938bca7c179
+planet:hinterland-null:Khorveth	14012a9e270c39
+planet:hinterland-null:Zarnovek	1bcfc2555b17bf
 system:vezhkar-pulsar	1229b52f2cce38
 station-overview:vezhkar-pulsar	18fdfd307248a5
 system:tazhvek-variable	25e3599d899b8
@@ -490,57 +490,57 @@ planet:kairz:Zovnik	19088a9d4f2755
 system:vennit	dc2e4891f325d
 station-overview:vennit	90ae97e3f3fe0
 planet:vennit:Dauzha	73ef578314210
-system:trilaria-stellaris	72923bc948d82
-station-overview:trilaria-stellaris	87ef0d3c4fed8
-planet:trilaria-stellaris:Trilaria Prime	f297cfd24931d
-planet:trilaria-stellaris:Moon Beta	f297cfd24931d
-planet:trilaria-stellaris:Trilaria	f297cfd24931d
-planet:trilaria-stellaris:Quantum Station	72923bc948d82
-system:ozhava	6856f7c14634a
-station-overview:ozhava	1435d8e827f04c
-planet:ozhava:Ildezh	292311ef4842a
-planet:ozhava:Zava Ruun	3d4a19aaf2ea4
-planet:ozhava:Dezhen	12fde21e466157
-planet:ozhava:Azmai	1972d3ce7a604b
-planet:ozhava:Lur	1b68e1437e1073
-system:hadrul	138fc072fc7be3
-station-overview:hadrul	dbfbb8abe9f8c
-planet:hadrul:Iravahn	1361b9451e0fc8
-system:heth-aun	2b7432c93a9cd
-station-overview:heth-aun	403f158ddad80
-planet:heth-aun:Maurezh	1c521f27782dd7
-planet:heth-aun:Zahlumen	e337b9046301c
-planet:heth-aun:Rukai	a0d5e52d646ea
-system:zairen	10a1adf6752c3c
-station-overview:zairen	1b146456e3062b
-planet:zairen:Ullavi	1691d131661ab9
-system:kezhar-vey	1f0728932cc792
-station-overview:kezhar-vey	301cd3eadf4c
-planet:kezhar-vey:Othrel	50a2a0d4b3d56
-planet:kezhar-vey:Nayeth	13869b659870b3
-system:ul-zaar	4ec8666e6f214
-station-overview:ul-zaar	fde9f76ee738e
-planet:ul-zaar:Haurei	4909d7bb9391b
-system:velumai	190301312752bd
-station-overview:velumai	607a31e471e58
-planet:velumai:Izhara	77400217c82b5
-system:nuren	9452ff3d9bd88
-station-overview:nuren	15880164dd3d52
-planet:nuren:Izhurat	1227e9ca73d528
-planet:nuren:Tahven	418c5dc2382f6
-system:dareth	1eeda248f7e230
-station-overview:dareth	1b7dee7a052c0e
-planet:dareth:Zaroun	69a03a4c8cd99
-system:hazhoi	1ab88a9cddc46f
-station-overview:hazhoi	6cf5c66fc9bf7
-planet:hazhoi:Terzhai	f200259df8393
-system:tahmer	bcf8219ef5c8c
-station-overview:tahmer	10750aa81752a8
-planet:tahmer:Amrith	1da38ab9d72671
-system:irzhek	edf2b6f21b058
-station-overview:irzhek	17f85f9be08f8f
-planet:irzhek:Yezhna	27389fcf0724b
-planet:irzhek:Madrau	1905736118498b
+system:trilaria-stellaris	ef87d403f67eb
+station-overview:trilaria-stellaris	19d96ba9e82609
+planet:trilaria-stellaris:Trilaria Prime	1982c100855d47
+planet:trilaria-stellaris:Moon Beta	1982c100855d47
+planet:trilaria-stellaris:Trilaria	1982c100855d47
+planet:trilaria-stellaris:Quantum Station	ef87d403f67eb
+system:ozhava	55ef9978cdf47
+station-overview:ozhava	4da9262f637ac
+planet:ozhava:Ildezh	48720862d99b5
+planet:ozhava:Zava Ruun	b34742f9b69fd
+planet:ozhava:Dezhen	2e7d2adbb7a9c
+planet:ozhava:Azmai	73606ebe9f993
+planet:ozhava:Lur	a025e85733d04
+system:hadrul	145a8de3823d42
+station-overview:hadrul	1058c6d238ea72
+planet:hadrul:Iravahn	1465514ceb676a
+system:heth-aun	7946c270f27c
+station-overview:heth-aun	f7b14102c83b0
+planet:heth-aun:Maurezh	14d8e401351af7
+planet:heth-aun:Zahlumen	9a1c1200d4e6e
+planet:heth-aun:Rukai	1e843108b9858e
+system:zairen	18c8e4a1e84694
+station-overview:zairen	de484ef55d1ff
+planet:zairen:Ullavi	599b821a31690
+system:kezhar-vey	19165032aa2982
+station-overview:kezhar-vey	109b84c83e6563
+planet:kezhar-vey:Othrel	acbe7ecaf6a82
+planet:kezhar-vey:Nayeth	1fa4fb79d6b98b
+system:ul-zaar	31506560699a1
+station-overview:ul-zaar	b269273b41230
+planet:ul-zaar:Haurei	1b4109d88e0d45
+system:velumai	65c0c685bb8a8
+station-overview:velumai	10f24e558d09ad
+planet:velumai:Izhara	168ea0606645da
+system:nuren	33d92a9bfcfdf
+station-overview:nuren	3f4246a3cf2f2
+planet:nuren:Izhurat	1c3eabfd77f7cb
+planet:nuren:Tahven	3a7c113cfca83
+system:dareth	12cc6c1032ef60
+station-overview:dareth	1b71cc5727906a
+planet:dareth:Zaroun	d44e32569aa8b
+system:hazhoi	110555da32818e
+station-overview:hazhoi	61413aee5cab2
+planet:hazhoi:Terzhai	1ad178c1b4d31
+system:tahmer	dcfe7e6151292
+station-overview:tahmer	18c53bafef50ff
+planet:tahmer:Amrith	31ed3672c0ae9
+system:irzhek	bd8cd8cb8766b
+station-overview:irzhek	1ace58f7089b9d
+planet:irzhek:Yezhna	15872d784a9938
+planet:irzhek:Madrau	15244eafbcff74
 system:oumez	5d88075e3c45
 station-overview:oumez	1a62c0790222bf
 planet:oumez:Inhar	d77de9214b9a1
@@ -658,38 +658,38 @@ object:tezzar:Zekozha II	7ac3c866ca956
 object:tezzar:Zekozha III	36ac34c661bae
 object:oðal:Qerzhek I	3cd555f2e2aef
 object:oðal:Qerzhek II	dd704a61d1d5e
-object:kevak:Phoros	1a773388541bdc
+object:kevak:Phoros	1a965df8ca17d7
 object:drelkov:Vratok	9aa120855aa4f
 object:lokuz:Vardis Prime I	706e48d9f1669
-object:drayson:Keyhaul Trench I	16fe2d78e57a39
-object:drayson:Keyhaul Trench II	1d624fc2654e7d
-object:drayson:Keyhaul Trench III	a1849ce2b8bff
+object:drayson:Keyhaul Trench I	17ac0fbc4d6db9
+object:drayson:Keyhaul Trench II	118abfbc8c78a1
+object:drayson:Keyhaul Trench III	3676ed343c5ac
 object:varkesh-abyss:Khoruz	6e5c350ec86c6
 object:varkesh-abyss:Velzha	2278cd1b6562b
 object:vezeir:Trevik	1b17a28d800585
 object:narthezk-maw:Narkel	e9e8ce89421eb
-object:hinterland-null:Vezhun	ae0873ac3c932
-object:hinterland-null:Korvaz	c28dc8b917b5f
+object:hinterland-null:Vezhun	16f354ad80c8f9
+object:hinterland-null:Korvaz	9b2f95b94acea
 object:xai:Vezhka	dc05c7428120
 object:xai:Lethranz	4dd15eeafb25e
 object:xai:Kaizha	1599c8406255b7
 object:xai:Irvok	1cb70aaf43f94b
 object:vadrask:Vardren	1b31b9a5c31914
 object:oltzheim:Olska	93473778a17a0
-object:makor-9:Ferryman’s Rest I	149aeffddb99d4
-object:makor-9:Ferryman’s Rest II	fd05ab8e2226a
-object:makor-9:Ferryman’s Rest III	b167c2310c7f0
-object:makor-9:Ferryman’s Rest IV	c4bf6a74ca476
-object:makor-9:Ferryman’s Rest V	389101622a811
-object:makor-9:Ferryman’s Rest VI	14ee5c893a83f9
-object:makor-9:Ferryman’s Rest VII	15c317a8af0313
-object:makor-9:Ferryman’s Rest VIII	5850d36e302ae
-object:makor-9:Ferryman’s Rest IX	125475c8f52e42
-object:makor-9:Ferryman’s Rest X	8afad8e8b9de4
-object:makor-9:Ferryman’s Rest XI	9848d0be929a2
-object:makor-9:Ferryman’s Rest XII	35044757dc8b6
-object:makor-9:Ferryman’s Rest XIII	1230ba07825fb4
-object:makor-9:Ferryman’s Rest XIV	7e08decf10e30
+object:makor-9:Ferryman’s Rest I	1d60e7f296dcf2
+object:makor-9:Ferryman’s Rest II	1dd9ef2d7a35d
+object:makor-9:Ferryman’s Rest III	33071d58bd632
+object:makor-9:Ferryman’s Rest IV	103ab4b991a957
+object:makor-9:Ferryman’s Rest V	131bbbe8cb7b13
+object:makor-9:Ferryman’s Rest VI	1ebfcd66f47e70
+object:makor-9:Ferryman’s Rest VII	17a19483423670
+object:makor-9:Ferryman’s Rest VIII	8f982a667b338
+object:makor-9:Ferryman’s Rest IX	9fa1e38dfe8ec
+object:makor-9:Ferryman’s Rest X	19e021dae32aec
+object:makor-9:Ferryman’s Rest XI	f3f5888d0497f
+object:makor-9:Ferryman’s Rest XII	afcb283d57b63
+object:makor-9:Ferryman’s Rest XIII	43806ced14aaa
+object:makor-9:Ferryman’s Rest XIV	54ee885241d16
 object:yndach:Vakai I	12fec9c8f9ed8d
 object:yndach:Vakai II	13bb54a4125810
 object:yndach:Vakai III	1036f8fd67dae6
@@ -966,43 +966,43 @@ object:uzhven:Zythe III	c0ef01569c252
 object:kairz:Zovnik I	2bc830bfabac7
 object:kairz:Zovnik II	1afcdfbe07098a
 object:vennit:Dauzha I	a5a41315d39c8
-object:ozhava:Ildezh I	158dd3e228e554
-object:ozhava:Ildezh II	18337cf678ef6b
-object:ozhava:Ildezh III	17da5566aff89
-object:ozhava:Auneth	16eca0012aad54
-object:ozhava:Zava Ruun II	1c4760e584f332
-object:ozhava:Dezhen I	100b873930a8f5
-object:ozhava:Azmai I	154c7766058b3b
-object:ozhava:Azmai II	161f723a2e52bd
-object:ozhava:Azmai III	1807e24d3fbfed
-object:ozhava:Lur I	16a9ba07260b38
-object:hadrul:Iravahn I	1758037e863353
-object:hadrul:Iravahn II	1e83c3ff34e690
-object:hadrul:Iravahn III	9ec8f5627daf8
-object:heth-aun:Maurezh I	16ebd9cf4ea75d
-object:heth-aun:Zahlumen I	18afcb13203187
-object:heth-aun:Zahlumen II	1bebafbc6ae9d6
-object:heth-aun:Zahlumen III	1b632c8c4c41b1
-object:heth-aun:Rukai I	336c8aa02db91
-object:heth-aun:Rukai II	16e1e8dd9e1955
-object:heth-aun:Rukai III	130319e0cc086d
-object:zairen:Ullavi I	17846cea40984a
-object:kezhar-vey:Othrel I	1f0ddc79ea9123
-object:kezhar-vey:Othrel II	a5bc2d32087d1
-object:kezhar-vey:Nayeth I	a2efe00ad3738
-object:ul-zaar:Haurei I	147549d2b946fb
-object:velumai:Izhara I	1668982fabdf78
-object:nuren:Izhurat I	106bbe3cf4ab0
-object:nuren:Tahven I	1b40b7aa538db5
-object:dareth:Zaroun I	acff05ca49c1a
-object:dareth:Zaroun II	1403a411bc9caa
-object:hazhoi:Terzhai I	1d6edb9e650146
-object:hazhoi:Terzhai II	b844dd55f364e
-object:hazhoi:Terzhai III	1d5dfba30ddb46
-object:tahmer:Amrith I	11693307f1ff0d
-object:irzhek:Yezhna I	604b15c3dfecf
-object:irzhek:Madrau I	1815697d6838ba
-object:irzhek:Madrau II	5a346e79cb76e
+object:ozhava:Ildezh I	1313bc15f2d45b
+object:ozhava:Ildezh II	1b4a9e233cf9d0
+object:ozhava:Ildezh III	10ebae4754da24
+object:ozhava:Auneth	ee3a563f871c
+object:ozhava:Zava Ruun II	a41b0ff773984
+object:ozhava:Dezhen I	91326713cfc00
+object:ozhava:Azmai I	13a1607d070ea
+object:ozhava:Azmai II	72ac57ef194bb
+object:ozhava:Azmai III	f5e3c11a2ac2b
+object:ozhava:Lur I	1779adc11cc973
+object:hadrul:Iravahn I	1b83f4955dba1f
+object:hadrul:Iravahn II	8773d9f6a6e0f
+object:hadrul:Iravahn III	16b3789dec7e52
+object:heth-aun:Maurezh I	9bb73443012b5
+object:heth-aun:Zahlumen I	7d1cc29eb186f
+object:heth-aun:Zahlumen II	16e5ad7a9467d3
+object:heth-aun:Zahlumen III	733ea036fc7a5
+object:heth-aun:Rukai I	1b0a72a9baaef7
+object:heth-aun:Rukai II	b62b72dcb04a2
+object:heth-aun:Rukai III	1b9b05ac375153
+object:zairen:Ullavi I	9dd9cb9b9fb4b
+object:kezhar-vey:Othrel I	159290fd7f27d8
+object:kezhar-vey:Othrel II	1f9675c6ab8992
+object:kezhar-vey:Nayeth I	1c5ed2fe56549
+object:ul-zaar:Haurei I	1cd26accc74145
+object:velumai:Izhara I	74c0ebf20acc5
+object:nuren:Izhurat I	1769ea0a249e78
+object:nuren:Tahven I	aa30c6033978e
+object:dareth:Zaroun I	157e4493654228
+object:dareth:Zaroun II	c1dd63d1bd779
+object:hazhoi:Terzhai I	1a6ca38a71bd72
+object:hazhoi:Terzhai II	5b50400508b3a
+object:hazhoi:Terzhai III	161a354fc3fe60
+object:tahmer:Amrith I	19e9ce92c02ebf
+object:irzhek:Yezhna I	f873589c96bb4
+object:irzhek:Madrau I	15eff3c65ad614
+object:irzhek:Madrau II	1cb7d9fd6aded4
 object:oumez:Inhar I	1220a0e21ac32e
 object:eldein:Marzhenn I	9bd5bd284c3ea
 object:eldein:Marzhenn II	26f50a1832ff9
@@ -1091,23 +1091,23 @@ station:oðal:Oðal Garrison	4c8c611f5d373
 station:oðal:Qerzhek Sentinel	175946e568419
 station:haktur:Haktur Reconstruction Yard	1f042e350ac9d0
 station:haktur:Haktur Memory Vault	14bbe9a3ac2cc5
-station:kevak:Prathia Anchorage	121d4dc3e17dee
-station:kevak:Gunther Bay Highport	89e78b1ac2a35
-station:kevak:Azren Medical Station	1161d8243030d2
+station:kevak:Prathia Anchorage	1e187ebdd84260
+station:kevak:Gunther Bay Highport	13c53d8f178817
+station:kevak:Azren Medical Station	a8d50873dcb0f
 station:izhket:Odeijo Transfer Yard	949742df41b45
 station:izhket:Izhket Commonhouse	8c29f66bb0761
 station:beithen:Beithen Seedbank	df689b40aa876
 station:beithen:Beithen Materials Works	5ad64df13372b
-station:kaldana:Salem Cross Station	1308830ebd4abd
-station:columa:Circa’s Triad	1656b2100ef577
-station:havl:Shryke Jumpgate	132d09b56b6d58
-station:montressor:Montressor Station	659e39697c4c1
-station:kevak:Palorek Bastion	176212ab3516fb
-station:kevak:Palorek Arsenal	190aa5cb09a2ce
-station:kevak:Vazhkorr Fleet Yards	1a984335e90f8a
-station:kevak:Kevak Outer Picket	179b82bd7aa9ac
-station:kevak:Zharvek Interdiction Array	eb5226643130
-station:kevak:Palorek Quarantine Station	1e1e6f135f4cdf
+station:kaldana:Salem Cross Station	47f77a7b4fb05
+station:columa:Circa’s Triad	6f8acf157ce7d
+station:havl:Shryke Jumpgate	1729bf06b1b71e
+station:montressor:Montressor Station	17e1711ce3301c
+station:kevak:Palorek Bastion	1cd032007a5d49
+station:kevak:Palorek Arsenal	185cca8e0aa903
+station:kevak:Vazhkorr Fleet Yards	1a2fdd9aa59bd5
+station:kevak:Kevak Outer Picket	19835e838f4b82
+station:kevak:Zharvek Interdiction Array	e0bc82038004f
+station:kevak:Palorek Quarantine Station	29f9654bb5d59
 station:xai:Haarzen Crownport	2ffc7eacda058
 station:xai:Xai Charter Exchange	1cecb0af38239
 station:xai:Vezhka Keelworks	1540037ed482f5
@@ -1122,20 +1122,20 @@ station:krz-126:Rhazken Extraction Lattice	a2c8a3561507b
 station:krz-133:Zhereth Crown Ruins	e13f12220329
 station:krz-147:Ozhmak Processional Wrecks	18f1b10f7cfc90
 station:krz-151:Kezhral Defensive Web	1c377bda0af5a0
-station:makor-9:Station ᚠ9-604 “Silver Moon”	17a2da58c1f4b1
-station:makor-9:Station ᚢ4-112 “Lighthouse”	99ec205ca8dbe
-station:makor-9:Station ᚦ7-908	1b5957eceaed58
-station:makor-9:Station ᚨ2-446 “Inner Ring”	1e2423fe0cff14
-station:makor-9:Station ᚱ1-773 “Starlight”	1ece2aa954ad63
-station:makor-9:Station ᚲ6-220 “Stoneforge”	11e9ac3fbf0cbb
-station:makor-9:Station ᚷ8-319	1d1f171f8c9fa1
-station:makor-9:Station ᚹ3-521 “Centerpoint”	6e4f6fbbf81a
-station:makor-9:Station ᚺ5-907	26c93f86659f4
-station:makor-9:Station ᚾ7-284	1d6b92fc9b69e3
-station:makor-9:Station ᛟ0-261	c17de55f309c0
-station:makor-9:Station ᛃ4-833	1b26e190f3581f
-station:makor-9:Station ᛇ9-400 “Nine-Four”	127b167f485a09
-station:trilaria-stellaris:Quantum Station	120602ef6f28c6
+station:makor-9:Station ᚠ9-604 “Silver Moon”	11e3ad09e82c52
+station:makor-9:Station ᚢ4-112 “Lighthouse”	143f7ae81334d1
+station:makor-9:Station ᚦ7-908	54f71848b9ada
+station:makor-9:Station ᚨ2-446 “Inner Ring”	1fc98dd8f2f522
+station:makor-9:Station ᚱ1-773 “Starlight”	15e7081bd20957
+station:makor-9:Station ᚲ6-220 “Stoneforge”	63df6e5143a4c
+station:makor-9:Station ᚷ8-319	8d54b9296f31e
+station:makor-9:Station ᚹ3-521 “Centerpoint”	8934fc4250701
+station:makor-9:Station ᚺ5-907	12d7484da193d3
+station:makor-9:Station ᚾ7-284	de6d5635b7839
+station:makor-9:Station ᛟ0-261	8f8816ac6480d
+station:makor-9:Station ᛃ4-833	197dc516be2bcf
+station:makor-9:Station ᛇ9-400 “Nine-Four”	c79b0c1267b25
+station:trilaria-stellaris:Quantum Station	235149ad708f4
 station:orzheld:Orzheld Transfer Anchorage	1f903f3778bd5b
 station:auvik:Kordaun Fleet Exchange	1331f4d771bf32
 station:kharuun:Uzhama Treaty Port	dda43aa696dfb
@@ -1143,7 +1143,7 @@ station:keldran:Vaudren Interferometer	5f52b39c86bf4
 station:zheldei:Tevrozh Kiln	231ce0d373232
 station:brakk:Vidra Lockhouse	19098aebdb5aa3
 station:dovrel:Irvakh Packet Dock	d4f2fa651ea9
-station:ozhava:Ruun Tide Archive	155af8d7fcf53b
+station:ozhava:Ruun Tide Archive	c0d76da1df62b
 station:tehru:Ezhkor Ice Yard	9a2f3a6e27df7
 station:dreivar:Okhreld Listening Buoy	9210eda96da70
 station:drevau:Khelnir Watch	572c5ff74932c
@@ -1193,12 +1193,12 @@ open-station:haktur:Haktur Reconstruction Yard	60842d58357f0
 close-station:haktur:Haktur Reconstruction Yard	60842d58357f0
 open-station:haktur:Haktur Memory Vault	60842d58357f0
 close-station:haktur:Haktur Memory Vault	60842d58357f0
-open-station:kevak:Prathia Anchorage	eb4978a3f2b9f
-close-station:kevak:Prathia Anchorage	eb4978a3f2b9f
-open-station:kevak:Gunther Bay Highport	eb4978a3f2b9f
-close-station:kevak:Gunther Bay Highport	eb4978a3f2b9f
-open-station:kevak:Azren Medical Station	eb4978a3f2b9f
-close-station:kevak:Azren Medical Station	eb4978a3f2b9f
+open-station:kevak:Prathia Anchorage	4b9baf4bf582a
+close-station:kevak:Prathia Anchorage	4b9baf4bf582a
+open-station:kevak:Gunther Bay Highport	4b9baf4bf582a
+close-station:kevak:Gunther Bay Highport	4b9baf4bf582a
+open-station:kevak:Azren Medical Station	4b9baf4bf582a
+close-station:kevak:Azren Medical Station	4b9baf4bf582a
 open-station:izhket:Odeijo Transfer Yard	8ec05487b3e95
 close-station:izhket:Odeijo Transfer Yard	8ec05487b3e95
 open-station:izhket:Izhket Commonhouse	8ec05487b3e95
@@ -1207,26 +1207,26 @@ open-station:beithen:Beithen Seedbank	140dc444ee56fc
 close-station:beithen:Beithen Seedbank	140dc444ee56fc
 open-station:beithen:Beithen Materials Works	140dc444ee56fc
 close-station:beithen:Beithen Materials Works	140dc444ee56fc
-open-station:kaldana:Salem Cross Station	149b3fd7f5fe45
-close-station:kaldana:Salem Cross Station	149b3fd7f5fe45
-open-station:columa:Circa’s Triad	e2f3a799600fd
-close-station:columa:Circa’s Triad	e2f3a799600fd
-open-station:havl:Shryke Jumpgate	a0e53658e2515
-close-station:havl:Shryke Jumpgate	a0e53658e2515
-open-station:montressor:Montressor Station	a9ac305edb655
-close-station:montressor:Montressor Station	a9ac305edb655
-open-station:kevak:Palorek Bastion	eb4978a3f2b9f
-close-station:kevak:Palorek Bastion	eb4978a3f2b9f
-open-station:kevak:Palorek Arsenal	eb4978a3f2b9f
-close-station:kevak:Palorek Arsenal	eb4978a3f2b9f
-open-station:kevak:Vazhkorr Fleet Yards	eb4978a3f2b9f
-close-station:kevak:Vazhkorr Fleet Yards	eb4978a3f2b9f
-open-station:kevak:Kevak Outer Picket	eb4978a3f2b9f
-close-station:kevak:Kevak Outer Picket	eb4978a3f2b9f
-open-station:kevak:Zharvek Interdiction Array	eb4978a3f2b9f
-close-station:kevak:Zharvek Interdiction Array	eb4978a3f2b9f
-open-station:kevak:Palorek Quarantine Station	eb4978a3f2b9f
-close-station:kevak:Palorek Quarantine Station	eb4978a3f2b9f
+open-station:kaldana:Salem Cross Station	664d051868479
+close-station:kaldana:Salem Cross Station	664d051868479
+open-station:columa:Circa’s Triad	ec5f2c1c0480
+close-station:columa:Circa’s Triad	ec5f2c1c0480
+open-station:havl:Shryke Jumpgate	c8e48abcc95f6
+close-station:havl:Shryke Jumpgate	c8e48abcc95f6
+open-station:montressor:Montressor Station	16b1a67ada0f66
+close-station:montressor:Montressor Station	16b1a67ada0f66
+open-station:kevak:Palorek Bastion	4b9baf4bf582a
+close-station:kevak:Palorek Bastion	4b9baf4bf582a
+open-station:kevak:Palorek Arsenal	4b9baf4bf582a
+close-station:kevak:Palorek Arsenal	4b9baf4bf582a
+open-station:kevak:Vazhkorr Fleet Yards	4b9baf4bf582a
+close-station:kevak:Vazhkorr Fleet Yards	4b9baf4bf582a
+open-station:kevak:Kevak Outer Picket	4b9baf4bf582a
+close-station:kevak:Kevak Outer Picket	4b9baf4bf582a
+open-station:kevak:Zharvek Interdiction Array	4b9baf4bf582a
+close-station:kevak:Zharvek Interdiction Array	4b9baf4bf582a
+open-station:kevak:Palorek Quarantine Station	4b9baf4bf582a
+close-station:kevak:Palorek Quarantine Station	4b9baf4bf582a
 open-station:xai:Haarzen Crownport	67ea07ce97d50
 close-station:xai:Haarzen Crownport	67ea07ce97d50
 open-station:xai:Xai Charter Exchange	67ea07ce97d50
@@ -1255,34 +1255,34 @@ open-station:krz-147:Ozhmak Processional Wrecks	401554ec23269
 close-station:krz-147:Ozhmak Processional Wrecks	401554ec23269
 open-station:krz-151:Kezhral Defensive Web	10c8e4f374e1b4
 close-station:krz-151:Kezhral Defensive Web	10c8e4f374e1b4
-open-station:makor-9:Station ᚠ9-604 “Silver Moon”	f03f57f26a6b0
-close-station:makor-9:Station ᚠ9-604 “Silver Moon”	f03f57f26a6b0
-open-station:makor-9:Station ᚢ4-112 “Lighthouse”	f03f57f26a6b0
-close-station:makor-9:Station ᚢ4-112 “Lighthouse”	f03f57f26a6b0
-open-station:makor-9:Station ᚦ7-908	f03f57f26a6b0
-close-station:makor-9:Station ᚦ7-908	f03f57f26a6b0
-open-station:makor-9:Station ᚨ2-446 “Inner Ring”	f03f57f26a6b0
-close-station:makor-9:Station ᚨ2-446 “Inner Ring”	f03f57f26a6b0
-open-station:makor-9:Station ᚱ1-773 “Starlight”	f03f57f26a6b0
-close-station:makor-9:Station ᚱ1-773 “Starlight”	f03f57f26a6b0
-open-station:makor-9:Station ᚲ6-220 “Stoneforge”	f03f57f26a6b0
-close-station:makor-9:Station ᚲ6-220 “Stoneforge”	f03f57f26a6b0
-open-station:makor-9:Station ᚷ8-319	f03f57f26a6b0
-close-station:makor-9:Station ᚷ8-319	f03f57f26a6b0
-open-station:makor-9:Station ᚹ3-521 “Centerpoint”	f03f57f26a6b0
-close-station:makor-9:Station ᚹ3-521 “Centerpoint”	f03f57f26a6b0
-open-station:makor-9:Station ᚺ5-907	f03f57f26a6b0
-close-station:makor-9:Station ᚺ5-907	f03f57f26a6b0
-open-station:makor-9:Station ᚾ7-284	f03f57f26a6b0
-close-station:makor-9:Station ᚾ7-284	f03f57f26a6b0
-open-station:makor-9:Station ᛟ0-261	f03f57f26a6b0
-close-station:makor-9:Station ᛟ0-261	f03f57f26a6b0
-open-station:makor-9:Station ᛃ4-833	f03f57f26a6b0
-close-station:makor-9:Station ᛃ4-833	f03f57f26a6b0
-open-station:makor-9:Station ᛇ9-400 “Nine-Four”	f03f57f26a6b0
-close-station:makor-9:Station ᛇ9-400 “Nine-Four”	f03f57f26a6b0
-open-station:trilaria-stellaris:Quantum Station	1c1558ded25e28
-close-station:trilaria-stellaris:Quantum Station	1c1558ded25e28
+open-station:makor-9:Station ᚠ9-604 “Silver Moon”	54cc3532f620d
+close-station:makor-9:Station ᚠ9-604 “Silver Moon”	54cc3532f620d
+open-station:makor-9:Station ᚢ4-112 “Lighthouse”	54cc3532f620d
+close-station:makor-9:Station ᚢ4-112 “Lighthouse”	54cc3532f620d
+open-station:makor-9:Station ᚦ7-908	54cc3532f620d
+close-station:makor-9:Station ᚦ7-908	54cc3532f620d
+open-station:makor-9:Station ᚨ2-446 “Inner Ring”	54cc3532f620d
+close-station:makor-9:Station ᚨ2-446 “Inner Ring”	54cc3532f620d
+open-station:makor-9:Station ᚱ1-773 “Starlight”	54cc3532f620d
+close-station:makor-9:Station ᚱ1-773 “Starlight”	54cc3532f620d
+open-station:makor-9:Station ᚲ6-220 “Stoneforge”	54cc3532f620d
+close-station:makor-9:Station ᚲ6-220 “Stoneforge”	54cc3532f620d
+open-station:makor-9:Station ᚷ8-319	54cc3532f620d
+close-station:makor-9:Station ᚷ8-319	54cc3532f620d
+open-station:makor-9:Station ᚹ3-521 “Centerpoint”	54cc3532f620d
+close-station:makor-9:Station ᚹ3-521 “Centerpoint”	54cc3532f620d
+open-station:makor-9:Station ᚺ5-907	54cc3532f620d
+close-station:makor-9:Station ᚺ5-907	54cc3532f620d
+open-station:makor-9:Station ᚾ7-284	54cc3532f620d
+close-station:makor-9:Station ᚾ7-284	54cc3532f620d
+open-station:makor-9:Station ᛟ0-261	54cc3532f620d
+close-station:makor-9:Station ᛟ0-261	54cc3532f620d
+open-station:makor-9:Station ᛃ4-833	54cc3532f620d
+close-station:makor-9:Station ᛃ4-833	54cc3532f620d
+open-station:makor-9:Station ᛇ9-400 “Nine-Four”	54cc3532f620d
+close-station:makor-9:Station ᛇ9-400 “Nine-Four”	54cc3532f620d
+open-station:trilaria-stellaris:Quantum Station	8e9a2e21e059f
+close-station:trilaria-stellaris:Quantum Station	8e9a2e21e059f
 open-station:orzheld:Orzheld Transfer Anchorage	3b9b56af0caf0
 close-station:orzheld:Orzheld Transfer Anchorage	3b9b56af0caf0
 open-station:auvik:Kordaun Fleet Exchange	e6269fa47a6a0
@@ -1297,8 +1297,8 @@ open-station:brakk:Vidra Lockhouse	18446b77afb9b2
 close-station:brakk:Vidra Lockhouse	18446b77afb9b2
 open-station:dovrel:Irvakh Packet Dock	d48ab838cbe3d
 close-station:dovrel:Irvakh Packet Dock	d48ab838cbe3d
-open-station:ozhava:Ruun Tide Archive	1e198e6e7642d0
-close-station:ozhava:Ruun Tide Archive	1e198e6e7642d0
+open-station:ozhava:Ruun Tide Archive	8f1f34afeed1
+close-station:ozhava:Ruun Tide Archive	8f1f34afeed1
 open-station:tehru:Ezhkor Ice Yard	1350c151a22e59
 close-station:tehru:Ezhkor Ice Yard	1350c151a22e59
 open-station:dreivar:Okhreld Listening Buoy	3b5a1808410ca
@@ -1308,10 +1308,10 @@ close-station:drevau:Khelnir Watch	c34bfbd181267
 ui:reset	13deebb5278afc
 ui:search:	13deebb5278afc
 ui:search:zzz-no-such-thing	987df967e0235
-ui:search:station	297d4ecfb9d3c
-ui:search:federation	100c0d99d5349d
-ui:search:silent	58e1580056c16
-ui:search:moon	139754563893cd
+ui:search:station	430f6fbf5b86
+ui:search:federation	eb6f191a3f57
+ui:search:silent	149dd5684027d0
+ui:search:moon	136ec674199ea1
 ui:search:Yndach	3d2a59c7256d9
 ui:search:Cyrich	1e685ff0db718e
 ui:search:Mathelkor	1e674cea306b5a
@@ -1322,7 +1322,7 @@ ui:search:Tezzar	6db4689aa200a
 ui:search:Imaner	2c80037abd3f6
 ui:search:Balthi	48c4cbe4a204f
 ui:search:Haktur	16df032edb3398
-ui:search:Columa	16ed8d9be26e91
+ui:search:Columa	e720e5612dc0c
 ui:search:Kevak	6fbed54a8fcfb
 ui:search:Selone	13175031c319ae
 ui:search:Excelsior	eacc5aee6230f
@@ -1347,7 +1347,7 @@ ui:search:Brakk	6ceb29d941ac7
 ui:search:Heizhal	f868789aa1c3a
 ui:search:Varzh	1195458ca362fe
 ui:search:Delk	a689f0417df1d
-ui:search:Trilaria Stellaris	1d5e1d1f2a6634
+ui:search:Trilaria Stellaris	3410446f50278
 ui:search:Zairen	193035d11addb1
 ui:search:Nuren	11f62274b2433d
 ui:search:Irzhek	79a8079238edc
@@ -1364,41 +1364,41 @@ ui:search:Thezma	37a3990f96f09
 ui:search:Vryadka	b95eb1b6423bc
 ui:search:clear	13deebb5278afc
 ui:scope:0	13deebb5278afc
-ui:scope:1	1c853dd6079a0d
-ui:scope:2	7239eba3c9896
-ui:scope:3	7239eba3c9896
-ui:filter:0:off	1cfd887a0445fd
-ui:filter:0:on	7239eba3c9896
-ui:filter:1:off	119b775a0efc89
-ui:filter:1:on	7239eba3c9896
-ui:filter:2:off	1ac3c89afaafab
-ui:filter:2:on	7239eba3c9896
-ui:filter:3:off	7239eba3c9896
-ui:filter:3:on	7239eba3c9896
-ui:filter:4:off	7239eba3c9896
-ui:filter:4:on	7239eba3c9896
-ui:filter:5:off	7239eba3c9896
-ui:filter:5:on	7239eba3c9896
-ui:button:zoomIn:74	1044b391eb6ff4
-ui:button:zoomIn:75	6f4ee998062c5
-ui:button:zoomOut:76	1306718857cb17
-ui:button:fit:77	7239eba3c9896
-ui:button:indexToggle:78	139d0e3abf857f
-ui:button:indexToggle:79	7239eba3c9896
-ui:button:toggleDetailPanel:80	82697a62c695f
-ui:button:toggleDetailPanel:81	7572aec70fc51
-ui:button:filterBtn:82	530c8fa27f94a
-ui:button:filterBtn:83	7572aec70fc51
-ui:button:footerNotes:84	7fff4d4aabef7
-ui:button:closeNotes:85	7572aec70fc51
-ui:button:download:86	7572aec70fc51
-ui:key:+	1044b391eb6ff4
-ui:key:-	7572aec70fc51
-ui:key:0	7239eba3c9896
-ui:key:ArrowUp	2808d5bb37f79
-ui:key:ArrowLeft	a1234c5d43dc9
-ui:key:ArrowDown	563f8325ebb15
-ui:key:ArrowRight	7239eba3c9896
-ui:zoom-in-system	fa3c7dd0140ef
-ui:key-in-system:+	468e197c78604
-ui:key-in-system:0	19d591c0e0a971
+ui:scope:1	642746fe9536
+ui:scope:2	b38a23c9ce7db
+ui:scope:3	b38a23c9ce7db
+ui:filter:0:off	153bc278e32625
+ui:filter:0:on	b38a23c9ce7db
+ui:filter:1:off	146f58af7e96ab
+ui:filter:1:on	b38a23c9ce7db
+ui:filter:2:off	9ce6ecace89cf
+ui:filter:2:on	b38a23c9ce7db
+ui:filter:3:off	b38a23c9ce7db
+ui:filter:3:on	b38a23c9ce7db
+ui:filter:4:off	b38a23c9ce7db
+ui:filter:4:on	b38a23c9ce7db
+ui:filter:5:off	b38a23c9ce7db
+ui:filter:5:on	b38a23c9ce7db
+ui:button:zoomIn:74	73ad758bd6a73
+ui:button:zoomIn:75	14dad692d576e7
+ui:button:zoomOut:76	c6cd27941c7b6
+ui:button:fit:77	b38a23c9ce7db
+ui:button:indexToggle:78	759192cc7f78e
+ui:button:indexToggle:79	b38a23c9ce7db
+ui:button:toggleDetailPanel:80	fae3f616f3038
+ui:button:toggleDetailPanel:81	107ec584f649dc
+ui:button:filterBtn:82	3454a4964929a
+ui:button:filterBtn:83	107ec584f649dc
+ui:button:footerNotes:84	19417b9429b18d
+ui:button:closeNotes:85	107ec584f649dc
+ui:button:download:86	107ec584f649dc
+ui:key:+	73ad758bd6a73
+ui:key:-	107ec584f649dc
+ui:key:0	b38a23c9ce7db
+ui:key:ArrowUp	df73b91d5b868
+ui:key:ArrowLeft	1bb7628b47432e
+ui:key:ArrowDown	12e855859c5ee4
+ui:key:ArrowRight	b38a23c9ce7db
+ui:zoom-in-system	d13f67563959a
+ui:key-in-system:+	1889a5c8c50bea
+ui:key-in-system:0	11a63e0a7aefc8

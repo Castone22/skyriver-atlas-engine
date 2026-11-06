@@ -141,9 +141,7 @@
         },
         "draw": {
           "backdrop": null,
-          "featuredSystem": "Calidor",
-          "worldListField": null,
-          "worldListGatesLabel": false
+          "featuredSystem": "Calidor"
         }
       }
     }

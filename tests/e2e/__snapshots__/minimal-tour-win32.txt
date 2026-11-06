@@ -1,62 +1,62 @@
-start	14cb2ca336b40f
-all	14cb2ca336b40f
-region:demo-reach	379ab9a7e83b6
-overview:demo-reach	db6b3aa35e772
-system:demo-star	bdeaf48282b5d
-station-overview:demo-star	bdeaf48282b5d
-planet:demo-star:Demo Star III	1d7fb880bd7021
-system:demo-pulsar	afe17bf377a25
-station-overview:demo-pulsar	afe17bf377a25
-object:demo-star:Demo Moon	14aa84db790c58
-station:demo-star:Demo Orbital	c4ed96f58cb6b
-open-station:demo-star:Demo Orbital	3323c24ca316e
-close-station:demo-star:Demo Orbital	c4ed96f58cb6b
-ui:reset	141f1d6136d7fc
-ui:search:	141f1d6136d7fc
-ui:search:zzz-no-such-thing	1d8c71034bce85
-ui:search:station	1b0bc844148491
-ui:search:federation	18978e5e34b11c
-ui:search:silent	1d8c71034bce85
-ui:search:moon	149f73ac1b9a1b
-ui:search:Demo Star	18978e5e34b11c
-ui:search:Demo Star III	1d5efe26d1ac2f
-ui:search:clear	141f1d6136d7fc
-ui:scope:0	141f1d6136d7fc
-ui:scope:1	f435df755f4dc
-ui:scope:2	1a7f42c1778b53
-ui:scope:3	1a7f42c1778b53
-ui:filter:0:off	110e0129a593d1
-ui:filter:0:on	1a7f42c1778b53
-ui:filter:1:off	1a7f42c1778b53
-ui:filter:1:on	1a7f42c1778b53
-ui:filter:2:off	2ec61ce5c7ce4
-ui:filter:2:on	1a7f42c1778b53
-ui:filter:3:off	1a7f42c1778b53
-ui:filter:3:on	1a7f42c1778b53
-ui:filter:4:off	1a7f42c1778b53
-ui:filter:4:on	1a7f42c1778b53
-ui:filter:5:off	1a7f42c1778b53
-ui:filter:5:on	1a7f42c1778b53
-ui:button:zoomIn:26	18726f3eda25f1
-ui:button:zoomIn:27	f3f51ff5d2b92
-ui:button:zoomOut:28	1271127ea9f1e0
-ui:button:fit:29	1a7f42c1778b53
-ui:button:indexToggle:30	6c037b1e4b925
-ui:button:indexToggle:31	1a7f42c1778b53
-ui:button:toggleDetailPanel:32	16f6b8e9d9bd36
-ui:button:toggleDetailPanel:33	1a7f42c1778b53
-ui:button:filterBtn:34	97a3854ec0588
-ui:button:filterBtn:35	1a7f42c1778b53
-ui:button:footerNotes:36	50223549c23c
-ui:button:closeNotes:37	1a7f42c1778b53
-ui:button:download:38	1a7f42c1778b53
-ui:key:+	18726f3eda25f1
-ui:key:-	1cd8ed500e4b5c
-ui:key:0	1a7f42c1778b53
-ui:key:ArrowUp	1bbbc3c1bd7aa4
-ui:key:ArrowLeft	436557f6be221
-ui:key:ArrowDown	1fec7c13cf3add
-ui:key:ArrowRight	1b461159901c1d
-ui:zoom-in-system	32bcc9103b9e6
-ui:key-in-system:+	103c4c9f36443e
-ui:key-in-system:0	db270afec60e4
+start	16f3176106a8ce
+all	16f3176106a8ce
+region:demo-reach	462338c62b93a
+overview:demo-reach	100a12abaa3472
+system:demo-star	e219363b9c4e1
+station-overview:demo-star	e219363b9c4e1
+planet:demo-star:Demo Star III	5ed87e27600d8
+system:demo-pulsar	932d31d7a0cea
+station-overview:demo-pulsar	932d31d7a0cea
+object:demo-star:Demo Moon	103876dc7119e2
+station:demo-star:Demo Orbital	24afeeae4532a
+open-station:demo-star:Demo Orbital	16490a78ff9a7e
+close-station:demo-star:Demo Orbital	24afeeae4532a
+ui:reset	3259d9bdbff39
+ui:search:	3259d9bdbff39
+ui:search:zzz-no-such-thing	90bc43e274f69
+ui:search:station	1c469c10404e98
+ui:search:federation	993561a1b8461
+ui:search:silent	90bc43e274f69
+ui:search:moon	176270733c9162
+ui:search:Demo Star	993561a1b8461
+ui:search:Demo Star III	6ddf3519ab58c
+ui:search:clear	3259d9bdbff39
+ui:scope:0	3259d9bdbff39
+ui:scope:1	8e746bc5a9b49
+ui:scope:2	11858703013ba1
+ui:scope:3	11858703013ba1
+ui:filter:0:off	b1474a111a0c5
+ui:filter:0:on	11858703013ba1
+ui:filter:1:off	11858703013ba1
+ui:filter:1:on	11858703013ba1
+ui:filter:2:off	a02ecbe17cc0
+ui:filter:2:on	11858703013ba1
+ui:filter:3:off	11858703013ba1
+ui:filter:3:on	11858703013ba1
+ui:filter:4:off	11858703013ba1
+ui:filter:4:on	11858703013ba1
+ui:filter:5:off	11858703013ba1
+ui:filter:5:on	11858703013ba1
+ui:button:zoomIn:26	1b99e4c23b9de1
+ui:button:zoomIn:27	b08c51c3cefdb
+ui:button:zoomOut:28	b965869db4e22
+ui:button:fit:29	11858703013ba1
+ui:button:indexToggle:30	147808dc2ff512
+ui:button:indexToggle:31	11858703013ba1
+ui:button:toggleDetailPanel:32	57432f7ad0742
+ui:button:toggleDetailPanel:33	11858703013ba1
+ui:button:filterBtn:34	1ed70ab015a3fe
+ui:button:filterBtn:35	11858703013ba1
+ui:button:footerNotes:36	318c7ceb82817
+ui:button:closeNotes:37	11858703013ba1
+ui:button:download:38	11858703013ba1
+ui:key:+	1b99e4c23b9de1
+ui:key:-	14304f0c718f0e
+ui:key:0	11858703013ba1
+ui:key:ArrowUp	10c1f9c3f4e91a
+ui:key:ArrowLeft	73575ca08a392
+ui:key:ArrowDown	11e38f08b32edd
+ui:key:ArrowRight	91be30ba2834
+ui:zoom-in-system	142bf3917e5a97
+ui:key-in-system:+	1189a3fd4086b4
+ui:key-in-system:0	187e0204658b43

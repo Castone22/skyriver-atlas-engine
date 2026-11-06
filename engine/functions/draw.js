@@ -46,8 +46,8 @@ function draw(){
   const y=s.y+34,tierOffset=s.tier?19:0;
   if(s.tier)textSVG('TIER '+s.tier+(s.centralBodyType==='silent-darkened'?' · DEAD STAR':' · '+TIER_NAMES[s.tier].toUpperCase()),{x:s.x,y:y+18,'text-anchor':'middle',class:'tier-label',fill:TIER_COLORS[s.tier],'data-tier-label':s.tier},label);
   svgLink(systemArticleTitle(s),s.name.toUpperCase(),{x:s.x,y,'text-anchor':'middle',class:'system-label'},label);
-  const wl=(dp.worldListField&&s[dp.worldListField])||s.worlds;
-  if((dp.worldListGatesLabel?wl:s.worlds).length){const worlds=svg('g',{class:'world-names'},label);wl.slice(0,2).forEach((world,i)=>svgLink(world,world,{x:s.x,y:y+20+16*i+tierOffset,'text-anchor':'middle',class:'world-label'},worlds))}
+  const wl=noteworthyBodies(s);
+  if(wl.length){const worlds=svg('g',{class:'world-names'},label);wl.slice(0,2).forEach((world,i)=>svgLink(world,world,{x:s.x,y:y+20+16*i+tierOffset,'text-anchor':'middle',class:'world-label'},worlds))}
   if(widgetMode)return;
   hit.addEventListener('pointerdown',e=>{e.stopPropagation();moved=false});hit.addEventListener('click',e=>{e.stopPropagation();if(!moved&&e.detail<2){select(s.id,null,false,false);deferMarkerDossier(s.id)}});hit.addEventListener('dblclick',e=>{e.preventDefault();e.stopPropagation();select(s.id);setSystemFocus(true)});hit.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();select(s.id)}});
  });

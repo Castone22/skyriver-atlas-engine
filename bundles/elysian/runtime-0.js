@@ -91,6 +91,7 @@ addEventListener('hashchange',()=>{if(location.href!==lastRestoredURL)restoreRou
 /* @atlas-function planetAliases-none */
 /* @atlas-function searchTerms */
 /* @atlas-function searchObject */
+/* @atlas-function noteworthyBodies */
 /* @atlas-function renderIndex */
 const reducedMotion=matchMedia('(prefers-reduced-motion: reduce)');
 let orbitPaused=reducedMotion.matches,orbitFrame=0,orbitClock=0,orbitLastTime=null;

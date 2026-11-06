@@ -1,7 +1,7 @@
 function bodyFacts(s,w,entry){
  if(Array.isArray(entry?.facts)&&(entry.facts.length||!__ATLAS__.flags.emptyDossierFactsFallBack)){
- const facts=entry.facts.map(([label,value])=>[label,label==='Natural satellites'&&w?.satelliteExpansion?String(w.naturalSatellites):value]);
- if(w?.satelliteExpansion&&!facts.some(([label])=>label==='Natural satellites'))facts.push(['Natural satellites',String(w.naturalSatellites)]);
+ const facts=entry.facts.map(([label,value])=>[label,label==='Natural satellites'&&w?.ownSatelliteCount?String(w.naturalSatellites):value]);
+ if(w?.ownSatelliteCount&&!facts.some(([label])=>label==='Natural satellites'))facts.push(['Natural satellites',String(w.naturalSatellites)]);
  return factGrid(facts);
  }
  const facts=[];

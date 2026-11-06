@@ -120,6 +120,7 @@ const ATLAS_BOUNDS=[40,60,2790,2490];
 /* @atlas-function planetAliases-none */
 /* @atlas-function searchTerms */
 /* @atlas-function searchObject */
+/* @atlas-function noteworthyBodies */
 /* @atlas-function renderIndex */
 const reducedMotion=matchMedia('(prefers-reduced-motion: reduce)');
 let orbitPaused=reducedMotion.matches,orbitFrame=0,orbitClock=0,orbitLastTime=null;
