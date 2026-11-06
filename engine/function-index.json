@@ -1254,19 +1254,19 @@
     ],
     "bytes": 130
   },
-  "regionSystemSummary": {
+  "regionSystemSummary-entry": {
     "name": "regionSystemSummary",
     "profiles": [
       "uacs"
     ],
     "bytes": 397
   },
-  "regionalSystemSummary": {
-    "name": "regionalSystemSummary",
+  "regionSystemSummary-panel": {
+    "name": "regionSystemSummary",
     "profiles": [
       "calidor"
     ],
-    "bytes": 434
+    "bytes": 432
   },
   "release": {
     "name": "release",
@@ -1289,40 +1289,16 @@
     ],
     "bytes": 2541
   },
-  "renderDetail-04e12e93caa8": {
+  "renderDetail": {
     "name": "renderDetail",
     "profiles": [
-      "iulr"
-    ],
-    "bytes": 7373
-  },
-  "renderDetail-1fbc0db7437c": {
-    "name": "renderDetail",
-    "profiles": [
+      "calidor",
+      "elysian",
+      "iulr",
+      "kadaym",
       "uacs"
     ],
-    "bytes": 7245
-  },
-  "renderDetail-33028d7ad651": {
-    "name": "renderDetail",
-    "profiles": [
-      "elysian"
-    ],
-    "bytes": 7532
-  },
-  "renderDetail-503d62bf500c": {
-    "name": "renderDetail",
-    "profiles": [
-      "kadaym"
-    ],
-    "bytes": 7894
-  },
-  "renderDetail-73b50a205c37": {
-    "name": "renderDetail",
-    "profiles": [
-      "calidor"
-    ],
-    "bytes": 7145
+    "bytes": 6574
   },
   "renderIndex": {
     "name": "renderIndex",
@@ -1895,40 +1871,16 @@
     ],
     "bytes": 82
   },
-  "systemView-042c2ccd42ba": {
+  "systemView": {
     "name": "systemView",
     "profiles": [
-      "kadaym"
-    ],
-    "bytes": 5992
-  },
-  "systemView-11dd718e88f5": {
-    "name": "systemView",
-    "profiles": [
-      "iulr"
-    ],
-    "bytes": 6064
-  },
-  "systemView-21d3975cb065": {
-    "name": "systemView",
-    "profiles": [
-      "elysian"
-    ],
-    "bytes": 5847
-  },
-  "systemView-491b4eedc9e8": {
-    "name": "systemView",
-    "profiles": [
+      "calidor",
+      "elysian",
+      "iulr",
+      "kadaym",
       "uacs"
     ],
-    "bytes": 6007
-  },
-  "systemView-79175591a142": {
-    "name": "systemView",
-    "profiles": [
-      "calidor"
-    ],
-    "bytes": 6224
+    "bytes": 6804
   },
   "textSVG": {
     "name": "textSVG",

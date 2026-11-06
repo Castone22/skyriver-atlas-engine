@@ -623,7 +623,8 @@
             "name": "Foundry",
             "summary": "An ancient Vy’Tiir stellar megastructure orbiting the capital system’s sun. Its energy sustains Calidor; wartime diversion threatens the civilian economy."
           }
-        ]
+        ],
+        "chartNote": "Foundry off scale"
       },
       {
         "id": "reverie",

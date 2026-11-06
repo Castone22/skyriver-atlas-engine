@@ -120,7 +120,7 @@ function hasStationSchematic(){return false} // Kadaym has no station schematics
 /* @atlas-function cloakDecoration */
 /* @atlas-function silentDecoration */
 /* @atlas-function notableSitesMarkup */
-/* @atlas-function systemView-042c2ccd42ba */
+/* @atlas-function systemView */
 /* @atlas-function planetView */
 /* @atlas-function greatBlinkFrame */
 /* @atlas-function mountPlanet */
@@ -185,7 +185,9 @@ const dossierFields=[
 /* @atlas-function refreshVisibleImage */
 addEventListener('focus',()=>refreshVisibleImage(true));addEventListener('online',()=>refreshVisibleImage(true));document.addEventListener('visibilitychange',()=>document.hidden?stopImageRefresh():refreshVisibleImage(true));
 
-/* @atlas-function renderDetail-503d62bf500c */
+// The panel shown when no system is selected.
+function regionOverview(){const r=DATA.regions[view];$('detail').innerHTML=`<div class="detail-top"><span class="eyebrow">Regional dossier</span><button class="detail-close" aria-label="Close dossier">×</button></div><div class="empty-detail"><div class="eyebrow">${view==='all'?'Territorial register':'Chart summary'}</div><h2>${link(r?r.name:'{{brand|jsstr}}')}</h2>${r?.silentPresence?`<div class="sector-tier-key">${Object.keys(TIER_NAMES).map(tier=>tierMarkup({tier})).join('')}</div>`:''}${r?.formerEmpire?`<p class="affiliation">Former territory of ${link(r.formerEmpire)}</p>`:''}${r?.historicalSource?link(r.historicalSource,'Read the campaign account ↗','region-link'):''}${r?.capitalPlanet?`<p class="affiliation">Capital system: ${systemLink(resolveSystem('Xai'))} · Capital world: ${link(r.capitalPlanet)}</p>`:''}<p>${r?esc(r.description):'Jurah Makor and Jurah Lendor form the paired heartland. The settlement register includes 205 inhabited worlds or colony sites in 137 systems. Drayson and evacuated holdings are counted separately. The outer-region placements are schematic. The Codex describes more than 200 controlled worlds across a 224-lightyear span. This chart is a selective register, not a complete census.'}</p><div class="region-stat"><b>${view==='all'?DATA.systems.length:DATA.systems.filter(s=>s.region===view).length}</b><span>charted system markers</span></div>${r?link(r.name,'Open region in the Codex ↗','region-link'):link('Territory of the Kadaymian Federation','Territorial register ↗','region-link')}${r?.file?link('File:'+r.file,'Original regional map ↗','region-link'):''}${view==='all'?DATA.unplaced.filter(r=>r.unplottedSystem).map(r=>`<div class="orbit-site-heading">CLASSIFIED SYSTEMS</div><button class="focus-world" id="classifiedSystem" data-system="${esc(r.id)}">${esc(r.name)} · open system diagram</button>`).join(''):''}<p class="tiny">Select a star to inspect its worlds and sources. Names on the map open their matching Codex articles.</p>${view==='all'?`<h3>Known neighbor</h3>${link('Interstellar Union of Liberated Republics','I.U.L.R. · spinward','region-link')}<p class="tiny">Diplomatic sources conflict: the Union article describes treaty peace, while the relations page describes active war. No current battle line is inferred.</p>`:''}<div class="note">Local layouts follow published regional maps where available. Region spacing and outlines are schematic; no distances or travel times are implied.</div></div>`;bindDetail();return}
+/* @atlas-function renderDetail */
 /* @atlas-function bindDetail */
 /* @atlas-function drawMinimap */
 /* @atlas-function buildNotes */

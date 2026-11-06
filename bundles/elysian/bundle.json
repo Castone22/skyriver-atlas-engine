@@ -29,7 +29,18 @@
     "localCaptionNote": "Only recorded host relationships are shown",
     "localEmptyNote": "No moons or hosted stations are catalogued for this world.",
     "localMoonNoun": "natural satellite",
-    "overviewOptionLabel": "Overview · "
+    "overviewOptionLabel": "Overview · ",
+    "catalogHeadingWorlds": "WORLDS & MAJOR MOONS",
+    "sampleKeyPlanet": "Planet",
+    "sampleKeyMoon": "Moon",
+    "captionSparse": "Every displayed planet can be selected. Planet labels follow their Codex article titles when available.",
+    "captionDense": "Every displayed planet can be selected. Planet labels follow their Codex article titles when available.",
+    "captionPlain": "Focus a planet to explore its moons and local stations. Only major stations appear at system scale.",
+    "captionUnconfirmed": "Schematic orbital position.",
+    "moonNoun": "natural satellite",
+    "stationNoun": "major station",
+    "nationNoun": "Collective",
+    "regionSystemLabel": "Collective region system"
   },
   "flags": {
     "indexWorldLinks": true,
@@ -45,6 +56,7 @@
     "widgetStationOverview": true,
     "worldKeySchematicOrbit": true,
     "emptyDossierFactsFallBack": true,
-    "hideExtendedHostStations": true
+    "hideExtendedHostStations": true,
+    "summaryCountsAllMoons": true
   }
 }

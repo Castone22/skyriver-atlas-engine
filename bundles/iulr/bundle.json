@@ -40,7 +40,14 @@
     "unlocatedHeadingClass": "tora-register-title",
     "unlocatedNameClass": "tora-register-name",
     "unlocatedAria": "outer-system array beyond chart scale",
-    "unlocatedNoun": "TORA"
+    "unlocatedNoun": "TORA",
+    "captionSparse": "Every numbered orbit in the Union register is shown.",
+    "captionTail": "Only major stations appear at this scale. Open a planet to see its local stations. Double-click a TORA symbol or use Station overview to inspect the array.",
+    "orbitDocumented": "register orbit",
+    "catalogHeadingStations": "MAJOR STATIONS & ARRAYS",
+    "summaryDistant": "distant TORA",
+    "nationNoun": "Union",
+    "regionSystemLabel": "Union system · proposed"
   },
   "flags": {
     "addressRegionWins": true,
@@ -79,6 +86,7 @@
     "stormBands": true,
     "dimmedBodiesAreFiller": true,
     "systemBodyRenderOpacity": true,
-    "flatStarFill": true
+    "flatStarFill": true,
+    "facilityCountSummary": true
   }
 }

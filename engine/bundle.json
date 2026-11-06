@@ -27,7 +27,27 @@
         "unlocatedHeadingClass": "",
         "unlocatedNameClass": "",
         "unlocatedAria": "host orbit unspecified",
-        "unlocatedNoun": "Colony"
+        "unlocatedNoun": "Colony",
+        "goToStar": "✦  Go to Star",
+        "goToBlackHole": "✦  Go to Star",
+        "catalogHeadingWorlds": "MAJOR WORLDS & MOONS",
+        "catalogHeadingStations": "STATIONS",
+        "sampleKeyPlanet": "Named world",
+        "sampleKeyMoon": "Unnamed planet",
+        "captionSparse": "Every charted planet can be selected.",
+        "captionDense": "Dim planets and asteroid belts illustrate gaps in the catalogue.",
+        "captionExtended": "Focus the planet to explore its stations and natural satellites.",
+        "captionPlain": "Station symbols match the register below.",
+        "captionUnconfirmed": "Named world’s orbital position is unspecified.",
+        "captionTail": "Sites with unknown host orbits appear in a separate row.",
+        "summaryFacilities": "orbital facilities",
+        "summaryDistant": "distant arrays",
+        "moonNoun": "major moon",
+        "stationNoun": "station",
+        "orbitDocumented": "documented orbit",
+        "nationNoun": "Atlas",
+        "regionSystemLabel": "Region system",
+        "schematicOpenLabel": "Open station schematic ↗"
       }
     }
   }

@@ -155,7 +155,7 @@ const toraParts=[
 /* @atlas-function cloakBadge */
 /* @atlas-function silentDecoration */
 /* @atlas-function notableSitesMarkup */
-/* @atlas-function systemView-491b4eedc9e8 */
+/* @atlas-function systemView */
 /* @atlas-function planetView */
 /* @atlas-function greatBlinkFrame */
 // Solar-system analogues. Diameters and distances are compressed for readability.
@@ -222,8 +222,10 @@ const dossierFields=[
 /* @atlas-function refreshVisibleImage */
 addEventListener('focus',()=>refreshVisibleImage(true));addEventListener('online',()=>refreshVisibleImage(true));document.addEventListener('visibilitychange',()=>document.hidden?stopImageRefresh():refreshVisibleImage(true));
 
-/* @atlas-function regionSystemSummary */
-/* @atlas-function renderDetail-1fbc0db7437c */
+/* @atlas-function regionSystemSummary-entry */
+// The panel shown when no system is selected.
+function regionOverview(){const r=DATA.regions[view];$('detail').innerHTML=`<div class="detail-top"><span class="eyebrow">Alliance chart dossier</span><button class="detail-close" aria-label="Close dossier">×</button></div><div class="empty-detail"><div class="eyebrow">FOEDERE STAMUS</div><h2>${link(r?r.name:'{{brand|jsstr}}',r?r.name:'The Alliance')}</h2><p>${r?esc(r.description):'A union of sovereign member worlds, centered on Eden in Sol. This first-pass atlas charts 24 supplied systems and 18 proposed additions within a nation of 253 controlled systems and 42 member worlds.'}</p><div class="region-stat"><b>${view==='all'?DATA.systems.length:DATA.systems.filter(s=>s.region===view).length}</b><span>charted systems</span></div><div class="fact-grid"><div><small>Capital</small><strong>${link('Visegrad')} · ${link('Eden')}</strong></div><div><small>Population · 131 CE</small><strong>198.2 billion</strong></div></div><h3>Explore the Alliance</h3><button class="focus-world" data-feature="sol">Sol · Eden & Karic →</button><button class="focus-world" data-feature="heimdall">Heimdall · Jotunheim & 78 moons →</button><button class="focus-world" data-feature="dsc-346">DSC 346 · black-hole binary →</button><p class="tiny">Click a marker for its dossier. Double-click to enter a system. Double-click a planet for all its moons and stations. Every location name links to the Codex.</p><div class="note">First pass · regional boundaries and undocumented orbital details are proposed. The source chart’s relative system positions are preserved.</div>${link('{{brand|jsstr}}','Open Alliance article ↗','region-link')}</div>`;bindDetail();document.querySelectorAll('[data-feature]').forEach(b=>b.onclick=()=>{select(b.dataset.feature);setSystemFocus(true)});return}
+/* @atlas-function renderDetail */
 /* @atlas-function bindDetail */
 /* @atlas-function drawMinimap */
 /* @atlas-function buildNotes */

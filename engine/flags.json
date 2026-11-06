@@ -43,9 +43,17 @@
     "description": "When greater than 0, the local planet chart switches to its extended satellite layout once the planet has more moons than this number; when 0 it follows each world's extendedSatelliteChart field.",
     "default": 0
   },
+  "facilityCountSummary": {
+    "description": "The system chart's summary line gives the system's otherStationCount and toraCount in place of the moon and station counts.",
+    "default": false
+  },
   "fallbackRegion": {
     "description": "Region shown when an address names no region and no system.",
     "default": "all"
+  },
+  "familySystemSummary": {
+    "description": "The system chart's summary line names binary and trinary systems, counts the orbits drawn, and calls a sparse system's orbits surviving world orbits.",
+    "default": false
   },
   "flatStarFill": {
     "description": "The first star of a system on the system chart is filled with its own tint instead of the shared sun gradient.",
@@ -191,6 +199,10 @@
     "description": "Each star carries a tooltip describing its stellar architecture and planet count.",
     "default": false
   },
+  "stationFilterHidesTora": {
+    "description": "The station-type filter on the system chart has no TORA entry.",
+    "default": false
+  },
   "stationLinksUseArticleTitle": {
     "description": "A station's first article link is its system's article title instead of the system name.",
     "default": false
@@ -205,6 +217,10 @@
   },
   "straightenImageTitleQuotes": {
     "description": "Curly apostrophes in the article title used for live images are replaced by straight ones.",
+    "default": false
+  },
+  "summaryCountsAllMoons": {
+    "description": "The system chart's summary line counts every moon record, not only the moons drawn on the chart.",
     "default": false
   },
   "svgTextSyncedTitles": {
@@ -232,7 +248,7 @@
     "default": false
   },
   "widgetStationOverview": {
-    "description": "A widget can open straight into a station overview from the address.",
+    "description": "In widget mode a station overview opens inside the widget instead of the system diagram.",
     "default": false
   },
   "worldKeySchematicOrbit": {

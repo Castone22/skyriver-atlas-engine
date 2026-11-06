@@ -33,7 +33,13 @@
     "starTagTrinaryOuter": "Outer stellar companion",
     "starTagTrinaryInner": "Inner binary component",
     "starTagBinary": "Binary component",
-    "starTagBlackHoleCompanion": "Blue-white stellar companion"
+    "starTagBlackHoleCompanion": "Blue-white stellar companion",
+    "captionSparse": "All planets in this atlas’s first-pass register are selectable.",
+    "captionUnconfirmed": "Orbit is a proposed diagram placement.",
+    "sampleKeyPlanet": "Chart-named world",
+    "sampleKeyMoon": "Proposed catalogue planet",
+    "nationNoun": "Alliance",
+    "regionSystemLabel": "Alliance system"
   },
   "flags": {
     "emptyDossierFactsFallBack": true,

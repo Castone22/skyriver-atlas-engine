@@ -163,7 +163,7 @@ const triadParts=[
 /* @atlas-function cloakBadge */
 /* @atlas-function silentDecoration */
 /* @atlas-function notableSitesMarkup */
-/* @atlas-function systemView-21d3975cb065 */
+/* @atlas-function systemView */
 /* @atlas-function planetView */
 /* @atlas-function greatBlinkFrame */
 /* @atlas-function mountPlanet */
@@ -228,7 +228,9 @@ const dossierFields=[
 /* @atlas-function refreshVisibleImage */
 addEventListener('focus',()=>refreshVisibleImage(true));addEventListener('online',()=>refreshVisibleImage(true));document.addEventListener('visibilitychange',()=>document.hidden?stopImageRefresh():refreshVisibleImage(true));
 
-/* @atlas-function renderDetail-33028d7ad651 */
+// The panel shown when no system is selected.
+function regionOverview(){const r=DATA.regions[view];$('detail').innerHTML=`<div class="detail-top"><span class="eyebrow">Regional dossier</span><button class="detail-close" aria-label="Close dossier">×</button></div><div class="empty-detail"><div class="eyebrow">${view==='all'?'One Sky, Many Peoples':'Chart summary'}</div><h2>${link(r?r.name:'{{brand|jsstr}}')}</h2><p>${r?esc(r.description):'The Collective comprises 57 inhabited planets across 463 controlled star systems. This atlas brings together all five named regions and the systems identified in their published charts and articles; additional catalogue-designated planets and local satellites make the charted systems explorable.'}</p><div class="region-stat"><b>${view==='all'?DATA.systems.length:DATA.systems.filter(s=>s.region===view).length}</b><span>charted system markers</span></div>${link(r?r.name:'Territory of the Elysian Collective','Open Codex register ↗','region-link')}${r?.file?link('File:'+r.file,'Original regional map ↗','region-link'):''}<h3>The Lighthouse Nebula</h3><p>The ${link('Lighthouse Nebula')} stretches across Collective space. Explore the ${link('Lighthouse')} and its ${link('Lighthouse Core Array')} in Aradian Flow.</p><button class="focus-world" id="exploreLighthouse">Explore the Lighthouse →</button><p class="tiny">Select a star to inspect its worlds. Double-click a marker to enter its system. Names open the corresponding Codex articles.</p><div class="note">Regional spacing and outlines are schematic. Arvis Gulf and Spinward Expanse have no published regional map; their markers do not establish measured coordinates. No trade routes are inferred.</div></div>`;bindDetail();$('exploreLighthouse').onclick=()=>{select('lighthouse');setSystemFocus(true)};return}
+/* @atlas-function renderDetail */
 /* @atlas-function bindDetail */
 /* @atlas-function drawMinimap */
 /* @atlas-function buildNotes */

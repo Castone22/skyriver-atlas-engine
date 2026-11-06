@@ -152,7 +152,7 @@ const toraParts=[
 /* @atlas-function cloakBadge */
 /* @atlas-function silentDecoration */
 /* @atlas-function notableSitesMarkup */
-/* @atlas-function systemView-79175591a142 */
+/* @atlas-function systemView */
 /* @atlas-function planetView */
 /* @atlas-function greatBlinkFrame */
 /* @atlas-function mountPlanet */
@@ -218,8 +218,10 @@ const dossierFields=[
 /* @atlas-function refreshVisibleImage */
 addEventListener('focus',()=>refreshVisibleImage(true));addEventListener('online',()=>refreshVisibleImage(true));document.addEventListener('visibilitychange',()=>document.hidden?stopImageRefresh():refreshVisibleImage(true));
 
-/* @atlas-function regionalSystemSummary */
-/* @atlas-function renderDetail-73b50a205c37 */
+/* @atlas-function regionSystemSummary-panel */
+// The panel shown when no system is selected.
+function regionOverview(){const r=DATA.regions[view];$('detail').innerHTML=`<div class="detail-top"><span class="eyebrow">${r?'Regional dossier':'The Ordained Dominion'}</span><button class="detail-close" aria-label="Close dossier">×</button></div><div class="empty-detail"><div class="eyebrow">VERITAS ET ORDO</div><h2>${link(r?r.name:'{{brand|jsstr}}')}</h2><p>${r?esc(r.description):'Fifty-three systems along the rimward edge of the Cluster. The imperial capital at Calidor is sustained by the ancient Foundry; four black holes punctuate the Dominion’s charted territory.'}</p><div class="region-stat"><b>${r?DATA.systems.filter(s=>s.region===view).length:53}</b><span>charted systems</span></div><h3>The imperial heart</h3><p>Explore ${link('Calidor')}, ${link('Dominion City')} and the ${link('Foundry')}, an ancient Vy’Tiir stellar megastructure.</p><button class="focus-world" id="exploreCapital">Explore Calidor & the Foundry →</button><h3>Explore the atlas</h3><p>Double-click a system marker to enter its orbits, then double-click a planet to see every moon and local station. Names link to the Codex.</p><div class="note">Second edition. Original system positions follow your reference map; twenty new systems expand the register. Regional divisions, undocumented worlds, moons and facilities are creative additions. See Chart notes for source distinctions.</div>${link('{{brand|jsstr}}','Open national article ↗','region-link')}</div>`;bindDetail();$('exploreCapital').onclick=()=>{select('calidor');setSystemFocus(true)};return}
+/* @atlas-function renderDetail */
 /* @atlas-function bindDetail */
 /* @atlas-function drawMinimap */
 /* @atlas-function buildNotes */

@@ -30,7 +30,12 @@
     "localCaptionNote": "Only recorded host relationships are shown",
     "localEmptyNote": "No moons or hosted stations are catalogued for this world.",
     "localMoonNoun": "natural satellite",
-    "overviewOptionLabel": "Overview · "
+    "overviewOptionLabel": "Overview · ",
+    "captionSparse": "Every charted planet has a local satellite view.",
+    "goToBlackHole": "◉  Go to Black Hole",
+    "nationNoun": "Dominion",
+    "regionSystemLabel": "Dominion region system",
+    "schematicOpenLabel": "Open Foundry schematic ↗"
   },
   "flags": {
     "companionStars": true,
@@ -45,6 +50,7 @@
     "widgetKeepsAddress": true,
     "emptyDossierFactsFallBack": true,
     "systemBodyRenderOpacity": true,
-    "flatStarFill": true
+    "flatStarFill": true,
+    "stationFilterHidesTora": true
   }
 }

@@ -33,7 +33,12 @@
     "localMoonNoun": "natural satellite",
     "overviewOptionLabel": "Federation overview · ",
     "overviewTitle": "FEDERAL TERRITORIAL OVERVIEW",
-    "overviewSubtitle": "Regional positions are schematic · remote holdings shown separately"
+    "overviewSubtitle": "Regional positions are schematic · remote holdings shown separately",
+    "captionSparse": "Only catalogued bodies are shown.",
+    "captionDense": "Dim planets fill undocumented orbits.",
+    "moonNoun": "inhabited moon",
+    "nationNoun": "Federation",
+    "regionSystemLabel": "Federation system"
   },
   "flags": {
     "closeSidebarOnSelect": true,
@@ -50,6 +55,7 @@
     "solarLanesFromAllStations": true,
     "straightenImageTitleQuotes": true,
     "widgetKeepsAddress": true,
-    "hideExtendedHostStations": true
+    "hideExtendedHostStations": true,
+    "familySystemSummary": true
   }
 }

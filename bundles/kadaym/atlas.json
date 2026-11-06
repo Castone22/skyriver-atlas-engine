@@ -287,7 +287,8 @@
           955,
           1151
         ],
-        "mapKicker": "01 / IMPERIAL HEARTLAND"
+        "mapKicker": "01 / IMPERIAL HEARTLAND",
+        "chartPositions": true
       },
       "lendor": {
         "name": "Jurah Lendor",
@@ -567,7 +568,8 @@
           1573,
           1044
         ],
-        "mapKicker": "02 / FIRST EXPANSION"
+        "mapKicker": "02 / FIRST EXPANSION",
+        "chartPositions": true
       },
       "narthezk": {
         "name": "Narthezk",
@@ -1073,7 +1075,8 @@
           2181
         ],
         "mapKicker": "04 / ELYSIAN COLLECTIVE",
-        "mapSubtitle": "Elysian Collective · Prathia is the Kadaymian foothold"
+        "mapSubtitle": "Elysian Collective · Prathia is the Kadaymian foothold",
+        "chartPositions": true
       },
       "valteo": {
         "name": "Valteo",
@@ -1356,7 +1359,8 @@
           1128,
           1964
         ],
-        "mapKicker": "05 / ACQUIRED IMPERIAL MARCHES"
+        "mapKicker": "05 / ACQUIRED IMPERIAL MARCHES",
+        "chartPositions": true
       },
       "tserazk-makai": {
         "name": "Tserazk Makai",
@@ -1750,7 +1754,8 @@
           2381,
           2350
         ],
-        "mapKicker": "06 / KURZENZKA SECTOR"
+        "mapKicker": "06 / KURZENZKA SECTOR",
+        "chartPositions": true
       },
       "drezhvahl": {
         "name": "Drezhvahl",
@@ -2081,7 +2086,8 @@
           -410,
           540
         ],
-        "mapKicker": "FEDERATION / REGIONAL CHART"
+        "mapKicker": "FEDERATION / REGIONAL CHART",
+        "chartPositions": true
       },
       "ildovahr": {
         "name": "Ildovahr",
@@ -2412,7 +2418,8 @@
           670,
           235
         ],
-        "mapKicker": "FEDERATION / REGIONAL CHART"
+        "mapKicker": "FEDERATION / REGIONAL CHART",
+        "chartPositions": true
       },
       "krevach": {
         "name": "Krevach",
@@ -2726,7 +2733,8 @@
           171,
           1947
         ],
-        "mapKicker": "FEDERATION / REGIONAL CHART"
+        "mapKicker": "FEDERATION / REGIONAL CHART",
+        "chartPositions": true
       },
       "daurovna": {
         "name": "Daurovna",
@@ -3031,7 +3039,8 @@
           1575,
           164
         ],
-        "mapKicker": "FEDERATION / REGIONAL CHART"
+        "mapKicker": "FEDERATION / REGIONAL CHART",
+        "chartPositions": true
       },
       "velkharn": {
         "name": "Velkharn",
@@ -3345,7 +3354,8 @@
           2462,
           -17
         ],
-        "mapKicker": "FEDERATION / REGIONAL CHART"
+        "mapKicker": "FEDERATION / REGIONAL CHART",
+        "chartPositions": true
       },
       "orravai": {
         "name": "Orravai",
@@ -3620,7 +3630,8 @@
           89,
           1520
         ],
-        "mapKicker": "FEDERATION / REGIONAL CHART"
+        "mapKicker": "FEDERATION / REGIONAL CHART",
+        "chartPositions": true
       },
       "kharnevik": {
         "name": "Kharnevik",
@@ -3963,7 +3974,8 @@
           3026,
           1250
         ],
-        "mapKicker": "FEDERATION / REGIONAL CHART"
+        "mapKicker": "FEDERATION / REGIONAL CHART",
+        "chartPositions": true
       },
       "uldrei-vahr": {
         "name": "Uldrei Vahr",
@@ -4041,7 +4053,8 @@
           -855,
           -374
         ],
-        "mapKicker": "KURZENZKA SECTOR / SILENT OCCUPATION"
+        "mapKicker": "KURZENZKA SECTOR / SILENT OCCUPATION",
+        "chartPositions": true
       },
       "kezhrava": {
         "name": "Kezhrava",
@@ -4111,7 +4124,8 @@
           351,
           -839
         ],
-        "mapKicker": "KURZENZKA SECTOR / SILENT OCCUPATION"
+        "mapKicker": "KURZENZKA SECTOR / SILENT OCCUPATION",
+        "chartPositions": true
       }
     },
     "systems": [

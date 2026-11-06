@@ -182,7 +182,7 @@ const toraParts=[
 /* @atlas-function cloakBadge */
 /* @atlas-function silentDecoration */
 /* @atlas-function notableSitesMarkup */
-/* @atlas-function systemView-11dd718e88f5 */
+/* @atlas-function systemView */
 /* @atlas-function planetView */
 /* @atlas-function greatBlinkFrame */
 /* @atlas-function mountPlanet */
@@ -247,7 +247,13 @@ const dossierFields=[
 /* @atlas-function refreshVisibleImage */
 addEventListener('focus',()=>refreshVisibleImage(true));addEventListener('online',()=>refreshVisibleImage(true));document.addEventListener('visibilitychange',()=>document.hidden?stopImageRefresh():refreshVisibleImage(true));
 
-/* @atlas-function renderDetail-04e12e93caa8 */
+// The panel shown when no system is selected.
+function regionOverview(){
+ const region=highlightedRegion||view,r=DATA.regions[region],systems=DATA.systems.filter(v=>!r||v.region===region);
+ const total=key=>systems.reduce((n,v)=>n+v[key],0),pick=systems[0];
+ $('detail').innerHTML=`<div class="detail-top"><span class="eyebrow">Regional dossier</span><button class="detail-close" aria-label="Close dossier">×</button></div><div class="empty-detail"><div class="eyebrow">${r?esc(r.subtitle):'Representative federation'}</div><h2>${link(r?r.name:DATA.name)}</h2><p>${r?esc(r.description):'The Union occupies the Iryddis Region, spinward of Kadaym. Its capital is '+link('New Avendon')+'. A network of reflector stations screens its systems from distant observation.'}</p><div class="region-stat"><b>${systems.length}</b><span>charted systems</span></div><div class="coverage"><div><b>${systems.reduce((n,v)=>n+v.worlds.length,0)}</b>Planets</div><div><b>${total('stationCount')}</b>Stations</div><div><b>${total('toraCount')}</b>TORA arrays</div></div><h3>Reflector network</h3><p>Segmented blue rings mark systems screened by the ${link('Terranos Omnidirectional Reflector Array')}. Open a system to inspect its assigned arrays.</p><button class="focus-world" id="exploreSystem">Explore ${esc(pick.name)} →</button><p class="tiny">Select a star for its dossier. Double-click it to enter the system. Location names open their Codex articles.</p><div class="note">The three divisions, chart positions and orbital assignments follow the v3 development register. Distances are schematic.</div>${link('Iryddis Region','Iryddis Region ↗','region-link')}${link(DATA.name,'Union Codex article ↗','region-link')}</div>`;
+ bindDetail();$('exploreSystem').onclick=()=>{select(pick.id);setSystemFocus(true)};return}
+/* @atlas-function renderDetail */
 /* @atlas-function bindDetail */
 /* @atlas-function drawMinimap */
 /* @atlas-function buildNotes */
