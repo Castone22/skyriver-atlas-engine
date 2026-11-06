@@ -12,9 +12,29 @@ import { satisfies } from './bundle.mjs';
  *   host.loadSearch(code)  Promise<{indexData}>   optional; precomputes Grand's search seed
  */
 const replace = (s, a, b) => s.split(a).join(b);
-/** Everything the compiler needs from a bundle, as plain data plus text readers. */
-function profileOf(bundle) {
-  const m = bundle.manifest;
+/**
+ * Everything the compiler needs from a bundle, as plain data plus text readers. A shell, style or
+ * runtime the atlas bundle does not supply comes from the engine's defaults for the atlas's kind
+ * (`defaults` in the engine's bundle.json), part by part.
+ */
+function profileOf(bundle, engine) {
+  const m = bundle.manifest,
+    own = m.parts ?? {},
+    fallback = engine.manifest.defaults?.[m.kind];
+  const part = (name, supplied) => {
+    if (supplied !== undefined) return { from: bundle, path: supplied };
+    const path = fallback?.parts?.[name];
+    if (path === undefined)
+      throw new Error(
+        `Bundle '${m.id}' has no ${name}, and engine ${engine.manifest.id ?? ''} ${engine.manifest.version} has no default ${name} for ${m.kind} atlases`
+      );
+    return { from: engine, path };
+  };
+  const list = (name, supplied) =>
+    supplied !== undefined
+      ? supplied.map((x) => ({ from: bundle, path: x.path ?? x }))
+      : [].concat(part(name, undefined).path).map((path) => ({ from: engine, path }));
+  const scripts = list('runtime', own.runtime);
   return {
     id: m.id,
     kind: m.kind,
@@ -22,9 +42,10 @@ function profileOf(bundle) {
     capabilities: m.capabilities,
     bundle,
     atlas: m.atlas ?? 'atlas.json',
-    shell: m.parts.shell,
-    styles: m.parts.styles ?? [],
-    scripts: m.parts.runtime ?? []
+    shell: part('shell', own.shell),
+    styles: list('styles', own.styles),
+    scripts,
+    slots: fallback?.slots ?? {}
   };
 }
 async function linkRuntime(source, slots, host) {
@@ -114,7 +135,7 @@ export async function compileCore(definition, host, { strict = false, dependenci
   const report = validate(definition, { strict });
   if (!report.valid) throw new Error(report.errors.join('\n'));
   const base = await host.atlas(definition.renderer),
-    profile = base && profileOf(base);
+    profile = base && profileOf(base, await host.engine());
   featureChecks(definition, profile);
   if (!profile || profile.kind !== definition.kind)
     throw new Error(`Invalid ${definition.kind} renderer: ${definition.renderer}`);
@@ -145,7 +166,7 @@ export async function compileCore(definition, host, { strict = false, dependenci
     if (seed.length && !host.gzipBase64)
       throw new Error('This host cannot gzip child snapshots, which a galaxy atlas needs');
     const searchModule = host.loadSearch
-      ? await host.loadSearch(await linkRuntime(await base.text(profile.scripts[0].path), {}, host))
+      ? await host.loadSearch(await linkRuntime(await profile.scripts[0].from.text(profile.scripts[0].path), {}, host))
       : null;
     for (const entry of seed) {
       let child = dependencies[entry.id] || dependencies[entry.id.replace(/-stellar-atlas$/, '')];
@@ -174,14 +195,18 @@ export async function compileCore(definition, host, { strict = false, dependenci
   // `slots` (per-atlas text such as file names). A bundle slot may use {{brand}} itself.
   const brand = customBrand ? d.meta.article : profile.brand;
   const slots = { brand };
-  for (const [name, value] of Object.entries(base.manifest.slots ?? {})) {
+  for (const [name, value] of Object.entries({ ...profile.slots, ...base.manifest.slots })) {
     if (typeof value !== 'string')
       throw new Error(`Bundle '${profile.id}': slot '${name}' must be a string`);
     if (name !== 'brand') slots[name] = replace(value, '{{brand}}', brand);
   }
-  let html = render(await base.text(profile.shell), slots, profile.id + '/' + profile.shell);
+  let html = render(
+    await profile.shell.from.text(profile.shell.path),
+    slots,
+    profile.id + '/' + profile.shell.path
+  );
   for (let i = 0; i < profile.styles.length; i++)
-    html = replace(html, `@@STYLE:${i}@@`, await base.text(profile.styles[i]));
+    html = replace(html, `@@STYLE:${i}@@`, await profile.styles[i].from.text(profile.styles[i].path));
   for (const [key, value] of Object.entries(d.documents))
     html = replace(html, `@@DOCUMENT:${key}@@`, safeJSON(value));
   // Fresh stellar shells use current catalogue choices rather than baked-in dropdown entries.
@@ -210,9 +235,10 @@ export async function compileCore(definition, host, { strict = false, dependenci
       (_, a, b) => a + escape(d.presentation.subtitle) + b
     );
   for (let i = 0; i < profile.scripts.length; i++) {
-    const scriptPath = profile.scripts[i].path;
+    const script = profile.scripts[i],
+      scriptPath = script.path;
     let code = await linkRuntime(
-      render(await base.text(scriptPath), slots, profile.id + '/' + scriptPath),
+      render(await script.from.text(scriptPath), slots, profile.id + '/' + scriptPath),
       slots,
       host
     );
@@ -230,7 +256,7 @@ export async function compileCore(definition, host, { strict = false, dependenci
         d.presentation?.notesHTML ||
         '<p>Interactive atlas. Names link to their corresponding Skyriver Codex articles. Orbital distances are schematic.</p>';
       // Replace the notes function through the AST include contract, never splice braces.
-      const original = await base.text(profile.scripts[i].path),
+      const original = await script.from.text(scriptPath),
         marker = original.match(/\/\* @atlas-function (buildNotes(?:-[\w-]+)?) \*\//);
       if (marker)
         code = replace(

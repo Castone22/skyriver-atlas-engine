@@ -33,7 +33,11 @@ committed. Do the work in small commits, one decision each, and finish with `npm
 | 12 | Done: `regionHighlight` now means only that the page tracks a highlighted region; eight behaviour-named flags (`hashIgnoredWithRegion`, `noOverviewRoute`, `addressRegionWins`, `focusRegionIgnoresRegion`, `noLocalChartFallback`, `highlightRouteParam`, `highlightedRegionState`, `selectKeepsRegion`) carry the rest, all on for IULR only. No golden step changed. Notes: `docs/converge/regionHighlight.md`. |
 | 13 | Done: the Foundry is `"schematic": "foundry"` in Calidor's station data and code tests that field. A few display-copy and attribute-name mentions of the name remain on purpose (`docs/converge/foundry.md`). No golden step changed. |
 | 2 | Done: the default stays `<name> System` (confirmed against the wiki and Kadaym's stored images). An `articleTitle` that differs from the name, ignoring apostrophe style, is used as written; the `systemRecordArticleTitle` flag was removed. No atlas output changed. |
-| 8, 11 | Pending. 8 needs no work beyond keeping the flags; 11 adds a widget-mode error state and the outline pressed-state, which the tours do not drive, so it needs its own tests. 5, 7 and 9 need no change. |
+| 8, 11 | Done: 8 needs no work beyond keeping the flags; 11 (widget mode shows an error without a region, system or planet, and outlines keep their pressed state) is implemented and tested in `tests/widget.test.mjs`. 5, 7 and 9 need no change. |
+| 14 | IULR adopts the current `mountSystem` layout. Pending. |
+| 15 | `syncPlanetTitles` follows Elysian's behaviour for every atlas that syncs titles. The Codex API address becomes a slot. Pending. |
+| 16 | Calidor's early return in `mountSystem` (no dossier orbit diagram unless the system view is focused) is a bug and is removed. Pending. |
+| 17 | Hiding the label of a proposed planet until its Codex title is known follows Elysian's behaviour. Pending. |
 
 ## Explanations given with the decisions
 

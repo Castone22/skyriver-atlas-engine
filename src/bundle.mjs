@@ -103,6 +103,18 @@ export function validateManifest(manifest, files) {
     // An engine's id tells engines apart (for example a stellar engine and a surface-map engine).
     if (manifest.id !== undefined && !ID.test(manifest.id))
       errors.push(`Invalid engine id '${manifest.id}'`);
+    // Defaults: the shell, styles, runtime and slots used for an atlas of a kind that supplies none.
+    for (const [kind, spec] of Object.entries(manifest.defaults ?? {})) {
+      if (!KINDS.includes(kind)) errors.push(`defaults: unknown kind '${kind}'`);
+      if (!manifest.kinds?.includes(kind))
+        errors.push(`defaults: the engine does not support kind '${kind}'`);
+      const parts = spec?.parts ?? {};
+      if (parts.shell !== undefined) need(parts.shell, `defaults.${kind}.shell`);
+      for (const name of ['styles', 'runtime'])
+        for (const p of parts[name] ?? []) need(p, `defaults.${kind}.${name}`);
+      for (const [name, value] of Object.entries(spec?.slots ?? {}))
+        if (typeof value !== 'string') errors.push(`defaults.${kind}.slots.${name} must be a string`);
+    }
   }
   if (manifest.type === 'atlas') {
     if (!ID.test(manifest.id ?? '')) errors.push(`Invalid id '${manifest.id}'`);
