@@ -20,3 +20,5 @@ on, and are only referenced behind the flag, so the others never evaluate them.
   links to `Circa’s_Triad` in Elysian but would link to `Circa's_Triad` in Kadaym. This looks like a
   fix that never reached the other atlases (MediaWiki titles normally use the straight form). Kept
   as it is; turning the flag on elsewhere would change those atlases' links. Needs a decision.
+
+Superseded in part: the flags described here are removed. Every atlas now looks planet names up from the wiki the same way; see `title-sync.md`.

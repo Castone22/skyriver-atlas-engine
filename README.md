@@ -151,9 +151,15 @@ Location names link to Skyriver Codex articles, including pages not yet written.
 and renders the atlas in the browser, inside the AtlasEmbed sandbox. The contract is
 `docs/TRANSPORTS.md`. The extension requirements are `docs/EXTENSION-BRIEF.md`.
 
+## Widgets
+
+`?view=widget` shows one region, system or planet for embedding. A system widget zooms with its buttons, the
+mouse wheel and the keys `+`, `-` and `0`. The header button **Widget query** copies the current view as a
+query without the `?` (for example `view=widget&system=foo&planet=bar`), for an AtlasEmbed tag.
+
 ## Tests
 
-- **Unit tests** (`tests/*.test.mjs`): DSL, bundles, flags, templates, transport, compiler core, widget mode.
+- **Unit tests** (`tests/*.test.mjs`): DSL, bundles, flags, templates, transport, compiler core, default parts, schematics, title lookup against a fixture wiki, widget mode and widget tools.
 - **DOM tests** (`tests/dom.cjs`, `tests/iulr-dom.cjs`): navigation, schematics, search and the IULR
   title synchronisation in jsdom.
 - **Browser tests** (`tests/e2e`, `npm run e2e`): Playwright in Chromium, after `npx playwright install chromium`.

@@ -13,7 +13,7 @@ Converged to `engine/functions/classificationTerms.js` (was five variants).
 ## Hook contract introduced
 
 `planetName(name)` and `planetAliases(name)` must exist in every stellar atlas. Per-atlas
-implementations stay separate files (see `planetName.md`).
+implementations are one function each (see `title-sync.md`).
 
 ## Questions
 

@@ -18,3 +18,5 @@ Grand atlas keeps its own `renderIndex`, which belongs to a different applicatio
   say Kadaym, change the `indexHint` slot in `bundles/kadaym/bundle.json`.
 - Calidor's old first-system slot named `Forge`, which does not exist in Calidor's data, and UACS has
   the same literal. Both look like leftovers from Elysian.
+
+Superseded in part: the flags described here are removed. Every atlas now looks planet names up from the wiki the same way; see `title-sync.md`.

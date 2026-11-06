@@ -26,7 +26,7 @@
       "passed": true
     },
     {
-      "name": "180-second polling callback refreshes visible tabs only",
+      "name": "the periodic check refreshes visible tabs only",
       "passed": true
     },
     {

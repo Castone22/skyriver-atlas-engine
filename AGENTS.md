@@ -43,6 +43,8 @@ changing anything, prefer the change that keeps existing behavior working.
 - Never match on text to substitute per-atlas values (brand names, titles). Use template slots
   from `src/template.mjs`; see below.
 - Do not add new Canon content or places to data as a side effect of code changes.
+- The wiki address is the slot `wikiBase`; do not write it into functions. A body's displayed name comes from
+  `planetName()` (see `docs/converge/title-sync.md`), never from its catalogue key.
 
 ## Templating
 

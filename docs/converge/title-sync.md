@@ -1,59 +1,66 @@
-# Planet title sync (decision 15)
+# Planet names and the wiki
 
-## What it is for
+An atlas names a planet once. That name is the planet's key in links (`planet=`), saved routes and search,
+and it never changes. What the atlas *shows* is the name of the planet's article on the wiki, so a planet
+moved or renamed there, including a player claiming it and naming it, is renamed in the atlas without
+touching the atlas data. Every atlas does this the same way.
 
-Atlas data names a planet once, and that name is the planet's key in links (`planet=Varro III`), saved
-routes and search. The wiki can rename an article, by a move with a redirect or without one. The atlas
-asks the Codex API for the current title of each planet and shows that, while the key stays the same.
+## Lookup
 
-Three atlases do this, each with its own implementation. Decision 15: Elysian's becomes the one, and the
-API address becomes a slot.
+- `DATA.planetArticles[key] = { title, display, pageid, aliases[] }` holds what the wiki last said.
+  `display` is the article's DISPLAYTITLE (markup removed) when it sets one, else the title.
+- `planetKey(name)` finds a planet from its key, its `articleTitle`, its current title or display, or any
+  earlier title, so old names keep working in links and search.
+- `planetName(name)` is the name to show; `planetArticle(name)` is the article title, or null;
+  `planetAliases(name)` are the titles it has had.
+- `canonicalTitle(name)` is the article for any name: the live title of a planet, else the
+  `articleTitle` (or name) of the catalogue record the name or an alias belongs to. A single-star
+  system's star article wins for the star's name.
+- `url(name)` links a planet by page id once known (`index.php?curid=<id>`), otherwise by title.
+- `link()`, labels, aria text, the index and the dossier all show `planetName`.
 
-## The three implementations
+## Sync
 
-| | Elysian | UACS | IULR |
-| --- | --- | --- | --- |
-| State | `DATA.planetArticles[key] = { title, pageid }` | `planetTitles` map: key to `{ seed, title, pageid, aliases[] }` | `planetArticleIDs` (name to page id) and `planetResolvedTitles` (name to title) |
-| Seed title | `worlds[key].articleTitle`, else the key | `articleTitle`, else the key | `articleTitle`, else the name |
-| Saved in localStorage as | `elysian-atlas-planet-articles-v1` | `skyriver-uacs-planet-titles-v1` (only if the saved seed still matches) | `skyriver-iulr-planet-articles-v1` |
-| Lookup of a title | `planetKey(name)` finds the key from a name, the seed or the live title; `planetName(name)` | `planetTitleRecord(name)` matches the key, the title or any alias | `planetResolvedTitles.get(name)` |
-| Old titles | not kept | kept as `aliases` (last 20) and searchable | not kept |
-| Query | known page ids by `pageids`, new ones by title, redirects followed | known page ids first, then seed titles; refuses redirects that carry a fragment | known page ids first, then every title; a stable page id wins over a different article recreated at the old title |
-| Batching | 40 per request, two workers in parallel | 40 per request, in sequence | chunks in parallel |
-| Timeout | 12 s per request, then the last good title stays | 12 s | 12 s |
-| Repeats | every 60 s while visible; also on focus and when back online; stopped while the tab is hidden | checks at start, on focus, online and when the tab becomes visible; every 60 s; throttled to 3 s (forced) or 60 s | every 180 s; forced on focus |
-| After a change | saves, then patches the page in place (`applyPlanetTitles`): text, links, aria labels; restores the route if the address named a planet | saves, then redraws everything (`refreshPlanetTitleUI`), restoring scroll and focus | rebuilds the chart, labels, index and dossier |
-| Links | `link()` writes `data-planet-link` and `data-planet-title`, so titles update without a redraw | titles resolved when drawn | titles resolved when drawn |
-| API address | written into the code | written into the code | written into the code |
+`startPlanetTitleSync()` restores the titles saved from earlier visits (localStorage
+`atlas-planet-articles-v1:<atlas id>`) before the first draw, then `syncPlanetTitles()` asks the wiki:
 
-Shared by all three: only planets (`bodyType` World); an invalid or missing page is ignored; titles
-fall back to the catalogue name offline; the request carries no credentials.
+- A planet whose page id is known is asked for by id. A page keeps its id when moved, with or without a
+  redirect, and an article recreated at an old title is ignored.
+- A planet with no known id is asked for by its `articleTitle`, or its key. Redirects are followed.
+- Requests are 40 names each, two at a time, 12 s timeout each. A failed request, an API error or a
+  malformed response leaves the names already known.
+- It runs at start, on focus, when the browser is online or the tab is visible again, and every 60 s while
+  visible. A hidden tab asks nothing.
+- When something changed it saves and redraws the page (scroll and focus kept), and restores a route that
+  named a planet.
 
-## What changes if Elysian's is the one
+The wiki address is the slot `wikiBase` (default in `engine/bundle.json`): `<wikiBase>/api.php` and
+`<wikiBase>/index.php`.
 
-- UACS loses its alias list (searching an old title would no longer find the planet) unless it is carried
-  over as a feature.
-- IULR loses "a stable page id beats a recreated article at the old title" unless Elysian's page-id-first
-  query already covers it.
-- IULR's 180 s refresh becomes 60 s.
-- UACS and IULR switch from redrawing to patching in place, so `link()`, `canonicalTitle` and `url()` in
-  both runtimes must emit the same `data-planet-link` and `data-planet-title` attributes.
-- Cache keys differ, so each atlas's saved titles are discarded once on first load after the change.
-- The tests cannot see any of this: the browser tours block the network.
+## Planets with no article yet
 
-## Questions for Astra
+A planet with no name of its own is named `<system> <numeral>` and links to the article of that name.
+Until the article exists the page is missing, so the name stays. When someone creates a redirect from that
+title to the real article, the next sync follows it, records the real title and page id, and the page id
+drives the name from then on.
 
-1. Do page ids survive every kind of move on the wiki, including moves without a redirect? Is following
-   the page id first always right?
-2. If an old title is later recreated as a different article, which one should the atlas show?
-3. Should old titles stay searchable (UACS does, the others do not)?
-4. Do moons and stations get renamed on the wiki too? If so, title sync should cover every body, not only
-   planets.
-5. How often should the atlas ask, and is there a request limit we should respect? Is 60 s while visible
-   too often when many readers have the page open?
-6. Is `crossorigin=&maxage=0&smaxage=0` (a cache-bypassing query) acceptable for the wiki, and do embeds
-   from other origins need an explicit allowed origin on the wiki side?
-7. Is a redirect to a section (a fragment) ever a valid rename target? UACS rejects it.
-8. What should the atlas show if the wiki returns a page that is not in the main namespace, or a
-   disambiguation page?
-9. What address should the engine use for the API: one per atlas (a slot), or one per engine?
+## Covers
+
+Planets (`data.worlds`). Moons, stations and the rest are not looked up yet.
+
+## Tests
+
+`tests/title-sync.test.mjs` runs the functions against a fixture wiki: absent article, move with a
+redirect, multi-hop redirects, DISPLAYTITLE, old titles, claiming a default-named planet, move without a
+redirect, offline and deleted pages, broken storage, batching, hidden tabs, request options.
+`tests/iulr-dom.cjs` runs the same through a whole page.
+
+## Changes from the three earlier implementations
+
+Cache keys changed, so saved titles from before are discarded once. Elysian's in-place patching of
+`data-planet-title` attributes is gone; a change redraws. UACS's alias list and IULR's page-id rule are
+part of the one version. The flags `planetPageLinks`, `planetArticleTracking`, `planetLinkAttributes`,
+`linkTitleSync`, `planetArticleTitles`, `inspectLabelsUseTitles`, `svgTextSyncedTitles`,
+`titledLocalOrbitLabels`, `titledPlanetInspectLabel`, `normalizeTitleApostrophes`,
+`straightenImageTitleQuotes` and `indexWorldLinks` are removed: all atlases behave as the most complete
+setting did.

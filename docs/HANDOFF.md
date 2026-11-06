@@ -38,20 +38,22 @@ npm run e2e            # browser tests alone: the tour plus screenshots
 
 - The seven atlases are bundles; the compiler core takes everything environmental from a host and
   runs in a browser. A loader page and HTTP transport exist (`loader/`, `src/bundle-http.mjs`).
-- Function variants went from 378 files to 228. 64 capability flags; each is off by default and
-  turned on only in the atlas that had the feature. Wording that differed by atlas is a slot, with its
-  default in `engine/bundle.json`.
+- Function variants went from 378 files to 204. 52 capability flags; each is off by default and turned on
+  only in the atlas that had the feature. Wording that differed by atlas is a slot, with its default in
+  `engine/bundle.json`.
 - An atlas bundle needs only `bundle.json` and `atlas.json`. The engine supplies a default shell, style,
   runtime, slots, flags and policies for each kind it lists under `defaults` (today, `stellar`).
   `examples/minimal-atlas` is built that way and is part of the browser tests.
 - Station screens (TORA arrays, the Foundry, Circa's Triad) are one schematic view driven by a root
-  `schematics` array in `atlas.json` (`docs/converge/schematics.md`). Other features that exist several
-  times under different names are listed in `docs/converge/families.md`.
-- Groups that still have more than one file: `draw` (3), `renderIndex` (2), `regionSystemSummary` (2,
-  atlas hooks), and the planet-title hooks `planetName`, `planetArticle`, `planetAliases` and
-  `syncPlanetTitles`. The title sync exists three times (Elysian, UACS, IULR); decision 15 makes
-  Elysian's the one, which changes live behaviour that the tests cannot see. `zoom` has a second file
-  that belongs to the surface-map renderer.
+  `schematics` array in `atlas.json` (`docs/converge/schematics.md`).
+- A planet's displayed name is looked up from its wiki article, the same way in every atlas, and follows
+  moves and renames (`docs/converge/title-sync.md`). `noteworthy: true` on a planet, moon or station names it
+  on the chart and lists it in the index (`docs/converge/noteworthy.md`).
+- Widgets: a system widget zooms (buttons, wheel, `+`, `-`, `0`); the header button "Widget query" copies the
+  current view as a query without the `?`, for an AtlasEmbed tag (`tests/widget-tools.test.mjs`).
+- Features that exist several times under different names are listed in `docs/converge/families.md`.
+- Groups that still have more than one file: `draw` (3), `renderIndex` (2), `regionSystemSummary` (2, atlas
+  hooks) and `zoom` (the second file belongs to the surface-map renderer).
 
 ## Things to know
 
@@ -60,6 +62,14 @@ npm run e2e            # browser tests alone: the tour plus screenshots
   (`?view=widget`) is covered by `tests/widget.test.mjs`.
 - `npm run e2e:update` rewrites the baselines. Only use it for a change you intend, after reading which
   steps changed.
-- Not done: one title-sync implementation (decision 15); default shell, style and runtime for the
-  `geographic` and `galaxy` kinds; splitting the surface-map renderer into its own engine; the PHP
-  extension side.
+- Not done:
+  - Planets with no name of their own default to `<system> <numeral>`, with a `planetCount` shorthand, and
+    look different from named ones (Whiskers' notes: named brighter with the name shown, unnamed greyed with
+    the name on hover).
+  - Title lookup for moons, stations and other bodies.
+  - The data renames agreed in conversation: `centralBody`, `sources`, `aliases` with kinds, region
+    labelling, computed counts, capital as a reference, `starHost`, and one body-kind glyph table. Old field
+    names have no compile-time upgrade yet.
+  - The surface-map renderer as its own engine (`engine-surface`); defaults for the `geographic` and
+    `galaxy` kinds.
+  - The PHP extension side.

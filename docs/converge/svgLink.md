@@ -12,3 +12,5 @@ Calidor, Kadaym and UACS keep the plain behaviour (UACS gets its synced titles i
 
 Remaining: nothing. Questions: whether Elysian's `all` and IULR's `worlds` are meant to differ. They
 are kept as written; collapsing them to one mode would need a decision.
+
+Superseded in part: the flags described here are removed. Every atlas now looks planet names up from the wiki the same way; see `title-sync.md`.

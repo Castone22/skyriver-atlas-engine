@@ -14,3 +14,5 @@ return flags.straightenImageTitleQuotes ? title.replaceAll('’', "'").replaceAl
 
 The per-atlas `planetArticle` implementations stay separate files: they read each atlas's own
 title-sync state (see `planetName.md`). No questions.
+
+Superseded in part: the flags described here are removed. Every atlas now looks planet names up from the wiki the same way; see `title-sync.md`.

@@ -35,7 +35,7 @@ committed. Do the work in small commits, one decision each, and finish with `npm
 | 2 | Done: the default stays `<name> System` (confirmed against the wiki and Kadaym's stored images). An `articleTitle` that differs from the name, ignoring apostrophe style, is used as written; the `systemRecordArticleTitle` flag was removed. No atlas output changed. |
 | 8, 11 | Done: 8 needs no work beyond keeping the flags; 11 (widget mode shows an error without a region, system or planet, and outlines keep their pressed state) is implemented and tested in `tests/widget.test.mjs`. 5, 7 and 9 need no change. |
 | 14 | Done: IULR uses the shared `mountSystem`; its station tracks and "wide C" label are gone. |
-| 15 | `syncPlanetTitles` follows Elysian's behaviour for every atlas that syncs titles. The Codex API address becomes a slot. Pending: not yet implemented; see docs/HANDOFF.md. |
+| 15 | Done: one lookup and one sync for every atlas (`title-sync.md`); the wiki address is the slot `wikiBase`. |
 | 16 | Done: Calidor's early return in `mountSystem` (no dossier orbit diagram unless the system view is focused) is a bug and is removed. |
 | 17 | Done: Hiding the label of a proposed planet until its Codex title is known follows Elysian's behaviour. |
 

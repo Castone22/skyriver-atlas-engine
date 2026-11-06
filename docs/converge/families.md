@@ -1,6 +1,6 @@
 # Fragmented families
 
-Features that exist several times under different names. Schematics are done (`schematics.md`).
+Features that exist several times under different names. Done: schematics (`schematics.md`), the planet title lookup (`title-sync.md`), noteworthy bodies (`noteworthy.md`).
 
 ## Code
 
@@ -8,7 +8,6 @@ Features that exist several times under different names. Schematics are done (`s
   `nefandumGlyph`, `solarPlanetGlyph`, and the tables `STATION_TYPES` and `STATION_SILHOUETTES`. One
   concept: a map symbol for a kind of body. Next step: a schematic's `glyph` as data (`hull`, `detail`,
   `color`, `symbol`), and the body-type glyphs as entries too.
-- **Planet-title sync**: three implementations (`docs/converge/DECISIONS.md`, decision 15).
 - **Infobox and image loading**: `leadInfobox`, `legacyInfobox`, `infoboxFile`, `fileFromInfobox`, `imageAPI`,
   `loadLiveImage`, `imageRecord`. Check whether the legacy parsers are still reached.
 - **Concealed or hazardous objects**: `cloakDecoration`, `cloakBadge`, `silentDecoration`, `entityRecords`,

@@ -105,7 +105,8 @@ them in `bundle.json`:
 }
 ```
 
-- `slots` are defaults under the bundle's own `slots`.
+- `slots` are defaults under the bundle's own `slots`. They include `wikiBase`, the address of the wiki
+  whose articles name the bodies (`docs/converge/title-sync.md`).
 - `flags` and `policies` apply only to an atlas that uses the default runtime, under the bundle's own.
 - A kind with no entry under `defaults` needs the bundle to supply every part; the compiler says which is
   missing. Only `stellar` has defaults.
@@ -305,7 +306,7 @@ This supersedes the step-by-step status sections above, whose function and flag 
 - Steps 1 to 5 of the migration plan are done: the seven atlases are bundles, the compiler core is pure,
   the HTTP transport and loader exist (`docs/TRANSPORTS.md`), and function variants have been converged
   (`docs/CONVERGING.md`).
-- Function files: 378 originally, 228 now. 64 capability flags are registered in `engine/flags.json`,
+- Function files: 378 originally, 204 now. 52 capability flags are registered in `engine/flags.json`,
   each off by default and set per atlas in `bundle.json`. Groups that still have more than one file are
   listed in `docs/HANDOFF.md`.
 - The contract for behaviour is `tests/e2e/`: a tour of every region, system, planet, satellite and
