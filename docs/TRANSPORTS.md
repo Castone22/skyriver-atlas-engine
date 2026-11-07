@@ -48,6 +48,9 @@ assets          {assetsUrl}<sha256>         e.g. https://wiki.example/atlasembed
 - Asset `<sha256>` URLs must return the image bytes with the correct `Content-Type`. The loader
   never inlines assets; it only substitutes these URLs for `atlas-asset:<sha256>` references.
 - All text files are UTF-8.
+- Images are cross-origin in the sandbox, so they must be served with `Access-Control-Allow-Origin: *` and
+  requested with CORS (the atlases set `crossOrigin='anonymous'` where they read an image's pixels or use it as a
+  WebGL texture). Without the header such an atlas draws nothing; Grand's galaxy and Mahanzk's planet are two.
 
 ## The `files` contract
 

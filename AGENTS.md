@@ -85,6 +85,13 @@ function variants this way, prove that each profile's rendered text is unchanged
 a custom brand), then rebuild and compare output as described above. Variants that differ in real
 logic stay separate; do not force a merge by changing behaviour.
 
+## Images in the sandbox
+
+The wiki serves the loader in an opaque-origin sandbox, so every image there is cross-origin. A page that reads an
+image's pixels (`getImageData`) or makes a WebGL texture from it must create the `Image` with
+`crossOrigin = 'anonymous'` before setting `src`, or the browser blocks it. `tests/sandbox.test.mjs` checks
+this, and `tools/sandbox-check.mjs` loads an atlas through the loader under the same conditions.
+
 ## Transports and the loader
 
 `src/bundle-http.mjs`, `src/host-browser.mjs` and `loader/` are browser code: keep them free of Node

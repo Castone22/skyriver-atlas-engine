@@ -4,7 +4,9 @@ const $=id=>document.getElementById(id),wiki=n=>'https://skyrivercodex.lzridgeco
 // Positions are in the original 2048 × 1078 reference image.
 const places=__ATLAS__.data.places;
 let p=0,target=0,auto=false,W=0,H=0,dpr=1,last=0,frame=0,scale=1,panX=0,panY=0,fitScale=1,selected=null,drag=null,moved=0,pinch=null;const pointers=new Map();let lastWheelTime=-Infinity,wheelEntryGuard=false;let pendingFocus=null,category="all",rotation=.34,rotating=true,rotationAim=null;const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;rotating=!reduced;
-const planet=new Image();planet.src=TEXTURE;
+// WebGL refuses a cross-origin image unless it was requested with CORS (the wiki loader runs in a sandbox,
+// where every image is cross-origin).
+const planet=new Image();planet.crossOrigin='anonymous';planet.src=TEXTURE;
 
 const globe=document.createElement('canvas');globe.width=globe.height=1024;const gl=globe.getContext('webgl',{alpha:true,premultipliedAlpha:false,antialias:true,preserveDrawingBuffer:true});let globeReady=false;
 /* @atlas-function nearestRotation */

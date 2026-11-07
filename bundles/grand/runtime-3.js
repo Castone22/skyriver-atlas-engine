@@ -214,7 +214,9 @@ function buildVolume(image){
  }
  ready=true;dirty=true;
 }
-const image=new Image();image.onload=()=>buildVolume(image);image.src=source;
+// buildVolume reads the image's pixels, so an image served from another origin (the wiki loader runs in a
+// sandbox, where every image is cross-origin) must be requested with CORS or the canvas is tainted.
+const image=new Image();image.crossOrigin='anonymous';image.onload=()=>buildVolume(image);image.src=source;
 let basis;
 function setBasis(){const a=Math.cos(angle),b=Math.sin(angle),t=Math.cos(tilt),h=Math.sin(tilt);
  basis={a,b,t,h};scale=Math.min(width*.51,height*.53)*zoom}
