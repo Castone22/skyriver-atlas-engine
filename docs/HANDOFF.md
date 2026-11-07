@@ -55,6 +55,11 @@ npm run e2e            # browser tests alone: the tour plus screenshots
 - Groups that still have more than one file: `draw` (3), `renderIndex` (2), `regionSystemSummary` (2, atlas
   hooks) and `zoom` (the second file belongs to the surface-map renderer).
 
+- Packaging for the extension: `npm run pack` writes `build/pack/atlas-engine-<version>.zip` and one
+  `<id>-datapack-<version>.zip` per bundle. The engine zip carries every image the atlases use (`assets/<sha256>.b64`,
+  listed under `assets` in its `bundle.json`), so the wiki needs no asset store. The loader (`npm run build:loader`)
+  embeds the compiler, so it must be replaced together with the engine.
+
 ## Things to know
 
 - A converged function is finished only when `npm run e2e` passes: the tour hashes and the screenshots.

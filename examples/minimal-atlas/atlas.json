@@ -13,17 +13,13 @@
         "source": "Atlas Framework Demonstration",
         "name": "Demo Star",
         "kind": "federation",
-        "worlds": [
-          "Demo Star III"
-        ],
+        "worlds": ["Demo Star III"],
         "notes": [],
         "description": "",
         "major": false,
         "x": 390,
         "y": 420,
-        "primaries": [
-          "Demo Star"
-        ],
+        "primaries": ["Demo Star"],
         "affiliation": "Atlas Framework Demonstration",
         "region": "demo-reach",
         "id": "demo-star"
@@ -49,46 +45,17 @@
         "subtitle": "",
         "description": "An example region defined entirely by data.",
         "color": "#78cfdf",
-        "bounds": [
-          0,
-          0,
-          1000,
-          900
-        ],
+        "bounds": [0, 0, 1000, 900],
         "outline": [
-          [
-            0,
-            0
-          ],
-          [
-            600,
-            0
-          ],
-          [
-            1000,
-            220
-          ],
-          [
-            880,
-            850
-          ],
-          [
-            300,
-            900
-          ],
-          [
-            0,
-            600
-          ]
+          [0, 0],
+          [600, 0],
+          [1000, 220],
+          [880, 850],
+          [300, 900],
+          [0, 600]
         ],
-        "labelAnchor": [
-          450,
-          450
-        ],
-        "labelPosition": [
-          450,
-          450
-        ]
+        "labelAnchor": [450, 450],
+        "labelPosition": [450, 450]
       }
     },
     "worlds": {
@@ -139,12 +106,7 @@
       "flag": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MCA1MCI+PHBhdGggZmlsbD0iIzBkMTcyNiIgZD0iTTAgMGg4MHY1MEgweiIvPjxjaXJjbGUgY3g9IjQwIiBjeT0iMjUiIHI9IjE0IiBmaWxsPSJub25lIiBzdHJva2U9IiM3OGNmZGYiIHN0cm9rZS13aWR0aD0iMiIvPjwvc3ZnPg=="
     },
     "objectImages": {},
-    "atlasExtent": [
-      -100,
-      -100,
-      1400,
-      1100
-    ],
+    "atlasExtent": [-100, -100, 1400, 1100],
     "schematics": [
       {
         "key": "demo-structure",
@@ -181,18 +143,10 @@
           }
         ],
         "specs": [
-          [
-            "Length",
-            "2 km"
-          ],
-          [
-            "Status",
-            "Demonstration"
-          ]
+          ["Length", "2 km"],
+          ["Status", "Demonstration"]
         ],
-        "footnote": [
-          "A made-up structure for testing the schematic view."
-        ]
+        "footnote": ["A made-up structure for testing the schematic view."]
       }
     ]
   },

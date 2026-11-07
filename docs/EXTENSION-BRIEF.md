@@ -53,8 +53,11 @@ engine default needs a datapack that includes every part; the compiler's error s
   (except `bundle.json`) to the lowercase hex SHA-256 of that file's UTF-8 bytes, and must be written
   into the served `bundle.json`. `tools/bundle-manifest.mjs` is the reference; your output must be
   identical for the same input.
-- Images that datapacks reference (`atlas-asset:<sha256>`) are stored by SHA-256 and served by hash.
-  Allow raster images only (PNG, WebP, JPEG, GIF), never SVG, and check the name matches the content.
+- **Images arrive inside the engine zip**, as `assets/<sha256>.b64` text files (base64) listed in its
+  `bundle.json` under `assets`. Store and serve them like any other engine file; the loader reads them and
+  inlines the images, so there is no separate asset store and no `assetsUrl` is needed. Only raster images
+  (PNG, WebP, JPEG, GIF) are accepted, never SVG; the file name is the SHA-256 of the decoded bytes, which you
+  can check.
 - Re-uploading a datapack replaces it. Re-uploading an existing engine version is refused unless the
   content is identical.
 - Same permission and the same log type as today are fine; add whatever you need to see what is stored,
@@ -68,7 +71,7 @@ URLs of **the engine chosen for that datapack**. Details (config keys, placehold
 shapes) are in `docs/TRANSPORTS.md`; build the loader with `node tools/build-loader.mjs`.
 
 - The URLs it requests: the chosen engine's `bundle.json` and files, each needed datapack's
-  `bundle.json` and files (by bundle id), and assets by hash. Unknown ids must answer 404.
+  `bundle.json` and files (by bundle id). Unknown ids must answer 404.
 - Every one of those responses needs `Access-Control-Allow-Origin: *` (the page is an opaque-origin
   sandbox, so everything is cross-origin) and no cookies.
 - Caching: `bundle.json` and the loader must revalidate; other files may be cached forever because

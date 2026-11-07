@@ -22,7 +22,7 @@ export async function gzipBase64(text) {
  * @param {object} options
  * @param {string} options.engineUrl directory URL of the engine bundle
  * @param {(id: string) => string} options.atlasUrl directory URL of an atlas bundle
- * @param {(sha256: string) => string} options.assetUrl URL of an asset
+ * @param {(sha256: string) => string} [options.assetUrl] URL of an image the engine does not carry
  * @param {typeof fetch} [options.fetch]
  * @param {string} [options.wikiBase] address of the wiki whose articles name the bodies, no trailing slash
  * @param {boolean} [options.verify] check file digests while loading
@@ -65,7 +65,15 @@ export function createBrowserHost({
           )
         : Promise.resolve(null),
     // Images are served by URL, not inlined.
-    asset: async (sha256) => assetUrl(sha256),
+    // An image the engine carries is read from it and inlined as a data: URL. Otherwise it is served by
+    // address, when the host has one.
+    async asset(sha256) {
+      const engine = await this.engine();
+      const entry = engine.manifest.assets?.[sha256];
+      if (entry) return `data:${entry.mime};base64,${(await engine.text(entry.file)).trim()}`;
+      if (assetUrl) return assetUrl(sha256);
+      throw new Error(`Missing asset: ${sha256}`);
+    },
     gzipBase64
   };
 }

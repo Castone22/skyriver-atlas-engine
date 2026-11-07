@@ -36,7 +36,8 @@ atlas bundles   {bundlesUrl}<id>/           e.g. https://wiki.example/atlasembed
                 {bundlesUrl}<id>/bundle.json
                 {bundlesUrl}<id>/<path>     every path listed in that bundle.json "files"
 
-assets          {assetsUrl}<sha256>         e.g. https://wiki.example/atlasembed/assets/
+assets          inside the engine bundle    {engineUrl}assets/<sha256>.b64, listed in its bundle.json "assets"
+                {assetsUrl}<sha256>         optional fallback, for an image the engine does not carry
 ```
 
 - `<id>` is the bundle's `id` and must match `^[a-z0-9][a-z0-9_-]*$`. **The atlas id is the wiki
@@ -45,8 +46,14 @@ assets          {assetsUrl}<sha256>         e.g. https://wiki.example/atlasembed
   by the atlas's `renderer` field (for a DSL atlas that is `elysian`, for example) and, for a
   galaxy atlas, each child it lists. An unknown id must answer **404**; the host treats 404 as
   "no such bundle" and other errors as failures.
-- Asset `<sha256>` URLs must return the image bytes with the correct `Content-Type`. The loader
-  never inlines assets; it only substitutes these URLs for `atlas-asset:<sha256>` references.
+- **Images ship in the engine.** The engine's `bundle.json` has `assets`: a map from the SHA-256 of an
+  image to `{ "file": "assets/<sha256>.b64", "mime": "image/png" }`. The file is a text file holding the image
+  as base64, so it travels, is hashed and is served like any other bundle file (it is also listed in `files`).
+  For each `atlas-asset:<sha256>` an atlas references, the loader reads that file from the engine and inlines
+  the image as a `data:` URL; nothing else needs serving. The extension needs no asset store.
+- `assetsUrl` (an address per image) is only a fallback for an image the engine does not list. It must
+  return the image bytes with the correct `Content-Type`. If neither has the image, loading fails with
+  `Missing asset: <sha256>`.
 - All text files are UTF-8.
 
 ## The `files` contract
@@ -79,8 +86,7 @@ in its `bundle.json`**:
 - The repository does **not** commit `files` maps: they are an artifact of the bundle's exact
   contents. Source bundles stay valid without them for the directory transport.
 
-Binary files are not supported yet; digests are over text. Assets are the only binary content and
-live outside bundles (`assetsUrl`).
+Binary files are not supported; digests are over text. Images are carried as base64 text (see above).
 
 ## Required headers
 
@@ -156,7 +162,7 @@ Config:
 | `atlas`        | Bundle id to render; equals the slug                                         |
 | `engineUrl`    | Directory URL of the engine bundle                                           |
 | `bundlesUrl`   | Prefix ending in `/`; bundle `<id>` is at `<bundlesUrl><id>/`                |
-| `assetsUrl`    | Prefix; asset `<sha256>` is at `<assetsUrl><sha256>`                         |
+| `assetsUrl`    | Optional. Prefix for images the engine does not carry: `<sha256>` is at `<assetsUrl><sha256>` |
 | `wikiBase`     | Optional. This wiki's address (`https://wiki.example`, no trailing slash, no query). The page looks up article titles at `<wikiBase>/api.php` and links to `<wikiBase>/index.php`. Set it to the wiki the embed lives on. Without it the engine's default is used |
 | `verify`       | Optional. Hash every file as it is fetched and compare with `files`          |
 | `versionParam` | Optional. Query parameter name for content-addressed file URLs               |

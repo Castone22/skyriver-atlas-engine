@@ -30,7 +30,8 @@
     "check:full": "node tools/check.mjs --e2e",
     "index-functions": "node tools/index-functions.mjs",
     "e2e": "playwright test",
-    "e2e:update": "playwright test --update-snapshots"
+    "e2e:update": "playwright test --update-snapshots",
+    "pack": "node tools/pack.mjs"
   },
   "devDependencies": {
     "@babel/parser": "7.28.4",

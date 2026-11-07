@@ -6,7 +6,8 @@
  *   atlas:      id of the atlas bundle to render (this is also the wiki slug),
  *   engineUrl:  directory URL of the engine bundle,
  *   bundlesUrl: URL prefix ending in '/'; atlas bundle <id> lives at <bundlesUrl><id>/,
- *   assetsUrl:  URL prefix; asset <sha256> lives at <assetsUrl><sha256>,
+ *   assetsUrl:  optional URL prefix for images the engine does not carry; <sha256> lives at
+ *               <assetsUrl><sha256>. Images the engine carries need no address,
  *   wikiBase:   optional; address of this wiki (https://wiki.example), used to look up article titles.
  *               Without it the engine's default is used,
  *   verify:     optional, hash each file while loading and compare with the manifest
@@ -27,7 +28,7 @@ export async function boot(config, doc = document) {
     const host = createBrowserHost({
       engineUrl: config.engineUrl,
       atlasUrl: (id) => config.bundlesUrl + encodeURIComponent(id) + '/',
-      assetUrl: (sha256) => config.assetsUrl + sha256,
+      assetUrl: config.assetsUrl ? (sha256) => config.assetsUrl + sha256 : undefined,
       wikiBase: config.wikiBase || undefined,
       verify: config.verify === true,
       versionParam: config.versionParam
