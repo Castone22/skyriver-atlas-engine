@@ -103,14 +103,6 @@ export function validateManifest(manifest, files) {
     // An engine's id tells engines apart (for example a stellar engine and a surface-map engine).
     if (manifest.id !== undefined && !ID.test(manifest.id))
       errors.push(`Invalid engine id '${manifest.id}'`);
-    // Images the engine carries, so that no separate asset store is needed: each is a text file holding the
-    // image as base64, named in `assets` by the SHA-256 of the image bytes.
-    for (const [hash, entry] of Object.entries(manifest.assets ?? {})) {
-      if (!SHA256.test(hash)) errors.push(`assets: '${hash}' is not a lowercase sha256 hex digest`);
-      else if (!entry || typeof entry.mime !== 'string' || !/^image\/[\w.+-]+$/.test(entry.mime))
-        errors.push(`assets: '${hash}' needs an image mime type`);
-      else need(entry.file, `assets.${hash}`);
-    }
     // Defaults: the shell, styles, runtime and slots used for an atlas of a kind that supplies none.
     for (const [kind, spec] of Object.entries(manifest.defaults ?? {})) {
       if (!KINDS.includes(kind)) errors.push(`defaults: unknown kind '${kind}'`);

@@ -10,17 +10,17 @@ Start with `docs/HANDOFF.md`. Rules for changing the code are in `AGENTS.md`.
 
 Node.js 22 or newer. Run `npm install` once.
 
-| Command                | Action                                                                                   |
-| ---------------------- | ---------------------------------------------------------------------------------------- |
-| `npm run build`        | Write `dist/*.html`                                                                      |
-| `npm run serve`        | Serve `dist/` at `http://127.0.0.1:8080/`                                                |
-| `npm run check`        | Build, unit tests, DOM tests                                                             |
-| `npm run check:full`   | The same plus the browser tests (about 7 minutes)                                        |
-| `npm run e2e`          | Browser tests in Chromium (Playwright), about 7 minutes                                  |
-| `npm run e2e:update`   | Rewrite the browser-test baselines and screenshots                                       |
-| `npm run build:loader` | Build the browser loader, `build/loader.html`                                            |
-| `npm run pack`         | Zips for the extension in `build/pack/`: the engine (with its images) and every datapack |
-| `npm run format`       | Format with Prettier                                                                     |
+| Command                | Action                                                                              |
+| ---------------------- | ----------------------------------------------------------------------------------- |
+| `npm run build`        | Write `dist/*.html`                                                                 |
+| `npm run serve`        | Serve `dist/` at `http://127.0.0.1:8080/`                                           |
+| `npm run check`        | Build, unit tests, DOM tests                                                        |
+| `npm run check:full`   | The same plus the browser tests (about 7 minutes)                                   |
+| `npm run e2e`          | Browser tests in Chromium (Playwright), about 7 minutes                             |
+| `npm run e2e:update`   | Rewrite the browser-test baselines and screenshots                                  |
+| `npm run build:loader` | Build the browser loader, `build/loader.html`                                       |
+| `npm run pack`         | Zips for the extension in `build/pack/`: the engine, every datapack, and the images |
+| `npm run format`       | Format with Prettier                                                                |
 
 ## Layout
 
@@ -136,7 +136,7 @@ thresholds (a bundle `capabilities` entry). Moons, stations, exotics and Silent 
 ## Assets and map types
 
 - `node tools/asset.mjs image.png` imports an image and prints its `atlas-asset:…` reference, for
-  `.asset('flag', reference)` or `.texture(reference)`. Builds embed the bytes. In the loader the images come from the engine bundle (`npm run pack` puts them there as base64 text).
+  `.asset('flag', reference)` or `.texture(reference)`. Builds embed the bytes; the loader serves them by URL.
 - `Atlas.geographic()` takes `.place(id, props)`, `.texture(uri)` and
   `.terrain({boundaries, palette, contours, labelOffsets})`. The Mahanzk renderer uses a 2048 × 1078
   coordinate system. Places have a stable `key`, a renderer ordinal `id` and an optional `articleTitle`.
