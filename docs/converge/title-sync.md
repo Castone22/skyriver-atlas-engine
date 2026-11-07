@@ -34,8 +34,9 @@ touching the atlas data. Every atlas does this the same way.
 - When something changed it saves and redraws the page (scroll and focus kept), and restores a route that
   named a planet.
 
-The wiki address is the slot `wikiBase` (default in `engine/bundle.json`): `<wikiBase>/api.php` and
-`<wikiBase>/index.php`.
+The wiki address is the slot `wikiBase`, which the host supplies (`host.wikiBase`; the loader config key
+`wikiBase`): `<wikiBase>/api.php` and `<wikiBase>/index.php`. It is the wiki's own address, the same for
+every atlas, so it is not set per atlas. Without it the default in `engine/bundle.json` is used.
 
 ## Planets with no article yet
 

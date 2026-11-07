@@ -18,7 +18,7 @@ const BUNDLE_ID = /^[a-z0-9][a-z0-9_-]*$/;
  * A host that reads `engine/`, `bundles/` and `assets/` under `root`. Bundles are cached. `bundles`
  * maps an id to an atlas bundle that is already open (for example a datapack outside `bundles/`).
  */
-export function createNodeHost({ root = ROOT, bundles = {} } = {}) {
+export function createNodeHost({ root = ROOT, bundles = {}, wikiBase } = {}) {
   const cache = new Map();
   const cached = (key, load) => {
     if (!cache.has(key)) cache.set(key, load());
@@ -29,6 +29,7 @@ export function createNodeHost({ root = ROOT, bundles = {} } = {}) {
       JSON.parse(await readFile(path.join(root, 'assets', 'manifest.json'), 'utf8'))
     );
   return {
+    wikiBase,
     engine: () =>
       cached('engine', () => loadDirectory(path.join(root, 'engine'), { expectType: 'engine' })),
     atlas: (id) =>

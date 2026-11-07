@@ -157,6 +157,7 @@ Config:
 | `engineUrl`    | Directory URL of the engine bundle                                           |
 | `bundlesUrl`   | Prefix ending in `/`; bundle `<id>` is at `<bundlesUrl><id>/`                |
 | `assetsUrl`    | Prefix; asset `<sha256>` is at `<assetsUrl><sha256>`                         |
+| `wikiBase`     | Optional. This wiki's address (`https://wiki.example`, no trailing slash, no query). The page looks up article titles at `<wikiBase>/api.php` and links to `<wikiBase>/index.php`. Set it to the wiki the embed lives on. Without it the engine's default is used |
 | `verify`       | Optional. Hash every file as it is fetched and compare with `files`          |
 | `versionParam` | Optional. Query parameter name for content-addressed file URLs               |
 

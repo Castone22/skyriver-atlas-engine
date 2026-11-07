@@ -366,3 +366,48 @@ test('the built loader reports a missing atlas in the page', async () => {
   assert.match(status(), /Could not load this atlas: atlas bundle 'nope' was not found/);
   window.close();
 });
+
+test('the browser host carries the wiki address from the loader config', async () => {
+  const { createBrowserHost } = await import('../src/host-browser.mjs');
+  const options = {
+    engineUrl: 'http://x/e/',
+    atlasUrl: (id) => `http://x/b/${id}/`,
+    assetUrl: (h) => h
+  };
+  assert.equal(
+    createBrowserHost({ ...options, wikiBase: 'https://wiki.example' }).wikiBase,
+    'https://wiki.example'
+  );
+  assert.equal(createBrowserHost(options).wikiBase, undefined);
+});
+
+test('the built loader passes the wiki address from its config to the atlas it renders', async () => {
+  reset();
+  const config = {
+    atlas: 'calidor',
+    engineUrl: `${base}/engine/`,
+    bundlesUrl: `${base}/bundles/`,
+    assetsUrl: `${base}/assets/`,
+    wikiBase: 'https://my.wiki.example'
+  };
+  const page = (await buildLoader())
+    .replace('@@TITLE@@', 'Loading')
+    .replace('@@CONFIG@@', JSON.stringify(config).replace(/</g, '\u003c'));
+  const dom = new JSDOM(page, {
+    url: 'https://my.wiki.example/Special:AtlasEmbed/calidor',
+    runScripts: 'dangerously',
+    virtualConsole: new VirtualConsole(),
+    beforeParse(window) {
+      window.fetch = (...args) => fetch(...args);
+    }
+  });
+  const { window } = dom;
+  const deadline = Date.now() + 30_000;
+  while (!window.document.title.includes('Dominion of Calidor') && Date.now() < deadline)
+    await new Promise((r) => setTimeout(r, 50));
+  assert.match(window.document.title, /Dominion of Calidor/);
+  const html = window.document.documentElement.outerHTML;
+  assert.ok(html.includes('https://my.wiki.example/api.php'), 'api address');
+  assert.ok(!html.includes("new URL('https://skyrivercodex.lzridgecodes.net/api.php')"));
+  window.close();
+});

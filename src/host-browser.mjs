@@ -24,6 +24,7 @@ export async function gzipBase64(text) {
  * @param {(id: string) => string} options.atlasUrl directory URL of an atlas bundle
  * @param {(sha256: string) => string} options.assetUrl URL of an asset
  * @param {typeof fetch} [options.fetch]
+ * @param {string} [options.wikiBase] address of the wiki whose articles name the bodies, no trailing slash
  * @param {boolean} [options.verify] check file digests while loading
  * @param {string} [options.versionParam] add `?<name>=<sha256 prefix>` to file URLs (see loadHttp)
  */
@@ -31,6 +32,7 @@ export function createBrowserHost({
   engineUrl,
   atlasUrl,
   assetUrl,
+  wikiBase,
   fetch = globalThis.fetch,
   verify = false,
   versionParam
@@ -45,6 +47,7 @@ export function createBrowserHost({
     return cache.get(key);
   };
   return {
+    wikiBase,
     engine: () =>
       cached('engine', () =>
         loadHttp(engineUrl, { fetch, expectType: 'engine', verify, versionParam })

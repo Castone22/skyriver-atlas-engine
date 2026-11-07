@@ -26,6 +26,10 @@ An engine's `bundle.json` gives its `id` (which kind of engine it is), `version`
 atlas kinds it can render: `stellar`, `geographic`, `galaxy`). A datapack's `bundle.json` gives its
 `kind` and an `engine` version range such as `^1.0.0`.
 
+The loader config takes `wikiBase`, the address of the wiki the embed lives on (no trailing slash, no
+query). Atlases look up the current title of each planet's article there, so set it to your own wiki; it
+is not a per-atlas value. Without it the engine's default is used.
+
 A datapack needs only `bundle.json` and `atlas.json`. Any shell, style or runtime it does not include is
 provided by the chosen engine (the engine's `bundle.json` lists its `defaults` per kind). A kind with no
 engine default needs a datapack that includes every part; the compiler's error says which is missing.

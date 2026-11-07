@@ -10,8 +10,25 @@ import { satisfies } from './bundle.mjs';
  *   host.asset(sha256)     Promise<string>        URL or data: URL for an asset; throws if missing
  *   host.gzipBase64(text)  Promise<string>        gzip then base64; needed only for Grand snapshots
  *   host.loadSearch(code)  Promise<{indexData}>   optional; precomputes Grand's search seed
+ *   host.wikiBase          string                 optional; address of the wiki whose articles name the bodies
+ *                                                 (https://wiki.example, no trailing slash). Wins over any
+ *                                                 default the engine or a bundle gives the slot `wikiBase`.
  */
 const replace = (s, a, b) => s.split(a).join(b);
+/** A wiki address as the host gives it, checked and without a trailing slash. */
+export function wikiBaseOf(value) {
+  let address;
+  try {
+    address = new URL(String(value));
+  } catch {
+    throw new Error(`wikiBase must be an http(s) address, found '${value}'`);
+  }
+  if (!['http:', 'https:'].includes(address.protocol) || address.search || address.hash)
+    throw new Error(
+      `wikiBase must be an http(s) address without a query or fragment, found '${value}'`
+    );
+  return address.href.replace(/\/+$/, '');
+}
 /**
  * Everything the compiler needs from a bundle, as plain data plus text readers. A shell, style or
  * runtime the atlas bundle does not supply comes from the engine's defaults for the atlas's kind
@@ -208,6 +225,8 @@ export async function compileCore(definition, host, { strict = false, dependenci
       throw new Error(`Bundle '${profile.id}': slot '${name}' must be a string`);
     if (name !== 'brand') slots[name] = replace(value, '{{brand}}', brand);
   }
+  // The wiki address belongs to the host, not to any one atlas.
+  if (host.wikiBase !== undefined) slots.wikiBase = wikiBaseOf(host.wikiBase);
   let html = render(
     await profile.shell.from.text(profile.shell.path),
     slots,

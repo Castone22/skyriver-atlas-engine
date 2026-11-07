@@ -79,3 +79,28 @@ test('engine defaults must point at files the engine has', () => {
     /does not support kind 'geographic'/
   );
 });
+
+test('the host supplies the wiki address: it wins over the engine default and is tidied', async () => {
+  const bundle = await loadDirectory(atlasDir, { expectType: 'atlas' });
+  const build = async (wikiBase) =>
+    (
+      await compile(await definition(), {
+        host: createNodeHost({ bundles: { minimal: bundle }, wikiBase })
+      })
+    ).html;
+  const other = await build('https://other.example/wiki/');
+  assert.ok(other.includes("new URL('https://other.example/wiki/api.php')"), 'api address');
+  assert.ok(other.includes("'https://other.example/wiki'"), 'index address');
+  assert.ok(!other.includes("new URL('https://skyrivercodex.lzridgecodes.net/api.php')"));
+  // without it, the engine's default
+  assert.ok(
+    (await build(undefined)).includes("new URL('https://skyrivercodex.lzridgecodes.net/api.php')")
+  );
+  for (const bad of [
+    'not a url',
+    'ftp://x.example',
+    'https://x.example/?a=1',
+    'https://x.example/#top'
+  ])
+    await assert.rejects(() => build(bad), /wikiBase must be an http\(s\) address/);
+});

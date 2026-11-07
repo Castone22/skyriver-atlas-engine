@@ -7,6 +7,8 @@
  *   engineUrl:  directory URL of the engine bundle,
  *   bundlesUrl: URL prefix ending in '/'; atlas bundle <id> lives at <bundlesUrl><id>/,
  *   assetsUrl:  URL prefix; asset <sha256> lives at <assetsUrl><sha256>,
+ *   wikiBase:   optional; address of this wiki (https://wiki.example), used to look up article titles.
+ *               Without it the engine's default is used,
  *   verify:     optional, hash each file while loading and compare with the manifest
  *   versionParam: optional query parameter name; file URLs get ?<name>=<sha256 prefix>
  * }
@@ -26,6 +28,7 @@ export async function boot(config, doc = document) {
       engineUrl: config.engineUrl,
       atlasUrl: (id) => config.bundlesUrl + encodeURIComponent(id) + '/',
       assetUrl: (sha256) => config.assetsUrl + sha256,
+      wikiBase: config.wikiBase || undefined,
       verify: config.verify === true,
       versionParam: config.versionParam
     });
