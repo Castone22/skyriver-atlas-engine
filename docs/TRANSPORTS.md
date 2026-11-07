@@ -143,6 +143,12 @@ engine's functions; the transport interface (`{ files, read }`) does not need to
 
 ## The loader
 
+**The loader ships inside the engine.** The engine's `bundle.json` names it (`"loader": "loader.html"`) and the
+file is in its `files`. The page embeds the compiler this engine was built with, so a loader and an engine from
+different releases can never meet. To serve `Special:AtlasEmbed/<slug>`, read the loader from **the engine chosen
+for that datapack** and fill in the placeholders below. An engine with no `loader` field (an older one) is served
+with whatever loader the host already has. `npm run pack` builds the loader into the engine zip.
+
 Build it:
 
 ```sh

@@ -110,6 +110,12 @@ export function validateManifest(manifest, files) {
       errors.push('pack needs a file and a prefix ending in /');
     else need(pack.file, 'pack.file');
   }
+  // The loader page that runs this engine: it embeds the compiler this engine was built with, so the two
+  // always match. The host fills in @@TITLE@@ and @@CONFIG@@ (docs/TRANSPORTS.md).
+  if (manifest.loader !== undefined) {
+    if (manifest.type !== 'engine') errors.push('only an engine can name a loader');
+    else need(manifest.loader, 'loader');
+  }
   if (manifest.type === 'engine') {
     if (!Array.isArray(manifest.kinds) || !manifest.kinds.every((k) => KINDS.includes(k)))
       errors.push('engine kinds must be a list of known kinds');

@@ -17,6 +17,7 @@ import { fileURLToPath } from 'node:url';
 import { updateManifest } from './bundle-manifest.mjs';
 import { loadDirectory } from '../src/bundle-fs.mjs';
 import { verifyFiles } from '../src/bundle.mjs';
+import { buildLoader } from './build-loader.mjs';
 
 const ROOT = fileURLToPath(new URL('../', import.meta.url));
 
@@ -61,8 +62,8 @@ async function stageBundle(source, outDir, type) {
   return bundle.manifest;
 }
 /**
- * Lay out the engine in `outDir`, with a pack of its function library: one file, functions.pack.json, so a
- * loader fetches the ~200 small function files in one request instead of one each.
+ * Lay out the engine in `outDir`, with a pack of its function library (functions.pack.json, so a loader
+ * fetches the ~200 small function files in one request) and the loader page that runs it (loader.html).
  */
 export async function stageEngine(outDir, root = ROOT) {
   await rm(outDir, { recursive: true, force: true });
@@ -73,6 +74,9 @@ export async function stageEngine(outDir, root = ROOT) {
   await writeFile(path.join(outDir, 'functions.pack.json'), JSON.stringify(contents));
   const manifest = JSON.parse(await readFile(path.join(outDir, 'bundle.json'), 'utf8'));
   manifest.pack = { file: 'functions.pack.json', prefix: 'functions/' };
+  // The loader embeds this repository's compiler, so it ships with the engine and always matches it.
+  await writeFile(path.join(outDir, 'loader.html'), await buildLoader());
+  manifest.loader = 'loader.html';
   await writeFile(path.join(outDir, 'bundle.json'), JSON.stringify(manifest, null, 2) + '\n');
   await updateManifest(outDir);
   const bundle = await loadDirectory(outDir, { expectType: 'engine' });

@@ -26,6 +26,11 @@ An engine's `bundle.json` gives its `id` (which kind of engine it is), `version`
 atlas kinds it can render: `stellar`, `geographic`, `galaxy`). A datapack's `bundle.json` gives its
 `kind` and an `engine` version range such as `^1.0.0`.
 
+**The loader is inside the engine zip** (`loader.html`, named by `loader` in the engine's `bundle.json`). Serve
+`Special:AtlasEmbed/<slug>` from the loader of the engine chosen for that datapack, filling `@@TITLE@@` and
+`@@CONFIG@@`; keep no loader of your own except as a fallback for an engine that has none. That way a loader
+never runs against an engine it was not built with.
+
 The loader config takes `wikiBase`, the address of the wiki the embed lives on (no trailing slash, no
 query). Atlases look up the current title of each planet's article there, so set it to your own wiki; it
 is not a per-atlas value. Without it the engine's default is used.

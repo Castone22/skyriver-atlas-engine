@@ -58,7 +58,8 @@ npm run e2e            # browser tests alone: the tour plus screenshots
 - Packaging for the extension: `npm run pack` writes `build/pack/atlas-engine-<version>.zip`, one
   `<id>-datapack-<version>.zip` per bundle (each with fresh `files` digests), and `atlas-assets.zip`: the images the
   atlases use as `<sha256>.<ext>` plus `assets.json` (type and users of each). The loader (`npm run build:loader`)
-  embeds the compiler, so it must be replaced together with the engine.
+  embeds the compiler, so it ships inside the engine zip (`loader.html`) and the extension serves a datapack
+  from its engine's loader.
 
 - First-load speed: the engine zip carries `functions.pack.json` (one request for the function library), and a galaxy
   compiles its child atlases side by side. Text should be served compressed (`docs/TRANSPORTS.md`, "Packs and

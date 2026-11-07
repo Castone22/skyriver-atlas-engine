@@ -1,5 +1,6 @@
 // Load an atlas through the built loader the way the wiki does, and report page errors.
-//   node tools/sandbox-check.mjs <served dir> <loader.html> <atlas id> [screenshot.png]
+//   node tools/sandbox-check.mjs <served dir> <loader.html | engine> <atlas id> [screenshot.png]
+// With `engine` the loader is the one inside the served engine (<served dir>/engine/loader.html).
 // <served dir> holds engine/ and bundles/<id>/ (unzip the packs from `npm run pack` into it); images come from
 // assets/manifest.json. The loader page is served with the extension's sandbox CSP, so the page is an opaque
 // origin and every image is cross-origin: this catches canvas and WebGL reads of images that were not
@@ -8,7 +9,9 @@ import http from 'node:http';
 import { readFile } from 'node:fs/promises';
 import path from 'node:path';
 import { chromium } from '@playwright/test';
-const [servedDir, loaderFile, id, shot] = process.argv.slice(2);
+const [servedDir, loaderArg, id, shot] = process.argv.slice(2);
+const loaderFile =
+  loaderArg === 'engine' ? path.join(servedDir, 'engine', 'loader.html') : loaderArg;
 const manifest = JSON.parse(await readFile('assets/manifest.json', 'utf8'));
 const mime = (f) =>
   ({
@@ -17,9 +20,11 @@ const mime = (f) =>
     '.css': 'text/css',
     '.html': 'text/html'
   })[path.extname(f)] ?? 'application/octet-stream';
+const seen = [];
 const server = http.createServer(async (req, res) => {
   const u = new URL(req.url, 'http://x');
   const cors = { 'Access-Control-Allow-Origin': '*' };
+  seen.push(u.pathname);
   try {
     if (u.pathname === '/loader.html') {
       const port = server.address().port;
@@ -62,7 +67,14 @@ const errors = [];
 page.on('pageerror', (e) => errors.push(String(e.message).slice(0, 160)));
 await page.goto(`http://127.0.0.1:${server.address().port}/loader.html`);
 await page.waitForTimeout(8000);
-console.log(id, 'errors:', JSON.stringify(errors.slice(0, 3)));
+const single = seen.filter((p) => p.startsWith('/engine/functions/')).length;
+const packs = seen.filter((p) => p.endsWith('functions.pack.json')).length;
+console.log(
+  id,
+  'errors:',
+  JSON.stringify(errors.slice(0, 3)),
+  `| requests: ${seen.length}, function pack: ${packs}, single function files: ${single}`
+);
 if (shot) await page.screenshot({ path: shot });
 await browser.close();
 server.close();

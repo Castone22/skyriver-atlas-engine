@@ -175,3 +175,52 @@ test('a galaxy compiled from the zips alone, children side by side, equals the N
     'no function was fetched on its own'
   );
 });
+
+// ---- The loader ships inside the engine -------------------------------------------------------
+
+import { validateManifest } from '../src/bundle.mjs';
+import { buildLoader } from '../tools/build-loader.mjs';
+
+test('the engine carries its own loader, listed and digested, with the host placeholders', async () => {
+  const dir = path.join(tmp, 'engine');
+  const manifest = JSON.parse(await readFile(path.join(dir, 'bundle.json'), 'utf8'));
+  assert.equal(manifest.loader, 'loader.html');
+  assert.ok(manifest.files['loader.html'], 'the loader has a digest');
+  const page = await readFile(path.join(dir, 'loader.html'), 'utf8');
+  assert.ok(page.includes('@@TITLE@@') && page.includes('@@CONFIG@@'), 'the host fills these in');
+  assert.equal(page, await buildLoader(), 'it is the loader built from this repository');
+  // it embeds the compiler of this engine, including the pack reader
+  assert.ok(page.includes('packContents'));
+});
+
+test('an engine manifest checks the loader it names', () => {
+  const engine = (extra) => ({
+    bundleVersion: 1,
+    type: 'engine',
+    version: '1.0.0',
+    kinds: ['stellar'],
+    ...extra
+  });
+  assert.deepEqual(
+    validateManifest(engine({ loader: 'loader.html' }), ['bundle.json', 'loader.html']),
+    []
+  );
+  assert.match(
+    validateManifest(engine({ loader: 'loader.html' }), ['bundle.json']).join(),
+    /missing file/
+  );
+  const atlas = {
+    bundleVersion: 1,
+    type: 'atlas',
+    id: 'x',
+    version: '1.0.0',
+    engine: '^1.0.0',
+    kind: 'stellar',
+    brand: 'X',
+    loader: 'l.html'
+  };
+  assert.match(
+    validateManifest(atlas, ['bundle.json', 'atlas.json', 'l.html']).join(),
+    /only an engine can name a loader/
+  );
+});
