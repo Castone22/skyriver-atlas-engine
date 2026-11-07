@@ -106,8 +106,14 @@ test('the host supplies the wiki address: it wins over the engine default and is
 });
 
 test('an engine older than the datapack requires is refused with a clear message', async () => {
-  const bundle = await loadDirectory(atlasDir, { expectType: 'atlas' });
-  assert.match(bundle.manifest.engine, /^\^1\.1\./);
+  // Mocked inputs: a datapack that needs 1.1.0 or newer, and an engine that is 1.0.0.
+  const dir = await loadDirectory(atlasDir, { expectType: 'atlas' });
+  const bundle = await openBundle(
+    Bundle.fromMap({
+      'bundle.json': JSON.stringify({ ...dir.manifest, engine: '^1.1.0' }),
+      'atlas.json': await readFile(`${atlasDir}atlas.json`, 'utf8')
+    })
+  );
   const real = await createNodeHost().engine();
   const old = Object.create(real, { manifest: { value: { ...real.manifest, version: '1.0.0' } } });
   const host = { ...createNodeHost({ bundles: { minimal: bundle } }), engine: async () => old };

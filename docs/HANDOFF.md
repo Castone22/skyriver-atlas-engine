@@ -60,6 +60,10 @@ npm run e2e            # browser tests alone: the tour plus screenshots
   atlases use as `<sha256>.<ext>` plus `assets.json` (type and users of each). The loader (`npm run build:loader`)
   embeds the compiler, so it must be replaced together with the engine.
 
+- First-load speed: the engine zip carries `functions.pack.json` (one request for the function library), and a galaxy
+  compiles its child atlases side by side. Text should be served compressed (`docs/TRANSPORTS.md`, "Packs and
+  compression").
+
 ## Things to know
 
 - A converged function is finished only when `npm run e2e` passes: the tour hashes and the screenshots.

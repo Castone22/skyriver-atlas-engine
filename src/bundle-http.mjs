@@ -68,20 +68,42 @@ export async function loadHttp(
   for (const p of Object.keys(manifest.files))
     if (!isSafePath(p)) throw new Error(`Unsafe path in files: '${p}'`);
 
+  // A pack holds many small files in one JSON file (path -> text). It is fetched once, on the first read of a
+  // file under its prefix; if it cannot be fetched, files are fetched one by one as before.
+  const pack = manifest.pack;
+  let packed;
+  const packContents = () => {
+    packed ??= get(pack.file, manifest.files[pack.file]).then(
+      (text) => {
+        const contents = JSON.parse(text);
+        return contents && typeof contents === 'object' ? contents : null;
+      },
+      () => null
+    );
+    return packed;
+  };
+  const fromPack = async (p) => {
+    if (!pack || !p.startsWith(pack.prefix) || p === pack.file) return null;
+    const text = (await packContents())?.[p];
+    return typeof text === 'string' ? text : null;
+  };
+
   const cache = new Map();
   const read = (p) => {
     if (p === 'bundle.json') return Promise.resolve(manifestText);
     if (!cache.has(p)) {
-      const pending = get(p, manifest.files[p]).then(async (text) => {
-        if (verify) {
-          const actual = await sha256Text(text);
-          if (actual !== manifest.files[p])
-            throw new Error(
-              `sha256 mismatch for ${new URL(p, base).href} (expected ${manifest.files[p]}, got ${actual})`
-            );
+      const pending = (async () => (await fromPack(p)) ?? (await get(p, manifest.files[p])))().then(
+        async (text) => {
+          if (verify) {
+            const actual = await sha256Text(text);
+            if (actual !== manifest.files[p])
+              throw new Error(
+                `sha256 mismatch for ${new URL(p, base).href} (expected ${manifest.files[p]}, got ${actual})`
+              );
+          }
+          return text;
         }
-        return text;
-      });
+      );
       cache.set(p, pending);
       // Do not cache failures: a later attempt may succeed.
       pending.catch(() => cache.delete(p));

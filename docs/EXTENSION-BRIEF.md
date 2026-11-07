@@ -71,6 +71,9 @@ shapes) are in `docs/TRANSPORTS.md`; build the loader with `node tools/build-loa
   `bundle.json` and files (by bundle id), and assets by hash. Unknown ids must answer 404.
 - Every one of those responses needs `Access-Control-Allow-Origin: *` (the page is an opaque-origin
   sandbox, so everything is cross-origin) and no cookies.
+- The engine zip contains `functions.pack.json` (listed in its `bundle.json` under `pack`): serve it like any
+  other engine file. It lets the loader fetch the whole function library in one request instead of ~190.
+- Compress text responses (gzip or br): the atlas data is JSON and shrinks by about 85%.
 - Caching: `bundle.json` and the loader must revalidate; other files may be cached forever because
   their URL carries a content hash.
 - The loader page keeps today's `Content-Security-Policy: sandbox allow-scripts allow-downloads

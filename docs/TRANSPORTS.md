@@ -99,6 +99,25 @@ The loader runs in an opaque-origin sandbox, so every request it makes is cross-
 - Do not use `Access-Control-Allow-Credentials`; the browser would reject it with `*`.
 - No `connect-src` restriction is needed. Do not add one that blocks the bundle host.
 
+## Packs and compression
+
+A first visit to Grand fetches the engine's ~190 small function files and five atlases (4 MB of JSON), one
+request each. At ~130 ms a request that took about 12 s. Two measures, both on by serving the right files:
+
+- **Pack.** A bundle's `bundle.json` may carry `"pack": { "file": "functions.pack.json", "prefix": "functions/" }`.
+  The pack file is a JSON object mapping each path under the prefix to its text. The loader fetches it once, on
+  the first read of a file under the prefix, and takes those files from it; if the pack cannot be fetched it
+  falls back to one request per file. The files stay in the bundle and in `files` (so every one is still
+  digested, and `verify` checks pack members against those digests). `npm run pack` writes
+  `functions.pack.json` into the engine zip; the server just serves it like any other file.
+- **Compression.** Serve text responses (`bundle.json`, `atlas.json`, the pack, shells, styles, scripts) with
+  `Content-Encoding: gzip` or `br`. The atlas data is JSON and compresses by about 85%: Grand's first load falls
+  from about 5.7 MB to about 2 MB.
+
+The loader also compiles a galaxy's child atlases side by side, so their files are fetched together. With the
+pack and the parallel compile, Grand's first load under 130 ms of latency fell from about 10.4 s to about 3 s
+(223 requests to 39). Later visits are served from the browser cache.
+
 ## Caching
 
 The existing `Cache-Control: private, max-age=3600` with no cache busting is wrong for bundles.

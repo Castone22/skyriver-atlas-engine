@@ -97,6 +97,19 @@ export function validateManifest(manifest, files) {
         if (!SHA256.test(hash)) errors.push(`files: '${p}' needs a lowercase sha256 hex digest`);
       }
   }
+  // A pack is one JSON file holding the text of every file under a prefix (path -> text), so a loader can
+  // fetch them in one request. The files stay in the bundle too.
+  if (manifest.pack !== undefined) {
+    const pack = manifest.pack;
+    if (
+      !pack ||
+      typeof pack.file !== 'string' ||
+      typeof pack.prefix !== 'string' ||
+      !pack.prefix.endsWith('/')
+    )
+      errors.push('pack needs a file and a prefix ending in /');
+    else need(pack.file, 'pack.file');
+  }
   if (manifest.type === 'engine') {
     if (!Array.isArray(manifest.kinds) || !manifest.kinds.every((k) => KINDS.includes(k)))
       errors.push('engine kinds must be a list of known kinds');

@@ -60,8 +60,26 @@ async function stageBundle(source, outDir, type) {
   if (problems.length) throw new Error(`${source}: digests do not match:\n${problems.join('\n')}`);
   return bundle.manifest;
 }
-export const stageEngine = (outDir, root = ROOT) =>
-  stageBundle(path.join(root, 'engine'), outDir, 'engine');
+/**
+ * Lay out the engine in `outDir`, with a pack of its function library: one file, functions.pack.json, so a
+ * loader fetches the ~200 small function files in one request instead of one each.
+ */
+export async function stageEngine(outDir, root = ROOT) {
+  await rm(outDir, { recursive: true, force: true });
+  await cp(path.join(root, 'engine'), outDir, { recursive: true });
+  const contents = {};
+  for (const name of (await readdir(path.join(outDir, 'functions'))).sort())
+    contents[`functions/${name}`] = await readFile(path.join(outDir, 'functions', name), 'utf8');
+  await writeFile(path.join(outDir, 'functions.pack.json'), JSON.stringify(contents));
+  const manifest = JSON.parse(await readFile(path.join(outDir, 'bundle.json'), 'utf8'));
+  manifest.pack = { file: 'functions.pack.json', prefix: 'functions/' };
+  await writeFile(path.join(outDir, 'bundle.json'), JSON.stringify(manifest, null, 2) + '\n');
+  await updateManifest(outDir);
+  const bundle = await loadDirectory(outDir, { expectType: 'engine' });
+  const problems = await verifyFiles(bundle);
+  if (problems.length) throw new Error(`engine: digests do not match:\n${problems.join('\n')}`);
+  return bundle.manifest;
+}
 export const stageDatapack = (id, outDir, root = ROOT) =>
   stageBundle(path.join(root, 'bundles', id), outDir, 'atlas');
 

@@ -193,20 +193,27 @@ export async function compileCore(definition, host, { strict = false, dependenci
           await linkRuntime(await profile.scripts[0].from.text(profile.scripts[0].path), {}, host)
         )
       : null;
-    for (const entry of seed) {
-      let child = dependencies[entry.id] || dependencies[entry.id.replace(/-stellar-atlas$/, '')];
-      if (!child) {
-        const key = d.dependencies?.[entry.id] || entry.map;
-        if (!key || !/^[a-z0-9][a-z0-9_-]*$/i.test(key))
-          throw new Error(`Missing child atlas dependency: ${entry.id}`);
-        const childBundle = await host.atlas(key);
-        if (!childBundle) throw new Error(`Missing child atlas dependency: ${entry.id}`);
-        const childDef = await childBundle.json(childBundle.manifest.atlas ?? 'atlas.json');
-        if (childDef.kind !== 'stellar')
-          throw new Error('Galaxy dependencies must be stellar atlases');
-        child = await compileCore(childDef, host);
-      }
-      snapshots[entry.id] = await host.gzipBase64(child.html);
+    // The children are compiled side by side, so their files are fetched together; the results are
+    // assigned in the order of `seed`, so the output does not depend on which finishes first.
+    const built = await Promise.all(
+      seed.map(async (entry) => {
+        let child = dependencies[entry.id] || dependencies[entry.id.replace(/-stellar-atlas$/, '')];
+        if (!child) {
+          const key = d.dependencies?.[entry.id] || entry.map;
+          if (!key || !/^[a-z0-9][a-z0-9_-]*$/i.test(key))
+            throw new Error(`Missing child atlas dependency: ${entry.id}`);
+          const childBundle = await host.atlas(key);
+          if (!childBundle) throw new Error(`Missing child atlas dependency: ${entry.id}`);
+          const childDef = await childBundle.json(childBundle.manifest.atlas ?? 'atlas.json');
+          if (childDef.kind !== 'stellar')
+            throw new Error('Galaxy dependencies must be stellar atlases');
+          child = await compileCore(childDef, host);
+        }
+        return { entry, child, snapshot: await host.gzipBase64(child.html) };
+      })
+    );
+    for (const { entry, child, snapshot } of built) {
+      snapshots[entry.id] = snapshot;
       if (searchModule) search[entry.id] = searchModule.indexData(child.definition.data);
     }
     d.documents.snapshots = snapshots;

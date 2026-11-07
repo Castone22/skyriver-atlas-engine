@@ -65,10 +65,14 @@ test('a bundle needing a newer engine is rejected', async () => {
   const real = await disk.atlas('calidor');
   const demanding = Object.create(real);
   demanding.manifest = { ...real.manifest, engine: '^2.0.0' };
+  // A mocked engine, so the message does not depend on the version the repository's engine has now.
+  const realEngine = await disk.engine();
+  const engine = Object.create(realEngine);
+  engine.manifest = { ...realEngine.manifest, version: '1.2.3' };
   const definition = await real.json('atlas.json');
   await assert.rejects(
-    compileCore(definition, { ...disk, atlas: async () => demanding }),
-    /needs engine \^2\.0\.0; this is engine 1\.1\.0/
+    compileCore(definition, { ...disk, atlas: async () => demanding, engine: async () => engine }),
+    /needs engine \^2\.0\.0; this is engine 1\.2\.3/
   );
 });
 
@@ -76,10 +80,15 @@ test('an engine that does not support the atlas kind is rejected', async () => {
   const disk = createNodeHost();
   const engine = await disk.engine();
   const surfaceOnly = Object.create(engine);
-  surfaceOnly.manifest = { ...engine.manifest, id: 'surface-map', kinds: ['geographic'] };
+  surfaceOnly.manifest = {
+    ...engine.manifest,
+    id: 'surface-map',
+    version: '1.2.3',
+    kinds: ['geographic']
+  };
   const definition = await (await disk.atlas('calidor')).json('atlas.json');
   await assert.rejects(
     compileCore(definition, { ...disk, engine: async () => surfaceOnly }),
-    /Engine surface-map 1\.1\.0 does not support stellar atlases \(it supports geographic\)/
+    /Engine surface-map 1\.2\.3 does not support stellar atlases \(it supports geographic\)/
   );
 });
