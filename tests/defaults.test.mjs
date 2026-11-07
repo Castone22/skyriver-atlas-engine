@@ -104,3 +104,15 @@ test('the host supplies the wiki address: it wins over the engine default and is
   ])
     await assert.rejects(() => build(bad), /wikiBase must be an http\(s\) address/);
 });
+
+test('an engine older than the datapack requires is refused with a clear message', async () => {
+  const bundle = await loadDirectory(atlasDir, { expectType: 'atlas' });
+  assert.match(bundle.manifest.engine, /^\^1\.1\./);
+  const real = await createNodeHost().engine();
+  const old = Object.create(real, { manifest: { value: { ...real.manifest, version: '1.0.0' } } });
+  const host = { ...createNodeHost({ bundles: { minimal: bundle } }), engine: async () => old };
+  await assert.rejects(
+    async () => compile(await definition(), { host }),
+    /needs engine \^1\.1\.0; this is engine 1\.0\.0/
+  );
+});

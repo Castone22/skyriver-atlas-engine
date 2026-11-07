@@ -68,7 +68,7 @@ test('a bundle needing a newer engine is rejected', async () => {
   const definition = await real.json('atlas.json');
   await assert.rejects(
     compileCore(definition, { ...disk, atlas: async () => demanding }),
-    /needs engine \^2\.0\.0; this is engine 1\.0\.0/
+    /needs engine \^2\.0\.0; this is engine 1\.1\.0/
   );
 });
 
@@ -80,6 +80,6 @@ test('an engine that does not support the atlas kind is rejected', async () => {
   const definition = await (await disk.atlas('calidor')).json('atlas.json');
   await assert.rejects(
     compileCore(definition, { ...disk, engine: async () => surfaceOnly }),
-    /Engine surface-map 1\.0\.0 does not support stellar atlases \(it supports geographic\)/
+    /Engine surface-map 1\.1\.0 does not support stellar atlases \(it supports geographic\)/
   );
 });
